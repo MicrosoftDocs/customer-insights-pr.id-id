@@ -1,0 +1,226 @@
+- name: Dynamics 365 Customer Insights
+  href: index.yml
+- name: Ikhtisar produk
+  href: overview.md
+- name: Nilai lingkungan Anda
+  href: 'https://home.ci.ai.dynamics.com/'
+- name: Wawasan audiens
+  items:
+    - name: Pusat Bantuan
+      href: audience-insights/index.yml
+    - name: Ikhtisar kemampuan
+      href: audience-insights/overview.md
+    - name: uji coba gratis
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
+    - name: Fitur baru dan diperbarui
+      href: audience-insights/whats-new-audience-insights.md
+    - name: Mulai
+      items:
+        - name: Buat lingkungan baru
+          href: audience-insights/home.md
+        - name: Menyerap data
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: Buat profil pelanggan terpadu
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: Bekerja dengan aplikasi
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: Memperkaya data dan prediksi
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+    - name: Sumber Data
+      items:
+        - name: Ikhtisar sumber data
+          href: audience-insights/data-sources.md
+        - name: Tambahkan sumber data melalui Power Query connectors
+          href: audience-insights/connect-power-query.md
+        - name: Tambahkan folder Common Data Model sebagai sumber data
+          href: audience-insights/connect-common-data-model.md
+        - name: Menambahkan data lake terkelola Common Data Service
+          href: audience-insights/connect-common-data-service-lake.md
+        - name: Refresh inkremental untuk sumber data
+          href: audience-insights/incremental-refresh-data-sources.md
+        - name: Konsumsi data real-time
+          href: audience-insights/real-time-data-ingestion.md
+        - name: Memahami entitas dan kumpulan data
+          href: audience-insights/entities.md
+    - name: Penyatuan data
+      items:
+        - name: Ikhtisar penyatuan
+          href: audience-insights/data-unification.md
+        - name: Memetakan entitas dan atribut
+          href: audience-insights/map-entities.md
+        - name: Pencocokan Entitas
+          href: audience-insights/match-entities.md
+        - name: Gabungkan Entitas
+          href: audience-insights/merge-entities.md
+        - name: Tinjau profil pelanggan terpadu
+          href: audience-insights/customer-profiles.md
+        - name: Filter profil pelanggan terpadu
+          href: audience-insights/search-filter-index.md
+        - name: Membangun relasi dan entitas terhubung
+          href: audience-insights/relationships.md
+        - name: Mencatumkan Aktivitas Pelanggan
+          href: audience-insights/activities.md
+    - name: Pengayaan data
+      items:
+        - name: Perkaya profil pelanggan
+          href: audience-insights/enrichment-hub.md
+        - name: Afinitas minat dan merek
+          href: audience-insights/enrichment-microsoft-graph.md
+        - name: Perkaya dengan HERE Technologies
+          href: audience-insights/enrichment-here.md
+        - name: Memperkaya dengan Leadspace
+          href: audience-insights/enrichment-leadspace.md
+        - name: Memperkaya dengan Experian
+          href: audience-insights/enrichment-experian.md
+        - name: Perkaya dengan impor kustom SFTP
+          href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Segmen dan ukuran
+      items:
+        - name: Membuat segmen dan grup pelanggan
+          href: audience-insights/segments.md
+        - name: Mendapatkan wawasan tentang segmen
+          href: audience-insights/segment-insights.md
+        - name: Temukan pelanggan serupa
+          href: audience-insights/find-similar-customer-segments.md
+        - name: Menentukan ukuran dan KPI
+          href: audience-insights/measures.md
+    - name: Prediksi
+      items:
+        - name: Data lengkap menggunakan prediksi nilai
+          href: audience-insights/predictions.md
+        - name: Memprediksi kehilangan langganan
+          href: audience-insights/predict-subscription-churn.md
+        - name: Panduan sampel untuk prediksi kehilangan pelanggan langganan
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Prediksi kehilangan pelanggan transaksional
+          href: audience-insights/predict-transactional-churn.md
+        - name: Panduan sampel untuk prediksi kehilangan pelanggan transaksional
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Menerapkan model Pembelajaran Mesin kustom
+          href: audience-insights/custom-models.md
+        - name: Eksperimen dengan Pembelajaran Mesin Azure
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Eksperimen dengan Pembelajaran Mesin Azure
+          href: audience-insights/machine-learning-studio-experiments.md
+    - name: Opsi ekspor
+      items:
+        - name: Pelajari destinasi ekspor
+          href: audience-insights/export-destinations.md
+        - name: Penyimpanan Blob Azure
+          href: audience-insights/export-azure-blob-storage.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: Dynamics 365 Customer Service (Add-in)
+          href: audience-insights/customer-card-add-in.md
+        - name: Dynamics 365 Marketing
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Pusat Dynamics 365 Sales (Add-in)
+          href: audience-insights/customer-card-add-in.md
+        - name: Pengelola Iklan Facebook
+          href: audience-insights/export-facebook.md
+        - name: Google Ads
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: Mailchimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (bot)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
+    - name: Administrasi
+      items:
+        - name: Atur konfigurasi sistem
+          href: audience-insights/system.md
+        - name: Menetapkan izin pengguna
+          href: audience-insights/permissions.md
+        - name: Kelola beberapa lingkungan
+          href: audience-insights/manage-environments.md
+        - name: Menyambung ke akun penyimpanan ADLS dengan prinsipal Layanan
+          href: audience-insights/connect-service-principal.md
+        - name: Bahasa yang didukung
+          href: audience-insights/supported-languages.md
+    - name: Dapat diperluas
+      items:
+        - name: Meninjau skema entitas dalam Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Bekerja dengan API
+          href: audience-insights/apis.md
+        - name: Referensi API
+          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Batas Layanan
+      href: audience-insights/service-limits.md
+    - name: Permintaan DSR dalam GDPR
+      href: audience-insights/gdpr.md
+- name: Wawasan keterlibatan (pratinjau)
+  items:
+    - name: Pusat Bantuan
+      href: engagement-insights/index.yml
+    - name: Ikhtisar kemampuan
+      href: engagement-insights/overview.md
+    - name: uji coba gratis
+      href: 'https://pi.dynamics.com/'
+    - name: Mulai Cepat
+      items:
+        - name: mulai cepat untuk pratinjau publik
+          href: engagement-insights/quickstart.md
+    - name: Mulai
+      items:
+        - name: Mulai
+          href: engagement-insights/get-started.md
+        - name: Buat ruang kerja
+          href: engagement-insights/create-workspace.md
+        - name: Instrumentasikan situs web Anda
+          href: engagement-insights/instrument-website.md
+        - name: Konsep dan terminologi
+          href: engagement-insights/glossary.md
+    - name: Aktivitas
+      items:
+        - name: Membuat dan memodifikasi aktivitas
+          href: engagement-insights/refined-events.md
+        - name: Ekspor aktivitas
+          href: engagement-insights/export-events.md
+    - name: Laporan
+      items:
+        - name: Lihat laporan
+          href: engagement-insights/view-reports.md
+        - name: Buat Laporan Kustom
+          href: engagement-insights/custom-reports.md
+        - name: Membuat laporan Profil terpadu
+          href: engagement-insights/profile-reports.md
+    - name: Sumber daya pengembang
+      items:
+        - name: Ikhtisar Sumber Daya Pengembang
+          href: engagement-insights/developer-resources.md
+        - name: Tutorial SDK Web
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Sampel SDK Web
+          href: engagement-insights/websdk-sample.md
+    - name: Administrasi
+      items:
+        - name: Peran dan izin
+          href: engagement-insights/user-roles.md
+        - name: Mengelola lingkungan dan ruang kerja
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Konfigurasikan koneksi
+          href: engagement-insights/configure-connections.md
+        - name: Mengelola cookie dan izin pengguna
+          href: engagement-insights/user-consent-storage.md
+    - name: GDPR
+      items:
+        - name: Menghapus dan mengekspor data pribadi
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Batas Layanan
+      href: engagement-insights/quotas.md
+- name: Hubungi dukungan
+  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
