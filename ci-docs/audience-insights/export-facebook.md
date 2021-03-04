@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643687"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269978"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Konektor untuk pengelola iklan Facebook (pratinjau)
 
@@ -62,7 +62,16 @@ Ekspor segmen profil pelanggan terpadu ke pengelola iklan Facebook untuk membuat
 
 Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Pembatasan yang diketahui
+
+- Hingga 10 juta profil pelanggan per ekspor ke Facebook Ads Manager 
+- Mengekspor ke Facebook Ads Manager terbatas untuk segmen
+- Mengekspor segmen dengan total 10 juta profil dapat memakan waktu hingga 90 menit untuk diselesaikan
+
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 
 Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Facebook Ads Manager, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa Facebook Ads memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

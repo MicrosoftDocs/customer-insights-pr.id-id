@@ -1,20 +1,20 @@
 ---
 title: Membuat dan mengelola lingkungan
 description: Pelajari cara mendaftar ke layanan dan cara mengelola lingkungan.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644137"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270116"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
@@ -46,9 +46,9 @@ Terdapat dua cara untuk membuat lingkungan baru. Anda dapat menentukan konfigura
 
 Untuk membuat lingkungan:
 
-1. Pilih simbol **pengaturan** di header aplikasi.
+1. Pilih pemilih **Lingkungan** di header aplikasi.
 
-1. Pilih **Lingkungan baru**.
+1. Pilih **baru**.
 
    > [!div class="mx-imgBorder"]
    > ![Pengaturan Lingkungan](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Untuk membuat lingkungan:
 
    - Untuk opsi Azure Data Lake Storage Gen2, Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Nama **penampung** tidak dapat diubah dan akan menjadi "customerinsights".
    
-   - Jika Anda ingin menggunakan [prediksi](predictions.md), masukkan URL instans Common Data Service di bidang **alamat server** dalam **gunakan prediksi**.
+   - Jika Anda ingin menggunakan [prediksi](predictions.md) atau mengkonfigurasikan berbagi data dengan aplikasi dan solusi berdasarkan Microsoft Dataverse, berikan URL lingkungan Microsoft Dataverse dalam **Konfigurasikan berbagi data dengan Microsoft Dataverse dan aktifkan kemampuan tambahan**. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Microsoft Dataverse.
+
+     > [!NOTE]
+     > - Berbagi data dengan Data Lake terkelola Microsoft Dataverse saat ini tidak didukung bila Anda menyimpan semua data untuk Azure Data Lake Storage Anda sendiri.
+     > - [Prediksi nilai yang tidak ada pada entitas](predictions.md) saat ini tidak didukung bila Anda mengaktifkan berbagi data dengan Data Lake terkelola Microsoft Dataverse.
+
+     > [!div class="mx-imgBorder"]
+     > ![Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Bila Anda menjalankan proses, seperti konsumsi data atau pembuatan segmen, folder yang sesuai akan dibuat di akun penyimpanan yang Anda tentukan di atas. File data dan file model .json akan dibuat dan ditambahkan ke subfolder masing-masing berdasarkan proses yang Anda jalankan.
 
@@ -120,11 +127,11 @@ Bila penyatuan data selesai, buka **langkah** dan **segmen** untuk me-refresh ju
 
 Anda dapat mengedit beberapa rincian lingkungan yang ada.
 
-1. Buka **Admin** > **Sistem** > **Tentang**.
+1.  Pilih pemilih **Lingkungan** di header aplikasi.
 
-2. Pilih **Edit**.
+2.  Pilih ikon **Edit**.
 
-3. Anda dapat memperbarui **nama tampilan** lingkungan, namun anda tidak dapat mengubah **kawasan** atau **jenis**.
+3. Di kotak **Edit lingkungan**, Anda dapat memperbarui **nama tampilan** lingkungan, tetapi Anda tidak dapat mengubah **Kawasan** atau **Jenis**.
 
 4. Jika lingkungan dikonfigurasi untuk menyimpan data di Azure Data Lake Storage Gen2, Anda dapat memperbarui **kunci akun**. Namun, Anda tidak dapat mengubah **nama akun** atau nama **penampung**.
 
@@ -132,19 +139,27 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
 
 ## <a name="reset-an-existing-environment"></a>Mengatur ulang lingkungan yang ada
 
-Anda dapat mengatur ulang lingkungan ke status kosong jika Anda ingin menghapus semua konfigurasi dan menghapus data yang diserap.
+Sebagai administrator, Anda dapat mengatur ulang lingkungan ke status kosong jika Anda ingin menghapus semua konfigurasi dan menghapus data yang diserap.
 
-1.  Buka **Admin** > **Sistem** > **Tentang**.
+1.  Pilih pemilih **Lingkungan** di header aplikasi. 
 
-2.  Pilih **Atur ulang**. 
+2.  Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis **...**. 
 
-3.  Untuk mengkonfirmasi penghapusan, masukkan nama lingkungan dan pilih **Atur ulang**.
+3. Pilih opsi **Atur ulang**. 
+
+4.  Untuk mengkonfirmasi penghapusan, masukkan nama lingkungan dan pilih **Atur ulang**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Menghapus lingkungan yang ada (hanya tersedia untuk admin)
+
+Sebagai administrator, Anda dapat menghapus lingkungan yang dikelola.
+
+1.  Pilih pemilih **Lingkungan** di header aplikasi.
+
+2.  Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis **...**. 
+
+3. Pilih opsi **Hapus**. 
+
+4.  Untuk mengonfirmasikan penghapusan, masukkan nama lingkungan dan pilih **Hapus**.
 
 
-## <a name="delete-an-existing-environment"></a>Menghapus lingkungan yang ada
-
-1. Buka **Admin** > **Sistem** > **Tentang**.
-
-1. Pilih **Hapus**.
-
-1. Untuk mengonfirmasikan penghapusan, masukkan nama lingkungan dan pilih **Hapus**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

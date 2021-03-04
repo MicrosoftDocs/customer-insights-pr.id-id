@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643912"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269288"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skema entitas dalam Common Data Model
 
@@ -45,3 +45,6 @@ Untuk informasi lebih lanjut, lihat dokumentasi tentang [skema entitas Customer 
 Anda dapat melihat entitas [Navigator entitas Common Data Model](https://microsoft.github.io/CDM/). Pilih tombol **Muat dari GitHub!** dan navigasi ke **foundationcommon** > **crmcommon** > **solusi** > **customerinsights** di mana Anda akan menemukan daftar entitas Customer Insights dan definisinya.
 > [!div class="mx-imgBorder"]
 > ![Navigator Entitas CDM menampilkan entitas CustomerActivity](media/CDM-entity-navigator.png "Navigator Entitas CDM menampilkan entitas CustomerActivity")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

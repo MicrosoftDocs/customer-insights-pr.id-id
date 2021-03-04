@@ -1,7 +1,7 @@
 ---
-title: Membuat dan mengedit ukuran
-description: Tentukan ukuran terkait pelanggan untuk menganalisis dan mencerminkan performa area bisnis tertentu.
-ms.date: 10/15/2020
+title: Membuat dan mengelola ukuran
+description: Menentukan ukuran untuk menganalisis dan mencerminkan kinerja bisnis Anda.
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,105 +9,111 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406078"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269932"
 ---
 # <a name="define-and-manage-measures"></a>Menentukan dan mengelola ukuran
 
-**Ukuran** menunjukkan KPI (indikator performa utama) yang mencerminkan performa dan kesehatan area bisnis tertentu. Wawasan audiens memberikan pengalaman yang intuitif untuk membuat berbagai jenis tindakan, dengan menggunakan pembuat kueri yang tidak mengharuskan Anda untuk mengkode, atau memvalidasi ukuran Anda secara manual. Anda dapat melacak tindakan bisnis Anda di halaman **Beranda**, melihat tindakan untuk pelanggan tertentu di **kartu pelanggan**, dan menggunakan tindakan untuk menentukan segmen pelanggan di halaman **segmen**.
+Ukuran membantu Anda memahami lebih baik perilaku pelanggan dan kinerja bisnis dengan mengambil nilai yang relevan dari [profil terpadu](data-unification.md). Misalnya, bisnis ingin melihat *total pengeluaran per pelanggan* untuk memahami riwayat pembelian pelanggan individual. Atau ukur *total penjualan perusahaan* untuk memahami pendapatan tingkat agregat dalam seluruh bisnis.  
+
+Ukuran dibuat menggunakan pembuat ukuran, platform kueri data dengan berbagai operator, dan pilihan pemetaan sederhana. Alat ini memungkinkan Anda memfilter data, mengelompokkan hasil, mendeteksi [jalur relasi entitas](relationships.md), dan mempratinjau output.
+
+Gunakan pembuat ukuran untuk merencanakan aktivitas bisnis dengan mengkueri data pelanggan dan mengekstrak wawasan. Contohnya, membuat ukuran *total pengeluaran per pelanggan* dan *penghasilan total per pelanggan* membantu mengidentifikasi grup pelanggan dengan pengeluaran tinggi namun penghasilan yang tinggi. Anda dapat [membuat segmen](segments.md) untuk mendorong tindakan terbaik berikutnya. 
 
 ## <a name="create-a-measure"></a>Membuat ukuran
 
-Bagian ini menuntun Anda dalam membuat ukuran dari awal. Anda dapat membuat ukuran dengan data dari beberapa sumber data yang terhubung melalui entitas pelanggan. Beberapa [batas Layanan](service-limits.md) berlaku.
+Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membuat pengukuran dengan atribut data dari entitas data yang telah diatur relasinya untuk terhubung dengan entitas Pelanggan. 
 
 1. Di wawasan audiens, buka **Ukuran**.
 
-2. Pilih **ukuran baru**.
+1. Pilih **baru**.
 
-3. Pilih **jenis** ukuran:
-
-   - **Atribut pelanggan**: Satu bidang per pelanggan yang mencerminkan Skor, nilai, atau status untuk pelanggan. Atribut pelanggan dibuat sebagai atribut dalam entitas yang dihasilkan sistem baru yang disebut **Customer_Measure**.
-
-   - **Ukuran pelanggan**: Wawasan tentang perilaku pelanggan dengan perincian berdasarkan dimensi yang dipilih. Entitas baru dibuat untuk setiap ukuran, mungkin dengan beberapa rekaman per pelanggan.
-
-   - **Ukuran bisnis**: Melacak kinerja bisnis dan kesehatan bisnis. Langkah bisnis dapat memiliki dua output yang berbeda: output numerik yang ditampilkan di halaman **Beranda** atau entitas baru yang Anda temukan pada halaman **entitas**.
-
-4. Berikan **nama** dan **nama tampilan** opsional, lalu pilih **berikutnya**.
-
-5. Di bagian **Entitas**, pilih entitas pertama dari daftar menurun. Pada titik ini, Anda harus memutuskan apakah entitas tambahan diperlukan sebagai bagian dari definisi ukuran Anda.
-
-   > [!div class="mx-imgBorder"]
-   > ![Definisi Pengukuran](media/measure-definition.png "Definisi Pengukuran")
-
-   Untuk menambahkan lebih banyak entitas, pilih **Tambah entitas** dan pilih entitas yang akan digunakan untuk mengukur.
-
+1. Pilih **Edit nama** dan berikan **Nama** untuk ukurannya. 
    > [!NOTE]
-   > Anda dapat memilih hanya entitas yang memiliki Relasi ke entitas awal. Untuk informasi lebih lanjut tentang cara mendefinisikan relasi, lihat [Relasi](relationships.md).
+   > Jika konfigurasi pengukuran baru Anda hanya memiliki dua bidang, misalnya CustomerID dan satu perhitungan, output akan ditambahkan sebagai kolom baru ke entitas yang dihasilkan sistem yang disebut Customer_Measure. Anda akan dapat melihat nilai pengukuran di profil pelanggan terpadu. Ukuran lain akan menghasilkan entitas mereka sendiri.
 
-6. Atau, Anda dapat mengkonfigurasi variabel. Di bagian **variabel**, pilih **variabel baru**.
+1. Di area konfigurasi, pilih fungsi agresi dari menu drop-down **Pilih Fungsi**. Fungsi agresi mencakup: 
+   - **Sum**
+   - **Rata-rata**
+   - **Count**
+   - **Jumlah Unik**
+   - **Max**
+   - **Min**
+   - **Pertama**: mengambil nilai pertama rekaman data
+   - **Terakhir**: mengambil nilai terakhir yang ditambahkan ke rekaman data
 
-   Variabel adalah penghitungan yang dibuat pada setiap rekaman yang Anda pilih. Misalnya, menjumlahkan penjualan Point-of-Sale (POS) dan penjualan online untuk setiap rekaman pelanggan.
+   :::image type="content" source="media/measure-operators.png" alt-text="Operator untuk menghitung pengukuran.":::
 
-7. Beri **Nama** variabel tersebut.
+1. Pilih **Tambah atribut** untuk memilih data yang diperlukan untuk membuat pengukuran ini.
+   
+   1. Pilih tab **atribut**. 
+   1. Entitas data: Pilih entitas yang mencakup atribut yang ingin Anda ukur. 
+   1. Atribut data: Pilih atribut yang ingin Anda gunakan di fungsi agresi untuk menghitung ukuran. Anda hanya dapat memilih satu atribut setiap kali.
+   1. Anda juga dapat memilih atribut data dari ukuran yang ada dengan memilih tab **Ukuran**. Atau, Anda dapat mencari entitas atau nama ukuran. 
+   1. Pilih **Tambah** untuk menambahkan atribut yang dipilih ke ukuran.
 
-8. Di area **ekspresi**, pilih bidang untuk memulai penghitungan.
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Pilih atribut untuk digunakan dalam penghitungan.":::
 
-9. Ketik ekspresi di area **ekspresi** saat memilih bidang yang akan disertakan dalam penghitungan Anda.
+1. Untuk membuat ukuran yang lebih kompleks, Anda dapat menambahkan lebih banyak atribut atau menggunakan operator hitung pada fungsi pengukuran Anda.
 
-   > [!NOTE]
-   > Saat ini, hanya ekspresi aritmetika yang didukung. Selain itu, penghitungan variabel tidak didukung untuk entitas dari [jalur entitas](relationships.md) yang berbeda.
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Buat pengukuran yang kompleks dengan operator hitung.":::
 
-10. Pilih **Selesai**.
+1. Untuk menambahkan filter, pilih **Filter** pada area konfigurasi. 
+  
+   1. Di bagian **Tambah atribut** pada panel **Filter**, pilih atribut yang akan digunakan untuk membuat filter.
+   1. Atur operator filter untuk menentukan filter untuk setiap atribut yang dipilih.
+   1. Pilih **Terapkan** untuk menambahkan filter ke ukuran.
 
-11. Di bagian **definisi ukuran**, Anda akan menentukan cara entitas yang Anda pilih dan variabel yang dihitung digabungkan di entitas atau atribut ukuran baru.
+1. Untuk menambahkan dimensi, pilih **Dimensi** pada area konfigurasi. Dimensi akan ditampilkan sebagai kolom dalam entitas output pengukuran.
+   1. Pilih **Edit dimensi** untuk menambahkan atribut data untuk mengelompokkan nilai ukuran. Misalnya, kota atau jenis kelamin. Secara default, dimensi *CustomerID* dipilih untuk membuat *ukuran tingkat pelanggan*. Anda dapat menghilangkan dimensi default jika ingin membuat *ukuran tingkat bisnis*.
+   1. Pilih **Selesai** untuk menambahkan dimensi ke ukuran.
 
-12. Pilih **Dimensi baru**. Anda dapat menganggap dimensi sebagai fungsi *grup berdasarkan*. Output data entitas ukuran atau atribut akan dikelompokkan berdasarkan semua dimensi yang ditentukan.
+1. Jika ada beberapa jalur antara entitas data yang Anda petakan dan entitas Pelanggan, Anda harus memilih salah satu [jalur relasi entitas](relationships.md) yang diidentifikasi. Hasil ukuran dapat bervariasi, tergantung pada jalur yang dipilih.
+   1. Pilih **preferensi Data** dan pilih jalur entitas yang harus digunakan untuk mengidentifikasi ukuran Anda.
+   1. Pilih **Selesai** untuk menerapkan pilihan Anda. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Pilih siklus agregat](media/measures-businessreport-measure-definition2.png "Pilih siklus agregat")
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Pilih jalur entitas untuk ukuran.":::
 
-    Pilih atau masukkan informasi berikut sebagai bagian dari definisi dimensi:
+1. Untuk menambahkan perhitungan lainnya untuk pengukuran, pilih **Penghitungan baru**. Anda hanya dapat menggunakan entitas pada jalur entitas yang sama untuk perhitungan baru. Perhitungan lainnya akan ditampilkan sebagai kolom baru dalam entitas output pengukuran.
 
-    - **Entitas**: jika Anda mendefinisikan entitas ukuran, harus mencakup sekurangnya satu atribut. Jika Anda mendefinisikan atribut ukuran, atribut ukuran hanya akan mencakup satu atribut secara default. Pilihan ini adalah tentang memilih entitas yang mencakup atribut tersebut.
-    - **Bidang**: Pilih atribut khusus yang akan disertakan baik di entitas atau atribut ukuran Anda.
-    - **wadah**: memilih apakah akan menggabungkan data secara harian, bulanan, atau tahunan. Ini adalah pilihan yang diperlukan hanya jika Anda telah memilih jenis tanggal dari atribut.
-    - **Sebagai**: menentukan nama bidang baru Anda.
-    - **nama tampilan**: menentukan nama tampilan bidang anda.
+1. Pilih **...** pada penghitungan untuk **membuat duplikat**, **Mengganti Nama**, atau **Menghapus perhitungan** dari pengukuran.
 
-    > [!NOTE]
-    > Ukuran bisnis Anda akan disimpan sebagai entitas nomor tunggal dan akan muncul di halaman **Beranda**, kecuali Anda menambahkan dimensi lainnya ke ukuran Anda. Setelah menambahkan dimensi lainnya , ukuran *tidak* akan muncul di halaman **Beranda**.
+1. Di area **Pratinjau**, Anda akan melihat skema data dari entitas output pengukuran, termasuk filter dan dimensi. Pratinjau merespons secara dinamis terhadap perubahan dalam konfigurasi.
 
-13. Atau, tambahkan fungsi agregat. Agregasi apa pun yang Anda buat menghasilkan nilai baru dalam entitas atau atribut Ukuran Anda. Fungsi agregasi yang didukung adalah **:** min **,** Max **,** Average **,** median **,** Sum **, Count Unique**, **First** (mengambil record pertama dari nilai dimensi), dan **Last** (mengambil record terakhir yang ditambahkan ke nilai dimensi).
+1. Pilih **Jalankan** untuk menghitung hasil pengukuran yang dikonfigurasi. Pilih **Simpan dan tutup** jika Anda ingin menyimpan konfigurasi saat ini dan menjalankan pengukuran nanti.
 
-14. Pilih **Simpan** untuk menerapkan perubahan ke ukuran.
+1. Buka **Ukuran** untuk melihat ukuran yang baru dibuat dalam daftar.
 
 ## <a name="manage-your-measures"></a>Kelola ukuran Anda
 
-Setelah membuat minimal satu pengukuran, Anda akan melihat daftar ukuran pada halaman **Ukuran**.
+Setelah [membuat pengukuran](#create-a-measure), Anda akan melihat daftar ukuran pada halaman **Ukuran**.
 
-Anda akan menemukan informasi tentang jenis ukuran, pembuat, tanggal pembuatan dan waktu, terakhir mengedit tanggal dan waktu, status (Apakah ukuran aktif, tidak aktif, atau gagal), dan refresh tanggal dan waktu terakhir. Bila Anda memilih ukuran dari daftar, Anda dapat melihat pratinjau outputnya.
+Anda akan menemukan informasi tentang jenis pengukuran, pembuat, tanggal pembuatan, status, dan status. Bila Anda memilih ukuran dari daftar, Anda dapat mempratinjau output dan mengunduh file .CSV.
 
 Untuk me-refresh semua ukuran Anda pada waktu yang sama, pilih **Segarkan semua** tanpa memilih ukuran tertentu.
 
 > [!div class="mx-imgBorder"]
 > ![Tindakan untuk mengelola ukuran tunggal](media/measure-actions.png "Tindakan untuk mengelola langkah tunggal")
 
-Atau, Pilih ukuran dari daftar dan lakukan salah satu tindakan berikut:
+Pilih ukuran dari daftar untuk pilihan berikut:
 
 - Pilih nama ukuran untuk melihat rinciannya.
 - **Edit** konfigurasi ukuran.
+- **segarkan** pengukuran berdasarkan data terbaru.
 - **Ubah nama** ukuran.
 - **Hapus** ukuran.
-- Pilih elipsis (...) dan kemudian **refresh** untuk memulai proses refresh untuk ukuran.
-- Pilih elipsis (...) dan kemudian **Unduh** untuk mendapatkan File .CSV ukuran.
+- **Aktifkan** atau **Nonaktifkan**. Ukuran yang tidak aktif tidak akan di-refresh selama [refresh terjadwal](system.md#schedule-tab).
 
 > [!TIP]
 > Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
 
 ## <a name="next-step"></a>Langkah selanjutnya
 
-Anda dapat menggunakan langkah yang ada untuk membuat segmen pelanggan pertama pada halaman **segmen**. Untuk informasi lebih lanjut, lihat [Segmen](segments.md).
+Anda dapat menggunakan ukuran yang ada untuk membuat [segmen pelanggan](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

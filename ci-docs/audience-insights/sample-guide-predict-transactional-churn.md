@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643597"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269794"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan transaksional (pratinjau)
 
@@ -49,7 +49,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    [!div class="mx-imgBorder"]
    ![Mengubah DoB ke Tanggal](media/ecommerce-dob-date.PNG "Ubah tanggal lahir sampai saat ini")
 
-1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommerceContacts**
+1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommerceContacts**
 
 1. Simpan Sumber Data.
 
@@ -66,7 +66,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **PurchasedOn**: tanggal/waktu
    - **TotalPrice**: mata uang
    
-1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommercePurchases**.
+1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommercePurchases**.
 
 1. Simpan Sumber Data.
 
@@ -84,7 +84,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **RewardsPoints**: Bilangan Cacah
    - **CreatedOn**: Waktu/Tanggal
 
-1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
+1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
 
 1. Simpan Sumber Data.
 
@@ -166,7 +166,7 @@ Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan predik
 
      :::image type="content" source="media/model-levers.PNG" alt-text="pilih jendela prediksi pengungkit model dan definisi kehilangan pelanggan.":::
 
-1. Pilih **Riwayat Pembelian (diperlukan)** dan pilih **Tambah data** untuk Riwayat langganan.
+1. Pilih **Riwayat Pembelian (diperlukan)** dan pilih **Tambah data** untuk Riwayat pembelian.
 
 1. Tambahkan entitas **eCommercePurchases : eCommerce** dan Petakan bidang dari eCommerce ke bidang terkait yang diperlukan oleh model.
 
@@ -204,3 +204,6 @@ Anda dapat membuat segmen baru berdasarkan entitas yang dibuat oleh model.
 Anda sekarang memiliki segmen yang diperbarui secara dinamis yang mengidentifikasi pelanggan berisiko kehilangan pelanggantinggi untuk bisnis langganan ini.
 
 Untuk informasi lebih lanjut, lihat [Membuat dan mengelola segmen](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

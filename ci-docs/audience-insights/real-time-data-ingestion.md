@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689179"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270284"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Konsumsi data real-time (pratinjau)
 
@@ -83,6 +83,7 @@ Rincian API ini, termasuk parameter dan respons, dapat ditemukan di bagian **Ent
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami penggunaan real-time Anda dengan telemetri
 
-Dapatkan ikhtisar tentang volume permintaan ke API real-time dan informasi tentang masalah yang mungkin dihadapi sistem. Anda dapat [mengakses telemetri real-time](system.md#api-usage-tab) dengan membuka **admin** > **sistem** > **penggunaan api**. Di tabel **operasi**, baris untuk operasi API yang menggunakan metode real-time berisi tombol untuk menampilkan penggunaan api real-time. Tombol ini divisualisasikan dengan simbol teropong. Pilih tombol untuk membuka panel samping berisi rincian penggunaan untuk penggunaan API real-time di lingkungan saat ini.
+Dapatkan ikhtisar tentang volume permintaan ke API real-time dan informasi tentang masalah yang mungkin dihadapi sistem. Anda dapat [mengakses telemetri real-time](system.md#api-usage-tab). 
 
-Gunakan pemilih **Kelompokkan menurut** untuk memilih cara terbaik untuk menyajikan interaksi real-time Anda di Timeline mulai dari 24 jam terakhir hingga 30 hari terakhir. Anda dapat mengelompokkan data berdasarkan metode API, nama berkualifikasi entitas (entitas yang diserap), dibuat oleh (sumber aktivitas), hasil (keberhasilan atau kegagalan), atau kode kesalahan. Data tersedia dalam bentuk grafik riwayat dan sebagai tabel.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

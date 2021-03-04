@@ -1,7 +1,7 @@
 ---
 title: Halaman beranda di wawasan audiens
 description: Mulai eksplorasi aplikasi pada halaman beranda.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406065"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477045"
 ---
 # <a name="create-a-new-environment"></a>Buat lingkungan baru
 
@@ -29,6 +29,8 @@ Anda dapat mendaftar uji coba di halaman [pendaftaran uji coba](https://dynamics
 
 1. Sediakan alamat email kantor atau sekolah Anda, beri tahu kami tentang diri Anda dan pilih **berikutnya**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Dialog untuk mendaftar ke instans uji coba":::
+
 1. Berikan **nama** untuk lingkungan baru Anda. 
 
 1. Pilih jenis uji coba.
@@ -41,34 +43,34 @@ Anda dapat mendaftar uji coba di halaman [pendaftaran uji coba](https://dynamics
 
 Setelah lingkungan dibuat, Anda akan melihat lingkungan **demo** yang memungkinkan Anda menjelajahi aplikasi dengan data fiktif. Anda dapat mengubah data sampel untuk mencocokkan industri Anda. Pilih ikon **pengaturan** di header dan pilih **pengaturan demo**. Selain itu, Anda dapat mengubah tema visual. 
 
-Anda [beralih ke lingkungan](#change-between-environments) yang Anda buat selama proses pendaftaran untuk bekerja dengan data Anda sendiri.
+Anda [beralih ke lingkungan](#switch-environments) yang Anda buat selama proses pendaftaran untuk bekerja dengan data Anda sendiri.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Buat lingkungan sandbox atau produksi baru
 
-Di lingkungan Anda, pilih ikon **pengaturan** di header dan pilih **lingkungan baru**.
+Di lingkungan Anda, pilih pemilih **Lingkungan** pada header aplikasi, lalu pilih **Baru**.
 
-Ikuti langkah-langkah seolah Anda [membuat lingkungan uji coba](#create-a-trial-environment). Anda mendapatkan pilihan tambahan saat memilih **pengaturan lanjutan** untuk menyimpan data di Azure Data Lake Anda sendiri. Berikan nama akun dan kunci akun untuk membuat sambungan ke Azure Data Lake Anda. Secara default, data disimpan di data lake yang dikelola Customer Insights.
+Ikuti langkah-langkah seolah Anda [membuat lingkungan uji coba](#create-a-trial-environment). Secara default, data disimpan di data lake yang dikelola Customer Insights. Anda mendapatkan pilihan tambahan saat memilih **pengaturan lanjutan** untuk menyimpan data di Azure Data Lake Anda sendiri. Berikan nama akun dan kunci akun untuk membuat sambungan ke Azure Data Lake Anda. 
 
 > [!IMPORTANT]
 > Dengan menyimpan data ke Azure Data Lake Storage, Anda setuju bahwa data akan ditransfer dan disimpan di lokasi geografis yang sesuai untuk akun penyimpanan Azure tersebut, yang mungkin berbeda dengan tempat data disimpan di Dynamics 365 Customer Insights. [Pelajari lebih lanjut di pusat kepercayaan Microsoft.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>Mengeksplorasi halaman beranda
 
-Anda dapat [mengakses lingkungan Customer Insights Anda](https://home.ci.ai.dynamics.com/) pada URL berikut: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-Halaman **Beranda** menampilkan ikhtisar tentang basis pelanggan dan metrik kunci untuk melacak kesehatan bisnis Anda.
+Anda dapat [mengakses wawasan audiens dari Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) di URL berikut: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Halaman **Beranda** menampilkan ikhtisar segmen, pengukuran, dan data pengayaan (jika dikonfigurasi)setelah menyelesaikan fase [petakan](map-entities.md), [cocokkan](match-entities.md), dan [gabungkan](merge-entities.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Wawasan di Halaman Beranda](media/home-page-insights.png "Wawasan di Halaman Beranda")
 
-Dalam **segmen terkini**, Anda melihat grup pelanggan berdasarkan atribut demografis, perilaku, atau transaksional yang telah Anda tetapkan. [Membuat segmen](segments.md) akan membantu Anda menargetkan aktivitas bisnis dengan lebih baik.
+Dalam **segmen terkini**, Anda melihat grup pelanggan berdasarkan atribut demografis, perilaku, atau transaksional yang telah Anda tetapkan. [Membuat segmen](segments.md) akan membantu Anda mengelompokkan basis pelanggan dan menargetkan aktivitas bisnis dengan lebih baik.
 
-**Ukuran terbaru** menunjukkan ubin dengan [ukuran](measures.md). Ukuran adalah KPI (indikator performa utama) yang telah Anda tetapkan. Contohnya, kemungkinan rata-rata kehilangan pelanggan atau rata-rata pembelanjaan online per pelanggan.
+**Ukuran terbaru** menampilkan petak dengan [KPI (indikator performa utama)](measures.md) yang Anda tetapkan. Misalnya, rata-rata kemungkinan pelanggan untuk pergi atau rata-rata yang dihabiskan secara online per pelanggan.
 
-Bagian **pengayaan baru-baru ini** berisi daftar hasil dari rangkaian pengayaan yang diselesaikan baru-baru ini. Pengayaan menambahkan informasi tentang basis pelanggan Anda. Misalnya, dengan memahami minat dan merek yang mereka miliki afinitasnya. Informasi ini dapat dibuka dengan menggunakan [kemampuan pengayaan](enrichment-microsoft-graph.md), setelah menyelesaikan fase [pemetaan](map-entities.md), [pencocokan](match-entities.md), dan [penggabungan](merge-entities.md).
+Bagian **pengayaan baru-baru ini** berisi daftar hasil dari rangkaian pengayaan yang diselesaikan baru-baru ini. [Pengayaan](enrichment-hub.md) menambahkan informasi tentang basis pelanggan Anda. Misalnya, dengan memahami minat dan merek yang mereka miliki afinitasnya.
 
-## <a name="change-between-environments"></a>Perubahan di antara lingkungan
+## <a name="switch-environments"></a>Alihkan Lingkungan
 
-Setelah mengkonfigurasi dan menyiapkan [sumber data](data-sources.md), Anda akan ingin beralih dari lingkungan demo ke lingkungan aktif. Menggunakan lingkungan produksi memungkinkan Anda bekerja dengan data pelanggan Anda sendiri. Pilih kontrol **lingkungan** di sudut kanan atas halaman untuk mengubah lingkungan.
+Pilih kontrol **lingkungan** di sudut kanan atas halaman untuk mengubah lingkungan.
 
 > [!div class="mx-imgBorder"] 
 > ![Alihkan lingkungan](media/home-page-environment-switcher.png "Alihkan lingkungan")
@@ -78,3 +80,6 @@ Administrator dapat membuat dan mengelola [beberapa lingkungan](manage-environme
 ## <a name="next-step"></a>Langkah berikutnya
 
 Untuk melihat wawasan Anda sendiri di halaman Beranda, Anda harus terlebih dulu [menambahkan sumber data](data-sources.md) dan [menyatukan](data-unification.md) data Anda untuk membangun profil pelanggan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

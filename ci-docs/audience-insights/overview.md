@@ -1,30 +1,26 @@
 ---
-title: Kemampuan wawasan audiens
-description: Ikhtisar kemampuan wawasan audiens Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Wawasan audiens untuk ikhtisar Dynamics 365 Customer Insights
+description: Ikhtisar wawasan audiens untuk Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406069"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476999"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Kemampuan wawasan audiens Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan audiens untuk ikhtisar Dynamics 365 Customer Insights
 
-Pengalaman pelanggan merupakan inti dari setiap ambisi transformasi digital organisasi. Untuk bersaing di pasar saat ini, organisasi harus membangun Relasi yang bermakna dengan pelanggan mereka pada tingkat pribadi. Secara efektif mempersonalisasikan sesuai skala memerlukan tampilan Pelanggan yang lengkap dan terpadu.
+Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pelanggan anda. Sambungkan data dari berbagai sumber transaksional, perilaku, dan observasional untuk membuat tampilan pelanggan 360 derajat. Gunakan wawasan ini untuk mendorong pengalaman dan proses yang berpusat pada pelanggan. Satukan data pelanggan dan manfaatkan untuk wawasan dan tindakan cerdas.
 
-Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pelanggan anda. Sambungkan data dari berbagai sumber transaksional, perilaku, dan observasional untuk membuat tampilan pelanggan 360 derajat. Gunakan wawasan ini untuk mendorong pengalaman dan proses yang berpusat pada pelanggan.
-
-**Satukan data pelanggan dan manfaatkan untuk wawasan dan tindakan cerdas.**
-
-Dengan wawasan audiens, organisasi dapat:  
+## <a name="main-benefits"></a>Keuntungan utama 
 
 - **Hilangkan isolasi data dan satukan data pelanggan**
 
@@ -33,15 +29,15 @@ Dengan wawasan audiens, organisasi dapat:
 
 - **Perkaya dengan kecerdasan audiens yang terkandung dalam Microsoft Graph**
 
-  - Buat profil pelanggan yang lebih kaya dengan menggabungkan intelijen audiens yang terkandung dalam Microsoft Graph.  
+  - Buat profil pelanggan yang lebih kaya dengan [menggunakan intelijen audiens yang terkandung dalam Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Menggerakkan proses bisnis Anda dan pengalaman pelanggan yang disesuaikan**
 
   - Dorong keterlibatan terpersonalisasi di seluruh saluran, Berdayakan pemasaran, penjualan, dan profesional layanan dengan Customer Insights bawaan, kontekstual, dan kartu profil pelanggan yang disesuaikan ke dalam aplikasi bisnis yang telah mereka gunakan setiap hari
   - Otomatiskan pengalaman dan proses yang berpusat pada pelanggan berdasarkan profil, langkah Bisnis, dan segmen yang dapat disesuaikan.
-  - Aktifkan dan Perluas pengalaman lini bisnis yang dibuat di Microsoft Power Platform. Buat dengan cepat aplikasi dengan wawasan tersemat menggunakan kode pendekatan rendah yang andal dari PowerApps.  
+  - Aktifkan dan Perluas pengalaman lini bisnis yang dibuat di [Microsoft Power Platform](https://powerplatform.microsoft.com/). Buat dengan cepat aplikasi dengan wawasan tersemat menggunakan kode pendekatan rendah yang andal dari PowerApps.  
 
-Wawasan audiens mencakup kemampuan untuk pengguna kunci berikut:
+## <a name="key-audiences"></a>Audiens utama
 
 - **Analis data/admin:**
 
@@ -58,5 +54,8 @@ Wawasan audiens mencakup kemampuan untuk pengguna kunci berikut:
 
 - **Analis bisnis:**
 
-  - Buat profil yang dapat disesuaikan, tentukan langkah, dan Buat segmen untuk mendapatkan tampilan 360 derajat pelanggan Anda, khusus untuk organisasi Anda.  
-  - Gunakan konektor bawaan untuk PowerApps atau Microsoft Power BI atau API untuk mengemukakan wawasan di aplikasi bisnis atau solusi BI Anda.  
+  - Buat profil yang dapat disesuaikan, tentukan langkah, Buat segmen, dan manfaatkan analisis prediktif untuk mendapatkan tampilan 360 derajat pelanggan Anda, khusus untuk organisasi Anda.  
+  - Gunakan konektor siap pakai untuk beberapa aplikasi Microsoft dan aplikasi pihak ketiga atau API untuk memproses wawasan lebih lanjut.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

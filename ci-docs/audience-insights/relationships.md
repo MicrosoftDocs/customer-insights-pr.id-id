@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406081"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269883"
 ---
 # <a name="relationships-between-entities"></a>Relasi di antara dua entitas
 
@@ -28,8 +28,8 @@ Selama proses pencocokan dan penggabungan, Relasi sistem dibuat di belakang laya
 > ![Pembuatan Relasi](media/relationships-entities-merge.png "Pembuatan Relasi")
 
 - **Relasi *CustomerToContact*** dibuat antara entitas pelanggan dan entitas kontak. Entitas pelanggan mendapatkan bidang penting **Contact_contactId** untuk dikaitkan dengan bidang kunci entitas kontak **contactId**.
-- **Relasi _CustomerToAccount_** dibuat antara entitas pelanggan dan entitas Akun. Entitas pelanggan mendapatkan bidang penting **Account_accountId** untuk dikaitkan dengan bidang kunci entitas Akun **accountId**.
-- **Relasi _CustomerToWebAccount_** dibuat antara entitas pelanggan dan entitas WebAccount. Entitas pelanggan mendapatkan bidang penting **WebAccount_webaccountId** untuk dikaitkan dengan bidang kunci entitas WebAccount **webaccountId**.
+- **Relasi *CustomerToAccount*** dibuat antara entitas pelanggan dan entitas Akun. Entitas pelanggan mendapatkan bidang penting **Account_accountId** untuk dikaitkan dengan bidang kunci entitas Akun **accountId**.
+- **Relasi *CustomerToWebAccount*** dibuat antara entitas pelanggan dan entitas WebAccount. Entitas pelanggan mendapatkan bidang penting **WebAccount_webaccountId** untuk dikaitkan dengan bidang kunci entitas WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Buat Relasi
 
@@ -69,3 +69,6 @@ Tentukan Relasi kustom pada halaman **Relasi**. Setiap relasi terdiri dari entit
 ## <a name="next-step"></a>Langkah berikutnya
 
 Relasi sistem dan kustom digunakan untuk membuat segmen berdasarkan beberapa sumber data yang tidak lagi diisolasi. Untuk informasi lebih lanjut, lihat [Segmen](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

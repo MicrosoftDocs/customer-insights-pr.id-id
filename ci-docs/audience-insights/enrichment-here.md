@@ -1,20 +1,20 @@
 ---
 title: Pengayaan dengan pengayaan pihak ketiga HERE Technologies
 description: Informasi umum tentang pengayaan pihak ketiga HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668682"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269518"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Pengayaan profil pelanggan dengan HERE Technologies (pratinjau)
 
@@ -43,7 +43,11 @@ Untuk mengkonfigurasikan pengayaan HERE Technologies, persyaratan berikut harus 
 
 1. Konfirmasikan kedua input dengan memilih **Sambungkan ke HERE**.
 
-1. Pilih **Tambah data** dan pilih jika Anda ingin memetakan bidang ke alamat utama dan/atau sekunder. Anda dapat menentukan pemetaan bidang untuk kedua alamat (misalnya, alamat rumah dan bisnis) dan memperkaya profil untuk kedua alamat secara terpisah. Pilih **Selanjutnya**.
+1.  Pilih **Tambah data** dan pilih **himpunan data Pelanggan** yang anda ingin perkaya dengan data lokasi dari HERE Technologies. Anda dapat memilih entitas **Pelanggan** untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Tangkapan layar saat memilih himpunan data pelanggan.":::
+
+1. Pilih jika Anda ingin memetakan bidang ke alamat utama dan/atau sekunder. Anda dapat menentukan pemetaan bidang untuk kedua alamat (misalnya, alamat rumah dan bisnis) dan memperkaya profil untuk kedua alamat secara terpisah. Pilih **Selanjutnya**.
 
 1. Tentukan bidang dari profil terpadu mana yang harus digunakan untuk mencari data lokasi yang cocok dari HERE Technologies. Bidang **jalan 1** dan **Kode Zip/Pos** diperlukan untuk alamat utama dan/atau sekunder yang dipilih. Untuk akurasi kecocokan yang lebih tinggi, lebih banyak bidang dapat ditambahkan.
 
@@ -68,3 +72,6 @@ Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tinda
 
 Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke HERE Technologies, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa HERE Technologies memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

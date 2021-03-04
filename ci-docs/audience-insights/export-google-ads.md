@@ -5,16 +5,16 @@ ms.date: 11/18/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 06aa0b6ff3125d8735adc8c8f9f6dad69087d9f8
-ms.sourcegitcommit: ff824bbbd31fd666ab0da682bf48ea31580d242c
+ms.openlocfilehash: ba7c82e643ea0dc1897e0954e78646932cafffa3
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4568454"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268966"
 ---
 # <a name="connector-for-google-ads-preview"></a>Konektor untuk Google Ads (pratinjau)
 
@@ -74,3 +74,6 @@ Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor j
 
 Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Google Ads, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa Google Ads memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Menyambung ke akun Azure Data Lake Storage Gen2 dengan prinsipal Layanan
 description: Gunakan prinsipal layanan Azure untuk wawasan audiens untuk menyambung ke Data Lake Anda sendiri saat melampirkan ke wawasan audiens.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644092"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267726"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure untuk wawasan audiens
 
@@ -22,7 +22,9 @@ Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas
 
 Anda dapat menggunakan prinsipal layanan untuk [menambahkan atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [membuat yang baru atau memperbarui lingkungan yang ada](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Anda memerlukan izin admin untuk langganan Azure Anda untuk membuat prinsipal layanan.
+> [!IMPORTANT]
+> - Akun penyimpanan Azure Data Lake Gen2 yang ingin menggunakan layanan utama harus [mengaktifkan Spasi Nama hierarkis (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Anda memerlukan izin admin untuk langganan Azure Anda untuk membuat prinsipal layanan.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Membuat prinsipal layanan Azure untuk wawasan audiens
 
@@ -83,7 +85,7 @@ Lampirkan akun penyimpanan Azure Data Lake di wawasan audiens untuk [menyimpan d
 
 Ikuti langkah-langkah berikut untuk menyediakan informasi yang diperlukan tentang pendekatan yang dipilih.
 
-### <a name="resounce-based-storage-account-connection"></a>Koneksi akun penyimpanan berbasis sumber daya
+### <a name="resource-based-storage-account-connection"></a>Koneksi akun penyimpanan berbasis sumber daya
 
 1. Buka [portal admin Azure](https://portal.azure.com), masuk ke langganan Anda dan buka akun penyimpanan.
 
@@ -108,7 +110,8 @@ Ikuti langkah-langkah berikut untuk menyediakan informasi yang diperlukan tentan
 1. Tinjau **langganan**, **grup sumber daya**, dan **nama** akun penyimpanan untuk memastikan bahwa anda memilih nilai yang tepat di wawasan audiens.
 
 1. Di wawasan audiens, pilih nilai atau untuk bidang yang terkait saat melampirkan akun penyimpanan.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Masukkan informasi ID sumber daya akun penyimpanan.":::
    
 1. Lanjutkan dengan langkah yang tersisa di wawasan audiens untuk melampirkan akun penyimpanan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

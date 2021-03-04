@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406040"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477092"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor untuk Power BI (pratinjau)
 
@@ -31,7 +31,7 @@ Buat visualisasi untuk data Anda dengan Power BI Desktop. Buat wawasan tambahan 
 
 1. Pilih **Lihat lainnya** dan Cari **Dynamics 365 Customer Insights**
 
-1. Pilih hasil, lalu pilih **Sambungkan**.
+1. Pilih **Sambungkan**.
 
 1. **masuk** dengan akun organisasi yang sama yang Anda gunakan untuk Customer Insights dan pilih **Sambungkan**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Customer Insights connector untuk Power BI dirancang untuk berfungsi untuk himpu
 ### <a name="work-with-a-subset-of-data"></a>Bekerja dengan subset data
 
 Pertimbangkan untuk bekerja dengan subset data Anda. Misalnya, Anda dapat membuat [segmen](segments.md) dan bukan mengekspor semua rekaman pelanggan ke Power BI.
+
+## <a name="troubleshooting"></a>Mengatasi Masalah
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Lingkungan Customer Insights tidak ditampilkan di Power BI
+
+Lingkungan yang memiliki lebih dari satu [relasi](relationships.md) yang didefinisikan antara dua entitas yang sama di wawasan audiens tidak akan tersedia di Power BI connector.
+
+Anda dapat mengidentifikasi dan menghilangkan duplikat Relasi.
+
+1. Secara audiens, buka **Data** > **Relasi** tentang lingkungan yang Anda lewatkan di Power BI.
+2. Identifikasikan duplikat Relasi:
+   - Periksa apakah ada lebih dari satu relasi yang didefinisikan antara dua entitas yang sama.
+   - Periksa apakah ada relasi yang dibuat antara dua entitas yang tercakup dalam proses penyatuan. Terdapat relasi implisit yang didefinisikan antara semua entitas yang tercakup dalam proses penyatuan.
+3. Hilangkan duplikat Relasi yang diidentifikasi.
+
+Setelah penghapusan duplikat Relasi, coba untuk mengkonfigurasi Power BI connector lagi. Lingkungan seharusnya tersedia sekarang.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

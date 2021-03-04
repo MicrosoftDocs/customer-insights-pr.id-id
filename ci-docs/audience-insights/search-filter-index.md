@@ -1,7 +1,7 @@
 ---
 title: Mencari dan memfilter Profil Pelanggan
 description: Temukan informasi tentang profil pelanggan terpadu dan filter untuk atribut tertentu dengan cepat.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406082"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270070"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profil pelanggan: Indeks Cari & Filter
 
@@ -28,14 +28,6 @@ Hasil mempersatukan data pelanggan adalah entitas profil pelanggan yang memberik
 Jika ini adalah pertama kali Anda menentukan atribut yang dapat dicari sebagai administrator, Anda harus menentukan bidang terindeks terlebih dulu. Sebaiknya Anda memilih semua atribut yang bisa digunakan pengguna untuk mencari dan memfilter pelanggan pada halaman **pelanggan**. Anda hanya dapat menentukan atribut yang ada di entitas profil pelanggan yang Anda buat selama proses penyatuan data.
 
 1. Buka halaman **pelanggan** dan pilih **index pencarian & filter**.
-
-> [!NOTE]
-> Kami membuat konfigurasi indeks pencarian default pada atribut yang tersedia dalam entitas pelanggan dari jenis semantik berikut sebagaimana ditentukan pada halaman peta.
-> - Nama Depan, Nama Belakang, nama tengah, nama lengkap orang
-> - Nama Organisasi
-> - Alamat email
-> - Nomor telepon
-> - Informasi lokasi
 
 2. Pilih **+Tambah** untuk menentukan bidang yang diindeks.
 
@@ -65,3 +57,10 @@ Menu **filter** pada halaman **pelanggan** dapat mencakup berbagai tingkat atrib
 2. Pilih **Simpan** untuk menerapkan perubahan.
 
 3. Pilih **Jalankan** setelah Anda siap menerapkan pengaturan Anda.
+
+## <a name="next-steps"></a>Langkah berikutnya
+
+Buka halaman **Pelanggan** untuk mencari profil pelanggan atau gunakan bidang yang diindeks untuk melihat subset semua profil pelanggan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

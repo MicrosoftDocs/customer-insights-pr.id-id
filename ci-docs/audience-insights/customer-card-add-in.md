@@ -1,7 +1,7 @@
 ---
 title: Instal dan konfigurasikan Add -in kartu pelanggan
 description: Instal dan konfigurasikan Add -in kartu pelanggan untuk Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644047"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268048"
 ---
 # <a name="customer-card-add-in-preview"></a>Add-in Kartu Pelanggan (pratinjau)
 
@@ -28,7 +28,7 @@ Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamic
 - Profil pelanggan [yang terserap dari aplikasi Dynamics 365 menggunakan Common Data Service](connect-power-query.md).
 - Pengguna Add-in kartu pelanggan harus [ditambahkan sebagai pengguna](permissions.md) di wawasan audiens.
 - [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md).
-- Kontrol demografis: bidang demografis, seperti usia atau jenis kelamin tersedia di profil pelanggan terpadu.
+- Kontrol demografis: bidang demografis, (seperti usia atau jenis kelamin) tersedia di profil pelanggan terpadu.
 - Kontrol pengayaan: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan.
 - Kontrol kecerdasan: Memerlukan data yang dibuat menggunakan Pembelajaran Mesin Azure ([Prediksi](predictions.md) atau [Model Kustom](custom-models.md))
 - Kontrol pengukuran: memerlukan [tindakan yang dikonfigurasi](measures.md).
@@ -92,10 +92,26 @@ Bisa diperlukan beberapa waktu agar solusi dapat diinstal ke lingkungan Anda.
 
 1. Di dialog **properti bidang**, kosongkan kotak centang **label tampilan di formulir**.
 
-1. Pilih opsi **web** untuk kontrol. Untuk kontrol pengayaan, pilih jenis pengayaan yang akan ditampilkan dengan mengonfigurasi bidang **enrichmenttype**. Anda harus menambahkan kontrol pengayaan terpisah untuk setiap jenis pengayaan.
+1. Pilih opsi **web** untuk kontrol. Untuk kontrol pengayaan, pilih jenis pengayaan yang akan ditampilkan dengan mengonfigurasi bidang **enrichmenttype**. Tambahkan kontrol pengayaan terpisah untuk setiap jenis pengayaan.
 
 1. Pilih **Simpan** dan **publikasikan** untuk mempublikasikan formulir kontak yang diperbarui.
 
 1. Buka formulir kontak yang dipublikasikan. Anda akan melihat kontrol yang baru ditambahkan. Anda mungkin harus masuk saat pertama kali menggunakannya.
 
 1. Untuk menyesuaikan yang ingin Anda Tampilkan pada kontrol kustom, pilih tombol Edit di sudut kanan atas.
+
+## <a name="upgrade-customer-card-add-in"></a>Tingkatkan Add-in Kartu Pelanggan
+Add-in Kartu Pelanggan tidak ditingkatkan secara otomatis. Untuk meningkatkan ke versi terbaru, ikuti prosedur ini dalam aplikasi Dynamics 365 yang telah terinstal Add-in.
+
+1. Dalam aplikasi Dynamics 365, buka **Pengaturan** > **Penyesuaian** dan pilih **Solusi**.
+
+1. Pada tabel add-in, cari **CustomerInsightsCustomerCard** dan pilih baris.
+
+1. Pilih **Terapkan Peningkatan Solusi** pada bilah tindakan.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Tingkatkan solusi di area Penyesuaian aplikasi Dynamics 365":::
+
+1. Setelah memulai proses peningkatan, Anda akan melihat indikator pemuatan hingga peningkatan selesai. Jika tidak ada versi yang lebih baru, peningkatan akan menampilkan pesan kesalahan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

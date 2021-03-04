@@ -4,17 +4,17 @@ description: Impor data dari Data Lake terkelola Common Data Service.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643402"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267818"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Menyambung ke data di Data Lake yang dikelola oleh Common Data Service
 
@@ -34,7 +34,10 @@ Data yang tersimpan di layanan online, misalnya Azure Data Lake Storage, dapat d
 
 3. Pilih **Sambungkan ke Common Data Service** dan pilih **berikutnya**.
 
-4. Masukkan **nama** untuk sumber data, lalu pilih **Berikutnya**.
+4. Masukkan **nama** untuk sumber data, lalu pilih **Berikutnya**. Panduan nama: 
+   - Diawali dengan huruf.
+   - Gunakan huruf dan angka saja. Spasi atau karakter khusus tidak dibolehkan.
+   - Gunakan antara 3 hingga 64 karakter.
 
 5. Berikan **Alamat server** untuk organisasi Anda Common Data Service, lalu pilih **masuk**.
 
@@ -65,3 +68,6 @@ Untuk menghubungkan ke Common Data Service berbeda, [buat sumber data baru](#con
 3. Pilih opsi **Edit** dari daftar.
 
 4. Pilih entitas tambahan dari daftar entitas yang tersedia dan pilih **Simpan**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

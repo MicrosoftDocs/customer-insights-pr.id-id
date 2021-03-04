@@ -1,7 +1,7 @@
 ---
 title: Konfigurasi sistem dalam wawasan audiens
 description: Pelajari tentang pengaturan sistem di kemampuan wawasan audiens Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406079"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267344"
 ---
 # <a name="system-configuration"></a>Konfigurasi sistem
 
-Halaman **Sistem** mencakup empat tab: **status**, **jadwal**, **tentang**, dan **umum**.
+Halaman **Sistem** mencakup tab berikut:
+- [Status](#status-tab)
+- [Jadwal](#schedule-tab)
+- [Penggunaan API](#api-usage-tab)
+- [Tentang](#about-tab)
+- [Umum](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Halaman sistem](media/system-tabs.png "Halaman sistem")
 
 ## <a name="status-tab"></a>Tab status
 
-**Tab status** memungkinkan Anda melacak kemajuan konsumsi data, ekspor data, dan beberapa proses produk penting. Tinjau informasi pada tab ini untuk memastikan kelengkapan proses aktif.
+**Tab status** memungkinkan Anda melacak kemajuan konsumsi data, ekspor data, serta beberapa proses produk penting lainnya. Tinjau informasi pada tab ini untuk memastikan kelengkapan proses aktif.
 
-Tab ini mencakup tabel status untuk **sumber data**, **proses sistem**, dan **persiapan dat**. Setiap tabel akan melacak **nama** tugas dan entitas yang sesuai, **status** dijalankan terbaru, dan Kapan **terakhir diperbarui**.
+Tab ini mencakup tabel dengan status dan informasi pemrosesan untuk berbagai proses. Setiap tabel akan melacak **nama** tugas dan entitas yang sesuai, **status** dijalankan terbaru, dan Kapan **terakhir diperbarui**.
 
 Lihat rincian beberapa aktivitas terakhir dari tugas dengan memilih nama.
 
@@ -40,7 +45,7 @@ Ada enam jenis status untuk tugas. Jenis status berikut juga menampilkan tentang
 - **Dilewati:** tugas dilewati. Satu atau beberapa proses hilir yang tugas ini tergantung padanya gagal atau dilewati.
 - **Kegagalan:** pemrosesan tugas gagal.
 - **Dibatalkan:** pemrosesan dibatalkan oleh pengguna sebelum selesai.
-- **Mengantre:** pemrosesan diantre dan akan dimulai setelah semua tugas hilir selesai. Untuk informasi selengkapnya, lihat [Segarkan kebijaksanaan](#refresh-policies).
+- **Antrean:** Pemrosesan diantrekan dan akan dimulai setelah semua tugas hulu selesai. Untuk informasi selengkapnya, lihat [Segarkan kebijaksanaan](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Segarkan kebijakan
 
@@ -89,4 +94,17 @@ Pilih **Simpan** untuk mengonfirmasikan pilihan.
 
 ## <a name="api-usage-tab"></a>Tab penggunaan API
 
-Cari rincian tentang penggunaan real-time API dan lihat aktivitas yang terjadi dalam rentang waktu tertentu. Lihat [penyerapan data real-time](real-time-data-ingestion.md) untuk informasi lebih lanjut.
+Cari rincian tentang penggunaan API real-time dan lihat kejadian yang terjadi pada waktu jangka waktu tertentu. Anda memilih jangka waktu dalam menu drop-down **Pilih jangka waktu**. 
+
+**Penggunaan API** berisi tiga bagian: 
+- **Panggilan API** - diagram yang memvisualisasikan jumlah panggilan agregat ke API dalam jangka waktu yang dipilih.
+
+- **Transfer data** - diagram yang menunjukkan jumlah data yang ditransfer melalui API dalam jangka waktu yang dipilih.
+
+-  **Operasi** - tabel dengan baris untuk setiap operasi API yang tersedia dan rincian tentang penggunaan operasi. Anda dapat memilih nama operasi untuk membuka [referensi API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operasi yang menggunakan [penyerapan data real-time](real-time-data-ingestion.md) berisi tombol dengan simbol teropong untuk melihat penggunaan API real-time. Pilih tombol untuk membuka panel samping berisi rincian penggunaan untuk penggunaan API real-time di lingkungan saat ini.   
+   Gunakan kotak **Grup berdasarkan** di panel **penggunaan API Real-time** untuk memilih cara terbaik menyajikan interaksi real-time Anda. Anda dapat mengelompokkan data berdasarkan metode API, nama berkualifikasi entitas (entitas yang diserap), dibuat oleh (sumber aktivitas), hasil (keberhasilan atau kegagalan), atau kode kesalahan. Data tersedia dalam bentuk grafik riwayat dan sebagai tabel.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Bekerja dengan Common Data Model menggunakan Azure Data Lake Storag
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643462"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267864"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Sambungkan ke folder Common Data Model dengan akun Azure Data Lake Store
 
@@ -38,17 +38,25 @@ Artikel ini memberikan informasi tentang cara menyerap data dari folder Common D
 
 1. Pilih **Tambahkan sumber data**.
 
-1. Pilih **sambungkan ke folder Common Data Model**, masukkan **nama** untuk sumber data, lalu pilih **berikutnya**.
+1. Pilih **sambungkan ke folder Common Data Model**, masukkan **nama** untuk sumber data, lalu pilih **berikutnya**. Panduan nama: 
+   - Diawali dengan huruf.
+   - Gunakan huruf dan angka saja. Spasi atau karakter khusus tidak dibolehkan.
+   - Gunakan antara 3 hingga 64 karakter.
 
 1. Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Masukkan informasi **penampung** dan pilih **berikutnya**.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog untuk memasukkan rincian sambungan untuk Azure Data Lake](media/enter-new-storage-details.png)
-
-1. Di dialog **Pilih folder Common Data Model**, pilih file model.JSON untuk diimpor datanya, lalu pilih **berikutnya**.
+   > ![Kotak dialog untuk memasukkan rincian sambungan baru untuk Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > File model.JSON apa pun yang terkait dengan sumber data lain di lingkungan tidak akan ditampilkan dalam daftar.
+   > Anda memerlukan salah satu peran berikut, baik untuk wadah atau akun penyimpanan yang dirujuk di atas agar dapat terhubung dan membuat sumber data:
+   >  - Pembaca Data Blob Penyimpanan
+   >  - pemilik Data Blob Penyimpanan
+   >  - Kontributor data Blob penyimpanan
 
-1. Anda akan mendapatkan daftar entitas yang tersedia dalam file model.JSON yang dipilih. Anda dapat meninjau dan memilih dari daftar entitas yang tersedia dan pilih **Simpan**. Semua entitas yang dipilih akan diserap dari sumber data baru.
+1. Di dialog **Pilih folder Common Data Model**, pilih file model.JSON atau manifest.json untuk diimpor datanya, lalu pilih **berikutnya**.
+   > [!NOTE]
+   > File model.json atau manifest.json yang terkait dengan sumber data lain di lingkungan tidak akan ditampilkan dalam daftar.
+
+1. Anda akan mendapatkan daftar entitas yang tersedia dalam file model.json atau manifest.json yang dipilih. Anda dapat meninjau dan memilih dari daftar entitas yang tersedia dan pilih **Simpan**. Semua entitas yang dipilih akan diserap dari sumber data baru.
    > [!div class="mx-imgBorder"]
    > ![Kotak dialog menampilkan daftar entitas dari file model.JSON](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Artikel ini memberikan informasi tentang cara menyerap data dari folder Common D
 9. Setelah menyimpan pilihan, halaman **sumber data** akan terbuka. Anda seharusnya sekarang melihat koneksi folder Common Data Model sebagai sumber data.
 
 > [!NOTE]
-> File model.json hanya dapat dikaitkan dengan satu sumber data di lingkungan yang sama. Namun, file model.JSON yang sama dapat digunakan untuk sumber data di beberapa lingkungan.
+> File model.json atau manifest.json hanya dapat dikaitkan dengan satu sumber data di lingkungan yang sama. Namun, file model.json atau manifest.json yang sama dapat digunakan untuk sumber data di beberapa lingkungan.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Mengedit sumber data folder Common Data Model
 
-Anda dapat memperbarui kunci akses untuk akun penyimpanan yang berisi folder Common Data Model. Anda juga dapat mengubah file model.JSON. Untuk menyambung ke kontainer lain dari akun penyimpanan, atau mengubah nama akun, buat [sambungan sumber data baru](#connect-to-a-common-data-model-folder).
+Anda dapat memperbarui kunci akses untuk akun penyimpanan yang berisi folder Common Data Model. Anda juga dapat mengubah file model.json atau manifest.json. Untuk menyambung ke kontainer lain dari akun penyimpanan, atau mengubah nama akun, buat [sambungan sumber data baru](#connect-to-a-common-data-model-folder).
 
 1. Di wawasan audiens, buka **Data** > **Sumber data**.
 
@@ -77,13 +85,24 @@ Anda dapat memperbarui kunci akses untuk akun penyimpanan yang berisi folder Com
 
 5. Atau, Anda dapat memperbarui dari sambungan kunci akun ke sambungan berbasis sumber daya atau berbasis langganan. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Anda tidak dapat **mengubah** informasi penampung saat memperbarui sambungan.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog untuk memasukkan rincian sambungan untuk Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Atau, pilih file model.JSON yang berbeda dengan kumpulan entitas yang berbeda dari kontainer.
+   > ![Kotak dialog untuk memasukkan rincian sambungan untuk Azure Data Lake ke akun penyimpanan yang ada](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Anda memerlukan salah satu peran berikut, baik untuk wadah atau akun penyimpanan yang dirujuk di atas agar dapat terhubung dan membuat sumber data:
+   >  - Pembaca Data Blob Penyimpanan
+   >  - pemilik Data Blob Penyimpanan
+   >  - Kontributor data Blob penyimpanan
+
+
+6. Atau, pilih file model.json atau manifest.json dengan rangkaian entitas yang berbeda dari wadah.
 
 7. Atau, Anda dapat memilih entitas tambahan untuk diserap. Anda juga dapat menghapus entitas yang telah dipilih jika tidak ada dependensi.
 
    > [!IMPORTANT]
-   > Jika ada ketergantungan pada file model.JSON yang ada dan kumpulan entitas, Anda akan melihat pesan kesalahan dan tidak dapat memilih file model.JSON yang berbeda. Hapus dependensi tersebut sebelum mengubah file model.json atau buat sumber data baru dengan file model.json yang ingin anda gunakan untuk menghindari penghapusan dependensi.
+   > Jika ada dependensi pada file model.json atau manifest.json yang ada dan rangkaian entitas, Anda akan melihat pesan kesalahan dan tidak dapat memilih file model.json atau json yang berbeda. Hilangkan dependensi tersebut sebelum mengubah file model.json atau manifest.json atau buat sumber data baru dengan file model.json atau manifest.json yang ingin Anda gunakan untuk menghindari dependensi dihapus.
 
 8. Atau, Anda dapat memilih atribut atau entitas tambahan untuk mengaktifkan pemrofilan data atau menonaktifkan yang telah dipilih.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

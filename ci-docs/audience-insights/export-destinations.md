@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643867"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477137"
 ---
-# <a name="export-destinations-preview"></a>Destinasi ekspor (pratinjau)
+# <a name="export-destinations-preview-overview"></a>Ikhtisar destinasi ekspor (pratinjau)
 
 Halaman **tujuan ekspor** menampilkan semua lokasi yang telah Anda konfigurasikan untuk mengekspor data. Anda juga dapat menambahkan tujuan baru untuk ekspor. Selain itu, ia menampilkan pilihan ekspor yang tersedia saat ini. Dapatkan ikhtisar ringkas, deskripsi, dan cari tahu apa yang dapat Anda lakukan dengan setiap pilihan Ekstensibilitas. Ekspor profil terpadu, langkah, dan segmen ke aplikasi yang didukung dan relevan untuk bisnis Anda.
 
@@ -27,10 +27,13 @@ Buka **Admin** > **tujuan ekspor** untuk menemukan pilihan Ekstensibilitas berik
 - [Konektor Power Automate](export-power-automate.md)
 - [Konektor Power Apps](export-power-apps.md)
 - [Konektor Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Penyimpanan Blob Azure](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Konektor LiveRamp&reg;](export-liveramp.md)
 - [Bot untuk Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Untuk menghapus tujuan ekspor, mulai dari halaman **tujuan ekspor** utama.
 2. Dari menu dropdown, pilih **hilangkan**.
 
 3. Konfirmasikan penghapusan dengan memilih **Hapus** di layar konfirmasi.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643957"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269702"
 ---
-# <a name="overview-about-data-sources"></a>Ikhtisar tentang sumber data
+# <a name="data-sources-overview"></a>Ikhtisar sumber data
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Anda akan melihat nama dari setiap sumber data yang diserap, statusnya, serta wa
 |Me-refresh    |Penyerapan data sedang berlangsung. Anda dapat membatalkan operasi ini dengan memilih **berhenti menyegarkan** di kolom **tindakan**. Menghentikan refresh sumber data akan mengembalikannya ke status refresh terakhir.       |
 |Gagal     |Penyerapan data mengalami kesalahan.         |
 
-Pilih status **Penyegaran** untuk meninjau rincian lebih lanjut tentang status penyegaran, termasuk rincian kesalahan dan pembaruan proses hilir.
+Pilih nilai di kolom **Status** dari daftar sumber data untuk meninjau rincian lainnya. Di panel **Rincian progres**, perluas **sumber Data**. Pilih **Lihat rincian** untuk informasi lebih lanjut tentang status penyegaran, termasuk rincian kesalahan dan pembaruan proses hilir.
 
 Pemuatan data dapat memerlukan waktu. Setelah penyegaran berhasil, data yang terserap dapat ditinjau dari halaman **entitas**. Untuk informasi lebih lanjut, [Entitas](entities.md).
 
@@ -76,3 +76,6 @@ Untuk me-refresh sumber data sesuai permintaan, ikuti langkah berikut:
 2. Pilih elipsis vertikal di sebelah sumber data yang akan dihapus dan pilih **Hapus** dari menu drop-down.
 
 3. Konfirmasikan penghapusan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

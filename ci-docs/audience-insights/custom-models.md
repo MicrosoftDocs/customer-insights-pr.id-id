@@ -4,16 +4,16 @@ description: Bekerja dengan model kustom dari Azure Machine Learning di Dynamics
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668907"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267238"
 ---
 # <a name="custom-machine-learning-models"></a>Model Pembelajaran Mesin kustom
 
@@ -46,15 +46,15 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
 1. Pilih layanan web Studio Pembelajaran Mesin (klasik) atau alur kerja Pembelajaran Mesin Azure di menu tarik turun **layanan web yang berisi model anda**. Kemudian pilih **Berikutnya**.
    - Pelajari lebih lanjut tentang [mempublikasi layanan web di Studio Pembelajaran Mesin (klasik)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Pelajari lebih lanjut tentang cara [mempublikasi alur kerja di Pembelajaran Mesin Azure menggunakan desainer](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Alur anda harus dipublikasikan dalam [titik akhir alur](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Pelajari lebih lanjut tentang cara [mempublikasi alur kerja di Pembelajaran Mesin Azure menggunakan desainer](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Alur anda harus dipublikasikan dalam [titik akhir alur](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Untuk setiap **input Layanan web**, pilih **entitas** yang cocok dari Customer Insights dari wawasan audiens dan pilih **Berikutnya**.
+   > [!NOTE]
+   > Alur kerja model kustom akan menerapkan heuristik untuk memetakan bidang input layanan web ke atribut entitas berdasarkan nama dan jenis data bidang. Anda akan melihat kesalahan jika bidang layanan web tidak dapat dipetakan ke entitas.
 
    > [!div class="mx-imgBorder"]
    > ![Mengonfigurasikan alur kerja](media/intelligence-screen2-updated.png "Mengonfigurasikan alur kerja")
-
+   
 1. Pada langkah **parameter output model**, atur properti berikut:
    - Studio Pembelajaran Mesin (Klasik)
       1. Masukkan **nama entitas** yang Anda ingin hasil output layanan webnya mengalir ke dalamnya.
@@ -112,3 +112,6 @@ Alur kerja Anda juga berjalan secara otomatis dengan setiap penyegaran terjadwal
 1. Klik **Hapus**, dan konfirmasi penghapusan Anda.
 
 Alur kerja Anda akan dihapus. [Entitas](entities.md) yang dibuat saat Anda membuat alur kerja tetap ada, dan dapat dilihat dari halaman **entitas**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

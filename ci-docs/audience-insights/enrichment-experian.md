@@ -1,20 +1,20 @@
 ---
 title: Pengayaan dengan Experian pengayaan pihak ketiga
 description: Informasi umum tentang pengayaan pihak ketiga Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668816"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269564"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Memperkaya profil pelanggan dengan demografi dari Experian (pratinjau)
 
@@ -41,7 +41,9 @@ Untuk mengonfigurasikan Experian, prasyarat berikut harus dipenuhi:
 
 ## <a name="map-your-fields"></a>Petakan bidang Anda
 
-1. Pilih **Tambah data** dan pilih pengidentifikasi kunci Anda dari **nama dan alamat**, **email**, atau **telepon** untuk dikirim ke Experian untuk resolusi identitas.
+1.  Pilih **Tambah data** dan pilih **himpunan data Pelanggan** yang anda ingin perkaya dengan data demografi dari Experian. Anda dapat memilih entitas **Pelanggan** untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
+
+1. Pilih pengidentifikasi utama dari **Nama dan Alamat**, **Email**, atau **Telepon** untuk dikirim ke Experian untuk resolusi identitas.
 
    > [!TIP]
    > Atribut pengidentifikasi kunci lainnya yang dikirim ke Experian kemungkinan menghasilkan tingkat kecocokan yang lebih tinggi.
@@ -52,8 +54,8 @@ Untuk mengonfigurasikan Experian, prasyarat berikut harus dipenuhi:
 
 1.  Pilih **Simpan** untuk menyelesaikan pemetaan bidang.
 
-   > [!div class="mx-imgBorder"]
-   > ![Pemetaan bidang Experian](media/experian-field-mapping.png "Pemetaan bidang Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Pemetaan bidang Experian](media/experian-field-mapping.png "Pemetaan bidang Experian")
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
 
@@ -71,3 +73,6 @@ Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tinda
 
 Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Experian, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa Experian memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

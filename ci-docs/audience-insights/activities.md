@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667233"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267436"
 ---
 # <a name="customer-activities"></a>Aktivitas pelanggan
 
@@ -44,13 +44,13 @@ Sumber data Anda mencakup entitas dengan data transaksional dan aktivitas dari b
 
 1. Di Bagian **Atur relasi**, konfigurasikan rincian untuk menghubungkan data aktivitas Anda dengan pelanggan yang sesuai.
 
-   > [!div class="mx-imgBorder"]
-   > ![Tentukan relasi entitas](media/activities-entities-define.png "Tentukan relasi entitas.").
-
     - Bidang **entitas aktivitas**: pilih bidang di entitas aktivitas yang akan digunakan untuk menjalin relasi dengan entitas lain.
     - **Entitas pelanggan**: Pilih entitas pelanggan sumber terkait yang memiliki relasi dengan entitas aktivitas Anda. Anda hanya dapat berhubungan dengan entitas pelanggan sumber yang digunakan dalam proses penyatuan data.
     - **Bidang entitas pelanggan**: bidang ini menampilkan kunci primer dari entitas pelanggan sumber yang dipilih dalam proses peta. Bidang kunci primer di entitas pelanggan sumber digunakan untuk menjalin relasi dengan entitas aktivitas.
     - **Nama**: jika relasi antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama relasi hanya akan berada dalam mode baca-saja. Jika hubungan tersebut tidak ada, relasi baru akan dibuat dengan nama yang diberikan di sini.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Tentukan relasi entitas](media/activities-entities-define.png "Tentukan relasi entitas.").
 
 1. Pilih **Simpan** untuk menerapkan perubahan.
 
@@ -82,3 +82,6 @@ Sumber data Anda mencakup entitas dengan data transaksional dan aktivitas dari b
 3. Pilih ikon **Hapus**.
 
 4. Konfirmasikan penghapusan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

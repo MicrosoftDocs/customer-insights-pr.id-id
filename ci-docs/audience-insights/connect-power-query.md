@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406059"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267773"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambungkan ke sumber data Power Query
 
@@ -28,7 +28,10 @@ Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebag
 
 1. Pilih metode **impor data** dan pilih **berikutnya**.
 
-1. Berikan **nama** untuk sumber data, lalu pilih **berikutnya** untuk membuat sumber data.
+1. Berikan **nama** untuk sumber data, lalu pilih **berikutnya** untuk membuat sumber data. Panduan nama: 
+   - Diawali dengan huruf.
+   - Gunakan huruf dan angka saja. Spasi atau karakter khusus tidak dibolehkan.
+   - Gunakan antara 3 hingga 64 karakter.
 
 1. Pilih salah satu dari [konektor yang tersedia](#available-power-query-data-sources). Untuk contoh ini, kita pilih konektor **teks/CSV**.
 
@@ -77,3 +80,6 @@ Konektor dengan tanda centang di kolom **Customer Insights (aliran data)** terse
 3. Terapkan perubahan dan transformasi anda di **dialog Power Query-Edit kueri** seperti yang dijelaskan di bagian [buat sumber data baru](#create-a-new-data-source).
 
 4. Pilih **simpan** di Power Query setelah menyelesaikan pengeditan untuk menyimpan perubahan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

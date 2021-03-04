@@ -4,17 +4,17 @@ description: Sesuaikan entitas untuk membuat profil pelanggan terpadu.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406076"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267482"
 ---
 # <a name="match-entities"></a>Pencocokan Entitas
 
@@ -22,7 +22,7 @@ Setelah menyelesaikan fase pemetaan, Anda siap mencocokkan entitas Anda. Fase pe
 
 ## <a name="specify-the-match-order"></a>Tentukan urutan kecocokan
 
-Buka **Satukan** > **Cocokkan**, lalu pilih **Atur urutan** untuk memulai tahapan pencocokan.
+Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Atur urutan** untuk memulai fase pencocokan.
 
 Setiap kecocokan menyatukan dua atau lebih entitas ke dalam satu entitas, sekaligus mempertahankan setiap rekaman pelanggan unik. Pada contoh berikut, kita memilih tiga entitas: **ContactCSV: TestData** sebagai entitas **Primary**, **WebAccountCSV: TestData** sebagai **Entitas 2**, dan **CallRecordSmall: TestData** sebagai **Entitas 3**. Diagram di atas pilihan ini mengilustrasikan bagaimana urutan kecocokan dijalankan.
 
@@ -136,7 +136,7 @@ Setelah rekaman yang dideduplikasi teridentifikasi, rekaman tersebut akan diguna
 
 1. Menjalankan proses pencocokan sekarang mengelompokkan rekaman berdasarkan kondisi yang ditentukan dalam aturan deduplikasi. Setelah mengelompokkan rekaman, kebijakan gabungan diterapkan untuk mengidentifikasi rekaman pemenang.
 
-1. Rekaman pemenang ini kemudian diteruskan ke pencocokan lintas entitas.
+1. Rekaman pemenang ini kemudian diteruskan ke pencocokan lintas entitas, bersama dengan rekaman non-pemenang (misalnya, ID alternatif) untuk meningkatkan kualitas pencocokan.
 
 1. Aturan kecocokan kustom yang ditentukan untuk selalu cocok dan tidak pernah cocok dengan aturan deduplikasi pengesampingan. Jika aturan deduplikasi mengidentifikasi rekaman yang cocok dan aturan kecocokan kustom diatur untuk tidak pernah cocok dengan rekaman tersebut, maka kedua rekaman tersebut tidak akan dicocokkan.
 
@@ -157,6 +157,17 @@ Proses pencocokan pertama menghasilkan pembuatan entitas induk terpadu. Semua pe
 
 > [!TIP]
 > Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
+
+## <a name="deduplication-output-as-an-entity"></a>Output deduplikasi sebagai entitas
+Selain entitas induk terpadu yang dibuat sebagai bagian dari pencocokan lintas entitas, proses deduplikasi juga menghasilkan entitas baru untuk setiap entitas dari perintah pencocokan untuk mengidentifikasi rekaman yang dideduplikasi. Entitas ini dapat ditemukan bersama dengan **ConflationMatchPairs:CustomerInsights** di bagian **Sistem** di halaman **Entitas**, dengan nama **Deduplication_Datasource_Entity**.
+
+Entitas output deduplikasi berisi informasi berikut:
+- ID/Kunci
+  - Bidang kunci utama dan bidang ID alternatif. Bidang ID alternatif terdiri dari semua ID alternatif yang diidentifikasi untuk rekaman.
+  - Bidang Deduplication_GroupId menunjukkan grup atau kluster yang diidentifikasi dalam entitas yang mengelompokkan semua rekaman serupa berdasarkan bidang deduplikasi yang ditentukan. Ini digunakan untuk tujuan pemrosesan sistem. Jika tidak ada aturan deduplikasi manual yang ditentukan dan aturan deduplikasi yang didefinisikan sistem berlaku, Anda tidak dapat menemukan bidang ini dalam entitas output deduplikasi.
+  - Deduplication_WinnerId: Bidang ini berisi ID pemenang dari grup atau kluster yang teridentifikasi. Jika Deduplication_WinnerId sama dengan nilai kunci Utama untuk rekaman, berarti rekaman adalah rekaman pemenang.
+- Bidang yang digunakan untuk mendefinisikan aturan deduplikasi.
+- Bidang Aturan dan Skor untuk menunjukkan aturan deduplikasi mana yang diterapkan dan skor yang dihasilkan oleh algoritme yang cocok.
 
 ## <a name="review-and-validate-your-matches"></a>Tinjau dan validasi kecocokan Anda
 
@@ -200,6 +211,11 @@ Tingkatkan kualitas dengan mengonfigurasi ulang beberapa parameter kecocokan And
   > [!div class="mx-imgBorder"]
   > ![Duplikat Aturan](media/configure-data-duplicate-rule.png "Duplikat Aturan")
 
+- **Nonaktifkan aturan** untuk mempertahankan aturan pencocokan sambil mengecualikannya dari proses pencocokan.
+
+  > [!div class="mx-imgBorder"]
+  > ![Nonaktifkan aturan](media/configure-data-deactivate-rule.png "Nonaktifkan aturan")
+
 - **Edit aturan** dengan memilih simbol **Edit**. Anda juga dapat menerapkan perubahan berikut:
 
   - Ubah atribut untuk suatu kondisi: pilih atribut baru dalam baris kondisi tertentu.
@@ -229,10 +245,12 @@ Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok de
     - Entity2Key: 34567
 
    File template yang sama dapat menentukan rekaman kecocokan kustom dari beberapa entitas.
+   
+   Jika Anda ingin menentukan pencocokan kustom untuk deduplikasi pada entitas, berikan entitas yang sama seperti Entity1 dan Entity2 dan atur nilai kunci utama yang berbeda.
 
 5. Setelah menambahkan semua penimpaan yang ingin Anda terapkan, Simpan file template.
 
-6. buka **data** > **sumber data** dan serap file template sebagai entitas baru. Setelah diserap, Anda dapat menggunakannya untuk menentukan konfigurasi kecocokan.
+6. Buka **data** > **sumber data** dan serap file template sebagai entitas baru. Setelah diserap, Anda dapat menggunakannya untuk menentukan konfigurasi kecocokan.
 
 7. Setelah mengupload file dan entitas yang tersedia, pilih opsi **pencocokan kustom** lagi. Anda akan melihat opsi untuk menentukan entitas yang ingin Anda sertakan. Pilih entitas yang diperlukan dari menu drop-down.
 
@@ -250,3 +268,6 @@ Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok de
 ## <a name="next-step"></a>Langkah berikutnya
 
 Setelah menyelesaikan proses pencocokan untuk setidaknya satu pasangan pencocokan, Anda siap menangani kemungkinan kontradiksi dalam data Anda dengan membuka topik [**penggabungan**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

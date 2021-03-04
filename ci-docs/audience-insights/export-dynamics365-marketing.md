@@ -1,20 +1,20 @@
 ---
 title: Ekspor data Customer Insights ke Dynamics 365 Marketing
 description: Pelajari cara mengkonfigurasi sambungan ke Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643777"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269058"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Konektor untuk Dynamics 365 Marketing (pratinjau)
 
@@ -24,7 +24,10 @@ Gunakan [segmen](segments.md) untuk membuat kampanye dan hubungi grup pelanggan 
 
 ## <a name="prerequisite"></a>Prasyarat
 
-Kontak rekaman dari [Common Data Service yang diserap Dynamics 365 Marketing](connect-power-query.md).
+- Rekaman kontak harus ada di Dynamics 365 Marketing agar Anda dapat mengekspor segmen dari Customer Insights ke Marketing. Baca selengkapnya tentang cara menyerap kontak di [Dynamics 365 Marketing menggunakan Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > Mengekspor segmen dari wawasan audiens ke Marketing tidak akan membuat rekaman kontak baru di instans Marketing. Rekaman kontak dari Marketing harus digunakan dalam audiens wawasan dan digunakan sebagai sumber data. Id pelanggan juga harus disertakan dalam entitas Pelanggan terpadu untuk memetakan ID pelanggan agar ID dapat dihubungi sebelum segmen dapat diekspor.
 
 ## <a name="configure-the-connector-for-marketing"></a>Konfigurasikan konektor untuk Marketing
 
@@ -49,3 +52,6 @@ Kontak rekaman dari [Common Data Service yang diserap Dynamics 365 Marketing](co
 ## <a name="export-the-data"></a>Mengekspor data
 
 Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

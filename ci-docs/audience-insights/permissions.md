@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689224"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268414"
 ---
 # <a name="user-permissions"></a>Izin pengguna
 
@@ -74,3 +74,6 @@ Di audiens wawasan, buka **Admin** > **izin** untuk melihat tugas peran apa yang
 - Peran ditentukan dalam kolom **peran**.
 - Pilih judul kolom untuk mengurutkan hasil berdasarkan nilai kolom tersebut.
 - Gunakan bidang **pencarian** di bagian atas halaman untuk mencari pengguna tertentu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

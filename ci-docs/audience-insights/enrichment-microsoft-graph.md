@@ -1,20 +1,20 @@
 ---
 title: Memperkaya profil pelanggan dengan Microsoft graph
 description: Gunakan data kepemilikan dari Microsoft graph untuk memperkaya data pelanggan Anda dengan merek dan keterikatan minat.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406047"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269334"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Memperkaya profil pelanggan dengan merek dan afinitas minat (pratinjau)
 
@@ -35,16 +35,21 @@ Kita menggunakan data pencarian online dari Microsoft Graph untuk menemukan mina
 
 [Selengkapnya tentang Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Skor afinitas dan keyakinan
+## <a name="affinity-level-and-score"></a>Tingkat afinitas dan skor
 
-**Skor afinitas** dihitung pada skala 100-poin, dengan 100 mewakili segmen yang memiliki afinitas tertinggi untuk merek atau minat.
+Pada setiap profil pelanggan yang diperkaya, kami menyediakan dua nilai terkait, tingkat afinitas dan skor afinitas. Nilai ini akan membantu Anda menentukan seberapa kuat afinitas untuk segmen demografi profil tersebut, untuk merek atau minat, dibandingkan dengan segmen demografi lainnya.
 
-**Keyakinan afinitas** juga dihitung pada skala 100 poin. Ini menunjukkan tingkat kepercayaan sistem bahwa segmen memiliki afinitas atas merek atau minat. Tingkat keyakinan didasarkan pada ukuran segmen dan perincian segmen. Ukuran segmen ditentukan berdasarkan jumlah data yang kita miliki untuk segmen tertentu. Perincian segmen ditentukan berdasarkan jumlah atribut (usia, jenis kelamin, lokasi) yang tersedia di profil.
+*Tingkat afinitas* terdiri dari empat tingkat dan *skor afinitas* dihitung pada skala 100 poin yang di petakan ke tingkat afinitas.
 
-Kita tidak menormalkan Skor untuk kumpulan data Anda. Akibatnya, Anda mungkin tidak melihat semua nilai Skor afinitas yang mungkin untuk himpunan data Anda. Misalnya, mungkin tidak ada profil pelanggan yang diperkaya dengan Skor afinitas 100 di data Anda. Mungkin tidak ada pelanggan yang ada di segmen demografis yang mencetak skor 100 untuk merek atau minat tertentu.
 
-> [!TIP]
-> Saat [membuat segmen](segments.md) menggunakan Skor afinitas, Tinjau distribusi Skor afinitas untuk kumpulan data Anda sebelum menentukan ambang batas Skor yang sesuai. Misalnya, Skor afinitas 10 dapat dianggap signifikan dalam kumpulan data yang memiliki Skor afinitas tertinggi hanya 25 untuk merek atau minat tertentu.
+|Tingkat afinitas |Skor afinitas  |
+|---------|---------|
+|Sangat tinggi     | 85-100       |
+|Sangat Penting     | 70-84        |
+|Sedang     | 35-69        |
+|Kurang Penting     | 1-34        |
+
+Tergantung pada perincian yang ingin Anda ukur afinitasnya, Anda dapat menggunakan tingkat afinitas atau skor. Skor afinitas memberi Anda kontrol yang lebih akurat.
 
 ## <a name="supported-countriesregions"></a>Negara/kawasan yang didukung
 
@@ -54,17 +59,13 @@ Untuk memilih negara, buka **pengayaan merek** atau **pengayaan mina**, lalu pil
 
 ### <a name="implications-related-to-country-selection"></a>Implikasi terkait pemilihan negara
 
-- Saat [memilih merek Anda sendiri](#define-your-brands-or-interests), kami akan memberikan saran berdasarkan negara/kawasan yang dipilih.
+- Saat [memilih merek Anda sendiri](#define-your-brands-or-interests), sistem memberikan saran berdasarkan negara atau kawasan yang dipilih.
 
-- Saat [memilih industri](#define-your-brands-or-interests), kami akan mengidentifikasi merek atau minat yang paling relevan berdasarkan negara/kawasan yang dipilih.
+- Saat [memilih industri](#define-your-brands-or-interests), Anda akan mendapatkan merek atau minat yang paling relevan berdasarkan negara atau kawasan yang dipilih.
 
-- Saat [memetakan bidang Anda](#map-your-fields), jika bidang negara/kawasan tidak dipetakan, kami akan menggunakan data Microsoft Graph dari negara/kawasan yang dipilih untuk memperkaya profil pelanggan Anda. Kami juga akan menggunakan pilihan tersebut untuk memperkaya profil pelanggan Anda yang tidak memiliki data negara/kawasan.
-
-- Saat [memperkaya profil](#refresh-enrichment), kami akan memperkaya semua profil pelanggan yang memiliki data Microsoft graph yang tersedia untuk merek dan minat tertentu, termasuk profil yang tidak ada di negara/kawasan yang dipilih. Misalnya, jika Anda memilih Jerman, kami akan memperkaya profil yang terletak di Amerika Serikat jika kami memiliki data Microsoft graph yang tersedia untuk merek dan minat tertentu di AS.
+- Bila [memperkaya profil](#refresh-enrichment), kami akan memperkaya semua profil pelanggan dengan data yang kami dapatkan untuk merek dan minat yang dipilih. Termasuk profil yang tidak berada di negara atau kawasan tertentu. Misalnya, jika Anda memilih Jerman, kami akan memperkaya profil yang terletak di Amerika Serikat jika kami memiliki data Microsoft graph yang tersedia untuk merek dan minat tertentu di AS.
 
 ## <a name="configure-enrichment"></a>Konfigurasi pengayaan
-
-Mengkonfigurasi pengayaan minat atau merek terdiri dari dua langkah:
 
 ### <a name="define-your-brands-or-interests"></a>Definisikan merek atau minat Anda
 
@@ -75,9 +76,19 @@ pilih salah satu dari opsi berikut ini:
 
 Untuk menambahkan merek atau minat, masukkan di area input untuk mendapatkan saran berdasarkan persyaratan kecocokan. Jika kami tidak mencantumkan merek atau minat yang Anda Cari, kirim masukan kepada kami menggunakan tautan **Usulkan**.
 
+### <a name="review-enrichment-preferences"></a>Tinjau Preferensi pengayaan
+
+Tinjau preferensi pengayaan default dan perbarui jika diperlukan.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Cuplikan layar jendela preferensi pengayaan.":::
+
+### <a name="select-entity-to-enrich"></a>Pilih entitas yang akan diperkaya
+
+Pilih **Entitas yang diperkaya** dan pilih himpunan data yang anda ingin perkaya dengan data perusahaan dari Microsoft Graph. Anda dapat memilih entitas Pelanggan untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
+
 ### <a name="map-your-fields"></a>Petakan bidang Anda
 
-Petakan bidang dari entitas pelanggan terpadu ke minimal dua atribut untuk menentukan segmen demografi yang akan kami gunakan untuk memperkaya data pelanggan Anda. Pilih **Edit** untuk menentukan pemetaan bidang, lalu pilih **Terapkan** setelah selesai. Pilih **Simpan** untuk menyelesaikan pemetaan bidang.
+Petakan bidang dari entitas pelanggan terpadu untuk menentukan segmen demografi yang akan digunakan sistem untuk memperkaya data pelanggan. Petakan Negara/Kawasan dan sekurangnya atribut Tanggal Lahir atau Jenis Kelamin. Atau, Anda harus memetakan minimal satu Kota (dan Negara Bagian/Provinsi) atau Kode Pos. Pilih **Edit** untuk menentukan pemetaan bidang, lalu pilih **Terapkan** setelah selesai. Pilih **Simpan** untuk menyelesaikan pemetaan bidang.
 
 Format dan nilai berikut didukung, nilai tidak peka terhadap besar huruf:
 
@@ -120,3 +131,6 @@ afinitas Merek dan minat juga dapat dilihat pada kartu Pelanggan perorangan. Buk
 ## <a name="next-steps"></a>Langkah-langkah berikutnya
 
 Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tindakan](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman yang disesuaikan bagi pelanggan Anda.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
