@@ -6,16 +6,16 @@ metadata:
   description: Hub bantuan dengan tautan kunci untuk wawasan audiens.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: id-ID
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4406071"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745725"
 landingContent:
 - title: Tentang Wawasan audiens
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Situs Komunitas
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Serap Sumber data
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Tambahkan sumber data
-      url: data-sources.md
-    - text: Refresh bertahap
-      url: incremental-refresh-data-sources.md
-    - text: Pahami Entitas
-      url: entities.md
 - title: Padukan data
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Peta
-      url: map-entities.md
-    - text: Cocokkan
-      url: match-entities.md
-    - text: Penggabungan
-      url: merge-entities.md
-- title: Perkaya profil pelanggan
+    - text: Ikhtisar sumber data
+      url: data-sources.md
+    - text: Ikhtisar penyatuan
+      url: data-unification.md
+    - text: Pahami Entitas
+      url: entities.md
+- title: Memperkaya data dan menyempurnakan data
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Perkaya profil pelanggan
+      url: enrichment-hub.md
     - text: Konfigurasikan relasi
       url: relationships.md
     - text: Mencatumkan Aktivitas Pelanggan
       url: activities.md
-    - text: Hadirkan model Pembelajaran Mesin anda sendiri
-      url: custom-models.md
+- title: Dapatkan wawasan
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Buat segmen
+      url: segments.md
+    - text: Membuat ukuran
+      url: measures.md
+    - text: Data lengkap dengan prediksi
+      url: predictions.md
 - title: Ekspor data pelanggan
   linkLists:
   - linkListType: how-to-guide
