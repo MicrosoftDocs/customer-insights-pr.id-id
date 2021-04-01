@@ -2,19 +2,19 @@
 title: Wawasan audiens untuk ikhtisar Dynamics 365 Customer Insights
 description: Ikhtisar wawasan audiens untuk Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5476999"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598634"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan audiens untuk ikhtisar Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pe
 - **Hilangkan isolasi data dan satukan data pelanggan**
 
   - Sambungkan dan satukan data Anda dengan mudah — masukkan data transaksional, observasional, dan perilaku dari [sumber data populer dengan menggunakan konektor yang telah dibuat sebelumnya](data-sources.md).
-  - Ubah data pelanggan dengan cerdas — Buat profil pelanggan terpadu sesuai dengan [Common Data Model](https://docs.microsoft.com/common-data-model/). Tangani identitas pelanggan dengan rekomendasi berbasis AI/ML.
+  - Ubah data pelanggan dengan cerdas — Buat profil pelanggan terpadu sesuai dengan [Common Data Model](/common-data-model/). Tangani identitas pelanggan dengan rekomendasi berbasis AI/ML.
 
 - **Perkaya dengan kecerdasan audiens yang terkandung dalam Microsoft Graph**
 
@@ -42,7 +42,7 @@ Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pe
 - **Analis data/admin:**
 
   - Akses ke kumpulan kaya konektor untuk mencerna semua data pelanggan Anda.
-  - Kemampuan untuk menyatukan data pelanggan dan mengubahnya menjadi mulirat [Common Data Model](https://docs.microsoft.com/common-data-model/).
+  - Kemampuan untuk menyatukan data pelanggan dan mengubahnya menjadi mulirat [Common Data Model](/common-data-model/).
   - Memperkaya informasi pelanggan dengan wawasan dari audiens intelijen yang terkandung dalam Microsoft Graph, seperti afinitas dan minat merek.
   - Konfigurasi "klik yang bukan kode" dan pengalaman debugging untuk memudahkan konfigurasi wawasan audiens dan mengidentifikasi potensi masalah.
   - Membersihkan dan menstandardisasi data pelanggan melalui sumber yang berbeda dengan rekomendasi yang didukung AI.  
