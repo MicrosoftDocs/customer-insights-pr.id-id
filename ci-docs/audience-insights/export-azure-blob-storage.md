@@ -2,52 +2,52 @@
 title: Mengekspor data Customer Insights ke penyimpanan Azure Blob
 description: Pelajari cara mengkonfigurasi sambungan ke Penyimpanan Blob Azure.
 ms.date: 09/18/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ecacf20365e78ced8859dfa54b1b16cb923c00eb
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269196"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596181"
 ---
-# <a name="connector-for-azure-blob-storage-preview"></a><span data-ttu-id="175ee-103">Konektor untuk Penyimpanan Blob Azure (pratinjau)</span><span class="sxs-lookup"><span data-stu-id="175ee-103">Connector for Azure Blob storage (preview)</span></span>
+# <a name="connector-for-azure-blob-storage-preview"></a><span data-ttu-id="a05ff-103">Konektor untuk Penyimpanan Blob Azure (pratinjau)</span><span class="sxs-lookup"><span data-stu-id="a05ff-103">Connector for Azure Blob storage (preview)</span></span>
 
-<span data-ttu-id="175ee-104">Simpan data Customer Insights Anda di Azure Data Lake storage atau gunakan untuk mentransfer data Anda ke aplikasi lain.</span><span class="sxs-lookup"><span data-stu-id="175ee-104">Store your Customer Insights data in an Azure Blob storage or use it to transfer your data to other applications.</span></span>
+<span data-ttu-id="a05ff-104">Simpan data Customer Insights Anda di Azure Data Lake storage atau gunakan untuk mentransfer data Anda ke aplikasi lain.</span><span class="sxs-lookup"><span data-stu-id="a05ff-104">Store your Customer Insights data in an Azure Blob storage or use it to transfer your data to other applications.</span></span>
 
-## <a name="configure-the-connector-for-azure-blob-storage"></a><span data-ttu-id="175ee-105">Konfigurasikan konektor untuk Penyimpanan Blob Azure</span><span class="sxs-lookup"><span data-stu-id="175ee-105">Configure the connector for Azure Blob storage</span></span>
+## <a name="configure-the-connector-for-azure-blob-storage"></a><span data-ttu-id="a05ff-105">Konfigurasikan konektor untuk Penyimpanan Blob Azure</span><span class="sxs-lookup"><span data-stu-id="a05ff-105">Configure the connector for Azure Blob storage</span></span>
 
-1. <span data-ttu-id="175ee-106">Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.</span><span class="sxs-lookup"><span data-stu-id="175ee-106">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="a05ff-106">Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.</span><span class="sxs-lookup"><span data-stu-id="a05ff-106">In audience insights, go to **Admin** > **Export destinations**.</span></span>
 
-1. <span data-ttu-id="175ee-107">Di **Penyimpanan Blob Azure**, pilih **konfigurasi**.</span><span class="sxs-lookup"><span data-stu-id="175ee-107">Under **Azure Blob Storage**, select **Set up**.</span></span>
+1. <span data-ttu-id="a05ff-107">Di **Penyimpanan Blob Azure**, pilih **konfigurasi**.</span><span class="sxs-lookup"><span data-stu-id="a05ff-107">Under **Azure Blob Storage**, select **Set up**.</span></span>
 
-1. <span data-ttu-id="175ee-108">Masukkan **nama akun**, **kunci akun**, dan **penampung** untuk akun penyimpanan Blob Azure Anda.</span><span class="sxs-lookup"><span data-stu-id="175ee-108">Enter **Account name**, **Account key**, and **Container** for your Azure Blob storage account.</span></span>
-    - <span data-ttu-id="175ee-109">Untuk mempelajari lebih lanjut tentang cara menemukan kunci akun dan nama akun penyimpanan Azure Blob, lihat [mengelola pengaturan akun penyimpanan di portal Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="175ee-109">To learn more about how to find the Azure Blob storage account name and account key, see [Manage storage account settings in the Azure portal](https://docs.microsoft.com/azure/storage/common/storage-account-manage).</span></span>
-    - <span data-ttu-id="175ee-110">Untuk mempelajari cara membuat penampung, lihat [membuat penampung](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span><span class="sxs-lookup"><span data-stu-id="175ee-110">To learn how to create a container, see [Create a container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span></span>
+1. <span data-ttu-id="a05ff-108">Masukkan **nama akun**, **kunci akun**, dan **penampung** untuk akun penyimpanan Blob Azure Anda.</span><span class="sxs-lookup"><span data-stu-id="a05ff-108">Enter **Account name**, **Account key**, and **Container** for your Azure Blob storage account.</span></span>
+    - <span data-ttu-id="a05ff-109">Untuk mempelajari lebih lanjut tentang cara menemukan kunci akun dan nama akun penyimpanan Azure Blob, lihat [mengelola pengaturan akun penyimpanan di portal Azure](/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="a05ff-109">To learn more about how to find the Azure Blob storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
+    - <span data-ttu-id="a05ff-110">Untuk mempelajari cara membuat penampung, lihat [membuat penampung](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span><span class="sxs-lookup"><span data-stu-id="a05ff-110">To learn how to create a container, see [Create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span></span>
 
-1. <span data-ttu-id="175ee-111">Beri nama yang dikenali di bidang **nama tampilan** tujuan anda.</span><span class="sxs-lookup"><span data-stu-id="175ee-111">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="a05ff-111">Beri nama yang dikenali di bidang **nama tampilan** tujuan anda.</span><span class="sxs-lookup"><span data-stu-id="a05ff-111">Give your destination a recognizable name in the **Display name** field.</span></span>
 
-1. <span data-ttu-id="175ee-112">Pilih **Selanjutnya**.</span><span class="sxs-lookup"><span data-stu-id="175ee-112">Select **Next**.</span></span>
+1. <span data-ttu-id="a05ff-112">Pilih **Selanjutnya**.</span><span class="sxs-lookup"><span data-stu-id="a05ff-112">Select **Next**.</span></span>
 
-1. <span data-ttu-id="175ee-113">Centang kotak di samping masing-masing entitas yang akan diekspor ke tujuan ini.</span><span class="sxs-lookup"><span data-stu-id="175ee-113">Select the box next to each of the entities you want to export to this destination.</span></span>
+1. <span data-ttu-id="a05ff-113">Centang kotak di samping masing-masing entitas yang akan diekspor ke tujuan ini.</span><span class="sxs-lookup"><span data-stu-id="a05ff-113">Select the box next to each of the entities you want to export to this destination.</span></span>
 
-1. <span data-ttu-id="175ee-114">Pilih **Simpan**.</span><span class="sxs-lookup"><span data-stu-id="175ee-114">Select **Save**.</span></span>
+1. <span data-ttu-id="a05ff-114">Pilih **Simpan**.</span><span class="sxs-lookup"><span data-stu-id="a05ff-114">Select **Save**.</span></span>
 
-<span data-ttu-id="175ee-115">Data yang diekspor disimpan dalam wadah penyimpanan Azure Blob yang Anda konfigurasikan.</span><span class="sxs-lookup"><span data-stu-id="175ee-115">Exported data is stored in the Azure Blob storage container you configured.</span></span> <span data-ttu-id="175ee-116">Jalur folder berikut dibuat secara otomatis dalam penampung:</span><span class="sxs-lookup"><span data-stu-id="175ee-116">The following folder paths are automatically created in your container:</span></span>
+<span data-ttu-id="a05ff-115">Data yang diekspor disimpan dalam wadah penyimpanan Azure Blob yang Anda konfigurasikan.</span><span class="sxs-lookup"><span data-stu-id="a05ff-115">Exported data is stored in the Azure Blob storage container you configured.</span></span> <span data-ttu-id="a05ff-116">Jalur folder berikut dibuat secara otomatis dalam penampung:</span><span class="sxs-lookup"><span data-stu-id="a05ff-116">The following folder paths are automatically created in your container:</span></span>
 
-- <span data-ttu-id="175ee-117">Untuk entitas sumber dan entitas yang dihasilkan oleh sistem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span><span class="sxs-lookup"><span data-stu-id="175ee-117">For source entities and entities generated by the system: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span></span>
-  - <span data-ttu-id="175ee-118">Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span><span class="sxs-lookup"><span data-stu-id="175ee-118">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span></span>
-- <span data-ttu-id="175ee-119">Model .JSON untuk entitas yang diekspor akan berada di tingkat %ExportDestinationName%</span><span class="sxs-lookup"><span data-stu-id="175ee-119">The model.json for the exported entities will reside at the %ExportDestinationName% level</span></span>
-  - <span data-ttu-id="175ee-120">Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span><span class="sxs-lookup"><span data-stu-id="175ee-120">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span></span>
+- <span data-ttu-id="a05ff-117">Untuk entitas sumber dan entitas yang dihasilkan oleh sistem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span><span class="sxs-lookup"><span data-stu-id="a05ff-117">For source entities and entities generated by the system: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span></span>
+  - <span data-ttu-id="a05ff-118">Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span><span class="sxs-lookup"><span data-stu-id="a05ff-118">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span></span>
+- <span data-ttu-id="a05ff-119">Model.json untuk entitas yang diekspor akan berada di tingkat %ExportDestinationName%</span><span class="sxs-lookup"><span data-stu-id="a05ff-119">The model.json for the exported entities will reside at the %ExportDestinationName% level</span></span>
+  - <span data-ttu-id="a05ff-120">Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span><span class="sxs-lookup"><span data-stu-id="a05ff-120">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="175ee-121">Mengekspor data</span><span class="sxs-lookup"><span data-stu-id="175ee-121">Export the data</span></span>
+## <a name="export-the-data"></a><span data-ttu-id="a05ff-121">Mengekspor data</span><span class="sxs-lookup"><span data-stu-id="a05ff-121">Export the data</span></span>
 
-<span data-ttu-id="175ee-122">Anda dapat [mengekspor data sesuai permintaan](export-destinations.md#export-data-on-demand).</span><span class="sxs-lookup"><span data-stu-id="175ee-122">You can [export data on demand](export-destinations.md#export-data-on-demand).</span></span> <span data-ttu-id="175ee-123">Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="175ee-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="a05ff-122">Anda dapat [mengekspor data sesuai permintaan](export-destinations.md#export-data-on-demand).</span><span class="sxs-lookup"><span data-stu-id="a05ff-122">You can [export data on demand](export-destinations.md#export-data-on-demand).</span></span> <span data-ttu-id="a05ff-123">Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="a05ff-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
