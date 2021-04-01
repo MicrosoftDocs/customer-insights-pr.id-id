@@ -19,13 +19,13 @@
     - name: Pelajari modul
       items:
         - name: Menyerap data
-          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+          href: /learn/modules/ingest-data-customer-insights/
         - name: Buat profil pelanggan terpadu
-          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+          href: /learn/modules/unified-customer-profile/
         - name: Bekerja dengan aplikasi
-          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+          href: /learn/modules/working-with-customer-insights/
         - name: Memperkaya data dan prediksi
-          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+          href: /learn/modules/enrich-data/
     - name: Sumber Data
       items:
         - name: Ikhtisar sumber data
@@ -114,6 +114,12 @@
       items:
         - name: Ikhtisar Destinasi ekspor
           href: audience-insights/export-destinations.md
+        - name: AdRoll
+          href: audience-insights/export-adroll.md
+        - name: Adobe Campaign Standard
+          href: audience-insights/export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: audience-insights/export-adobe-experience-platform.md
         - name: Autopilot
           href: audience-insights/export-autopilot.md
         - name: Azure Blob Storage

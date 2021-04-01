@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267910"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597423"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berbasis pembelajaran mesin Azure
 
@@ -29,9 +29,9 @@ Data terpadu di Dynamics 365 Customer Insights adalah sumber untuk membangun mod
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Atur ruang kerja Pembelajaran Mesin Azure
 
-1. Lihat [membuat ruang kerja Pembelajaran Mesin Azure](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) untuk pilihan yang berbeda untuk membuat ruang kerja. Untuk performa terbaik, buat ruang kerja di kawasan Azure yang secara geografis paling dekat dengan lingkungan Customer Insights Anda.
+1. Lihat [membuat ruang kerja Pembelajaran Mesin Azure](/azure/machine-learning/concept-workspace#-create-a-workspace) untuk pilihan yang berbeda untuk membuat ruang kerja. Untuk performa terbaik, buat ruang kerja di kawasan Azure yang secara geografis paling dekat dengan lingkungan Customer Insights Anda.
 
-1. Akses ruang kerja anda melalui [Studio Pembelajaran Mesin Azure](https://ml.azure.com/). Ada beberapa [cara untuk berinteraksi](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) dengan ruang kerja Anda.
+1. Akses ruang kerja anda melalui [Studio Pembelajaran Mesin Azure](https://ml.azure.com/). Ada beberapa [cara untuk berinteraksi](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) dengan ruang kerja Anda.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Bekerja dengan desainer Pembelajaran Mesin Azure
 
@@ -39,13 +39,13 @@ Desainer Pembelajaran Mesin Azure menyediakan kanvas visual untuk menyeret dan m
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Bekerja dengan SDK Pembelajaran Mesin Azure
 
-Ilmuwan Data dan pengembang AI menggunakan [SDK Pembelajaran Mesin Azure](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) untuk membuat alur kerja Pembelajaran Mesin. Saat ini, model yang dilatih menggunakan SDK tidak dapat diintegrasikan langsung dengan Customer Insights. Alur inferensi batch yang mengkonsumsi model diperlukan untuk integrasi dengan Customer Insights.
+Ilmuwan Data dan pengembang AI menggunakan [SDK Pembelajaran Mesin Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) untuk membuat alur kerja Pembelajaran Mesin. Saat ini, model yang dilatih menggunakan SDK tidak dapat diintegrasikan langsung dengan Customer Insights. Alur inferensi batch yang mengkonsumsi model diperlukan untuk integrasi dengan Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Persyaratan alur jalur batch untuk diintegrasikan dengan Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfigurasi himpunan data
 
-Anda harus membuat dataset untuk menggunakan data entitas dari Customer Insights ke alur kerja inferensi batch Anda. Kumpulan data ini harus didaftarkan di ruang kerja. Saat ini, kami hanya mendukung [himpunan data tabel](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .CSV. Kumpulan data yang terkait dengan data entitas harus diberi parameter sebagai parameter alur kerja.
+Anda harus membuat dataset untuk menggunakan data entitas dari Customer Insights ke alur kerja inferensi batch Anda. Kumpulan data ini harus didaftarkan di ruang kerja. Saat ini, kami hanya mendukung [himpunan data tabel](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .CSV. Kumpulan data yang terkait dengan data entitas harus diberi parameter sebagai parameter alur kerja.
    
 * Parameter himpunan data dalam desainer
    
@@ -76,7 +76,7 @@ Anda harus membuat dataset untuk menggunakan data entitas dari Customer Insights
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Impor data alur jalur ke Customer Insights
 
-* Desainer menyediakan [ekspor modul data](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) yang memungkinkan output alur untuk diekspor ke Azure Storage. Saat ini, modul harus menggunakan penyimpanan jenis **Penyimpanan Blob Azure** dan memparameterisasi **himpunan data** dan **jalur** relatif. Customer Insights mengesampingkan parameter ini selama eksekusi alur kerja dengan himpunandata dan jalur yang dapat diakses oleh produk.
+* Desainer menyediakan [ekspor modul data](/azure/machine-learning/algorithm-module-reference/export-data) yang memungkinkan output alur untuk diekspor ke Azure Storage. Saat ini, modul harus menggunakan penyimpanan jenis **Penyimpanan Blob Azure** dan memparameterisasi **himpunan data** dan **jalur** relatif. Customer Insights mengesampingkan parameter ini selama eksekusi alur kerja dengan himpunandata dan jalur yang dapat diakses oleh produk.
    > [!div class="mx-imgBorder"]
    > ![Ekspor Konfigurasi Modul Data](media/intelligence-designer-importdata.png "Ekspor Konfigurasi Modul Data")
    

@@ -1,7 +1,7 @@
 ---
 title: Fitur baru dan mendatang
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270436"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598435"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [Dynamics 365 dan rencana rilis Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [Dynamics 365 dan rencana rilis Power Platform](/dynamics365/release-plans/).
 
 Anda juga dapat menonton video berikut untuk mempelajari lebih lanjut tentang kemampuan yang direncanakan selama enam bulan terakhir.
 
@@ -30,6 +30,40 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Pembaruan Februari 2021
+
+Pembaruan pada Februari 2021 mencakup beberapa fitur, peningkatan kinerja, dan perbaikan bug.
+
+#### <a name="extensibility"></a>Dapat diperluas
+
+- **Ekspor segmen ke AdRoll**
+
+  Kami telah memperluas tujuan ekspor kami untuk mencakup AdRoll. Anda sekarang dapat mengekspor segmen dari Customer Insights ke audiens AdRoll dan menggunakannya sebagai baseline untuk iklan Anda. Untuk informasi lebih lanjut, lihat [Konektor untuk AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmen
+ 
+- **Buat duplikat Segmen**
+  
+  Untuk membuat segmen baru berdasarkan segmen yang ada, Anda sekarang dapat menduplikasi segmen dan mengedit segmen duplikat untuk menyempurnakannya lebih lanjut. 
+
+- **Menambahkan atribut tambahan ke segmen**
+
+  Anda sekarang dapat menyertakan atribut dalam output segmen, meskipun atribut ini bukan bagian dari profil pelanggan. Contohnya, sertakan ID langganan dalam segmen meskipun merupakan bagian dari entitas langganan yang memiliki relasi M:1 dengan entitas pelanggan. Selama atribut menjadi milik entitas yang terkait dengan entitas pelanggan, Anda sekarang dapat menyertakan atribut ini.  
+
+#### <a name="predictions"></a>Prediksi
+
+- **Buat rekomendasi produk prediktif**
+
+  Memahami apa yang ingin dibeli pelanggan adalah salah satu langkah pertama yang diperlukan untuk meningkatkan pendapatan bisnis dan membangun loyalitas pelanggan melalui personalisasi dan keterlibatan. Memberikan rekomendasi untuk produk yang tidak selaras dengan kepentingan pelanggan Dapat menciptakan rasa tidak terhubung antara pelanggan dan bisnis Anda, dan pada akhirnya membatasi keseluruhan pendapatan dan pengalaman calon pelanggan. 
+
+  Menggunakan data Anda sendiri, Anda sekarang dapat membuat prediksi untuk produk yang kemungkinan dibeli pelanggan Anda di masa mendatang. Untuk informasi lebih lanjut, lihat [prediksi Rekomendasi produk](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Administrasi Sistem
+
+- **Salin lingkungan mendukung lebih banyak jenis sumber data**
+
+  Admin dapat menyalin konfigurasi lingkungan ke lingkungan baru di organisasi yang sama. Fitur ini memperluas fungsi salin lingkungan untuk kasus di mana sumber data berdasarkan danau data Common Data Service atau folder Common Data Model digunakan.
 
 ## <a name="january-2021-updates"></a>Pembaruan Januari 2021
 

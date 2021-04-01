@@ -2,19 +2,19 @@
 title: Pengayaan dengan impor kustom SFTP
 description: Informasi umum tentang pengayaan impor kustom SFTP.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269610"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595859"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Memperkaya profil pelanggan dengan data kustom (pratinjau)
 
@@ -50,7 +50,7 @@ Untuk mengkonfigurasikan impor kustom SFTP, persyaratan berikut harus dipenuhi:
 
 ## <a name="defining-field-mappings"></a>Menentukan pemetaan bidang 
 
-Direktori yang berisi file yang akan diimpor pada server SFTP juga harus berisi file *model.JSON*. File ini mendefinisikan skema yang akan digunakan untuk mengimpor data. Skema harus menggunakan [Common Data Model](https://docs.microsoft.com/common-data-model/) untuk menentukan pemetaan bidang. Contoh sederhana dari file model.JSON terlihat seperti ini:
+Direktori yang berisi file yang akan diimpor pada server SFTP juga harus berisi file *model.JSON*. File ini mendefinisikan skema yang akan digunakan untuk mengimpor data. Skema harus menggunakan [Common Data Model](/common-data-model/) untuk menentukan pemetaan bidang. Contoh sederhana dari file model.JSON terlihat seperti ini:
 
 ```
 {

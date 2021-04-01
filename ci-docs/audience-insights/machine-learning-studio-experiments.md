@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270208"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598343"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Gunakan model berbasis pembelajaran mesin Azure (klasik)
 
@@ -37,7 +37,7 @@ Pada langkah pertama, kita harus membuat ruang kerja untuk membuka Studio Pembel
 
 1. Cari **Pembelajaran Mesin Studio Workspace**, lalu pilih **buat**.
 
-1. Masukkan rincian yang diperlukan untuk [membuat ruang kerja](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Pilih **tingkat paket Layanan web** berdasarkan jumlah data yang berencana Anda impor. Untuk performa terbaik, pilih **Lokasi** yang paling dekat dengan Anda.
+1. Masukkan rincian yang diperlukan untuk [membuat ruang kerja](/azure/machine-learning/studio/create-workspace). Pilih **tingkat paket Layanan web** berdasarkan jumlah data yang berencana Anda impor. Untuk performa terbaik, pilih **Lokasi** yang paling dekat dengan Anda.
 
 1. Setelah membuat sumber daya, dasbor Pembelajaran Mesin Studio workspace akan muncul. Pilih **luncurkan Studio Pembelajaran Mesin**.
 
@@ -65,7 +65,7 @@ Anda sekarang dapat membuat eksperimen baru atau mengimpor template eksperimen y
 
    ![Mengkonfigurasi layanan web prediktif](media/predictive-webservice-control.png)
 
-1. Setelah percobaan layanan web prediktif berhasil, Anda dapat menyebarkannya untuk penjadwalan otomatis. Agar layanan web berfungsi dengan Customer Insights, pilih **Sebarkan layanan web** > **Sebarkan pratinjau layanan web [baru]**. [Pelajari lebih lanjut tentang menyebarkan Layanan web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Setelah percobaan layanan web prediktif berhasil, Anda dapat menyebarkannya untuk penjadwalan otomatis. Agar layanan web berfungsi dengan Customer Insights, pilih **Sebarkan layanan web** > **Sebarkan pratinjau layanan web [baru]**. [Pelajari lebih lanjut tentang menyebarkan Layanan web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Menyebarkan layanan web prediktif](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Gambar berikut menunjukkan alur pelatihan model dan evaluasi dari Studio Pembela
 
 ![Model kehilangan pelanggan dalam Studio Pembelajaran Mesin Azure](media/azure-machine-learning-model.png)
 
-Kami juga menerapkan teknik yang disebut **nilai penting fitur permutasi**, aspek penting dari optimasi model. Model internal memiliki sedikit atau tidak ada wawasan tentang dampak dari fitur tertentu pada prediksi akhir. Kalkulator pentingnya fitur menggunakan algoritme kustom untuk menghitung pengaruh fitur individual pada hasil untuk model tertentu. Fitur penting dinormalkan antara + 1 hingga -1. Pengaruh negatif berarti fitur yang sesuai memiliki pengaruh kontra-intuitif pada hasil dan harus dihilangkan dari model. Pengaruh positif menunjukkan bahwa fitur ini sangat berkontribusi terhadap prediksi. Nilai ini bukan koefisien korelasi karena memiliki metrik yang berbeda. Untuk informasi lebih lanjut, lihat [nilai penting fitur permutasi](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Kami juga menerapkan teknik yang disebut **nilai penting fitur permutasi**, aspek penting dari optimasi model. Model internal memiliki sedikit atau tidak ada wawasan tentang dampak dari fitur tertentu pada prediksi akhir. Kalkulator pentingnya fitur menggunakan algoritme kustom untuk menghitung pengaruh fitur individual pada hasil untuk model tertentu. Fitur penting dinormalkan antara + 1 hingga -1. Pengaruh negatif berarti fitur yang sesuai memiliki pengaruh kontra-intuitif pada hasil dan harus dihilangkan dari model. Pengaruh positif menunjukkan bahwa fitur ini sangat berkontribusi terhadap prediksi. Nilai ini bukan koefisien korelasi karena memiliki metrik yang berbeda. Untuk informasi lebih lanjut, lihat [nilai penting fitur permutasi](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Seluruh [Eksperimen kehilangan pelanggan tersedia di Galeri Azure AI](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Seluruh [percobaan rekomendasi produk dapat diakses di Galeri Azure AI.](https:/
 
 ## <a name="integrate-custom-models"></a>Integrasikan Model kustom
 
-Untuk menggunakan prediksi ini dalam Customer Insights, Anda harus **mengekspor** prediksi bersama dengan ID pelanggan. [Ekspor ke lokasi penyimpanan Blob Azure yang sama dengan](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) yang Anda ekspor ke data sumber. Layanan web prediktif dapat dijadwalkan untuk berjalan secara teratur dan memperbarui Skor.
+Untuk menggunakan prediksi ini dalam Customer Insights, Anda harus **mengekspor** prediksi bersama dengan ID pelanggan. [Ekspor ke lokasi penyimpanan Blob Azure yang sama dengan](/azure/storage/common/storage-import-export-data-from-blobs) yang Anda ekspor ke data sumber. Layanan web prediktif dapat dijadwalkan untuk berjalan secara teratur dan memperbarui Skor.
 
 Data yang dihasilkan oleh model kustom dapat digunakan untuk lebih memperkaya data pelanggan Anda. Untuk informasi lebih lanjut, lihat [model Pembelajaran Mesin kustom](custom-models.md).
 

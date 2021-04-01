@@ -2,19 +2,19 @@
 title: Prediksi nilai selama hubungan dengan pelanggan (CLV)
 description: Prediksi potensi pendapatan untuk pelanggan aktif di masa mendatang.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268598"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595812"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV) (pratinjau)
 
@@ -194,11 +194,11 @@ Terdapat tiga bagian utama data dalam halaman hasil.
   
   - **Tingkat keberhasilan dalam memperkirakan pelanggan bernilai tinggi**
 
-  Lihat perbedaan dalam memperkirakan pelanggan bernilai tinggi menggunakan model AI dibandingkan model dasar. Contohnya, tingkat keberhasilan 84% berarti dari semua pelanggan bernilai tinggi dalam data pelatihan, model AI mampu menangkap secara akurat 84%. Selanjutnya kita akan membandingkan tingkat keberhasilan ini dengan tingkat keberhasilan model dasar untuk melaporkan perubahan relatif. Nilai ini digunakan untuk menetapkan peringkat ke model.
+    Lihat perbedaan dalam memperkirakan pelanggan bernilai tinggi menggunakan model AI dibandingkan model dasar. Contohnya, tingkat keberhasilan 84% berarti dari semua pelanggan bernilai tinggi dalam data pelatihan, model AI mampu menangkap secara akurat 84%. Selanjutnya kita akan membandingkan tingkat keberhasilan ini dengan tingkat keberhasilan model dasar untuk melaporkan perubahan relatif. Nilai ini digunakan untuk menetapkan peringkat ke model.
 
   - **Metrik kesalahan**
     
-  Metrik lainnya memungkinkan Anda meninjau kinerja model secara keseluruhan dalam hal kesalahan dalam memperkirakan nilai yang akan datang. Kita menggunakan metrik RMSE (Root Mean Squared Error) secara keseluruhan untuk menilai kesalahan ini. RMSE adalah cara standar untuk mengukur kesalahan model dalam memperkirakan data kuantitatif. RMSE model AI dibandingkan RMSE dari model dasar dan perbedaan relatifnya dilaporkan.
+    Metrik lainnya memungkinkan Anda meninjau kinerja model secara keseluruhan dalam hal kesalahan dalam memperkirakan nilai yang akan datang. Kita menggunakan metrik RMSE (Root Mean Squared Error) secara keseluruhan untuk menilai kesalahan ini. RMSE adalah cara standar untuk mengukur kesalahan model dalam memperkirakan data kuantitatif. RMSE model AI dibandingkan RMSE dari model dasar dan perbedaan relatifnya dilaporkan.
 
   Model AI memprioritaskan peringkat pelanggan yang akurat sesuai dengan nilai yang mereka bawa untuk bisnis Anda. Jadi hanya tingkat keberhasilan yang memperkirakan pelanggan bernilai tinggi yang digunakan untuk memperoleh peringkat model final. Metrik RMSE peka terhadap nilai luar. Dalam skenario bila Anda memiliki persentase kecil pelanggan dengan nilai pembelian yang luar biasa tinggi, metrik RMSE secara keseluruhan mungkin tidak memberikan gambaran lengkap performa model.   
 

@@ -2,23 +2,23 @@
 title: Serap data melalui Power Query connector
 description: Konektor untuk sumber data berdasarkan Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267773"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596917"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambungkan ke sumber data Power Query
 
-Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebagian besar konektor ini didukung oleh Dynamics 365 Customer Insights. Menambahkan sumber data berdasarkan Power Query connectors biasanya mengikuti langkah yang diuraikan di bagian berikutnya. Namun, tergantung pada konektor yang Anda gunakan, informasi yang berbeda diperlukan. Untuk informasi lebih lanjut, lihat dokumentasi tentang konektor individual di [Power Query connector](https://docs.microsoft.com/power-query/connectors/).
+Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebagian besar konektor ini didukung oleh Dynamics 365 Customer Insights. Menambahkan sumber data berdasarkan Power Query connectors biasanya mengikuti langkah yang diuraikan di bagian berikutnya. Namun, tergantung pada konektor yang Anda gunakan, informasi yang berbeda diperlukan. Untuk informasi lebih lanjut, lihat dokumentasi tentang konektor individual di [Power Query connector](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Buat sumber data baru
 
@@ -44,7 +44,7 @@ Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebag
    > [!div class="mx-imgBorder"]
    > ![Dialog Edit kueri](media/data-manager-configure-edit-queries.png "Dialog Edit kueri")
 
-1. Anda juga dapat mengubah data Anda. Pilih entitas untuk mengedit atau mengubah. Gunakan pilihan di jendela Power Query untuk menerapkan transformasi. Setiap transformasi akan terdaftar di dalam **langkah yang diterapkan**. Power Query menyediakan banyak pilihan transformasi yang telah dibuat sebelumnya. Lihat [Transformasi Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations) Untuk informasi lebih lanjut.
+1. Anda juga dapat mengubah data Anda. Pilih entitas untuk mengedit atau mengubah. Gunakan pilihan di jendela Power Query untuk menerapkan transformasi. Setiap transformasi akan terdaftar di dalam **langkah yang diterapkan**. Power Query menyediakan banyak pilihan transformasi yang telah dibuat sebelumnya. Lihat [Transformasi Power Query](/power-query/power-query-what-is-power-query#transformations) Untuk informasi lebih lanjut.
 
 1. Anda dapat menambahkan entitas tambahan ke sumber data dengan memilih **dapatkan data**, dalam dialog **Edit kueri**.
 
@@ -59,7 +59,7 @@ Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebag
 
 ## <a name="available-power-query-data-sources"></a>Sumber data Power Query yang tersedia
 
-Lihat referensi [Power Query connector](https://docs.microsoft.com/power-query/connectors/) untuk daftar konektor terkini yang dapat Anda pilih untuk mengimpor data ke Customer Insights. 
+Lihat referensi [Power Query connector](/power-query/connectors/) untuk daftar konektor terkini yang dapat Anda pilih untuk mengimpor data ke Customer Insights. 
 
 Konektor dengan tanda centang di kolom **Customer Insights (aliran data)** tersedia untuk membuat sumber data baru berdasarkan Power query. Tinjau dokumentasi konektor tertentu untuk mempelajari lebih lanjut tentang prasyarat, batasan, dan rincian lainnya.
 

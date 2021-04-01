@@ -1,133 +1,137 @@
 ---
 title: Sesuaikan entitas untuk penyatuan data
 description: Sesuaikan entitas untuk membuat profil pelanggan terpadu.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267482"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595568"
 ---
 # <a name="match-entities"></a>Pencocokan Entitas
 
-Setelah menyelesaikan fase pemetaan, Anda siap mencocokkan entitas Anda. Fase pencocokan menentukan cara menggabungkan kumpulan data menjadi himpunan data profil pelanggan terpadu. Fase pencocokan memerlukan setidaknya [dua entitas yang dipetakan](map-entities.md).
+Fase pencocokan menentukan cara menggabungkan kumpulan data menjadi himpunan data profil pelanggan terpadu. Setelah menyelesaikan [langkah peta](map-entities.md) dalam proses penyatuan data, Anda siap untuk mencocokkan entitas Anda. Fase pencocokan memerlukan setidaknya dua entitas yang dipetakan.
+
+Halaman kecocokan terdiri dari tiga bagian: 
+- Metrik kunci yang meringkas jumlah rekaman yang cocok
+- Cocokkan urutan dan aturan untuk pencocokan antar-entitas
+- Aturan untuk deduplikasi entitas kecocokan
 
 ## <a name="specify-the-match-order"></a>Tentukan urutan kecocokan
 
 Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Atur urutan** untuk memulai fase pencocokan.
 
-Setiap kecocokan menyatukan dua atau lebih entitas ke dalam satu entitas, sekaligus mempertahankan setiap rekaman pelanggan unik. Pada contoh berikut, kita memilih tiga entitas: **ContactCSV: TestData** sebagai entitas **Primary**, **WebAccountCSV: TestData** sebagai **Entitas 2**, dan **CallRecordSmall: TestData** sebagai **Entitas 3**. Diagram di atas pilihan ini mengilustrasikan bagaimana urutan kecocokan dijalankan.
+Setiap kecocokan menggabungkan dua atau beberapa entitas ke dalam satu entitas terkonsolidasi. Pada waktu bersamaan, ia menyimpan rekaman pelanggan unik. Contohnya, kami memilih dua entitas: **eCommerce:eCommerceContacts** sebagai entitas utama dan **LoyaltyScheme:loyCustomers** sebagai entitas kedua. Urutan entitas menentukan dalam urutan mana sistem akan mencoba mencocokkan rekaman.
 
-> [!div class="mx-imgBorder"]
-> ![Mengedit urutan kecocokan data](media/configure-data-match-order-edit-page.png "Mengedit urutan kecocokan data")
+:::image type="content" source="media/match-page.png" alt-text="Tangkapan layar halaman Kecocokan di area Satukan pada proses penyatuan data.":::
   
-Entitas **utama** disesuaikan dengan **entitas 2**. Himpunan data hasil dari pencocokan pertama disesuaikan dengan **entitas 3**.
-Dalam contoh ini, kami hanya memilih dua kecocokan, namun sistem dapat mendukung lebih banyak.
+Entitas utama *eCommerce:e CommerceContacts* cocok dengan entitas berikutnya *LoyaltyScheme:loyCustomers*. Set data yang dihasilkan oleh langkah kecocokan pertama cocok dengan entitas berikut jika Anda memiliki lebih dari dua entitas.
 
 > [!IMPORTANT]
-> Entitas yang Anda pilih sebagai entitas **utama** akan berfungsi sebagai dasar untuk himpunan data induk terpadu Anda. Entitas tambahan yang dipilih selama fase pencocokan akan ditambahkan ke entitas ini. Pada saat yang sama, ini tidak berarti bahwa entitas terpadu akan mencakup *semua* data yang tercakup dalam entitas ini.
+> Entitas yang Anda pilih sebagai entitas utama akan berfungsi sebagai dasar untuk himpunan data profil terpadu Anda. Entitas tambahan yang dipilih selama fase pencocokan akan ditambahkan ke entitas ini. Ini tidak berarti bahwa entitas terpadu akan mencakup *semua* data yang tercakup dalam entitas ini.
 >
 > Ada dua pertimbangan yang dapat membantu Anda memilih hierarki entitas Anda:
 >
-> - Entitas apa yang Anda pertimbangkan memiliki data yang paling lengkap dan andal tentang pelanggan Anda?
-> - Apakah entitas yang baru saja Anda identifikasi memiliki atribut yang juga dimiliki oleh entitas lain (misalnya, nama, nomor telepon, atau alamat email)? Jika tidak, pilih entitas Anda yang paling andal kedua.
+> - Pilih entitas dengan data profil paling lengkap dan terpercaya tentang pelanggan Anda sebagai entitas utama.
+> - Pilih entitas yang memiliki beberapa atribut yang sama dengan entitas lain (misalnya, nama, nomor telepon, atau alamat email) sebagai entitas utama.
 
-Pilih **selesai** untuk menyimpan urutan kecocokan.
+Setelah menentukan urutan kecocokan, Anda akan melihat pasangan kecocokan yang ditentukan di bagian **Rincian rekaman yang cocok** di **Data** > **Satukan** > **Cocokkan**. Metrik kunci akan kosong hingga proses kecocokan selesai.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Tentukan aturan untuk pasangan pencocokan pertama
+## <a name="define-rules-for-match-pairs"></a>Menentukan aturan untuk pasangan yang cocok
 
-Setelah menentukan urutan kecocokan, Anda akan melihat kecocokan yang ditentukan pada halaman **Kecocokan**. Ubin di bagian atas layar akan kosong hingga Anda menjalankan urutan kecocokan.
+Aturan kecocokan menentukan logika dengan mana sepasang entitas tertentu akan dicocokkan.
 
-> [!div class="mx-imgBorder"]
-> ![Mendefinisikan aturan](media/configure-data-match-need-rules.png "Mendefinisikan aturan")
+Peringatan **Memerlukan aturan** di sebelah nama entitas menunjukkan bahwa tidak ada aturan kecocokan yang ditentukan untuk pasangan yang cocok. 
 
-Peringatan **Memerlukan aturan** menunjukkan bahwa tidak ada aturan kecocokan yang ditentukan untuk pasangan pencocokan. Aturan kecocokan menentukan logika dengan mana sepasang entitas tertentu akan dicocokkan.
+:::image type="content" source="media/match-rule-add.png" alt-text="Tangkapan layar dari bagian Rincian rekaman yang cocok dengan kontrol untuk menambahkan aturan disorot.":::
 
-1. Untuk menentukan aturan pertama, Buka panel **definisi aturan** dengan memilih baris pencocokan yang sesuai di tabel kecocokan (1), lalu memilih **Buat aturan baru** (2).
+1. Pilih **Tambah aturan** di dalam entitas di bagian **Rincian rekaman yang cocok** untuk menentukan aturan yang cocok.
 
-   > [!div class="mx-imgBorder"]
-   > ![Buat aturan baru](media/configure-data-match-new-rule2.png "Buat aturan baru")
+1. Di panel **Buat aturan**, konfigurasikan kondisi untuk aturan.
 
-2. Di panel **Edit aturan**, konfigurasikan kondisi untuk aturan tersebut. Setiap kondisi diwakili oleh dua baris yang mencakup pilihan wajib.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Cuplikan layar aturan kecocokan yang dibuka dengan kondisi ditambahkan.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Panel aturan baru](media/configure-data-match-new-rule-condition.png "Panel aturan baru")
+   - **Entitas/Bidang (baris pertama)**: Pilih entitas terkait dan atribut untuk menentukan properti rekaman yang kemungkinan unik bagi pelanggan. Contohnya, nomor telepon atau alamat email. Hindari pencocokan menurut atribut jenis aktivitas. Misalnya, ID pembelian kemungkinan tidak akan menemukan kecocokan pada jenis rekaman lain.
 
-   Entitas/Bidang (pertama) - Atribut yang akan digunakan untuk pencocokan dari entitas kecocokan pasangan pertama. Contohnya dapat mencakup nomor telepon atau alamat email. Pilih atribut yang mungkin unik untuk pelanggan.
+   - **Entitas/Bidang (baris kedua)**: Pilih atribut yang terkait dengan atribut entitas yang ditentukan di baris pertama.
 
-   > [!TIP]
-   > Hindari pencocokan berdasarkan atribut jenis aktivitas. Dengan kata lain, jika atribut tampaknya merupakan aktivitas, maka mungkin kriteria buruk untuk dicocokkan.  
+   - **Normalkan**: Pilih dari pilihan normalisasi berikut untuk atribut yang dipilih. 
+     - White space: Menghilangkan semua spasi. *Hello   World* menjadi *Hello World*.
+     - Simbol: Menghilangkan semua simbol dan karakter khusus. *Head&Shoulder* menjadi *HeadShoulder*.
+     - Teks ke huruf kecil: Mengkonversi semua karakter ke huruf kecil. *SEMUA KAPITAL dan Huruf Judul* menjadi *semua kapital dan huruf judul*.
+     - Unicode ke ASCII: Mengkonversikan notasi unicode ke karakter ASCII. */u00B2* menjadi *2*.
+     - Angka: Mengkonversi sistem angka lain, seperti angka Romawi, ke angka Arab. *VIII* menjadi *8*.
+     - Jenis semantis: Membuat standar nama, judul, nomor telepon, alamat, dll. 
 
-   Entitas/Bidang (Kedua) - Atribut yang akan digunakan untuk pencocokan dari entitas kecocokan pasangan kedua.
+   - **Presisi**: Atur tingkat presisi untuk diterapkan untuk kondisi ini. 
+     - **Dasar**: Pilih dari *Rendah*, *Sedang*, *Tinggi*, dan *Persis*. Pilih **tepat** untuk hanya mencocokkan rekaman yang cocok 100 persen. Pilih salah satu tingkat lainnya untuk mencocokkan rekaman yang bukan 100 persen identik.
+     - **Kustom**: Atur persentase yang harus cocok dengan rekaman. Sistem hanya akan mencocokkan rekaman yang melewati ambang batas ini.
 
-   Normalisasi- **metode normalisasi**: berbagai pilihan normalisasi tersedia untuk atribut yang dipilih. Misalnya, menghapus tanda baca atau menghapus spasi
+1. Masukkan **Nama** untuk aturan tersebut.
 
-   Untuk normalisasi nama organisasi (pratinjau), Anda juga dapat memilih **jenis (telepon, nama, organisasi)**
+1. [Tambahkan kondisi lainnya](#add-conditions-to-a-rule) atau pilih **Selesai** untuk menyelesaikan aturan.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalisasi-B2B](media/match-normalization-b2b.png "Normalisasi-B2B")
+1. Atau, [tambahkan aturan lainnya](#add-rules-to-a-match-pair).
 
-   Tingkat presisi - yang akan digunakan untuk kondisi tersebut. Menetapkan tingkat presisi untuk kondisi kecocokan dapat memiliki dua jenis: **dasar** dan **kustom**.  
-   - Dasar: menyediakan empat opsi untuk dipilih: rendah, sedang, tinggi, dan tepat. Pilih **tepat** untuk hanya mencocokkan rekaman yang cocok 100 persen. Pilih salah satu tingkat lainnya untuk mencocokkan rekaman yang bukan 100 persen identik.
-   - Kustom: Gunakan penggeser untuk menentukan persentase kustom yang harus cocok dengan rekaman atau masukkan nilai di bidang **kustom**. Sistem hanya akan mencocokkan rekaman yang melewati ambang batas ini sebagai pasangan cocok digabungkan. Nilai pada slider adalah antara 0 dan 1. Jadi 0,64 mewakili 64 persen.
+1. Pilih **Simpan** untuk menerapkan perubahan.
 
-3. Untuk menyimpan aturan, pilih **Selesai**.
+### <a name="add-conditions-to-a-rule"></a>Tambahkan kondisi pada aturan
 
-### <a name="add-multiple-conditions"></a>Menambahkan beberapa kondisi
+Untuk mencocokkan entitas hanya jika atribut memenuhi beberapa kondisi, tambahkan lebih banyak kondisi ke aturan kecocokan. Kondisi terhubung dengan operator AND logis dan dengan demikian hanya dijalankan jika semua kondisi terpenuhi.
 
-Untuk mencocokkan entitas hanya jika beberapa kondisi terpenuhi, tambahkan kondisi lainnya yang ditautkan melalui operator AND.
+1. Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Edit** pada aturan yang akan ditambahkan kondisinya.
 
-1. Di panel **Edit aturan**, pilih **Tambah kondisi**. Anda juga dapat menghapus kondisi dengan memilih tombol Hapus di samping kondisi yang ada.
+1. Di panel **Edit aturan**, pilih **Tambah kondisi**.
 
-2. Untuk menyimpan aturan, pilih **Selesai**.
+1. Untuk menyimpan aturan, pilih **Selesai**.
 
-## <a name="add-multiple-rules"></a>Menambahkan beberapa aturan
+### <a name="add-rules-to-a-match-pair"></a>Menambahkan aturan ke pasangan yang cocok
 
-Setiap kondisi berlaku untuk satu sepasang atribut, sedankan aturan mewakili rangkaian beberapa kondisi. Agar entitas Anda cocok dengan kumpulan atribut yang berbeda, Anda dapat menambahkan aturan lainnya.
+Aturan kecocokan menunjukkan rangkaian kondisi. Untuk mencocokkan entitas menurut kondisi berdasarkan beberapa atribut, tambahkan aturan lainnya
 
-1. Di wawasan audiens, buka **Data** > **Satukan** > **Sesuaikan**.
+1.  Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Tambahkan aturan** pada entitas yang akan ditambahkan aturannya.
 
-2. Pilih entitas yang ingin Anda perbarui dan pilih **Tambahkan aturan**.
-
-3. Ikuti prosedur seperti diuraikan dalam [menentukan aturan untuk pasangan pencocokan pertama](#define-rules-for-your-first-match-pair).
+2. Ikuti langkah-langkah dalam [Menentukan aturan untuk pasangan yang cocok](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Aturan urutan itu penting. Algoritma pencocokan mencoba untuk mencocokkan berdasarkan aturan pertama Anda dan melanjutkan ke aturan kedua hanya jika tidak ada kecocokan yang diidentifikasi dalam aturan pertama.
+> Urutan aturan itu penting. Algoritme yang cocok akan berusaha mencocokkan berdasarkan aturan pertama Anda dan terus ke aturan kedua hanya jika tidak ada kecocokan yang diidentifikasi dengan aturan pertama.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Menentukan deduplikasi pada entitas kecocokan
 
-Bersama dengan menentukan aturan pencocokan entitas silang sebagaimana diuraikan dalam bagian di atas, Anda juga dapat menentukan aturan deduplikasi. *Deduplikasi* adalah proses. Ia mengidentifikasi rekaman duplikat, menggabungkannya ke dalam satu rekaman, dan menautkan semua rekaman sumber ke rekaman gabungan ini dengan ID alternatif ke rekaman gabungan.
+Selain [aturan kecocokan antar-entitas](#define-rules-for-match-pairs), Anda juga dapat menentukan aturan deduplikasi. *Duplikasi* adalah proses lain saat mencocokkan rekaman. Ia mengidentifikasi rekaman duplikat dan menggabungkannya ke dalam satu rekaman. Rekaman sumber ditautkan ke rekaman gabungan dengan ID alternatif.
 
-Setelah rekaman yang dideduplikasi teridentifikasi, rekaman tersebut akan digunakan dalam proses pencocokan lintas entitas. Deduplikasi diimplementasikan pada tingkat entitas dan dapat diterapkan ke setiap entitas yang digunakan dalam proses pencocokan.
+Rekaman yang dideduplikasi akan digunakan dalam proses pencocokan lintas entitas. Deduplikasi terjadi pada entitas individual dan dapat dikonfigurasi setiap entitas yang digunakan pada pasangan yang cocok.
+
+Menentukan aturan deduplikasi tidak wajib. Jika tidak ada aturan yang dikonfigurasi, aturan yang ditentukan sistem akan diterapkan. Mereka menggabungkan semua rekaman ke satu rekaman sebelum meneruskan data entitas ke pencocokan antar-entitas untuk peningkatan performa.
 
 ### <a name="add-deduplication-rules"></a>Menambahkan aturan deduplikasi
 
-1. Di wawasan audiens, buka **Data** > **Satukan** > **Sesuaikan**.
+1. Buka **Data** > **Satukan** > **Cocokkan**.
 
-1. Di Bagian **duplikat yang digabungkan**, pilih **Atur entitas**.
+1. Di Bagian **duplikat yang digabungkan**, pilih **Atur entitas**. Jika aturan deduplikasi telah dibuat, pilih **Edit**.
 
-1. Di Bagian **preferensi penggabungan**, pilih entitas yang akan diterapkan deduplikasinya.
+1. Di panel **preferensi penggabungan**, pilih entitas yang akan dijalankan deduplikasinya.
 
-1. Tentukan cara menggabungkan rekaman duplikat dan memilih salah satu dari tiga pilihan penggabungan:
-   - *Paling terisi*: mengidentifikasi rekaman dengan atribut yang paling banyak diisi sebagai rekaman pemenang. Ini adalah pilihan penggabungan default.
-   - *Terbaru* : mengidentifikasi rekaman pemenang berdasarkan keterkinian. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
-   - *Paling lama* : mengidentifikasi rekaman pemenang berdasarkan keterkinian terlama. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
+1. Tentukan cara menggabungkan rekaman duplikat dan memilih salah satu dari tiga pilihan:
+   - **Paling terisi**: mengidentifikasi rekaman dengan bidang atribut yang paling banyak diisi sebagai rekaman pemenang. Ini adalah pilihan penggabungan default.
+   - **Terbaru** : mengidentifikasi rekaman pemenang berdasarkan keterkinian. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
+   - **Paling lama** : mengidentifikasi rekaman pemenang berdasarkan keterkinian terlama. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
  
    > [!div class="mx-imgBorder"]
    > ![Aturan deduplikasi langkah 1](media/match-selfconflation.png "Aturan deduplikasi langkah 1")
  
-1. Setelah entitas dipilih dan preferensi penggabungan mereka diatur, pilih **Buat aturan baru** untuk menentukan aturan deduplikasi pada tingkat entitas.
-   - **Pilih bidang** berisi daftar semua bidang tersedia dari entitas yang ingin Anda deduplikasikan data sumbernya.
-   - Tentukan pengaturan normalisasi dan presisi dengan cara yang sama seperti yang ditentukan dalam pencocokan entitas silang.
-   - Anda dapat menentukan kondisi tambahan dengan memilih **Tambah kondisi**.
+1. Setelah entitas dipilih dan preferensi penggabungan mereka diatur, pilih **Tambahkan aturan** untuk menentukan aturan deduplikasi pada tingkat entitas.
+   - **Pilih bidang** mencantumkan semua bidang yang tersedia dari entitas tersebut. Pilih bidang yang ingin Anda periksa duplikatnya. Pilih bidang yang mungkin unik untuk setiap pelanggan. Contohnya, alamat email, atau kombinasi nama, kota, dan nomor telepon.
+   - Tentukan pengaturan normalisasi dan presisi.
+   - Tentukan kondisi lainnya dengan memilih **Tambah kondisi**.
  
    > [!div class="mx-imgBorder"]
    > ![Aturan deduplikasi langkah 2](media/match-selfconflation-rules.png "Aturan deduplikasi langkah 2")
@@ -138,28 +142,13 @@ Setelah rekaman yang dideduplikasi teridentifikasi, rekaman tersebut akan diguna
 
 1. Rekaman pemenang ini kemudian diteruskan ke pencocokan lintas entitas, bersama dengan rekaman non-pemenang (misalnya, ID alternatif) untuk meningkatkan kualitas pencocokan.
 
-1. Aturan kecocokan kustom yang ditentukan untuk selalu cocok dan tidak pernah cocok dengan aturan deduplikasi pengesampingan. Jika aturan deduplikasi mengidentifikasi rekaman yang cocok dan aturan kecocokan kustom diatur untuk tidak pernah cocok dengan rekaman tersebut, maka kedua rekaman tersebut tidak akan dicocokkan.
+1. Aturan kecocokan kustom yang ditentukan akan menimpa aturan deduplikasi. Jika aturan deduplikasi mengidentifikasi rekaman yang cocok dan aturan kecocokan kustom diatur untuk tidak pernah cocok dengan rekaman tersebut, maka kedua rekaman tersebut tidak akan dicocokkan.
 
-1. Setelah menjalankan proses pencocokan, Anda akan melihat status deduplikasi.
-   
-> [!NOTE]
-> Menentukan aturan deduplikasi tidak wajib. Jika tidak ada aturan yang dikonfigurasi, aturan yang ditentukan sistem akan diterapkan. Mereka menciutkan semua rekaman yang memiliki kombinasi nilai yang sama (pencocokan sama persis) dari primary key dan bidang dalam aturan yang cocok ke dalam satu rekaman sebelum meneruskan data entitas ke pencocokan entitas silang untuk kelogisan sistem dan kinerja yang ditingkatkan.
+1. Setelah [menjalankan proses pencocokan](#run-the-match-process), Anda akan melihat status deduplikasi dalam petak metrik utama.
 
-## <a name="run-your-match-order"></a>Menjalankan urutan kecocokan
+### <a name="deduplication-output-as-an-entity"></a>Output deduplikasi sebagai entitas
 
-Setelah menentukan aturan kecocokan, termasuk aturan pencocokan entitas silang dan deduplikasi, Anda dapat menjalankan urutan pencocokan. Pada halaman **pencocokan**, pilih **Jalankan** untuk memulai proses. Algoritma pencocokan mungkin memerlukan waktu untuk diselesaikan. Anda tidak dapat mengubah properti pada halaman **pencocokan** hingga proses pencocokan selesai. Anda akan menemukan entitas profil pelanggan terpadu yang dibuat pada halaman **entitas**. Entitas gabungan pelanggan Anda disebut **ConflationMatchPairs : CustomerInsights**.
-
-Untuk membuat perubahan tambahan dan menjalankan ulang langkah tersebut, Anda dapat membatalkan pencocokan yang sedang berlangsung. Pilih teks **menyegarkan...** dan pilih **Batalkan pekerjaan** di bagian bawah panel sisi yang muncul.
-
-Setelah proses kecocokan selesai, teks **menyegarkan...** akan berubah menjadi **sukses** dan Anda dapat menggunakan semua fungsi halaman lagi.
-
-Proses pencocokan pertama menghasilkan pembuatan entitas induk terpadu. Semua penjalanan kecocokan berikutnya mengakibatkan perluasan entitas tersebut.
-
-> [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
-
-## <a name="deduplication-output-as-an-entity"></a>Output deduplikasi sebagai entitas
-Selain entitas induk terpadu yang dibuat sebagai bagian dari pencocokan lintas entitas, proses deduplikasi juga menghasilkan entitas baru untuk setiap entitas dari perintah pencocokan untuk mengidentifikasi rekaman yang dideduplikasi. Entitas ini dapat ditemukan bersama dengan **ConflationMatchPairs:CustomerInsights** di bagian **Sistem** di halaman **Entitas**, dengan nama **Deduplication_Datasource_Entity**.
+Proses deduplikasi membuat entitas baru untuk setiap entitas dari pasangan yang cocok untuk mengidentifikasi rekaman yang dideduplikasi. Entitas ini dapat ditemukan bersama dengan **ConflationMatchPairs:CustomerInsights** di bagian **Sistem** di halaman **Entitas**, dengan nama **Deduplication_DataSource_Entity**.
 
 Entitas output deduplikasi berisi informasi berikut:
 - ID/Kunci
@@ -168,77 +157,71 @@ Entitas output deduplikasi berisi informasi berikut:
   - Deduplication_WinnerId: Bidang ini berisi ID pemenang dari grup atau kluster yang teridentifikasi. Jika Deduplication_WinnerId sama dengan nilai kunci Utama untuk rekaman, berarti rekaman adalah rekaman pemenang.
 - Bidang yang digunakan untuk mendefinisikan aturan deduplikasi.
 - Bidang Aturan dan Skor untuk menunjukkan aturan deduplikasi mana yang diterapkan dan skor yang dihasilkan oleh algoritme yang cocok.
+   
+## <a name="run-the-match-process"></a>Jalankan proses Kecocokan
+
+Dengan aturan kecocokan yang dikonfigurasikan, termasuk aturan pencocokan entitas silang dan deduplikasi, Anda dapat menjalankan proses pencocokan. 
+
+Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Jalankan** untuk memulai proses. Algoritme yang cocok memerlukan waktu untuk diselesaikan dan Anda tidak dapat mengubah konfigurasi hingga selesai. Untuk membuat perubahan, Anda dapat membatalkan penjalanan. Pilih status pekerjaan, lalu pilih **Batalkan pekerjaan** pada panel **Rincian progres**.
+
+Anda akan menemukan hasil penjalanan yang sukses,entitas profil pelanggan terpadu, pada halaman **Entitas**. Entitas pelanggan terpadu Anda disebut **Pelanggan** di bagian **Profil**. Keberhasilan menjalankan kecocokan pertama akan membuat entitas *Pelanggan* terpadu. Semua penjalanan kecocokan berikutnya memperluas entitas tersebut.
+
+> [!TIP]
+> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
 
 ## <a name="review-and-validate-your-matches"></a>Tinjau dan validasi kecocokan Anda
 
-Evaluasi kualitas pasangan pencocokan Anda dan Perbaiki:
+Buka **Data** > **Satukan** > **Cocokkan** untuk mengevaluasi kualitas pasangan kecocokan dan menyempurnakannya jika perlu.
 
-- Pada halaman **pencocokan**, Anda akan menemukan dua ubin yang menampilkan wawasan awal tentang data Anda.
+Petak di atas halaman menampilkan metrik kunci, meringkas jumlah rekaman yang cocok dan duplikat.
 
-  - **Pelanggan yang unik**: menunjukkan jumlah profil unik yang diidentifikasi sistem.
-  - **Rekaman yang sesuai**: akan menampilkan jumlah kecocokan di semua pasangan pencocokan.
+:::image type="content" source="media/match-KPIs.png" alt-text="Tangkapan layar yang dipotong untuk metrik kunci pada halaman Cocokkan dengan angka dan rincian.":::
 
-- Di tabel **urutan kecocokan**, Anda dapat menilai hasil setiap pasangan pencocokan dengan membandingkan jumlah rekaman yang berasal dari entitas pasangan pencocokan ini terhadap persentase rekaman yang berhasil dicocokkan.
+- **Rekaman sumber unik** menampilkan jumlah rekaman sumber individual yang diproses dalam penjalanan kecocokan terakhir.
+- **Rekaman yang cocok dan tidak cocok** akan menyorot jumlah rekaman unik yang tersisa setelah memproses aturan kecocokan.
+- **Hanya Rekaman yang cocok** menampilkan jumlah kecocokan di semua pasangan kecocokan.
 
-- Di bagian **aturan** pada entitas dalam tabel **urutan kecocokan**, Anda akan menemukan persentase rekaman yang berhasil dicocokkan di tingkat aturan. Dengan memilih simbol tabel di sebelah aturan, Anda dapat melihat semua rekaman ini pada tingkat aturan. Sebaiknya Tinjau subset rekaman untuk memvalidasi bahwa rekaman dicocokkan dengan benar.
+Anda dapat menilai hasil tiap pasangan yang cocok dan aturannya di tabel **rincian rekaman yang cocok**. Bandingkan jumlah rekaman yang berasal dari pasangan yang cocok dengan persentase rekaman yang berhasil dicocokkan.
 
-- Lakukan eksperimen dengan ambang batas presisi yang berbeda di sekitar kondisi Anda untuk mengidentifikasi nilai optimal.
+Tinjau aturan pasangan yang cocok untuk melihat persentase rekaman yang berhasil dicocokkan di tingkat aturan. Pilih elipsis (...) dan kemudian pilih **Pratinjau kecocokan** untuk melihat semua rekaman ini pada tingkat aturan. Sebaiknya lihat beberapa rekaman untuk memvalidasi kecocokannya dengan benar.
 
-  1. Pilih elipsis (...) untuk aturan pasangan kecocokan yang ingin Anda uji coba dan pilih **Edit**.
+Coba ambang batas presisi yang berbeda pada kondisi untuk menemukan nilai optimal.
 
-  2. Pilih kondisi yang Anda ingin lakukan eksperimen. Setiap kriteria ditunjukkan dengan satu baris di panel **aturan pencocokan**.
+  1. Pilih elipsis (...) untuk aturan yang akan dicoba, lalu pilih **Edit**.
 
-  3. Apa yang akan Anda lihat di halaman **pratinjau kriteria** tergantung pada tingkat presisi yang Anda pilih untuk kondisi. Temukan jumlah rekaman yang cocok dan tak cocok untuk kondisi yang dipilih.
+  2. Ubah nilai presisi dalam kondisi yang akan direvisi.
 
-     Dapatkan pemahaman yang kaya tentang efek dari tingkat ambang yang berbeda. Anda dapat membandingkan jumlah rekaman yang akan dicocokkan dalam masing-masing tingkat ambang, serta melihat rekaman di bawah setiap pilihan. Pilih masing-masing ubin dan tinjau data di bagian tabel.
+  3. Pilih **pratinjau**, jadi lihat jumlah rekaman yang cocok dan tidak cocok untuk kondisi yang dipilih.
 
-## <a name="optimize-your-matches"></a>Optimalkan kecocokan
+## <a name="manage-match-rules"></a>Kelola aturan kecocokan
 
-Tingkatkan kualitas dengan mengonfigurasi ulang beberapa parameter kecocokan Anda:
+Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kecocokan.
 
-- **Ubah urutan kecocokan** dengan memilih **Edit** dan Ubah bidang urutan kecocokan.
+:::image type="content" source="media/match-rules-management.png" alt-text="Cuplikan layar menu drop-down dengan pilihan aturan kecocokan.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Mengedit urutan kecocokan data](media/configure-data-match-order-edit.png "Mengedit urutan kecocokan data")
+- **Ubah urutan aturan** jika Anda mendefinisikan beberapa aturan. Anda dapat mengurutkan ulang aturan kecocokan dengan memilih opsi **Pindahkan ke atas** dan **Pindahkan ke bawah** atau dengan menarik dan menjatuhkan.
 
-- **Ubah urutan aturan** jika Anda mendefinisikan beberapa aturan. Anda dapat mengurutkan ulang aturan kecocokan dengan memilih opsi **Pindahkan ke atas** dan **Pindahkan ke bawah** dalam kisi aturan kecocokan.
-
-  > [!div class="mx-imgBorder"]
-  > ![Ubah urutan aturan](media/configure-data-change-rule-order.png "Ubah urutan aturan")
-
-- **Gandakan aturan** jika Anda telah menetapkan aturan kecocokan dan ingin membuat aturan serupa dengan modifikasi. Lakukan dengan memilih **Duplikat**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Duplikat Aturan](media/configure-data-duplicate-rule.png "Duplikat Aturan")
+- **Ubah kondisi aturan** dengan memilih **Edit** dan pilih bidang yang berbeda.
 
 - **Nonaktifkan aturan** untuk mempertahankan aturan pencocokan sambil mengecualikannya dari proses pencocokan.
 
-  > [!div class="mx-imgBorder"]
-  > ![Nonaktifkan aturan](media/configure-data-deactivate-rule.png "Nonaktifkan aturan")
+- **Duplikasikan aturan** jika Anda telah menetapkan aturan kecocokan dan ingin membuat aturan serupa dengan modifikasi, pilih **Duplikat**.
 
-- **Edit aturan** dengan memilih simbol **Edit**. Anda juga dapat menerapkan perubahan berikut:
+- **Hapus aturan** dengan memilih simbol **Hapus**.
 
-  - Ubah atribut untuk suatu kondisi: pilih atribut baru dalam baris kondisi tertentu.
-  - Ubah ambang batas untuk kondisi: Sesuaikan slider presisi.
-  - Ubah metode normalisasi untuk kondisi: Perbarui metode normalisasi.
+## <a name="specify-custom-match-conditions"></a>Menentukan kondisi kecocokan kustom
 
-## <a name="specify-your-custom-match-records"></a>Menentukan rekaman kecocokan kustom
+Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok dengan rekaman tertentu. Aturan ini dapat diunggah untuk menimpa proses kecocokan standar. Misalnya, jika ada John Doe I dan John Doe II di rekaman kita, sistem mungkin cocok dengan mereka sebagai satu orang. Aturan kecocokan kustom memungkinkan Anda menentukan bahwa profil mereka merujuk ke orang lain. 
 
-Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok dengan rekaman tertentu. Aturan ini dapat diunggah dalam jumlah besar untuk proses pencocokan.
+1. Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Kecocokan kustom** di bagian **rincian rekaman yang cocok**.
 
-1. Pilih pilihan **pencocokan kustom** di layar **urutan pencocokan**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Tangkapan layar dari bagian aturan kecocokan dengan kontrol kecocokan kustom disorot.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Membuat kecocokan kustom](media/custom-match-create.png "Membuat kecocokan kustom")
+1. Jika Anda tidak memiliki rangkaian aturan kecocokan kustom, Anda akan melihat panel **Kecocokan kustom** baru dengan rincian lebih lanjut.
 
-2. Jika Anda tidak memiliki entitas yang diupload, Anda akan melihat kotak dialog **kecocokan kustom** baru yang mengharuskan Anda mengisi beberapa detail. Jika Anda telah memberikan rincian ini sebelumnya, Lewati ke langkah 8.
+1. Pilih **isi template** untuk mendapatkan file template yang dapat menentukan rekaman mana dari entitas mana yang harus selalu cocok atau tidak pernah cocok. Anda harus mengisi secara terpisah rekaman "selalu Cocok" dan rekaman "tidak pernah cocok" dalam dua file berbeda.
 
-   > [!div class="mx-imgBorder"]
-   > ![Kotak dialog kustom pencocokan baru](media/custom-match-new-dialog-box.png "Kotak dialog kustom pencocokan baru")
-
-3. Pilih **isi template** untuk mendapatkan file template yang dapat menentukan rekaman mana dari entitas mana yang harus selalu cocok atau tidak pernah cocok. Anda harus mengisi secara terpisah rekaman "selalu Cocok" dan rekaman "tidak pernah cocok" dalam dua file berbeda.
-
-4. Template berisi bidang untuk menentukan entitas dan nilai kunci primer entitas yang akan digunakan dalam pencocokan kustom. Misalnya, jika Anda ingin kunci primer 12345 dari entitas penjualan agar selalu cocok dengan kunci primer 34567 dari entitas kontak, Anda harus menentukan sebagai berikut:
+1. Template berisi bidang untuk menentukan entitas dan nilai kunci primer entitas yang akan digunakan dalam pencocokan kustom. Misalnya, jika Anda menginginkan kunci utama *12345* dari entitas *Penjualan* agar selalu cocok dengan kunci utama *34567* dari entitas *Kontak*, isi template:
     - Entity1: Penjualan
     - Entity1Key: 12345
     - Entity2: Kontak
@@ -248,24 +231,24 @@ Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok de
    
    Jika Anda ingin menentukan pencocokan kustom untuk deduplikasi pada entitas, berikan entitas yang sama seperti Entity1 dan Entity2 dan atur nilai kunci utama yang berbeda.
 
-5. Setelah menambahkan semua penimpaan yang ingin Anda terapkan, Simpan file template.
+1. Setelah menambahkan semua penimpaan yang ingin Anda terapkan, Simpan file template.
 
-6. Buka **data** > **sumber data** dan serap file template sebagai entitas baru. Setelah diserap, Anda dapat menggunakannya untuk menentukan konfigurasi kecocokan.
+1. Buka **data** > **sumber data** dan serap file template sebagai entitas baru. Setelah diserap, Anda dapat menggunakannya untuk menentukan konfigurasi kecocokan.
 
-7. Setelah mengupload file dan entitas yang tersedia, pilih opsi **pencocokan kustom** lagi. Anda akan melihat opsi untuk menentukan entitas yang ingin Anda sertakan. Pilih entitas yang diperlukan dari menu drop-down.
+1. Setelah mengupload file dan entitas yang tersedia, pilih opsi **pencocokan kustom** lagi. Anda akan melihat opsi untuk menentukan entitas yang ingin Anda sertakan. Pilih entitas yang diperlukan dari menu drop-down.
 
-   > [!div class="mx-imgBorder"]
-   > ![Timpaan pencocokan kustom](media/custom-match-overrides.png "Timpaan pencocokan kustom")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Cuplikan layar dialog untuk memilih menimpa skenario kecocokan kustom.":::
 
-8. Pilih entitas yang akan digunakan untuk **selalu cocok** dan **tidak pernah cocok**, pilih **selesai**.
+1. Pilih entitas yang akan digunakan untuk **selalu cocok** dan **tidak pernah cocok**, pilih **selesai**.
 
-9. Pilih **Simpan** pada halaman **pencocokan** untuk konfigurasi kecocokan kustom yang baru saja Anda konfigurasikan.
+1. Pilih **Simpan** pada halaman **Cocokkan** untuk menerapkan konfigurasi kecocokan kustom.
 
-10. Pilih **Jalankan** di halaman **Kecocokan** untuk memulai proses pencocokan, dan konfigurasi kecocokan kustom akan diterapkan. Aturan sistem yang cocok akan ditimpa oleh set konfigurasi.
+1. Pilih **Jalankan** pada halaman **Cocokkan** untuk memulai proses pencocokan. Aturan kecocokan tertentu lainnya ditimpa oleh konfigurasi kecocokan kustom.
 
-11. Setelah pencocokan selesai, Anda dapat memverifikasi entitas **ConflationMatchPair** untuk mengkonfirmasi bahwa penimpaan diterapkan dalam pencocokan penggabungan.
+> [!TIP]
+> Buka **Data** > **Entitas** dan periksa entitas **ConflationMatchPair** untuk mengkonfirmasikan bahwa penimpaan diterapkan.
 
-## <a name="next-step"></a>Langkah berikutnya
+## <a name="next-step"></a>Langkah selanjutnya
 
 Setelah menyelesaikan proses pencocokan untuk setidaknya satu pasangan pencocokan, Anda siap menangani kemungkinan kontradiksi dalam data Anda dengan membuka topik [**penggabungan**](merge-entities.md).
 

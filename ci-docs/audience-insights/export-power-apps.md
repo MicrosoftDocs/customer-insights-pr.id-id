@@ -2,19 +2,19 @@
 title: Konektor Power Apps
 description: Hubungkan Power Apps dengan Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268920"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598159"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps connector (pratinjau)
 
@@ -22,9 +22,9 @@ Bawa profil pelanggan terpadu ke aplikasi Anda yang disesuaikan dengan Power App
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Hubungkan Power Apps dan Dynamics 365 Customer Insights
 
-Customer Insights adalah salah satu dari banyak [sumber yang tersedia untuk data di Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights adalah salah satu dari banyak [sumber yang tersedia untuk data di Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Lihat dokumentasi Power Apps untuk mempelajari cara [menambahkan sambungan data ke aplikasi](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Sebaiknya Anda juga meninjau [cara Power Apps menggunakan delegasi untuk menangani kumpulan data besar di aplikasi Canvas](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Lihat dokumentasi Power Apps untuk mempelajari cara [menambahkan sambungan data ke aplikasi](/powerapps/maker/canvas-apps/add-data-connection). Sebaiknya Anda juga meninjau [cara Power Apps menggunakan delegasi untuk menangani kumpulan data besar di aplikasi Canvas](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entitas yang tersedia
 
@@ -47,11 +47,11 @@ Delegasi bekerja untuk entitas pelanggan dan entitas UnifiedActivity.
 
 - Delegasi untuk **unifiedactivity** : delegasi untuk entitas ini hanya berfungsi untuk bidang **activityid** dan **customerid**.  
 
-- Untuk informasi lebih lanjut tentang delegasi, lihat [fungsi dan operasi Power Apps yang dapat didelegasikan](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Untuk informasi lebih lanjut tentang delegasi, lihat [fungsi dan operasi Power Apps yang dapat didelegasikan](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Kontrol galeri contoh
 
-Misalnya, Anda menambahkan profil pelanggan ke [kontrol Galeri](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Misalnya, Anda menambahkan profil pelanggan ke [kontrol Galeri](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Tambahkan **kontrol galeri** ke aplikasi yang sedang Anda bangun.
 

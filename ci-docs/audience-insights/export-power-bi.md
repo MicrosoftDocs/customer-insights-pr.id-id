@@ -2,19 +2,19 @@
 title: Konektor Power BI
 description: Pelajari cara menggunakan konektor Dynamics 365 Customer Insights di Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477092"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596043"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor untuk Power BI (pratinjau)
 
@@ -23,7 +23,7 @@ Buat visualisasi untuk data Anda dengan Power BI Desktop. Buat wawasan tambahan 
 ## <a name="prerequisites"></a>Prasyarat
 
 - Anda memiliki profil pelanggan terpadu.
-- Versi terbaru [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) terinstal di komputer Anda. [Pelajari lebih lanjut tentang Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- versi terbaru [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) telah diinstal di komputer Anda. [Pelajari lebih lanjut tentang Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfigurasikan konektor untuk Power BI
 
@@ -47,7 +47,7 @@ Buat visualisasi untuk data Anda dengan Power BI Desktop. Buat wawasan tambahan 
 
 ## <a name="large-data-sets"></a>himpunan data besar
 
-Customer Insights connector untuk Power BI dirancang untuk berfungsi untuk himpunan data yang berisi 1 juta profil pelanggan. Mengimpor kumpulan data yang lebih besar mungkin berfungsi, namun memerlukan waktu lama. Selain itu, proses dapat berjalan ke batas waktu karena keterbatasan Power BI. Untuk informasi lebih lanjut, lihat [Power BI : rekomendasi untuk himpunan data besar](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Customer Insights connector untuk Power BI dirancang untuk berfungsi untuk himpunan data yang berisi 1 juta profil pelanggan. Mengimpor kumpulan data yang lebih besar mungkin berfungsi, namun memerlukan waktu lama. Selain itu, proses dapat berjalan ke batas waktu karena keterbatasan Power BI. Untuk informasi lebih lanjut, lihat [Power BI : rekomendasi untuk himpunan data besar](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Bekerja dengan subset data
 
@@ -70,4 +70,3 @@ Anda dapat mengidentifikasi dan menghilangkan duplikat Relasi.
 Setelah penghapusan duplikat Relasi, coba untuk mengkonfigurasi Power BI connector lagi. Lingkungan seharusnya tersedia sekarang.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

@@ -1,20 +1,20 @@
 ---
 title: Membuat dan mengelola segmen
 description: Buat segmen pelanggan untuk mengelompokkan mereka berdasarkan berbagai atribut.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270360"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597056"
 ---
 # <a name="create-and-manage-segments"></a>Membuat dan mengelola segmen
 
@@ -35,19 +35,19 @@ Segmen dikelola pada halaman **segmen**.
 
 1. Di wawasan audiens, buka halaman **segmen**.
 
-2. Pilih **Baru** > **segmen kosong**.
+1. Pilih **Baru** > **segmen kosong**.
 
-3. Di panel **segmen baru**, pilih jenis segmen dan berikan **nama**.
+1. Di panel **segmen baru**, pilih jenis segmen dan berikan **nama**.
 
    Atau, berikan nama tampilan, dan deskripsi yang membantu mengidentifikasi segmen.
 
-4. Pilih **berikutnya** untuk mengakses halaman **pembuat segmen** dengan menentukan grup. Grup adalah satu set pelanggan.
+1. Pilih **berikutnya** untuk mengakses halaman **pembuat segmen** dengan menentukan grup. Grup adalah satu set pelanggan.
 
-5. Pilih entitas yang mencakup atribut yang ingin Anda segmentasikan.
+1. Pilih entitas yang mencakup atribut yang ingin Anda segmentasikan.
 
-6. Pilih atribut untuk segmentasi. Atribut ini dapat memiliki salah satu dari empat jenis nilai: numerik, string, tanggal, atau Boolean.
+1. Pilih atribut untuk segmentasi. Atribut ini dapat memiliki salah satu dari empat jenis nilai: numerik, string, tanggal, atau Boolean.
 
-7. Pilih operator dan nilai untuk atribut dipilih.
+1. Pilih operator dan nilai untuk atribut dipilih.
 
    > [!div class="mx-imgBorder"]
    > ![Filter grup kustom](media/customer-group-numbers.png "Filter grup pelanggan")
@@ -64,9 +64,14 @@ Segmen dikelola pada halaman **segmen**.
    > [!div class="mx-imgBorder"]
    > ![Jalur relasi selama pembuatan segmen](media/segments-multiple-relationships.png "Jalur relasi selama pembuatan segmen")
 
-9. Pilih **Simpan** untuk menyimpan segmen Anda. Segmen Anda akan disimpan dan diproses jika semua persyaratan divalidasi. Jika tidak, maka akan disimpan sebagai draf.
+1. Secara default, segmen akan menghasilkan entitas output yang berisi semua atribut profil pelanggan yang cocok dengan filter yang ditentukan. Jika segmen didasarkan pada entitas lain dari entitas *Pelanggan*, Anda dapat menambahkan lebih banyak atribut dari entitas ini ke entitas output. Pilih **atribut Proyek** untuk memilih atribut yang akan ditambahkan ke entitas output.  
 
-10. Untuk kembali ke halaman **Segmen**, pilih **kembali ke segmen**.
+   
+   Contoh: Segmen didasarkan pada entitas yang berisi data aktivitas pelanggan yang terkait dengan entitas *Pelanggan*. Segmen tersebut mencari semua pelanggan yang menelepon pusat bantuan dalam 60 hari terakhir. Anda dapat memilih untuk menambahkan durasi panggilan dan jumlah panggilan ke semua rekaman pelanggan yang cocok di entitas output. Informasi ini mungkin berguna untuk mengirim email dengan tautan bermanfaat ke artikel bantuan online dan Tanya Jawab kepada pelanggan yang sering menelepon.
+
+1. Pilih **Simpan** untuk menyimpan segmen Anda. Segmen Anda akan disimpan dan diproses jika semua persyaratan divalidasi. Jika tidak, maka akan disimpan sebagai draf.
+
+1. Untuk kembali ke halaman **Segmen**, pilih **kembali ke segmen**.
 
 ## <a name="manage-existing-segments"></a>Mengelola segmen yang ada
 
@@ -85,6 +90,7 @@ Tindakan berikut tersedia bila Anda memilih segmen:
 
 - **Lihat** rincian segmen, termasuk tren jumlah anggota yang menampilkan pratinjau anggota segmen.
 - **Edit** segmen untuk mengubah properti.
+- **Membuat duplikat** segmen. Anda dapat langsung memilih untuk mengedit propertinya atau cukup menyimpan duplikat.
 - **Refresh** segmen untuk menyertakan data terbaru.
 - **Aktifkan** atau **Nonaktifkan** segmen. Segmen memiliki dua kemungkinan status - aktif atau tidak aktif. Status ini berguna saat mengedit segmen. Untuk segmen yang tidak aktif, definisi segmen ada, namun tidak berisi pelanggan. Bila Anda mengaktifkan segmen, status akan berubah dari ' tidak aktif ' menjadi ' aktif ' dan mulai mencari Pelanggan yang cocok dengan definisi segmen. Jika [penyegaran terjadwal](system.md#schedule-tab) dikonfigurasi, segmen yang tidak aktif memiliki **status** yang didaftarkan sebagai **dilewati**, yang menunjukkan bahwa penyegaran bahkan tidak dicoba. Bila segmen aktif diaktifkan, segmen akan diperbarui dan akan disertakan dalam penyegaran terjadwal.
   Atau, Anda dapat menggunakan fungsi **jadwalkan nanti** dalam menu menurun **Aktifkan/Nonaktifkan** untuk menentukan tanggal dan waktu di masa mendatang untuk pengaktifan dan penonaktifan segmen tertentu.

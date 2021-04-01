@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268276"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595905"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Lengkapi data parsial dengan prediksi
 
@@ -31,7 +31,7 @@ Prediksi memungkinkan Anda dengan mudah membuat nilai prediksi yang dapat mening
 
 Sebelum organisasi Anda dapat menggunakan fitur prediksi, prasyarat berikut harus terpenuhi:
 
-1. Organisasi Anda memiliki instans yang [disiapkan di Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) dan ada di organisasi yang sama seperti Customer Insights.
+1. Organisasi Anda memiliki instans yang [disiapkan di Common Data Service](/ai-builder/build-model#prerequisites) dan ada di organisasi yang sama seperti Customer Insights.
 
 2. Lingkungan Anda melekat pada instans Common Data Service Anda.
 
@@ -120,7 +120,7 @@ Setelah membuat prediksi, Anda dapat menyesuaikan model di AI Builder untuk meni
 
 4. pilih **Sesuaikan di AI Builder**.
 
-5. Perbarui model Anda di AI Builder. [Pelajari lebih lanjut tentang cara mengelola model di AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Perbarui model Anda di AI Builder. [Pelajari lebih lanjut tentang cara mengelola model di AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Langkah berikutnya dari prediksi Anda akan menggunakan model yang telah diperbarui yang telah Anda buat.
 
