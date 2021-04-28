@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596871"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896331"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -59,7 +59,7 @@ Rincian pelanggan mencakup:
 
 -   **Ubin profil pelanggan:** ubin ini menampilkan nilai yang berbeda dari entitas profil pelanggan terpadu. Rincian ini dapat mencakup alamat email, nama, kota, dan sebagainya. 
 
--   **Minat potensial, merek potensial:** ditampilkan jika Anda mengonfigurasi pengayaan pihak pertama. Ini menunjukkan potensi minat dan afinitas untuk merek yang memiliki profil pelanggan yang serupa dengan yang mungkin dimiliki pelanggan ini. Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft-graph.md).
+-   **Minat potensial, merek potensial:** ditampilkan jika Anda mengonfigurasi pengayaan pihak pertama. Ini menunjukkan potensi minat dan afinitas untuk merek yang memiliki profil pelanggan yang serupa dengan yang mungkin dimiliki pelanggan ini. Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md).
 
 -   **Tindakan:** menunjukkan jika Anda mengonfigurasi satu atau beberapa ukuran dari jenis tertentu: ukuran atribut pelanggan. Mereka mencakup KPI yang dihitung di sekitar pelanggan Anda di tingkat pelanggan individual. Untuk informasi lebih lanjut, lihat [menentukan dan mengelola langkah](measures.md).
 

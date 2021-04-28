@@ -1,7 +1,7 @@
 ---
 title: Gunakan sumber data untuk menyerap data
 description: Pelajari cara mengimpor data dari berbagai sumber.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595951"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887898"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
@@ -32,8 +32,15 @@ Anda dapat menambahkan sumber data dengan tiga cara utama:
 - [Dari folder Common Data Model](connect-common-data-model.md)
 - [Dari Danau Common Data Service Anda sendiri](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Anda tidak dapat menambahkan data dari sumber data lokal.
+## <a name="add-data-from-on-premises-data-sources"></a>Menambahkan data dari sumber data lokal
+
+Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Power Platform. Aliran data dapat diaktifkan di Customer Insights dengan [menyediakan URL lingkungan Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) saat menyiapkan lingkungan.
+
+Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Customer Insights akan menggunakan [aliran data Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Hapus dan buat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk menggunakan gateway data lokal.
+
+Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data memperlihatkan tautan untuk masuk ke lingkungan Power Platform tempat Anda bisa menampilkan dan mengonfigurasi gateway data lokal.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Cuplikan layar halaman sumber data memperlihatkan tautan yang menunjuk ke lingkungan Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Meninjau data yang diserap
 
@@ -65,7 +72,7 @@ Untuk me-refresh sumber data sesuai permintaan, ikuti langkah berikut:
 
 2. Pilih elipsis vertikal di sebelah sumber data ingin anda refresh dan pilih **Segarkan** dari daftar drop-down.
 
-3. Sumber data sekarang dipicu untuk penyegaran manual. Menyegarkan sumber data akan memperbarui skema entitas serta data untuk semua entitas yang ditentukan dalam sumber data.
+3. Sumber data sekarang dipicu untuk penyegaran manual. Merefresh sumber data akan memperbarui skema entitas dan data untuk semua entitas yang ditentukan dalam sumber data.
 
 4. Pilih **Hentikan penyegaran** jika Anda ingin membatalkan refresh yang ada dan sumber data akan kembali ke status refresh terakhirnya.
 

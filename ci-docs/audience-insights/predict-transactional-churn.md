@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597193"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906860"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prediksi kehilangan pelanggan transaksional (pratinjau)
 
@@ -46,6 +46,14 @@ Prediksi kehilangan pelanggan transaksional membantu memprediksi apakah pelangga
         - **Cap waktu:** tanggal dan waktu aktivitas yang diidentifikasi oleh kunci primer.
         - **Aktivitas**: nama aktivitas yang ingin Anda gunakan. Misalnya, bidang yang disebut "UserAction" di toko kelontong mungkin adalah kupon yang digunakan oleh pelanggan.
         - **Rincian:** informasi rinci tentang aktivitas. Misalnya, bidang yang disebut "CouponValue" di toko kelontong mungkin merupakan nilai mata uang kupon.
+- Karakteristik Data yang Disarankan:
+    - Data historis yang memadai: Data transaksi untuk setidaknya dua kali lipat dari periode waktu yang dipilih. Sebaiknya, dua hingga tiga tahun data langganan. 
+    - Beberapa pembelian per pelanggan: Idealnya setidaknya dua transaksi per Pelanggan.
+    - Jumlah pelanggan: Setidaknya 10 profil pelanggan, lebih disukai lebih dari 1.000 pelanggan unik. Model akan gagal dengan kurang dari 10 pelanggan dan data historis yang tidak mencukupi.
+    - Kelengkapan data: Kurang dari 20% nilai yang hilang di bidang data entitas yang disediakan.
+
+> [!NOTE]
+> Untuk bisnis dengan frekuensi pembelian pelanggan yang tinggi (setiap beberapa minggu) disarankan untuk memilih periode prediksi dan definisi kehilangan yang lebih pendek. Untuk frekuensi pembelian rendah (setiap beberapa bulan atau setahun sekali), pilih periode prediksi dan definisi kehilangan yang lebih panjang.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Buat prediksi kehilangan pelanggan transaksional
 
@@ -129,7 +137,9 @@ Prediksi kehilangan pelanggan transaksional membantu memprediksi apakah pelangga
 1. Pilih prediksi yang ingin Anda tinjau.
    - **Nama prediksi:** nama prediksi yang diberika saat membuatnya.
    - **jenis prediksi:** jenis model yang digunakan untuk prediksi
-   - **Entitas output:** nama entitas untuk menyimpan output dari prediksi. Anda dapat menemukan entitas dengan nama ini pada **data** > **entitas**.
+   - **Entitas output:** nama entitas untuk menyimpan output dari prediksi. Anda dapat menemukan entitas dengan nama ini pada **data** > **entitas**.    
+     Dalam entitas output, *ChurnScore* adalah probabilitas kehilangan yang diprediksi dan *IsChurn* adalah label biner berdasarkan *ChurnScore* dengan ambang batas 0,5. Ambang batas default mungkin tidak berfungsi untuk skenario Anda. [Buat segmen baru](segments.md#create-a-new-segment) dengan ambang batas pilihan Anda.
+     Tidak semua pelanggan harus merupakan pelanggan aktif. Beberapa dari mereka mungkin tidak memiliki aktivitas untuk waktu yang lama dan dianggap sudah pergi, berdasarkan definisi kehilangan Anda. Memprediksi risiko kehilangan bagi pelanggan yang sudah pergi tidak berguna karena bukan audiens yang diinginkan.
    - **bidang terprediksi:** bidang ini hanya diisi untuk beberapa jenis prediksi, dan tidak digunakan dalam prediksi kehilangan pelanggan.
    - **Status:** Status prediksi dijalankan.
         - **mengantri:** prediksi sedang menunggu proses lain untuk dijalankan.

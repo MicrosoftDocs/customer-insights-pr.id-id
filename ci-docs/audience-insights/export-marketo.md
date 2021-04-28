@@ -1,7 +1,7 @@
 ---
 title: Ekspor data Customer Insights ke Marketo
-description: Pelajari cara mengkonfigurasi sambungan ke Marketo.
-ms.date: 11/12/2020
+description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Marketo.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,59 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 74d19a0448123904210c26f7b8760d00296c9cfd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597975"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759825"
 ---
-# <a name="connector-for-marketo-preview"></a>Konektor untuk Marketo (pratinjau)
+# <a name="export-segments-to-marketo-preview"></a>Mengekspor segmen ke Marketo (pratinjau)
 
 Ekspor segmen profil pelanggan terpadu untuk membuat kampanye, menyediakan pemasaran melalui email, dan gunakan grup pelanggan tertentu dengan Marketo.
 
-## <a name="prerequisites"></a>Prasyarat
+## <a name="prerequisites-for-connection"></a>Prasyarat untuk koneksi
 
 -   Anda memiliki [akun Marketo](https://login.marketo.com/) dan kredensial administrator yang sesuai.
 -   Daftar sudah ada di Marketo dan id yang sesuai. Untuk informasi lebih lanjut, lihat [daftar Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 -   Anda telah [mengonfigurasi segmen](segments.md).
 -   Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
-
-## <a name="connect-to-marketo"></a>Sambungkan ke Marketo
-
-1. Buka **Admin** > **Tujuan ekspor**.
-
-1. Dalam **Marketo**, pilih **konfigurasi**.
-
-1. Beri tujuan ekspor nama yang dikenali di bidang **nama tampilan**.
-
-1. Masukkan **[ID klien marketo anda, rahasia klien dan Hostname titik akhir REST](https://developers.marketo.com/rest-api/authentication/)**.
-
-1. Masukkan **[id daftar marketo Anda](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
-
-1. Pilih **saya setuju** untuk mengkonfirmasi **privasi data dan kepatuhan** dan pilih **Sambungkan** untuk menginisialisasi sambungan ke marketo.
-
-1. Pilih **Tambah diri Anda sebagai pengguna ekspor** dan berikan kredensial Customer Insights Anda.
-
-   :::image type="content" source="media/export-connect-marketo.png" alt-text="Mengekspor tangkapan layar untuk sambungan Marketo":::
-
-1. Pilih **berikutnya** untuk mengkonfigurasi ekspor.
-
-## <a name="configure-the-connector"></a>Konfigurasikan konektor
-
-1. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. 
-
-1. Atau, anda dapat mengekspor **nama depan** dan **nama belakang**, **Kota**, **Negara Bagian**, dan **Negara/Kawasan**  sebagai bidang tambahan untuk membuat email yang lebih disesuaikan. Pilih **Tambah atribut** untuk memetakan bidang ini.
-
-1. Pilih segmen yang ingin diekspor. Anda dapat mengekspor hingga 1 juta profil pelanggan secara total ke Marketo.
-
-   :::image type="content" source="media/export-segment-marketo.png" alt-text="Pilih bidang dan segmen untuk diekspor ke Marketo":::
-
-1. Pilih **Simpan**.
-
-## <a name="export-the-data"></a>Mengekspor data
-
-Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Di Marketo, Anda sekarang dapat menemukan segmen Anda dalam [daftar Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
@@ -69,6 +33,49 @@ Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor j
 - Mengekspor ke Marketo terbatas untuk segmen.
 - Mengekspor segmen dengan total 1 juta profil dapat memakan waktu hingga 3 jam. 
 - Jumlah profil yang dapat Anda ekspor ke Marketo tergantung dan terbatas pada kontrak Anda dengan Marketo.
+
+## <a name="set-up-connection-to-marketo"></a>Konfigurasikan koneksi ke Marketo
+
+1. Buka **Admin** > **Koneksi**.
+
+1. Pilih **Tambahkan koneksi** dan pilih **Marketo** untuk mengonfigurasi koneksi.
+
+1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
+
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Masukkan **[ID klien marketo anda, rahasia klien dan Hostname titik akhir REST](https://developers.marketo.com/rest-api/authentication/)**.
+
+1. Pilih **saya setuju** untuk mengkonfirmasi **privasi data dan kepatuhan** dan pilih **Sambungkan** untuk menginisialisasi sambungan ke marketo.
+
+1. Pilih **Tambah diri Anda sebagai pengguna ekspor** dan berikan kredensial Customer Insights Anda.
+
+1. Pilih **Simpan** untuk menyelesaikan koneksi.
+
+## <a name="configure-an-export"></a>Mengonfigurasi ekspor
+
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+
+1. Buka **Data** > **Ekspor**.
+
+1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Marketo. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+
+1. Masukkan **[id daftar marketo Anda](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+
+1. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. 
+
+1. Secara opsional, Anda dapat mengekspor **nama depan**, **nama belakang**, **Kota**, dan **Negara Bagian**, dan **Negara/Kawasan**  untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
+
+1. Pilih segmen yang ingin diekspor. Anda dapat mengekspor hingga 1 juta profil pelanggan secara total ke Marketo.
+
+1. Pilih **Simpan**.
+
+Menyimpan ekspor tidak segera menjalankan ekspor.
+
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). Di Marketo, Anda sekarang dapat menemukan segmen Anda dalam [daftar Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 

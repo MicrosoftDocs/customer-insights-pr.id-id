@@ -1,7 +1,7 @@
 ---
 title: Ekspor data Customer Insights ke Dynamics 365 Sales
-description: Pelajari cara mengkonfigurasi sambungan ke Dynamics 365 Sales.
-ms.date: 02/01/2021
+description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Dynamics 365 Sales.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,35 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 39ecdf528c6be4d8fb420a52a6ed998317e43bcd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fc1a05ba4d21d96aa1a9724d158687bbb86949b6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598113"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759608"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a>Konektor untuk Dynamics 365 Sales (pratinjau)
+# <a name="use-segments-in-dynamics-365-sales-preview"></a>Gunakan segmen di Dynamics 365 Sales (pratinjau)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Gunakan data pelanggan Anda untuk membuat daftar pemasaran, alur kerja tindak lanjut, dan mengirim promosi dengan Dynamics 365 Sales.
 
-## <a name="prerequisite"></a>Prasyarat
+## <a name="prerequisite-for-connection"></a>Prasyarat untuk koneksi
 
 1. Rekaman kontak harus ada di Dynamics 365 Sales agar Anda dapat mengekspor segmen dari Customer Insights ke Sales. Baca selengkapnya tentang cara menyerap kontak di [Dynamics 365 Sales menggunakan Common Data Services](connect-power-query.md).
 
    > [!NOTE]
    > Mengekspor segmen dari wawasan audiens ke Sales tidak akan membuat rekaman kontak baru di instans Sales. Rekaman kontak dari Sales harus digunakan dalam audiens wawasan dan digunakan sebagai sumber data. Id pelanggan juga harus disertakan dalam entitas Pelanggan terpadu untuk memetakan ID pelanggan agar ID dapat dihubungi sebelum segmen dapat diekspor.
 
-## <a name="configure-the-connector-for-sales"></a>Konfigurasikan konektor untuk Sales
+## <a name="set-up-the-connection-to-sales"></a>Konfigurasikan koneksi ke Sales
 
-1. Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.
+1. Buka **Admin** > **Koneksi**.
 
-1. Di dalam **Dynamics 365 Sales**, pilih **konfigurasi**.
+1. Pilih **Tambahkan koneksi** dan pilih **Dynamics 365 Sales** untuk mengonfigurasi koneksi.
 
-1. Beri tujuan ekspor nama yang dikenali di bidang **nama tampilan**.
+1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
+
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Masukkan URL Sales organisasi di **bidang alamat server**.
 
@@ -43,15 +45,24 @@ Gunakan data pelanggan Anda untuk membuat daftar pemasaran, alur kerja tindak la
 
 1. Petakan bidang ID pelanggan ke ID kontak Dynamics 365.
 
-1. Pilih **Selanjutnya**.
+1. Pilih **Simpan** untuk menyelesaikan koneksi. 
+
+## <a name="configure-an-export"></a>Mengonfigurasi ekspor
+
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+
+1. Buka **Data** > **Ekspor**.
+
+1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Dynamics 365 Sales. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
 
 1. Pilih satu atau beberapa segmen.
 
-1. Pilih **Simpan**.
+1. Pilih **Simpan**
 
-## <a name="export-the-data"></a>Mengekspor data
+Menyimpan ekspor tidak segera menjalankan ekspor.
 
-Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
-
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

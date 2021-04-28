@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595660"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906906"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prediksi kehilangan langganan (pratinjau)
 
@@ -49,6 +49,12 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
         - **Cap waktu:** tanggal dan waktu aktivitas yang diidentifikasi oleh kunci primer.
         - **Aktivitas**: nama aktivitas yang ingin Anda gunakan. Misalnya, bidang yang disebut "UserAction" di layanan video streaming dapat memiliki nilai "dilihat".
         - **Rincian:** informasi rinci tentang aktivitas. Misalnya, bidang yang disebut "ShowTitle" di layanan video streaming dapat memiliki nilai video yang ditonton pelanggan.
+- Karakteristik Data yang Disarankan:
+    - Data historis yang memadai: Data langganan untuk setidaknya dua kali lipat dari periode waktu yang dipilih. Sebaiknya, dua hingga tiga tahun data langganan.
+    - Status langganan: Data menyertakan langganan aktif dan tidak aktif untuk setiap pelanggan sehingga ada beberapa entri per ID pelanggan.
+    - Jumlah pelanggan: Setidaknya 10 profil pelanggan, lebih disukai lebih dari 1.000 pelanggan unik. Model akan gagal dengan kurang dari 10 pelanggan dan data historis yang tidak mencukupi.
+    - Kelengkapan data: Kurang dari 20% nilai yang hilang di bidang data entitas yang disediakan.
+   
    > [!NOTE]
    > Anda harus memiliki setidaknya dua rekaman aktivitas untuk 50% Pelanggan yang ingin Anda hitung angka kehilangannya.
 
@@ -67,7 +73,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 ### <a name="define-customer-churn"></a>Tentukan kehilangan pelanggan
 
 1. Masukkan jumlah **hari sejak langganan berakhir** sehingga bisnis Anda mempertimbangkan pelanggan untuk berada dalam status bergejolak. Periode ini biasanya disukai untuk aktivitas bisnis seperti Penawaran atau upaya pemasaran lainnya yang mencoba mencegah hilangnya pelanggan.
-1. Masukkan jumlah **hari untuk menyelidiki masa depan untuk memprediksi kehilangan pelanggan** untuk mengatur periode untuk memprediksi kehilangan pelanggan. Contohnya, untuk memprediksi risiko kehilangan pelanggan untuk pelanggan Anda selama 90 hari berikutnya untuk menyelaraskan upaya retensi Marketing Anda. Memprediksi risiko kehilangan pelanggan untuk jangka waktu yang lebih lama atau lebih singkat dapat membuatnya lebih sulit untuk mengatasi faktor dalam profil risiko kehilangan pelanggan Anda, namun ini sangat tergantung pada kebutuhan bisnis Anda yang spesifik. Untuk melanjutkan, klik **Berikutnya**
+1. Masukkan jumlah **hari untuk menyelidiki masa depan untuk memprediksi kehilangan pelanggan** untuk mengatur periode untuk memprediksi kehilangan pelanggan. Contohnya, untuk memprediksi risiko kehilangan pelanggan untuk pelanggan Anda selama 90 hari berikutnya untuk menyelaraskan upaya retensi Marketing Anda. Memprediksi risiko kehilangan untuk jangka waktu yang lebih lama atau lebih singkat dapat membuatnya lebih sulit untuk mengatasi faktor-faktor dalam profil risiko kehilangan Anda, tergantung pada persyaratan bisnis spesifik Anda. Untuk melanjutkan, klik **Berikutnya**
    >[!TIP]
    > Anda dapat memilih **Simpan dan tutup** Kapan pun untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi dalam tab **prediksi saya** untuk melanjutkan.
 
@@ -113,7 +119,8 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 1. Pilih prediksi yang ingin Anda tinjau.
    - **Nama prediksi:** nama prediksi yang diberikan saat membuatnya.
    - **Jenis prediksi:** jenis model yang digunakan untuk prediksi
-   - **Entitas output:** nama entitas untuk menyimpan output dari prediksi. Anda dapat menemukan entitas dengan nama ini pada **data** > **entitas**.
+   - **Entitas output:** nama entitas untuk menyimpan output dari prediksi. Anda dapat menemukan entitas dengan nama ini pada **data** > **entitas**.    
+     Dalam entitas output, *ChurnScore* adalah probabilitas kehilangan yang diprediksi dan *IsChurn* adalah label biner berdasarkan *ChurnScore* dengan ambang batas 0,5. Ambang batas default mungkin tidak berfungsi untuk skenario Anda. [Buat segmen baru](segments.md#create-a-new-segment) dengan ambang batas pilihan Anda.
    - **Bidang yang diprediksi:** bidang ini hanya diisi untuk beberapa jenis prediksi, dan tidak digunakan dalam prediksi kehilangan langganan.
    - **Status:** status saat ini prediksi berjalan.
         - **Mengantri:** prediksi saat ini sedang menunggu proses lainnya untuk dijalankan.

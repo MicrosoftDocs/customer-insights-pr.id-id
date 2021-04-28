@@ -1,7 +1,7 @@
 ---
 title: Pengayaan profil perusahaan dengan pengayaan pihak ketiga Leadspace
 description: Informasi umum tentang pengayaan pihak ketiga Leadspace.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597653"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895917"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil perusahaan dengan Leadspace (pratinjau)
 
-Leadspace adalah perusahaan ilmu data yang menyediakan platform data pelanggan B2B. Hal ini memungkinkan pelanggan dengan profil pelanggan terpadu untuk perusahaan untuk memperkaya data mereka. Pengayaan mencakup atribut tambahan seperti ukuran perusahaan, lokasi, industri, dan lainnya.
+Leadspace adalah perusahaan ilmu data yang menyediakan platform data pelanggan B2B. Hal ini memungkinkan pelanggan dengan profil pelanggan terpadu untuk perusahaan untuk memperkaya data mereka. Pengayaan mencakup atribut seperti ukuran perusahaan, lokasi, industri, dan lainnya.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 Untuk mengonfigurasikan Leadspace, prasyarat berikut harus dipenuhi:
 
-- Anda memiliki lisensi Leadspace aktif dan "kunci permanen" (disebut sebagai **token leadspace**). Hubungi langsung [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) untuk rincian tentang produk mereka.
-- Anda memiliki izin [administratif](permissions.md#administrator).
+- Anda memiliki lisensi Leadspace aktif.
 - Anda memiliki [profil pelanggan terpadu](customer-profiles.md) untuk perusahaan.
+- Koneksi Leadspace telah dikonfigurasi oleh administrator atau Anda memiliki izin [administrator](permissions.md#administrator) dan "kunci abadi" (disebut sebagai **token Leadspace**). Hubungi [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) secara langsung untuk detail tentang produk mereka.
 
-## <a name="configuration"></a>Konfigurasi
+## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 
 1. Di wawasan audiens, buka **Data** > **pengayaan**.
 
-1. Pilih **Perkaya data saya** di ubin Leadspace.
+1. Pilih **Perkaya data** saya di petak Leadspace dan pilih **Mulai**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Tangkapan layar petak Leadspace.":::
 
-1. Pilih **persiapan,** lalu masukkan **token leadspace** aktif (kunci permanen). Tinjau dan berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**. Konfirmasikan kedua input dengan memilih **Sambungkan ke Leadspace**.
+1. Pilih [koneksi](connections.md) dari menu tarik-turun. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi** dan memilih **Leadspace**. 
 
-1. Pilih **Petakan data** dan pilih himpunan data yang anda ingin perkaya dengan data perusahaan dari Leadspace. Anda dapat memilih entitas *Pelanggan* untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
+1. Pilih **Sambungkan ke Leadspace** untuk mengonfirmasi koneksi.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Pilih antara profil pelanggan dan pengayaan segmen.":::
+1. Pilih **Berikutnya** dan pilih **himpunan data Pelanggan** yang ingin Anda perkaya dengan data perusahaan dari Leadspace. Anda dapat memilih entitas **Pelanggan** untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
 
-1. Klik **selanjutnya** dan tentukan bidang mana dari profil terpadu yang Anda harus gunakan untuk mencari data perusahaan yang cocok dari leadspace. Bidang **Nama perusahaan** diperlukan. Untuk akurasi kecocokan yang lebih tinggi, hingga dua bidang lainnya, **situs web perusahaan** dan **lokasi perusahaan**, dapat ditambahkan.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Tangkapan layar saat memilih himpunan data pelanggan.":::
+
+1. Pilih **Berikutnya** dan tentukan bidang mana dari profil terpadu Anda yang digunakan untuk mencari data perusahaan yang cocok dari Leadspace. Bidang **Nama perusahaan** diperlukan. Untuk akurasi kecocokan yang lebih tinggi, hingga dua bidang lainnya, **situs web perusahaan** dan **lokasi perusahaan**, dapat ditambahkan.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Panel pemetaan bidang leadspace.":::
-   
-1. Pilih **Terapkan** untuk menyelesaikan pemetaan bidang.
 
-1. Pilih **Jalankan** untuk memperkaya profil perusahaan. Berapa lama pengayaan diperlukan tergantung pada jumlah profil pelanggan terpadu.
+1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
+
+1. Berikan nama untuk pengayaan dan pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Mengonfigurasi koneksi untuk Leadspace 
+
+Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan *atau* masuk ke **Admin** > **Koneksi** dan pilih **Konfigurasi** pada petak Leadspace.
+
+1. Pilih **Mulai** 
+
+1. Masukkan nama untuk koneksi dalam kotak **nama tampilan**.
+
+1. Berikan token Leadspace yang valid.
+
+1. Tinjau dan berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**
+
+1. Pilih **Verifikasi** untuk memvalidasi konfigurasi.
+
+1. Setelah menyelesaikan verifikasi, pilih **Simpan**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Halaman konfigurasi koneksi Leadspace.":::
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
 

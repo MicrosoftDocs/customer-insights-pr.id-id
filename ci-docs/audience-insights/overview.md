@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598634"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896469"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan audiens untuk ikhtisar Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pe
   - Sambungkan dan satukan data Anda dengan mudah — masukkan data transaksional, observasional, dan perilaku dari [sumber data populer dengan menggunakan konektor yang telah dibuat sebelumnya](data-sources.md).
   - Ubah data pelanggan dengan cerdas — Buat profil pelanggan terpadu sesuai dengan [Common Data Model](/common-data-model/). Tangani identitas pelanggan dengan rekomendasi berbasis AI/ML.
 
-- **Perkaya dengan kecerdasan audiens yang terkandung dalam Microsoft Graph**
+- **Perkaya dengan intelijen audiens**
 
-  - Buat profil pelanggan yang lebih kaya dengan [menggunakan intelijen audiens yang terkandung dalam Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Bangun profil pelanggan yang lebih kaya dengan [menggunakan data yang diperkaya](enrichment-hub.md).  
 
 - **Menggerakkan proses bisnis Anda dan pengalaman pelanggan yang disesuaikan**
 
@@ -43,7 +43,7 @@ Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pe
 
   - Akses ke kumpulan kaya konektor untuk mencerna semua data pelanggan Anda.
   - Kemampuan untuk menyatukan data pelanggan dan mengubahnya menjadi mulirat [Common Data Model](/common-data-model/).
-  - Memperkaya informasi pelanggan dengan wawasan dari audiens intelijen yang terkandung dalam Microsoft Graph, seperti afinitas dan minat merek.
+  - Memperkaya informasi pelanggan dengan wawasan dari audiens intelijen, seperti afinitas dan minat merek.
   - Konfigurasi "klik yang bukan kode" dan pengalaman debugging untuk memudahkan konfigurasi wawasan audiens dan mengidentifikasi potensi masalah.
   - Membersihkan dan menstandardisasi data pelanggan melalui sumber yang berbeda dengan rekomendasi yang didukung AI.  
 

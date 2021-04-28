@@ -1,7 +1,7 @@
 ---
-title: Destinasi ekspor
-description: Ekspor data dan Kelola tujuan ekspor.
-ms.date: 07/21/2020
+title: Mengekspor data dari Customer Insights
+description: Kelola ekspor untuk berbagi data.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596089"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896147"
 ---
-# <a name="export-destinations-preview-overview"></a>Ikhtisar destinasi ekspor (pratinjau)
+# <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
-Halaman **tujuan ekspor** menampilkan semua lokasi yang telah Anda konfigurasikan untuk mengekspor data. Anda juga dapat menambahkan tujuan baru untuk ekspor. Selain itu, ia menampilkan pilihan ekspor yang tersedia saat ini. Dapatkan ikhtisar ringkas, deskripsi, dan cari tahu apa yang dapat Anda lakukan dengan setiap pilihan Ekstensibilitas. Ekspor profil terpadu, langkah, dan segmen ke aplikasi yang didukung dan relevan untuk bisnis Anda.
+Halaman **Ekspor** memperlihatkan kepada Anda semua ekspor yang dikonfigurasi. Ekspor berbagi data tertentu dengan berbagai aplikasi. Mereka dapat menyertakan profil pelanggan atau entitas, skema, dan detail pemetaan. Setiap ekspor memerlukan [koneksi, yang disiapkan oleh administrator, untuk mengelola autentikasi dan akses](connections.md).
 
-Buka **Admin** > **tujuan ekspor** untuk menemukan pilihan Ekstensibilitas berikut:
+> [!NOTE]
+> Hingga Maret 2021, ekspor membuat koneksi ke layanan yang sesuai secara otomatis. Ekspor sekarang memerlukan [koneksi, yang dibuat dan dibagikan oleh administrator](connections.md) sebelum Anda bisa membuatnya.
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Adobe Experience Platform](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [Autopilot](export-autopilot.md)
-- [Penyimpanan Blob Azure](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Bot untuk Microsoft Teams](export-teams-bot.md)
-- [API Customer Insights](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (add-in Kartu Pelanggan)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Pusat Penjualan (add-in Kartu Pelanggan)](customer-card-add-in.md)
-- [Pengelola Iklan Facebook](export-facebook.md)
-- [Google Ads](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [Mailchimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+Buka **Data** > **Ekspor** untuk menampilkan halaman ekspor. Semua peran pengguna memiliki akses untuk melihat ekspor yang dikonfigurasi. Gunakan bidang pencarian di bilah perintah untuk menemukan ekspor menurut nama, nama koneksi, atau tipe koneksinya.
 
-## <a name="add-a-new-export-destination"></a>Menambahkan tujuan ekspor baru
+## <a name="set-up-a-new-export"></a>Konfigurasikan ekspor baru
 
-Untuk menambahkan tujuan ekspor, Anda memiliki [izin administrator](permissions.md). Jika Anda mengekspor ke layanan Microsoft, kami menganggap kedua layanan tersebut berada di organisasi yang sama.
+Untuk menyiapkan atau mengedit ekspor, Anda harus memiliki koneksi yang tersedia untuk Anda. Koneksi bergantung pada [peran pengguna](permissions.md) Anda:
+- Administrator memiliki akses ke semua koneksi. Mereka juga dapat membuat koneksi baru saat menyiapkan ekspor.
+- Kontributor dapat memiliki akses ke koneksi tertentu. Mereka bergantung pada administrator untuk mengonfigurasi dan berbagi koneksi. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Pemirsa hanya dapat melihat ekspor yang ada tetapi tidak membuatnya.
 
-1. Buka **Admin** > **Tujuan ekspor**.
+1. Buka **Data** > **Ekspor**.
 
-1. Beralih ke **tab tujuan ekspor saya**.
+1. Pilih **Tambahkan ekspor** untuk membuat tujuan ekspor baru.
 
-1. Pilih **Tambah tujuan** untuk membuat tujuan ekspor baru.
+1. Di panel **Konfigurasikan ekspor**, pilih koneksi mana yang akan digunakan. [Koneksi](connections.md) dikelola oleh administrator. 
 
-1. Di **panel Tambah tujuan**, pilih **jenis** tujuan ekspor di drop-down.
+1. Berikan detail yang diperlukan dan pilih **Simpan** untuk membuat ekspor.
 
-1. Berikan rincian yang diperlukan dan pilih **berikutnya** untuk membuat tujuan ekspor.
-
-Anda juga dapat memilih **konfigurasi** di ubin pada tab **temukan**.
-
-## <a name="view-export-destinations"></a>Lihat Tujuan Ekspor
-
-Setelah membuat tujuan ekspor, Anda akan menemukannya dalam tabel di tab **tujuan ekspor saya**. Tabel ini memiliki tiga kolom:
-
-- **Nama tampilan**: nama yang Anda masukkan ketika membuat tujuan.
-- **Jenis**: jenis tujuan ekspor yang Anda tetapkan ketika membuat tujuan.
-- **Dibuat**: tanggal Anda membuat tujuan.
-
-## <a name="edit-an-export-destination"></a>Edit tujuan ekspor
+### <a name="edit-an-export"></a>Edit ekspor
 
 1. Pilih elipsis vertikal untuk tujuan ekspor yang akan diedit.
 
-   > [!div class="mx-imgBorder"]
-   > ![Elipsis vertikal](media/export-destinations-page-ellipsis.png "Elipsis vertikal")
+1. Dari menu tarik-turun, pilih **Edit**.
 
-1. Pilih **Edit** dari menu menurun.
+1. Ubah nilai yang ingin Anda perbarui dan pilih **Simpan**.
 
-1. Ubah nilai yang memerlukan pembaruan dan pilih **Simpan**.
+## <a name="view-exports-and-export-details"></a>Melihat ekspor dan mengekspor detail
 
-## <a name="export-data-on-demand"></a>Ekspor data sesuai permintaan
+Setelah membuat tujuan ekspor, mereka tercantum pada **Data** > **Ekspor**. Semua pengguna dapat melihat data mana yang dibagikan dan status terbarunya.
 
-Setelah mengkonfigurasi konektor untuk tujuan ekspor, ekspor akan dijalankan dengan setiap [refresh terjadwal](system.md#schedule-tab).
+1. Buka **Data** > **Ekspor**.
 
-Untuk mengekspor data tanpa menunggu refresh terjadwal, buka tab **tujuan ekspor saya** pada **admin** > **tujuan ekspor**.
+1. Pengguna tanpa izin edit memilih **Lihat**, bukan **Edit** untuk melihat detail ekspor.
 
-> [!div class="mx-imgBorder"]
-> ![Elipsis vertikal](media/export-destinations-page-ellipsis.png "Elipsis vertikal")
+1. Panel samping ini memperlihatkan pengaturan ekspor ini. Tanpa izin edit, Anda tidak bisa mengubah nilai. Pilih **Tutup** untuk kembali ke halaman ekspor.
 
-- Pilih **ekspor** di atas daftar untuk menjalankan ekspor ke semua tujuan ekspor secara bersamaan.
-- Pilih elipsis (...) setelah item daftar, lalu pilih pilihan **ekspor** untuk menjalankan ekspor untuk satu tujuan ekspor.
+## <a name="run-exports-on-demand"></a>Menjalankan ekspor Atas Permintaan
 
-## <a name="remove-an-export-destination"></a>Menghapus tujuan ekspor
+Setelah mengonfigurasi ekspor, ekspor akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab) selama memiliki koneksi yang berfungsi.
 
-Untuk menghapus tujuan ekspor, mulai dari halaman **tujuan ekspor** utama.
+Untuk mengekspor data tanpa menunggu refresh terjadwal, buka **Data** > **Ekspor**. Anda memiliki dua pilihan:
 
-1. Pilih elipsis vertikal untuk tujuan ekspor yang akan dihilangkan.
+- Untuk menjalankan semua ekspor, pilih **Jalankan semua** di bilah perintah. 
+- Untuk menjalankan ekspor tunggal, pilih elipsis (...) pada item daftar lalu pilih **Jalankan**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Elipsis vertikal](media/export-destinations-page-ellipsis.png "Elipsis vertikal")
+## <a name="remove-an-export"></a>Menghapus ekspor
 
-2. Dari menu dropdown, pilih **hilangkan**.
+1. Buka **Data** > **Ekspor**.
 
-3. Konfirmasikan penghapusan dengan memilih **Hapus** di layar konfirmasi.
+1. Pilih elipsis vertikal untuk ekspor yang akan dihilangkan.
+
+1. Dari menu dropdown, pilih **hilangkan**.
+
+1. Konfirmasikan penghapusan dengan memilih **Hapus** di layar konfirmasi.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

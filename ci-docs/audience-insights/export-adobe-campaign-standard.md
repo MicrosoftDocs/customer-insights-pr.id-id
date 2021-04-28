@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Adobe Campaign Standard
 description: Pelajari bagaimana menggunakan segmen wawasan audiens dalam Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596319"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760285"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Gunakan segmen Customer Insights dalam Adobe Campaign Standard (pratinjau)
 
@@ -48,15 +48,21 @@ Email penawaran yang ingin Anda kirim akan berisi nama depan, nama belakang, dan
 
 ## <a name="export-your-target-audience"></a>Ekspor target audiens
 
+### <a name="configure-a-connection"></a>Mengonfigurasi koneksi
+
 Dengan target audiens, kita dapat mengkonfigurasi ekspor dari wawasan audiens ke akun Azure Blob Storage.
 
-1. Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.
+1. Dalam audiens wawasan, buka **Koneksi** > **Admin**.
 
-1. Di petak **Adobe Campaign** pilih **Konfigurasi**.
+1. Pilih **Tambah koneksi** dan pilih **Kampanye Adobe** untuk mengkonfigurasi koneksi atau pilih **Konfigurasi** dalam petak **Kampanye Adobe**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Petak konfigurasi untuk Adobe Campaign Standard.":::
 
-1. Berikan **nama tampilan** untuk tujuan ekspor baru ini, lalu masukkan **nama Akun**, **Kunci akun**, dan **Wadah** akun Azure Blob Storage untuk tempat mengekspor segmen.  
+1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
+
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+
+1. Masukkan **nama Akun**, **Kunci akun**, dan **Wadah** akun Penyimpanan Blob Azure untuk diekspor segmennya.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Screenshot konfigurasi akun penyimpanan. "::: 
 
@@ -64,7 +70,17 @@ Dengan target audiens, kita dapat mengkonfigurasi ekspor dari wawasan audiens ke
 
    - Untuk mempelajari cara membuat penampung, lihat [membuat penampung](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Pilih **Selanjutnya**.
+1. Pilih **Simpan** untuk menyelesaikan koneksi.
+
+### <a name="configure-an-export"></a>Mengonfigurasi ekspor
+
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+
+1. Buka **Data** > **Ekspor**.
+
+1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Kampanye Adobe. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
 
 1. Pilih segmen yang ingin Anda ekspor. Di contoh ini, itu adalah **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Dengan target audiens, kita dapat mengkonfigurasi ekspor dari wawasan audiens ke
 
 1. Pilih **Simpan**.
 
-Setelah menyimpan tujuan ekspor, Anda dapat menemukannya di **Admin** > **Ekspor** > **Tujuan ekspor Saya**.
+Setelah menyimpan tujuan ekspor, Anda menemukannya di **Ekspor** > **Data**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Tangkapan layar dengan daftar ekspor dan segmen sampel disorot.":::
-
-Anda sekarang dapat [mengekspor segmen sesuai permintaan](export-destinations.md#export-data-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md).
+Anda sekarang dapat [mengekspor segmen sesuai permintaan](export-destinations.md#run-exports-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md).
 
 > [!NOTE]
 > Pastikan jumlah rekaman dalam segmen yang diekspor berada dalam batas yang diizinkan untuk lisensi Adobe Campaign Standard.

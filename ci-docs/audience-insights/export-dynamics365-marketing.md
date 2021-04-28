@@ -1,7 +1,7 @@
 ---
 title: Ekspor data Customer Insights ke Dynamics 365 Marketing
-description: Pelajari cara mengkonfigurasi sambungan ke Dynamics 365 Marketing.
-ms.date: 02/01/2021
+description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Dynamics 365 Marketing.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,35 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 892aff643872f11307a2c43e5670edab657d7848
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a13f6f81f5e2570d3302d88c02755f1d86321a01
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597607"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759641"
 ---
-# <a name="connector-for-dynamics-365-marketing-preview"></a>Konektor untuk Dynamics 365 Marketing (pratinjau)
+# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Gunakan segmen di Dynamics 365 Marketing (pratinjau)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Gunakan [segmen](segments.md) untuk membuat kampanye dan hubungi grup pelanggan tertentu dengan Dynamics 365 Marketing. Untuk informasi lebih lanjut, lihat [menggunakan segmen dari Dynamics 365 Customer Insights dengan Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
 
-## <a name="prerequisite"></a>Prasyarat
+## <a name="prerequisite-for-a-connection"></a>Prasyarat untuk koneksi
 
 - Rekaman kontak harus ada di Dynamics 365 Marketing agar Anda dapat mengekspor segmen dari Customer Insights ke Marketing. Baca selengkapnya tentang cara menyerap kontak di [Dynamics 365 Marketing menggunakan Common Data Services](connect-power-query.md).
 
   > [!NOTE]
   > Mengekspor segmen dari wawasan audiens ke Marketing tidak akan membuat rekaman kontak baru di instans Marketing. Rekaman kontak dari Marketing harus digunakan dalam audiens wawasan dan digunakan sebagai sumber data. Id pelanggan juga harus disertakan dalam entitas Pelanggan terpadu untuk memetakan ID pelanggan agar ID dapat dihubungi sebelum segmen dapat diekspor.
 
-## <a name="configure-the-connector-for-marketing"></a>Konfigurasikan konektor untuk Marketing
+## <a name="set-up-connection-to-marketing"></a>Konfigurasikan koneksi ke Marketing
 
-1. Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.
+1. Buka **Admin** > **Koneksi**.
 
-1. Di dalam **Dynamics 365 Marketing**, pilih **konfigurasi**.
+1. Pilih **Tambahkan koneksi** dan pilih **Dynamics 365 Marketing** untuk mengonfigurasi koneksi.
 
-1. Beri tujuan ekspor nama yang dikenali di bidang **nama tampilan**.
+1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
+
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Masukkan URL Marketing organisasi di **bidang alamat server**.
 
@@ -43,15 +45,24 @@ Gunakan [segmen](segments.md) untuk membuat kampanye dan hubungi grup pelanggan 
 
 1. Petakan bidang ID pelanggan ke ID kontak Dynamics 365.
 
-1. Pilih **Selanjutnya**.
+1. Pilih **Simpan** untuk menyelesaikan koneksi. 
+
+## <a name="configure-an-export"></a>Mengonfigurasi ekspor
+
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+
+1. Buka **Data** > **Ekspor**.
+
+1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Dynamics 365 Marketing. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
 
 1. Pilih satu atau beberapa segmen.
 
 1. Pilih **Simpan**.
 
-## <a name="export-the-data"></a>Mengekspor data
+Menyimpan ekspor tidak segera menjalankan ekspor.
 
-Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
-
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola ukuran
 description: Menentukan ukuran untuk menganalisis dan mencerminkan kinerja bisnis Anda.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654736"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887944"
 ---
 # <a name="define-and-manage-measures"></a>Menentukan dan mengelola ukuran
 
-Ukuran membantu Anda memahami lebih baik perilaku pelanggan dan kinerja bisnis dengan mengambil nilai yang relevan dari [profil terpadu](data-unification.md). Misalnya, bisnis ingin melihat *total pengeluaran per pelanggan* untuk memahami riwayat pembelian pelanggan individual. Atau ukur *total penjualan perusahaan* untuk memahami pendapatan tingkat agregat dalam seluruh bisnis.  
+Ukuran membantu Anda untuk lebih memahami perilaku pelanggan dan kinerja bisnis. Mereka melihat nilai-nilai yang relevan dari [profil terpadu](data-unification.md). Misalnya, bisnis ingin melihat *total pengeluaran per pelanggan* untuk memahami riwayat pembelian pelanggan individual atau mengukur *total penjualan perusahaan* untuk memahami pendapatan tingkat agregat dalam seluruh bisnis.  
 
 Ukuran dibuat menggunakan pembuat ukuran, platform kueri data dengan berbagai operator, dan pilihan pemetaan sederhana. Alat ini memungkinkan Anda memfilter data, mengelompokkan hasil, mendeteksi [jalur relasi entitas](relationships.md), dan mempratinjau output.
 
 Gunakan pembuat ukuran untuk merencanakan aktivitas bisnis dengan mengkueri data pelanggan dan mengekstrak wawasan. Contohnya, membuat ukuran *total pengeluaran per pelanggan* dan *penghasilan total per pelanggan* membantu mengidentifikasi grup pelanggan dengan pengeluaran tinggi namun penghasilan yang tinggi. Anda dapat [membuat segmen](segments.md) untuk mendorong tindakan terbaik berikutnya. 
 
-## <a name="create-a-measure"></a>Membuat ukuran
+## <a name="build-your-own-measure-from-scratch"></a>Buat ukuran sendiri dari awal
 
 Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membuat pengukuran dengan atribut data dari entitas data yang telah diatur relasinya untuk terhubung dengan entitas Pelanggan. 
 
 1. Di wawasan audiens, buka **Ukuran**.
 
-1. Pilih **baru**.
+1. Pilih **Baru** dan pilih **Bangun milik Anda sendiri**.
 
 1. Pilih **Edit nama** dan berikan **Nama** untuk ukurannya. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membu
    1. Pilih **Edit dimensi** untuk menambahkan atribut data untuk mengelompokkan nilai ukuran. Misalnya, kota atau jenis kelamin. Secara default, dimensi *CustomerID* dipilih untuk membuat *ukuran tingkat pelanggan*. Anda dapat menghilangkan dimensi default jika ingin membuat *ukuran tingkat bisnis*.
    1. Pilih **Selesai** untuk menambahkan dimensi ke ukuran.
 
+1. Jika ada nilai dalam data Anda yang perlu Anda ganti dengan bilangan bulat, misalnya, ganti *null* dengan *0*, pilih **Aturan**. Konfigurasikan aturan dan pastikan Anda hanya memilih bilangan cacah sebagai pengganti.
+
 1. Jika ada beberapa jalur antara entitas data yang Anda petakan dan entitas *Pelanggan*, Anda harus memilih salah satu jalur relasi [entitas yang diidentifikasi](relationships.md). Hasil ukuran dapat bervariasi, tergantung pada jalur yang dipilih. 
    1. Pilih **preferensi Data** dan pilih jalur entitas yang harus digunakan untuk mengidentifikasi ukuran Anda. Jika hanya ada satu jalur ke entitas *Pelanggan*, kontrol ini tidak akan ditampilkan.
    1. Pilih **Selesai** untuk menerapkan pilihan Anda. 
@@ -88,9 +90,57 @@ Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membu
 
 1. Buka **Ukuran** untuk melihat ukuran yang baru dibuat dalam daftar.
 
+## <a name="use-a-template-to-build-a-measure"></a>Gunakan templat untuk menyusun pengukuran
+
+Anda dapat menggunakan templat yang sudah ditentukan sebelumnya dari langkah-langkah yang umum digunakan untuk membuatnya. Deskripsi terperinci tentang templat dan pengalaman terpandu membantu Anda mengukur pembuatan yang efisien. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
+
+Template ukuran yang tersedia: 
+- Nilai transaksi rata-rata (ATV)
+- Nilai transaksi total
+- Pendapatan rata-rata harian
+- Pendapatan rata-rata tahunan
+- Jumlah transaksi
+- Poin loyalitas yang diperoleh
+- Poin loyalitas yang ditukarkan
+- Saldo poin loyalitas
+- Rentang periode aktif pelanggan aktif
+- Durasi keanggotaan loyalitas
+- Waktu sejak pembelian terakhir
+
+Prosedur berikut ini menguraikan langkah-langkah untuk menyusun ukuran baru menggunakan templat.
+
+1. Di wawasan audiens, buka **Ukuran**.
+
+1. Pilih **Baru** dan pilih **pilih template**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Cuplikan layar menu tarik-turun saat membuat pengukuran baru dengan sorotan pada templat.":::
+
+1. Temukan templat yang sesuai dengan kebutuhan Anda dan pilih **Pilih templat**.
+
+1. Tinjau data yang diperlukan dan pilih **Mulai** jika Anda memiliki semua data yang ada.
+
+1. Di panel **Edit nama**, atur nama untuk ukuran Anda dan entitas output. 
+
+1. Pilih **Selesai**.
+
+1. Di bagian **Atur periode waktu**, tentukan jangka waktu data yang akan digunakan. Pilih jika Anda ingin pengukuran baru untuk mencakup seluruh himpunan data dengan memilih **Sepanjang waktu**. Atau jika Anda ingin mengukur untuk fokus pada **periode waktu tertentu**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Cuplikan layar memperlihatkan bagian periode waktu saat mengonfigurasi ukuran dari templat.":::
+
+1. Di bagian berikutnya, pilih **Tambahkan data** untuk memilih aktivitas dan memetakan data terkait dari entitas *Aktivitas Terpadu* Anda.
+
+    1. Langkah 1 dari 2: Di bawah **Tipe aktivitas**, pilih tipe entitas yang ingin Anda gunakan. Untuk **Aktivitas**, pilih entitas yang ingin Anda petakan.
+    1. Langkah 2 dari 2: Pilih atribut dari entitas *Aktivitas Terpadu* untuk komponen yang diperlukan oleh rumus. Misalnya, untuk nilai transaksi rata-rata, itu adalah atribut yang mewakili nilai Transaksi. Untuk **Cap waktu Aktivitas**, pilih atribut dari entitas Aktivitas Terpadu yang menunjukkan tanggal dan waktu aktivitas.
+   
+1. Setelah pemetaan data berhasil, Anda dapat melihat status sebagai **Selesai** dan nama aktivitas dan atribut yang dipetakan.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Cuplikan layar konfigurasi templat ukuran yang selesai.":::
+
+1. Sekarang Anda dapat memilih **Jalankan** untuk menghitung hasil pengukuran. Untuk memperbaikinya nanti, pilih **Simpan draf**.
+
 ## <a name="manage-your-measures"></a>Kelola ukuran Anda
 
-Setelah [membuat pengukuran](#create-a-measure), Anda akan melihat daftar ukuran pada halaman **Ukuran**.
+Anda dapat menemukan daftar ukuran di halaman **Ukuran**.
 
 Anda akan menemukan informasi tentang jenis pengukuran, pembuat, tanggal pembuatan, status, dan status. Bila Anda memilih ukuran dari daftar, Anda dapat mempratinjau output dan mengunduh file .CSV.
 

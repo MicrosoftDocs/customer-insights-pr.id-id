@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Adobe Experience Platform
 description: Pelajari bagaimana menggunakan segmen wawasan audiens dalam Adobe Experience Platform.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596273"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760105"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Gunakan segmen Customer Insights dalam Adobe Experience Platform (pratinjau)
 
@@ -51,21 +51,36 @@ Email penawaran yang ingin Anda kirim akan berisi nama depan, nama belakang, dan
 
 Dengan target audiens, kita dapat mengkonfigurasi ekspor dari wawasan audiens ke akun Azure Blob Storage.
 
-1. Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.
+### <a name="configure-a-connection"></a>Mengonfigurasi koneksi
 
-1. Pada petak **Azure Blob Storage**, pilih **Atur**.
+1. Buka **Admin** > **Koneksi**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="petak konfigurasi untuk Azure Blob Storage.":::
+1. Pilih **Tambahkan koneksi** dan pilih **Penyimpanan Blob Azure** atau pilih **Konfigurasi** di petak **Penyimpanan Blob Azure**:
 
-1. Berikan **nama tampilan** untuk tujuan ekspor baru ini, lalu masukkan **nama Akun**, **Kunci akun**, dan **Wadah** akun Azure Blob Storage untuk tempat mengekspor segmen.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="petak konfigurasi untuk Azure Blob Storage."::: untuk mengonfigurasi koneksi.
+
+1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
+
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Masukkan **nama Akun**, **Kunci akun**, dan **Wadah** untuk akun Penyimpanan Blob Anda yang ingin Anda ekspor segmennya.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Screenshot konfigurasi akun penyimpanan. "::: 
+   
+    - Untuk mempelajari selengkapnya tentang cara menemukan nama akun penyimpanan Blob dan kunci akun, lihat [Mengelola pengaturan akun penyimpanan di portal Azure](/azure/storage/common/storage-account-manage).
+    - Untuk mempelajari cara membuat penampung, lihat [membuat penampung](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Untuk mempelajari lebih lanjut tentang cara menemukan kunci akun dan nama akun penyimpanan Azure Blob, lihat [mengelola pengaturan akun penyimpanan di portal Azure](/azure/storage/common/storage-account-manage).
+1. Pilih **Simpan** untuk menyelesaikan koneksi. 
 
-   - Untuk mempelajari cara membuat penampung, lihat [membuat penampung](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Mengonfigurasi ekspor
 
-1. Pilih **Selanjutnya**.
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+
+1. Buka **Data** > **Ekspor**.
+
+1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Penyimpanan Blob Azure. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
 
 1. Pilih segmen yang ingin Anda ekspor. Di contoh ini, itu adalah **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Dengan target audiens, kita dapat mengkonfigurasi ekspor dari wawasan audiens ke
 
 1. Pilih **Simpan**.
 
-Setelah menyimpan tujuan ekspor, Anda dapat menemukannya di **Admin** > **Ekspor** > **Tujuan ekspor Saya**.
+Setelah menyimpan tujuan ekspor, Anda menemukannya di **Ekspor** > **Data**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Tangkapan layar dengan daftar ekspor dan segmen sampel disorot.":::
-
-Anda sekarang dapat [mengekspor segmen sesuai permintaan](export-destinations.md#export-data-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md).
+Anda sekarang dapat [mengekspor segmen sesuai permintaan](export-destinations.md#run-exports-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md).
 
 > [!NOTE]
 > Pastikan jumlah rekaman dalam segmen yang diekspor berada dalam batas yang diizinkan untuk lisensi Adobe Campaign Standard.

@@ -1,7 +1,7 @@
 ---
 title: Ekspor data Customer Insights ke Mailchimp
-description: Pelajari cara mengkonfigurasi sambungan ke Mailchimp.
-ms.date: 10/26/2020
+description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Mailchimp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,71 +9,78 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f86616731c3cc3d26370727103ea9c5d4288c8d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b94a8e8b6bb867ca04a64007d592b22fbd700618
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598205"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759882"
 ---
-# <a name="connector-for-mailchimp-preview"></a>Konektor untuk Mailchimp (pratinjau)
+# <a name="export-segment-lists-to-mailchimp-preview"></a>Mengekspor daftar segmen ke Mailchimp (pratinjau)
 
 Ekspor segmen profil pelanggan terpadu ke MailChimp untuk membuat kampanye newsletter dan email.
 
-## <a name="prerequisites"></a>Prasyarat
+## <a name="prerequisites-for-connection"></a>Prasyarat untuk koneksi
 
 -   Anda memiliki [akun Mailchimp](https://mailchimp.com/) dan kredensial administrator yang sesuai.
 -   Audiens sudah ada di Mailchimp dan id yang sesuai. Untuk informasi lebih lanjut, lihat [audiens Mailchimp](https://mailchimp.com/help/create-audience/).
 -   Anda telah [mengonfigurasi segmen](segments.md)
 -   Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
-## <a name="connect-to-mailchimp"></a>Hubungkan ke Mailchimp
+## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-1. Buka **Admin** > **Tujuan ekspor**.
+- Hingga 1 juta profil per ekspor ke Mailchimp.
+- Mengekspor ke Mailchimp terbatas untuk segmen.
+- Mengekspor segmen dengan 1 juta profil dapat memakan waktu hingga tiga jam. 
+- Jumlah profil yang dapat Anda ekspor ke Mailchimp tergantung dan terbatas pada kontrak Anda dengan Mailchimp.
 
-1. Dalam **Mailchimp**, pilih **konfigurasi**.
+## <a name="set-up-connection-to-mailchimp"></a>Konfigurasikan koneksi ke Mailchimp
 
-1. Beri tujuan ekspor nama yang dikenali di bidang **nama tampilan**.
+1. Buka **Admin** > **Koneksi**.
+
+1. Pilih **Tambahkan koneksi** dan pilih **Mailchimp** untuk mengonfigurasi koneksi.
+
+1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
+
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Pilih **saya setuju** untuk mengonfirmasi **privasi dan kepatuhan data**.
 
-1. Masukkan **[ID audiens Mailchimp](https://mailchimp.com/help/find-audience-id/)**, lalu pilih **sambungkan** untuk menginisialisasi sambungan ke Mailchimp.
+1. Pilih **Sambungkan** untuk menginisialisasi koneksi ke Mailchimp.
 
 1. Pilih **autentikasi dengan Mailchimp** dan berikan kredensial Mailchimp Anda.
 
 1. Pilih **Tambah diri Anda sebagai pengguna ekspor** dan berikan kredensial Customer Insights Anda.
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Mengekspor tangkapan layar untuk sambungan Mailchimp":::
-
-1. Pilih **berikutnya** untuk mengkonfigurasi ekspor.
+1. Pilih **Simpan** untuk menyelesaikan koneksi. 
 
 ## <a name="configure-the-connector"></a>Konfigurasikan konektor
 
-1. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. 
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
 
-1. Atau, anda dapat mengekspor **nama depan** dan **nama belakang** sebagai bidang tambahan untuk membuat email yang lebih disesuaikan. Pilih **Tambah atribut** untuk memetakan bidang ini.
+1. Buka **Data**> **Ekspor**.
+
+1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Mailchimp. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+
+1. Masukkan **[ID audiens Mailchimp](https://mailchimp.com/help/find-audience-id/)**
+
+3. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. 
+
+1. Secara opsional, Anda dapat mengekspor **nama depan** dan **nama belakang** untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
 
 1. Pilih segmen yang ingin diekspor. Anda dapat mengekspor hingga 1 juta profil pelanggan secara total ke Mailchimp.
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Pilih bidang dan segmen untuk diekspor ke MailChimp":::
-
 1. Pilih **Simpan**.
 
-## <a name="export-the-data"></a>Mengekspor data
+Menyimpan ekspor tidak segera menjalankan ekspor.
 
-Anda dapat [mengekspor data sesuai permintaan](export-destinations.md). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Di Mailchimp, Anda sekarang dapat menemukan segmen Anda dalam [audiens Mailchimp](https://mailchimp.com/help/create-audience/).
-
-## <a name="known-limitations"></a>Pembatasan yang diketahui
-
-- Hingga 1 juta profil per ekspor ke Mailchimp.
-- Mengekspor ke Mailchimp terbatas untuk segmen.
-- Mengekspor segmen dengan total 1 juta profil dapat memakan waktu hingga tiga jam karena keterbatasan pada sisi Provider. 
-- Jumlah profil yang dapat Anda ekspor ke Mailchimp tergantung dan terbatas pada kontrak Anda dengan Mailchimp.
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 
 Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Mailchimp, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa Mailchimp memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

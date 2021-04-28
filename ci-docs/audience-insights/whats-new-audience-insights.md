@@ -1,7 +1,7 @@
 ---
 title: Fitur baru dan mendatang
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598435"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896239"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598435"
 
 Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [Dynamics 365 dan rencana rilis Power Platform](/dynamics365/release-plans/).
 
-Anda juga dapat menonton video berikut untuk mempelajari lebih lanjut tentang kemampuan yang direncanakan selama enam bulan terakhir.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tertentu mungkin melihat fitur sebelum orang lain. Kecuali ditentukan berbeda, Anda tidak perlu melakukan tindakan apa pun dan kami akan memperbarui aplikasi secara otomatis tanpa waktu henti.
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Pembaruan Maret 2021
+
+Pembaruan pada bulan Maret 2021 mencakup beberapa fitur, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="activities"></a>Aktivitas
+
+- **Panduan aktivitas dan jenis semantik** Kami telah meningkatkan dan memperbarui pengalaman pemetaan aktivitas kami untuk memandu dan menyederhanakan pembuatan pemetaan aktivitas. Dalam pengalaman baru ini, pengguna mendapatkan pengalaman terpandu untuk membantu menyelesaikan setiap langkah proses. Pada langkah pemetaan aktivitas, selain memilih dari banyak jenis aktivitas, pengguna dapat memilih untuk memetakan data secara semantik untuk *Langganan* dan/atau *SalesOrderLine* ke skema standar industri, yang dapat digunakan untuk konsumsi hilir.    
+  Untuk informasi lebih lanjut, lihat [Aktivitas pelanggan](activities.md).
+
+### <a name="data-ingestion"></a>Penyerapan data
+
+- **Menyambungkan ke sumber data lokal menggunakan aliran data Power Platform dan gateway** Kami dengan senang hati mengumumkan pratinjau aliran data Power Platform dan konektivitas lokal menggunakan gateway di Customer Insights dengan lingkungan Power Platform atau Dataverse terkait. Setiap sumber data baru yang dibuat di lingkungan Customer Insights dengan lingkungan Dataverse tertaut akan default ke aliran data Power Platform yang membawa konektivitas data lokal dan serangkaian konektor dan kemampuan transformasi yang kaya.
+
+### <a name="extensibility"></a>Dapat diperluas
+
+- **Ekspor diatur dalam koneksi dan ekspor** Kami telah mengubah nama halaman **Ekspor tujuan** ke **Koneksi** dan menambahkan halaman terpisah untuk **Ekspor**. Sebagai bagian dari pembaruan ini, kami akan mentransisikan ekspor yang ada menjadi pasangan koneksi dan ekspor menggunakan koneksi tersebut. Administrator sekarang memiliki lebih banyak kejelasan atas data keluar di halaman **Koneksi**. Semua peran pengguna memiliki akses ke halaman **Ekspor**, tetapi hanya administrator yang dapat memilih untuk mengizinkan kontributor mengedit ekspor tertentu dengan koneksi bersama.     
+  Untuk informasi selengkapnya, lihat [Gambaran umum koneksi](connections.md) dan [gambaran umum Ekspor](export-destinations.md).
+
+- **Segmen ekspor ke Campaign Monitor** Kami telah memperluas tujuan ekspor kami untuk menyertakan Campaign Monitor. Kini Anda dapat mengekspor segmen dari Customer Insights ke daftar Campaign Monitor dan menggunakannya sebagai dasar untuk kampanye pemasaran Anda.    
+   Untuk informasi lebih lanjut, lihat [Mengekspor ke Campaign Monitor](export-campaign-monitor.md).
+
+- **Segmen ekspor ke Constant Contact** Kami telah memperluas tujuan ekspor kami untuk menyertakan Constant Contact. Kini Anda dapat mengekspor segmen dari Customer Insights ke daftar Constant Contact dan menggunakannya sebagai dasar untuk kampanye pemasaran Anda.   
+   Untuk informasi lebih lanjut, lihat [Mengekspor ke Constant Contact](export-constant-contact.md).
+
+- **Segmen ekspor ke RollWorks** Kami telah memperluas tujuan ekspor kami untuk menyertakan RollWorks. Kini Anda dapat mengekspor segmen dari Customer Insights ke audiens RollWorks dan menggunakannya sebagai dasar untuk periklanan B2B Anda.    
+   Untuk informasi lebih lanjut, lihat [Mengekspor ke RollWorks ](export-rollworks.md).
+
+- **Segmen ekspor ke Snapchat** Kami telah memperluas tujuan ekspor kami untuk menyertakan Snapchat. Kini Anda dapat mengekspor segmen dari Customer Insights ke audiens Snapchat dan menggunakannya sebagai dasar untuk periklanan Anda.     
+   Untuk informasi lebih lanjut, lihat [Mengekspor ke Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Prediksi
+
+- **Gunakan filter produk dalam rekomendasi produk prediktif** Kami telah menambahkan kemampuan untuk menggunakan filter produk dalam model rekomendasi produk kami. Anda sekarang dapat membuat prediksi yang hanya menggunakan subkumpulan produk Anda.    
+   Untuk informasi selengkapnya, lihat [Mengonfigurasi filter produk](predict-product-recommendation.md#configure-product-filters).
+
+- **Buat segmen dari prediksi model** Kami telah menambahkan cara cepat untuk membuat segmen menggunakan hasil model prediksi. Dari halaman hasil model, Anda dapat dengan mudah membuat segmen baru dengan memilih opsi **Buat segmen** baru.    
+  Untuk informasi selengkapnya, lihat [Membuat segmen berdasarkan model prediksi](prediction-based-segment.md).
+
+- **Penjelasan untuk rekomendasi produk** Kami telah menambahkan informasi yang menjelaskan faktor-faktor kunci yang dipelajari oleh model AI untuk menghasilkan rekomendasi produk dan tingkat di mana faktor-faktor tersebut berkontribusi terhadap rekomendasi produk. Informasi ini ditambahkan ke layar hasil model.    
+   Untuk informasi lebih lanjut, lihat [meninjau status dan hasil prediksi](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Pembaruan Februari 2021
 
@@ -107,7 +144,7 @@ Pembaruan pada Desember 2020 mencakup beberapa fitur, peningkatan kinerja, dan p
 
   Selain itu, kami telah menambahkan pilihan konfigurasi baru untuk mengontrol dengan lebih baik cara memperkaya profil pelanggan Anda. 
 
-  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft-graph.md).
+  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md).
 
 - **Mengontrol profil mana yang akan diperkaya**
 
@@ -309,8 +346,8 @@ Pembaruan pada Agustus 2020 mencakup beberapa fitur, peningkatan kinerja, dan pe
 
 - **Pengayaan afinitas minat tersedia di lebih banyak pasar**
 
-  Kami memperluas ketersediaan afinitas minat di luar Amerika Serikat ke lima pasar lainnya: Kanada, Australia, Inggris, Prancis, dan Jerman. Dengan ekstensi ini, Anda dapat memperkaya data pelanggan dengan lebih banyak minat yang berlaku di pasar ini. Kami juga akan memperkaya profil pelanggan Anda yang terletak di pasar ini dengan menggunakan data kepemilikan lokal dari Microsoft graph.
-  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft-graph.md)
+  Kami memperluas ketersediaan afinitas minat di luar Amerika Serikat ke lima pasar lainnya: Kanada, Australia, Inggris, Prancis, dan Jerman. Dengan ekstensi ini, Anda dapat memperkaya data pelanggan dengan lebih banyak minat yang berlaku di pasar ini. Kami juga akan memperkaya profil pelanggan Anda yang berlokasi di pasar ini dengan menggunakan data kepemilikan lokal dari Microsoft.
+  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Pembaruan Juli 2020
@@ -330,8 +367,8 @@ Pembaruan pada juli 2020 mencakup beberapa fitur, peningkatan kinerja, dan perba
 
 - **Pengayaan afinitas merek tersedia di lebih banyak pasar**
 
-  Kami memperluas ketersediaan afinitas merek di luar Amerika Serikat ke lima pasar lainnya: Kanada, Australia, Inggris, Prancis, dan Jerman. Dengan ekstensi ini, Anda dapat memperkaya data pelanggan Anda dengan merek lokal di pasar ini. Kami juga akan memperkaya profil pelanggan Anda yang terletak di pasar ini dengan menggunakan data kepemilikan lokal dari Microsoft graph.
-  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft-graph.md)
+  Kami memperluas ketersediaan afinitas merek di luar Amerika Serikat ke lima pasar lainnya: Kanada, Australia, Inggris, Prancis, dan Jerman. Dengan ekstensi ini, Anda dapat memperkaya data pelanggan Anda dengan merek lokal di pasar ini. Kami juga akan memperkaya profil pelanggan Anda yang berlokasi di pasar ini dengan menggunakan data kepemilikan lokal dari Microsoft.
+  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Pembaruan Juni 2020
 
@@ -355,7 +392,7 @@ Pembaruan pada Juni 2020 mencakup beberapa fitur, peningkatan kinerja, dan perba
 - **Pengayaan afinitas merek dan minat terpisah**
 
   Kesamaan merek dan minat kini tersedia sebagai dua pengayaan independen. Pengayaan terpisah memberi Anda fleksibilitas untuk mengonfigurasi dan mengelolanya satu per satu, tergantung kebutuhan atau persyaratan bisnis Anda.    
-  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft-graph.md).
+  Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Dapat diperluas
 
