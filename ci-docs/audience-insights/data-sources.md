@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887898"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085534"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
@@ -36,11 +36,9 @@ Anda dapat menambahkan sumber data dengan tiga cara utama:
 
 Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Power Platform. Aliran data dapat diaktifkan di Customer Insights dengan [menyediakan URL lingkungan Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) saat menyiapkan lingkungan.
 
-Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Customer Insights akan menggunakan [aliran data Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Hapus dan buat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk menggunakan gateway data lokal.
+Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Customer Insights akan menggunakan [aliran data Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Hapus dan buat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk [menggunakan gateway data lokal](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data memperlihatkan tautan untuk masuk ke lingkungan Power Platform tempat Anda bisa menampilkan dan mengonfigurasi gateway data lokal.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Cuplikan layar halaman sumber data memperlihatkan tautan yang menunjuk ke lingkungan Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Meninjau data yang diserap
 

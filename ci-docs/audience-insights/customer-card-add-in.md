@@ -1,7 +1,7 @@
 ---
-title: Instal dan konfigurasikan Add -in kartu pelanggan
-description: Instal dan konfigurasikan Add -in kartu pelanggan untuk Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Add-in Kartu Pelanggan untuk aplikasi Dynamics 365
+description: Tampilkan data wawasan audiens di aplikasi Dynamics 365 dengan add-in ini.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597331"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059592"
 ---
 # <a name="customer-card-add-in-preview"></a>Add-in Kartu Pelanggan (pratinjau)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamics 365. Melihat batas waktu demografi, wawasan, dan aktivitas dengan Add-in kartu pelanggan.
+Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamics 365. Dengan Add-in Kartu Pelanggan yang terinstal di aplikasi Dynamics 365 yang didukung, Anda dapat memilih untuk menampilkan demografi, wawasan, dan timeline aktivitas. Add-in akan mengambil data dari Customer Insights tanpa mempengaruhi data dalam aplikasi Dynamics 365 yang tersambung. 
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Aplikasi Dynamics 365 (misalnya pusat penjualan atau pusat Customer Service), versi 9.0 dan yang lebih baru dengan Antarmuka Terpadu diaktifkan.
-- Profil pelanggan [yang terserap dari aplikasi Dynamics 365 menggunakan Common Data Service](connect-power-query.md).
-- Pengguna Add-in kartu pelanggan harus [ditambahkan sebagai pengguna](permissions.md) di wawasan audiens.
-- [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md).
-- Kontrol demografis: bidang demografis, (seperti usia atau jenis kelamin) tersedia di profil pelanggan terpadu.
-- Kontrol pengayaan: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan.
-- Kontrol kecerdasan: Memerlukan data yang dibuat menggunakan Pembelajaran Mesin Azure ([Prediksi](predictions.md) atau [Model Kustom](custom-models.md))
-- Kontrol pengukuran: memerlukan [tindakan yang dikonfigurasi](measures.md).
-- Kontrol Timeline: memerlukan [aktivitas yang dikonfigurasi](activities.md).
+- Add-in hanya berfungsi dengan aplikasi yang diarahkan model Dynamics 365, seperti Sales, atau Customer Service, versi 9.0 dan versi yang lebih baru.
+- Agar data Dynamics 365 Anda dapat memetakan ke profil pelanggan wawasan audiens, mereka perlu [diserap dari aplikasi Dynamics 365 menggunakan konektor Common Data Service](connect-power-query.md).
+- Semua pengguna Add-in Kartu Pelanggan Dynamics 365 harus [ditambahkan sebagai pengguna](permissions.md) dalam wawasan audiens untuk melihat data.
+- [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md) di audiens wawasan diperlukan agar pencarian data dapat bekerja.
+- Setiap kontrol add-in mengandalkan data tertentu dalam wawasan audiens:
+  - Kontrol pengukuran: memerlukan [tindakan yang dikonfigurasi](measures.md).
+  - Kontrol inteligensi: Memerlukan data yang dihasilkan menggunakan [prediksi](predictions.md) atau [model kustom](custom-models.md).
+  - Kontrol demografis: bidang demografis, (seperti usia atau jenis kelamin) tersedia di profil pelanggan terpadu.
+  - Kontrol pengayaan: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan.
+  - Kontrol Timeline: memerlukan [aktivitas yang dikonfigurasi](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instal Add-in Kartu Pelanggan
 
@@ -56,9 +57,9 @@ Bisa diperlukan beberapa waktu agar solusi dapat diinstal ke lingkungan Anda.
    > [!NOTE]
    > Periksa apakah Pemblokir pop-up browser tidak memblokir jendela autentikasi saat Anda memilih tombol **Masuk**.
 
-1. pilih lingkungan yang ingin Anda ambil datanya.
+1. pilih lingkungan Customer Insights yang ingin Anda ambil datanya.
 
-1. Tentukan pemetaan bidang ke rekaman di aplikasi Dynamics 365.
+1. Tentukan pemetaan bidang untuk rekaman di aplikasi Dynamics 365. Tergantung pada data dalam Customer Insights, Anda dapat memilih untuk memetakan pilihan berikut:
    - Untuk memetakan dengan kontak, pilih bidang di entitas Pelanggan yang sesuai dengan ID entitas kontak Anda.
    - Untuk memetakan dengan akun, pilih bidang di entitas Pelanggan yang sesuai dengan ID entitas akun Anda.
 

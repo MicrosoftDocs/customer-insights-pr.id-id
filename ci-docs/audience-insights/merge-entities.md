@@ -1,7 +1,7 @@
 ---
 title: Gabungkan entitas dalam penyatuan data
 description: Gabungkan entitas untuk membuat profil pelanggan terpadu.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896515"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085580"
 ---
 # <a name="merge-entities"></a>Gabungkan Entitas
 
 Fase gabungkan adalah fase terakhir dalam proses penyatuan data. Tujuannya adalah merekonsiliasi data yang berkonflik. Contoh data yang berkonflik dapat mencakup nama pelanggan yang berada di dua dataset, namun ditampilkan sedikit berbeda di masing-masing ("Grant Marshall" versus "Grant"), atau format nomor telepon yang berbeda format (617-803-091X versus 617803091X). Penggabungan titik data yang berkonflik dilakukan pada basis atribut demi atribut.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Halaman gabungan dalam proses penyatuan data yang menampilkan tabel dengan bidang gabungan yang mendefinisikan profil pelanggan terpadu.":::
+
 Setelah menyelesaikan [fase kecocokan](match-entities.md), Anda memulai fase penggabungan dengan memilih ubin **gabungkan** pada halaman **satukan**.
 
 ## <a name="review-system-recommendations"></a>Tinjau rekomendasi sistem
 
-Di halaman **Gabungkan**, Anda dapat memilih dan mengecualikan atribut yang harus digabungkan dalam entitas profil pelanggan terpadu (hasil dari proses konfigurasi). Beberapa atribut secara otomatis digabungkan oleh sistem.
+Pada **Data** > **Satukan** > **Gabungkan**, Anda memilih dan mengecualikan atribut untuk digabungkan dalam entitas profil pelanggan terpadu Anda. Profil pelanggan terpadu adalah hasil dari proses penyatuan data. Beberapa atribut secara otomatis digabungkan oleh sistem.
 
-### <a name="view-merged-attributes"></a>Lihat atribut yang digabungkan
+Untuk melihat atribut yang tercakup di salah satu atribut gabungan otomatis Anda, pilih atribut gabungan tersebut di tab **Bidang pelanggan** pada tabel. Atribut yang membentuk atribut gabungan ditampilkan dalam dua baris baru di bawah atribut gabungan.
 
-Untuk melihat atribut yang disertakan dalam salah satu dari atribut yang digabungkan secara otomatis, pilih atribut gabungan tersebut. Dua atribut yang membentuk atribut gabungan akan muncul di dua baris baru di bawah atribut gabungan.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Memisahkan, mengganti nama, mengecualikan, dan mengedit bidang gabungan
 
-> [!div class="mx-imgBorder"]
-> ![pilih atribut gabungan](media/configure-data-merge-profile-attributes.png "pilih atribut gabungan")
+Anda dapat mengubah cara sistem memproses atribut gabungan untuk menghasilkan profil pelanggan terpadu. Pilih **Tampilkan lainnya**, lalu pilih yang akan diubah.
 
-### <a name="separate-merged-attributes"></a>Pisahkan atribut yang digabungkan
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Pilihan di menu drop-down Tampilkan lainnya untuk mengelola atribut gabungan.":::
 
-Untuk memisahkan atau batal menggabungkan atribut yang digabungkan secara otomatis, temukan atribut di tabel **atribut profil**.
+Untuk informasi lebih lanjut, lihat bagian berikut.
 
-1. Pilih tombol elipsis (...).
+## <a name="separate-merged-fields"></a>Pisahkan bidang gabungan
+
+Untuk memisahkan bidang gabungan, cari atribut di tabel. Bidang terpisah ditampilkan sebagai poin data individual di profil pelanggan terpadu. 
+
+1. Pilih bidang gabungan.
   
-2. Di daftar drop-down , pilih **Bidang terpisah**.
+1. Pilih **Tampilkan lainnya** dan pilih **Bidang terpisah**.
+ 
+1. Konfirmasikan pemisahan.
 
-### <a name="remove-merged-attributes"></a>Hapus atribut yang digabungkan
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
-Untuk mengecualikan atribut dari entitas profil pelanggan akhir, temukan di tabel **atribut profil**.
+## <a name="rename-merged-fields"></a>Ganti nama bidang yang digabungkan
 
-1. Pilih tombol elipsis (...).
+Ubah nama tampilan atribut gabungan. Anda tidak dapat mengubah nama entitas output.
+
+1. Pilih bidang gabungan.
   
-2. Di daftar drop-down , pilih **Jangan gabungkan**.
+1. Pilih **Tampilkan lainnya** dan pilih **Ganti nama**.
 
-   Atribut dipindahkan ke bagian **dihapus dari rekaman pelanggan**.
+1. Konfirmasikan perubahan nama tampilan. 
 
-## <a name="manually-add-a-merged-attribute"></a>Tambahkan atribut gabungan secara manual
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
-Untuk menambahkan atribut gabungan, buka halaman **gabungkan**.
+## <a name="exclude-merged-fields"></a>Pisahkan bidang gabungan
 
-1. Pilih **Tambah atribut gabungan**.
+Pisahkan atribut dari profil pelanggan terpadu. Jika bidang digunakan dalam proses lain, misalnya dalam segmen, hilangkan dari proses ini sebelum mengecualikannya dari profil pelanggan. 
 
-2. Berikan **nama** untuk mengidentifikasinya di halaman **gabungkan** nanti.
+1. Pilih bidang gabungan.
+  
+1. Pilih **Tampilkan lainnya** dan pilih **Pisahkan**.
 
-3. Atau, berikan **nama tampilan** untuk ditampilkan di entitas profil pelanggan terpadu.
+1. Konfirmasikan pengecualian.
 
-4. Konfigurasi **Pilih atribut duplikat** untuk memilih atribut yang ingin Anda gabungkan dari entitas yang cocok. Anda juga dapat mencari atribut.
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
 
-5. Tetapkan **peringkat menurut nilai penting** untuk memprioritaskan satu atribut di atas yang lain. Misalnya, jika entitas *WebAccountCSV* mencakup data yang paling akurat tentang atribut *nama lengkap*, Anda dapat memprioritaskan entitas ini melalui *ContactCSV* dengan memilih *WebAccountCSV*. Akibatnya, *WebAccountCSV* bergerak ke prioritas pertama, sementara *ContactCSV* bergerak ke prioritas kedua ketika menarik nilai untuk atribut *nama lengkap*.
+Pada halaman **Gabung**, pilih **Bidang yang dikecualikan** untuk melihat daftar semua bidang yang dipisahkan. Panel ini memungkinkan Anda menambahkan kembali bidang yang dipisahkan.
+
+## <a name="manually-combine-fields"></a>Gabungkan bidang secara manual
+
+Tentukan atribut gabungan secara manual. 
+
+1. Pada halaman **Gabung**, pilih **Gabungkan bidang**.
+
+1. Berikan **Nama** dan **nama bidang Output**.
+
+1. Pilih bidang untuk ditambahkan. pilih **Tambahkan bidang** untuk mengombinasikan bidang lainnya.
+
+1. Konfirmasikan pengecualian.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
+## <a name="change-the-order-of-fields"></a>Ubah urutan bidang
+
+Beberapa entitas berisi rincian lebih banyak daripada entitas lain. Jika entitas mencakup data terbaru tentang bidang, Anda dapat memprioritaskan entitas lain saat menggabungkan nilai.
+
+1. Pilih bidang gabungan.
+  
+1. Pilih **Tampilkan lainnya** dan pilih **Edit**.
+
+1. Di panel **Gabungkan bidang**, pilih **Pindahkan ke atas/bawah** untuk mengatur urutan atau menarik dan melepasnya dalam posisi yang diinginkan.
+
+1. Konfirmasikan perubahan.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
 ## <a name="run-your-merge"></a>Jalankan gabungan
 
@@ -72,11 +111,11 @@ Apakah Anda menggabungkan atribut secara manual atau membiarkan sistem menggabun
 > [!div class="mx-imgBorder"]
 > ![menyimpan dan menjalankan Gabungan data](media/configure-data-merge-save-run.png "menyimpan dan menjalankan Gabungan data")
 
-Untuk membuat perubahan tambahan dan menjalankan ulang langkah tersebut, Anda dapat membatalkan penggabungan yang sedang berlangsung. Pilih teks **menyegarkan...** dan pilih **Batalkan pekerjaan**  di panel sisi yang muncul.
+Pilih **Jalankan hanya penggabungan** jika Anda hanya ingin melihat output yang tercermin di entitas pelanggan terpadu. Proses hilir akan di-refresh sebagaimana [ditentukan dalam jadwal refresh](system.md#schedule-tab).
 
-Setelah teks **Menyegarkan...** berubah menjadi **sukses**, penggabungan telah diselesaikan dan mengatasi kontradiksi dalam data Anda sesuai dengan kebijakan yang ditentukan. Atribut yang digabung dan tidak digabung disertakan dalam entitas profil terpadu. Atribut yang dikeluarkan tidak disertakan dalam entitas profil terpadu.
+Pilih **Jalankan Proses Penggabungan dan hilir** untuk me-refresh sistem dengan perubahan Anda. Semua proses, termasuk pengayaan, segmen, dan langkah-langkah akan berjalan secara otomatis. Setelah semua proses hilir selesai, profil pelanggan mencerminkan perubahan yang Anda buat.
 
-Jika ini bukan pertama kali Anda menjalankan penggabungan dengan berhasil, semua proses hilir, termasuk pengayaan, segmentasi, dan langkah akan berjalan ulang secara otomatis. Setelah semua proses hilir telah jalankan kembali, profil pelanggan mencerminkan perubahan yang Anda buat.
+Untuk membuat perubahan lebih banyak dan menjalankan ulang langkah, Anda dapat membatalkan penggabungan yang sedang berlangsung. Pilih teks **menyegarkan...** dan pilih **Batalkan pekerjaan**  di panel sisi yang muncul.
 
 > [!TIP]
 > Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
@@ -85,9 +124,6 @@ Jika ini bukan pertama kali Anda menjalankan penggabungan dengan berhasil, semua
 
 Konfigurasikan [aktivitas](activities.md), [pengayaan](enrichment-hub.md), atau [Relasi](relationships.md) untuk mendapatkan wawasan lebih tentang pelanggan anda.
 
-Jika anda telah mengonfigurasi aktivitas, pengayaan, atau Relasi, atau jika anda telah menentukan segmen, maka akan diproses secara otomatis untuk menggunakan data pelanggan terkini.
-
-
-
+Jika Anda telah mengkonfigurasi aktivitas, pengayaan, atau segmen, maka aktivitas akan diproses secara otomatis untuk menggunakan data pelanggan terbaru.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595812"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954583"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV) (pratinjau)
 
@@ -38,11 +38,11 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
 - Pengidentifikasi Pelanggan: Pengidentifikasi unik untuk transaksi yang sesuai dengan pelanggan individual
 
 - Riwayat Transaksi: Log transaksi historis dengan skema data semantis di bawah
-    - ID transaksi: pengidentifikasi unik setiap transaksi
-    - Tanggal transaksi: Tanggal, sebaiknya cap waktu untuk setiap transaksi
-    - Jumlah transaksi: Nilai moneter (contoh: pendapatan atau margin laba) dari setiap transaksi
-    - Label yang ditetapkan untuk hasil (opsional): Nilai Boolean yang menandakan apakah transaksi adalah hasil 
-    - ID Produk (opsional): ID Produk dari produk yang terlibat dalam transaksi
+    - **ID transaksi**: pengidentifikasi unik setiap transaksi
+    - **Tanggal transaksi**: Tanggal, sebaiknya cap waktu untuk setiap transaksi
+    - **Jumlah transaksi**: Nilai moneter (contoh: pendapatan atau margin laba) dari setiap transaksi
+    - **Label yang ditetapkan untuk hasil** (opsional): Nilai Boolean yang menandakan apakah transaksi adalah hasil 
+    - **ID Produk** (opsional): ID Produk dari produk yang terlibat dalam transaksi
 
 - Data tambahan (opsional), misalnya
     - Aktivitas web: riwayat kunjungan situs web, riwayat email
@@ -53,10 +53,20 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
     - Pengidentifikasi pelanggan untuk memetakan aktivitas dengan pelanggan Anda
     - Informasi aktivitas berisi nama dan tanggal aktivitas
     - Skema data semantis untuk aktivitas mencakup: 
-        - Kunci primer: pengidentifikasi unik untuk aktivitas
-        - Cap waktu: tanggal dan waktu aktivitas yang diidentifikasi oleh kunci primer
-        - Aktivitas (nama aktivitas): Nama aktivitas yang akan digunakan
-        - Rincian (jumlah atau nilai): Rincian tentang aktivitas pelanggan
+        - **Kunci primer**: pengidentifikasi unik untuk aktivitas
+        - **Cap waktu**: tanggal dan waktu aktivitas yang diidentifikasi oleh kunci primer
+        - **Aktivitas (nama aktivitas)**: Nama aktivitas yang akan digunakan
+        - **Rincian (jumlah atau nilai)**: Rincian tentang aktivitas pelanggan
+
+- Karakteristik Data yang Disarankan:
+    - Data historis yang memadai: Minimal satu tahun data transaksi. Sebaiknya dua hingga tiga tahun data transaksional untuk memperkirakan CLV selama satu tahun.
+    - Beberapa pembelian per pelanggan: Idealnya, minimal dua hingga tiga transaksi per ID pelanggan, sebaiknya di beberapa tanggal.
+    - Jumlah pelanggan: Setidaknya 100 pelanggan unik, lebih disukai lebih dari 10.000 pelanggan. Model akan gagal dengan kurang dari 100 pelanggan dan data historis yang tidak mencukupi
+    - Kelengkapan data: Kurang dari 20% nilai hilang pada bidang yang diperlukan dalam data input   
+
+> [!NOTE]
+> - Model ini memerlukan riwayat transaksi pelanggan Anda. Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian/transaksi, Anda dapat menyatukan di Power Query sebelum menyerap data.
+> - Namun untuk data aktivitas pelanggan tambahan (opsional), Anda dapat menambahkan entitas aktivitas pelanggan sebanyak yang ingin Anda pertimbangkan berdasarkan model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Buat Prediksi nilai selama hubungan dengan pelanggan
 
@@ -76,7 +86,7 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
    Secara default, unit diatur sebagai bulan. Anda dapat mengubahnya ke tahun untuk melihat lebih lanjut di masa mendatang.
 
    > [!TIP]
-   > Untuk secara akurat memperkirakan CLV selama periode waktu yang Anda tentukan, Anda memerlukan periode data historis yang dapat dibandingkan. Misalnya, jika Anda ingin memperkirakan selama 12 bulan ke depan, sebaiknya Anda memiliki data historis minimal 18 - 24 bulan.
+   > Untuk secara akurat memperkirakan CLV selama periode waktu yang Anda tentukan, Anda memerlukan periode data historis yang dapat dibandingkan. Misalnya, jika Anda ingin memperkirakan CLV selama 12 bulan ke depan, sebaiknya Anda memiliki data historis minimal 18 - 24 bulan.
 
 1. Tentukan makna **pelanggan Aktif** untuk bisnis Anda. Atur jangka waktu pelanggan harus memiliki minimal satu transaksi untuk dianggap aktif. Model tersebut hanya akan memperkirakan CLV untuk pelanggan aktif. 
    - **Biarkan model menghitung interval pembelian (disarankan)**: Model akan menganalisis data Anda dan menentukan periode waktu berdasarkan pembelian historis.
@@ -181,14 +191,14 @@ Terdapat tiga bagian utama data dalam halaman hasil.
   Dengan menggunakan definisi pelanggan bernilai tinggi yang disediakan saat mengonfigurasikan prediksi, sistem akan menilai performa model AI dalam memperkirakan pelanggan bernilai tinggi dibandingkan model dasar.    
 
   Peringkat ditentukan berdasarkan aturan berikut:
-  - A bila model memperkirakan secara akurat setidaknya 5% lebih banyak pelanggan bernilai tinggi dibandingkan dengan model dasar.
-  - B bila model memperkirakan secara akurat antara 0-5% lebih banyak pelanggan bernilai tinggi dibandingkan dengan model dasar.
-  - C bila model memperkirakan secara akurat lebih sedikit pelanggan bernilai tinggi dibandingkan dengan model dasar.
+  - **A** bila model memperkirakan secara akurat setidaknya 5% lebih banyak pelanggan bernilai tinggi dibandingkan dengan model dasar.
+  - **B** bila model memperkirakan secara akurat antara 0-5% lebih banyak pelanggan bernilai tinggi dibandingkan dengan model dasar.
+  - **C** bila model memperkirakan secara akurat lebih sedikit pelanggan bernilai tinggi dibandingkan dengan model dasar.
 
   Panel **peringkat Model** menampilkan rincian lebih lanjut tentang kinerja model AI dan model dasar. Model dasar menggunakan pendekatan berbasis non-AI untuk menghitung nilai selama hubungan dengan pelanggan terutama berdasarkan pembelian historis yang dilakukan pelanggan.     
   Rumus standar yang digunakan untuk menghitung CLV berdasarkan model dasar:    
 
-  *CLV untuk tiap pelanggan = Pembelian bulanan rata-rata yang dilakukan oleh pelanggan dalam jendela pelanggan aktif * Jumlah bulan dalam periode prediksi CLV * Tingkat retensi keseluruhan semua pelanggan*
+  _**CLV untuk tiap pelanggan** = Pembelian bulanan rata-rata yang dilakukan oleh pelanggan dalam jendela pelanggan aktif * Jumlah bulan dalam periode prediksi CLV * Tingkat retensi keseluruhan semua pelanggan*_
 
   Model AI dibandingkan dengan model dasar berdasarkan dua metrik performa model.
   

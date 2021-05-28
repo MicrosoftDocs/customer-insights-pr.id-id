@@ -1,7 +1,7 @@
 ---
-title: Membuat dan mengelola segmen
-description: Buat segmen pelanggan untuk mengelompokkan mereka berdasarkan berbagai atribut.
-ms.date: 03/02/2021
+title: Segmen di wawasan audiens
+description: Ikhtisar tentang segmen dan cara membuat dan mengelolanya.
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,79 +9,42 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
+ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597056"
+ms.lasthandoff: 05/14/2021
+ms.locfileid: "6034016"
 ---
-# <a name="create-and-manage-segments"></a>Membuat dan mengelola segmen
+# <a name="segments-overview"></a>Sekilas tentang segmen
 
 Segmen memungkinkan Anda mengelompokkan pelanggan berdasarkan atribut demografi, transaksional, atau perilaku. Anda dapat menggunakan segmen untuk menargetkan kampanye promosi, aktivitas penjualan, dan tindakan dukungan pelanggan untuk mencapai sasaran bisnis Anda.
 
-Anda dapat menentukan filter kompleks di sekitar entitas profil pelanggan dan entitas terkait. Setiap segmen, setelah pemrosesan, membuat kumpulan rekaman pelanggan yang dapat Anda ekspor dan lakukan tindakan padanya. Beberapa [batas Layanan](service-limits.md) berlaku.
-
-Kecuali jika dinyatakan lain, semua segmen adalah **segmen dinamis**, yang diperbarui pada jadwal berulang.
-
-Contoh berikut menjelaskan kemampuan segmentasi. Kami telah mendefinisikan segmen untuk pelanggan yang memesan setidaknya $500 barang di 90 hari terakhir *dan* yang terlibat dalam panggilan layanan pelanggan yang dieskalasi.
-
-> [!div class="mx-imgBorder"]
-> ![Beberapa grup](media/segmentation-group1-2.png "Beberapa grup")
+Profil pelanggan yang cocok dengan filter definisi segmen disebut sebagai *anggota* segmen. Beberapa [batas Layanan](service-limits.md) berlaku.
 
 ## <a name="create-a-new-segment"></a>Buat segmen baru
 
-Segmen dikelola pada halaman **segmen**.
+Tersedia beberapa cara untuk membuat segmen baru: 
 
-1. Di wawasan audiens, buka halaman **segmen**.
+- Segmen kompleks dengan pembuat segmen: [Segmen kosong](segment-builder.md#create-a-new-segment)
+- Segmen sederhana dengan satu operator: [Segmen cepat](segment-builder.md#quick-segments)
+- Cara yang didukung AI untuk menemukan pelanggan serupa: [Pelanggan Serupa](find-similar-customer-segments.md)
+- Saran yang didukung AI berdasarkan tindakan atau atribut: [Segmen yang disarankan untuk meningkatkan ukuran](suggested-segments.md)
+- Saran berdasarkan aktivitas: [Segmen yang disarankan berdasarkan aktivitas pelanggan](suggested-segments-activity.md)
 
-1. Pilih **Baru** > **segmen kosong**.
+## <a name="get-insights-on-existing-segments"></a>Mendapatkan wawasan tentang segmen yang ada
 
-1. Di panel **segmen baru**, pilih jenis segmen dan berikan **nama**.
+Temukan informasi tambahan seputar segmen yang ada dengan [Wawasan segmen](segment-insights.md). Cari tahu apa yang membedakan dua segmen atau kesamaan.
 
-   Atau, berikan nama tampilan, dan deskripsi yang membantu mengidentifikasi segmen.
+## <a name="find-similar-customers"></a>Temukan pelanggan serupa
 
-1. Pilih **berikutnya** untuk mengakses halaman **pembuat segmen** dengan menentukan grup. Grup adalah satu set pelanggan.
-
-1. Pilih entitas yang mencakup atribut yang ingin Anda segmentasikan.
-
-1. Pilih atribut untuk segmentasi. Atribut ini dapat memiliki salah satu dari empat jenis nilai: numerik, string, tanggal, atau Boolean.
-
-1. Pilih operator dan nilai untuk atribut dipilih.
-
-   > [!div class="mx-imgBorder"]
-   > ![Filter grup kustom](media/customer-group-numbers.png "Filter grup pelanggan")
-
-   |Nomor |Definisi  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Atribut          |
-   |3    |Operator         |
-   |4    |Nilai         |
-
-8. Jika entitas terhubung ke entitas pelanggan terpadu melalui [Relasi](relationships.md), Anda harus menentukan jalur relasi untuk membuat segmen valid. Tambahkan entitas dari jalur relasi hingga Anda dapat memilih entitas **pelanggan: CustomerInsights** dari dropdown. Selanjutnya, pilih **semua rekaman** untuk setiap kondisi.
-
-   > [!div class="mx-imgBorder"]
-   > ![Jalur relasi selama pembuatan segmen](media/segments-multiple-relationships.png "Jalur relasi selama pembuatan segmen")
-
-1. Secara default, segmen akan menghasilkan entitas output yang berisi semua atribut profil pelanggan yang cocok dengan filter yang ditentukan. Jika segmen didasarkan pada entitas lain dari entitas *Pelanggan*, Anda dapat menambahkan lebih banyak atribut dari entitas ini ke entitas output. Pilih **atribut Proyek** untuk memilih atribut yang akan ditambahkan ke entitas output.  
-
-   
-   Contoh: Segmen didasarkan pada entitas yang berisi data aktivitas pelanggan yang terkait dengan entitas *Pelanggan*. Segmen tersebut mencari semua pelanggan yang menelepon pusat bantuan dalam 60 hari terakhir. Anda dapat memilih untuk menambahkan durasi panggilan dan jumlah panggilan ke semua rekaman pelanggan yang cocok di entitas output. Informasi ini mungkin berguna untuk mengirim email dengan tautan bermanfaat ke artikel bantuan online dan Tanya Jawab kepada pelanggan yang sering menelepon.
-
-1. Pilih **Simpan** untuk menyimpan segmen Anda. Segmen Anda akan disimpan dan diproses jika semua persyaratan divalidasi. Jika tidak, maka akan disimpan sebagai draf.
-
-1. Untuk kembali ke halaman **Segmen**, pilih **kembali ke segmen**.
+Temukan pelanggan yang mirip dengan anggota segmen tertentu dengan bantuan inteligensi buatan. Untuk informasi selengkapnya, lihat [Pelanggan yang mirip ](find-similar-customer-segments.md).
 
 ## <a name="manage-existing-segments"></a>Mengelola segmen yang ada
 
-Di halaman **segmen**, Anda dapat melihat semua segmen tersimpan dan mengelolanya.
+Buka halaman **Segmen**, untuk melihat semua segmen tersimpan dan mengelolanya.
 
 Setiap segmen diwakili oleh baris yang berisi informasi tambahan tentang segmen.
-
-Anda dapat mengurutkan segmen di kolom dengan memilih heading kolom.
-
-Gunakan kotak **Cari** di sudut kanan atas untuk memfilter segmen.
 
 > [!div class="mx-imgBorder"]
 > ![Pilihan untuk mengelola segmen yang ada](media/segments-selected-segment.png "Pilihan untuk mengelola segmen yang ada")
@@ -106,71 +69,6 @@ Anda dapat menyegarkan semua segmen sekaligus dengan memilih **Segarkan semua** 
 > [!TIP]
 > Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
 
-## <a name="download-and-export-segments"></a>Unduh dan ekspor Segmen
-
-Anda dapat mengunduh segmen ke file CSV atau mengekspornya ke Dynamics 365 Sales.
-
-### <a name="download-segments-to-a-csv-file"></a>Mengunduh segmen ke file CSV
-
-1. Di wawasan audiens, buka halaman **segmen**.
-
-2. Pilih elipsis (...) dalam ubin segmen tertentu.
-
-3. Pilih **Unduh sebagai CSV** dari daftar tarik-turun tindakan.
-
-### <a name="export-segments-to-dynamics-365-sales"></a>Ekspor segmen ke Dynamics 365 Sales
-
-Sebelum mengekspor segmen ke Dynamics 365 Sales, admin harus [membuat tujuan ekspor](export-destinations.md) untuk Dynamics 365 Sales.
-
-1. Di wawasan audiens, buka halaman **segmen**.
-
-2. Pilih elipsis (...) dalam ubin segmen tertentu.
-
-3. Pilih **Tambah ke** dari daftar drop-down tindakan, lalu pilih tujuan ekspor yang akan Anda kirimi data.
-
-## <a name="draft-mode-for-segments"></a>Mode draf untuk segmen
-
-Jika tidak semua persyaratan untuk memproses segmen terpenuhi, Anda dapat menyimpan segmen sebagai draf dan mengaksesnya dari halaman **segmen**.
-
-Ini akan disimpan sebagai segmen yang tidak aktif, dan tidak dapat diaktifkan hingga berlaku.
-
-## <a name="add-more-conditions-to-a-group"></a>Menambah kondisi lainnya ke grup
-
-Untuk menambahkan kondisi ke grup, Anda dapat menggunakan dua operator logika:
-
-- Operator **AND**: kedua kondisi harus dipenuhi sebagai bagian dari proses segmentasi. Pilihan ini paling berguna saat Anda menentukan kondisi di seluruh entitas yang berbeda.
-
-- Operator **OR**: Salah satu dari kondisi harus dipenuhi sebagai bagian dari proses segmentasi. Pilihan ini paling berguna saat Anda menentukan beberapa kondisi untuk entitas yang sama.
-
-   > [!div class="mx-imgBorder"]
-   > ![Operator OR bila kedua kondisi harus dipenuhi](media/segmentation-either-condition.png "Operator OR bila kedua kondisi harus dipenuhi")
-
-Saat ini mungkin untuk mengurung operator **OR** di bawah operator **AND**, namun tidak sebaliknya.
-
-## <a name="combine-multiple-groups"></a>Menggabungkan beberapa grup
-
-Setiap grup menghasilkan himpunan pelanggan tertentu. Anda dapat menggabungkan grup ini untuk menyertakan Pelanggan yang diperlukan untuk kasus bisnis Anda.
-
-1. Di wawasan audiens, buka halaman **segmen**, lalu pilih segmen.
-
-2. Pilih **Tambah Grup**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Grup pelanggan Tambah grup](media/customer-group-add-group.png "Grup pelanggan Tambah grup")
-
-3. Pilih salah satu operator rangkaian yang berikut: **Himpunan**, **Berpotongan**, atau **Kecuali**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Grup pelanggan Tambah penyatuan](media/customer-group-union.png "Grup pelanggan Tambah penyatuan")
-
-   Pilih himpunan operator untuk menentukan grup baru. Simpan grup berbeda untuk menentukan data apa yang akan dipertahankan:
-
-   - **Semesta** menyatukan dua kelompok.
-
-   - **Berpotongan** tumpang-tindih kedua grup. Hanya data yang *umum* untuk kedua grup yang dipertahankan dalam Grup Terpadu.
-
-   - **Kecuali** menggabungkan dua grup. Hanya data dalam grup A yang *tidak umum* untuk data di Grup B yang dipertahankan.
-
 ## <a name="view-processing-history-and-segment-members"></a>Melihat riwayat pemrosesan dan anggota segmen
 
 Anda dapat melihat data gabungan tentang segmen dengan meninjau detailnya.
@@ -191,43 +89,4 @@ Bagian bawah berisi daftar anggota segmen.
 >
 >Daftar ini adalah pratinjau anggota segmen yang cocok dan menampilkan rekaman 100 pertama segmen Anda sehingga Anda dapat dengan cepat mengevaluasinya dan meninjau definisinya jika diperlukan. Untuk melihat semua rekaman yang cocok, Anda harus [mengekspor segmen](export-destinations.md).
 
-## <a name="quick-segments"></a>Segmen ringkas
-
-Selain pembuat segmen, ada jalur lain untuk membuat segmen. Segmen ringkas memungkinkan Anda membuat segmen sederhana dengan satu operator dengan cepat dan dengan wawasan instan.
-
-1. Pada halaman **segmen**, pilih **baru** > **Buat cepat dari**.
-
-   - Pilih pilihan **profil** untuk membuat segmen yang didasarkan pada entitas pelanggan terpadu.
-   - Pilih pilihan **tindakan** untuk membuat segmen di sekitar masing-masing jenis atribut Pelanggan yang sebelumnya Anda buat di halaman **Ukuran**.
-   - Pilih **pilihan intelijen** untuk membuat segmen di sekitar salah satu entitas output yang dihasilkan menggunakan **prediksi** maupun kemampuan **model kustom**.
-
-2. Di kotak dialog **segmen ringkas baru**, pilih atribut dari dropdown **bidang**.
-
-3. Sistem akan memberikan beberapa wawasan tambahan yang membantu Anda membuat segmen pelanggan yang lebih baik.
-   - Untuk bidang kategoris, kami akan menampilkan 10 hitungan pelanggan teratas. Pilih **nilai** dan pilih **tinjau**.
-
-   - Untuk atribut numerik, sistem akan menampilkan nilai atribut yang berada di dalam persentil masing-masing pelanggan. Pilih **operator** dan **nilai**, lalu pilih **tinjau**.
-
-4. Sistem akan memberi Anda **perkiraan ukuran segmen**. Anda dapat memilih apakah akan menghasilkan segmen yang telah Anda tetapkan, atau pertama-tama, mengunjungi kembali untuk mendapatkan ukuran segmen yang berbeda.
-
-    > [!div class="mx-imgBorder"]
-    > ![Nama dan estimasi untuk segmen cepat](media/quick-segment-name.png "Nama dan estimasi untuk segmen cepat")
-
-5. Beri **nama** segmen Anda. Atau, berikan **nama tampilan**.
-
-6. Klik **Simpan** untuk membuat segmen Anda.
-
-7. Setelah segmen selesai diproses, Anda dapat melihatnya seperti segmen lain yang Anda buat.
-
-Untuk skenario berikut, kami menyarankan menggunakan pembuat segmen daripada kemampuan segmen yang direkomendasikan:
-
-- Membuat segmen dengan filter pada bidang kategoris di mana operator berbeda dengan operator **Is**
-- Membuat segmen dengan filter pada bidang numerik di mana operator berbeda daripada operator **antara**, **lebih besar dari**, dan **kurang dari**
-- Membuat segmen dengan filter pada bidang jenis tanggal
-
-## <a name="next-steps"></a>Langkah-langkah berikutnya
-
-[Ekspor segmen](export-destinations.md) dan jelajahi bagian [kartu pelanggan](customer-card-add-in.md) dan [konektor](export-power-bi.md) untuk mendapatkan wawasan tentang tingkat pelanggan.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../includes/footer-banner.md)] 

@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896147"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016618"
 ---
 # <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
 Halaman **Ekspor** memperlihatkan kepada Anda semua ekspor yang dikonfigurasi. Ekspor berbagi data tertentu dengan berbagai aplikasi. Mereka dapat menyertakan profil pelanggan atau entitas, skema, dan detail pemetaan. Setiap ekspor memerlukan [koneksi, yang disiapkan oleh administrator, untuk mengelola autentikasi dan akses](connections.md).
-
-> [!NOTE]
-> Hingga Maret 2021, ekspor membuat koneksi ke layanan yang sesuai secara otomatis. Ekspor sekarang memerlukan [koneksi, yang dibuat dan dibagikan oleh administrator](connections.md) sebelum Anda bisa membuatnya.
 
 Buka **Data** > **Ekspor** untuk menampilkan halaman ekspor. Semua peran pengguna memiliki akses untuk melihat ekspor yang dikonfigurasi. Gunakan bidang pencarian di bilah perintah untuk menemukan ekspor menurut nama, nama koneksi, atau tipe koneksinya.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595568"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085626"
 ---
 # <a name="match-entities"></a>Pencocokan Entitas
 
@@ -103,6 +103,18 @@ Aturan kecocokan menunjukkan rangkaian kondisi. Untuk mencocokkan entitas menuru
 
 > [!NOTE]
 > Urutan aturan itu penting. Algoritme yang cocok akan berusaha mencocokkan berdasarkan aturan pertama Anda dan terus ke aturan kedua hanya jika tidak ada kecocokan yang diidentifikasi dengan aturan pertama.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Mengubah urutan entitas dalam aturan kecocokan
+
+Anda dapat mengurutkan ulang entitas untuk aturan kecocokan untuk mengubah urutan prosesnya. Aturan yang bertentangan karena urutan yang diubah akan dihilangkan. Anda harus membuat ulang aturan yang dihilangkan dengan konfigurasi yang diperbarui.
+
+1. Buka **Data** > **Satukan** > **Kecocokan**, lalu pilih **Edit**.
+
+1. Di panel **Edit aturan**, pilih kontrol **Pindahkan ke atas/bawah** atau tarik dan lepaskan entitas untuk mengubah urutan.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Pilihan untuk mengubah entitas urutan diproses dalam fase kecocokan.":::
+
+1. Untuk menyimpan aturan, pilih **Selesai**.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Menentukan deduplikasi pada entitas kecocokan
 
