@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954583"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095514"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV) (pratinjau)
 
@@ -149,7 +149,6 @@ Data yang mencerminkan interaksi pelanggan utama (seperti web, layanan pelanggan
 
 1. Pilih **Selanjutnya**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Memeriksa dan menjalankan konfigurasi model
 
 1. Di langkah **Tinjau rincian model Anda**, validasikan konfigurasi prediksi. Anda dapat kembali ke bagian apa pun dari konfigurasi prediksi dengan memilih **Edit** dalam nilai yang ditampilkan. Anda juga dapat memilih langkah konfigurasi dari indikator progres.
@@ -170,11 +169,10 @@ Data yang mencerminkan interaksi pelanggan utama (seperti web, layanan pelanggan
 - **Status**: Status prediksi dijalankan.
     - **mengantri**: prediksi sedang menunggu proses lain untuk diselesaikan.
     - **Menyegarkan**: prediksi saat ini berjalan untuk membuat hasil yang akan mengalir ke entitas output.
-    - **gagal**: prediksi yang jalankan gagal. [Tinjau log](#troubleshoot-a-failed-prediction) untuk rincian selengkapnya.
+    - **gagal**: prediksi yang jalankan gagal. [Tinjau log](manage-predictions.md#troubleshoot-a-failed-prediction) untuk rincian selengkapnya.
     - **berhasil**: prediksi telah berhasil. Pilih **Lihat** di dalam elips vertikal untuk meninjau hasil prediksi.
 - **Diedit**: tanggal konfigurasi untuk prediksi telah diubah.
 - **Terakhir disegarkan**: tanggal prediksi yang disegarkan dihasilkan dalam entitas output.
-
 
 ### <a name="review-prediction-results"></a>Memeriksa hasil prediksi
 
@@ -216,28 +214,8 @@ Terdapat tiga bagian utama data dalam halaman hasil.
 
 - **Faktor paling berpengaruh**: Berbagai faktor dipertimbangkan saat membuat prediksi CLV berdasarkan data input yang diberikan ke model AI. Masing-masing faktor memiliki kepentingan yang diperhitungkan untuk prediksi gabungan yang dibuat model. Anda dapat menggunakan faktor ini untuk membantu memvalidasi hasil prediksi. Faktor-faktor ini juga memberikan wawasan lebih lanjut tentang faktor paling berpengaruh yang berkontribusi terhadap perkiraan CLV di seluruh pelanggan.
 
-## <a name="refresh-a-prediction"></a>Segarkan prediksi
+## <a name="manage-predictions"></a>Kelola prediksi
 
-Prediksi akan me-refresh secara otomatis pada [jadwal yang sama saat data Anda di-refresh](system.md#schedule-tab) sebagaimana dikonfigurasi dalam pengaturan. Anda juga dapat me-refresh secara manual.
-
-1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-2. Pilih elipsis vertikal di sebelah prediksi yang ingin Anda segarkan.
-3. Pilih **Segarkan**.
-
-## <a name="delete-a-prediction"></a>Hapus prediksi
-
-Menghapus prediksi juga akan menghapus entitas keluarannya.
-
-1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-2. Pilih elipsis vertikal di sebelah prediksi yang ingin Anda hapus.
-3. Pilih **Hapus**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Memecahkan masalah prediksi gagal
-
-1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-2. Pilih elipsis vertikal di sebelah prediksi yang ingin anda lihat log kesalahannya.
-3. Pilih **Log**.
-4. Memeriksa semua kesalahan. Ada beberapa jenis kesalahan yang dapat terjadi, dan menjelaskan kondisi yang menyebabkan kesalahan. Misalnya, kesalahan tidak ada cukup data yang dapat diprediksi secara akurat biasanya ditangani dengan memuat lebih banyak data ke wawasan audiens.
-
+Anda dapat mengoptimalkan, memecahkan masalah, menyegarkan, atau menghapus prediksi. Tinjau laporan kegunaan data input untuk mengetahui cara membuat prediksi lebih cepat dan lebih dapat diandalkan. Untuk informasi lebih lanjut, lihat [Kelola prediksi](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

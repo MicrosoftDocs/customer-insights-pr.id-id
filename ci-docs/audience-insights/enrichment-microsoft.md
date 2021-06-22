@@ -1,7 +1,7 @@
 ---
 title: Perkaya profil pelanggan dengan data dari Microsoft
 description: Gunakan data kepemilikan dari Microsoft untuk memperkaya data pelanggan Anda dengan afinitas merek dan minat.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064895"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245711"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Memperkaya profil pelanggan dengan merek dan afinitas minat (pratinjau)
 
@@ -69,12 +69,10 @@ Pengalaman terpandu membantu Anda melalui konfigurasi pengayaan.
 
 ### <a name="define-your-brands-or-interests"></a>Definisikan merek atau minat Anda
 
-pilih salah satu dari opsi berikut ini:
+Pilih hingga lima merek atau minat menggunakan satu atau kedua pilihan ini:
 
-- **Industri**: sistem mengidentifikasi merek atau minat teratas yang relevan dengan industri Anda dan memperkaya data pelanggan Anda dengannya.
-- **Pilih punya Anda sendiri**: Pilih hingga lima item dari daftar merek atau minat yang paling relevan dengan organisasi Anda.
-
-Untuk menambahkan merek atau minat, masukkan di area input untuk mendapatkan saran berdasarkan persyaratan kecocokan. Jika kami tidak mencantumkan merek atau minat yang Anda Cari, kirim masukan kepada kami menggunakan tautan **Usulkan**.
+- **Industri**: Pilih industri dari daftar menurun, lalu pilih dari merek atau minat teratas untuk industri tersebut.
+- **Pilih sendiri**: Masukkan merek atau minat yang relevan untuk organisasi Anda, lalu pilih dari saran yang sesuai. Jika kami tidak mencantumkan merek atau minat yang Anda Cari, kirim masukan kepada kami menggunakan tautan **Usulkan**.
 
 ### <a name="review-enrichment-preferences"></a>Tinjau Preferensi pengayaan
 

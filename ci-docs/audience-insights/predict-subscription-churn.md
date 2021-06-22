@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906906"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095652"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prediksi kehilangan langganan (pratinjau)
 
@@ -147,30 +147,9 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
        > [!div class="mx-imgBorder"]
        > ![Daftar menunjukkan faktor berpengaruh dan pentingnya mereka dalam memprediksi hasil kehilangan](media/subscription-churn-influentialfactors.PNG "Daftar menunjukkan faktor berpengaruh dan pentingnya mereka dalam memprediksi hasil kehilangan")
 
-## <a name="fix-a-failed-prediction"></a>Perbaiki prediksi yang gagal
+## <a name="manage-predictions"></a>Kelola prediksi
 
-1. Buka tab **prediksi saya** pada **intelijen** > **prediksi**.
-1. Pilih prediksi yang ingin Anda lihat log kesalahannya dan pilih **log**.
-   > [!div class="mx-imgBorder"]
-   > ![Tampilan bilah menu hasil termasuk tombol tutup, Edit model, dan log](media/subscription-churn-logsbutton.PNG "Tampilan bilah menu hasil termasuk tombol tutup, Edit model, dan log")
-1. Memeriksa semua kesalahan. Ada beberapa jenis kesalahan yang dapat terjadi, dan menjelaskan kondisi yang menyebabkan kesalahan. Misalnya, kesalahan tidak ada cukup data yang dapat diprediksi secara akurat biasanya ditangani dengan memuat data tambahan.
-
-## <a name="refresh-a-prediction"></a>Segarkan prediksi
-
-Prediksi akan secara otomatis diperbarui pada jadwal yang sama [dengan penyegaran data Anda](system.md#schedule-tab) seperti dikonfigurasi dalam pengaturan.
-
-1. Buka tab **prediksi saya** pada **intelijen** > **prediksi**.
-1. Pilih elipsis vertikal di sebelah prediksi yang ingin Anda segarkan.
-1. Pilih **Segarkan**.
-
-## <a name="delete-a-prediction"></a>Hapus prediksi
-
-1. Buka tab **prediksi saya** pada **intelijen** > **prediksi**.
-1. Pilih elipsis vertikal di sebelah prediksi yang ingin Anda hapus.
-1. Pilih **Hapus**.
-
-> [!NOTE]
-> Menghapus prediksi akan menghapus entitas keluarannya.
+Anda dapat mengoptimalkan, memecahkan masalah, menyegarkan, atau menghapus prediksi. Tinjau laporan kegunaan data input untuk mengetahui cara membuat prediksi lebih cepat dan lebih dapat diandalkan. Untuk informasi lebih lanjut, lihat [Kelola prediksi](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

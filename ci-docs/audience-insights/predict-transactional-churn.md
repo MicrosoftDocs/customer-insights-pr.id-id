@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906860"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095606"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prediksi kehilangan pelanggan transaksional (pratinjau)
 
@@ -144,7 +144,7 @@ Prediksi kehilangan pelanggan transaksional membantu memprediksi apakah pelangga
    - **Status:** Status prediksi dijalankan.
         - **mengantri:** prediksi sedang menunggu proses lain untuk dijalankan.
         - **Menyegarkan:** prediksi saat ini berjalan untuk menghasilkan hasil yang akan mengalir ke entitas output.
-        - **gagal:** prediksi yang jalankan gagal. [Tinjau log](#troubleshoot-a-failed-prediction) untuk rincian selengkapnya.
+        - **gagal:** prediksi yang jalankan gagal. [Tinjau log](manage-predictions.md#troubleshoot-a-failed-prediction) untuk rincian selengkapnya.
         - **berhasil:** prediksi telah berhasil. Pilih **Lihat** di bawah elips vertikal untuk meninjau prediksi
    - **Diedit:** tanggal konfigurasi untuk prediksi telah diubah.
    - **Terakhir Diperbarui:** tanggal prediksi yang disegarkan dihasilkan dalam entitas output.
@@ -168,35 +168,9 @@ Prediksi kehilangan pelanggan transaksional membantu memprediksi apakah pelangga
        
     1. **Faktor yang paling berpengaruh:** ada banyak faktor yang diperhitungkan saat membuat prediksi. Masing-masing faktor memiliki kepentingan yang dihitung untuk membuat prediksi model agregat. Anda dapat menggunakan faktor ini untuk membantu memvalidasi hasil prediksi. Atau Anda dapat menggunakan informasi ini nanti untuk [membuat segmen](segments.md) yang dapat membantu mempengaruhi risiko kehilangan untuk pelanggan.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Memecahkan masalah prediksi gagal
+## <a name="manage-predictions"></a>Kelola prediksi
 
-1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-
-1. Pilih elipsis vertikal di sebelah prediksi yang ingin anda lihat log kesalahannya.
-
-1. Pilih **Log**.
-
-1. Memeriksa semua kesalahan. Ada beberapa jenis kesalahan yang dapat terjadi, dan menjelaskan kondisi yang menyebabkan kesalahan. Misalnya, kesalahan bahwa tidak ada cukup data yang dapat diprediksi secara akurat biasanya ditangani dengan memuat data tambahan ke dalam Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Segarkan prediksi
-
-Prediksi akan secara otomatis diperbarui pada jadwal yang sama [dengan penyegaran data Anda](system.md#schedule-tab) seperti dikonfigurasi dalam pengaturan. Anda juga dapat me-refresh secara manual.
-
-1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-
-1. Pilih elipsis vertikal di sebelah prediksi yang ingin Anda segarkan.
-
-1. Pilih **Segarkan**.
-
-## <a name="delete-a-prediction"></a>Hapus prediksi
-
-Menghapus prediksi juga akan menghapus entitas keluarannya.
-
-1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-
-1. Pilih elipsis vertikal di sebelah prediksi yang ingin Anda hapus.
-
-1. Pilih **Hapus**.
+Anda dapat mengoptimalkan, memecahkan masalah, menyegarkan, atau menghapus prediksi. Tinjau laporan kegunaan data input untuk mengetahui cara membuat prediksi lebih cepat dan lebih dapat diandalkan. Untuk informasi lebih lanjut, lihat [Kelola prediksi](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

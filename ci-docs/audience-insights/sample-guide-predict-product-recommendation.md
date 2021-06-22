@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595277"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129903"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel prediksi Rekomendasi produk (pratinjau)
 
@@ -22,7 +22,7 @@ Kami akan menjelaskan kepada Anda contoh akhir dari prediksi rekomendasi produk 
 
 ## <a name="scenario"></a>Skenario
 
-Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang dijual melalui situs web Kopi Aswono. Tujuan mereka adalah untuk memahami produk yang harus mereka rekomendasikan kepada pelanggan berulang mereka. Mengetahui pelanggan **lebih cenderung membeli** dapat membantu mereka menghemat upaya pemasaran dengan berfokus pada item tertentu.
+Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang mereka jual melalui situs web Kopi Contoso mereka. Tujuan mereka adalah untuk memahami produk yang harus mereka rekomendasikan kepada pelanggan berulang mereka. Mengetahui pelanggan **lebih cenderung membeli** dapat membantu mereka menghemat upaya pemasaran dengan berfokus pada item tertentu.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -65,7 +65,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
 
 1. Di bidang **nama** pada panel sisi, ganti nama sumber data dari **kueri** menjadi **eCommercePurchases**.
 
-1. Simpan Sumber Data.
+1. **Simpan** Sumber Data.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Menyerap data pelanggan dari skema kesetiaan
@@ -83,11 +83,11 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
 
 1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
 
-1. Simpan Sumber Data.
+1. **Simpan** Sumber Data.
 
 ## <a name="task-2---data-unification"></a>Tugas 2-penyatuan data
 
-Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, menggabungkan** untuk membuat profil pelanggan terpadu. Untuk informasi selengkapnya, lihat [Penyatuan data](data-unification.md).
+Setelah menyerap data, kami sekarang memulai proses penyatuan data untuk membuat profil pelanggan terpadu. Untuk informasi selengkapnya, lihat [Penyatuan data](data-unification.md).
 
 ### <a name="map"></a>Peta
 
@@ -156,7 +156,7 @@ Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan predik
 
    - **Jumlah produk**: Atur nilai ini ke **5**. Pengaturan ini menentukan seberapa banyak produk yang ingin Anda rekomendasikan kepada pelanggan.
 
-   - **Sarankan produk yang baru saja dibeli pelanggan?**: Pilih **Ya** untuk menunjukkan bahwa Anda ingin menyertakan produk dalam rekomendasi yang telah dibeli pelanggan sebelumnya.
+   - **Ulangi pembelian yang diharapkan**: Pilih **Ya** untuk menunjukkan bahwa Anda ingin menyertakan produk dalam rekomendasi yang telah dibeli pelanggan Anda sebelumnya.
 
    - **Periode lihat kembali:** Pilih sekurangnya **365 hari**. Pengaturan ini menentukan berapa lama model akan melihat kembali aktivitas pelanggan untuk menggunakannya sebagai input untuk rekomendasi mereka.
    

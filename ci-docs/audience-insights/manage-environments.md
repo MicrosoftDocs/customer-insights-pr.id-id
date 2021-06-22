@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola lingkungan
 description: Pelajari cara mendaftar ke layanan dan cara mengelola lingkungan.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887990"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259103"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
@@ -76,9 +76,9 @@ Untuk membuat lingkungan:
    > Kami hanya mendukung akun penyimpanan Azure data Lake Gen2 dari wilayah Azure yang sama yang Anda pilih saat membuat lingkungan.
    > Kami hanya mendukung akun penyimpanan yang diaktifkan Azure Data Lake Gen2 Hierarchical Name Space (HNS).
 
-   - Untuk opsi Azure Data Lake Storage Gen2, Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Nama **penampung** tidak dapat diubah dan akan menjadi "customerinsights".
+   - Untuk opsi Azure Data Lake Storage Gen2, Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Nama **Wadah** tidak dapat diubah dan akan menjadi `customerinsights`.
    
-   - Jika Anda ingin menggunakan [prediksi](predictions.md), konfigurasikan berbagi data dengan aplikasi dan solusi berdasarkan Microsoft Dataverse, atau aktifkan penyerapan data dari sumber data lokal, berikan URL lingkungan Microsoft Dataverse di **Konfigurasikan berbagi data dengan Microsoft Dataverse dan aktifkan kemampuan tambahan**. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Microsoft Dataverse.
+   - Jika Anda ingin menggunakan [prediksi](predictions.md), konfigurasikan berbagi data dengan Microsoft Dataverse, atau aktifkan penyerapan data dari sumber data lokal, berikan URL lingkungan Microsoft Dataverse di **Konfigurasikan berbagi data dengan Microsoft Dataverse dan aktifkan kemampuan tambahan**. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Microsoft Dataverse.
 
      > [!NOTE]
      > - Berbagi data dengan Data Lake terkelola Microsoft Dataverse saat ini tidak didukung bila Anda menyimpan semua data untuk Azure Data Lake Storage Anda sendiri.
@@ -87,7 +87,7 @@ Untuk membuat lingkungan:
      > [!div class="mx-imgBorder"]
      > ![Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Bila Anda menjalankan proses, seperti konsumsi data atau pembuatan segmen, folder yang sesuai akan dibuat di akun penyimpanan yang Anda tentukan di atas. File data dan file model .json akan dibuat dan ditambahkan ke subfolder masing-masing berdasarkan proses yang Anda jalankan.
+   Bila Anda menjalankan proses, seperti konsumsi data atau pembuatan segmen, folder yang sesuai akan dibuat di akun penyimpanan yang Anda tentukan di atas. File data dan file model.json akan dibuat dan ditambahkan ke folder berdasarkan nama proses.
 
    Jika Anda membuat beberapa lingkungan dari Customer Insights dan memilih untuk menyimpan entitas output dari lingkungan tersebut di akun penyimpanan, folder terpisah akan dibuat untuk setiap lingkungan dengan ci_<environmentid> dalam penampung.
 
@@ -146,7 +146,7 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
    > - Berbagi data dengan Data Lake terkelola Microsoft Dataverse saat ini tidak didukung bila Anda menyimpan semua data untuk Azure Data Lake Storage Anda sendiri.
    > - [Prediksi nilai yang hilang dalam entitas](predictions.md) saat ini tidak didukung saat Anda mengaktifkan berbagi data dengan Data Lake Terkelola Microsoft Dataverse.
 
-   Setelah Anda mengaktifkan berbagi data dengan Microsoft Dataverse, refresh penuh pada sumber data Anda dan proses lainnya akan dipicu. Jika proses saat ini berjalan dan diantrekan, Anda tidak akan melihat opsi untuk mengaktifkan berbagi data dengan Microsoft Dataverse. Anda dapat menunggu proses tersebut selesai atau membatalkannya untuk mengaktifkan berbagi data. 
+   Setelah mengaktifkan berbagi data dengan Microsoft Dataverse, refresh penuh pada sumber data Anda dan proses lainnya akan dimulai. Jika proses saat ini berjalan, Anda tidak melihat opsi untuk mengaktifkan berbagi data dengan Microsoft Dataverse. Tunggu proses tersebut selesai atau membatalkannya untuk mengaktifkan berbagi data. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
    

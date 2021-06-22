@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Prediksi
       items:
-        - name: Data lengkap menggunakan prediksi nilai
-          href: audience-insights/predictions.md
-        - name: Memprediksi kehilangan langganan
-          href: audience-insights/predict-subscription-churn.md
-        - name: Panduan sampel untuk prediksi kehilangan pelanggan langganan
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Prediksi kehilangan pelanggan transaksional
-          href: audience-insights/predict-transactional-churn.md
-        - name: Panduan sampel untuk prediksi kehilangan pelanggan transaksional
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Prediksikan nilai selama hubungan dengan pelanggan (CLV)
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Prediksikan Rekomendasi produk
-          href: audience-insights/predict-product-recommendation.md
-        - name: Panduan sampel untuk prediksi Rekomendasi produk
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Prediksi data dengan bantuan AI
+          items:
+            - name: Tinjauan model Prediksi
+              href: audience-insights/predictions-overview.md
+            - name: Prediksikan nilai selama hubungan dengan pelanggan (CLV)
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Prediksikan Rekomendasi produk
+              href: audience-insights/predict-product-recommendation.md
+            - name: Memprediksi kehilangan langganan
+              href: audience-insights/predict-subscription-churn.md
+            - name: Prediksi kehilangan pelanggan transaksional
+              href: audience-insights/predict-transactional-churn.md
+            - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
+              href: audience-insights/custom-models.md
+            - name: Lengkapi data yang hilang sebagian
+              href: audience-insights/predictions.md
+        - name: Panduan sampel
+          items:
+            - name: Panduan sampel untuk prediksi CLV
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Panduan sampel untuk prediksi kehilangan pelanggan langganan
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Panduan sampel untuk prediksi kehilangan pelanggan transaksional
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Panduan sampel untuk prediksi Rekomendasi produk
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Eksperimen dengan Pembelajaran Mesin Azure
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Eksperimen dengan Pembelajaran Mesin Azure
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Kelola prediksi
+          href: audience-insights/manage-predictions.md
         - name: Membuat segmen berdasarkan prediksi
           href: audience-insights/prediction-based-segment.md
-        - name: Menerapkan model Pembelajaran Mesin kustom
-          href: audience-insights/custom-models.md
-        - name: Eksperimen dengan Pembelajaran Mesin Azure
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Eksperimen dengan Pembelajaran Mesin Azure
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Opsi ekspor
       items:
         - name: Ekspor
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Meninjau skema entitas dalam Common Data Model
           href: audience-insights/entity-schemas.md
+        - name: Data Customer Insights di Dataverse
+          href: audience-insights/customer-insights-dataverse.md
         - name: Bekerja dengan API
           href: audience-insights/apis.md
         - name: Referensi API
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Membuat laporan Profil terpadu
           href: engagement-insights/profile-reports.md
+        - name: Melihat dan membuat dimensi
+          href: engagement-insights/dimensions.md
+        - name: Melihat dan membuat metrik
+          href: engagement-insights/metrics.md
+        - name: Melihat dan membuat segmen
+          href: engagement-insights/segments.md
     - name: Analitik perjalanan
       items:
         - name: Membuat dan mengelola laporan corong

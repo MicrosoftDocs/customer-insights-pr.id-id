@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034016"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111391"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -32,22 +32,13 @@ Tersedia beberapa cara untuk membuat segmen baru:
 - Saran yang didukung AI berdasarkan tindakan atau atribut: [Segmen yang disarankan untuk meningkatkan ukuran](suggested-segments.md)
 - Saran berdasarkan aktivitas: [Segmen yang disarankan berdasarkan aktivitas pelanggan](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Mendapatkan wawasan tentang segmen yang ada
-
-Temukan informasi tambahan seputar segmen yang ada dengan [Wawasan segmen](segment-insights.md). Cari tahu apa yang membedakan dua segmen atau kesamaan.
-
-## <a name="find-similar-customers"></a>Temukan pelanggan serupa
-
-Temukan pelanggan yang mirip dengan anggota segmen tertentu dengan bantuan inteligensi buatan. Untuk informasi selengkapnya, lihat [Pelanggan yang mirip ](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Mengelola segmen yang ada
 
 Buka halaman **Segmen**, untuk melihat semua segmen tersimpan dan mengelolanya.
 
 Setiap segmen diwakili oleh baris yang berisi informasi tambahan tentang segmen.
 
-> [!div class="mx-imgBorder"]
-> ![Pilihan untuk mengelola segmen yang ada](media/segments-selected-segment.png "Pilihan untuk mengelola segmen yang ada")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan daftar tarik-turun opsi dan opsi yang tersedia.":::
 
 Tindakan berikut tersedia bila Anda memilih segmen:
 
@@ -59,7 +50,7 @@ Tindakan berikut tersedia bila Anda memilih segmen:
   Atau, Anda dapat menggunakan fungsi **jadwalkan nanti** dalam menu menurun **Aktifkan/Nonaktifkan** untuk menentukan tanggal dan waktu di masa mendatang untuk pengaktifan dan penonaktifan segmen tertentu.
 - **Ganti nama** segmen.
 - **Unduh** Daftar anggota sebagai File .CSV.
-- Pilihan **Tambahkan ke** akan mengirimkan daftar id pelanggan di segmen untuk diproses di aplikasi lain.
+- **Kelola ekspor** untuk melihat segmen terkait ekspor dan mengelolanya. [Pelajari lebih lanjut tentang ekspor.](export-destinations.md)
 - **Hapus** segmen.
 
 ## <a name="refresh-segments"></a>Refresh Segmen
@@ -68,6 +59,24 @@ Anda dapat menyegarkan semua segmen sekaligus dengan memilih **Segarkan semua** 
 
 > [!TIP]
 > Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
+
+## <a name="export-segments"></a>Ekspor segmen
+
+Anda bisa mengekspor segmen dari halaman segmen atau [halaman ekspor](export-destinations.md). 
+
+1. Buka halaman **Segmen**.
+
+1. Pilih **Tampilkan lainnya [...]** untuk segmen yang ingin diekspor.
+
+1. Pilih **Kelola ekspor** dari daftar tarik-turun tindakan.
+
+1. Halaman **Ekspor (pratinjau) untuk segmen** terbuka. Anda dapat melihat semua ekspor yang dikonfigurasi yang dikelompokkan menurut ekspor yang berisi segmen saat ini atau tidak berisi ekspor tersebut.
+
+   1. Untuk menambahkan segmen yang dipilih ke ekspor, pilih ekspor dalam daftar dan pilih **Tambahkan segmen**.
+
+   1. Untuk membuat ekspor baru dengan segmen yang dipilih, pilih **Tambahkan ekspor**. Untuk informasi selengkapnya tentang membuat ekspor, lihat [Menyiapkan ekspor baru](export-destinations.md#set-up-a-new-export).
+
+1. Pilih **Kembali** untuk kembali ke halaman utama untuk segmen.
 
 ## <a name="view-processing-history-and-segment-members"></a>Melihat riwayat pemrosesan dan anggota segmen
 

@@ -1,7 +1,7 @@
 ---
 title: Fitur baru dan mendatang
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988924"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263255"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Pembaruan Mei 2021
+
+Pembaruan pada bulan Mei 2021 mencakup beberapa fitur, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="data-ingestion"></a>Penyerapan data
+
+- **Melihat atau memodifikasi metadata atau definisi entitas saat melampirkan data dari Azure Data Lake Storage** Sekarang Anda dapat melihat dan mengedit metadata atau definisi entitas dalam wawasan audiens saat melampirkan data dari folder Common Data Model di Azure Data Lake Storage Anda. Kemampuan ini memberikan tanggapan real-time, validasi model, dan pemeriksaan kesalahan. Memungkinkan Anda mengedit model.json dan manifest.json dengan lancar.
+
+### <a name="extensibility"></a>Dapat diperluas
+
+- **Ekspor segmen yang lebih baik, jadwal kustom, dan duplikasi** Anda sekarang dapat [melihat semua ekspor untuk segmen tertentu](export-destinations.md#view-exports-and-export-details) dalam suatu daftar. Tampilan baru ini akan membantu mengelola cara kerja segmen tertentu dan menyesuaikan ekspor yang ada atau membuat ekspor baru.    
+  Anda dapat [menentukan jadwal refresh kustom](export-destinations.md#schedule-and-run-exports) untuk ekspor individual atau beberapa ekspor sekaligus. Hingga saat ini, semua ekspor berjalan dengan setiap pembaruan sistem.    
+  Daripada membuat ekspor baru dari awal, Anda dapat memulainya berdasarkan yang ada untuk menghemat waktu.
+
+- **Segmen ekspor ke Microsoft Advertising** Kami telah memperluas tujuan ekspor kami untuk menyertakan Microsoft Advertising. Buat audiens Customer Match di Microsoft Advertising dengan data profil pelanggan terpadu Anda, dan gunakan audiens ini untuk kampanye Periklanan Anda. Untuk informasi lebih lanjut, lihat [Mengekspor segmen ke Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Ekspor segmen ke LinkedIn Ads** Kami telah memperluas tujuan ekspor kami untuk mencakup LinkedIn Ads dan memungkinkan Anda membuka Penargetan Kontak dan Penargetan Perusahaan melalui LinkedIn dengan mengekspor data profil pelanggan terpadu Anda. Untuk informasi lebih lanjut, lihat [Mengekspor segmen ke LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Segmen ekspor ke Omnisend** Kami telah memperluas tujuan ekspor kami untuk menyertakan Omnisend. Gunakan segmen yang dibuat di wawasan audiens untuk membuat kampanye, menyediakan pemasaran melalui email, dan menggunakan grup pelanggan tertentu dengan Omnisend. Untuk informasi lebih lanjut, lihat [Mengekspor segmen ke Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Prediksi
+
+- **Laporan Kegunaan Data Input** Laporan kegunaan data input memberikan tampilan kesalahan yang dikonsolidasikan dan peringatan yang mungkin dihasilkan prediksi standar Anda. Ini juga memberikan rekomendasi bagaimana meningkatkan kinerja model.    
+  Laporan tersedia setelah model menyelesaikan proses pelatihannya. Ini dibuat untuk tiap model secara terpisah, apakah selesai dengan sukses atau tidak.
+  Saat ini, fitur ini hanya tersedia untuk model Kehilangan Transaksi. Untuk informasi lebih lanjut, lihat [Laporan kegunaan data input](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Hubungan
+
+- **Visualisator relasi** Tampilan Visualisator visual relasi memungkinkan Anda melihat semua Relasi yang ada antara entitas dan kardinalitasnya. Relasi kini dikelola dalam grup: pengguna yang dibuat, sistem, dan Relasi warisan. Anda juga dapat mengekspor tampilan sebagai gambar. Untuk informasi lebih lanjut lihat [Lihat relasi](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Pembaruan April 2021
 
