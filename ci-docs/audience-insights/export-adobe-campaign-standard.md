@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760285"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305390"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Gunakan segmen Customer Insights dalam Adobe Campaign Standard (pratinjau)
 
-Sebagai pengguna wawasan audiens untuk Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran yang lebih efisien dengan menargetkan audiens yang relevan. Agar dapat menggunakan segmen audiens wawasan dalam Adobe Experience Platform dan aplikasi seperti Adobe Campaign Standard, Anda harus mengikuti beberapa langkah yang diuraikan dalam artikel ini.
+Sebagai pengguna wawasan audiens di Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran yang lebih efisien dengan menargetkan audiens yang relevan. Agar dapat menggunakan segmen audiens wawasan dalam Adobe Experience Platform dan aplikasi seperti Adobe Campaign Standard, Anda harus mengikuti beberapa langkah yang diuraikan dalam artikel ini.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagram proses dari langkah-langkah yang diuraikan dalam artikel ini.":::
 
@@ -54,7 +54,7 @@ Dengan target audiens, kita dapat mengkonfigurasi ekspor dari wawasan audiens ke
 
 1. Dalam audiens wawasan, buka **Koneksi** > **Admin**.
 
-1. Pilih **Tambah koneksi** dan pilih **Kampanye Adobe** untuk mengkonfigurasi koneksi atau pilih **Konfigurasi** dalam petak **Kampanye Adobe**
+1. Pilih **Tambah koneksi** dan pilih **Kampanye Adobe** untuk mengkonfigurasi koneksi atau pilih **Konfigurasi** dalam petak **Kampanye Adobe**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Petak konfigurasi untuk Adobe Campaign Standard.":::
 
@@ -80,7 +80,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
 
-1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Kampanye Adobe. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Kampanye Adobe. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
 
 1. Pilih segmen yang ingin Anda ekspor. Di contoh ini, itu adalah **ChurnProneCustomers**.
 
@@ -118,7 +118,7 @@ Bila segmen dari wawasan audiens diekspor, segmen tersebut berisi kolom yang And
 
 Agar dapat menggunakan segmen dalam Adobe Campaign Standard, kita harus memperluas skema profil di Adobe Campaign Standard agar dapat mencakup dua bidang tambahan. Pelajari lebih lanjut cara [memperluas sumber daya profil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) dengan bidang baru di Adobe Campaign Standard.
 
-Di contoh kami, bidang ini adalah *Nama Segmen dan Tanggal Segmen (opsional).*
+Di contoh kami, bidang ini adalah *Nama Segmen dan Tanggal Segmen (opsional)*.
 
 Kita akan menggunakan bidang ini untuk mengidentifikasi profil dalam Adobe Campaign Standard yang akan ditargetkan untuk kampanye ini.
 
@@ -128,7 +128,7 @@ Jika tidak ada rekaman lain dalam Adobe Campaign Standard, selain yang akan diim
 
 Setelah semuanya tersedia, kita harus mengimpor data audiens yang disiapkan dari wawasan audiens ke Adobe Campaign Standard untuk membuat profil. Pelajari [cara mengimpor profil di Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) menggunakan alur kerja.
 
-Alur kerja impor pada gambar di bawah ini telah dikonfigurasi untuk dijalankan setiap 8 jam dan mencari segmen wawasan audiens yang diekspor (file .csv dalam Azure Blob Storage). Alur kerja mengekstrak konten file .csv dalam urutan kolom yang ditentukan. Alur kerja ini telah dibuat untuk melakukan penanganan kesalahan dasar dan memastikan setiap rekaman memiliki alamat email sebelum menghidrasi data di Adobe Campaign Standard. Alur kerja juga mengekstrak nama segmen dari nama file sebelum melakukan upserting ke data Profil ACS.
+Alur kerja impor pada gambar di bawah ini telah dikonfigurasi untuk dijalankan setiap delapan jam dan mencari segmen wawasan audiens yang diekspor (file.csv dalam Penyimpanan Blob Azure). Alur kerja mengekstrak konten file .csv dalam urutan kolom yang ditentukan. Alur kerja ini telah dibuat untuk melakukan penanganan kesalahan dasar dan memastikan setiap rekaman memiliki alamat email sebelum menghidrasi data di Adobe Campaign Standard. Alur kerja juga mengekstrak nama segmen dari nama file sebelum melakukan upserting ke data profil Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Cuplikan layar alur kerja impor di antarmuka pengguna Adobe Campaign Standard.":::
 

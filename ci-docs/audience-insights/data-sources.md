@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085534"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304700"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
@@ -30,15 +30,15 @@ Anda dapat menambahkan sumber data dengan tiga cara utama:
 
 - [melalui lusinan Power Query connectors](connect-power-query.md)
 - [Dari folder Common Data Model](connect-common-data-model.md)
-- [Dari Danau Common Data Service Anda sendiri](connect-common-data-service-lake.md)
+- [Dari Danau Microsoft Dataverse Anda sendiri](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Menambahkan data dari sumber data lokal
 
-Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Power Platform. Aliran data dapat diaktifkan di Customer Insights dengan [menyediakan URL lingkungan Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) saat menyiapkan lingkungan.
+Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Microsoft Power Platform. Aliran data dapat diaktifkan di Customer Insights dengan [menyediakan URL lingkungan Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) saat menyiapkan lingkungan.
 
-Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Customer Insights akan menggunakan [aliran data Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Hapus dan buat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk [menggunakan gateway data lokal](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Customer Insights akan menggunakan [aliran data Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Hapus dan buat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk [menggunakan gateway data lokal](/data-integration/gateway/service-gateway-app.md).
 
-Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data memperlihatkan tautan untuk masuk ke lingkungan Power Platform tempat Anda bisa menampilkan dan mengonfigurasi gateway data lokal.
+Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
 
 ## <a name="review-ingested-data"></a>Meninjau data yang diserap
 
@@ -56,7 +56,7 @@ Anda akan melihat nama dari setiap sumber data yang diserap, statusnya, serta wa
 
 Pilih nilai di kolom **Status** dari daftar sumber data untuk meninjau rincian lainnya. Di panel **Rincian progres**, perluas **sumber Data**. Pilih **Lihat rincian** untuk informasi lebih lanjut tentang status penyegaran, termasuk rincian kesalahan dan pembaruan proses hilir.
 
-Pemuatan data dapat memerlukan waktu. Setelah penyegaran berhasil, data yang terserap dapat ditinjau dari halaman **entitas**. Untuk informasi lebih lanjut, [Entitas](entities.md).
+Memuat data dapat memakan waktu. Setelah penyegaran berhasil, data yang terserap dapat ditinjau dari halaman **entitas**. Untuk informasi lebih lanjut, [Entitas](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Segarkan sumber data
 
@@ -66,9 +66,9 @@ Buka **admin** > **sistem** > [**jadwal**](system.md#schedule-tab) untuk mengkon
 
 Untuk me-refresh sumber data sesuai permintaan, ikuti langkah berikut:
 
-1. Di wawasan audiens, buka **Data** > **Sumber data**
+1. Di wawasan audiens, buka **Data** > **Sumber data**.
 
-2. Pilih elipsis vertikal di sebelah sumber data ingin anda refresh dan pilih **Segarkan** dari daftar drop-down.
+2. Pilih elipsis vertikal di sebelah sumber data yang ingin Anda segarkan, lalu pilih **Segarkan** dari daftar dropdown.
 
 3. Sumber data sekarang dipicu untuk penyegaran manual. Merefresh sumber data akan memperbarui skema entitas dan data untuk semua entitas yang ditentukan dalam sumber data.
 
@@ -78,7 +78,7 @@ Untuk me-refresh sumber data sesuai permintaan, ikuti langkah berikut:
 
 1. Di wawasan audiens, buka **Data** > **Sumber data**.
 
-2. Pilih elipsis vertikal di sebelah sumber data yang akan dihapus dan pilih **Hapus** dari menu drop-down.
+2. Pilih elipsis vertikal di sebelah sumber data yang ingin Anda hapus, lalu pilih **Hapus** dari menu dropdown.
 
 3. Konfirmasikan penghapusan.
 

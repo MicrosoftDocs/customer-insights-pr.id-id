@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895917"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305206"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil perusahaan dengan Leadspace (pratinjau)
 
@@ -36,7 +36,7 @@ Untuk mengonfigurasikan Leadspace, prasyarat berikut harus dipenuhi:
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Tangkapan layar petak Leadspace.":::
 
-1. Pilih [koneksi](connections.md) dari menu tarik-turun. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi** dan memilih **Leadspace**. 
+1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi** dan memilih **Leadspace**. 
 
 1. Pilih **Sambungkan ke Leadspace** untuk mengonfirmasi koneksi.
 
@@ -57,13 +57,13 @@ Untuk mengonfigurasikan Leadspace, prasyarat berikut harus dipenuhi:
 
 Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan *atau* masuk ke **Admin** > **Koneksi** dan pilih **Konfigurasi** pada petak Leadspace.
 
-1. Pilih **Mulai** 
+1. Pilih **Mulai**. 
 
 1. Masukkan nama untuk koneksi dalam kotak **nama tampilan**.
 
 1. Berikan token Leadspace yang valid.
 
-1. Tinjau dan berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**
+1. Baca dan berikan persetujuan Anda untuk **privasi dan kesesuaian Data** dengan memilih **Saya setuju**.
 
 1. Pilih **Verifikasi** untuk memvalidasi konfigurasi.
 
@@ -81,7 +81,7 @@ Untuk informasi lebih lanjut, lihat [api leadspace](https://support.leadspace.co
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tindakan](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman yang disesuaikan bagi pelanggan Anda.
+Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 

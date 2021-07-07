@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954491"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305252"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
@@ -22,7 +22,8 @@ Gunakan data dari sumber seperti Microsoft dan mitra lainnya untuk memperkaya da
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Halaman hub pengayaan":::
 
-Di wawasan audiens, buka **Data** > **pengayaan** untuk menangani pilihan pengayaan.    
+Di wawasan audiens, buka **Data** > **pengayaan** untuk menangani pilihan pengayaan.  
+
 Anda harus memiliki izin kontributor atau Administrator untuk membuat atau mengedit pengayaan. Untuk informasi lebih lanjut, lihat [izin](permissions.md).
 
 Pada tab **temukan**, Anda akan menemukan pengayaan berikut:
@@ -31,7 +32,7 @@ Pada tab **temukan**, Anda akan menemukan pengayaan berikut:
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
 - [Data perusahaan](enrichment-leadspace.md) yang disediakan oleh Leadspace
-- [Demografi](enrichment-experian.md) Disediakan oleh Experian
+- [Demografi](enrichment-experian.md) yang disediakan oleh Experian
 - [data lokasi](enrichment-here.md) disediakan oleh HERE Technologies
 - [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP)
 
@@ -39,7 +40,7 @@ Pada **tab pengayaan saya**, Anda dapat melihat pengayaan yang telah dikonfigura
 
 ## <a name="manage-existing-enrichments"></a>Mengelola pengayaan yang ada
 
-Buka **pengayaan saya** untuk melihat semua pengayaan yang dikonfigurasi. Setiap pengayaan ditunjukkan sebagai baris yang mencakup informasi tambahan tentang pengayaan.
+Buka tab **Pengayaan saya** untuk melihat semua pengayaan terkonfigurasi. Setiap pengayaan ditunjukkan sebagai baris yang mencakup informasi tambahan tentang pengayaan.
 
 Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga dapat memilih elipsis (...) pada item daftar untuk melihat opsi.
 
@@ -59,6 +60,6 @@ Pengayaan pihak ketiga dikonfigurasi menggunakan [koneksi](connections.md), yang
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Beberapa pengayaan dengan tipe yang sama
 
-Entitas yang akan diperkaya ditentukan selama konfigurasi pengayaan, yang memungkinkan Anda hanya memperkaya subkumpulan profil Anda. Untuk exmaple, perkaya data hanya untuk segmen tertentu. Anda dapat mengonfigurasi beberapa pengayaan dengan tipe yang sama dan menggunakan kembali koneksi yang sama. Beberapa pengayaan akan memiliki batasan jumlah pengayaan dengan jenis yang sama yang dapat dibuat. Batas dan penggunaan saat ini dapat dilihat pada halaman **Pengayaan**.
+Entitas yang akan diperkaya ditentukan selama konfigurasi pengayaan, yang memungkinkan Anda hanya memperkaya subkumpulan profil Anda. Misalnya, perkaya data hanya untuk segmen tertentu. Anda dapat mengonfigurasi beberapa pengayaan dengan tipe yang sama dan menggunakan kembali koneksi yang sama. Beberapa pengayaan akan memiliki batasan jumlah pengayaan dengan jenis yang sama yang dapat dibuat. Batas dan penggunaan saat ini dapat dilihat pada halaman **Pengayaan**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

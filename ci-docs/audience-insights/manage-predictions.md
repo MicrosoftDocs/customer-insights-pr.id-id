@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095720"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315882"
 ---
 # <a name="manage-predictions"></a>Kelola prediksi
 
@@ -35,9 +35,6 @@ Artikel ini membahas beberapa tugas yang dibagikan sebagian besar skenario predi
 Laporan kegunaan data input memberikan tampilan konsolidasi tentang kesalahan dan peringatan yang mungkin dihasilkan oleh prediksi standar Anda. Ini juga memberikan rekomendasi bagaimana meningkatkan kinerja model.
 
 Laporan tersedia setelah model menyelesaikan proses pelatihannya. Ini dibuat untuk setiap model secara terpisah, terlepas dari apakah itu berhasil diselesaikan atau tidak.
-
-> [!NOTE]
-> Saat ini, fitur ini hanya berfungsi untuk model Kehilangan Transaksi.
 
 ### <a name="view-the-input-data-usability-report"></a>Lihat Laporan penggunaan data input
 

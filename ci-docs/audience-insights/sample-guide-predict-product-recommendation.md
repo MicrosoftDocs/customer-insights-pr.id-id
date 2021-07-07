@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129903"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306170"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel prediksi Rekomendasi produk (pratinjau)
 
@@ -105,9 +105,9 @@ Setelah menyerap data, kami sekarang memulai proses penyatuan data untuk membuat
 
 1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
 
-2. Di daftar drop-down **utama**, pilih **ecommercecontacts: eCommerce** sebagai sumber utama dan mencakup semua rekaman.
+2. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
 
-3. Pada daftar drop-down **entitas 2**, pilih **Loycustomer: LoyaltyScheme** dan sertakan semua rekaman.
+3. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
 
    ![Satukan dan cocokkan eCommerce dan Loyalty.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Setelah menyerap data, kami sekarang memulai proses penyatuan data untuk membuat
 
 5. Tambahkan kondisi pertama Anda menggunakan FullName.
 
-   - Untuk eCommerceContacts, pilih **fullname** di drop-down.
-   - Untuk loyCustomers, pilih **fullname** di drop-down.
+   - Untuk eCommerceContacts, pilih **FullName** di dropdown.
+   - Untuk loyCustomers, pilih **FullName** di dropdown.
    - Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
    - Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
 6. Masukkan nama **fullname, email** untuk aturan baru.
 
    - Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   - Untuk eCommerceContacts entitas, pilih **email** di drop-down.
-   - Untuk loyCustomers entitas, pilih **email** di drop-down.
+   - Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
+   - Untuk entitas loyCustomers, pilih **EMail** di dropdown.
    - Biarkan Normalkan kosong.
    - Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 

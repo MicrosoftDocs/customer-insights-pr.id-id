@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866411"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304930"
 ---
 # <a name="customer-activities"></a>Aktivitas pelanggan
 
@@ -45,7 +45,7 @@ Sumber data Anda dapat mencakup entitas dengan data transaksional dan aktivitas 
 
    - **Pertama:** Bidang asing dalam entitas aktivitas Anda yang akan digunakan untuk menjalin hubungan dengan entitas lain.
    - **Kedua**: Entitas pelanggan sumber yang sesuai dengan entitas aktivitas Anda akan menjalin hubungan. Anda hanya dapat berhubungan dengan entitas pelanggan sumber yang digunakan dalam proses penyatuan data.
-   - **Ketiga**: Jika hubungan antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama hubungan akan berada dalam mode baca-saja. Jika tidak ada hubungan seperti itu, hubungan baru akan dibuat dengan nama yang Anda berikan dalam kotak ini.
+   - **Ketiga**: Jika hubungan antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama hubungan akan berada dalam mode baca-saja. Jika tidak ada relasi tersebut, relasi baru akan dibuat dengan nama yang Anda berikan di kotak ini.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Tentukan relasi entitas.":::
 
@@ -53,23 +53,23 @@ Sumber data Anda dapat mencakup entitas dengan data transaksional dan aktivitas 
 
 1. Dalam langkah **Penyatuan aktivitas**, pilih peristiwa aktivitas dan waktu mulai aktivitas Anda. 
    - **Bidang yang diperlukan**
-      1. **Aktivitas peristiwa**: Bidang yang menjadi ajang aktivitas ini
-      2. **Cap waktu**: Bidang yang mewakili waktu mulai aktivitas Anda.
+      - **Aktivitas peristiwa**: Bidang yang menjadi ajang aktivitas ini.
+      - **Cap waktu**: Bidang yang mewakili waktu mulai aktivitas Anda.
 
    - **Bidang Opsional**
-      1. **Detail tambahan**: Bidang dengan informasi yang relevan untuk kegiatan ini.
-      2. **Ikon**: Ikon yang paling mewakili jenis aktivitas ini.
-      3. **Alamat web**: Bidang yang berisi URL dengan informasi tentang aktivitas ini. Misalnya, sistem transaksional yang menjadi sumber aktivitas ini. URL ini dapat berupa bidang apa pun dari sumber data, atau dapat dibangun sebagai bidang baru menggunakan transformasi Power Query. Data URL akan disimpan di entitas *Aktivitas Terpadu*, yang dapat dikonsumsi di hilir menggunakan [API](apis.md).
+      - **Detail tambahan**: Bidang dengan informasi yang relevan untuk kegiatan ini.
+      - **Ikon**: Ikon yang paling mewakili jenis aktivitas ini.
+      - **Alamat web**: Bidang yang berisi URL dengan informasi tentang aktivitas ini. Misalnya, sistem transaksional yang menjadi sumber aktivitas ini. URL ini dapat berupa bidang apa pun dari sumber data, atau dapat dibangun sebagai bidang baru menggunakan transformasi Power Query. Data URL akan disimpan di entitas *Aktivitas Terpadu*, yang dapat dikonsumsi di hilir menggunakan [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Tentukan data aktivitas pelanggan dalam entitas Aktivitas Terpadu.":::
 
 1. Pilih **berikutnya** untuk beralih ke langkah berikutnya. Anda dapat memilih **Selesai dan tinjau** untuk menyimpan aktivitas sekarang dengan tipe aktivitas yang diatur ke **Lainnya**. 
 
-1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, jenis aktivitas *langganan* & *SalesOrderLine* dapat dipetakan secara semantik setelah setuju untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
+1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, jenis aktivitas *Langganan* dan *SalesOrderLine* dapat dipetakan secara semantis setelah setuju untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
 
 1. Pilih **berikutnya** untuk beralih ke langkah berikutnya. 
 
-1. Di langkah **Tinjau**, verifikasi pilihan Anda. Anda kembali ke salah satu langkah sebelumnya dan memperbarui informasi jika perlu.
+1. Di langkah **Tinjau**, verifikasi pilihan Anda. Kembali ke langkah-langkah sebelumnya dan perbarui informasi jika perlu.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Meninjau bidang yang ditentukan untuk aktivitas.":::
    
@@ -89,7 +89,7 @@ Tindakan berikut ini tersedia saat Anda memilih aktivitas.
 
 - **Edit**: Membuka penyiapan aktivitas pada langkah peninjauan. Anda dapat mengubah salah satu atau semua konfigurasi saat ini dari langkah ini. Setelah mengubah konfigurasi, pilih **Simpan aktivitas** lalu pilih **Jalankan** untuk memproses perubahan.
 
-- **Ganti Nama**: Membuka dialog tempat memasukkan nama yang berbeda untuk aktivitas yang dipilih. Pilih **Simpan** untuk menerapkan perubahan.
+- **Ganti nama**: Buka dialog yang memungkinkan Anda memasukkan nama lain untuk aktivitas yang dipilih. Pilih **Simpan** untuk menerapkan perubahan.
 
 - **Hapus**: Membuka dialog untuk mengonfirmasi penghapusan aktivitas yang dipilih. Anda juga dapat menghapus lebih dari satu aktivitas sekaligus dengan memilih aktivitas lalu memilih ikon hapus. Klik **Hapus**, untuk mengonfirmasi penghapusan tersebut.
 

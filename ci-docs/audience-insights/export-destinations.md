@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253044"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305482"
 ---
 # <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
 Halaman **Ekspor** memperlihatkan kepada Anda semua ekspor yang dikonfigurasi. Ekspor berbagi data tertentu dengan berbagai aplikasi. Mereka dapat menyertakan profil pelanggan atau entitas, skema, dan detail pemetaan. Setiap ekspor memerlukan [koneksi, yang disiapkan oleh administrator, untuk mengelola autentikasi dan akses](connections.md).
 
-Buka **Data** > **Ekspor** untuk menampilkan halaman ekspor. Semua peran pengguna memiliki akses untuk melihat ekspor yang dikonfigurasi. Gunakan bidang pencarian di bilah perintah untuk menemukan ekspor menurut nama, nama koneksi, atau tipe koneksinya.
+Buka **Data** > **Ekspor** untuk menampilkan halaman ekspor. Semua peran pengguna dapat melihat ekspor yang dikonfigurasi. Gunakan bidang pencarian di bilah perintah untuk menemukan ekspor berdasarkan nama, nama koneksi, atau jenis koneksi.
 
 ## <a name="set-up-a-new-export"></a>Konfigurasikan ekspor baru
 
@@ -65,7 +65,7 @@ Setelah membuat tujuan ekspor, mereka tercantum pada **Data** > **Ekspor**. Semu
 
 1. Buka **Data** > **Ekspor**.
 
-1. Pengguna tanpa izin edit memilih **Lihat**, bukan **Edit** untuk melihat detail ekspor.
+1. Pengguna tanpa izin mengedit, pilih **Tampilan**, bukan **Edit** untuk melihat rincian ekspor.
 
 1. Panel sisi menampilkan konfigurasi ekspor. Tanpa izin edit, Anda tidak bisa mengubah nilai. Pilih **Tutup** untuk kembali ke halaman ekspor.
 
@@ -73,7 +73,7 @@ Setelah membuat tujuan ekspor, mereka tercantum pada **Data** > **Ekspor**. Semu
 
 Setiap ekspor yang Anda konfigurasikan memiliki jadwal refresh. Selama pembaruan, sistem mencari data baru atau yang diperbarui untuk disertakan dalam ekspor. Secara default, ekspor dijalankan sebagai bagian dari setiap [pembaruan sistem terjadwal](system.md#schedule-tab). Anda dapat menyesuaikan jadwal refresh atau menonaktifkannya untuk menjalankan ekspor secara manual.
 
-Jadwal ekspor tergantung pada status lingkungan Anda. Jika ada pembaruan pada [dependensi](system.md#refresh-policies) yang sedang berlangsung ketika ekspor terjadwal harus dimulai, sistem akan terlebih dulu menyelesaikan dependensi, lalu menjalankan ekspor. Anda dapat melihat kapan ekspor terakhir kali di-refresh di kolom **Disegarkan**.
+Jadwal ekspor tergantung pada status lingkungan Anda. Jika ada pembaruan yang sedang berlangsung pada [dependensi](system.md#refresh-policies) ketika ekspor terjadwal harus dimulai, sistem akan terlebih dulu menyelesaikan pembaruan dan kemudian menjalankan ekspor. Anda dapat melihat kapan ekspor terakhir kali di-refresh di kolom **Disegarkan**.
 
 ### <a name="schedule-exports"></a>Jadwalkan ekspor
 

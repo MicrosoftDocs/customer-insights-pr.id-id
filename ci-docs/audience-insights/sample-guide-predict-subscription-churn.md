@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595522"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306307"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan langganan (pratinjau)
 
@@ -22,7 +22,7 @@ Kami akan menjelaskan kepada Anda contoh akhir dari prediksi kehilangan pelangga
 
 ## <a name="scenario"></a>Skenario
 
-Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang dijual melalui situs web Kopi Aswono. Mereka baru saja memulai bisnis langganan untuk pelanggan mereka agar mendapatkan kopi secara teratur. Tujuannya adalah untuk memahami, pelanggan langganan mana yang dapat membatalkan langganan dalam beberapa bulan ke depan. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
+Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang mereka jual melalui situs web Kopi Contoso mereka. Mereka baru saja memulai bisnis langganan untuk pelanggan mereka agar mendapatkan kopi secara teratur. Tujuannya adalah untuk memahami, pelanggan langganan mana yang dapat membatalkan langganan dalam beberapa bulan ke depan. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -128,9 +128,9 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
 
-1. Di daftar drop-down **utama**, pilih **ecommercecontacts: eCommerce** sebagai sumber utama dan mencakup semua rekaman.
+1. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
 
-1. Pada daftar drop-down **entitas 2**, pilih **Loycustomer: LoyaltyScheme** dan sertakan semua rekaman.
+1. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Satukan dan cocokkan eCommerce dan Loyalty.":::
 
@@ -138,16 +138,16 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Tambahkan kondisi pertama Anda menggunakan FullName.
 
-   * Untuk eCommerceContacts, pilih **fullname** di drop-down.
-   * Untuk loyCustomers, pilih **fullname** di drop-down.
+   * Untuk eCommerceContacts, pilih **FullName** di dropdown.
+   * Untuk loyCustomers, pilih **FullName** di dropdown.
    * Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
 1. Masukkan nama **fullname, email** untuk aturan baru.
 
    * Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   * Untuk eCommerceContacts entitas, pilih **email** di drop-down.
-   * Untuk loyCustomers entitas, pilih **email** di drop-down. 
+   * Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
+   * Untuk entitas loyCustomers, pilih **EMail** di dropdown. 
    * Biarkan Normalkan kosong. 
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 

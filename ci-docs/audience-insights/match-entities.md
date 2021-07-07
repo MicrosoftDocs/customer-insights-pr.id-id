@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085626"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306032"
 ---
 # <a name="match-entities"></a>Pencocokan Entitas
 
@@ -209,7 +209,7 @@ Coba ambang batas presisi yang berbeda pada kondisi untuk menemukan nilai optima
 
 Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kecocokan.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Cuplikan layar menu drop-down dengan pilihan aturan kecocokan.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Cuplikan layar menu dropdown dengan pilihan aturan yang kecocokan.":::
 
 - **Ubah urutan aturan** jika Anda mendefinisikan beberapa aturan. Anda dapat mengurutkan ulang aturan kecocokan dengan memilih opsi **Pindahkan ke atas** dan **Pindahkan ke bawah** atau dengan menarik dan menjatuhkan.
 
@@ -247,7 +247,7 @@ Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok de
 
 1. Buka **data** > **sumber data** dan serap file template sebagai entitas baru. Setelah diserap, Anda dapat menggunakannya untuk menentukan konfigurasi kecocokan.
 
-1. Setelah mengupload file dan entitas yang tersedia, pilih opsi **pencocokan kustom** lagi. Anda akan melihat opsi untuk menentukan entitas yang ingin Anda sertakan. Pilih entitas yang diperlukan dari menu drop-down.
+1. Setelah mengupload file dan entitas yang tersedia, pilih opsi **pencocokan kustom** lagi. Anda akan melihat opsi untuk menentukan entitas yang ingin Anda sertakan. Pilih entitas yang diperlukan dari menu dropdown.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Cuplikan layar dialog untuk memilih menimpa skenario kecocokan kustom.":::
 

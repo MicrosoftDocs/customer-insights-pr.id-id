@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595338"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306078"
 ---
 # <a name="segment-insights-preview"></a>Wawasan segmen (Pratinjau)
 
@@ -50,7 +50,7 @@ Pilih wawasan untuk melihat hasil analisis:
 
 - Jumlah anggota yang tumpang tindih di segmen yang dipilih untuk analisis.
 - Jumlah anggota yang tercakup dalam salah satu segmen namun tidak di segmen lainnya.
-- Jika Anda memilih bidang saat mengkonfigurasi analisis tumpang tindih, Anda akan menemukannya di tab yang sesuai. Anda dapat menggunakan drop-down filter untuk memilih tingkat atribut yang menarik dan tabel di bagian bawah akan menampilkan data yang sesuai.
+- Jika Anda memilih bidang saat mengkonfigurasi analisis tumpang tindih, Anda akan menemukannya di tab yang sesuai. Anda dapat menggunakan dropdown filter untuk memilih tingkat atribut yang menarik dan tabel di bagian bawah akan menampilkan data yang sesuai.
 
 ## <a name="segment-differentiators"></a>Pembeda segmen
 

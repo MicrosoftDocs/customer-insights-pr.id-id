@@ -9,21 +9,21 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016596"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304746"
 ---
 # <a name="work-with-customer-insights-apis"></a>Bekerja dengan API Customer Insights
 
-Dynamics 365 Customer Insights menyediakan API untuk membuat aplikasi Anda sendiri berdasarkan data Anda dalam Customer Insights.
+Dynamics 365 Customer Insights menyediakan API untuk membangun aplikasi Anda sendiri berdasarkan data Anda dalam Customer Insights.
 
 > [!IMPORTANT]
 > Rincian API ini, tercantum pada [referensi API customer insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Mereka mencakup informasi tambahan tentang operasi, parameter, dan respons.
 
-Artikel ini memandu Anda mengakses API Customer Insights, membuat pendaftaran aplikasi Azure, dan membantu Anda memulai dengan pustaka klien yang tersedia.
+Artikel ini menjelaskan cara mengakses API Customer Insights, membuat Pendaftaran Aplikasi Azure, dan memulai pustaka klien yang tersedia.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Memulai mencoba API Customer Insights
 
@@ -32,6 +32,7 @@ Artikel ini memandu Anda mengakses API Customer Insights, membuat pendaftaran ap
 1. Untuk mengaktifkan API di lingkungan Customer Insights Anda, buka **admin** > **izin**. Anda memerlukan izin admin untuk melakukannya.
 
 1. Buka tab **API** dan pilih tombol **Aktifkan**.    
+ 
    Mengaktifkan API akan membuat kunci langganan utama dan sekunder untuk instans yang digunakan dalam permintaan API. Anda dapat membuat ulang kunci dengan memilih **Buat lagi utama** atau **Buat lagi sekunder** pada **admin** > **izin** > **api**.
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Aktifkan API Customer Insights":::
@@ -40,7 +41,7 @@ Artikel ini memandu Anda mengakses API Customer Insights, membuat pendaftaran ap
 
 1. Pilih operasi API dan pilih **coba**.
 
-1. Di panel sisi, atur nilai dalam menu drop-down **otorisasi** ke **implisit**. Header `Authorization` ditambahi token pembawa. Kunci langganan akan diisi secara otomatis.
+1. Pada panel sisi, atur nilai dalam menu dropdown **Otorisasi** ke **implisit**. Header `Authorization` ditambahkan dengan token penahan. Kunci langganan akan diisi secara otomatis.
   
 1. Atau, Tambahkan semua parameter kueri yang diperlukan.
 
@@ -48,27 +49,27 @@ Artikel ini memandu Anda mengakses API Customer Insights, membuat pendaftaran ap
 
 Respons HTTP akan segera muncul di bawah.
 
-
-   :::image type="content" source="media/try-apis.gif" alt-text="Gif animasi yang menunjukkan cara memilih uji API.":::
+   :::image type="content" source="media/try-apis.gif" alt-text="Cara menguji API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Buat pendaftaran Aplikasi baru di portal Azure
 
-Langkah-langkah ini membantu Anda memulai menggunakan API Customer Insights dalam aplikasi Azure menggunakan izin delegasi. Pastikan untuk menyelesaikan [Bagian Memulai](#get-started-trying-the-customer-insights-apis) terlebih dahulu.
+Langkah-langkah ini membantu Anda memulai menggunakan API Customer Insights di aplikasi Azure menggunakan izin yang didelegasikan. Pastikan untuk menyelesaikan [bagian memulai](#get-started-trying-the-customer-insights-apis) terlebih dulu.
 
 1. Masuk ke [portal Azure](https://portal.azure.com) dengan akun yang dapat mengakses data Customer Insights.
 
 1. Di sebelah kiri, pilih **pendaftaran aplikasi**.
 
 1. Pilih **pendaftaran baru** berikan nama aplikasi dan pilih jenis akun.
+ 
    Atau, tambahkan URL pengalihan. http://localhost cukup untuk mengembangkan aplikasi di komputer lokal.
 
 1. Di pendaftaran aplikasi baru, buka **izin API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animasi untuk mengatur izin API dalam pendaftaran aplikasi.":::
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Cara mengatur izin API dalam pendaftaran Aplikasi.":::
 
 1. Pilih **Tambah izin** dan pilih **Customer Insights** di panel sisi.
 
-1. Untuk **jenis izin**, pilih **izin delegasi** dan pilih izin **user_impersonation**.
+1. Untuk **jenis izin**, pilih **Izin yang didelegasikan**, lalu izin **user_impersonation**.
 
 1. Pilih **Tambahkan izin**. Jika Anda perlu mengakses API tanpa login pengguna, Tinjau Bagian [izin aplikasi server-ke-server](#server-to-server-application-permissions).
 
@@ -76,13 +77,13 @@ Langkah-langkah ini membantu Anda memulai menggunakan API Customer Insights dala
 
 Anda dapat menggunakan ID aplikasi/klien untuk pendaftaran aplikasi ini dengan Microsoft Authentication Library (MSAL) untuk mendapatkan token pembawa untuk mengirim permintaan Anda ke API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animasi untuk memberikan persetujuan admin.":::
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan admin.":::
 
 Untuk informasi lebih lanjut tentang MSAL, lihat [ikhtisar dari Microsoft Authentication Library (msal)](/azure/active-directory/develop/msal-overview).
 
-Untuk informasi lebih lanjut tentang pendaftaran aplikasi di Azure, lihat [pengalaman pendaftaran aplikasi portal Azure baru](/azure/active-directory/develop/app-registration-portal-training-guide).
+Untuk informasi lebih lanjut tentang pendaftaran aplikasi di Azure, lihat [Mendaftarkan aplikasi](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
 
-Untuk informasi tentang cara menggunakan pustaka klien API kami, lihat [pustaka klien Customer Insights](#customer-insights-client-libraries).
+Untuk informasi tentang menggunakan API di pustaka klien kami, lihat [pustaka klien Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Izin aplikasi server-ke-server
 
@@ -94,7 +95,7 @@ Untuk informasi tentang cara menggunakan pustaka klien API kami, lihat [pustaka 
 
 1. Pilih tab **API organisasi saya menggunakan**, lalu pilih **Dynamics 365 AI for Customer Insights** dari daftar. 
 
-1. Untuk **jenis izin**, pilih **izin aplikasi** dan pilih izin **CustomerInsights.Api.All**.
+1. Untuk **jenis izin**, pilih **Izin Aplikasi**, lalu izin **CustomerInsights.Api.All**.
 
 1. Pilih **Tambahkan izin**.
 
@@ -102,9 +103,10 @@ Untuk informasi tentang cara menggunakan pustaka klien API kami, lihat [pustaka 
 
 1. Pilih **Berikan izin admin untuk...** untuk menyelesaikan pendaftaran aplikasi.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animasi untuk memberikan persetujuan admin.":::
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan admin.":::
 
-1. Sebagai akhir, kita harus menambahkan nama pendaftaran aplikasi sebagai pengguna di Customer Insights.    
+1. Sebagai akhir, kita harus menambahkan nama pendaftaran aplikasi sebagai pengguna di Customer Insights.  
+   
    Buka Customer Insights, buka **admin** > **izin** dan pilih **Tambah Pengguna**.
 
 1. Cari nama pendaftaran aplikasi, pilih dari hasil pencarian, lalu pilih **Simpan**.
@@ -124,6 +126,7 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
 1. Cari **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Pilih **Instal** untuk menambahkan paket ke proyek.
+ 
    Atau, jalankan perintah ini di **konsol manajer paket NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Tambahkan paket NuGet ke proyek Visual Studio":::
@@ -132,16 +135,18 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
 
 1. Gunakan [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) untuk membuat `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) yang ada.
 
-1. Setelah berhasil mengautentikasi dan memperoleh token, buat baru atau gunakan `HttpClient` yang ada dengan **"otorisasi" defaultrequestheaders** diatur ke **pembawa <access token>** dan **OCP-apim-Subscription-Key** diatur ke [**kunci langganan** dari lingkungan Customer Insights Anda ](#get-started-trying-the-customer-insights-apis).    
+1. Setelah berhasil mengautentikasi dan memperoleh token, buat baru atau gunakan `HttpClient` yang ada dengan **"otorisasi" defaultrequestheaders** diatur ke **pembawa <access token>** dan **OCP-apim-Subscription-Key** diatur ke [**kunci langganan** dari lingkungan Customer Insights Anda ](#get-started-trying-the-customer-insights-apis).   
+ 
    Atur ulang header **otorisasi** bila sesuai. Misalnya, saat token kedaluwarsa.
 
 1. Lewati `HttpClient` ini ke dalam konstruksi klien `CustomerInsights`.
 
    :::image type="content" source="media/httpclient-sample.png" alt-text="Sampel httpclient":::
 
-1. Lakukan panggilan dengan klien ke "metode ekstensi", misalnya `GetAllInstancesAsync`. Jika akses ke `Microsoft.Rest.HttpOperationResponse` yang mendasari lebih disukai, gunakan "metode pesan http", misalnya `GetAllInstancesWithHttpMessagesAsync`.
+1. Lakukan panggilan dengan klien ke "metode ekstensi"—misalnya `GetAllInstancesAsync`. Jika akses ke `Microsoft.Rest.HttpOperationResponse` yang mendasari lebih disukai, gunakan "metode pesan http"—misalnya `GetAllInstancesWithHttpMessagesAsync`.
 
 1. Respons kemungkinan akan berupa jenis `object` karena metode dapat menghasilkan beberapa jenis (misalnya, `IList<InstanceInfo>` dan `ApiErrorResult`). Untuk memeriksa jenis hasil, Anda dapat dengan aman mentransmisikan objek ke jenis respons yang ditentukan pada [halaman rincian API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) untuk operasi tersebut.    
+   
    Jika diperlukan informasi lebih lanjut tentang permintaan, gunakan **metode pesan http** untuk mengakses objek respons mentah.
 
 ### <a name="nodejs-package"></a>Paket NodeJS

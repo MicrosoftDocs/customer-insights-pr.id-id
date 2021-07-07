@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976046"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305114"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Mengekspor daftar segmen ke Facebook Ads Manager (pratinjau)
 
@@ -23,11 +23,11 @@ Ekspor segmen profil pelanggan terpadu ke pengelola iklan Facebook untuk membuat
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk koneksi
 
 - Anda harus memiliki [**Akun Iklan Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) yang mencakup [**Akun Bisnis Facebook**](https://business.facebook.com/).
-- Anda harus menjadi administrator pada akun [**iklan Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Anda harus menjadi administrator di Akun [**Iklan Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Hingga 10 juta profil pelanggan per ekspor ke Facebook Ads Manager.
+- Hingga 10 juta profil pelanggan per ekspor ke Manajer Iklan Facebook.
 - Mengekspor ke Facebook Ads Manager terbatas untuk segmen.
 - Buat atau perbarui audiens kustom dalam Facebook dengan jenis *daftar pelanggan* saja.
 - Mengekspor segmen dengan total 10 juta profil dapat memakan waktu hingga 90 menit untuk diselesaikan.
@@ -42,19 +42,19 @@ Sebelum pengguna dapat membuat ekspor, administrator harus mengonfigurasi koneks
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
-1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah **Administrator**. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Autentikasikan dengan Facebook Ads: 
 
-   1. Pilih **Lanjutkan dengan Facebook** untuk masuk ke akun iklan Facebook Anda.
+   1. Pilih **Lanjutkan dengan Facebook** untuk masuk ke akun Iklan Facebook Anda.
 
    1. Izinkan izin **ads_management** setelah mengautentikasi dengan Facebook.
 
    1. Pilih **Akun Iklan Facebook** yang ingin Anda kerjakan.
 
-   1. Pilih **audiens kustom yang ada** dari daftar drop-down atau buat **audiens kustom baru**. Untuk informasi lebih lanjut, lihat [**audiens di pengelola iklan Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. Pilih **audiens kustom yang ada** dari daftar dropdown atau buat **audiens Kustom Baru**. Untuk informasi lebih lanjut, lihat [**audiens di pengelola iklan Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Anda hanya dapat membuat atau memperbarui audiens kustom di Facebook dengan jenis *daftar pelanggan* dengan ekspor ini. Dalam beberapa kasus, Anda akan melihat pemirsa kustom dari berbagai tipe di daftar tarik-turun. Memilih tipe yang berbeda dari *daftar pelanggan* akan mengakibatkan kegagalan ekspor. 
+      > Anda hanya dapat membuat atau memperbarui audiens kustom di Facebook dengan jenis *daftar pelanggan* dengan ekspor ini. Dalam kasus tertentu, Anda akan melihat audiens kustom dengan berbagai jenis di daftar dropdown. Memilih tipe yang berbeda dari *daftar pelanggan* akan mengakibatkan kegagalan ekspor. 
 
 1. Tinjau **privasi dan kepatuhan Data** dan pilih **Saya setuju**.
 
@@ -68,14 +68,15 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru. 
 
-1. Pada **Koneksi untuk ekspor**, pilih koneksi dari bagian **Facebook Ads Manager**. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+1. Pada **Koneksi untuk ekspor**, pilih koneksi dari bagian **Facebook Ads Manager**. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
 
 1. Di bidang **Pilih pengidentifikasi utama Anda**, pilih **email**, **nama dan alamat**, atau **telepon** untuk dikirim ke pengelola iklan Facebook. 
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**.
 
 1. Petakan atribut yang terkait dari entitas pelanggan terpadu Anda untuk pengidentifikasi kunci yang dipilih.
-   > [KIAT] Peluang terbaik untuk kecocokan terjadi jika Anda memilih **email** sebagai pengidentifikasi utama. Menambahkan pengidentifikasi tambahan dapat meningkatkan pencocokan.
+   > [!TIP]
+   > Peluang terbaik untuk kecocokan terjadi jika Anda memilih **email** sebagai pengidentifikasi utama. Menambahkan pengidentifikasi tambahan dapat meningkatkan pencocokan.
 
 1. Pilih **Tambahkan atribut** untuk memetakan lebih banyak atribut untuk dikirim ke Facebook Ads Manager. Atribut dari manajer iklan Facebook melakukan pemetaan ke nama rumah pengguna berikut: **FN** = **Nama Depan**, **LN** = **Nama Belakang**, **FI** = **Inisial Depan**, **TELEPON** = **Telepon**, **GEN** = **Gender**, **DOB** = **Tanggal Lahir**, **ST** = **Negara Bagian**, **CT** = **Kota**, **ZIP** = **Kode pos/Zip**, **NEGARA** = **Negara/Wilayah**
 
@@ -85,7 +86,9 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 Menyimpan ekspor tidak segera menjalankan ekspor.
 
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). 
+
+Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 

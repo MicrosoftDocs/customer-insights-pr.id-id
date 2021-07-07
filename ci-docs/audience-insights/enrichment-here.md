@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896055"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305298"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Pengayaan profil pelanggan dengan HERE Technologies (pratinjau)
 
@@ -26,7 +26,7 @@ Untuk mengkonfigurasikan pengayaan HERE Technologies, persyaratan berikut harus 
 
 - Anda memiliki langganan aktif HERE Technologies. Untuk mendapatkan langganan, Anda dapat [mendaftar di sini](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) atau [hubungi langsung HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Selengkapnya tentang pengayaan lokasi HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Ada [koneksi](connections.md) HERE yang tersedia *atau* Anda memiliki izin [administrator](permissions.md#administrator) dan kunci API HERE Technologies.
+- [Koneksi](connections.md) HERE tersedia *atau* Anda memiliki izin [administrator](permissions.md#administrator) dan kunci API HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 
@@ -37,7 +37,7 @@ Untuk mengkonfigurasikan pengayaan HERE Technologies, persyaratan berikut harus 
    > [!div class="mx-imgBorder"]
    > ![petak HERE Technologies](media/HERE-tile.png "petak HERE Technologies")
 
-1. Pilih [koneksi](connections.md) dari menu tarik-turun. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi**. Pilih **HERE Technologies** dari menu tarik-turun. 
+1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi**. Pilih **HERE Technologies** dari daftar dropdown. 
 
 1. Pilih **Sambungkan ke HERE Technologies** untuk mengonfirmasi pilihan.
 
@@ -58,7 +58,7 @@ Untuk mengkonfigurasikan pengayaan HERE Technologies, persyaratan berikut harus 
 
 1. Pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Mengonfigurasi koneksi untuk HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Mengonfigurasi koneksi untuk HERE Technologies 
 
 Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan *atau* masuk ke **Admin** > **Koneksi** dan pilih **Konfigurasi** pada petak HERE technologies.
 
@@ -66,13 +66,13 @@ Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan
 
 1. Berikan kunci API HERE Technologies yang valid.
 
-1. Tinjau dan berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**
+1. Baca dan berikan persetujuan Anda untuk **privasi dan kesesuaian Data** dengan memilih **Saya setuju**.
 
 1. Pilih **Verifikasi** untuk memvalidasi konfigurasi.
 
 1. Setelah menyelesaikan verifikasi, pilih **Simpan**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Halaman konfigurasi koneksi HERE technologies](media/enrichment-HERE-connection.png "Halaman konfigurasi koneksi HERE technologies")
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
@@ -85,7 +85,7 @@ Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lih
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tindakan](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman yang disesuaikan bagi pelanggan Anda.
+Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 

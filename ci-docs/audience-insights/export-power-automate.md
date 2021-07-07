@@ -1,7 +1,7 @@
 ---
 title: Konektor Power Automate | Microsoft Docs
 description: Buat alur di Microsoft Power Automate dari Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 57be0a204ef920b7a4bb31cf9a5b3a77f96eca0d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976092"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305068"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate connector (pratinjau)
 
@@ -28,12 +28,13 @@ Gunakan memicu untuk membuat alur cloud dan mengotomatisasi tugas berulang, sepe
 - Memicu saat refresh sumber data berhasil.
 - Memicu bila ambang terlewati pada segmen. Pemicu terbatas untuk melebihi atas ambang batas.
 - Memicu bila ambang terlewati pada ukuran bisnis. Hanya ukuran bisnis tanpa dimensi yang didukung. Pemicu terbatas untuk melebihi atas ambang batas.
-- Picu saat penyegaran penuh (sumber data, segmen, ukuran,...) selesai.
+- Picu saat penyegaran penuh (sumber data, segmen, ukuran, ...) selesai.
 - Pemicu saat refresh proses penyatuan (peta, pencocokan, penggabungan) selesai.
 
-[Konfigurasikan pemicu di Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
+[Konfigurasikan pemicu di Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Tindakan Power Automate
+
 Konektor Power Automate menyediakan tindakan lain selain pemicu yang tersedia. Untuk informasi lebih lanjut, lihat [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Buat Alur Power Automate

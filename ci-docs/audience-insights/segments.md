@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111391"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306261"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -38,7 +38,7 @@ Buka halaman **Segmen**, untuk melihat semua segmen tersimpan dan mengelolanya.
 
 Setiap segmen diwakili oleh baris yang berisi informasi tambahan tentang segmen.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan daftar tarik-turun opsi dan opsi yang tersedia.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan daftar dropdown pilihan dan pilihan yang tersedia.":::
 
 Tindakan berikut tersedia bila Anda memilih segmen:
 
@@ -68,7 +68,7 @@ Anda bisa mengekspor segmen dari halaman segmen atau [halaman ekspor](export-des
 
 1. Pilih **Tampilkan lainnya [...]** untuk segmen yang ingin diekspor.
 
-1. Pilih **Kelola ekspor** dari daftar tarik-turun tindakan.
+1. Pilih **Kelola ekspor** dari daftar menurun tindakan.
 
 1. Halaman **Ekspor (pratinjau) untuk segmen** terbuka. Anda dapat melihat semua ekspor yang dikonfigurasi yang dikelompokkan menurut ekspor yang berisi segmen saat ini atau tidak berisi ekspor tersebut.
 

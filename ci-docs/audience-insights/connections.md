@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896101"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304976"
 ---
 # <a name="connections-preview-overview"></a>Ikhtisar koneksi (pratinjau)
 
@@ -42,7 +42,7 @@ Untuk menambahkan koneksi, Anda perlu memiliki [izin administrator](permissions.
 
 1. Buka tab **Koneksi**.
 
-1. Pilih **Tambahkan Koneksi** untuk membuat koneksi baru. Pilih dari menu tarik-turun tipe koneksi apa yang ingin Anda buat.
+1. Pilih **Tambahkan Koneksi** untuk membuat koneksi baru. Pilih dari menu dropdown jenis sambungan yang akan dibuat.
 
 1. Di panel **Siapkan koneksi**, berikan detail yang diperlukan. 
    1. **Nama tampilan** dan tipe koneksi menjelaskan koneksi. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi ini.
@@ -74,7 +74,9 @@ Saat menyiapkan atau mengedit koneksi ekspor, Anda memilih pengguna mana yang di
 
 ## <a name="remove-a-connection"></a>Hapus koneksi
 
-Jika koneksi yang Anda hapus digunakan oleh pengayaan atau ekspor, Pertama-tama Anda harus melepaskan atau menghapusnya. Dialog hapus akan memandu Anda ke pengayaan atau ekspor yang relevan. Pengayaan dan ekspor terpisah menjadi tidak aktif. Anda mengaktifkannya kembali dengan menambahkan koneksi lain ke koneksi tersebut di halaman [Pengayaan](enrichment-hub.md) atau [Ekspor](export-destinations.md).
+Jika koneksi yang Anda hapus digunakan oleh pengayaan atau ekspor, Pertama-tama Anda harus melepaskan atau menghapusnya. Dialog hapus akan memandu Anda ke pengayaan atau ekspor yang relevan. 
+
+Pengayaan dan ekspor terpisah menjadi tidak aktif. Anda mengaktifkannya kembali dengan menambahkan koneksi lain ke koneksi tersebut di halaman [Pengayaan](enrichment-hub.md) atau [Ekspor](export-destinations.md).
 
 1. Buka **Admin** > **Koneksi (pratinjau)**.
 

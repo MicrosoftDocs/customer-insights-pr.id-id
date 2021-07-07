@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259103"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304884"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
@@ -54,29 +54,32 @@ Untuk membuat lingkungan:
 1. Pilih **baru**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pengaturan Lingkungan](media/environment-settings-dialog.png)
+   > ![Pengaturan Lingkungan.](media/environment-settings-dialog.png)
 
-1. Di dialog **buat lingkungan baru**, pilih **lingkungan baru**.
+1. Dalam dialog **Buat lingkungan**, pilih **Lingkungan baru**.
 
    Jika Anda ingin [menyalin data dari lingkungan saat ini](#considerations-for-copy-configuration-preview), pilih **salinan dari lingkungan yang ada**. Anda akan melihat daftar semua lingkungan yang tersedia di organisasi tempat Anda dapat menyalin data.
 
 1. Sediakan rincian berikut:
    - **Nama**: Ketik nama untuk lingkungan ini. Bidang ini telah diisi jika Anda telah menyalin dari lingkungan yang ada, namun Anda dapat mengubahnya.
-   - **Kawasan**: kawasan tempat layanan disebarkan dan dihosting.
    - **Jenis**: Pilih Apakah Anda ingin membuat lingkungan produksi atau Sandbox.
-
+   - **Kawasan**: kawasan tempat layanan disebarkan dan dihosting.
+   
 1. Atau, Anda dapat memilih **pengaturan tingkat lanjut**:
 
-   - **Simpan semua data ke**: menentukan lokasi penyimpanan data output yang dihasilkan dari Customer Insights. Anda akan memiliki dua pilihan: **penyimpanan Customer Insights** (Azure Data Lake yang dikelola oleh tim Customer Insights) dan **Azure Data Lake Storage Gen2** (Azure Data Lake Storage milik Anda). Secara default, pilihan penyimpanan Customer Insights dipilih.
+   - **Simpan semua data ke**: menentukan lokasi penyimpanan data output yang dihasilkan dari Customer Insights. Anda akan memiliki dua pilihan: **penyimpanan Customer Insights** (Azure Data Lake yang dikelola oleh tim Customer Insights) dan **Azure Data Lake Storage** (Azure Data Lake Storage Anda sendiri). Secara default, pilihan penyimpanan Customer Insights dipilih.
 
-   > [!NOTE]
-   > Dengan menyimpan data ke Azure Data Lake Storage, Anda setuju bahwa data akan ditransfer ke dan disimpan di lokasi geografis yang sesuai untuk akun Azure Storage, yang mungkin berbeda dari lokasi penyimpanan data di Dynamics 365 Customer Insights. [Pelajari lebih lanjut di pusat kepercayaan Microsoft.](https://www.microsoft.com/trust-center)
-   >
-   > Saat ini, entitas yang diserap akan selalu tersimpan di data Lake yang dikelola oleh customer Insights.
-   > Kami hanya mendukung akun penyimpanan Azure data Lake Gen2 dari wilayah Azure yang sama yang Anda pilih saat membuat lingkungan.
-   > Kami hanya mendukung akun penyimpanan yang diaktifkan Azure Data Lake Gen2 Hierarchical Name Space (HNS).
+     > [!NOTE]
+     > Dengan menyimpan data ke Azure Data Lake Storage, Anda setuju bahwa data akan ditransfer ke dan disimpan di lokasi geografis yang sesuai untuk akun Azure Storage, yang mungkin berbeda dari lokasi penyimpanan data di Dynamics 365 Customer Insights. [Pelajari lebih lanjut di pusat kepercayaan Microsoft.](https://www.microsoft.com/trust-center)
+     >
+     > Saat ini, entitas yang diserap akan selalu tersimpan di data Lake yang dikelola oleh customer Insights. 
+     > 
+     > Kami hanya mendukung akun Azure Data Lake Storage dari kawasan Azure yang sama yang Anda pilih saat membuat lingkungan. 
+     > 
+     > Kami hanya mendukung akun Azure Data Lake Storage yang mengaktifkan namespace hierarkis.
 
-   - Untuk opsi Azure Data Lake Storage Gen2, Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Nama **Wadah** tidak dapat diubah dan akan menjadi `customerinsights`.
+
+   - Untuk pilihan Azure Data Lake Storage tersebut, Anda dapat memilih antara pilihan berbasis sumber daya dan pilihan berbasis langganan untuk otentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Nama **Wadah** tidak dapat diubah dan akan menjadi `customerinsights`.
    
    - Jika Anda ingin menggunakan [prediksi](predictions.md), konfigurasikan berbagi data dengan Microsoft Dataverse, atau aktifkan penyerapan data dari sumber data lokal, berikan URL lingkungan Microsoft Dataverse di **Konfigurasikan berbagi data dengan Microsoft Dataverse dan aktifkan kemampuan tambahan**. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Microsoft Dataverse.
 
@@ -85,7 +88,7 @@ Untuk membuat lingkungan:
      > - [Prediksi nilai yang tidak ada pada entitas](predictions.md) saat ini tidak didukung bila Anda mengaktifkan berbagi data dengan Data Lake terkelola Microsoft Dataverse.
 
      > [!div class="mx-imgBorder"]
-     > ![Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Bila Anda menjalankan proses, seperti konsumsi data atau pembuatan segmen, folder yang sesuai akan dibuat di akun penyimpanan yang Anda tentukan di atas. File data dan file model.json akan dibuat dan ditambahkan ke folder berdasarkan nama proses.
 
@@ -113,14 +116,14 @@ Pengaturan berikut *tidak* disalin:
 
 - Profil pelanggan.
 - Kredensial sumber data. Anda harus memberikan kredensial untuk setiap sumber data dan menyegarkan sumber data secara manual.
-- Sumber data dari folder Common Data Model dan danau terkelola Common Data Service. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
+- Sumber data dari folder Common Data Model dan Data Lake terkelola Dataverse. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
 
 Bila Anda menyalin lingkungan, Anda akan melihat pesan konfirmasi bahwa lingkungan baru telah dibuat. Pilih **buka sumber data** untuk melihat daftar sumber data.
 
 Semua sumber data akan menampilkan status **kredensial yang diperlukan**. Edit sumber data dan masukkan kredensial untuk me-refresh mereka.
 
 > [!div class="mx-imgBorder"]
-> ![Sumber data disalin](media/data-sources-copied.png)
+> ![Sumber data disalin.](media/data-sources-copied.png)
 
 Setelah menyegarkan sumber data, buka **data** > **Satukan**. Di sini Anda akan menemukan pengaturan dari lingkungan sumber. Edit sesuai kebutuhan atau pilih **Jalankan** untuk memulai proses penyatuan data dan buat entitas pelanggan terpadu.
 
@@ -136,7 +139,7 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
 
 3. Di kotak **Edit lingkungan**, Anda dapat memperbarui **nama tampilan** lingkungan, tetapi Anda tidak dapat mengubah **Kawasan** atau **Jenis**.
 
-4. Jika lingkungan dikonfigurasi untuk menyimpan data di Azure Data Lake Storage Gen2, Anda dapat memperbarui **kunci akun**. Namun, Anda tidak dapat mengubah **nama akun** atau nama **penampung**.
+4. Jika lingkungan dikonfigurasi untuk menyimpan data dalam Azure Data Lake Storage, Anda dapat memperbarui **kunci Akun**. Namun, Anda tidak dapat mengubah **nama akun** atau nama **penampung**.
 
 5. Atau, Anda dapat memperbarui dari sambungan berbasis kunci akun ke sambungan berbasis sumber daya atau berbasis langganan. Setelah ditingkatkan, Anda tidak dapat kembali ke kunci akun setelah pembaruan. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Anda tidak dapat **mengubah** informasi penampung saat memperbarui sambungan.
 
@@ -158,19 +161,19 @@ Sebagai administrator, Anda dapat mengatur ulang lingkungan ke status kosong jik
 
 1.  Pilih pemilih **Lingkungan** di header aplikasi. 
 
-2.  Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis **...**. 
+2.  Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis (**...**). 
 
 3. Pilih opsi **Atur ulang**. 
 
 4.  Untuk mengkonfirmasi penghapusan, masukkan nama lingkungan dan pilih **Atur ulang**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Menghapus lingkungan yang ada (hanya tersedia untuk admin)
+## <a name="delete-an-existing-environment"></a>Menghapus lingkungan yang ada
 
 Sebagai administrator, Anda dapat menghapus lingkungan yang dikelola.
 
 1.  Pilih pemilih **Lingkungan** di header aplikasi.
 
-2.  Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis **...**. 
+2.  Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis (**...**). 
 
 3. Pilih opsi **Hapus**. 
 

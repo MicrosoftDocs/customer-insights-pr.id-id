@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965582"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305436"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang disempurnakan
 
@@ -22,11 +22,11 @@ Alamat pada data dapat tidak terstruktur, tidak lengkap, atau salah. Gunakan mod
 
 ## <a name="how-we-enhance-addresses"></a>Cara kami meningkatkan alamat
 
-Model kami melalui proses dua langkah untuk meningkatkan alamat. Pertama, ia mengurai alamat untuk mengidentifikasi komponennya dan memasukkannya ke dalam format terstruktur. Selanjutnya, kami akan menggunakan inteligensi buatan untuk mengoreksi, menyelesaikan, dan membuat standar nilai di alamat.
+Model kami melalui proses dua langkah untuk meningkatkan alamat. Pertama, ia mengurai alamat untuk mengidentifikasi komponennya dan memasukkannya ke dalam format terstruktur. Selanjutnya, kami akan menggunakan AI untuk mengoreksi, menyelesaikan, dan membuat standar nilai di alamat.
 
 ### <a name="example"></a>Contoh
 
-Informasi alamat mungkin dalam format non-standar dan berisi kesalahan ejaan. Model dapat memperbaiki masalah ini dan membuat alamat yang konsisten di profil pelanggan terpadu.
+Informasi alamat mungkin berada dalam format nonstandard dan berisi kesalahan ejaan. Model dapat memperbaiki masalah ini dan membuat alamat yang konsisten di profil pelanggan terpadu.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Alamat yang disempurnakan hanya berfungsi dengan nilai yang sudah ada di data al
 2. Memverifikasikan apakah salah satu nilai, seperti kode ZIP atau nama jalan, valid.
 3. Mengubah nilai yang tidak dikenali.
 
-Model menggunakan teknik berbasis pembelajaran mesin untuk meningkatkan alamat. Meskipun kami menerapkan ambang batas keyakinan tinggi bila model mengubah nilai input, seperti model berbasis ML, keakuratan 100% tidak dijamin.
+Model menggunakan teknik berbasis pembelajaran mesin untuk meningkatkan alamat. Meskipun kami menerapkan ambang batas keyakinan tinggi bila model mengubah nilai input, seperti model berbasis pembelajaran mesin, keakuratan 100 persen tidak dijamin.
 
 ## <a name="supported-countries-or-regions"></a>Negara atau kawasan yang didukung
 
@@ -76,7 +76,7 @@ Alamat harus berisi nilai negara/kawasan. Kami tidak memproses alamat untuk nega
 1. Pilih format alamat dalam himpunan data Anda. Pilih **Alamat atribut tunggal** jika alamat di data Anda menggunakan satu bidang. Pilih **Beberapa atribut Alamat** jika alamat di data Anda menggunakan lebih dari satu bidang data.
 
    > [!NOTE]
-   > Negara/Kawasan adalah wajib di alamat atribut tunggal dan beberapa atribut. Alamat yang tidak berisi nilai negara/kawasan yang valid atau yang didukung tidak akan diperkaya
+   > Negara/Kawasan adalah wajib di alamat atribut tunggal dan beberapa atribut. Alamat yang tidak berisi nilai negara/kawasan yang valid atau yang didukung tidak akan diperkaya.
 
 1.  Petakan bidang alamat dari entitas pelanggan terpadu Anda.
 
@@ -98,6 +98,6 @@ Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lih
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tindakan](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman yang disesuaikan bagi pelanggan Anda.
+Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

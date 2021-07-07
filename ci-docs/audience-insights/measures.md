@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049254"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304800"
 ---
 # <a name="define-and-manage-measures"></a>Menentukan dan mengelola ukuran
 
@@ -36,7 +36,7 @@ Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membu
    > [!NOTE]
    > Jika konfigurasi pengukuran baru Anda hanya memiliki dua bidang, misalnya CustomerID dan satu perhitungan, output akan ditambahkan sebagai kolom baru ke entitas yang dihasilkan sistem yang disebut Customer_Measure. Anda akan dapat melihat nilai pengukuran di profil pelanggan terpadu. Ukuran lain akan menghasilkan entitas mereka sendiri.
 
-1. Di area konfigurasi, pilih fungsi agresi dari menu drop-down **Pilih Fungsi**. Fungsi agresi mencakup: 
+1. Di area konfigurasi, pilih fungsi agregasi dari menu dropdown **Pilih Fungsi**. Fungsi agresi mencakup: 
    - **Sum**
    - **Rata-rata**
    - **Count**
@@ -69,12 +69,14 @@ Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membu
    1. Pilih **Terapkan** untuk menambahkan filter ke ukuran.
 
 1. Untuk menambahkan dimensi, pilih **Dimensi** pada area konfigurasi. Dimensi akan ditampilkan sebagai kolom dalam entitas output pengukuran.
+ 
    1. Pilih **Edit dimensi** untuk menambahkan atribut data untuk mengelompokkan nilai ukuran. Misalnya, kota atau jenis kelamin. Secara default, dimensi *CustomerID* dipilih untuk membuat *ukuran tingkat pelanggan*. Anda dapat menghilangkan dimensi default jika ingin membuat *ukuran tingkat bisnis*.
    1. Pilih **Selesai** untuk menambahkan dimensi ke ukuran.
 
 1. Jika ada nilai dalam data Anda yang perlu Anda ganti dengan bilangan bulat, misalnya, ganti *null* dengan *0*, pilih **Aturan**. Konfigurasikan aturan dan pastikan Anda hanya memilih bilangan cacah sebagai pengganti.
 
 1. Jika ada beberapa jalur antara entitas data yang Anda petakan dan entitas *Pelanggan*, Anda harus memilih salah satu jalur relasi [entitas yang diidentifikasi](relationships.md). Hasil ukuran dapat bervariasi, tergantung pada jalur yang dipilih. 
+   
    1. Pilih **preferensi Data** dan pilih jalur entitas yang harus digunakan untuk mengidentifikasi ukuran Anda. Jika hanya ada satu jalur ke entitas *Pelanggan*, kontrol ini tidak akan ditampilkan.
    1. Pilih **Selesai** untuk menerapkan pilihan Anda. 
 
@@ -113,7 +115,7 @@ Prosedur berikut ini menguraikan langkah-langkah untuk menyusun ukuran baru meng
 
 1. Pilih **Baru** dan pilih **pilih template**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Cuplikan layar menu tarik-turun saat membuat pengukuran baru dengan sorotan pada templat.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Cuplikan layar menu dropdown saat membuat pengukuran baru dengan sorotan di template.":::
 
 1. Temukan templat yang sesuai dengan kebutuhan Anda dan pilih **Pilih templat**.
 
@@ -123,7 +125,7 @@ Prosedur berikut ini menguraikan langkah-langkah untuk menyusun ukuran baru meng
 
 1. Pilih **Selesai**.
 
-1. Di bagian **Atur periode waktu**, tentukan jangka waktu data yang akan digunakan. Pilih jika Anda ingin pengukuran baru untuk mencakup seluruh himpunan data dengan memilih **Sepanjang waktu**. Atau jika Anda ingin mengukur untuk fokus pada **periode waktu tertentu**.
+1. Di bagian **Atur periode waktu**, tentukan jangka waktu data yang akan digunakan. Pilih jika Anda menginginkan ukuran baru mencakup seluruh rangkaian data dengan memilih **Sepanjang waktu**, atau jika Anda ingin agar pengukuran fokus pada **periode waktu Tertentu**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Cuplikan layar memperlihatkan bagian periode waktu saat mengonfigurasi ukuran dari templat.":::
 
@@ -142,12 +144,12 @@ Prosedur berikut ini menguraikan langkah-langkah untuk menyusun ukuran baru meng
 
 Anda dapat menemukan daftar ukuran di halaman **Ukuran**.
 
-Anda akan menemukan informasi tentang jenis pengukuran, pembuat, tanggal pembuatan, status, dan status. Bila Anda memilih ukuran dari daftar, Anda dapat mempratinjau output dan mengunduh file .CSV.
+Anda akan menemukan informasi tentang jenis pengukuran, pembuat, tanggal pembuatan, status, dan status. Bila Anda memilih ukuran dari daftar, Anda dapat mempratinjau output dan mengunduh file CSV.
 
 Untuk me-refresh semua ukuran Anda pada waktu yang sama, pilih **Segarkan semua** tanpa memilih ukuran tertentu.
 
 > [!div class="mx-imgBorder"]
-> ![Tindakan untuk mengelola ukuran tunggal](media/measure-actions.png "Tindakan untuk mengelola langkah tunggal")
+> ![Tindakan untuk mengelola ukuran tunggal.](media/measure-actions.png "Tindakan untuk mengelola ukuran tunggal.")
 
 Pilih ukuran dari daftar untuk pilihan berikut:
 
@@ -159,11 +161,11 @@ Pilih ukuran dari daftar untuk pilihan berikut:
 - **Aktifkan** atau **Nonaktifkan**. Ukuran yang tidak aktif tidak akan di-refresh selama [refresh terjadwal](system.md#schedule-tab).
 
 > [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
+> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda akan menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, serta semua kesalahan dan peringatan yang terkait dengan tugas.
 
 ## <a name="next-step"></a>Langkah selanjutnya
 
-Anda dapat menggunakan ukuran yang ada untuk membuat [segmen pelanggan](segments.md).
+Anda dapat menggunakan langkah-langkah yang ada untuk membuat [segmen pelanggan](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

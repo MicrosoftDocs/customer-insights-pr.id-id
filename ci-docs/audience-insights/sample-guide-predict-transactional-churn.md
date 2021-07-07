@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595430"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306124"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan transaksional (pratinjau)
 
-Panduan ini akan memandu Anda tentang contoh komprehensif prediksi kehilangan pelanggan transaksional di Customer Insights menggunakan data sampel yang diberikan di bawah ini. Semua data yang digunakan dalam panduan ini bukan data pelanggan nyata dan merupakan bagian dari himpunan data Aswono yang ditemukan dalam lingkungan *demo* dalam langganan customer Insights Anda.
+Panduan ini akan memandu Anda tentang contoh komprehensif prediksi kehilangan pelanggan transaksional di Customer Insights menggunakan data sampel yang diberikan di bawah ini. Semua data yang digunakan dalam panduan ini bukan data pelanggan nyata dan merupakan bagian dari dataset Contoso yang ditemukan di lingkungan *Demo* dalam Langganan Customer Insights Anda.
 
 ## <a name="scenario"></a>Skenario
 
-Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang dijual melalui situs web Kopi Aswono. Tujuan mereka adalah untuk mengetahui Pelanggan mana yang biasanya membeli produk mereka secara teratur, yang akan berhenti menjadi pelanggan aktif dalam 60 hari berikutnya. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
+Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang mereka jual melalui situs web Kopi Contoso mereka. Tujuan mereka adalah untuk mengetahui Pelanggan mana yang biasanya membeli produk mereka secara teratur, yang akan berhenti menjadi pelanggan aktif dalam 60 hari berikutnya. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -109,9 +109,9 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
 
-1. Di daftar drop-down **utama**, pilih **ecommercecontacts: eCommerce** sebagai sumber utama dan mencakup semua rekaman.
+1. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
 
-1. Pada daftar drop-down **entitas 2**, pilih **Loycustomer: LoyaltyScheme** dan sertakan semua rekaman.
+1. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Satukan dan cocokkan eCommerce dan Loyalty.":::
 
@@ -119,16 +119,16 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Tambahkan kondisi pertama Anda menggunakan FullName.
 
-   * Untuk eCommerceContacts, pilih **fullname** di drop-down.
-   * Untuk loyCustomers, pilih **fullname** di drop-down.
+   * Untuk eCommerceContacts, pilih **FullName** di dropdown.
+   * Untuk loyCustomers, pilih **FullName** di dropdown.
    * Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
 1. Masukkan nama **fullname, email** untuk aturan baru.
 
    * Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   * Untuk eCommerceContacts entitas, pilih **email** di drop-down.
-   * Untuk loyCustomers entitas, pilih **email** di drop-down. 
+   * Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
+   * Untuk entitas loyCustomers, pilih **EMail** di dropdown. 
    * Biarkan Normalkan kosong. 
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 

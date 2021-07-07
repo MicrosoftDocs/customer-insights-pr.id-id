@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896331"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304608"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -57,13 +57,13 @@ Pilih salah satu ubin pelanggan untuk membuka **halaman rincian pelanggan**. Tam
 
 Rincian pelanggan mencakup:
 
--   **Ubin profil pelanggan:** ubin ini menampilkan nilai yang berbeda dari entitas profil pelanggan terpadu. Rincian ini dapat mencakup alamat email, nama, kota, dan sebagainya. 
+-   **Ubin profil pelanggan**: ubin ini menampilkan nilai yang berbeda dari entitas profil pelanggan terpadu. Rincian ini dapat mencakup alamat email, nama, kota, dan sebagainya. 
 
--   **Minat potensial, merek potensial:** ditampilkan jika Anda mengonfigurasi pengayaan pihak pertama. Ini menunjukkan potensi minat dan afinitas untuk merek yang memiliki profil pelanggan yang serupa dengan yang mungkin dimiliki pelanggan ini. Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md).
+-   **Minat potensial, merek potensial**: ditampilkan jika Anda mengonfigurasi pengayaan pihak pertama. Ini menunjukkan potensi minat dan afinitas untuk merek yang memiliki profil pelanggan yang serupa dengan yang mungkin dimiliki pelanggan ini. Untuk informasi lebih lanjut, lihat [memperkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md).
 
--   **Tindakan:** menunjukkan jika Anda mengonfigurasi satu atau beberapa ukuran dari jenis tertentu: ukuran atribut pelanggan. Mereka mencakup KPI yang dihitung di sekitar pelanggan Anda di tingkat pelanggan individual. Untuk informasi lebih lanjut, lihat [menentukan dan mengelola langkah](measures.md).
+-   **Tindakan**: menunjukkan jika Anda mengonfigurasi satu atau beberapa ukuran dari jenis tertentu: ukuran atribut pelanggan. Mereka mencakup KPI yang dihitung di sekitar pelanggan Anda di tingkat pelanggan individual. Untuk informasi lebih lanjut, lihat [menentukan dan mengelola langkah](measures.md).
 
--   **Timeline aktivitas:** menunjukkan apakah Anda telah mengonfigurasi aktivitas. Tampilan Timeline berisi aktivitas yang diurutkan secara kronologis dari pelanggan ini, dimulai dengan aktivitas terbaru. Untuk informasi lebih lanjut, lihat [Aktivitas pelanggan](activities.md).
+-   **Timeline aktivitas**: menunjukkan apakah Anda telah mengonfigurasi aktivitas. Tampilan Timeline berisi aktivitas yang diurutkan secara kronologis dari pelanggan ini, dimulai dengan aktivitas terbaru. Untuk informasi lebih lanjut, lihat [Aktivitas pelanggan](activities.md).
 
 pilih **kembali ke pelanggan** untuk kembali ke halaman pencarian pelanggan.
 

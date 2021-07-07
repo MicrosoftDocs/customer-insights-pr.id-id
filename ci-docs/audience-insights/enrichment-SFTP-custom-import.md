@@ -9,22 +9,22 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896285"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304654"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Memperkaya profil pelanggan dengan data kustom (pratinjau)
 
-Impor kustom Secure File Transfer Protocol (SFTP) memungkinkan Anda mengimpor data yang tidak harus melalui proses penyatuan data. Cara yang fleksibel, aman, dan mudah untuk membawa data Anda. Impor kustom SFTP dapat digunakan bersama dengan [ekspor SFTP](export-sftp.md) yang memungkinkan Anda mengekspor data profil pelanggan yang diperlukan untuk pengayaan. Data selanjutnya dapat diproses, diperkaya, dan impor kustom SFTP dapat digunakan untuk menghadirkan data yang diperkaya kembali ke kemampuan wawasan audiens Dynamics 365 Customer Insights.
+Impor kustom protokol transfer file aman (SFTP) memungkinkan Anda mengimpor data yang tidak harus melalui proses penyatuan data. Cara yang fleksibel, aman, dan mudah untuk membawa data Anda. Impor kustom SFTP dapat digunakan bersama dengan [ekspor SFTP](export-sftp.md) yang memungkinkan Anda mengekspor data profil pelanggan yang diperlukan untuk pengayaan. Selanjutnya data dapat diproses dan diperkaya, dan impor kustom SFTP dapat digunakan untuk mengembalikan data yang diperkaya menjadi kemampuan wawasan audiens Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 Untuk mengkonfigurasikan impor kustom SFTP, persyaratan berikut harus dipenuhi:
 
-- Anda memiliki nama file dan lokasi (jalur) file yang akan diimpor pada host SFTP.
+- Anda memiliki nama file dan lokasi (jalur) file yang akan diimpor di host SFTP.
 - Ada file *model.json* yang menentukan [skema Common Data Model](/common-data-model/) untuk data yang akan diimpor. File ini harus berada di direktori yang sama dengan file yang akan diimpor.
 - Koneksi SFTP telah dikonfigurasi oleh administrator *atau* Anda memiliki izin [administrator](permissions.md#administrator). Anda akan memerlukan kredensial pengguna, URL, dan nomor port untuk lokasi SFTP tempat Anda ingin mengimpor data.
 
@@ -37,11 +37,11 @@ Untuk mengkonfigurasikan impor kustom SFTP, persyaratan berikut harus dipenuhi:
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Petak Impor Kustom SFTP.":::
 
-1. Pilih [koneksi](connections.md) dari menu tarik-turun. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi** dan memilih **Impor Kustom SFTP** dari menu tarik-turun.
+1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda administrator, Anda dapat membuat sambungan dengan memilih **Tambah sambungan** dan memilih **Impor Kustom SFTP** dari daftar dropdown.
 
 1. Pilih **Sambungkan ke Impor Kustom** untuk mengonfirmasi koneksi yang dipilih.
 
-1.  Pilih **Berikutnya** dan masukkan **Nama File** dan **Jalur** file data yang ingin Anda impor.
+1.  Pilih **Berikutnya**, lalu masukkan **Jalur** dan **Nama File** dari file data yang akan diimpor.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Cuplikan layar saat memasukkan lokasi data.":::
 
@@ -55,16 +55,16 @@ Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan
 
 1. Masukkan nama untuk koneksi dalam kotak **nama tampilan**.
 
-1. Masukkan nama pengguna, kata sandi, dan URL host yang valid untuk server STFP tempat data yang akan diimpor berada.
+1. Masukkan nama pengguna, sandi, dan URL host yang valid untuk server tempat SFTP yang datanya akan diimpor berada.
 
 1. Tinjau dan berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**.
 
 1. Pilih **Verifikasi** untuk memvalidasi konfigurasi.
 
-1. Setelah verifikasi selesai, koneksi dapat disimpan dengan mengklik **Simpan**.
+1. Setelah verifikasi selesai, sambungan dapat disimpan dengan memilih **Simpan**.
 
-> [!div class="mx-imgBorder"]
-   > ![halaman konfigurasi koneksi Experian](media/enrichment-SFTP-connection.png "halaman konfigurasi koneksi Experian.")
+   > [!div class="mx-imgBorder"]
+   > ![halaman Panel Konfigurasi koneksi Experian](media/enrichment-SFTP-connection.png "halaman Panel Konfigurasi koneksi Experian")
 
 
 ## <a name="defining-field-mappings"></a>Menentukan pemetaan bidang 
@@ -123,6 +123,6 @@ Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lih
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tindakan](measures.md), dan [ekspor data](export-destinations.md) untuk memberikan pengalaman yang disesuaikan dengan pelanggan Anda.
+Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
