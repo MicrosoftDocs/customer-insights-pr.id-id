@@ -1,7 +1,7 @@
 ---
 title: Konektor Power BI
 description: Pelajari cara menggunakan konektor Dynamics 365 Customer Insights di Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596043"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661106"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor untuk Power BI (pratinjau)
 
@@ -39,7 +39,7 @@ Buat visualisasi untuk data Anda dengan Power BI Desktop. Buat wawasan tambahan 
 
 1. Di kotak dialog **Navigator**. Anda akan melihat daftar semua lingkungan yang dapat Anda akses. Perluas lingkungan dan buka folder apa pun (entitas, langkah-langkah, segmen, pengayaan). Misalnya, buka folder **entitas**, untuk melihat semua entitas yang dapat diimpor.
 
-   ![Power BI Connector Navigator](media/power-bi-navigator.png "Power BI Connector Navigator")
+   ![Power BI Connector Navigator.](media/power-bi-navigator.png "Power BI Connector Navigator")
 
 1. Pilih kotak centang di samping entitas untuk mencakup dan **memuat**. Anda dapat memilih beberapa entitas dari beberapa lingkungan.
 
@@ -68,5 +68,11 @@ Anda dapat mengidentifikasi dan menghilangkan duplikat Relasi.
 3. Hilangkan duplikat Relasi yang diidentifikasi.
 
 Setelah penghapusan duplikat Relasi, coba untuk mengkonfigurasi Power BI connector lagi. Lingkungan seharusnya tersedia sekarang.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Kesalahan pada bidang tanggal saat memuat entitas di Power BI Desktop
+
+Saat memuat entitas yang berisi bidang dengan format tanggal seperti MM/DD/YYYY, Anda dapat mengalami kesalahan karena format lokal yang tidak cocok. Ketidakcocokan ini terjadi ketika file Power BI Desktop Anda diatur ke lokal lain daripada Inggris (Amerika Serikat), karena bidang tanggal dalam audiens wawasan disimpan dalam format AS.
+
+File Power BI Desktop memiliki satu pengaturan lokal, yang diterapkan saat mengambil data. Untuk mendapatkan tanggal ini ditafsirkan dengan benar, atur lokal .BPI ke Bahasa Inggris (Amerika Serikat). [Pelajari cara mengubah lokal file Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

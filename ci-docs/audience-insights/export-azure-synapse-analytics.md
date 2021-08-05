@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977381"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327368"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Ekspor data ke Azure Synapse Analytics (pratinjau)
 
@@ -74,8 +74,10 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 1. Berikan daftar **nama tampilan** yang dapat dikenali untuk ekspor Anda dan **nama Database**.
 
 1. Pilih entitas yang akan diekspor ke Azure Synapse Analytics.
+   > [!NOTE]
+   > Sumber data berdasarkan [folder Common Data Model](connect-common-data-model.md) tidak didukung.
 
-1. Pilih **Simpan**.
+2. Pilih **Simpan**.
 
 Menyimpan ekspor tidak segera menjalankan ekspor.
 

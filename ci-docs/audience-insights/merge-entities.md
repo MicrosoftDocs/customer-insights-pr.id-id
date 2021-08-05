@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305645"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650138"
 ---
 # <a name="merge-entities"></a>Gabungkan Entitas
 
@@ -109,7 +109,7 @@ Beberapa entitas berisi rincian lebih banyak daripada entitas lain. Jika entitas
 Apakah Anda menggabungkan atribut secara manual atau membiarkan sistem menggabungkannya, Anda dapat menjalankan gabungan. Pada halaman **Gabungkan**, pilih **Jalankan** untuk memulai proses.
 
 > [!div class="mx-imgBorder"]
-> ![menyimpan dan menjalankan Gabungan data](media/configure-data-merge-save-run.png "menyimpan dan menjalankan Gabungan data")
+> ![menyimpan dan menjalankan Gabungan data.](media/configure-data-merge-save-run.png "menyimpan dan menjalankan Gabungan data")
 
 Pilih **Jalankan hanya penggabungan** jika Anda hanya ingin melihat output yang tercermin di entitas pelanggan terpadu. Proses hilir akan di-refresh sebagaimana [ditentukan dalam jadwal refresh](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Pilih **Jalankan Proses Penggabungan dan hilir** untuk me-refresh sistem dengan 
 Untuk membuat perubahan lebih banyak dan menjalankan ulang langkah, Anda dapat membatalkan penggabungan yang sedang berlangsung. Pilih teks **menyegarkan...** dan pilih **Batalkan pekerjaan**  di panel sisi yang muncul.
 
 > [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
+> Setelah menjalankan proses penggabungan, pilih status proses untuk membuka panel **Detail tugas**. Ini memberikan gambaran umum tentang waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan dan peringatan yang terkait dengan tugas. Pilih **Lihat detail** untuk melihat entitas mana yang berpartisipasi dalam proses pencocokan, apakah resolusi konflik berhasil, dan apakah pembaruan berhasil diterbitkan.  
+> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Jalur telusuri paling detail untuk mendapatkan detail proses dari link status tugas.":::
 
 ## <a name="next-step"></a>Langkah Berikutnya
 

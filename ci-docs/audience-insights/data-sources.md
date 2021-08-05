@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304700"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692439"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
@@ -30,13 +31,13 @@ Anda dapat menambahkan sumber data dengan tiga cara utama:
 
 - [melalui lusinan Power Query connectors](connect-power-query.md)
 - [Dari folder Common Data Model](connect-common-data-model.md)
-- [Dari Danau Microsoft Dataverse Anda sendiri](connect-common-data-service-lake.md)
+- [Dari Danau Microsoft Dataverse Anda sendiri](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Menambahkan data dari sumber data lokal
 
-Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Microsoft Power Platform. Aliran data dapat diaktifkan di Customer Insights dengan [menyediakan URL lingkungan Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) saat menyiapkan lingkungan.
+Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Microsoft Power Platform. Aliran data dapat diaktifkan di Customer Insights dengan [menyediakan URL lingkungan Microsoft Dataverse](get-started-paid.md) saat menyiapkan lingkungan.
 
-Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Customer Insights akan menggunakan [aliran data Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Hapus dan buat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk [menggunakan gateway data lokal](/data-integration/gateway/service-gateway-app.md).
+Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Customer Insights akan menggunakan [aliran data Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Hapus dan buat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk [menggunakan gateway data lokal](/data-integration/gateway/service-gateway-app).
 
 Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
 
@@ -45,7 +46,7 @@ Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan
 Anda akan melihat nama dari setiap sumber data yang diserap, statusnya, serta waktu terakhir data disegarkan untuk sumber itu. Anda dapat mengurutkan daftar sumber data menurut setiap kolom.
 
 > [!div class="mx-imgBorder"]
-> ![Sumber Data ditambahkan](media/configure-data-datasource-added.png "Sumber Data ditambahkan")
+> ![Sumber Data ditambahkan.](media/configure-data-datasource-added.png "Sumber Data ditambahkan")
 
 |Status  |KETERANGAN  |
 |---------|---------|

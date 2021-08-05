@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306032"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650322"
 ---
 # <a name="match-entities"></a>Pencocokan Entitas
 
@@ -138,7 +138,7 @@ Menentukan aturan deduplikasi tidak wajib. Jika tidak ada aturan yang dikonfigur
    - **Paling lama** : mengidentifikasi rekaman pemenang berdasarkan keterkinian terlama. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
  
    > [!div class="mx-imgBorder"]
-   > ![Aturan deduplikasi langkah 1](media/match-selfconflation.png "Aturan deduplikasi langkah 1")
+   > ![Aturan deduplikasi langkah 1.](media/match-selfconflation.png "Aturan deduplikasi langkah 1")
  
 1. Setelah entitas dipilih dan preferensi penggabungan mereka diatur, pilih **Tambahkan aturan** untuk menentukan aturan deduplikasi pada tingkat entitas.
    - **Pilih bidang** mencantumkan semua bidang yang tersedia dari entitas tersebut. Pilih bidang yang ingin Anda periksa duplikatnya. Pilih bidang yang mungkin unik untuk setiap pelanggan. Contohnya, alamat email, atau kombinasi nama, kota, dan nomor telepon.
@@ -146,7 +146,7 @@ Menentukan aturan deduplikasi tidak wajib. Jika tidak ada aturan yang dikonfigur
    - Tentukan kondisi lainnya dengan memilih **Tambah kondisi**.
  
    > [!div class="mx-imgBorder"]
-   > ![Aturan deduplikasi langkah 2](media/match-selfconflation-rules.png "Aturan deduplikasi langkah 2")
+   > ![Aturan deduplikasi langkah 2.](media/match-selfconflation-rules.png "Aturan deduplikasi langkah 2")
 
   Anda dapat membuat beberapa aturan deduplikasi untuk suatu entitas. 
 
@@ -179,7 +179,9 @@ Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Jalankan** untuk memula
 Anda akan menemukan hasil penjalanan yang sukses,entitas profil pelanggan terpadu, pada halaman **Entitas**. Entitas pelanggan terpadu Anda disebut **Pelanggan** di bagian **Profil**. Keberhasilan menjalankan kecocokan pertama akan membuat entitas *Pelanggan* terpadu. Semua penjalanan kecocokan berikutnya memperluas entitas tersebut.
 
 > [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
+> Setelah menjalankan proses pencocokan, pilih status proses untuk membuka panel **Detail tugas**. Ini memberikan gambaran umum tentang waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan dan peringatan yang terkait dengan tugas. Pilih **Lihat detail** untuk melihat entitas mana yang berpartisipasi dalam proses pencocokan, aturan mana yang diterapkan kepada mereka, dan apakah pembaruan berhasil diterbitkan.  
+> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Jalur telusuri paling detail untuk mendapatkan detail proses dari link status tugas.":::
 
 ## <a name="review-and-validate-your-matches"></a>Tinjau dan validasi kecocokan Anda
 

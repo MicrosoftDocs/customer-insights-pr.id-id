@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596365"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692309"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skema entitas dalam Common Data Model
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596365"
 
 Model data bersama ini memungkinkan aplikasi dan integrator data berkolaborasi lebih mudah dengan menyediakan definisi data terpadu. Common Data Model mencakup sistem metadata kaya dengan entitas standar, Relasi, hierarki, properti, dan lainnya. Ini berasal dari aplikasi Dynamics 365 dan bersumber terbuka di GitHub dengan lebih dari 260 entitas standar. Sistem besar mitra internal dan eksternal berkontribusi pada konsep industri khusus untuk Common Data Model.
 
-Beberapa sistem dan platform menerapkan Common Data Model hari ini, termasuk aliran data Power BI dan Azure Data Services. Ini sudah didukung dalam Common Data Service, Dynamics 365, Power Apps, Power BI, dan layanan data Azure mendatang, yang langsung menimbulkan nilai terhadap [prakarsa data terbuka](https://www.microsoft.com/open-data-initiative).
+Beberapa sistem dan platform menerapkan model data umum hari ini, termasuk dataflow Power BI dan Azure Data Services. Ini sudah didukung dalam Microsoft Dataverse, Dynamics 365, Power Apps, Power BI, dan layanan data Azure mendatang, yang langsung menimbulkan nilai terhadap [prakarsa data terbuka](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Skema entitas Customer Insights
 
@@ -44,7 +44,7 @@ Untuk informasi lebih lanjut, lihat dokumentasi tentang [skema entitas Customer 
 
 Anda dapat melihat entitas [Navigator entitas Common Data Model](https://microsoft.github.io/CDM/). Pilih tombol **Muat dari GitHub!** dan navigasi ke **foundationcommon** > **crmcommon** > **solusi** > **customerinsights** di mana Anda akan menemukan daftar entitas Customer Insights dan definisinya.
 > [!div class="mx-imgBorder"]
-> ![Navigator Entitas CDM menampilkan entitas CustomerActivity](media/CDM-entity-navigator.png "Navigator Entitas CDM menampilkan entitas CustomerActivity")
+> ![Navigator Entitas CDM menampilkan entitas CustomerActivity.](media/CDM-entity-navigator.png "Navigator Entitas CDM menampilkan entitas CustomerActivity")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

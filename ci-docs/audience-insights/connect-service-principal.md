@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596503"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692117"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure untuk wawasan audiens
 
 Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas. Selain masuk aplikasi sebagai pengguna yang memiliki hak istimewa, Azure menawarkan prinsipal layanan. Baca terus untuk mempelajari cara menyambung wawasan audiens dengan akun Azure Data Lake Storage Gen2 menggunakan prinsip layanan Azure dan bukan kunci akun penyimpanan. 
 
-Anda dapat menggunakan prinsipal layanan untuk [menambahkan atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [membuat yang baru atau memperbarui lingkungan yang ada](manage-environments.md#create-an-environment-in-an-existing-organization).
+Anda dapat menggunakan prinsipal layanan untuk [menambahkan atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [membuat yang baru atau memperbarui lingkungan yang ada](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Akun penyimpanan Azure Data Lake Gen2 yang ingin menggunakan layanan utama harus [mengaktifkan Spasi Nama hierarkis (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Dapat memakan waktu hingga 15 menit untuk menyebarkan perubahan.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Masukkan ID sumber daya azure atau rincian langganan azure di lampiran akun penyimpanan ke wawasan audiens.
 
-Lampirkan akun penyimpanan Azure Data Lake di wawasan audiens untuk [menyimpan data output](manage-environments.md) atau [gunakan sebagai sumber data](connect-common-data-service-lake.md). Memilih pilihan Azure data Lake memungkinkan Anda memilih antara pendekatan berbasis sumber daya atau berbasis langganan.
+Lampirkan akun penyimpanan Azure Data Lake di wawasan audiens untuk [menyimpan data output](manage-environments.md) atau [gunakan sebagai sumber data](connect-dataverse-managed-lake.md). Memilih pilihan Azure data Lake memungkinkan Anda memilih antara pendekatan berbasis sumber daya atau berbasis langganan.
 
 Ikuti langkah-langkah berikut untuk menyediakan informasi yang diperlukan tentang pendekatan yang dipilih.
 

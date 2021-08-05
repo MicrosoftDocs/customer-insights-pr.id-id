@@ -1,7 +1,7 @@
 ---
 title: Perkaya profil pelanggan terpadu
 description: Gunakan kemampuan untuk memperkaya data pelanggan Anda.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305252"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555265"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
 Gunakan data dari sumber seperti Microsoft dan mitra lainnya untuk memperkaya data pelanggan Anda.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Halaman hub pengayaan":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Halaman hub pengayaan.":::
 
 Di wawasan audiens, buka **Data** > **pengayaan** untuk menangani pilihan pengayaan.  
 
@@ -42,9 +43,9 @@ Pada **tab pengayaan saya**, Anda dapat melihat pengayaan yang telah dikonfigura
 
 Buka tab **Pengayaan saya** untuk melihat semua pengayaan terkonfigurasi. Setiap pengayaan ditunjukkan sebagai baris yang mencakup informasi tambahan tentang pengayaan.
 
-Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga dapat memilih elipsis (...) pada item daftar untuk melihat opsi.
+Pilih pengayaan untuk melihat opsi yang tersedia. Anda juga dapat memilih elipsis (...) pada item daftar untuk melihat opsi. Jika Anda mengonfigurasi beberapa pengayaan, Anda bisa menggunakan kotak pencarian untuk menemukannya dengan cepat.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Pilihan untuk mengelola pengayaan dalam daftar pengayaan":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Pilihan untuk mengelola pengayaan dalam daftar pengayaan.":::
 
 - **Lihat** rincian pengayaan dengan jumlah profil pelanggan yang diperkaya.
 - **Edit** konfigurasi pengayaan.
@@ -52,7 +53,7 @@ Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga dapat memilih eli
 - **Nonaktifkan** pengayaan yang ada untuk menghentikannya secara otomatis dengan setiap penyegaran terjadwal. Data dari penyegaran yang berhasil terakhir akan terus tersedia. **Aktifkan** pengayaan tidak aktif untuk me-restart penyegaran otomatis dengan setiap penyegaran terjadwal.
 - **Hapus** pengayaan.
 
-Anda dapat menjalankan atau menonaktifkan beberapa pengayaan sekaligus dengan memilihnya dalam daftar. Pilihan Lihat dan Edit tidak tersedia sebagai tindakan massal dan hanya berfungsi untuk satu pengayaan setiap kalinya.
+Jalankan atau nonaktifkan beberapa pengayaan sekaligus dengan memilihnya dalam daftar. Opsi tampilan dan pengeditan tidak tersedia sebagai tindakan massal. Mereka hanya bekerja untuk satu pengayaan pada satu waktu.
 
 ## <a name="enrichments-and-connections"></a>Koneksi dan pengayaan
 

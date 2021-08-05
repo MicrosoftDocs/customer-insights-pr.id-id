@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304654"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555403"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Memperkaya profil pelanggan dengan data kustom (pratinjau)
 
@@ -64,7 +64,7 @@ Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan
 1. Setelah verifikasi selesai, sambungan dapat disimpan dengan memilih **Simpan**.
 
    > [!div class="mx-imgBorder"]
-   > ![halaman Panel Konfigurasi koneksi Experian](media/enrichment-SFTP-connection.png "halaman Panel Konfigurasi koneksi Experian")
+   > ![halaman Panel Konfigurasi koneksi Experian.](media/enrichment-SFTP-connection.png "halaman Panel Konfigurasi koneksi Experian")
 
 
 ## <a name="defining-field-mappings"></a>Menentukan pemetaan bidang 

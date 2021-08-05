@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095652"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556311"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prediksi kehilangan langganan (pratinjau)
 
@@ -63,7 +63,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 1. Di wawasan audiens, buka **Intelijen** > **Prediksi**.
 1. Pilih ubin **model kehilangan langganan (pratinjau)** dan pilih **gunakan model ini**.
    > [!div class="mx-imgBorder"]
-   > ![Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini](media/subscription-churn-usethismodel.PNG "Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini")
+   > ![Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini.](media/subscription-churn-usethismodel.PNG "Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini")
 
 ### <a name="name-model"></a>Beri nama model
 
@@ -86,11 +86,11 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
     1. Pilih **entitas pelanggan** yang cocok dengan entitas pelanggan utama Anda.
     1. Masukkan nama yang mendeskripsikan relasi.
        > [!div class="mx-imgBorder"]
-       > ![Halaman Riwayat langganan yang menampilkan pembuatan relasi dengan pelanggan](media/subscription-churn-subscriptionhistoryrelationship.PNG "Halaman Riwayat langganan yang menampilkan pembuatan relasi dengan pelanggan")
+       > ![Halaman Riwayat langganan yang menampilkan pembuatan relasi dengan pelanggan.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Halaman Riwayat langganan yang menampilkan pembuatan relasi dengan pelanggan")
 1. Pilih **Selanjutnya**.
 1. Petakan bidang semantik ke atribut di dalam entitas riwayat langganan Anda dan pilih **Simpan**. Untuk Deskripsi bidang, lihat [prasyarat](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Halaman Riwayat langganan menampilkan atribut semantik yang dipetakan ke bidang pada entitas riwayat langganan yang dipilih](media/subscription-churn-subscriptionhistorymapping.PNG "Halaman Riwayat langganan menampilkan atribut semantik yang dipetakan ke bidang pada entitas riwayat langganan yang dipilih")
+   > ![Halaman Riwayat langganan menampilkan atribut semantik yang dipetakan ke bidang pada entitas riwayat langganan yang dipilih.](media/subscription-churn-subscriptionhistorymapping.PNG "Halaman Riwayat langganan menampilkan atribut semantik yang dipetakan ke bidang pada entitas riwayat langganan yang dipilih")
 1. Pilih **Tambah data** untuk **aktivitas pelanggan** dan pilih entitas yang menyediakan informasi aktivitas pelanggan sebagaimana dijelaskan dalam prasyarat.
 1. Pilih jenis aktivitas yang cocok dengan jenis aktivitas Pelanggan yang Anda konfigurasikan.  Pilih **Buat baru** dan berikan nama jika Anda tidak melihat pilihan yang sesuai dengan jenis aktivitas yang Anda butuhkan.
 1. Anda harus mengkonfigurasi relasi dari entitas aktivitas pelanggan Anda ke entitas pelanggan.
@@ -101,7 +101,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 1. Petakan bidang semantik ke atribut di dalam entitas aktivitas pelanggan Anda dan pilih **Simpan**. Untuk Deskripsi bidang, lihat [prasyarat](#prerequisites).
 1. (Opsional)Jika Anda memiliki aktivitas pelanggan lain yang ingin Anda masukkan, ulangi langkah di atas.
    > [!div class="mx-imgBorder"]
-   > ![Tentukan relasi entitas](media/subscription-churn-customeractivitiesmapping.PNG "Halaman Aktivitas pelanggan menampilkan atribut semantik yang dipetakan ke bidang pada entitas aktivitas pelanggan yang dipilih").
+   > ![Tentukan relasi entitas.](media/subscription-churn-customeractivitiesmapping.PNG "Halaman Aktivitas pelanggan menampilkan atribut semantik yang dipetakan ke bidang pada entitas aktivitas pelanggan yang dipilih")
 1. Pilih **Selanjutnya**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Mengatur konfigurasi jadwal dan ulasan
@@ -115,7 +115,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 
 1. Buka tab **prediksi saya** pada **intelijen** > **prediksi**.
    > [!div class="mx-imgBorder"]
-   > ![Tampilan halaman prediksi saya](media/subscription-churn-mypredictions.PNG "Tampilan halaman prediksi saya")
+   > ![Tampilan halaman prediksi saya.](media/subscription-churn-mypredictions.PNG "Tampilan halaman prediksi saya")
 1. Pilih prediksi yang ingin Anda tinjau.
    - **Nama prediksi:** nama prediksi yang diberikan saat membuatnya.
    - **Jenis prediksi:** jenis model yang digunakan untuk prediksi
@@ -131,7 +131,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
    - **Terakhir Diperbarui:** tanggal prediksi yang disegarkan dihasilkan dalam entitas output.
 1. Pilih elips vertikal di samping prediksi yang ingin Anda tinjau hasilnya dan pilih **Lihat**.
    > [!div class="mx-imgBorder"]
-   > ![Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus](media/subscription-churn-verticalellipses.PNG "Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus")
+   > ![Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus.](media/subscription-churn-verticalellipses.PNG "Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus")
 1. Terdapat tiga bagian utama data dalam halaman hasil:
     1. **Performa model pelatihan:** A, B, atau C adalah Skor yang mungkin. Skor ini menunjukkan performa prediksi, dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang tersimpan di entitas output.
         - Skor ditentukan berdasarkan aturan berikut:
@@ -139,13 +139,13 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
             - **A** bila model ini secara akurat memperkirakan minimal 50% dari total prediksi, dan bila persentase prediksi yang akurat untuk pelanggan yang hilang lebih besar hingga 10% dari tingkat kehilangan pelanggan rata-rata historis.
             - **C** bila model akurat diprediksi kurang 50% dari total prediksi, atau ketika persentase prediksi yang akurat untuk pelanggan yang hilang kurang dari tingkat kehilangan pelanggan rata-rata historis.
                > [!div class="mx-imgBorder"]
-               > ![Tampilan hasil kinerja model](media/subscription-churn-modelperformance.PNG "Tampilan hasil kinerja model")
+               > ![Tampilan hasil kinerja model.](media/subscription-churn-modelperformance.PNG "Tampilan hasil kinerja model")
     1. **Kecenderungan untuk kehilangan (jumlah pelanggan):** grup pelanggan berdasarkan prediksi risiko kehilangan. Data ini dapat membantu Anda nanti jika Anda ingin membuat segmen pelanggan dengan risiko kehilangan tinggi. Segmen tersebut membantu memahami tempat batas Anda untuk keanggotaan segmen.
        > [!div class="mx-imgBorder"]
-       > ![Grafik menunjukkan pembagian hasil kehilangan, yang dipecah dalam kisaran dari 0-100%](media/subscription-churn-resultdistribution.PNG "Grafik menunjukkan pembagian hasil kehilangan, yang dipecah dalam kisaran dari 0-100%")
+       > ![Grafik menunjukkan pembagian hasil kehilangan, yang dipecah dalam kisaran dari 0-100%.](media/subscription-churn-resultdistribution.PNG "Grafik menunjukkan pembagian hasil kehilangan, yang dipecah dalam kisaran dari 0-100%")
     1. **Faktor yang paling berpengaruh:** ada banyak faktor yang diperhitungkan saat membuat prediksi. Masing-masing faktor memiliki kepentingan yang diperhitungkan untuk prediksi gabungan yang dibuat model. Anda dapat menggunakan faktor ini untuk membantu memvalidasi hasil prediksi. Atau Anda dapat menggunakan informasi ini nanti untuk [membuat segmen](segments.md) yang dapat membantu mempengaruhi risiko kehilangan untuk pelanggan.
        > [!div class="mx-imgBorder"]
-       > ![Daftar menunjukkan faktor berpengaruh dan pentingnya mereka dalam memprediksi hasil kehilangan](media/subscription-churn-influentialfactors.PNG "Daftar menunjukkan faktor berpengaruh dan pentingnya mereka dalam memprediksi hasil kehilangan")
+       > ![Daftar menunjukkan faktor berpengaruh dan pentingnya mereka dalam memprediksi hasil kehilangan.](media/subscription-churn-influentialfactors.PNG "Daftar menunjukkan faktor berpengaruh dan pentingnya mereka dalam memprediksi hasil kehilangan")
 
 ## <a name="manage-predictions"></a>Kelola prediksi
 

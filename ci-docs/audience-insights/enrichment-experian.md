@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309824"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555357"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Perkaya profil pelanggan dengan demografi dari Experian (pratinjau)
 
@@ -39,7 +39,7 @@ Kami saat ini hanya mendukung pengayaan profil pelanggan di Amerika Serikat.
 1. Pilih **Perkaya data saya** pada petak Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian lain](media/experian-tile.png "Experian tile")
+   > ![petak Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda administrator, Anda dapat membuat sambungan dengan memilih **Tambah sambungan** dan memilih Experian dari daftar dropdown. 

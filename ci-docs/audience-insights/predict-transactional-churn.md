@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095606"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559409"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prediksi kehilangan pelanggan transaksional (pratinjau)
 
@@ -47,7 +47,7 @@ Prediksi kehilangan pelanggan transaksional membantu memprediksi apakah pelangga
         - **Aktivitas**: nama aktivitas yang ingin Anda gunakan. Misalnya, bidang yang disebut "UserAction" di toko kelontong mungkin adalah kupon yang digunakan oleh pelanggan.
         - **Rincian:** informasi rinci tentang aktivitas. Misalnya, bidang yang disebut "CouponValue" di toko kelontong mungkin merupakan nilai mata uang kupon.
 - Karakteristik Data yang Disarankan:
-    - Data historis yang memadai: Data transaksi untuk setidaknya dua kali lipat dari periode waktu yang dipilih. Sebaiknya, dua hingga tiga tahun data langganan. 
+    - Data historis yang memadai: Data transaksi untuk setidaknya dua kali lipat dari periode waktu yang dipilih. Sebaiknya, dua hingga tiga tahun riwayat transaksi. 
     - Beberapa pembelian per pelanggan: Idealnya setidaknya dua transaksi per Pelanggan.
     - Jumlah pelanggan: Setidaknya 10 profil pelanggan, lebih disukai lebih dari 1.000 pelanggan unik. Model akan gagal dengan kurang dari 10 pelanggan dan data historis yang tidak mencukupi.
     - Kelengkapan data: Kurang dari 20% nilai yang hilang di bidang data entitas yang disediakan.

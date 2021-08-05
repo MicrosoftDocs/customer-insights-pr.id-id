@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304746"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554485"
 ---
 # <a name="work-with-customer-insights-apis"></a>Bekerja dengan API Customer Insights
 
@@ -35,7 +35,7 @@ Artikel ini menjelaskan cara mengakses API Customer Insights, membuat Pendaftara
  
    Mengaktifkan API akan membuat kunci langganan utama dan sekunder untuk instans yang digunakan dalam permintaan API. Anda dapat membuat ulang kunci dengan memilih **Buat lagi utama** atau **Buat lagi sekunder** pada **admin** > **izin** > **api**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Aktifkan API Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Aktifkan API Customer Insights.":::
 
 1. Pilih **Jelajahi API kami** untuk [mencoba API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
  
    Atau, jalankan perintah ini di **konsol manajer paket NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Tambahkan paket NuGet ke proyek Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Tambahkan paket NuGet ke proyek Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Gunakan pustaka klien C#
 
@@ -141,7 +141,7 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
 
 1. Lewati `HttpClient` ini ke dalam konstruksi klien `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Sampel httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Sampel httpclient.":::
 
 1. Lakukan panggilan dengan klien ke "metode ekstensi"—misalnya `GetAllInstancesAsync`. Jika akses ke `Microsoft.Rest.HttpOperationResponse` yang mendasari lebih disukai, gunakan "metode pesan http"—misalnya `GetAllInstancesWithHttpMessagesAsync`.
 

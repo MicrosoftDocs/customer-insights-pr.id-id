@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597423"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554439"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berbasis pembelajaran mesin Azure
 
@@ -52,7 +52,7 @@ Anda harus membuat dataset untuk menggunakan data entitas dari Customer Insights
      Di desainer, buka **pilih kolom dalam himpunan data** dan pilih **Atur sebagai parameter alur kerja** saat Anda memberikan nama untuk parameter.
 
      > [!div class="mx-imgBorder"]
-     > ![Parameterisasi himpunan data dalam desainer](media/intelligence-designer-dataset-parameters.png "Parameterisasi himpunan data dalam desainer")
+     > ![Parameterisasi himpunan data dalam desainer.](media/intelligence-designer-dataset-parameters.png "Parameterisasi himpunan data dalam desainer")
    
 * Parameter himpunan data dalam SDK (Python)
    
@@ -78,7 +78,7 @@ Anda harus membuat dataset untuk menggunakan data entitas dari Customer Insights
 
 * Desainer menyediakan [ekspor modul data](/azure/machine-learning/algorithm-module-reference/export-data) yang memungkinkan output alur untuk diekspor ke Azure Storage. Saat ini, modul harus menggunakan penyimpanan jenis **Penyimpanan Blob Azure** dan memparameterisasi **himpunan data** dan **jalur** relatif. Customer Insights mengesampingkan parameter ini selama eksekusi alur kerja dengan himpunandata dan jalur yang dapat diakses oleh produk.
    > [!div class="mx-imgBorder"]
-   > ![Ekspor Konfigurasi Modul Data](media/intelligence-designer-importdata.png "Ekspor Konfigurasi Modul Data")
+   > ![Ekspor Konfigurasi Modul Data.](media/intelligence-designer-importdata.png "Ekspor Konfigurasi Modul Data")
    
 * Saat menulis output inferensi menggunakan kode, Anda dapat mengunggah output ke jalur di dalam *himpunan data terdaftar* di ruang kerja. Jika jalur dan himpunan data yang parameterized di alur kerja, Customer Insights akan dapat membaca, dan mengimpor inferensi output. Saat ini, satu output tabular dalam format CSV didukung. Jalur harus mencakup direktori dan nama file.
 

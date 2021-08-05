@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049398"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553979"
 ---
 # <a name="entities-in-audience-insights"></a>Entitas dalam wawasan audiens
 
@@ -30,19 +30,19 @@ Halaman **entitas** mencantumkan entitas dan mencakup beberapa kolom:
 - **Terakhir Diperbarui**: tanggal dan waktu pembaruan terakhir entitas
 - **Refresh terakhir**: tanggal dan waktu penyegaran data terakhir
 
-## <a name="exploring-a-specific-entitys-data"></a>Menjelajahi data entitas tertentu
+## <a name="explore-a-specific-entitys-data"></a>Jelajahi data entitas tertentu
 
 Pilih entitas untuk menjelajahi bidang dan rekaman yang berbeda yang tercakup dalam entitas tersebut.
 
 > [!div class="mx-imgBorder"]
-> ![Pilih satu entitas](media/data-manager-entities-data.png "Pilih entitas")
+> ![Pilih entitas.](media/data-manager-entities-data.png "Pilih satu entitas")
 
 - Tab **Data** menampilkan rincian daftar tabel tentang rekaman individual entitas.
 
 > [!div class="mx-imgBorder"]
-> ![Tabel bidang](media/data-manager-entities-fields.PNG "Tabel bidang")
+> ![Tabel bidang.](media/data-manager-entities-fields.PNG "Tabel bidang")
 
-- Tab **Atribut** dipilih secara default dan menampilkan tabel untuk meninjau rincian entitas yang dipilih, seperti nama bidang, jenis data, dan jenis. Kolom **jenis** menunjukkan jenis terkait Common Data Model, yang baik yang diidentifikasi secara otomatis oleh sistem, atau yang [dipetakan secara manual](map-entities.md) oleh pengguna. Jenis semantik ini dapat berbeda dari jenis data atribut misalnya, bidang *email* di bawah ini memiliki jenis data *teks* namun jenis Common Data Model (semantik)-nya mungkin *email* atau *EmailAddress*.
+- Tab **Atribut** dipilih secara default dan menampilkan tabel untuk meninjau rincian entitas yang dipilih, seperti nama bidang, jenis data, dan jenis. Kolom **jenis** menunjukkan jenis terkait Common Data Model, yang baik yang diidentifikasi secara otomatis oleh sistem, atau yang [dipetakan secara manual](map-entities.md) oleh pengguna. Jenis ini adalah jenis semantik yang dapat berbeda dari jenis data atribut. Misalnya, bidang *email* di bawah ini memiliki jenis data *teks* namun jenis Common Data Model (semantik)-nya mungkin *email* atau *EmailAddress*.
 
 > [!NOTE]
 > Kedua tabel hanya menampilkan sampel data entitas. Untuk melihat himpunan data lengkap, buka halaman **sumber data**, pilih entitas, pilih **Edit**, lalu lihat data entitas ini dengan editor Power Query seperti dijelaskan dalam [sumber data](data-sources.md).
@@ -52,11 +52,28 @@ Untuk mempelajari lebih lanjut tentang data yang terserap di entitas, kolom **ri
 Pilih ikon diagram untuk melihat ringkasan data.
 
 > [!div class="mx-imgBorder"]
-> ![Simbol ringkasan](media/data-manager-entities-summary.png "Tabel Ringkasan Data")
+> ![Simbol ringkasan.](media/data-manager-entities-summary.png "Tabel Ringkasan Data")
 
-### <a name="next-step"></a>Langkah berikutnya
+## <a name="entity-specific-information"></a>Informasi spesifik Entitas
 
-Lihat topik [Satukan](data-unification.md) untuk mempelajari cara *memetakan*, *mencocokkan*, dan *menggabungkan* data yang terserap.
+Bagian berikut ini menyediakan informasi tentang beberapa entitas yang dibuat sistem.
+
+### <a name="corrupted-data-sources"></a>Sumber data yang rusak
+
+Bidang dari sumber data yang diserap dapat berisi data yang rusak. Rekaman dengan bidang yang rusak diekspos dalam entitas yang dibuat sistem. Mengetahui tentang rekaman yang rusak membantu Anda mengidentifikasi data mana yang akan ditinjau dan diperbarui pada sistem sumber. Setelah penyegaran berikutnya dari sumber data, rekaman yang dikoreksi diserap ke Customer Insights dan diteruskan ke proses hilir. 
+
+Misalnya, kolom 'ulang tahun' memiliki himpunan tipe data sebagai 'tanggal'. Rekaman pelanggan memasukkan ulang tahun mereka sebagai '01/01/19777'. Sistem akan menandai rekaman ini sebagai rusak. Seseorang sekarang dapat mengubah ulang tahun dalam sistem sumber menjadi '1977'. Setelah refresh otomatis sumber data, bidang sekarang memiliki format yang valid dan rekaman akan dihapus dari entitas yang rusak. 
+
+Buka **Data** > **Entitas** dan cari entitas yang rusak di bagian **Sistem**. Penamaan skema entitas yang rusak: 'DataSourceName_EntityName_corrupt'.
+
+Customer Insights masih memproses rekaman yang rusak. Namun, mereka dapat menyebabkan masalah saat bekerja dengan data terpadu.
+
+Pemeriksaan berikut ini berjalan pada data yang diserap untuk mengekspos rekaman yang rusak: 
+
+- Nilai bidang tidak cocok dengan tipe data kolomnya.
+- Bidang berisi karakter yang menyebabkan kolom tidak cocok dengan skema yang diharapkan. Misalnya: kutipan yang salah diformat, tanda kutip yang tidak di-escape, atau karakter baris baru.
+- Jika ada kolom datetime/date/datetimeoffset, formatnya perlu ditentukan dalam model jika tidak mengikuti format ISO standar.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305160"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555495"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Memperkaya profil pelanggan dengan merek dan afinitas minat (pratinjau)
 
@@ -27,7 +27,7 @@ Untuk mengkonfigurasi pengayaan afinitas merek, buka tab **temukan** dan pilih *
 Untuk mengkonfigurasi pengayaan afinitas minat, buka tab **temukan** dan pilih **Perkaya data saya** di ubin **minat**.
 
    > [!div class="mx-imgBorder"]
-   > ![Petak merek dan minat](media/BrandsInterest-tile-Hub.png "Petak merek dan minat")
+   > ![Petak merek dan minat.](media/BrandsInterest-tile-Hub.png "Petak merek dan minat")
 
 ## <a name="how-we-determine-affinities"></a>Bagaimana kami menentukan afinitas
 
@@ -123,7 +123,7 @@ Tergantung pada ukuran data pelanggan Anda, diperlukan waktu beberapa menit untu
 
 Setelah menjalankan proses pengayaan, buka **Pengayaan saya** untuk meninjau total jumlah pelanggan yang diperkaya dan perincian merek atau minat atas profil pelanggan yang diperkaya.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Pratinjau hasil setelah menjalankan proses pengayaan":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Pratinjau hasil setelah menjalankan proses pengayaan.":::
 
 Tinjau data yang diperkaya dengan memilih **Lihat data yang diperkaya** di diagram. Data yang diperkaya untuk merek beralih ke entitas **BrandAffinityFromMicrosoft**. Data untuk minat ada di entitas **InterestAffinityFromMicrosoft**. Anda juga akan menemukan entitas yang tercantum di grup **pengayaan** dalam **data** > **entitas**.
 
@@ -131,9 +131,9 @@ Tinjau data yang diperkaya dengan memilih **Lihat data yang diperkaya** di diagr
 
 afinitas Merek dan minat juga dapat dilihat pada kartu Pelanggan perorangan. Buka **pelanggan** dan pilih profil pelanggan. Di kartu pelanggan, Anda akan menemukan diagram untuk merek atau minat yang dimiliki afinitasnya oleh orang dalam profil demografi pelanggan.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartu pelanggan dengan data yang diperkaya":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartu pelanggan dengan data yang diperkaya.":::
 
-## <a name="next-steps"></a>Langkah-langkah berikutnya
+## <a name="next-steps"></a>Langkah berikutnya
 
 Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
 

@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595905"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692531"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Lengkapi data parsial dengan prediksi
 
@@ -31,11 +31,11 @@ Prediksi memungkinkan Anda dengan mudah membuat nilai prediksi yang dapat mening
 
 Sebelum organisasi Anda dapat menggunakan fitur prediksi, prasyarat berikut harus terpenuhi:
 
-1. Organisasi Anda memiliki instans yang [disiapkan di Common Data Service](/ai-builder/build-model#prerequisites) dan ada di organisasi yang sama seperti Customer Insights.
+1. Organisasi Anda memiliki instans yang [disiapkan di Microsoft Dataverse](/ai-builder/build-model#prerequisites) dan berada di organisasi yang sama dengan Customer Insights.
 
-2. Lingkungan Anda melekat pada instans Common Data Service Anda.
+2. Lingkungan audiens Anda melekat pada instans Dataverse Anda.
 
-Jika Anda [membuat lingkungan pertama](manage-environments.md), konfigurasikan di dialog **buat lingkungan** dan pilih **lanjutan**. Jika Anda telah membuat lingkungan, buka pengaturannya dan pilih **lanjutan**. Apa pun, di bagian **gunakan prediksi**, masukkan URL instans Common Data Service yang ingin Anda lampirkan lingkungan Anda.
+Jika Anda [membuat lingkungan pertama](get-started-paid.md), konfigurasikan di dialog **buat lingkungan** dan pilih **lanjutan**. Jika Anda telah membuat lingkungan, buka pengaturannya dan pilih **lanjutan**. Apa pun, di bagian **gunakan prediksi**, masukkan URL instans Dataverse yang ingin Anda lampirkan lingkungan Anda.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Membuat prediksi di entitas pelanggan
 
@@ -47,17 +47,17 @@ Jika Anda [membuat lingkungan pertama](manage-environments.md), konfigurasikan d
 
 4. Temukan nama atribut yang diinginkan untuk memprediksi nilai, lalu pilih ikon **Ikhtisar** di kolom **ringkasan**.
    > [!div class="mx-imgBorder"]
-   > ![Ikon Ikhtisar](media/intelligence-overviewicon.png "Ikon Ikhtisar")
+   > ![Ikon Ikhtisar.](media/intelligence-overviewicon.png "Ikon Ikhtisar")
 
 5. Jika ada tingkat tinggi nilai yang hilang untuk atribut Anda, pilih **Prediksikan nilai yang hilang** untuk melanjutkan prediksi Anda.
    > [!div class="mx-imgBorder"]
-   > ![Ikhtisar status dengan tombol memprediksi nilai hilang ditampilkan](media/intelligence-overviewpredictmissingvalues.png "Ikhtisar status dengan tombol memprediksi nilai hilang ditampilkan")
+   > ![Ikhtisar status dengan tombol memprediksi nilai hilang ditampilkan.](media/intelligence-overviewpredictmissingvalues.png "Ikhtisar status dengan tombol memprediksi nilai hilang ditampilkan")
 
 6. Berikan **nama tampilan** dan **nama entitas Output** untuk hasil prediksi.
 
 7. Daftar pilihan yang telah diisi akan menampilkan lokasi Anda dapat memetakan nilai ke kategori yang diramalkan. Dalam kasus ini, satu-satunya pilihan kategori Anda adalah 0 atau 1 saat memetakan ke sifat prediksi true/false atau biner. Dalam kolom Kategori, petakan nilai bidang yang ingin Anda klasifikasikan sebagai "0" di prediksi akhir ke "0", dan item yang ingin diklasifikasikan sebagai "1" di prediksi akhir ke "1".
    > [!div class="mx-imgBorder"]
-   > ![Contoh yang menampilkan nilai bidang yang dipetakan ke kategori](media/intelligence-categorymapping.png "Contoh yang menampilkan nilai bidang yang dipetakan ke kategori")
+   > ![Contoh yang menampilkan nilai bidang yang dipetakan ke kategori.](media/intelligence-categorymapping.png "Contoh yang menampilkan nilai bidang yang dipetakan ke kategori")
 
 8. Pilih **selesai** dan prediksi akan diproses. Pemrosesan akan memakan waktu, tergantung pada ukuran dan kompleksitas data. Hasil akan tersedia di entitas baru berdasarkan **nama entitas output** prediksi yang Anda buat.
 
@@ -77,7 +77,7 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 5. Jika segmen yang Anda buat memiliki data yang tidak lengkap di bidang sumber, Anda dapat memilih untuk memprediksi nilai yang tidak ada.
    > [!div class="mx-imgBorder"]
-   > ![Tombol prediksi](media/segments-predictoption.png "Tombol prediksi")
+   > ![Tombol prediksi.](media/segments-predictoption.png "Tombol prediksi")
 
 6. Berikan **nama tampilan** dan **nama entitas Output** untuk hasil prediksi.
 
@@ -93,7 +93,7 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 4. Anda akan melihat sejumlah poin data dalam tampilan prediksi.
    > [!div class="mx-imgBorder"]
-   > ![Halaman Prediksi](media/intelligence-predictionsviewpage.png "Halaman Prediksi")
+   > ![Halaman Prediksi.](media/intelligence-predictionsviewpage.png "Halaman Prediksi")
 
    - **Nilai yang diprediksi** menunjukkan pemetaan yang Anda buat selama fase pemetaan nilai bidang ke kategori. Ini adalah nilai dalam himpunan data Anda yang telah dipetakan ke kategori tertentu.
    -**Pemberi pengaruh teratas** adalah faktor dalam himpunan data Anda yang kemungkinan besar akan mempengaruhi tingkat keyakinan prediksi nilai bidang Anda yang dipetakan ke kategori tertentu.
@@ -139,7 +139,7 @@ Langkah berikutnya dari prediksi Anda akan menggunakan model yang telah diperbar
 
 ## <a name="troubleshooting"></a>Pemecahan masalah
 
-Jika Anda tidak dapat menyelesaikan proses lampirkan Common Data Service karena kesalahan, Anda dapat mencoba menyelesaikan proses secara manual. Ada dua masalah umum yang dapat terjadi di proses melampirkan:
+Jika Anda tidak dapat menyelesaikan proses lampirkan Dataverse karena kesalahan, Anda dapat mencoba menyelesaikan proses secara manual. Ada dua masalah umum yang dapat terjadi di proses melampirkan:
 
 - Solusi Add-in kartu pelanggan tidak diinstal.
     1. Selesaikan petunjuk untuk [menginstal dan mengkonfigurasi solusi](customer-card-add-in.md).

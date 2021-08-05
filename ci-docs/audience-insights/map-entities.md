@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595997"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555127"
 ---
 # <a name="map-entities-and-attributes"></a>Memetakan entitas dan atribut
 
@@ -35,14 +35,14 @@ Untuk informasi lebih lanjut tentang aliran umum penyatuan data, lihat [menyatuk
 3. Pilih entitas dan atribut yang akan digunakan dalam fase *pencocokan* dan *penggabungan*. Anda dapat memilih atribut yang diperlukan secara terpisah dari entitas atau mencakup semua atribut dari entitas dengan memilih kotak centang **Sertakan semua bidang** di tingkat entitas. Sebaiknya Pilih minimal dua entitas untuk mendapatkan manfaat dari proses penyatuan data.
 
    > [!div class="mx-imgBorder"]
-   > ![Tambah contoh entitas](media/data-manager-configure-map-add-entities-example.png "Tambah contoh entitas")
+   > ![Tambah contoh entitas.](media/data-manager-configure-map-add-entities-example.png "Tambah contoh entitas")
 
    Dalam contoh ini, kami akan menambahkan entitas **ecommercecontacts** dan **loycustomer**. Dengan memilih entitas ini, Anda dapat memperoleh wawasan tentang pelanggan bisnis online mana yang merupakan anggota program loyalitas.
    
    Anda dapat mencari pada kata kunci di semua atribut dan entitas untuk memilih atribut yang diperlukan yang akan dipetakan.
    
      > [!div class="mx-imgBorder"]
-   > ![Contoh bidang pencarian](media/data-manager-configure-map-search-fields-example.png "Contoh bidang pencarian")
+   > ![Contoh bidang pencarian.](media/data-manager-configure-map-search-fields-example.png "Contoh bidang pencarian")
 
 4. Pilih **Terapkan** untuk mengonfirmasi pilihan Anda.
 
@@ -55,7 +55,7 @@ Setelah memilih entitas, Halaman **peta** akan berisi entitas yang dipilih untuk
 - **Jenis semantik atribut**: Kategori atribut Anda, seperti alamat email atau nama. Untuk menggunakan model AI untuk prediksi cerdas dari semantik, menghemat waktu dan meningkatkan akurasi, atur **pemetaan cerdas** ke **aktif**. Pemetaan cerdas menyoroti rekomendasi semantik berbasis AI di bidang **jenis**. Jika Anda mengaturnya ke **NONAKTIF**, Anda akan melihat rekomendasi pemetaan rutin kami. Anda dapat memilih jenis semantik dari daftar pilihan yang tersedia dan menimpa pilihan yang disarankan.
 
 > [!div class="mx-imgBorder"]
-> ![jenis atribut dan prediksi semantik](media/data-manager-configure-map-add-attributes-semantic-prediction.png "jenis atribut dan prediksi semantik")
+> ![jenis atribut dan prediksi semantik.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "jenis atribut dan prediksi semantik")
 
 Menambahkan jenis semantik kustom juga dapat dilakukan. Pilih bidang jenis untuk atribut tersebut, dan ketik nama jenis semantik kustom Anda. Dengan demikian, Anda juga dapat mengubah jenis atribut yang diidentifikasi oleh sistem.
 
@@ -64,7 +64,7 @@ Semua atribut yang memiliki jenis semantik yang secara otomatis teridentifikasi 
 Atribut yang tidak secara otomatis dipetakan ke jenis semantik dikelompokkan dalam bagian **Tentukan data di bidang yang tidak dipetakan**. Pilih bidang jenis semantik untuk atribut yang tidak dipetakan, atau masukkan nama jenis atribut kustom Anda.
 
 > [!div class="mx-imgBorder"]
-> ![Kunci primer dan jenis atribut](media/data-manager-configure-map-add-attributes.png "Kunci primer dan jenis atribut")
+> ![Kunci primer dan jenis atribut.](media/data-manager-configure-map-add-attributes.png "Kunci primer dan jenis atribut")
 
 > [!NOTE]
 > Satu bidang harus dipetakan ke jenis semantik Person FullName untuk mengisi nama pelanggan di kartu pelanggan. Jika tidak, kartu pelanggan akan muncul tanpa nama. 
@@ -76,7 +76,7 @@ Atribut yang tidak secara otomatis dipetakan ke jenis semantik dikelompokkan dal
 2. Di panel **edit bidang**, Tambah atau Hapus atribut dan entitas. Gunakan pencarian atau gulir untuk mencari dan memilih atribut dan entitas yang diinginkan. Anda tidak dapat menghapus atribut atau entitas jika sudah dicocokkan.
 
    > [!div class="mx-imgBorder"]
-   > ![Tambah atau hapus atribut](media/configure-data-map-edit.png "Tambah atau hapus atribut")
+   > ![Tambah atau hapus atribut.](media/configure-data-map-edit.png "Tambah atau hapus atribut")
 
 3. Pilih **Terapkan**.
 
@@ -96,7 +96,7 @@ Untuk organisasi (pratinjau), jenis atribut harus dipetakan ke "Organization.Nam
 > [!div class="mx-imgBorder"]
 > ![Kunci primer dan jenis atribut B2B](media/configure-data-map-edit-b2b.png "Kunci primer dan jenis atribut atribut")
 
-## <a name="next-step"></a>Langkah berikutnya
+## <a name="next-step"></a>Langkah selanjutnya
 
 Sebagai bagian dari proses penyatuan data, buka halaman **pencocokan**. Kunjungi [**kecocokan**](match-entities.md) untuk mempelajari fase ini.
 

@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597147"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554025"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profil pelanggan: Indeks Cari & Filter
 
 Hasil mempersatukan data pelanggan adalah entitas profil pelanggan yang memberikan tampilan terpadu ke basis pelanggan Total Anda. Untuk dengan cepat [mencari informasi tentang pelanggan atau grup pelanggan tertentu](customer-profiles.md), Anda dapat mengkonfigurasi kemampuan **pencarian** dan **filter** pada halaman **pelanggan**. Baca terus untuk mempelajari cara admin dapat mengedit atribut pada halaman **indeks pencarian & Filter**, yang tersedia bagi pengguna untuk mencari dan memfilter.
 
 > [!div class="mx-imgBorder"]
-> ![Cari filter](media/search-filter.png "Cari filter")
+> ![Cari filter.](media/search-filter.png "Cari filter")
 
 ## <a name="add-fields-and-specify-attributes"></a>Tambahkan bidang dan tentukan atribut
 

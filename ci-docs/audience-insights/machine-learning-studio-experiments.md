@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598343"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555173"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Gunakan model berbasis pembelajaran mesin Azure (klasik)
 
@@ -41,7 +41,7 @@ Pada langkah pertama, kita harus membuat ruang kerja untuk membuka Studio Pembel
 
 1. Setelah membuat sumber daya, dasbor Pembelajaran Mesin Studio workspace akan muncul. Pilih **luncurkan Studio Pembelajaran Mesin**.
 
-   ![Antarmuka pengguna Studio Pembelajaran Mesin Azure](media/azure-machine-learning-studio.png)
+   ![Antarmuka pengguna Studio Pembelajaran Mesin Azure.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Bekerja dengan Studio Pembelajaran Mesin Azure
 
@@ -55,7 +55,7 @@ Anda sekarang dapat membuat eksperimen baru atau mengimpor template eksperimen y
 
 1. Jika Anda membuat eksperimen baru atau menggunakan template eksperimen dari Galeri, Anda harus mengkonfigurasikan properti **data impor**. Gunakan pengalaman terpandu atau berikan rincian secara langsung untuk mengakses penyimpanan Blob Azure yang berisi data Anda.  
 
-   ![Eksperimen Studio Pembelajaran Mesin Azure](media/azure-machine-learning-studio-experiment.png)
+   ![Eksperimen Studio Pembelajaran Mesin Azure.](media/azure-machine-learning-studio-experiment.png)
 
 1. Sekarang Anda dapat membangun alur pemrosesan kustom untuk membersihkan dan mengolah data, mengekstrak fitur, dan melatih model yang sesuai.
 
@@ -63,15 +63,15 @@ Anda sekarang dapat membuat eksperimen baru atau mengimpor template eksperimen y
 
 1. Bila Anda puas dengan kualitas model, pilih **Konfigurasikan layanan web** > **layanan web prediktif**. Pilihan ini mengimpor model terlatih dan alur prestasi dari eksperimen pelatihan hingga layanan prediktif. Layanan prediktif dapat menggunakan kumpulan data input lain dengan skema yang digunakan dalam eksperimen pelatihan untuk membuat prediksi.
 
-   ![Mengkonfigurasi layanan web prediktif](media/predictive-webservice-control.png)
+   ![Mengkonfigurasi layanan web prediktif.](media/predictive-webservice-control.png)
 
 1. Setelah percobaan layanan web prediktif berhasil, Anda dapat menyebarkannya untuk penjadwalan otomatis. Agar layanan web berfungsi dengan Customer Insights, pilih **Sebarkan layanan web** > **Sebarkan pratinjau layanan web [baru]**. [Pelajari lebih lanjut tentang menyebarkan Layanan web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Menyebarkan layanan web prediktif](media/predictive-webservice-deploy.png)
+   ![Menyebarkan layanan web prediktif.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Contoh model dari Galeri
 
-Kita akan menggunakan skenario fiktif tentang Aswono Hotel untuk model dalam artikel ini. Aswono Hotel mengumpulkan data berikut:
+Kami akan menggunakan skenario fiktif Hotel Contoso untuk model di artikel ini. Hotel Contoso akan mengumpulkan data berikut:
 
 - Data CRM yang terdiri dari aktivitas menginap di hotel. Himpunan data mencakup informasi tentang tanggal menginap untuk setiap pelanggan terdaftar. Ini juga berisi informasi tentang Pemesanan, jenis kamar, rincian pembelanjaan, dan sebagainya. Data mencakup empat tahun, dari Januari 2014 hingga Januari 2018.
 - Profil pelanggan tamu hotel. Profil ini berisi informasi tentang setiap pelanggan, termasuk nama, tanggal lahir, alamat pos, jenis kelamin, dan nomor telepon.
@@ -87,13 +87,13 @@ Definisi kehilangan pelanggan dapat berbeda berdasarkan skenario. Dalam contoh i
 
 Template eksperimen dapat diimpor dari galeri. Pertama, pastikan Anda mengimpor data untuk **aktivitas menginap di Hotel**, **data pelanggan**, dan **data penggunaan Layanan** dari penyimpanan Azure Blob.
 
-   ![Impor data untuk model kehilangan pelanggan](media/import-data-azure-blob-storage.png)
+   ![Impor data untuk model kehilangan pelanggan.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Fiturisasi
 
 Berdasarkan definisi kehilangan pelanggan, pertama kita mengidentifikasi fitur mentah yang akan mempengaruhi label. Kemudian, kita memproses fitur mentah ini ke dalam fitur numerik yang dapat digunakan dengan model Pembelajaran Mesin. Integrasi data terjadi di Customer Insights sehingga kita dapat menggabungkan tabel ini menggunakan *id pelanggan*.
 
-   ![Gabungkan data impor](media/join-imported-data.png)
+   ![Gabungkan data impor.](media/join-imported-data.png)
 
 Fiturisasi untuk membangun model untuk analisis kehilangan pelanggan dapat sedikit rumit. Data adalah fungsi waktu dengan aktivitas hotel baru yang direkam setiap hari. Selama fiturisasi, kita ingin menghasilkan fitur statis dari data dinamis. Dalam kasus ini, kita menghasilkan beberapa fitur dari aktivitas hotel dengan jendela geser selama satu tahun. Kami juga memperluas fitur kategoris seperti jenis kamar atau jenis Pemesanan ke fitur terpisah menggunakan pengkodean one-hot.  
 
@@ -114,7 +114,7 @@ Sekarang kita harus memilih algoritma optimal untuk digunakan. Dalam kasus ini, 
 
 Gambar berikut menunjukkan alur pelatihan model dan evaluasi dari Studio Pembelajaran Mesin Azure:
 
-![Model kehilangan pelanggan dalam Studio Pembelajaran Mesin Azure](media/azure-machine-learning-model.png)
+![Model kehilangan pelanggan dalam Studio Pembelajaran Mesin Azure.](media/azure-machine-learning-model.png)
 
 Kami juga menerapkan teknik yang disebut **nilai penting fitur permutasi**, aspek penting dari optimasi model. Model internal memiliki sedikit atau tidak ada wawasan tentang dampak dari fitur tertentu pada prediksi akhir. Kalkulator pentingnya fitur menggunakan algoritme kustom untuk menghitung pengaruh fitur individual pada hasil untuk model tertentu. Fitur penting dinormalkan antara + 1 hingga -1. Pengaruh negatif berarti fitur yang sesuai memiliki pengaruh kontra-intuitif pada hasil dan harus dihilangkan dari model. Pengaruh positif menunjukkan bahwa fitur ini sangat berkontribusi terhadap prediksi. Nilai ini bukan koefisien korelasi karena memiliki metrik yang berbeda. Untuk informasi lebih lanjut, lihat [nilai penting fitur permutasi](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Kami mendefinisikan sasaran sebagai memaksimalkan jumlah dolar penggunaan layana
 
 Seperti model kehilangan pelanggan, kita menggabungkan dengan ServiceCustomerID hotel dengan CustomerID agar dapat membangun rekomendasi secara konsisten per CustomerID.
 
-![Fiturisasi model rekomendasi](media/azure-machine-learning-model-featurization.png)
+![Fiturisasi model rekomendasi.](media/azure-machine-learning-model-featurization.png)
 
 Data bersumber dari tiga entitas yang berbeda, dan fitur berasal dari mereka. Fiturisasi untuk masalah rekomendasi berbeda dibandingkan dengan skenario kehilangan pelanggan atau CLTV. Model rekomendasi memerlukan data input berupa tiga rangkaian fitur.
 
@@ -156,13 +156,13 @@ Data bersumber dari tiga entitas yang berbeda, dan fitur berasal dari mereka. Fi
 
 Kami memprediksi produk atau layanan dengan menggunakan algoritma bernama **Train Matchbox Recommender** untuk melatih model rekomendasi.
 
-![Algoritme Rekomendasi Produk](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritme Rekomendasi Produk.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Tiga port input untuk model **rekomendasi Train Matchbox** akan menggunakan data penggunaan layanan pelatihan, Deskripsi pelanggan (opsional), dan Deskripsi Layanan. Ada tiga cara yang berbeda dalam menilai model. Salah satunya adalah untuk evaluasi model dimana nilai keuntungan kumulatif (NDCG) Ternormalisasi dihitung untuk menentukan peringkat item. Dalam eksperimen ini, kita memiliki Skor NDCG sebesar 0,97. Dua pilihan lainnya adalah membuat penilaian model pada seluruh Katalog layanan yang bisa direkomendasikan, atau hanya pada item yang belum digunakan pengguna sebelumnya.
 
 Melihat lebih lanjut tentang distribusi rekomendasi di seluruh Katalog layanan, kami melihat bahwa telepon, WiFi, dan kurir adalah layanan terbaik untuk disarankan. Hal ini konsisten dengan yang kami temukan dari distribusi data konsumsi Layanan:
 
-![Output Model Rekomendasi](media/azure-machine-learning-model-output.png)
+![Output Model Rekomendasi.](media/azure-machine-learning-model-output.png)
 
 Seluruh [percobaan rekomendasi produk dapat diakses di Galeri Azure AI.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

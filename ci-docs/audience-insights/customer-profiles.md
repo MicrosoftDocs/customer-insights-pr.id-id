@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304608"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554622"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -23,7 +23,7 @@ Halaman **pelanggan** menampilkan tampilan gabungan pelanggan Anda, berdasarkan 
 Pelanggan dapat berupa individu atau organisasi (pratinjau). Setiap profil pelanggan atau organisasi diwakili oleh ubin. Pilih ubin untuk melihat informasi tambahan tentang pelanggan atau organisasi tertentu. Gunakan kontrol paginasi di bagian bawah halaman untuk melihat rekaman tambahan.
 
 > [!div class="mx-imgBorder"] 
-> ![Profil pelanggan B2C](media/profiles-customers.png "Profil pelanggan B2C")
+> ![Profil pelanggan B2C.](media/profiles-customers.png "Profil pelanggan B2C")
 
 Organisasi (Pratinjau)
 > [!div class="mx-imgBorder"] 
@@ -47,7 +47,7 @@ Anda dapat memfilter pelanggan berdasarkan bidang entitas profil pelanggan. Miri
 2. Centang kotak di samping atribut untuk memfilter pelanggan.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profil pelanggan](media/profiles-customers3.png "Profil pelanggan")
+   > ![Profil pelanggan.](media/profiles-customers3.png "Profil pelanggan")
 
 3. Hapus Filter dengan memilih **Hapus Filter** pada halaman **pelanggan**.
 

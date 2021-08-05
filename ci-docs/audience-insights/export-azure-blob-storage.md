@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Penyimpanan Azure Blob
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke penyimpanan Blob.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976185"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318303"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Mengekspor daftar segmen dan data lainnya ke Penyimpanan Blob Azure (pratinjau)
 
@@ -40,11 +40,14 @@ Simpan data Customer Insights Anda di penyimpanan Blob atau gunakan untuk mentra
 
 Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
 
+> [!IMPORTANT]
+> Jika Anda mengaktifkan pengaturan penghapusan lunak untuk akun Azure Blob Storage, ekspor akan gagal. Nonaktifkan penghapusan lunak untuk mengekspor data ke blob. Untuk informasi selengkapnya, lihat [Mengaktifkan penghapusan lunak blob](/azure/storage/blobs/soft-delete-blob-enable.md)
+
 1. Buka **Data** > **Ekspor**.
 
 1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
 
-1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Penyimpanan Blob Azure. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Penyimpanan Blob Azure. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
 
 1. Centang kotak di samping masing-masing entitas yang akan diekspor ke tujuan ini.
 
@@ -53,13 +56,16 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 Menyimpan ekspor tidak segera menjalankan ekspor.
 
 Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).     
+
 Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
 
-Data yang diekspor disimpan dalam wadah penyimpanan Blob yang dikonfigurasi. Jalur folder berikut dibuat secara otomatis dalam penampung:
+Data yang diekspor disimpan dalam wadah Blob Storage yang dikonfigurasi. Jalur folder berikut dibuat secara otomatis dalam penampung:
 
-- Untuk entitas sumber dan entitas yang dihasilkan oleh sistem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Untuk entitas sumber dan entitas yang dihasilkan oleh sistem:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Model.json untuk entitas yang diekspor akan berada di tingkat %ExportDestinationName%
+ 
+- Model.json untuk entitas yang diekspor akan berada di tingkat %ExportDestinationName%.  
   - Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

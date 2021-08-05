@@ -2,6 +2,8 @@
   href: index.yml
 - name: Ikhtisar produk
   href: overview.md
+- name: Membuat Uji Coba
+  href: audience-insights/get-started-trial.md
 - name: Nilai lingkungan Anda
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Wawasan audiens
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Ikhtisar kemampuan
       href: audience-insights/overview.md
-    - name: uji coba gratis
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Fitur baru dan diperbarui
       href: audience-insights/whats-new-audience-insights.md
     - name: Buat lingkungan baru
-      href: audience-insights/home.md
+      href: audience-insights/get-started-paid.md
     - name: Pelajari modul
       items:
         - name: Menyerap data
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Tambahkan folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
-        - name: Menambahkan data lake terkelola Common Data Service
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Menambahkan data lake terkelola Dataverse
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Refresh inkremental untuk sumber data
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Konsumsi data real-time
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Perkaya dengan impor kustom SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmen dan ukuran
+    - name: Segmen
       items:
         - name: Sekilas tentang segmen
           href: audience-insights/segments.md
-        - name: Membuat segmen dan grup pelanggan
+        - name: Buat segmen
           href: audience-insights/segment-builder.md
         - name: Segmen yang disarankan berdasarkan ukuran
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: Membuat dan memodifikasi aktivitas
           href: engagement-insights/refined-events.md
+        - name: Mengenali aktivitas web dari pengunjung terotentikasi sebelumnya
+          href: engagement-insights/unknown-to-known.md
         - name: Ekspor aktivitas
           href: engagement-insights/export-events.md
     - name: Laporan
@@ -304,7 +306,9 @@
       items:
         - name: Menghapus dan mengekspor data pribadi
           href: engagement-insights/delete-export-personal-data.md
+    - name: Ketersediaan regional
+      href: engagement-insights/regional-availability.md
     - name: Batas Layanan
       href: engagement-insights/quotas.md
-- name: Hubungi dukungan
+- name: Dukungan kontak
   href: 'https://admin.powerplatform.microsoft.com/support'

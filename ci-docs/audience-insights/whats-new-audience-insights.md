@@ -1,7 +1,7 @@
 ---
 title: Fitur baru dan mendatang
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263255"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692393"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Pembaruan Juni 2021
+
+Pembaruan pada Juni 2021 mencakup beberapa fitur, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="data-ingestion"></a>Penyerapan data
+
+- **Pembaruan kemajuan penyatuan data yang disempurnakan** Sekarang Anda dapat melihat pembaruan status dinamis yang lebih terperinci dan ditingkatkan pada langkah-langkah [proses penyatuan data](data-unification.md). Fitur ini memungkinkan Anda melacak kemajuan terperinci untuk memahami alur proses dan mengambil tindakan jika ada langkah yang perlu diperhatikan.
+
+### <a name="extensibility"></a>Dapat diperluas
+
+- **Ekspor segmen dan data lainnya ke Salesforce Marketing Cloud** Kami telah memperluas tujuan ekspor kami untuk menyertakan [Salesforce Marketing Cloud](export-salesforce.md). Anda sekarang dapat mengekspor segmen dan jenis data lainnya ke Salesforce Marketing Cloud melalui ekspor SFTP bermerek. Impor data dapat sepenuhnya otomatis di Salesforce dan digunakan untuk membuat kampanye pemasaran yang lebih efektif.  
+ 
+- **Ekspor segmen ke ActiveCampaign** Kami telah memperluas tujuan ekspor kami untuk menyertakan [Kampanye Aktif](export-active-campaign.md). Anda kini dapat mengekspor segmen untuk menghasilkan kampanye, menjalankan pemasaran melalui email, dan bekerja dengan grup pelanggan tertentu di ActiveCampaign.
+ 
+- **Ekspor segmen ke Sendinblue** Kami telah memperluas tujuan ekspor kami untuk menyertakan [Sendinblue](export-sendinblue.md). Anda kini dapat mengekspor segmen untuk menghasilkan kampanye, menjalankan pemasaran melalui email, dan bekerja dengan grup pelanggan tertentu dengan Sendinblue.
+ 
+### <a name="ux-updates"></a>Pembaruan UX 
+
+- **Halaman Pelanggan baru dan disempurnakan dan halaman detail profil** Kami telah mendesain ulang halaman Pelanggan dan halaman detail profil untuk meningkatkan pengalaman pengguna dan kinerja yang lebih baik. Perubahan ini memungkinkan Anda melihat, mengurutkan, mencari, dan memfilter pelanggan. Filter sekarang diwakili dalam URL untuk berbagi hasil pencarian dengan pengguna lain dengan mulus. Hasil pencarian juga dapat disimpan sebagai segmen.    
+  Halaman detail untuk profil pelanggan kini mengelompokkan data dalam berbagai subbagian seperti data demografis, ID, dan atribut profil lainnya untuk meningkatkan keterbacaan. Bagian lain di halaman detail profil sekarang lebih interaktif. Misalnya bagian aktivitas sekarang memungkinkan pemfilteran dan pengurutan.
+
 
 ## <a name="may-2021-updates"></a>Pembaruan Mei 2021
 
@@ -170,7 +192,7 @@ Pembaruan pada Februari 2021 mencakup beberapa fitur, peningkatan kinerja, dan p
 
 - **Salin lingkungan mendukung lebih banyak jenis sumber data**
 
-  Admin dapat menyalin konfigurasi lingkungan ke lingkungan baru di organisasi yang sama. Fitur ini memperluas fungsi salin lingkungan untuk kasus di mana sumber data berdasarkan danau data Common Data Service atau folder Common Data Model digunakan.
+  Admin dapat menyalin konfigurasi lingkungan ke lingkungan baru di organisasi yang sama. Fitur ini memperluas fungsionalitas salin lingkungan untuk kasus di mana sumber data yang didasarkan pada data lake terkelola Microsoft Dataverse atau folder Common Data Model digunakan.
 
 ## <a name="january-2021-updates"></a>Pembaruan Januari 2021
 

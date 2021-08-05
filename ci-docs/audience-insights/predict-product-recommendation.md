@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095560"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556128"
 ---
 # <a name="product-recommendation-prediction-preview"></a>prediksi Rekomendasi produk (pratinjau)
 
@@ -64,7 +64,7 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 
 1. Pilih petak **model rekomendasi produk (pratinjau)** dan pilih **gunakan model ini**.
    > [!div class="mx-imgBorder"]
-   > ![petak model Rekomendasi Produk dengan Tombol Gunakan model ini](media/product-recommendation-usethismodel.PNG "petak model Rekomendasi Produk dengan Tombol Gunakan model ini")
+   > ![petak model Rekomendasi Produk dengan Tombol Gunakan model ini.](media/product-recommendation-usethismodel.PNG "petak model Rekomendasi Produk dengan Tombol Gunakan model ini")
 
 1. Tinjau informasi tentang persyaratan model. Jika Anda memiliki data yang diperlukan, pilih **Mulai**.
 
@@ -93,7 +93,7 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 
 1. Petakan bidang semantik ke atribut dalam entitas Riwayat Pembelian Anda dan pilih **berikutnya**. Untuk Deskripsi bidang, lihat [prasyarat](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Tentukan relasi entitas](media/product-recommendation-purchasehistorymapping.PNG "Halaman riwayat pembelian yang menampilkan atribut semantis yang dipetakan ke bidang dalam entitas riwayat pembelian yang dipilih").
+   > ![Tentukan relasi entitas.](media/product-recommendation-purchasehistorymapping.PNG "Halaman riwayat pembelian yang menampilkan atribut semantis yang dipetakan ke bidang dalam entitas riwayat pembelian yang dipilih")
 
 1. Jika bidang tidak diisi, konfigurasikan relasi dari entitas Riwayat Pembelian Anda ke entitas *pelanggan*.
     1. Pilih **Entitas riwayat pembelian**.
@@ -101,7 +101,7 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
     1. Pilih **entitas pelanggan** yang cocok dengan entitas pelanggan utama Anda.
     1. Masukkan nama yang mendeskripsikan relasi.
        > [!div class="mx-imgBorder"]
-       > ![Halaman Riwayat pembelian yang menunjukkan pembuatan relasi dengan pelanggan](media/model-purchase-join.png "Halaman Riwayat pembelian yang menunjukkan pembuatan relasi dengan pelanggan")
+       > ![Halaman Riwayat pembelian yang menunjukkan pembuatan relasi dengan pelanggan.](media/model-purchase-join.png "Halaman Riwayat pembelian yang menunjukkan pembuatan relasi dengan pelanggan")
 
 1. Pilih **Simpan**.
 
@@ -145,7 +145,7 @@ Terkadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis prediks
 
 1. Buka tab **prediksi saya** pada **intelijen** > **prediksi**.
    > [!div class="mx-imgBorder"]
-   > ![Tampilan halaman prediksi saya](media/product-recommendation-mypredictions.PNG "Tampilan halaman prediksi saya")
+   > ![Tampilan halaman prediksi saya.](media/product-recommendation-mypredictions.PNG "Tampilan halaman prediksi saya")
 
 1. Pilih prediksi yang ingin Anda tinjau.
    - **Nama prediksi:** nama prediksi yang diberikan saat membuatnya.
@@ -163,7 +163,7 @@ Terkadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis prediks
 
 1. Pilih elips vertikal di samping prediksi yang ingin Anda tinjau hasilnya dan pilih **Lihat**.
    > [!div class="mx-imgBorder"]
-   > ![Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus](media/product-recommendation-verticalellipses.PNG "Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus")
+   > ![Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus.](media/product-recommendation-verticalellipses.PNG "Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus")
 
 1. Ada lima bagian utama data dalam halaman hasil:
     1. **Performa model pelatihan:** A, B, atau C adalah Skor yang mungkin. Skor ini menunjukkan performa prediksi, dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang tersimpan di entitas output.
@@ -173,13 +173,13 @@ Terkadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis prediks
             - **C** Model akan dianggap sebagai Kualitas **C** jika metrik "Berhasil @ K" adalah kurang dari dasar.
                
                > [!div class="mx-imgBorder"]
-               > ![Tampilan hasil kinerja model](media/product-recommendation-modelperformance.PNG "Tampilan hasil kinerja model")
+               > ![Tampilan hasil kinerja model.](media/product-recommendation-modelperformance.PNG "Tampilan hasil kinerja model")
             - **Dasar**: Model mengambil produk yang paling direkomendasikan teratas menurut jumlah pembelian di seluruh pelanggan, dan menggunakan aturan yang diidentifikasi berdasarkan model untuk membuat rangkaian rekomendasi untuk pelanggan. Selanjutnya, prediksi akan dibandingkan dengan produk teratas, sebagaimana dihitung menurut jumlah pelanggan yang membeli produk tersebut. Jika pelanggan memiliki minimal satu produk dalam produk rekomendasinya yang juga terlihat di produk pembelian teratas, maka produk tersebut dianggap sebagai bagian dari dasar. Jika ada 10 pelanggan tersebut yang memiliki rekomendasi pembelian produk dari 100 total pelanggan, maka dasar akan menjadi 10%.
             - **Berhasil @ K**: Menggunakan rangkaian validasi periode waktu transaksi, rekomendasi dibuat untuk semua pelanggan dan dibandingkan dengan rangkaian validasi transaksi. Contohnya, dalam periode 12 bulan, bulan 12 dapat disisihkan sebagai rangkaian validasi data. Jika model memperkirakan sekurangnya satu hal yang akan Anda beli dalam bulan 12 berdasarkan apa yang ia pelajari dari 11 bulan sebelumnya, pelanggan akan meningkatkan metrik "Berhasil @ K".
     
     1. **Sebagian besar produk yang disarankan (dengan tally):** Lima produk teratas yang diprediksi untuk pelanggan Anda.
        > [!div class="mx-imgBorder"]
-       > ![Grafik yang menampilkan 5 produk rekomendasi teratas](media/product-recommendation-topproducts.PNG "Grafik yang menampilkan 5 produk rekomendasi teratas")
+       > ![Grafik yang menampilkan 5 produk rekomendasi teratas.](media/product-recommendation-topproducts.PNG "Grafik yang menampilkan 5 produk rekomendasi teratas")
     
     1. **Faktor rekomendasi utama**: Model menggunakan riwayat transaksi pelanggan untuk membuat rekomendasi produk. Ini mempelajari pola berdasarkan pembelian sebelumnya dan menemukan kesamaan antara pelanggan dan produk. Kesamaan ini kemudian digunakan untuk menghasilkan rekomendasi produk.
     Berikut ini adalah faktor-faktor yang dapat mempengaruhi rekomendasi produk yang dihasilkan oleh model. 
@@ -190,20 +190,20 @@ Terkadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis prediks
         Setiap rekomendasi produk dipengaruhi oleh satu atau lebih faktor-faktor ini. Persentase rekomendasi di mana setiap faktor yang mempengaruhi memainkan peran divisualisasikan dalam bagan. Dalam contoh berikut, 100% dari rekomendasi dipengaruhi oleh transaksi sebelumnya, 60% oleh kesamaan pelanggan dan 22% berdasarkan kesamaan produk. Arahkan kursor ke bilah di bagan untuk melihat persentase yang tepat di mana faktor yang memengaruhi berkontribusi.
 
         > [!div class="mx-imgBorder"]
-        > ![Faktor rekomendasi utama](media/product-recommendation-keyrecommendationfactors.png "Faktor rekomendasi utama yang dipelajari oleh model untuk menghasilkan rekomendasi produk")
+        > ![Faktor rekomendasi utama.](media/product-recommendation-keyrecommendationfactors.png "Faktor rekomendasi utama yang dipelajari oleh model untuk menghasilkan rekomendasi produk")
        
      
    1. **Statistik data**: Memberikan gambaran jumlah transaksi, pelanggan, dan produk yang dipertimbangkan model. Hal ini didasarkan pada data input yang digunakan untuk mempelajari pola dan menghasilkan rekomendasi produk.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistik data](media/product-recommendation-datastatistics.png "Statistik data di sekitar data input yang digunakan oleh model untuk mempelajari pola")
+      > ![Statistik data.](media/product-recommendation-datastatistics.png "Statistik data di sekitar data input yang digunakan oleh model untuk mempelajari pola")
 
       Bagian ini menunjukkan statistik di sekitar titik data yang digunakan oleh model untuk mempelajari pola dan menghasilkan rekomendasi produk. Pemfilteran, seperti yang dikonfigurasi dalam konfigurasi model, akan berlaku pada output yang dihasilkan oleh model. Namun, model ini menggunakan semua data yang tersedia untuk mempelajari pola. Oleh karena itu, jika Anda menggunakan pemfilteran produk dalam konfigurasi model, bagian ini akan menunjukkan jumlah total produk yang dianalisis model untuk mempelajari pola, yang mungkin berbeda dari jumlah produk yang sesuai dengan kriteria pemfilteran yang ditentukan.
 
    1. **Rekomendasi produk dengan tingkat keyakinan tinggi:** Sampel rekomendasi yang diberikan kepada pelanggan yang diyakini oleh model kemungkinan dibeli oleh pelanggan.    
       Jika katalog produk ditambahkan, ID produk diganti dengan nama produk. Nama produk memberikan informasi yang lebih dapat ditindaklanjuti dan intuitif tentang prediksi.
        > [!div class="mx-imgBorder"]
-       > ![Daftar yang menampilkan saran dengan keyakinan tinggi untuk rangkaian pelanggan individual tertentu](media/product-recommendation-highconfidence.PNG "Daftar yang menampilkan saran dengan keyakinan tinggi untuk rangkaian pelanggan individual tertentu")
+       > ![Daftar yang menampilkan saran dengan keyakinan tinggi untuk rangkaian pelanggan individual tertentu.](media/product-recommendation-highconfidence.PNG "Daftar yang menampilkan saran dengan keyakinan tinggi untuk rangkaian pelanggan individual tertentu")
 
 ## <a name="manage-predictions"></a>Kelola prediksi
 

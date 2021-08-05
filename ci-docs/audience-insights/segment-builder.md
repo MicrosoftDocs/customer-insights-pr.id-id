@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola segmen
 description: Buat segmen pelanggan untuk mengelompokkan mereka berdasarkan berbagai atribut.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064941"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685466"
 ---
 # <a name="create-and-manage-segments"></a>Membuat dan mengelola segmen
+
+> [!IMPORTANT]
+> Ada beberapa perubahan yang diluncurkan untuk pengalaman pembuatan segmen pada bulan September 2021: 
+> - Pembangun segmen akan terlihat sedikit berbeda dengan elemen gaya ulang dan alur pengguna yang ditingkatkan.
+> - Operator datetime baru dan pemilih tanggal yang disempurnakan diaktifkan di pembangun segmen.
+> - Anda dapat menambahkan atau menghapus kondisi dan aturan dari segmen. 
+> - Aturan berkurung yang dimulai dengan kondisi OR akan tersedia. Anda tidak lagi memerlukan kondisi AND di lapisan terluar.
+> - Panel samping untuk memilih atribut akan terus tersedia.
+> - Opsi untuk memilih jalur relasi entitas.
+> Untuk mencoba pembangun segmen baru, kirim email dengan subjek "Permintaan untuk mengaktifkan pembangun segmen baru" ke cihelp [at] microsoft.com. Sertakan nama orgnisasi Anda dan ID lingkungan sandbox Anda.
 
 Tentukan filter kompleks di sekitar entitas pelanggan terpadu dan entitas terkaitnya. Setiap segmen, setelah pemrosesan, membuat kumpulan rekaman pelanggan yang dapat Anda ekspor dan lakukan tindakan padanya. Segmen dikelola pada halaman **segmen**. 
 
@@ -50,7 +60,7 @@ Saat membuat segmen, Anda dapat menyimpan draf. Fitur tersebut akan disimpan seb
 1. Pilih operator dan nilai untuk atribut dipilih.
 
    > [!div class="mx-imgBorder"]
-   > ![Filter grup kustom](media/customer-group-numbers.png "Filter grup pelanggan")
+   > ![Filter grup kustom.](media/customer-group-numbers.png "Filter grup pelanggan")
 
    |Angka |Definisi  |
    |---------|---------|
@@ -66,7 +76,7 @@ Saat membuat segmen, Anda dapat menyimpan draf. Fitur tersebut akan disimpan seb
       - Operator **OR**: Salah satu dari kondisi harus dipenuhi sebagai bagian dari proses segmentasi. Pilihan ini paling berguna saat Anda menentukan beberapa kondisi untuk entitas yang sama.
 
       > [!div class="mx-imgBorder"]
-      > ![Operator OR bila kedua kondisi harus dipenuhi](media/segmentation-either-condition.png "Operator OR bila kedua kondisi harus dipenuhi")
+      > ![Operator OR bila kedua kondisi harus dipenuhi.](media/segmentation-either-condition.png "Operator OR bila kedua kondisi harus dipenuhi")
 
       Saat ini mungkin untuk mengurung operator **OR** di bawah operator **AND**, namun tidak sebaliknya.
 
@@ -74,12 +84,12 @@ Saat membuat segmen, Anda dapat menyimpan draf. Fitur tersebut akan disimpan seb
    Pilih **Tambah Grup**.
 
       > [!div class="mx-imgBorder"]
-      > ![Grup pelanggan Tambah grup](media/customer-group-add-group.png "Grup pelanggan Tambah grup")
+      > ![Grup pelanggan Tambah grup.](media/customer-group-add-group.png "Grup pelanggan Tambah grup")
 
    1. Pilih salah satu operator rangkaian: **Gabungan**, **Irisan**, atau **Lepas**.
 
    > [!div class="mx-imgBorder"]
-   > ![Grup pelanggan Tambah penyatuan](media/customer-group-union.png "Grup pelanggan Tambah penyatuan")
+   > ![Grup pelanggan Tambah penyatuan.](media/customer-group-union.png "Grup pelanggan Tambah penyatuan")
 
    - **Semesta** menyatukan dua kelompok.
 
@@ -90,7 +100,7 @@ Saat membuat segmen, Anda dapat menyimpan draf. Fitur tersebut akan disimpan seb
 1. Jika entitas terhubung ke entitas pelanggan terpadu melalui [Relasi](relationships.md), Anda harus menentukan jalur relasi untuk membuat segmen valid. Tambahkan entitas dari jalur relasi hingga Anda dapat memilih entitas **pelanggan: CustomerInsights** dari dropdown. Selanjutnya, pilih **Semua rekaman** untuk setiap langkah.
 
    > [!div class="mx-imgBorder"]
-   > ![Jalur relasi selama pembuatan segmen](media/segments-multiple-relationships.png "Jalur relasi selama pembuatan segmen")
+   > ![Jalur relasi selama pembuatan segmen.](media/segments-multiple-relationships.png "Jalur relasi selama pembuatan segmen")
 
 1. Secara default, segmen akan menghasilkan entitas output yang berisi semua atribut profil pelanggan yang cocok dengan filter yang ditentukan. Jika segmen didasarkan pada entitas lain dari entitas *Pelanggan*, Anda dapat menambahkan lebih banyak atribut dari entitas ini ke entitas output. Pilih **atribut Proyek** untuk memilih atribut yang akan ditambahkan ke entitas output.  
   
@@ -127,7 +137,7 @@ Segmen singkat memungkinkan Anda membuat segmen sederhana dengan satu operator s
 4. Sistem akan memberi Anda **perkiraan ukuran segmen**. Anda dapat memilih apakah akan menghasilkan segmen yang telah Anda tetapkan, atau pertama-tama, mengunjungi kembali untuk mendapatkan ukuran segmen yang berbeda.
 
     > [!div class="mx-imgBorder"]
-    > ![Nama dan estimasi untuk segmen cepat](media/quick-segment-name.png "Nama dan estimasi untuk segmen cepat")
+    > ![Nama dan estimasi untuk segmen cepat.](media/quick-segment-name.png "Nama dan estimasi untuk segmen cepat")
 
 5. Beri **nama** segmen Anda. Atau, berikan **nama tampilan**.
 

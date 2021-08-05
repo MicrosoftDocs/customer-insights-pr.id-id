@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305298"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555311"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Pengayaan profil pelanggan dengan HERE Technologies (pratinjau)
 
@@ -35,7 +35,7 @@ Untuk mengkonfigurasikan pengayaan HERE Technologies, persyaratan berikut harus 
 1. Pilih **Perkaya data** saya di petak HERE Technologies dan pilih **Mulai**.
 
    > [!div class="mx-imgBorder"]
-   > ![petak HERE Technologies](media/HERE-tile.png "petak HERE Technologies")
+   > ![Petak HERE Technologies.](media/HERE-tile.png "petak HERE Technologies")
 
 1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi**. Pilih **HERE Technologies** dari daftar dropdown. 
 
@@ -50,7 +50,7 @@ Untuk mengkonfigurasikan pengayaan HERE Technologies, persyaratan berikut harus 
 1. Tentukan bidang dari profil terpadu mana yang harus digunakan untuk mencari data lokasi yang cocok dari HERE Technologies. Bidang **jalan 1** dan **Kode Zip/Pos** diperlukan untuk alamat utama dan/atau sekunder yang dipilih. Untuk akurasi kecocokan yang lebih tinggi, lebih banyak bidang dapat ditambahkan.
 
    > [!div class="mx-imgBorder"]
-   > ![Halaman konfigurasi pengayaan HERE Technologies](media/enrichment-HERE-configuration.png "Halaman konfigurasi pengayaan HERE Technologies")
+   > ![Halaman konfigurasi pengayaan HERE Technologies.](media/enrichment-HERE-configuration.png "Halaman konfigurasi pengayaan HERE Technologies")
 
 1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
 
@@ -73,7 +73,7 @@ Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan
 1. Setelah menyelesaikan verifikasi, pilih **Simpan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Halaman konfigurasi koneksi HERE technologies](media/enrichment-HERE-connection.png "Halaman konfigurasi koneksi HERE technologies")
+   > ![Halaman konfigurasi koneksi HERE technologies.](media/enrichment-HERE-connection.png "Halaman konfigurasi koneksi HERE technologies")
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
 

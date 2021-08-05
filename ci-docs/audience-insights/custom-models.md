@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305640"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554852"
 ---
 # <a name="custom-machine-learning-models"></a>Model Pembelajaran Mesin kustom
 
@@ -42,7 +42,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 1. Beri model kustom Anda nama yang dikenali di bidang **nama**.
 
    > [!div class="mx-imgBorder"]
-   > ![Tangkapan layar panel alur kerja baru](media/new-workflowv2.png "Tangkapan layar panel alur kerja baru")
+   > ![Tangkapan layar panel alur kerja baru.](media/new-workflowv2.png "Tangkapan layar panel alur kerja baru")
 
 1. Pilih organisasi yang berisi layanan web dalam **penyewa yang berisi layanan web Anda**.
 
@@ -59,7 +59,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
    > Alur kerja model kustom akan menerapkan heuristik untuk memetakan bidang input layanan web ke atribut entitas berdasarkan nama dan jenis data bidang. Anda akan melihat kesalahan jika bidang layanan web tidak dapat dipetakan ke entitas.
 
    > [!div class="mx-imgBorder"]
-   > ![Mengonfigurasikan alur kerja](media/intelligence-screen2-updated.png "Mengonfigurasikan alur kerja")
+   > ![Mengonfigurasikan alur kerja.](media/intelligence-screen2-updated.png "Mengonfigurasikan alur kerja")
 
 1. Pada langkah **parameter output model**, atur properti berikut:
    - Studio Pembelajaran Mesin (Klasik)
@@ -70,12 +70,12 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
       1. Pilih **nama parameter jalur Output** alur kerja batch anda dari dropdown.
 
       > [!div class="mx-imgBorder"]
-      > ![Panel parameter output model](media/intelligence-screen3-outputparameters.png "Panel parameter output model")
+      > ![Panel parameter output model.](media/intelligence-screen3-outputparameters.png "Panel parameter output model")
 
 1. Pilih atribut yang cocok dari daftar drop- down **id pelanggan dalam hasil** yang mengidentifikasi pelanggan dan pilih **Simpan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Kaitkan hasil ke panel data pelanggan](media/intelligence-screen4-relatetocustomer.png "Kaitkan hasil ke panel data pelanggan")
+   > ![Kaitkan hasil ke panel data pelanggan.](media/intelligence-screen4-relatetocustomer.png "Kaitkan hasil ke panel data pelanggan")
 
 1. Anda akan melihat layar **alur kerja yang tersimpan** dengan rincian tentang alur kerja.    
    Jika Anda mengonfigurasikan alur kerja untuk alur Pembelajaran Mesin Azure, wawasan audiens akan dilampirkan ke ruang kerja yang berisi alur. Wawasan audiens akan mendapatkan peran **kontributor** di ruang kerja Azure.

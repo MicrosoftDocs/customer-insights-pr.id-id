@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059592"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692209"
 ---
 # <a name="customer-card-add-in-preview"></a>Add-in Kartu Pelanggan (pratinjau)
 
@@ -25,7 +25,7 @@ Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamic
 ## <a name="prerequisites"></a>Prasyarat
 
 - Add-in hanya berfungsi dengan aplikasi yang diarahkan model Dynamics 365, seperti Sales, atau Customer Service, versi 9.0 dan versi yang lebih baru.
-- Agar data Dynamics 365 Anda dapat memetakan ke profil pelanggan wawasan audiens, mereka perlu [diserap dari aplikasi Dynamics 365 menggunakan konektor Common Data Service](connect-power-query.md).
+- Agar data Dynamics 365 Anda dapat memetakan ke profil pelanggan wawasan audiens, mereka perlu [diserap dari aplikasi Dynamics 365 menggunakan konektor Microsoft Dataverse](connect-power-query.md).
 - Semua pengguna Add-in Kartu Pelanggan Dynamics 365 harus [ditambahkan sebagai pengguna](permissions.md) dalam wawasan audiens untuk melihat data.
 - [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md) di audiens wawasan diperlukan agar pencarian data dapat bekerja.
 - Setiap kontrol add-in mengandalkan data tertentu dalam wawasan audiens:
@@ -50,7 +50,7 @@ Bisa diperlukan beberapa waktu agar solusi dapat diinstal ke lingkungan Anda.
 1. Pilih tautan **nama tampilan** untuk solusi **Add-in Kartu Pelanggan Dynamics 365 Customer Insights (Pratinjau)**.
 
    > [!div class="mx-imgBorder"]
-   > ![pilih Nama tampilan](media/select-display-name.png "pilih Nama tampilan")
+   > ![pilih Nama tampilan.](media/select-display-name.png "pilih Nama tampilan")
 
 1. Pilih **Masuk** dan masukkan kredensial untuk akun admin yang Anda gunakan untuk mengkonfigurasi Customer Insights.
 
@@ -64,7 +64,7 @@ Bisa diperlukan beberapa waktu agar solusi dapat diinstal ke lingkungan Anda.
    - Untuk memetakan dengan akun, pilih bidang di entitas Pelanggan yang sesuai dengan ID entitas akun Anda.
 
    > [!div class="mx-imgBorder"]
-   > ![Bidang id kontak](media/contact-id-field.png "Bidang id kontak")
+   > ![Bidang id kontak.](media/contact-id-field.png "Bidang id kontak")
 
 1. Pilih **Simpan konfigurasi** untuk menyimpan pengaturan.
 
@@ -83,7 +83,7 @@ Bisa diperlukan beberapa waktu agar solusi dapat diinstal ke lingkungan Anda.
 1. Pilih formulir kontak yang ingin ditambahkan kontrol kartu pelanggan.
 
     > [!div class="mx-imgBorder"]
-    > ![Pilih formulir kontak](media/contact-active-forms.png "Pilih formulir kontak")
+    > ![Pilih formulir kontak.](media/contact-active-forms.png "Pilih formulir kontak")
 
 1. Untuk menambahkan kontrol, di editor formulir, tarik bidang apa pun dari **penjelajah bidang** ke tempat Anda ingin kontrol ditampilkan.
 
@@ -110,7 +110,7 @@ Add-in Kartu Pelanggan tidak ditingkatkan secara otomatis. Untuk meningkatkan ke
 
 1. Pilih **Terapkan Peningkatan Solusi** pada bilah tindakan.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Tingkatkan solusi di area Penyesuaian aplikasi Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Tingkatkan solusi di area Penyesuaian aplikasi Dynamics 365.":::
 
 1. Setelah memulai proses peningkatan, Anda akan melihat indikator pemuatan hingga peningkatan selesai. Jika tidak ada versi yang lebih baru, peningkatan akan menampilkan pesan kesalahan.
 

@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola lingkungan
 description: Pelajari cara mendaftar ke layanan dan cara mengelola lingkungan.
-ms.date: 06/15/2021
+ms.date: 07/22/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,125 +9,24 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 2f115269b9d07dd118ec18cc48b55de8aea9b5bb
+ms.sourcegitcommit: 98267da3f3eddbdfbc89600a7f54e5e664a8f069
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304884"
+ms.lasthandoff: 07/28/2021
+ms.locfileid: "6683477"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Artikel ini menjelaskan cara membuat organisasi baru dan cara menyediakan lingkungan.
+## <a name="switch-environments"></a>Alihkan Lingkungan
 
-## <a name="sign-up-and-create-an-organization"></a>Mendaftar dan membuat organisasi
+Pilih kontrol **lingkungan** di sudut kanan atas halaman untuk mengubah lingkungan.
 
-1. Kunjungi situs web [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/).
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="Cuplikan layar kontrol untuk beralih lingkungan.":::
 
-2. Pilih **Mulai**.
-
-3. Pilih skenario daftar pilihan Anda dan pilih tautan yang sesuai.
-
-4. Setujui persyaratan dan ketentuan, lalu pilih **Lanjutkan** untuk mulai membuat organisasi.
-
-5. Setelah lingkungan dibuat, Anda akan diarahkan ke [Customer Insights](https://home.ci.ai.dynamics.com).
-
-6. Gunakan lingkungan demo untuk menjelajahi aplikasi, atau membuat lingkungan baru dengan mengikuti langkah di bagian berikutnya.
-
-7. Setelah menentukan pengaturan lingkungan, pilih **buat**.
-
-8. Anda akan masuk setelah lingkungan berhasil dibuat.
-
-## <a name="create-an-environment-in-an-existing-organization"></a>Membuat lingkungan di organisasi yang ada
-
-Terdapat dua cara untuk membuat lingkungan baru. Anda dapat menentukan konfigurasi yang sama sekali baru atau Anda dapat menyalin beberapa pengaturan konfigurasi dari lingkungan yang ada.
-
-> [!NOTE]
-> Organisasi dapat membuat *dua* lingkungan untuk setiap lisensi Customer Insights. Jika organisasi Anda membeli lebih dari lisensi satu kali, silakan [hubungi tim dukungan kami](https://go.microsoft.com/fwlink/?linkid=2079641) untuk meningkatkan jumlah lingkungan yang tersedia. Untuk informasi selengkapnya tentang kapasitas dan kapasitas add-on, unduh [panduan lisensi Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
-
-Untuk membuat lingkungan:
-
-1. Pilih pemilih **Lingkungan** di header aplikasi.
-
-1. Pilih **baru**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Pengaturan Lingkungan.](media/environment-settings-dialog.png)
-
-1. Dalam dialog **Buat lingkungan**, pilih **Lingkungan baru**.
-
-   Jika Anda ingin [menyalin data dari lingkungan saat ini](#considerations-for-copy-configuration-preview), pilih **salinan dari lingkungan yang ada**. Anda akan melihat daftar semua lingkungan yang tersedia di organisasi tempat Anda dapat menyalin data.
-
-1. Sediakan rincian berikut:
-   - **Nama**: Ketik nama untuk lingkungan ini. Bidang ini telah diisi jika Anda telah menyalin dari lingkungan yang ada, namun Anda dapat mengubahnya.
-   - **Jenis**: Pilih Apakah Anda ingin membuat lingkungan produksi atau Sandbox.
-   - **Kawasan**: kawasan tempat layanan disebarkan dan dihosting.
-   
-1. Atau, Anda dapat memilih **pengaturan tingkat lanjut**:
-
-   - **Simpan semua data ke**: menentukan lokasi penyimpanan data output yang dihasilkan dari Customer Insights. Anda akan memiliki dua pilihan: **penyimpanan Customer Insights** (Azure Data Lake yang dikelola oleh tim Customer Insights) dan **Azure Data Lake Storage** (Azure Data Lake Storage Anda sendiri). Secara default, pilihan penyimpanan Customer Insights dipilih.
-
-     > [!NOTE]
-     > Dengan menyimpan data ke Azure Data Lake Storage, Anda setuju bahwa data akan ditransfer ke dan disimpan di lokasi geografis yang sesuai untuk akun Azure Storage, yang mungkin berbeda dari lokasi penyimpanan data di Dynamics 365 Customer Insights. [Pelajari lebih lanjut di pusat kepercayaan Microsoft.](https://www.microsoft.com/trust-center)
-     >
-     > Saat ini, entitas yang diserap akan selalu tersimpan di data Lake yang dikelola oleh customer Insights. 
-     > 
-     > Kami hanya mendukung akun Azure Data Lake Storage dari kawasan Azure yang sama yang Anda pilih saat membuat lingkungan. 
-     > 
-     > Kami hanya mendukung akun Azure Data Lake Storage yang mengaktifkan namespace hierarkis.
-
-
-   - Untuk pilihan Azure Data Lake Storage tersebut, Anda dapat memilih antara pilihan berbasis sumber daya dan pilihan berbasis langganan untuk otentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Nama **Wadah** tidak dapat diubah dan akan menjadi `customerinsights`.
-   
-   - Jika Anda ingin menggunakan [prediksi](predictions.md), konfigurasikan berbagi data dengan Microsoft Dataverse, atau aktifkan penyerapan data dari sumber data lokal, berikan URL lingkungan Microsoft Dataverse di **Konfigurasikan berbagi data dengan Microsoft Dataverse dan aktifkan kemampuan tambahan**. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Microsoft Dataverse.
-
-     > [!NOTE]
-     > - Berbagi data dengan Data Lake terkelola Microsoft Dataverse saat ini tidak didukung bila Anda menyimpan semua data untuk Azure Data Lake Storage Anda sendiri.
-     > - [Prediksi nilai yang tidak ada pada entitas](predictions.md) saat ini tidak didukung bila Anda mengaktifkan berbagi data dengan Data Lake terkelola Microsoft Dataverse.
-
-     > [!div class="mx-imgBorder"]
-     > ![Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
-
-   Bila Anda menjalankan proses, seperti konsumsi data atau pembuatan segmen, folder yang sesuai akan dibuat di akun penyimpanan yang Anda tentukan di atas. File data dan file model.json akan dibuat dan ditambahkan ke folder berdasarkan nama proses.
-
-   Jika Anda membuat beberapa lingkungan dari Customer Insights dan memilih untuk menyimpan entitas output dari lingkungan tersebut di akun penyimpanan, folder terpisah akan dibuat untuk setiap lingkungan dengan ci_<environmentid> dalam penampung.
-
-### <a name="considerations-for-copy-configuration-preview"></a>Pertimbangan untuk konfigurasi salin (pratinjau)
-
-Pengaturan konfigurasi berikut disalin:
-
-- Konfigurasi fitur
-- Sumber data yang diserap/diimpor
-- Konfigurasi penyatuan data (petakan, cocokkan, gabungkan)
-- Segmen
-- Tindakan
-- Relasi
-- Aktivitas
-- Indeks Pencarian & filter
-- Tujuan ekspor
-- Refresh terjadwal
-- Pengayaan
-- Manajemen model
-- Penetapan peran
-
-Pengaturan berikut *tidak* disalin:
-
-- Profil pelanggan.
-- Kredensial sumber data. Anda harus memberikan kredensial untuk setiap sumber data dan menyegarkan sumber data secara manual.
-- Sumber data dari folder Common Data Model dan Data Lake terkelola Dataverse. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
-
-Bila Anda menyalin lingkungan, Anda akan melihat pesan konfirmasi bahwa lingkungan baru telah dibuat. Pilih **buka sumber data** untuk melihat daftar sumber data.
-
-Semua sumber data akan menampilkan status **kredensial yang diperlukan**. Edit sumber data dan masukkan kredensial untuk me-refresh mereka.
-
-> [!div class="mx-imgBorder"]
-> ![Sumber data disalin.](media/data-sources-copied.png)
-
-Setelah menyegarkan sumber data, buka **data** > **Satukan**. Di sini Anda akan menemukan pengaturan dari lingkungan sumber. Edit sesuai kebutuhan atau pilih **Jalankan** untuk memulai proses penyatuan data dan buat entitas pelanggan terpadu.
-
-Bila penyatuan data selesai, buka **langkah** dan **segmen** untuk me-refresh juga.
+Administrator dapat [membuat](get-started-paid.md) dan mengelola lingkungan.
 
 ## <a name="edit-an-existing-environment"></a>Edit lingkungan yang ada
 
@@ -147,13 +46,52 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
 
    > [!NOTE]
    > - Berbagi data dengan Data Lake terkelola Microsoft Dataverse saat ini tidak didukung bila Anda menyimpan semua data untuk Azure Data Lake Storage Anda sendiri.
-   > - [Prediksi nilai yang hilang dalam entitas](predictions.md) saat ini tidak didukung saat Anda mengaktifkan berbagi data dengan Data Lake Terkelola Microsoft Dataverse.
+   > - [Prediksi nilai yang tidak ditemukan dalam entitas](predictions.md) dan laporan PowerBI Embedded dalam wawasan audiens (jika diaktifkan pada lingkungan Anda) saat ini tidak didukung bila Anda mengaktifkan berbagi data dengan telaga data terkelola Microsoft Dataverse.
 
    Setelah mengaktifkan berbagi data dengan Microsoft Dataverse, refresh penuh pada sumber data Anda dan proses lainnya akan dimulai. Jika proses saat ini berjalan, Anda tidak melihat opsi untuk mengaktifkan berbagi data dengan Microsoft Dataverse. Tunggu proses tersebut selesai atau membatalkannya untuk mengaktifkan berbagi data. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
    
    Bila Anda menjalankan proses, seperti konsumsi data atau pembuatan segmen, folder yang sesuai akan dibuat di akun penyimpanan yang Anda tentukan di atas. File data dan file model.json akan dibuat dan ditambahkan ke subfolder masing-masing, tergantung pada proses yang Anda jalankan.
+
+## <a name="copy-the-environment-configuration"></a>Salin konfigurasi lingkungan
+
+Bila membuat lingkungan baru, Anda dapat memilih untuk menyalin konfigurasi dari lingkungan yang ada. 
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Cuplikan layar pilihan pengaturan di pengaturan lingkungan.":::
+
+Anda akan melihat daftar semua lingkungan yang tersedia di organisasi tempat Anda dapat menyalin data.
+
+Pengaturan konfigurasi berikut disalin:
+
+- Sumber data yang diserap/diimpor
+- Konfigurasi penyatuan data (petakan, cocokkan, gabungkan)
+- Segmen
+- Tindakan
+- Relasi
+- Aktivitas
+- Indeks Pencarian & filter
+- Tujuan ekspor
+- Refresh terjadwal
+- Pengayaan
+- Manajemen model
+- Penetapan peran
+
+Data berikut ini *tidak* disalin:
+
+- Profil pelanggan.
+- Kredensial sumber data. Anda harus memberikan kredensial untuk setiap sumber data dan menyegarkan sumber data secara manual.
+- Sumber data dari folder Common Data Model dan Data Lake terkelola Dataverse. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
+
+Bila Anda menyalin lingkungan, Anda akan melihat pesan konfirmasi bahwa lingkungan baru telah dibuat. Pilih **buka sumber data** untuk melihat daftar sumber data.
+
+Semua sumber data akan menampilkan status **kredensial yang diperlukan**. Edit sumber data dan masukkan kredensial untuk me-refresh mereka.
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="Daftar sumber data yang disalin dan memerlukan otentikasi.":::
+
+Setelah menyegarkan sumber data, buka **data** > **Satukan**. Di sini Anda akan menemukan pengaturan dari lingkungan sumber. Edit sesuai kebutuhan atau pilih **Jalankan** untuk memulai proses penyatuan data dan buat entitas pelanggan terpadu.
+
+Bila penyatuan data selesai, buka **langkah** dan **segmen** untuk me-refresh juga.
 
 ## <a name="reset-an-existing-environment"></a>Mengatur ulang lingkungan yang ada
 

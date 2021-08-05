@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596549"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554898"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Sambungkan ke folder Common Data Model dengan akun Azure Data Lake Store
 
@@ -45,7 +45,7 @@ Artikel ini memberikan informasi tentang cara menyerap data dari folder Common D
 
 1. Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Masukkan informasi **penampung** dan pilih **berikutnya**.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog untuk memasukkan rincian sambungan baru untuk Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Kotak dialog untuk memasukkan rincian sambungan baru untuk Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Anda memerlukan salah satu peran berikut, baik untuk wadah atau akun penyimpanan yang dirujuk di atas agar dapat terhubung dan membuat sumber data:
    >  - Pembaca Data Blob Penyimpanan
@@ -58,11 +58,11 @@ Artikel ini memberikan informasi tentang cara menyerap data dari folder Common D
 
 1. Anda akan mendapatkan daftar entitas yang tersedia dalam file model.json atau manifest.json yang dipilih. Anda dapat meninjau dan memilih dari daftar entitas yang tersedia dan pilih **Simpan**. Semua entitas yang dipilih akan diserap dari sumber data baru.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog menampilkan daftar entitas dari file model.JSON](media/review-entities.png)
+   > ![Kotak dialog menampilkan daftar entitas dari file model.json.](media/review-entities.png)
 
 8. Tunjukkan entitas data mana yang Anda inginkan untuk mengaktifkan pembuatan profil data dan pilih **Simpan**. Pembuatan profil data memungkinkan kemampuan analitik dan kemampuan lainnya. Anda dapat memilih seluruh entitas, yang memilih semua atribut dari entitas, atau memilih atribut tertentu pilihan Anda. Secara default, entitas tidak diaktifkan untuk pembuatan profil data.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog menampilkan profil data](media/dataprofiling-entities.png)
+   > ![Kotak dialog menampilkan profil data.](media/dataprofiling-entities.png)
 
 9. Setelah menyimpan pilihan, halaman **sumber data** akan terbuka. Anda seharusnya sekarang melihat koneksi folder Common Data Model sebagai sumber data.
 
@@ -81,12 +81,12 @@ Anda dapat memperbarui kunci akses untuk akun penyimpanan yang berisi folder Com
 
 4. Atau, perbarui **tombol akses** dan pilih **berikutnya**.
 
-   ![Dialog untuk mengedit dan memperbarui kunci akses untuk sumber data yang ada](media/edit-access-key.png)
+   ![Dialog untuk mengedit dan memperbarui kunci akses untuk sumber data yang ada.](media/edit-access-key.png)
 
 5. Atau, Anda dapat memperbarui dari sambungan kunci akun ke sambungan berbasis sumber daya atau berbasis langganan. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Anda tidak dapat **mengubah** informasi penampung saat memperbarui sambungan.
    > [!div class="mx-imgBorder"]
 
-   > ![Kotak dialog untuk memasukkan rincian sambungan untuk Azure Data Lake ke akun penyimpanan yang ada](media/enter-existing-storage-details.png)
+   > ![Kotak dialog untuk memasukkan rincian sambungan untuk Azure Data Lake ke akun penyimpanan yang ada.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Anda memerlukan salah satu peran berikut, baik untuk wadah atau akun penyimpanan yang dirujuk di atas agar dapat terhubung dan membuat sumber data:

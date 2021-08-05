@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306124"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556265"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan transaksional (pratinjau)
 
@@ -47,7 +47,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **CreatedOn**: Tanggal/Waktu/Zona
 
    [!div class="mx-imgBorder"]
-   ![Mengubah DoB ke Tanggal](media/ecommerce-dob-date.PNG "Ubah tanggal lahir sampai saat ini")
+   ![Mengubah DoB ke Tanggal.](media/ecommerce-dob-date.PNG "Ubah tanggal lahir sampai saat ini")
 
 1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommerceContacts**
 

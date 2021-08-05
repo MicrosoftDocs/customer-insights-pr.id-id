@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305895"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554687"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambungkan ke sumber data Power Query
 
@@ -42,7 +42,7 @@ Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebag
 1. Dialog **Power Query Edit kueri** memungkinkan anda meninjau dan menyempurnakan data. Entitas yang diidentifikasi dalam sumber data yang dipilih muncul di panel kiri.
 
    > [!div class="mx-imgBorder"]
-   > ![Dialog Edit kueri](media/data-manager-configure-edit-queries.png "Dialog Edit kueri")
+   > ![Dialog Edit kueri.](media/data-manager-configure-edit-queries.png "Dialog Edit kueri")
 
 1. Anda juga dapat mengubah data Anda. Pilih entitas untuk mengedit atau mengubah. Gunakan pilihan di jendela Power Query untuk menerapkan transformasi. Setiap transformasi akan terdaftar di dalam **langkah yang diterapkan**. Power Query menyediakan banyak pilihan transformasi yang telah dibuat sebelumnya. Lihat [Transformasi Power Query](/power-query/power-query-what-is-power-query#transformations) Untuk informasi lebih lanjut.
 
@@ -75,7 +75,7 @@ Konektor dengan tanda centang di kolom **Customer Insights (aliran data)** terse
 2. Pilih elipsis vertikal di sebelah sumber data yang ingin Anda ubah, lalu pilih **Edit** dari menu dropdown.
 
    > [!div class="mx-imgBorder"]
-   > ![Opsi edit](media/edit-option-data-sources.png "Opsi edit")
+   > ![Opsi edit.](media/edit-option-data-sources.png "Opsi edit")
 
 3. Terapkan perubahan dan transformasi anda di **dialog Power Query-Edit kueri** seperti yang dijelaskan di bagian [buat sumber data baru](#create-a-new-data-source).
 

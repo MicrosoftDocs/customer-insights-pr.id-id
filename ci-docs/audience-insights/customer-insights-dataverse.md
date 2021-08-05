@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259195"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650046"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan Customer Insights di Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights memberikan pilihan untuk menyediakan entitas output dalam [Mic
 
 **Organisasi dengan lingkungan Dataverse yang ada**
 
-Organisasi yang telah menggunakan Dataverse dapat [menggunakan salah satu lingkungan Dataverse yang ada](manage-environments.md#create-an-environment-in-an-existing-organization) saat administrator menyiapkan audiens wawasan. Dengan menyediakan URL ke lingkungan Dataverse, maka URL tersebut akan dilampirkan ke lingkungan wawasan audiens baru. Untuk memastikan kinerja terbaik, lingkungan Customer Insights dan Dataverse harus di-host di kawasan yang sama.
+Organisasi yang telah menggunakan Dataverse dapat [menggunakan salah satu lingkungan Dataverse yang ada](get-started-paid.md) saat administrator menyiapkan audiens wawasan. Dengan menyediakan URL ke lingkungan Dataverse, maka URL tersebut akan dilampirkan ke lingkungan wawasan audiens baru. Untuk memastikan kinerja terbaik, lingkungan Customer Insights dan Dataverse harus di-host di kawasan yang sama.
 
 Untuk melampirkan lingkungan Dataverse, perluas **pengaturan Tingkat Lanjut** saat membuat lingkungan wawasan audiens. Berikan **URL lingkungan Microsoft Dataverse** dan pilih kotak centang untuk **Aktifkan berbagi data**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Organisasi baru**
 
