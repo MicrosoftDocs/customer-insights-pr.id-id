@@ -3,21 +3,21 @@ title: Ikhtisar produk
 author: m-hartmann
 description: Dapatkan ikhtisar Dynamics 365 Customer Insights dan kemampuannya.
 ms.author: mhart
-ms.date: 02/16/2021
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 1bc75959229fd2ffef9a5fd5617889888eb72e55
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539393"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036515"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Ikhtisar produk untuk Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights adalah bagian dari platform data pelanggan (CDP) Microsoft yang membantu memberikan pengalaman pelanggan yang disesuaikan. Kemampuan platform memberikan wawasan tentang pelanggan Anda dan keterlibatan mereka dengan platform Anda. Satukan data pelanggan di beberapa sumber untuk mendapatkan tampilan tunggal pelanggan.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) adalah bagian dari platform data pelanggan (CDP) Microsoft yang membantu memberikan pengalaman pelanggan yang disesuaikan. Kemampuan platform memberikan wawasan tentang pelanggan Anda dan keterlibatan mereka dengan platform Anda. Satukan data pelanggan di beberapa sumber untuk mendapatkan tampilan tunggal pelanggan.
 
 
 - [Wawasan audiens](audience-insights/overview.md) akan membantu Anda mengubah bisnis Anda menjadi organisasi yang berfokus pada pelanggan. Profesional pemasaran, penjualan, dan layanan memiliki wawasan yang mereka perlukan untuk mempersonalisasikan pengalaman. Sambungkan data dari sumber transaksi, perilaku, dan pengamatan untuk membuat tampilan pelanggan 360 derajat. Lihat hasil lebih cepat dengan CDP yang dirancang untuk memberikan wawasan yang dapat ditindaklanjuti. 

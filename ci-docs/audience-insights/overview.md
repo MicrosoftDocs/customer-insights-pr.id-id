@@ -1,7 +1,7 @@
 ---
 title: Wawasan audiens untuk ikhtisar Dynamics 365 Customer Insights
 description: Ikhtisar wawasan audiens untuk Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539119"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034364"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan audiens untuk ikhtisar Dynamics 365 Customer Insights
 
-Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pelanggan anda. Sambungkan data dari berbagai sumber transaksional, perilaku, dan observasional untuk membuat tampilan pelanggan 360 derajat. Gunakan wawasan ini untuk mendorong pengalaman dan proses yang berpusat pada pelanggan. Satukan data pelanggan dan manfaatkan untuk wawasan dan tindakan cerdas.
+[Wawasan audiens, kemampuan Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) membantu Anda membangun pemahaman yang lebih mendalam tentang pelanggan. Sambungkan data dari berbagai sumber transaksional, perilaku, dan observasional untuk membuat tampilan pelanggan 360 derajat. Gunakan wawasan ini untuk mendorong pengalaman dan proses yang berpusat pada pelanggan. Satukan data pelanggan dan manfaatkan untuk wawasan dan tindakan cerdas.
 
 ## <a name="main-benefits"></a>Keuntungan utama 
 
@@ -34,9 +34,9 @@ Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pe
 
 - **Menggerakkan proses bisnis Anda dan pengalaman pelanggan yang disesuaikan**
 
-  - Dorong keterlibatan terpersonalisasi di seluruh saluran, Berdayakan pemasaran, penjualan, dan profesional layanan dengan Customer Insights bawaan, kontekstual, dan kartu profil pelanggan yang disesuaikan ke dalam aplikasi bisnis yang telah mereka gunakan setiap hari
-  - Otomatiskan pengalaman dan proses yang berpusat pada pelanggan berdasarkan profil, langkah Bisnis, dan segmen yang dapat disesuaikan.
-  - Aktifkan dan Perluas pengalaman lini bisnis yang dibuat di [Microsoft Power Platform](https://powerplatform.microsoft.com/). Buat dengan cepat aplikasi dengan wawasan tersemat menggunakan kode pendekatan rendah yang andal dari PowerApps.  
+  - Meningkatkan keterlibatan pribadi di seluruh saluran, mendukung profesional pemasaran, penjualan, dan layanan. Gunakan wawasan siap pakai dan kartu profil pelanggan yang disesuaikan yang terintegrasi dengan aplikasi bisnis yang telah mereka gunakan.
+  - Otomatiskan pengalaman dan proses berdasarkan profil, langkah Bisnis, dan segmen yang dapat disesuaikan.
+  - Aktifkan dan Perluas pengalaman lini bisnis yang dibuat di [Microsoft Power Platform](https://powerplatform.microsoft.com/). Buat dengan cepat aplikasi dengan wawasan tersemat menggunakan kode pendekatan rendah yang andal dari Power Apps.  
 
 ## <a name="key-audiences"></a>Audiens utama
 
@@ -50,13 +50,18 @@ Wawasan audiens membantu Anda membangun pemahaman yang lebih mendalam tentang pe
 
 - **pengguna bisnis:**
 
-  - Wawasan tentang profil pelanggan 360 derajat dan tampilan ujung-ke-ujung perjalanan pelanggan.
+  - Wawasan tentang profil pelanggan 360 derajat dan perjalanan pelanggan.
   - Lihat data pelanggan 360 derajat dalam proses bisnis Dynamics 365 dengan paket yang telah dibuat.
 
 - **Analis bisnis:**
 
   - Buat profil yang dapat disesuaikan, tentukan langkah, Buat segmen, dan manfaatkan analisis prediktif untuk mendapatkan tampilan 360 derajat pelanggan Anda, khusus untuk organisasi Anda.  
-  - Gunakan konektor siap pakai untuk beberapa aplikasi Microsoft dan aplikasi pihak ketiga atau API untuk memproses wawasan lebih lanjut.
+  - Gunakan konektor standar untuk beberapa aplikasi Microsoft dan aplikasi pihak ketiga atau API untuk memproses wawasan.
 
+## <a name="pricing-and-licensing"></a>Harga dan lisensi
+
+Customer Insights berlisensi per penyewa dan mencakup beberapa kemampuan. Kapasitas yang ditetapkan mencakup seperangkat profil, pembaruan sistem harian, permintaan Power Platform, dan dua lingkungan. Anda dapat membeli kapasitas dan lisensi tambahan untuk meningkatkan kuota default. 
+- Kapasitas dan penetapan rinci: [Panduan Lisensi Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Ikhtisar harga: [Harga Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

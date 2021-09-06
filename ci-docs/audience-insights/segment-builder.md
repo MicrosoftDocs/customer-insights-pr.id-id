@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685466"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377792"
 ---
 # <a name="create-and-manage-segments"></a>Membuat dan mengelola segmen
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685466"
 > - Panel samping untuk memilih atribut akan terus tersedia.
 > - Opsi untuk memilih jalur relasi entitas.
 > Untuk mencoba pembangun segmen baru, kirim email dengan subjek "Permintaan untuk mengaktifkan pembangun segmen baru" ke cihelp [at] microsoft.com. Sertakan nama orgnisasi Anda dan ID lingkungan sandbox Anda.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elemen pembuat segmen." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Menyusun segmen dengan aturan dan sub-aturan. Setiap aturan atau sub-aturan terdiri dari kondisi. Menggabungkan kondisi dengan operator logika
+>
+> 2 - Pilih [jalur relasi](relationships.md) antara entitas yang berlaku untuk aturan. Jalur relasi menentukan atribut yang dapat digunakan dalam kondisi.
+>
+> 3 - Mengelola aturan dan sub-aturan. Mengubah posisi aturan atau menghapusnya.
+>
+> 4 - Tambah kondisi dan buat tingkat yang tepat untuk mengurung dengan menggunakan sub-aturan.
+>
+> 5 - Terapkan rangkaian operasi ke aturan yang tersambung.
+>
+> 6 - Gunakan panel atribut untuk menambahkan atribut entitas yang tersedia atau membuat kondisi berdasarkan atribut. Panel menampilkan daftar entitas dan atribut, berdasarkan jalur relasi yang dipilih, yang tersedia untuk aturan yang dipilih.
+>
+> 7 - Tambahkan kondisi berdasarkan atribut ke aturan dan sub-aturan yang ada atau tambahkan ke aturan baru.
+>
+> 8 - Batalkan dan kembalikan perubahan saat membangun segmen.
 
 Tentukan filter kompleks di sekitar entitas pelanggan terpadu dan entitas terkaitnya. Setiap segmen, setelah pemrosesan, membuat kumpulan rekaman pelanggan yang dapat Anda ekspor dan lakukan tindakan padanya. Segmen dikelola pada halaman **segmen**. 
 
@@ -147,6 +164,6 @@ Segmen singkat memungkinkan Anda membuat segmen sederhana dengan satu operator s
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-[Ekspor segmen](export-destinations.md) dan jelajahi bagian [kartu pelanggan](customer-card-add-in.md) dan [konektor](export-power-bi.md) untuk mendapatkan wawasan tentang tingkat pelanggan.
+[Ekspor segmen](export-destinations.md) dan jelajahi [integrasi Kartu Pelanggan](customer-card-add-in.md) untuk menggunakan segmen di aplikasi lain.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

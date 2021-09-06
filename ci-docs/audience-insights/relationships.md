@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171168"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035235"
 ---
 # <a name="relationships-between-entities"></a>Relasi di antara dua entitas
 
@@ -82,7 +82,7 @@ Halaman ini menawarkan sekumpulan opsi untuk relasi yang lama dan baru:
 
 ### <a name="explore-the-relationship-visualizer"></a>Jelajahi visualisator relasi
 
-Visualisator relasi menampilkan diagram jaringan dari Relasi yang ada antara entitas yang dihubungkan dan kardinalitas mereka.
+Visualisator relasi menampilkan diagram jaringan dari Relasi yang ada antara entitas yang dihubungkan dan kardinalitas mereka. Ia juga memvisualisasikan jalur relasi.
 
 Untuk mengkustomisasi tampilan, Anda bisa mengubah posisi kotak dengan menyeretnya ke kanvas.
 
@@ -92,6 +92,20 @@ Pilihan yang Tersedia:
 - **Ekspor sebagai gambar**: Simpan tampilan saat ini sebagai file gambar.
 - **Mengubah ke tata letak horizontal/vertikal**: Mengubah perataan entitas dan Relasi.
 - **Edit**: Perbarui properti Relasi kustom di panel edit dan simpan perubahan.
+
+### <a name="relationship-path"></a>Jalur relasi
+
+Jalur relasi menjelaskan entitas yang terhubung dengan Relasi antara entitas sumber dan entitas target. Ini digunakan saat membuat segmen atau pengukuran yang mencakup entitas lain selain entitas profil terpadu dan ada beberapa pilihan untuk mencapai entitas profil terpadu.
+
+Jalur relasi akan menginformasikan sistem tempat Relasi dapat mengakses entitas profil terpadu. Jalur relasi yang berbeda dapat menghasilkan hasil yang berbeda.
+
+Contohnya, entitas *eCommerce_eCommercePurchases* memiliki daftar Relasi ke entitas *Pelanggan* profil terpadu:
+
+- eCommerce_eCommercePurchases > Pelanggan
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Pelanggan
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan 
+
+Jalur relasi menentukan entitas yang dapat Anda gunakan saat membuat aturan untuk langkah-langkah atau segmen. Memilih pilihan dengan jalur relasi terpanjang kemungkinan akan menghasilkan hasil yang lebih sedikit karena rekaman yang cocok harus menjadi bagian dari semua entitas. Dalam contoh ini, pelanggan harus membeli barang melalui e-commerce (eCommerce_eCommercePurchases), pada titik penjualan (POS_posPurchases), dan berpartisipasi dalam program loyalitas kita (loyaltyScheme_loyCustomers). Saat memilih pilihan pertama, Kemungkinan Anda mendapatkan hasil lebih banyak karena pelanggan hanya perlu ada dalam satu entitas tambahan.
 
 ## <a name="manage-existing-relationships"></a>Kelola relasi yang ada 
 
@@ -105,6 +119,6 @@ Pilih relasi, lalu tentukan salah satu pilihan berikut:
 
 ## <a name="next-step"></a>Langkah selanjutnya
 
-Relasi sistem dan kustom digunakan untuk [membuat segmen](segments.md) berdasarkan beberapa sumber data yang tidak lagi diisolasi.
+Relasi sistem dan kustom digunakan di halaman [buat segmen](segments.md) dan [ukuran](measures.md) berdasarkan beberapa sumber data yang tidak lagi diisolasi.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

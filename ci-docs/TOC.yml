@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Batas Layanan
       href: engagement-insights/quotas.md
-- name: Dukungan kontak
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Mengintegrasikan audiens dan wawasan keterlibatan
+  items:
+    - name: Tautkan wawasan audiens dengan wawasan keterlibatan
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Gunakan wawasan audiens di laporan wawasan keterlibatan
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Menggunakan dimensi demografis untuk memecah data perilaku
+      href: engagement-insights/curate-dimensions.md
+- name: Dapatkan Dukungan
+  href: 'https://dynamics.microsoft.com/en-us/support/'
