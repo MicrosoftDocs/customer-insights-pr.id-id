@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554622"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032808"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -69,7 +69,7 @@ pilih **kembali ke pelanggan** untuk kembali ke halaman pencarian pelanggan.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-[Tambahkan sumber data lainnya](data-sources.md) atau [Buat segmen pelanggan](segments.md).
+[Tambahkan sumber data lainnya](data-sources.md), [perkaya profil terpadu](enrichment-hub.md), atau [buat segmen](segments.md) untuk bekerja dengan profil terpadu di aplikasi lain.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

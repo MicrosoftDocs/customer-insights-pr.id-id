@@ -1,6 +1,6 @@
 ---
 title: Mengekspor data Customer Insights ke Adobe Experience Platform
-description: Pelajari cara menggunakan audiens wawasan dalam Platform Adobe Experience.
+description: Pelajari bagaimana menggunakan segmen wawasan audiens di Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305528"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032121"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Gunakan segmen Customer Insights dalam Adobe Experience Platform (pratinjau)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Menggunakan segmen Customer Insights di Adobe Experience Platform (pratinjau)
 
-Sebagai pengguna wawasan audiens di Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran yang lebih efisien dengan menargetkan audiens yang relevan. Agar dapat menggunakan segmen audiens wawasan dalam Adobe Experience Platform dan aplikasi seperti Adobe Campaign Standard, Anda harus mengikuti beberapa langkah yang diuraikan dalam artikel ini.
+Sebagai pengguna wawasan audiens di Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran yang lebih efisien dengan menargetkan audiens yang relevan. Agar dapat menggunakan segmen dari audiens wawasan dalam Adobe Experience Platform dan aplikasi seperti Adobe Campaign Standard, Anda harus mengikuti beberapa langkah yang diuraikan dalam artikel ini.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagram proses dari langkah-langkah yang diuraikan dalam artikel ini.":::
 
@@ -31,9 +31,9 @@ Sebagai pengguna wawasan audiens di Dynamics 365 Customer Insights, Anda mungkin
 
 ## <a name="campaign-overview"></a>Ikhtisar Kampanye
 
-Untuk lebih memahami bagaimana Anda dapat menggunakan segmen wawasan audiens dalam Adobe Experience Platform, lihat kampanye sampel fiktif.
+Untuk lebih memahami cara menggunakan segmen dari audiens wawasan di Adobe Experience Platform, lihat kampanye sampel fiktif.
 
-Misalnya, perusahaan Anda menawarkan layanan berbasis langganan bulanan kepada pelanggan Anda di Amerika Serikat. Anda ingin mengidentifikasi pelanggan yang langganannya harus diperpanjang dalam delapan hari berikutnya tetapi belum memperbarui langganan mereka. Untuk menjaga pelanggan ini, Anda perlu mengirimkan penawaran promosi melalui email, menggunakan Adobe Experience Platform.
+Misalnya, perusahaan Anda menawarkan layanan berbasis langganan bulanan kepada pelanggan Anda di Amerika Serikat. Anda ingin mengidentifikasi pelanggan yang langganannya harus diperpanjang dalam delapan hari berikutnya tetapi belum memperbarui langganan mereka. Untuk menjaga pelanggan ini, Anda ingin mengirimkan penawaran promosi melalui email, menggunakan Adobe Experience Platform.
 
 Di contoh ini, kita ingin menjalankan kampanye email promosi sekali. Artikel ini tidak mencakup kasus penggunaan dalam menjalankan kampanye lebih dari satu kali.
 
@@ -93,7 +93,7 @@ Setelah menyimpan tujuan ekspor, Anda menemukannya di **Ekspor** > **Data**.
 Anda sekarang dapat [mengekspor segmen sesuai permintaan](export-destinations.md#run-exports-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md).
 
 > [!NOTE]
-> Pastikan jumlah rekaman dalam segmen yang diekspor berada dalam batas yang diizinkan untuk lisensi Adobe Campaign Standard.
+> Pastikan jumlah rekaman dalam segmen yang diekspor berada dalam batas yang diizinkan untuk lisensi Adobe Campaign Standard Anda.
 
 Data yang diekspor disimpan dalam wadah Azure Blob storage yang dikonfigurasi di atas. Jalur folder berikut dibuat secara otomatis dalam wadah Anda:
 
@@ -105,26 +105,26 @@ Contoh: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f
 
 Contoh: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Mendefinisikan Model Data Pengalaman (XDM) di Adobe Experience Platform
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Tentukan Model Data pengalaman (XDM) di Adobe Experience Platform
 
-Sebelum data yang diekspor dari wawasan audiens dapat digunakan dalam Adobe Experience Platform, kita harus mendefinisikan skema Model Data Pengalaman dan [mengkonfigurasikan data untuk Profil Pelanggan Real-time](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Sebelum data yang diekspor dari audiens dapat digunakan dalam Adobe Experience Platform, kita perlu menentukan skema Model Data Pengalaman dan [mengkonfigurasikan data untuk Profil Pelanggan Real-time](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Ketahui [apa itu XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) dan pahami [dasar-dasar susunan skema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Mengimpor data ke Adobe Experience Platform
+## <a name="import-data-into-adobe-experience-platform"></a>Impor Data ke Adobe Experience Platform
 
-Setelah semuanya tersedia, kita harus mengimpor data audiens yang disiapkan dari wawasan audiens ke Adobe Experience Platform.
+Setelah semuanya tersedia, kita harus mengimpor data audiens yang telah siap ke Adobe Experience Platform.
 
 Pertama, [buat sambungan sumber Azure Blob Storage](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Setelah menentukan sambungan sumber, [konfigurasikan aliran data](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) untuk sambungan kumpulan penyimpanan cloud agar dapat mengimpor output segmen dari wawasan audiens ke Adobe Experience Platform.
+Setelah menentukan sambungan sumber, [konfigurasikan aliran data](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) untuk sambungan kumpulan penyimpanan cloud agar dapat mengimpor output segmen wawasan audiens ke Adobe Experience Platform.
 
-## <a name="create-an-audience-in-adobe-campaign-standard"></a>Buat audiens di Adobe Campaign Standard
+## <a name="create-an-audience-in-adobe-campaign-standard"></a>Buat audiens dalam Adobe Campaign Standard
 
-Untuk mengirim email tentang kampanye ini, kami akan menggunakan Adobe Campaign Standard. Setelah mengimpor data ke Adobe Experience Platform, kita harus [membuat audiens](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) di Adobe Campaign Standard menggunakan data di Adobe Experience Platform.
+Untuk mengirim email tentang kampanye ini, kami akan menggunakan Adobe Campaign Standard. Setelah mengimpor data ke dalam Adobe Experience Platform, kita harus [membuat audiens](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) di Adobe Campaign Standard menggunakan data di Adobe Experience Platform.
 
 
-Pelajari cara [menggunakan pembuat segmen](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) di Adobe Campaign Standard untuk menentukan audiens berdasarkan data dalam Adobe Experience Platform.
+Pelajari cara [menggunakan pembuat segmen](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) dalam Adobe Campaign Standard untuk audiens berdasarkan data dalam Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Membuat dan mengirim email menggunakan Adobe Campaign Standard
 
