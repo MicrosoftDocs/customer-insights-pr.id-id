@@ -8,12 +8,12 @@ ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 0d04de418326152dafbbf020e6bb6d3b350ca806
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036515"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474107"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Ikhtisar produk untuk Dynamics 365 Customer Insights
 
@@ -33,5 +33,10 @@ Untuk memilih kemampuan
 1. Di panel navigasi, pilih **Semua aplikasi** untuk membuka jendela **Pilih fokus Anda**.
 1. Pilih **Mulai sekarang** untuk menelusuri ke kemampuan yang Anda pilih.
 
+## <a name="pricing-and-licensing"></a>Harga dan lisensi
+
+Customer Insights berlisensi per penyewa dan mencakup beberapa kemampuan. Anda dapat membeli kapasitas dan lisensi tambahan untuk meningkatkan kuota default. 
+- [Ikhtisar harga](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
+- Kapasitas dan penetapan: [Panduan Lisensi Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

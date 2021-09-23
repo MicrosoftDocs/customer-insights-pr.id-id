@@ -1,7 +1,7 @@
 ---
 title: Perkaya profil pelanggan terpadu
 description: Gunakan kemampuan untuk memperkaya data pelanggan Anda.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032532"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469988"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
@@ -29,6 +29,7 @@ Anda harus memiliki izin kontributor atau Administrator untuk membuat atau menge
 
 Pada tab **temukan**, Anda akan menemukan pengayaan berikut:
 
+- [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
 - [Merek](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
@@ -62,5 +63,17 @@ Pengayaan pihak ketiga dikonfigurasi menggunakan [koneksi](connections.md), yang
 ## <a name="multiple-enrichments-of-the-same-type"></a>Beberapa pengayaan dengan tipe yang sama
 
 Entitas yang akan diperkaya ditentukan selama konfigurasi pengayaan, yang memungkinkan Anda hanya memperkaya subkumpulan profil Anda. Misalnya, perkaya data hanya untuk segmen tertentu. Anda dapat mengonfigurasi beberapa pengayaan dengan tipe yang sama dan menggunakan kembali koneksi yang sama. Beberapa pengayaan akan memiliki batasan jumlah pengayaan dengan jenis yang sama yang dapat dibuat. Batas dan penggunaan saat ini dapat dilihat pada halaman **Pengayaan**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
+
+Anda dapat menemukan rincian tentang pemrosesan pengayaan, termasuk statusnya dan kemungkinan masalah saat sedang menyegarkan atau setelah penyegaran selesai. Pahami proses yang terlibat untuk me-refresh pengayaan dan berapa lama waktu yang digunakan untuk menjalankan proses. Status pengayaan didukung untuk Experian, Leadspace, HERE Technologies, Impor SFTP, dan Azure Maps.
+
+Untuk melihat status pengayaan
+
+1. Buka **Data** > **Pengayaan**. 
+1. Pada tab **Pengayaan saya**, pilih status pengayaan untuk membuka panel sisi. 
+1. Di panel **Rincian progres**, perluas bagian **Pengayaan**. 
+1. Dalam pengayaan yang ingin Anda lihat kemajuannya, pilih **Lihat rincian**. 
+1. Di panel **Rincian tugas**, pilih **Tampilkan rincian** untuk melihat proses yang terlibat dalam memperbarui pengayaan dan statusnya. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

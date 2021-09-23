@@ -1,24 +1,23 @@
 ---
-title: Bahasa yang didukung untuk wawasan audiens
+title: Bahasa yang didukung untuk Dynamics 365 Customer Insights
 description: Memahami dan mengkonfigurasi dukungan bahasa.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035143"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483346"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Bahasa yang didukung untuk kemampuan wawasan audiens
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Bahasa yang didukung untuk Dynamics 365 Customer Insights
 
-Audiens wawasan untuk Dynamics 365 Customer Insights diterjemahkan ke banyak bahasa. Daftar berikut berisi bahasa dan informasi yang tersedia tentang terjemahan. Anda juga dapat mempelajari lebih lanjut tentang cara mengubah pengaturan bahasa. 
+Dynamics 365 Customer Insights diterjemahkan ke banyak bahasa. Daftar berikut berisi bahasa dan informasi yang tersedia tentang terjemahan. Anda juga dapat mempelajari lebih lanjut tentang cara mengubah pengaturan bahasa. 
 
 ## <a name="languages"></a>Bahasa
 
@@ -64,12 +63,12 @@ Audiens wawasan untuk Dynamics 365 Customer Insights diterjemahkan ke banyak bah
 | Swedia | svenska |
 | Thai | ไทย |
 | Turki | Türkçe |
-| Bahasa Ukraina | українська |
+| Ukraina | українська |
 | Bahasa Vietnam | Tiếng Việt |
 
 ## <a name="whats-translated"></a>Apa yang diterjemahkan
 
-Aplikasi menggunakan preferensi bahasa Anda untuk menampilkan elemen seperti menu, teks label, dan pesan sistem dalam bahasa pilihan Anda.
+Customer Insights menggunakan preferensi bahasa Anda untuk menampilkan elemen seperti menu, teks label, dan pesan sistem dalam bahasa pilihan Anda.
 
 Karena sebagian besar fitur didasarkan pada data, beberapa item tetap dalam bahasa aslinya. Misalnya:
 

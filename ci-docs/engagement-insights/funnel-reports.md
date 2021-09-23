@@ -4,17 +4,17 @@ description: Cara menggunakan laporan corong untuk memahami cara audiens membuat
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032259"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498646"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Membuat dan mengelola laporan corong
 
@@ -158,4 +158,21 @@ Anda dapat mengubah nama laporan corong, menghapusnya, atau memodifikasi langkah
 1. Pilih nama untuk membuka laporan.
 
 1. Pilih langkah yang ingin Anda hapus, kemudian pilih **Hapus**.
+
+## <a name="funnel-insights"></a>Wawasan corong 
+
+Wawasan keterlibatan sekarang menawarkan wawasan corong untuk pelanggan. Gunakan wawasan corong untuk mendapatkan wawasan yang lebih mendalam mengenai perilaku pelanggan tentang langkah-langkah dalam laporan corong Anda. Saat Anda membuat dan menyimpan laporan corong baru, wawasan corong secara otomatis dibuat untuk laporan Anda. 
+
+Anda dapat melihat wawasan corong dari kategori berikut, di tingkat utama dan langkah: 
+
+ - Rasio konversi 
+ - Waktu Transisi 
+ - Waktu Penyelesaian 
+
+Gunakan wawasan ini untuk mempelajari lebih dalam perilaku pelanggan dan lebih memahami poin mampir dan beralih untuk laporan corong Anda. 
+
+Wawasan corong akan dihitung ulang setiap 24 jam, atau saat Anda **Menyimpan** laporan corong. 
+
+> [!NOTE]
+> Untuk melihat wawasan corong, Anda harus menyimpan laporan setiap kali melakukan perubahan. 
 

@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461107"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466352"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Menggunakan dimensi demografis untuk memecah data perilaku
 
@@ -29,7 +29,7 @@ Dengan menggunakan dimensi metrik profil terpadu, pengguna wawasan keterlibatan 
 - Lingkungan wawasan keterlibatan dengan data profil pelanggan Anda yang ditautkan ke lingkungan wawasan audiens tempat profil pelanggan dibuat. Informasi lebih lanjut, lihat [Membuat tautan antara wawasan audiens dan wawasan keterlibatan](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Setelah membuat tautan antara lingkungan audiens dan wawasan keterlibatan, Anda hanya memerlukan data khusus untuk properti profil pelanggan yang dapat berguna sebagai dimensi dalam wawasan keterlibatan. Untuk informasi lebih lanjut, buka [Aktifkan atribut dan segmen profil terpadu wawasan audiens](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Setelah membuat tautan antara lingkungan audiens dan wawasan keterlibatan, Anda hanya memerlukan data khusus untuk properti profil pelanggan yang dapat berguna sebagai dimensi dalam wawasan keterlibatan. Untuk informasi lebih lanjut, buka [Aktifkan atribut dan segmen profil terpadu wawasan audiens](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Buat laporan baru kustom
 

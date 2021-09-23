@@ -4,17 +4,17 @@ description: Cara membuat, mengganti nama, dan menghapus ruang kerja dan lingkun
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034046"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486039"
 ---
 # <a name="manage-environments-and-workspaces"></a>Mengelola lingkungan dan ruang kerja
 
@@ -85,13 +85,11 @@ Menghapus ruang kerja akan menghapus semua konten, data, pengaturan, dan izinnya
 
 1. Pilih **Tambah anggota** untuk memberikan akses dan [menetapkan peran](user-roles.md). Saat ini, hanya **admin Ruang Kerja** yang tersedia.
 
-1. Jika mengkonfigurasi [sambungan ke audiens wawasan](configure-connections.md), Anda dapat memilih **Izinkan akses ke data profil** untuk memungkinkan anggota melihat laporan berdasarkan [profil pengguna](profile-reports.md).
-
 1. Pilih **Tambah anggota** untuk menambahkannya ke ruang kerja Anda.
 
 ## <a name="manage-an-environment"></a>Kelola lingkungan
 
-Sebagai admin Lingkungan, Anda dapat mengakses lingkungan dari panel navigasi kiri. Anda dapat mengkonfigurasi pengaturan lingkungan, admin Lingkungan, ruang kerja, dan [sambungan ke wawasan audiens](configure-connections.md). Pilih tab untuk berpindah antar area berbeda di pusat admin.
+Sebagai admin Lingkungan, Anda dapat mengakses lingkungan dari panel navigasi kiri. Anda dapat mengkonfigurasi pengaturan lingkungan, admin lingkungan lainnya, dan ruang kerja. Pilih tab untuk berpindah antar area berbeda di pusat admin.
 
 :::image type="content" source="media/New-environment.png" alt-text="Pusat admin lingkungan.":::
 
@@ -123,8 +121,6 @@ Sebagai admin Lingkungan, Anda dapat mengakses lingkungan dari panel navigasi ki
 
 1. Pilih **Tambah anggota** untuk memperbarui anggota dan [menetapkan peran](user-roles.md). Saat ini, hanya **admin Lingkungan** yang tersedia.
 
-1. Jika mengkonfigurasi [sambungan ke audiens wawasan](configure-connections.md), Anda dapat memilih **Izinkan akses ke data profil** untuk memungkinkan anggota melihat laporan berdasarkan [profil pengguna](profile-reports.md).
-
 1. Pilih **Tambah anggota** untuk menambahkannya ke lingkungan Anda.
 
 ### <a name="delete-an-environment"></a>Hapus lingkungan
@@ -143,7 +139,7 @@ Admin lingkungan dapat menghapus lingkungan. Sebelum dapat menghapus lingkungan,
 
 Menetapkan sambungan ke wawasan audiens memungkinkan Anda melihat laporan dalam wawasan keterlibatan berdasarkan profil pelanggan terpadu. 
 
-Untuk informasi lebih lanjut lihat [konfigurasikan koneksi](configure-connections.md).
+Untuk informasi lebih lanjut, lihat [Membuat tautan antara wawasan audiens dan wawasan keterlibatan](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Mengelola data pribadi
 

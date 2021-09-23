@@ -4,17 +4,17 @@ description: Pelajari cara mempersonalkan dan menjalankan SDK Android
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036922"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494279"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Memulai SDK Android
 
@@ -35,17 +35,38 @@ Pilihan konfigurasi berikut dapat dilewatkan ke SDK:
 
 - Tombol penyerapan (lihat di bawah ini untuk petunjuk cara mendapatkan)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>Langkah 1. Mengintegrasikan SDK ke aplikasi Anda
+## <a name="integrate-the-sdk-into-your-application"></a>Mengintegrasikan SDK ke aplikasi Anda
 Mulai proses dengan memilih ruang kerja, memilih platform seluler Android, dan mengunduh SDK Android.
 
 - Gunakan switcher ruang kerja di panel navigasi kiri untuk memilih ruang kerja Anda.
 
 - Jika Anda tidak memiliki ruang kerja yang lama, pilih  **Ruang Kerja Baru**, lalu ikuti langkah-langkah untuk membuat [ruang kerja baru](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>Langkah 2. Mengonfigurasi SDK
+- Setelah membuat ruang kerja, buka **Admin** > **Ruang Kerja**, lalu pilih  **Panduan penginstalan**. 
 
-1. Setelah membuat ruang kerja, buka **Admin** > **Ruang Kerja**, lalu pilih  **Panduan penginstalan**. 
+## <a name="configure-the-sdk"></a>Mengonfigurasi SDK
 
+Setelah mengunduh SDK, Anda dapat menggunakannya di Android Studio untuk mengaktifkan dan mendefinisikan aktivitas. Ada dua cara untuk melakukannya:
+### <a name="option-1-using-jitpack-recommended"></a>Pilihan 1: Menggunakan JitPack (disarankan)
+1. Tambahkan penyimpanan JitPack ke root `build.gradle` Anda:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Tambahkan dependensi:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>Pilihan 2: Menggunakan tautan unduhan
 1. Unduh [SDK Android wawasan keterlibatan](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan letakkan file `eiandroidsdk-debug.aar` dalam folder `libs`.
 
 1. Buka file `build.gradle` tingkat proyek Anda, lalu tambahkan cuplikan berikut:
@@ -62,7 +83,17 @@ Mulai proses dengan memilih ruang kerja, memilih platform seluler Android, dan m
     }
     ```
 
-1. Konfigurasi SDK wawasan keterlibatan melalui file `AndroidManifest.xml` Anda yang terletak di dalam folder `manifests`. 
+1. Tambah izin untuk jaringan dan internet di file `AndroidManifest.xml` yang terletak di dalam folder `manifests`. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Konfigurasi SDK wawasan keterlibatan melalui file `AndroidManifest.xml` Anda. 
+
+## <a name="enable-auto-instrumentation"></a>Aktifkan instrumentasi otomatis
 1. Salin cuplikan XML dari **panduan Penginstalan**. `Your-Ingestion-Key` seharusnya secara otomatis diisi.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Mulai proses dengan memilih ruang kerja, memilih platform seluler Android, dan m
    </application>
    ```
 
-1. Aktifkan atau nonaktifkan pengambilan otomatis aktivitas `View` dengan mengatur bidang `autoCapture` ke `true` atau `false`.
+1. Aktifkan atau nonaktifkan pengambilan otomatis aktivitas `View` dengan mengatur bidang `autoCapture` ke `true` atau `false`. Aktivitas `Action` saat ini harus ditambahkan secara manual.
 
 1. (Opsional) Konfigurasi lain mencakup pengaturan URL pengumpul titik akhir. Semua dapat ditambahkan dalam metadata kunci penyerapan di `AndroidManifest.xml`:
     ```xml
@@ -94,9 +125,9 @@ Mulai proses dengan memilih ruang kerja, memilih platform seluler Android, dan m
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>Langkah 3. Inisialisasi SDK dari MainActivity 
+## <a name="implement-custom-events"></a>Menerapkan aktivitas kustom
 
-Setelah menginisialisasi SDK, Anda dapat bekerja dengan aktivitas dan propertinya di lingkungan MainActivity.
+Setelah menginisialisasi SDK, Anda dapat bekerja dengan aktivitas dan propertinya di lingkungan `MainActivity`.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Mengatur rincian pengguna untuk aktivitas Anda (opsional)
+## <a name="set-user-details-for-your-event-optional"></a>Mengatur rincian pengguna untuk aktivitas Anda (opsional)
 
 SDK memungkinkan Anda menentukan informasi pengguna yang dapat dikirim dengan setiap aktivitas. Anda dapat menentukan informasi pengguna dengan menghubungi API `setUser(user: User)` pada tingkat `Analytics`.
 

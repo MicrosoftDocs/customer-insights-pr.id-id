@@ -1,20 +1,20 @@
 ---
 title: prediksi Rekomendasi produk
 description: Memperkirakan produk yang mungkin dibeli atau berinteraksi dengan pelanggan.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034960"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494543"
 ---
 # <a name="product-recommendation-prediction-preview"></a>prediksi Rekomendasi produk (pratinjau)
 
@@ -89,23 +89,24 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 
 ### <a name="add-required-data"></a>Tambahkan data wajib
 
-1. Pilih **Tambah data** untuk **Riwayat transaksi pelanggan** dan pilih entitas yang menyediakan informasi riwayat transaksi/pembelian sebagaimana dijelaskan dalam [prasyarat](#prerequisites).
+1. Pilih **Tambah data** dan pilih jenis aktivitas pada panel sisi yang berisi informasi transaksi atau riwayat pembelian yang diperlukan.
 
-1. Petakan bidang semantik ke atribut dalam entitas Riwayat Pembelian Anda dan pilih **berikutnya**. Untuk Deskripsi bidang, lihat [prasyarat](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Tentukan relasi entitas.](media/product-recommendation-purchasehistorymapping.PNG "Halaman riwayat pembelian yang menampilkan atribut semantis yang dipetakan ke bidang dalam entitas riwayat pembelian yang dipilih")
+1. Dalam **Pilih aktivitas**, pilih aktivitas tertentu dari aktivitas yang dipilih yang akan difokuskan perhitungannya.
 
-1. Jika bidang tidak diisi, konfigurasikan relasi dari entitas Riwayat Pembelian Anda ke entitas *pelanggan*.
-    1. Pilih **Entitas riwayat pembelian**.
-    1. Pilih **bidang** yang mengidentifikasi pelanggan di entitas riwayat pembelian. Ini perlu dikaitkan dengan ID pelanggan utama entitas *pelanggan* Anda.
-    1. Pilih **entitas pelanggan** yang cocok dengan entitas pelanggan utama Anda.
-    1. Masukkan nama yang mendeskripsikan relasi.
-       > [!div class="mx-imgBorder"]
-       > ![Halaman Riwayat pembelian yang menunjukkan pembuatan relasi dengan pelanggan.](media/model-purchase-join.png "Halaman Riwayat pembelian yang menunjukkan pembuatan relasi dengan pelanggan")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel sisi yang menunjukkan pemilihan aktivitas tertentu dalam jenis semantik.":::
+
+1. Jika Anda belum memetakan aktivitas ke jenis semantis, pilih **Edit** untuk melakukannya. Pengalaman terpandu untuk memetakan aktivitas semantis akan terbuka. Petakan data Anda ke bidang terkait di jenis aktivitas yang dipilih.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Jenis aktivitas pengaturan halaman.":::
+
+1. Setelah memetakan aktivitas ke jenis semantik yang sesuai, pilih **Berikutnya** untuk melanjutkan 
+ 
+1. Petakan atribut semantis ke bidang yang diperlukan untuk menjalankan model.
 
 1. Pilih **Simpan**.
 
 1. Pilih **Selanjutnya**.
+
 
 ### <a name="configure-product-filters"></a>Konfigurasikan filter produk
 

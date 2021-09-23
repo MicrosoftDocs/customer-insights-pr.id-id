@@ -1,7 +1,7 @@
 ---
 title: Gabungkan entitas dalam penyatuan data
 description: Gabungkan entitas untuk membuat profil pelanggan terpadu.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035006"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494323"
 ---
 # <a name="merge-entities"></a>Gabungkan Entitas
 
@@ -76,17 +76,40 @@ Pisahkan atribut dari profil pelanggan terpadu. Jika bidang digunakan dalam pros
 
 Pada halaman **Gabung**, pilih **Bidang yang dikecualikan** untuk melihat daftar semua bidang yang dipisahkan. Panel ini memungkinkan Anda menambahkan kembali bidang yang dipisahkan.
 
+## <a name="edit-a-merged-field"></a>Edit bidang gabungan
+
+1.  Pilih bidang gabungan.
+
+1.  Pilih **Tampilkan lainnya** dan pilih **Edit**.
+
+1.  Tentukan cara mengombinasikan atau menggabungkan bidang dari salah satu dari tiga pilihan:
+    - **Kepentingan**: Mengidentifikasi nilai pemenang berdasarkan peringkat kepentingan yang ditentukan untuk bidang yang berpartisipasi. Ini adalah pilihan penggabungan default. Pilih **Pindahkan ke atas/bawah** untuk menetapkan peringkat nilai penting.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Pilihan nilai penting dalam dialog bidang gabungan."::: 
+    - **Terbaru**: Mengidentifikasi nilai pemenang berdasarkan yang paling terkini. Memerlukan tanggal atau bidang angka untuk setiap entitas yang berpartisipasi dalam cakupan bidang gabungan untuk menentukan keterkinian.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Pilihan keterkinian dalam dialog bidang gabungan.":::
+    - **Paling lama**: Mengidentifikasi nilai pemenang berdasarkan yang paling lama. Memerlukan tanggal atau bidang angka untuk setiap entitas yang berpartisipasi dalam cakupan bidang gabungan untuk menentukan keterkinian.
+
+1.  Anda dapat menambahkan bidang tambahan untuk berpartisipasi dalam proses penggabungan.
+
+1.  Anda dapat mengganti nama bidang gabungan.
+
+1. Pilih **Selesai** untuk menerapkan perubahan.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
 ## <a name="manually-combine-fields"></a>Gabungkan bidang secara manual
 
 Tentukan atribut gabungan secara manual. 
 
 1. Pada halaman **Gabung**, pilih **Gabungkan bidang**.
 
-1. Berikan **Nama** dan **nama bidang Output**.
+1. Tentukan kebijakan pemenang gabungan di dropdown **Gabungkan bidang berdasarkan**.
 
 1. Pilih bidang untuk ditambahkan. pilih **Tambahkan bidang** untuk mengombinasikan bidang lainnya.
 
-1. Konfirmasikan pengecualian.
+1. Berikan **Nama** dan **nama bidang Output**.
+
+1. Pilih **Selesai** untuk menerapkan perubahan.
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
 
@@ -103,6 +126,27 @@ Beberapa entitas berisi rincian lebih banyak daripada entitas lain. Jika entitas
 1. Konfirmasikan perubahan.
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
+
+## <a name="configure-customer-id-generation"></a>Konfigurasikan pembuatan ID pelanggan 
+
+Setelah mengkonfigurasi penggabungan bidang, Anda dapat menentukan cara membuat nilai CustomerId, pengidentifikasi profil pelanggan unik. Langkah penggabungan dalam proses penyatuan data menghasilkan pengidentifikasi profil pelanggan yang unik. Pengidentifikasi adalah CustomerId dalam entitas *Pelanggan* yang dihasilkan dari proses penyatuan data. 
+
+CustomerId dalam entitas Pelanggan didasarkan pada hash nilai pertama kunci utama pemenang non-nihil. Kunci ini berasal dari entitas yang digunakan dalam fase pencocokan dan penggabungan dan terpengaruh oleh urutan kecocokan. Jadi CustomerID yang dihasilkan dapat berubah ketika nilai utama utama berubah di entitas utama dari urutan kecocokan. Akibatnya, nilai kunci utama mungkin tidak selalu mewakili pelanggan yang sama.
+
+Mengkonfigurasi Id pelanggan yang stabil memungkinkan Anda menghindari perilaku tersebut.
+
+**Konfigurasikan ID pelanggan unik**
+
+1. Buka **Satukan** > **Gabungkan**.
+
+1. Pada halaman **Gabungkan**, pilih tab **Kunci**. 
+
+1. Layangkan mouse di baris **CustomerId**, lalu pilih opsi **Konfigurasi**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Kontrol untuk menyesuaikan pembuatan ID.":::
+
+1. Pilih hingga lima bidang yang akan berisi ID pelanggan unik dan lebih stabil. Rekaman yang tidak sesuai dengan konfigurasi Anda akan menggunakan ID yang dikonfigurasi sistem.  
+
+1. Pilih **Selesai** dan jalankan proses penggabungan untuk menerapkan perubahan Anda.
 
 ## <a name="run-your-merge"></a>Jalankan gabungan
 

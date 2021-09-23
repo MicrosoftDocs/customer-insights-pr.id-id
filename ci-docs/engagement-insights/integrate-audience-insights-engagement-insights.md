@@ -1,19 +1,19 @@
 ---
 title: Membuat tautan antara wawasan audiens dan wawasan keterlibatan
 description: Buat tautan aktif antara wawasan audiens dan wawasan keterlibatan untuk mengaktifkan pembagian data dua arah.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461017"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487111"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Membuat tautan antara wawasan audiens dan wawasan keterlibatan
 
@@ -26,14 +26,14 @@ Gunakan profil terpadu dan segmen dari audiens wawasan untuk pilihan analisis la
 ## <a name="prerequisites"></a>Prasyarat
 
 - Profil wawasan Audiens harus disimpan di akun Azure Data Lake Storage yang Anda miliki atau di data lake terkelola&ndash;[Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-
+- Wawasan audiens Anda harus memiliki lingkungan Dataverse terkait. Dan jika lingkungan tersebut juga menggunakan Dataverse untuk penyimpanan data, pastikan Anda memeriksa pilihan **Aktifkan berbagi data** di wawasan audiens. Untuk informasi lebih lanjut, lihat [Membuat dan mengonfigurasikan lingkungan berbayar di wawasan audiens](../audience-insights/get-started-paid.md).
 - Anda memerlukan izin administrator untuk lingkungan wawasan keterlibatan dan wawasan audiens.
-
 - Lingkungan yang ditautkan harus berada di kawasan geografis yang sama.
 
 > [!NOTE]
-> - Jika langganan Wawasan audiens Anda adalah uji coba, yang menggunakan data lake terkelola internal wawasan audiens, hubungi [pirequest@microsoft.com](mailto:pirequest@microsoft.com) untuk bantuan. 
-> - Jika lingkungan wwawasan audiens Anda menggunakan Azure Data Lake Storage Anda sendiri untuk menyimpan data, Anda harus menambahkan prinsipal layanan Azure wawasan keterlibatan ke akun penyimpanan Anda. Untuk rincian, buka [Sambungkan ke akun Azure Data Lake Storage dengan prinsipal layanan Azure untuk wawasan audiens](../audience-insights/connect-service-principal.md). Selain itu, wawasan audiens Anda harus memiliki [lingkungan Dataverse](../audience-insights/get-started-paid.md) terkait. 
+> - Jika langganan Wawasan audiens Anda adalah uji coba yang menggunakan telaga data terkelola internal wawasan audiens, hubungi [pirequest@microsoft.com](mailto:pirequest@microsoft.com) untuk bantuan. 
+> - Jika lingkungan wwawasan audiens Anda menggunakan Azure Data Lake Storage Anda sendiri untuk menyimpan data, Anda harus menambahkan prinsipal layanan Azure wawasan keterlibatan ke akun penyimpanan Anda. Untuk rincian, buka [Sambungkan ke akun Azure Data Lake Storage dengan prinsipal layanan Azure untuk wawasan audiens](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Membuat tautan lingkungan
 
@@ -75,6 +75,7 @@ Setelah menautkan lingkungan, Anda dapat memilih fitur opsional untuk lingkungan
 
    > [!IMPORTANT]
    > Jika Anda tidak menambahkan pengguna secara eksplisit pada langkah ini, data akan disembunyikan dari pengguna dalam wawasan keterlibatan.
+   > Untuk wawasan audiens yang akan ditampilkan dalam wawasan keterlibatan, Anda harus [menjalankan terlebih dulu proses penggabungan dan hilir](../audience-insights/merge-entities.md). Proses hilir penting karena menghasilkan tabel unik yang menyiapkan segmen wawasan audiens untuk dibagikan dengan wawasan keterlibatan. (Jika refresh sistem dijadwalkan, refresh sistem akan secara otomatis mencakup proses hilir.)
 
 1. Tinjau pilihan Anda lalu pilih **Selesai**.
 
