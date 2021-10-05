@@ -4,27 +4,27 @@ description: Cari informasi tentang SDKs dan cara menggunakannya.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036287"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558750"
 ---
 # <a name="developer-resources-overview"></a>Ikhtisar Sumber Daya Pengembang
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Artikel ini berisi daftar semua cuplikan kode dan sampel yang tersedia untuk referensi cepat. Dapatkan kode untuk pengirim aktivitas untuk platform Anda dan ikuti tutorial. 
+Artikel ini berisi daftar semua cuplikan kode dan sampel SDK (toolkit pengembangan perangkat lunak) yang tersedia bagi pengembang untuk berbagi data dengan Dynamics 365 Customer Insights. Dapatkan kode untuk aktivitas khusus platform Anda dengan mengikuti tutorial.
 
 ## <a name="capture-events-from-websites"></a>Aktivitas Ambil dari situs web
 
-- [Cara menambahkan cuplikan kode di situs web](instrument-website.md)
+- [Instrumentasi situs web](instrument-website.md)
 - [Sampel SDK Web](websdk-sample.md)
 - [Instrumentasi SDK web lanjutan](advanced-SDK-implementation.md)
 

@@ -1,20 +1,20 @@
 ---
 title: Hubungan antara entitas dan jalur entitas
 description: Buat dan kelola Relasi antara entitas dari beberapa sumber data.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035235"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557356"
 ---
 # <a name="relationships-between-entities"></a>Relasi di antara dua entitas
 
@@ -93,9 +93,9 @@ Pilihan yang Tersedia:
 - **Mengubah ke tata letak horizontal/vertikal**: Mengubah perataan entitas dan Relasi.
 - **Edit**: Perbarui properti Relasi kustom di panel edit dan simpan perubahan.
 
-### <a name="relationship-path"></a>Jalur relasi
+## <a name="relationship-paths"></a>Jalur relasi
 
-Jalur relasi menjelaskan entitas yang terhubung dengan Relasi antara entitas sumber dan entitas target. Ini digunakan saat membuat segmen atau pengukuran yang mencakup entitas lain selain entitas profil terpadu dan ada beberapa pilihan untuk mencapai entitas profil terpadu.
+Jalur relasi menjelaskan entitas yang tersambung dengan Relasi antara entitas sumber dan entitas target. Ini digunakan saat membuat segmen atau pengukuran yang mencakup entitas lain selain entitas profil terpadu dan ada beberapa pilihan untuk mencapai entitas profil terpadu. 
 
 Jalur relasi akan menginformasikan sistem tempat Relasi dapat mengakses entitas profil terpadu. Jalur relasi yang berbeda dapat menghasilkan hasil yang berbeda.
 
@@ -106,6 +106,42 @@ Contohnya, entitas *eCommerce_eCommercePurchases* memiliki daftar Relasi ke enti
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan 
 
 Jalur relasi menentukan entitas yang dapat Anda gunakan saat membuat aturan untuk langkah-langkah atau segmen. Memilih pilihan dengan jalur relasi terpanjang kemungkinan akan menghasilkan hasil yang lebih sedikit karena rekaman yang cocok harus menjadi bagian dari semua entitas. Dalam contoh ini, pelanggan harus membeli barang melalui e-commerce (eCommerce_eCommercePurchases), pada titik penjualan (POS_posPurchases), dan berpartisipasi dalam program loyalitas kita (loyaltyScheme_loyCustomers). Saat memilih pilihan pertama, Kemungkinan Anda mendapatkan hasil lebih banyak karena pelanggan hanya perlu ada dalam satu entitas tambahan.
+
+### <a name="direct-relationship"></a>Relasi langsung
+
+Relasi diklasifikasi sebagai **relasi langsung** bila entitas sumber terhubung ke entitas target dengan hanya satu relasi.
+
+Contohnya, jika entitas aktivitas yang disebut *eCommerce_eCommercePurchases* terhubung ke entitas target *eCommerce_eCommerceContacts* melalui *ContactId* hanya, maka ini adalah relasi langsung.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Entitas sumber terhubung secara langsung ke entitas target.":::
+
+#### <a name="multi-path-relationship"></a>Relasi multi-jalur
+
+**Relasi multi-jalur** adalah jenis khusus relasi langsung yang menghubungkan entitas sumber ke lebih dari satu entitas target.
+
+Contohnya, jika entitas aktivitas yang disebut *eCommerce_eCommercePurchases* terkait dengan dua entitas target, baik *eCommerce_eCommerceContacts* maupun *loyaltyScheme_loyCustomers*, maka ini merupakan relasi multi-jalur.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Entitas sumber terhubung langsung ke lebih dari satu entitas target melalui relasi multi-lompatan.":::
+
+### <a name="indirect-relationship"></a>Relasi tidak langsung
+
+Relasi diklasifikasi sebagai **relasi tidak langsung** bila entitas sumber terkait ke satu atau lebih entitas tambahan sebelum terkait dengan entitas target.
+
+#### <a name="multi-hop-relationship"></a>Relasi multi-lompatan
+
+Relasi *multi-lompatan* adalah *relasi tidak langsung* yang memungkinkan Anda menghubungkan entitas sumber ke entitas target melalui satu atau beberapa entitas perantara lainnya.
+
+Contohnya, jika entitas aktivitas yang disebut *eCommerce_eCommercePurchasesWest* terhubung ke entitas tingkat lanjut yang disebut *eCommerce_eCommercePurchasesEast*, kemudian terhubung ke entitas target yang disebut *eCommerce_eCommerceContacts*, maka ini adalah relasi multi-lompatan.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Entitas sumber terhubung secara langsung ke entitas target dengan entitas menengah.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relasi multi-lompatan, multi-jalur
+
+Relasi multi-jalur dan multi-lompatan dapat digunakan bersama-sama untuk membuat **relasi multi-lompatan, multi-jalur**. Jenis khusus ini menggabungkan fungsi **relasi multi-lompatan** dan **multi-jalur**. Anda dapat menyambung ke lebih dari satu entitas target saat menggunakan entitas tingkat lanjut.
+
+Contohnya, jika entitas aktivitas yang disebut *eCommerce_eCommercePurchasesWest* terhubung ke entitas tingkat lanjut yang disebut *eCommerce_eCommercePurchasesEast*, kemudian terhubung ke dua entitas target, baik *eCommerce_eCommerceContacts* maupun *loyaltyScheme_loyCustomers*, maka ini adalah relasi multi-jalur.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Entitas sumber terhubung secara langsung ke satu entitas target dan terhubung ke entitas target lain melalui entitas menengah.":::
 
 ## <a name="manage-existing-relationships"></a>Kelola relasi yang ada 
 

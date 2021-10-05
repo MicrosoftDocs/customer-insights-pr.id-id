@@ -4,16 +4,16 @@ description: Pelajari selengkapnya tentang wilayah dan geografi tempat layanan d
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
+ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483301"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "7564598"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Ketersediaan regional untuk Dynamics 365 Customer Insights
 
@@ -21,9 +21,9 @@ ms.locfileid: "7483301"
 
 Wawasan keterlibatan, kemampuan Dynamics 365 Customer Insights, memperkenalkan lebih banyak wilayah secara bertahap di mana pelanggan dapat memilih untuk menyimpan data mereka. Admin dapat memilih wilayah saat mereka [membuat lingkungan baru](manage-environments-workspaces.md#create-an-environment). 
 
-Ketika Anda menyiapkan wawasan keterlibatan untuk pertama kalinya, Anda dapat memilih wilayah tersebut saat melalui pengalaman [penjalanan pertama yang dipandu](quickstart.md). Nantinya, setiap lingkungan baru memungkinkan Anda memilih wilayah tempat data akan disimpan.
+Ketika Anda menyiapkan wawasan keterlibatan untuk pertama kalinya, Anda dapat memilih wilayah tersebut saat melalui pengalaman [penjalanan pertama yang dipandu](quickstart.md). Nantinya, setiap lingkungan baru memungkinkan Anda memilih kawasan yang akan menyimpan data.
 
-Saat ini terdapat dua geografi: Amerika Serikat dan Eropa. Pengguna dapat memilih antara wilayah AS Barat dan wilayah Eropa Utara.
+Saat ini kami mendukung geografi Amerika Serikat dan Eropa. Pengguna dapat memilih di antara kawasan ini: AS Barat, AS Timur, Eropa Utara, dan Eropa Barat.
 
 Organisasi dapat memelihara lingkungan di berbagai wilayah. Misalnya, Lingkungan A menyimpan data di AS Barat dan Lingkungan B di Eropa Utara.
 

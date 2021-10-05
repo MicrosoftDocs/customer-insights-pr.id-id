@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487111"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559022"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Membuat tautan antara wawasan audiens dan wawasan keterlibatan
 
@@ -54,6 +54,9 @@ Anda dapat membuat tautan lingkungan dengan memperbarui pengaturan **Admin** > *
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Aktifkan atribut dan segmen profil terpadu wawasan audiens
 
 Setelah menautkan lingkungan, Anda dapat memilih fitur opsional untuk lingkungan yang terhubung. Fitur ini memungkinkan atribut profil terpadu dan segmen dari audiens wawasan untuk analisis interaktif pada data pelanggan.
+
+> [!IMPORTANT]
+> Untuk wawasan audiens yang akan ditampilkan dalam wawasan keterlibatan, Anda harus [menjalankan terlebih dulu proses penggabungan dan hilir](../audience-insights/merge-entities.md). Proses hilir penting karena menghasilkan tabel unik yang menyiapkan segmen wawasan audiens untuk dibagikan dengan wawasan keterlibatan. (Jika refresh sistem dijadwalkan, refresh sistem akan secara otomatis mencakup proses hilir.)
 
 **Untuk menganalisis data web dalam wawasan keterlibatan**
 

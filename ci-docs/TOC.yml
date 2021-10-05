@@ -242,7 +242,7 @@
   items:
     - name: Pusat Bantuan
       href: engagement-insights/index.yml
-    - name: Ikhtisar kemampuan
+    - name: Tentang wawasan keterlibatan
       href: engagement-insights/overview.md
     - name: Mulai
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Ketersediaan regional
       href: engagement-insights/regional-availability.md
-- name: Mengintegrasikan audiens dan wawasan keterlibatan
+- name: Berbagi data di antara kemampuan
   items:
     - name: Tautkan wawasan audiens dengan wawasan keterlibatan
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Permintaan dan hak DSR
   href: dsr-rights-requests.md
-- name: Dapatkan Dukungan
-  href: 'https://dynamics.microsoft.com/support/'
