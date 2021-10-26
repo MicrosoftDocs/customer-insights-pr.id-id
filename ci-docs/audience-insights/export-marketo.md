@@ -1,7 +1,7 @@
 ---
 title: Ekspor data Customer Insights ke Marketo
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033497"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619169"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Mengekspor segmen ke Marketo (pratinjau)
 
@@ -29,10 +29,10 @@ Ekspor segmen profil pelanggan terpadu untuk membuat kampanye, menyediakan pemas
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Hingga 1 juta profil per ekspor ke Marketo.
+- Hingga 1 juta profil pelanggan per ekspor ke Marketo.
 - Mengekspor ke Marketo terbatas untuk segmen.
-- Mengekspor segmen dengan total 1 juta profil dapat memakan waktu hingga 3 jam. 
-- Jumlah profil yang dapat Anda ekspor ke Marketo tergantung dan terbatas pada kontrak Anda dengan Marketo.
+- Mengekspor segmen dengan total 1 juta profil pelanggan dapat berlangsung hingga 3 jam. 
+- Jumlah profil pelanggan yang dapat Anda ekspor ke Marketo tergantung dan dibatasi oleh kontrak Anda dengan Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Konfigurasikan koneksi ke Marketo
 
@@ -64,7 +64,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan **[id daftar marketo Anda](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID daftar adalah nilai yang semata-mata numerik. Contohnya, jika ID daftar Marketo Anda adalah ST12345A7, hilangkan karakter sebelum dan setelah angka dan masukkan `12345`. 
 
-1. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. 
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. 
 
 1. Secara opsional, Anda dapat mengekspor **nama depan**, **nama belakang**, **Kota**, dan **Negara Bagian**, dan **Negara/Kawasan**  untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
 

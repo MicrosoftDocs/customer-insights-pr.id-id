@@ -1,7 +1,7 @@
 ---
 title: Ekspor data Customer Insights ke Mailchimp
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033543"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618617"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Mengekspor segmen ke Mailchimp (pratinjau)
 
@@ -29,10 +29,10 @@ Ekspor segmen profil pelanggan terpadu ke MailChimp untuk membuat kampanye newsl
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Hingga 1 juta profil per ekspor ke Mailchimp.
+- Hingga 1 juta profil pelanggan per ekspor ke Mailchimp.
 - Mengekspor ke Mailchimp terbatas untuk segmen.
-- Mengekspor segmen dengan 1 juta profil dapat memakan waktu hingga tiga jam. 
-- Jumlah profil yang dapat Anda ekspor ke Mailchimp tergantung dan terbatas pada kontrak Anda dengan Mailchimp.
+- Mengekspor segmen dengan 1 juta profil pelanggan dapat berlangsung hingga tiga jam. 
+- Jumlah profil pelanggan yang dapat Anda ekspor ke Mailchimp tergantung dan dibatasi oleh kontrak Anda dengan Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Konfigurasikan koneksi ke Mailchimp
 
@@ -66,7 +66,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan **[ID audiens Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. 
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. 
 
 1. Secara opsional, Anda dapat mengekspor **nama depan** dan **nama belakang** untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
 

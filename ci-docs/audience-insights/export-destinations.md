@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data dari Customer Insights
 description: Kelola ekspor untuk berbagi data.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034686"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623120"
 ---
 # <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
-Halaman **Ekspor** memperlihatkan kepada Anda semua ekspor yang dikonfigurasi. Ekspor berbagi data tertentu dengan berbagai aplikasi. Mereka dapat menyertakan profil pelanggan atau entitas, skema, dan detail pemetaan. Setiap ekspor memerlukan [koneksi, yang disiapkan oleh administrator, untuk mengelola autentikasi dan akses](connections.md).
+Halaman **Ekspor** memperlihatkan kepada Anda semua ekspor yang dikonfigurasi. Ekspor berbagi data tertentu dengan berbagai aplikasi. Mereka dapat mencakup profil pelanggan, entitas, skema, dan rincian pemetaan. Setiap ekspor memerlukan [koneksi, yang disiapkan oleh administrator, untuk mengelola autentikasi dan akses](connections.md).
 
 Buka **Data** > **Ekspor** untuk menampilkan halaman ekspor. Semua peran pengguna dapat melihat ekspor yang dikonfigurasi. Gunakan bidang pencarian di bilah perintah untuk menemukan ekspor berdasarkan nama, nama koneksi, atau jenis koneksi.
 
-## <a name="set-up-a-new-export"></a>Konfigurasikan ekspor baru
+## <a name="export-types"></a>Jenis ekspor
 
+Ada dua jenis utama ekspor:  
+
+- **Ekspor keluar data** memungkinkan Anda mengekspor jenis entitas apa pun yang tersedia di wawasan audiens. Entitas yang Anda pilih untuk ekspor akan diekspor dengan semua bidang data, metadata, skema, dan rincian pemetaan. 
+- **Ekspor segmen** memungkinkan Anda mengekspor entitas segmen dari wawasan audiens. Segmen mewakili daftar profil pelanggan. Saat mengkonfigurasi ekspor, Anda dapat memilih bidang data yang tercakup, tergantung pada sistem target yang akan Anda ekspor datanya. 
+
+### <a name="export-segments"></a>Ekspor segmen
+
+**Mengekspor segmen di lingkungan untuk akun bisnis (B2B) atau pelanggan individual (B2C)**  
+Sebagian besar pilihan ekspor mendukung kedua jenis lingkungan. Mengekspor segmen ke berbagai sistem target memiliki persyaratan khusus. Secara umum, anggota segmen, profil pelanggan, berisi informasi kontak. Meskipun kasus ini biasanya adalah kasus untuk segmen yang dibangun berdasarkan pelanggan individual (B2C), namun tidak harus demikian untuk segmen berdasarkan akun bisnis (B2B). 
+
+**lingkungan ekspor Segmentasi untuk akun bisnis (B2B)**  
+- Segmen dalam konteks lingkungan untuk akun bisnis dibangun pada entitas *akun*. Untuk mengekspor segmen akun sebagaimana adanya, sistem target harus mendukung segmen akun murni. Hal ini terjadi untuk [LinkedIn](export-linkedin-ads.md) bila Anda memilih pilihan **perusahaan** saat menentukan ekspor.
+- Semua sistem target lainnya memerlukan bidang dari entitas kontak. Untuk memastikan segmen akun dapat mengambil data dari kontak terkait, definisi segmen Anda harus memproyeksikan atribut entitas kontak. Pelajari lebih lanjut tentang cara [mengkonfigurasi segmen dan atribut proyek](segment-builder.md).
+
+**Segmentasi ekspor di lingkungan untuk pelanggan perorangan (B2C)**  
+- Segmen dalam konteks lingkungan untuk pelanggan individual dibangun pada entitas *profil pelanggan terpadu*. Setiap segmen yang memenuhi persyaratan sistem target (contoh: alamat email) dapat diekspor.
+
+**Batas pada ekspor segmen**  
+- Sistem target pihak ketiga dapat membatasi jumlah profil pelanggan yang dapat Anda ekspor. 
+- Untuk pelanggan individual, Anda akan melihat jumlah aktual anggota segmen saat memilih segmen untuk ekspor. Anda akan mendapatkan peringatan jika segmen terlalu besar. 
+- Untuk akun bisnis, Anda akan melihat jumlah akun dalam satu segmen; namun, jumlah kontak yang mungkin di diproyeksikan tidak ditampilkan. Dalam kasus tertentu, hal ini dapat mengakibatkan segmen yang diekspor benar-benar berisi profil pelanggan yang lebih banyak daripada yang dapat diterima sistem target. Melebihi batas hasil sistem target akan melewatkan ekspor. 
+
+## <a name="set-up-a-new-export"></a>Konfigurasikan ekspor baru  
 Untuk menyiapkan atau mengedit ekspor, Anda harus memiliki koneksi yang tersedia untuk Anda. Koneksi bergantung pada [peran pengguna](permissions.md) Anda:
-- Administrator memiliki akses ke semua koneksi. Mereka juga dapat membuat koneksi baru saat menyiapkan ekspor.
-- Kontributor dapat memiliki akses ke koneksi tertentu. Mereka bergantung pada administrator untuk mengonfigurasi dan berbagi koneksi. Daftar ekspor akan menampilkan kontributor apakah mereka dapat mengedit atau hanya melihat ekspor di kolom **izin Anda**. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Pemirsa hanya dapat melihat ekspor yang ada tetapi tidak membuatnya.
+- **Administrator** memiliki akses ke semua koneksi. Mereka juga dapat membuat koneksi baru saat menyiapkan ekspor.
+- **Kontributor** dapat memiliki akses ke koneksi tertentu. Mereka bergantung pada administrator untuk mengonfigurasi dan berbagi koneksi. Daftar ekspor akan menampilkan kontributor apakah mereka dapat mengedit atau hanya melihat ekspor di kolom **izin Anda**. Untuk informasi lebih lanjut, buka [Izinkan kontributor agar dapat menggunakan sambungan untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Pemirsa** hanya dapat melihat ekspor yang ada— tidak membuatnya.
 
 ### <a name="define-a-new-export"></a>Menentukan ekspor baru
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033222"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605953"
 ---
 # <a name="connections-preview-overview"></a>Ikhtisar koneksi (pratinjau)
 
@@ -47,6 +47,7 @@ Untuk menambahkan koneksi, Anda perlu memiliki [izin administrator](permissions.
 1. Di panel **Siapkan koneksi**, berikan detail yang diperlukan. 
    1. **Nama tampilan** dan tipe koneksi menjelaskan koneksi. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi ini.
    1. Bidang yang tepat tergantung pada layanan apa yang Anda sambungkan. Anda dapat mempelajari detail jenis koneksi tertentu di artikel tentang layanan target.
+   1. Jika Anda [menggunakan Key Vault](use-azure-key-vault.md) untuk menyimpan rahasia, aktifkan **Gunakan Key Vault** dan pilih rahasia dari daftar.
 
 1. Pilih **Simpan** untuk membuat koneksi.
 
@@ -93,3 +94,6 @@ Pengayaan dan ekspor terpisah menjadi tidak aktif. Anda mengaktifkannya kembali 
 
 1. Pilih **Hapus**, untuk mengonfirmasi penghapusan tersebut.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Mengkonfigurasikan sambungan dengan rahasia yang dikelola oleh Key Vault Anda sendiri
+
+Beberapa sambungan memerlukan rahasia seperti kunci API atau sandi. Beberapa sambungan mendukung rahasia yang tersimpan di Key Vault Anda sendiri. Pelajari lebih lanjut tentang sambungan yang didukung dan cara mengkonfigurasi [Key Vault anda sendiri wawasan audiens](use-azure-key-vault.md).

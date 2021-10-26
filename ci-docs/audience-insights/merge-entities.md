@@ -1,7 +1,7 @@
 ---
 title: Gabungkan entitas dalam penyatuan data
 description: Gabungkan entitas untuk membuat profil pelanggan terpadu.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494323"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648258"
 ---
 # <a name="merge-entities"></a>Gabungkan Entitas
 
@@ -89,7 +91,7 @@ Pada halaman **Gabung**, pilih **Bidang yang dikecualikan** untuk melihat daftar
     :::image type="content" source="media/recency-merge-option.png" alt-text="Pilihan keterkinian dalam dialog bidang gabungan.":::
     - **Paling lama**: Mengidentifikasi nilai pemenang berdasarkan yang paling lama. Memerlukan tanggal atau bidang angka untuk setiap entitas yang berpartisipasi dalam cakupan bidang gabungan untuk menentukan keterkinian.
 
-1.  Anda dapat menambahkan bidang tambahan untuk berpartisipasi dalam proses penggabungan.
+1.  Anda dapat menambahkan bidang lainnya untuk berpartisipasi dalam proses penggabungan.
 
 1.  Anda dapat mengganti nama bidang gabungan.
 
@@ -131,15 +133,15 @@ Beberapa entitas berisi rincian lebih banyak daripada entitas lain. Jika entitas
 
 Setelah mengkonfigurasi penggabungan bidang, Anda dapat menentukan cara membuat nilai CustomerId, pengidentifikasi profil pelanggan unik. Langkah penggabungan dalam proses penyatuan data menghasilkan pengidentifikasi profil pelanggan yang unik. Pengidentifikasi adalah CustomerId dalam entitas *Pelanggan* yang dihasilkan dari proses penyatuan data. 
 
-CustomerId dalam entitas Pelanggan didasarkan pada hash nilai pertama kunci utama pemenang non-nihil. Kunci ini berasal dari entitas yang digunakan dalam fase pencocokan dan penggabungan dan terpengaruh oleh urutan kecocokan. Jadi CustomerID yang dihasilkan dapat berubah ketika nilai utama utama berubah di entitas utama dari urutan kecocokan. Akibatnya, nilai kunci utama mungkin tidak selalu mewakili pelanggan yang sama.
+CustomerId dalam entitas Pelanggan didasarkan pada hash nilai pertama kunci utama pemenang non-nihil. Kunci ini berasal dari entitas yang digunakan dalam fase pencocokan dan penggabungan dan terpengaruh oleh urutan kecocokan. Jadi CustomerID yang dihasilkan dapat berubah ketika nilai utama utama berubah di entitas utama dari urutan kecocokan. Jadi nilai kunci utama mungkin tidak selalu mewakili pelanggan yang sama.
 
-Mengkonfigurasi Id pelanggan yang stabil memungkinkan Anda menghindari perilaku tersebut.
+Mengkonfigurasi ID pelanggan yang stabil memungkinkan Anda menghindari perilaku tersebut.
 
 **Konfigurasikan ID pelanggan unik**
 
 1. Buka **Satukan** > **Gabungkan**.
 
-1. Pada halaman **Gabungkan**, pilih tab **Kunci**. 
+1. Pilih tab **Kunci**. 
 
 1. Layangkan mouse di baris **CustomerId**, lalu pilih opsi **Konfigurasi**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kontrol untuk menyesuaikan pembuatan ID.":::
@@ -147,6 +149,30 @@ Mengkonfigurasi Id pelanggan yang stabil memungkinkan Anda menghindari perilaku 
 1. Pilih hingga lima bidang yang akan berisi ID pelanggan unik dan lebih stabil. Rekaman yang tidak sesuai dengan konfigurasi Anda akan menggunakan ID yang dikonfigurasi sistem.  
 
 1. Pilih **Selesai** dan jalankan proses penggabungan untuk menerapkan perubahan Anda.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Mengelompokkan profil ke rumah tangga atau kluster
+
+Sebagai bagian dari proses konfigurasi pembuatan profil pelanggan, Anda dapat menentukan aturan untuk mengelompokkan profil terkait ke kluster. Saat ini ada dua jenis kluster yang tersedia – kluster rumah tangga dan kustom. Sistem secara otomatis memilih rumah tangga dengan aturan yang ditetapkan sebelumnya jika entitas *Pelanggan* berisi bidang semantis *Person.LastName* dan *Location.Address*. Anda juga dapat membuat kluster dengan aturan dan kondisi Anda sendiri, yang mirip dengan [cocokkan aturan](match-entities.md#define-rules-for-match-pairs).
+
+**Menentukan rumah tangga atau kluster**
+
+1. Buka **Satukan** > **Gabungkan**.
+
+1. Pada tab **Gabung**, pilih **lanjutan** > **Buat kluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Kontrol untuk membuat kluster baru.":::
+
+1. Pilih antara **Rumah Tangga** atau kluster **Kustom**. Jika bidang semantis *Person.LastName* dan *Location.Address* ada di entitas *Pelanggan*, rumah tangga akan secara otomatis dipilih.
+
+1. Berikan nama untuk kluster, lalu pilih **Selesai**.
+
+1. Pilih tab **Kluster** untuk menemukan kluster yang Anda buat.
+
+1. Tentukan aturan dan kondisi untuk mendefinisikan kluster Anda.
+
+1. Pilih **Jalankan** untuk menjalankan proses penggabungan dan buat kluster.
+
+Setelah menjalankan proses penggabungan, pengidentifikasi kluster ditambahkan sebagai bidang baru ke entitas *Pelanggan*.
 
 ## <a name="run-your-merge"></a>Jalankan gabungan
 

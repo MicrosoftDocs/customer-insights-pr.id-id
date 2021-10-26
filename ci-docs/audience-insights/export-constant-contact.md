@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Constant Contact
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031845"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619123"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Mengekspor segmen ke Constant Contact (pratinjau)
 
@@ -28,10 +28,10 @@ Ekspor segmen profil pelanggan terpadu ke Constant Contact dan gunakan untuk akt
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 1 juta profil per ekspor ke Constant Contact.
+- Anda dapat mengekspor hingga 1 juta profil pelanggan per ekspor ke Constant Contact.
 - Mengekspor ke Constant Contact terbatas pada segmen.
-- Mengekspor hingga 1 juta profil ke Constant Contact dapat memakan waktu hingga 1 jam untuk diselesaikan. 
-- Jumlah profil yang dapat Anda ekspor ke Constant Contact tergantung dan terbatas pada kontrak Anda dengan Constant Contact.
+- Mengekspor hingga 1 juta profil pelanggan ke Constant Contact dapat berlangsung selama 1 jam. 
+- Jumlah profil pelanggan yang dapat Anda ekspor ke Constant Contact tergantung dan dibatasi oleh kontrak Anda dengan Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Atur koneksi ke Constant Contact
 
@@ -65,7 +65,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan [**ID daftar Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Buka daftar di Constant Contact untuk menemukan ID daftar di URL.
 
-1. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Segmen harus diekspor ke Constant Contact.
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Segmen harus diekspor ke Constant Contact.
 
 1. Atau, anda dapat mengekspor nama depan dan nama belakang sebagai bidang tambahan untuk membuat email yang lebih disesuaikan. Pilih **Tambah atribut** untuk memetakan bidang ini.
 

@@ -1,7 +1,7 @@
 ---
 title: Ekspor data Customer Insights ke AdRoll
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke AdRoll.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032075"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617353"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Mengekspor segmen ke AdRoll (pratinjau)
 
@@ -28,11 +28,11 @@ Mengekspor segmen profil pelanggan terpadu ke AdRoll dan menggunakannya untuk ik
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 250.000 profil sekaligus ke AdRoll.
-- Anda tidak dapat mengekspor segmen dengan kurang dari 100 profil ke AdRoll. 
+- Anda dapat mengekspor hingga 250.000 profil pelanggan sekaligus ke AdRoll.
+- Anda tidak dapat mengekspor segmen dengan kurang dari 100 profil pelanggan ke AdRoll. 
 - Mengekspor ke AdRoll terbatas untuk segmen.
-- Mengekspor hingga 250.000 profil ke AdRoll dapat berlangsung hingga 10 menit untuk menyelesaikannya. 
-- Jumlah profil yang dapat Anda ekspor ke AdRoll tergantung pada kontrak Anda dengan AdRoll.
+- Mengekspor hingga 250.000 profil pelanggan ke AdRoll dapat berlangsung selama 10 menit. 
+- Jumlah profil pelanggan yang dapat Anda ekspor ke AdRoll tergantung pada kontrak Anda dengan AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Konfigurasikan koneksi ke AdRoll
 
@@ -66,7 +66,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan **ID Pengiklan AdRoll** Anda. Untuk informasi lebih lanjut, lihat [Profil Pemilik Iklan AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Ini harus diekspor ke AdRoll.
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Ini harus diekspor ke AdRoll.
 
 1. Pilih segmen yang ingin diekspor. Pilih segmen dengan minimal 100 anggota. Anda tidak dapat mengekspor segmen yang lebih kecil. Selain itu, ukuran maksimum segmen untuk diekspor adalah 250.000 anggota per ekspor. 
 

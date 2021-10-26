@@ -1,7 +1,7 @@
 ---
 title: Data Customer Insights di Microsoft Dataverse
 description: Gunakan entitas Customer Insights sebagai tabel di Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032900"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645222"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan Customer Insights di Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Customer Insights memberikan pilihan untuk menyediakan entitas output dalam [Mic
 
 **Organisasi dengan lingkungan Dataverse yang ada**
 
-Organisasi yang telah menggunakan Dataverse dapat [menggunakan salah satu lingkungan Dataverse yang ada](get-started-paid.md) saat administrator menyiapkan audiens wawasan. Dengan menyediakan URL ke lingkungan Dataverse, maka URL tersebut akan dilampirkan ke lingkungan wawasan audiens baru. Untuk memastikan kinerja terbaik, lingkungan Customer Insights dan Dataverse harus di-host di kawasan yang sama.
-
-Untuk melampirkan lingkungan Dataverse, perluas **pengaturan Tingkat Lanjut** saat membuat lingkungan wawasan audiens. Berikan **URL lingkungan Microsoft Dataverse** dan pilih kotak centang untuk **Aktifkan berbagi data**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+Organisasi yang telah menggunakan Dataverse dapat [menggunakan salah satu lingkungan Dataverse yang ada](create-environment.md) saat administrator menyiapkan audiens wawasan. Dengan menyediakan URL ke lingkungan Dataverse, maka URL tersebut akan dilampirkan ke lingkungan wawasan audiens baru. Untuk memastikan kinerja terbaik, lingkungan Customer Insights dan Dataverse harus di-host di kawasan yang sama.
 
 **Organisasi baru**
 

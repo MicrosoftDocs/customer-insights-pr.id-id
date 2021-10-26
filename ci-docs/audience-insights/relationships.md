@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557356"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623014"
 ---
 # <a name="relationships-between-entities"></a>Relasi di antara dua entitas
 
@@ -67,6 +67,20 @@ Hubungan terdiri dari *entitas sumber* yang berisi kunci asing dan *entitas targ
    - **Bidang kunci target**: bidang kunci dari entitas target. Contoh Pelanggan dapat menggunakan bidang kunci **CustomerID**.
 
 4. Pilih **Simpan** untuk membuat relasi kustom.
+
+## <a name="set-up-account-hierarchies"></a>Konfigurasi hierarki akun
+
+Lingkungan yang dikonfigurasi untuk menggunakan akun bisnis sebagai audiens target utama dapat mengkonfigurasi hierarki akun untuk akun bisnis terkait. Misalnya, perusahaan yang memiliki unit bisnis terpisah. 
+
+Organisasi membuat hierarki akun untuk lebih baik mengelola akun dan Relasi satu sama lain. Kemampuan awawasan udiens ini mendukung hierarki akun induk-anak yang sudah ada dalam data pelanggan yang diserap. Contohnya, akun dari Dynamics 365 Sales. Hierarki ini dapat dikonfigurasi pada halaman **Relasi** dalam wawasan audiens, dalam tab hierarki akun.
+
+1. Buka **data** > **Relasi**.
+1. Pilih tab **hierarki akun**.
+1. Pilih **hierarki akun baru**. 
+1. Pada panel **hierarki Akun**, berikan nama untuk hierarki. Sistem membuat nama untuk entitas output. Anda dapat mengubah nama entitas nama output.
+1. Pilih entitas yang berisi hierarki akun Anda. Akun biasanya ada dalam entitas yang sama yang berisi akun.
+1. Pilih **ID Akun** dan **ID Induk Akun** dari entitas yang dipilih 
+1. Pilih **Simpan** untuk menerapkan pengaturan dan menyelesaikan hierarki akun.
 
 ## <a name="view-relationships"></a>Lihat relasi
 

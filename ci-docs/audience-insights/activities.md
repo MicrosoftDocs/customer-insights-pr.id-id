@@ -1,7 +1,7 @@
 ---
 title: Aktivitas pelanggan
 description: Tentukan aktivitas pelanggan dan lihat di timeline pada profil pelanggan.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494415"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617973"
 ---
 # <a name="customer-activities"></a>Aktivitas pelanggan
 
@@ -24,8 +24,7 @@ Gabungkan aktivitas pelanggan dari [berbagai sumber data](data-sources.md) di Dy
 
 Sumber data Anda dapat mencakup entitas dengan data transaksional dan aktivitas dari beberapa sumber data. Identifikasi entitas tersebut dan pilih aktivitas yang ingin Anda lihat pada kronologi pelanggan. Pilih entitas yang mencakup aktivitas atau aktivitas target Anda.
 
-> [!NOTE]
-> Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan dalam kronologi pelanggan dan Anda tidak dapat menambahkan entitas tanpa bidang **tanggal**. Kontrol **Tambah aktivitas** dinonaktifkan jika tidak ada entitas yang ditemukan.
+Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan dalam kronologi pelanggan dan Anda tidak dapat menambahkan entitas tanpa bidang **tanggal**. Kontrol **Tambah aktivitas** dinonaktifkan jika tidak ada entitas yang ditemukan.
 
 1. Di wawasan audiens, buka **Data** > **aktivitas**.
 
@@ -41,13 +40,16 @@ Sumber data Anda dapat mencakup entitas dengan data transaksional dan aktivitas 
 
 1. Pilih **Berikutnya** untuk masuk ke langkah berikutnya.
 
-1. Dalam langkah **Relasi**, konfigurasikan detail untuk menghubungkan data aktivitas Anda ke pelanggan yang sesuai. Langkah ini memvisualisasikan hubungan antar entitas.  
+1. Pada langkah **Relasi**, konfigurasikan rincian untuk menghubungkan data aktivitas Anda dengan rekaman pelanggan terkait. Langkah ini memvisualisasikan hubungan antar entitas.  
 
    - **Pertama:** Bidang asing dalam entitas aktivitas Anda yang akan digunakan untuk menjalin hubungan dengan entitas lain.
    - **Kedua**: Entitas pelanggan sumber yang sesuai dengan entitas aktivitas Anda akan menjalin hubungan. Anda hanya dapat berhubungan dengan entitas pelanggan sumber yang digunakan dalam proses penyatuan data.
    - **Ketiga**: Jika hubungan antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama hubungan akan berada dalam mode baca-saja. Jika tidak ada relasi tersebut, relasi baru akan dibuat dengan nama yang Anda berikan di kotak ini.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Tentukan relasi entitas.":::
+
+   > [!TIP]
+   > Di lingkungan B2B, Anda dapat memilih antara entitas akun dan entitas lain. Jika Anda memilih entitas akun, jalur relasi akan secara otomatis diatur. Untuk entitas lain, Anda harus menentukan jalur relasi pada satu atau beberapa entitas menengah hingga mencapai entitas akun.
 
 1. Pilih **Berikutnya** untuk masuk ke langkah berikutnya. 
 
@@ -95,5 +97,34 @@ Tindakan berikut ini tersedia saat Anda memilih aktivitas.
 - **Ganti nama**: Buka dialog yang memungkinkan Anda memasukkan nama lain untuk aktivitas yang dipilih. Pilih **Simpan** untuk menerapkan perubahan.
 
 - **Hapus**: Membuka dialog untuk mengonfirmasi penghapusan aktivitas yang dipilih. Anda juga dapat menghapus lebih dari satu aktivitas sekaligus dengan memilih aktivitas lalu memilih ikon hapus. Klik **Hapus**, untuk mengonfirmasi penghapusan tersebut.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Melihat timeline aktivitas di profil pelanggan
+
+Setelah anda mengkonfigurasi aktivitas pelanggan, pilih **Tampilkan dalam timeline aktivitas** dalam konfigurasi aktivitas untuk menemukan semua aktivitas pelanggan pada profil pelanggan mereka.
+
+Untuk membuka timeline pelanggan, buka **Pelanggan** dan pilih profil pelanggan yang akan dilihat.
+
+Jika pelanggan telah berpartisipasi dalam aktivitas yang telah dikonfigurasi, Anda akan menemukannya di bagian **timeline Aktivitas**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Melihat aktivitas terkonfigurasi di Profil Pelanggan.":::
+
+Ada beberapa cara untuk memfilter aktivitas dalam timeline aktivitas:
+
+- Anda dapat memilih satu atau beberapa ikon aktivitas untuk menyempurnakan hasil agar hanya menyertakan jenis yang dipilih.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Memfilter aktivitas berdasarkan jenis menggunakan ikon.":::
+
+- Anda dapat memilih **Filter** untuk membuka panel filter untuk mengkonfigurasi filter timeline.
+
+   1. Anda dapat memfilter berdasarkan *ActivityType* dan *Tanggal*
+   1. Pilih **Terapkan** untuk menggunakan filter di timeline aktivitas.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Gunakan panel filter untuk mengkonfigurasi kondisi filter.":::
+
+Untuk menghilangkan filter, pilih **x** di sebelah setiap filter yang diterapkan ke timeline atau pilih **Kosongkan filter**.
+
+
+> [!NOTE]
+> Filter aktivitas akan dihapus bila Anda meninggalkan profil pelanggan. Anda harus menerapkannya setiap kali membukanya di profil pelanggan.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

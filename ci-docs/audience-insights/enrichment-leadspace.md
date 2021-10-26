@@ -1,32 +1,32 @@
 ---
 title: Pengayaan profil perusahaan dengan pengayaan pihak ketiga Leadspace
 description: Informasi umum tentang pengayaan pihak ketiga Leadspace.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031707"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617405"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil perusahaan dengan Leadspace (pratinjau)
 
-Leadspace adalah perusahaan ilmu data yang menyediakan platform data pelanggan B2B. Hal ini memungkinkan pelanggan dengan profil pelanggan terpadu untuk perusahaan untuk memperkaya data mereka. Pengayaan mencakup atribut seperti ukuran perusahaan, lokasi, industri, dan lainnya.
+Leadspace adalah perusahaan ilmu data yang menyediakan platform data pelanggan B2B. Ini memungkinkan lingkungan dengan profil pelanggan terpadu berdasarkan akun untuk memperkaya data mereka. Perkaya *profil pelanggan* dengan atribut seperti ukuran perusahaan, lokasi, atau industri. Perkaya *Profil kontak* dengan atribut seperti judul, persona, atau verifikasi email.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 Untuk mengonfigurasikan Leadspace, prasyarat berikut harus dipenuhi:
 
 - Anda memiliki lisensi Leadspace aktif.
-- Anda memiliki [profil pelanggan terpadu](customer-profiles.md) untuk perusahaan.
-- Koneksi Leadspace telah dikonfigurasi oleh administrator atau Anda memiliki izin [administrator](permissions.md#administrator) dan "kunci abadi" (disebut sebagai **token Leadspace**). Hubungi [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) secara langsung untuk detail tentang produk mereka.
+- Anda memiliki [profil pelanggan terpadu](customer-profiles.md) berdasarkan akun.
+- Koneksi Leadspace telah dikonfigurasi oleh administrator atau Anda memiliki izin [administrator](permissions.md#administrator) dan "kunci abadi" (disebut sebagai **token Leadspace**). Hubungi [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) secara langsung untuk detail tentang produk mereka.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 
@@ -50,6 +50,10 @@ Untuk mengonfigurasikan Leadspace, prasyarat berikut harus dipenuhi:
 
 1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
 
+1. Pilih kotak centang jika Anda memiliki *profil Kontak* yang akan di perkaya. Wawasan Audiens akan secara otomatis memetakan bidang yang diperlukan.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Pengayaan rekaman kontak Leadspace.":::
+ 
 1. Berikan nama untuk pengayaan dan pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
 
 
@@ -81,7 +85,8 @@ Untuk informasi lebih lanjut, lihat [api leadspace](https://support.leadspace.co
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 

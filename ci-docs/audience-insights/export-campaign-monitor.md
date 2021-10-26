@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Campaign Monitor
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Campaign Monitor.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031891"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618985"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Mengekspor segmen ke Campaign Monitor (pratinjau)
 
@@ -28,10 +28,10 @@ Ekspor segmen profil pelanggan terpadu ke Campaign Monitor dan gunakan untuk akt
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 1 juta profil per ekspor ke Campaign Monitor.
+- Anda dapat mengekspor hingga 1 juta profil pelanggan per ekspor ke Campaign Monitor.
 - Mengekspor ke Campaign Monitor terbatas pada segmen.
-- Mengekspor hingga 1 juta profil ke Campaign Monitor dapat memakan waktu hingga 20 menit untuk diselesaikan. 
-- Jumlah profil yang dapat Anda ekspor ke Campaign Monitor tergantung dan terbatas pada kontrak Anda dengan Campaign Monitor.
+- Mengekspor hingga 1 juta profil pelanggan ke Campaign Monitor dapat berlangsung selama 20 menit. 
+- Jumlah profil pelanggan yang dapat Anda ekspor ke Campaign Monitor tergantung dan dibatasi oleh kontrak Anda dengan Campaign Monitor.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Konfigurasikan koneksi ke Campaign Monitor
 
@@ -66,7 +66,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 1. Masukkan [**ID daftar Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    [Buat kunci API](https://www.campaignmonitor.com/api/getting-started/) dari **Pengaturan Akun** di Campaign Monitor terlebih dahulu untuk melihat ID daftar API.  
 
-3. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Segmen harus diekspor ke Campaign Monitor.
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Segmen harus diekspor ke Campaign Monitor.
 
 1. Pilih **Simpan**.
 

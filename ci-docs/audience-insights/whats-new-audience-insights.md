@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465209"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606086"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Pembaruan September 2021
+
+Pembaruan pada Bulan September 2021 mencakup fitur baru, peningkatan performa, dan perbaikan bug.
+
+### <a name="activities"></a>Aktivitas
+
+- **Peningkatan timeline aktivitas** Kami telah memperluas filter untuk timeline aktivitas di profil pelanggan. Selain itu, Anda dapat menggunakan wadah filter baru untuk memfilter berdasarkan jenis aktivitas dan berdasarkan tanggal. Tanggal dapat difilter menggunakan kondisi yang berbeda. Untuk informasi lebih lanjut, lihat [Melihat timeline aktivitas di profil pelanggan](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Hubungan
+
+- **Dukungan relasi multi-lompatan** Gunakan fungsi Relasi multi-lompatan saat mengkonfigurasi aktivitas dan Relasi antar entitas. Relasi Multi-lompatan menggunakan entitas tingkat dua untuk menghubungkan dua entitas. Saat mengkonfigurasi aktivitas, Anda dapat menggunakan relasi multi-lompatan untuk menghubungkan entitas aktivitas ke entitas antara dan kemudian ke entitas pelanggan. Anda dapat menggabungkan berbagai Relasi multi-lompatan dengan Relasi multi-jalur. Untuk informasi lebih lanjut, lihat [relasi multi-lompatan](relationships.md#multi-hop-relationship).
+
+- **Dukungan relasi multi-jalur** Gunakan fungsi Relasi multi-jalur saat mengkonfigurasi aktivitas dan Relasi antar entitas. Beberapa Relasi multi-jalur menghubungkan entitas sumber ke lebih dari satu entitas. Saat mengkonfigurasi aktivitas, Anda dapat menggunakan relasi multi-jalur untuk menghubungkan entitas aktivitas ke lebih dari satu entitas pelanggan. Anda dapat menggabungkan berbagai Relasi multi-jalur dengan Relasi multi-lompatan. Untuk informasi lebih lanjut, lihat [relasi multi-jalur](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Pembaruan Agustus 2021
 

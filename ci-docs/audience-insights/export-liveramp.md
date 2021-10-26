@@ -1,7 +1,7 @@
 ---
 title: Konektor LiveRamp
 description: Pelajari cara mengonfigurasi koneksi dan ekspor ke LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035649"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618939"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Mengekspor segmen ke LiveRamp&reg; (pratinjau)
 
@@ -58,7 +58,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
    > [!div class="mx-imgBorder"]
    > ![Konektor LiveRamp dengan pemetaan atribut.](media/export-liveramp-segments.png "Konektor LiveRamp dengan pemetaan atribut")
 
-1. Petakan atribut yang terkait dari entitas pelanggan terpadu Anda untuk pengidentifikasi kunci yang dipilih.
+1. Petakan atribut yang sesuai dari entitas *Pelanggan* untuk pengidentifikasi utama yang dipilih.
 
 1. Pilih **Tambahkan atribut** untuk memetakan lebih banyak atribut untuk dikirim ke LiveRamp.
 

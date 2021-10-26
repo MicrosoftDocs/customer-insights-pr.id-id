@@ -1,7 +1,7 @@
 ---
 title: Perkaya profil pelanggan terpadu
 description: Gunakan kemampuan untuk memperkaya data pelanggan Anda.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469988"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617559"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
@@ -27,16 +27,26 @@ Di wawasan audiens, buka **Data** > **pengayaan** untuk menangani pilihan pengay
 
 Anda harus memiliki izin kontributor atau Administrator untuk membuat atau mengedit pengayaan. Untuk informasi lebih lanjut, lihat [izin](permissions.md).
 
-Pada tab **temukan**, Anda akan menemukan pengayaan berikut:
+Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 
-- [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
+# <a name="individual-customers-b2c"></a>[Pelanggan perorangan (B2C)](#tab/b2c)
+
 - [Merek](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
-- [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
-- [Data perusahaan](enrichment-leadspace.md) yang disediakan oleh Leadspace
+- [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
 - [Demografi](enrichment-experian.md) yang disediakan oleh Experian
-- [data lokasi](enrichment-here.md) disediakan oleh HERE Technologies
-- [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP)
+- [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
+
+# <a name="business-accounts-b2b"></a>[Akun bisnis (B2B)](#tab/b2b)
+
+- [Data perusahaan](enrichment-leadspace.md) yang disediakan oleh Leadspace
+- [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
+- [data lokasi](enrichment-here.md) disediakan oleh HERE Technologies 
+- [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
+
+---
 
 Pada **tab pengayaan saya**, Anda dapat melihat pengayaan yang telah dikonfigurasi dan mengedit properti mereka.
 
@@ -58,7 +68,7 @@ Jalankan atau nonaktifkan beberapa pengayaan sekaligus dengan memilihnya dalam d
 
 ## <a name="enrichments-and-connections"></a>Koneksi dan pengayaan
 
-Pengayaan pihak ketiga dikonfigurasi menggunakan [koneksi](connections.md), yang diatur administrator dengan kredensial dan memberikan persetujuan untuk transfer data. Koneksi dapat digunakan untuk mengonfigurasikan pengayaan oleh administrator dan kontributor.  
+Pengayaan pihak ketiga dikonfigurasi menggunakan [koneksi](connections.md), yang diatur administrator dengan kredensial dan memberikan persetujuan untuk transfer data. Sambungan dapat digunakan oleh administrator dan kontributor untuk mengonfigurasikan pengayaan.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Beberapa pengayaan dengan tipe yang sama
 

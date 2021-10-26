@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke ActiveCampaign
 description: Pelajari lebih lanjut cara mengkonfigurasi sambungan dan mengekspor ke ActiveCampaign.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14d420205a5c60d471ef21a04ab6d02295a65ca8fd5205ba782a300703b06102
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032213"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618157"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Mengekspor segmen ke ActiveCampaign (pratinjau)
 
@@ -28,9 +28,9 @@ Mengekspor segmen profil pelanggan terpadu ke ActiveCampaign dan menggunakannya 
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 1 juta profil per ekspor ke ActiveCampaign dan membutuhkan waktu hingga 90 menit untuk menyelesaikannya.
+- Anda dapat mengekspor hingga 1 juta profil pelanggan per ekspor ke ActiveCampaign dan dapat berlangsung hingga 90 menit.
 - Mengekspor ke ActiveCampaign terbatas pada segmen.
-- Jumlah profil yang dapat Anda ekspor ke ActiveCampaign tergantung pada kontrak Anda dengan ActiveCampaign.
+- Jumlah profil pelanggan yang dapat Anda ekspor ke ActiveCampaign tergantung pada kontrak Anda dengan ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Siapkan sambungan ke ActiveCampaign
 
@@ -64,7 +64,7 @@ Anda bisa mengonfigurasi ekspor jika Anda memiliki akses ke sambungan tipe ini. 
 
 1. Masukkan [**ID daftar ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign) Anda.    
 
-3. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Mengekspor segmen ke ActiveCampaign harus dilakukan. Atau, Anda dapat mengekspor nama depan, nama belakang, dan Telepon untuk membuat email yang lebih dipersonalisasi. Pilih Tambah atribut untuk memetakan bidang ini.
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Mengekspor segmen ke ActiveCampaign harus dilakukan. Atau, Anda dapat mengekspor nama depan, nama belakang, dan Telepon untuk membuat email yang lebih dipersonalisasi. Pilih Tambah atribut untuk memetakan bidang ini.
 
 1. Pilih **Simpan**.
 

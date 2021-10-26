@@ -2,8 +2,14 @@
   href: index.yml
 - name: Ikhtisar produk
   href: overview.md
-- name: Membuat Uji Coba
-  href: audience-insights/get-started-trial.md
+- name: uji coba gratis
+  items:
+    - name: Daftar untuk uji coba gratis
+      href: trial-signup.md
+    - name: Tanya Jawab Uji Coba
+      href: trial-FAQ.md
+- name: Mulai dengan lisensi berbayar
+  href: paid-license.md
 - name: Nilai lingkungan Anda
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Wawasan audiens
@@ -19,9 +25,11 @@
         - name: Panduan mulai cepat
           href: audience-insights/get-started.md
         - name: Buat lingkungan baru
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Jelajahi wawasan audiens
           href: audience-insights/home.md
+    - name: Menangani akun bisnis
+      href: audience-insights/work-with-business-accounts.md
     - name: Pelajari modul
       items:
         - name: Menyerap data
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Mencatumkan Aktivitas Pelanggan
           href: audience-insights/activities.md
+        - name: Menentukan pemetaan semantik
+          href: audience-insights/semantic-mappings.md
     - name: Pengayaan data
       items:
         - name: Perkaya profil pelanggan
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Memprediksi kehilangan langganan
               href: audience-insights/predict-subscription-churn.md
-            - name: Prediksi kehilangan pelanggan transaksional
+            - name: Memprediksi kehilangan transaksi
               href: audience-insights/predict-transactional-churn.md
             - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Panduan sampel untuk prediksi kehilangan pelanggan langganan
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Panduan sampel untuk prediksi kehilangan pelanggan transaksional
+            - name: Panduan sampel untuk prediksi kehilangan transaksi
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Panduan sampel untuk prediksi Rekomendasi produk
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Kelola beberapa lingkungan
           href: audience-insights/manage-environments.md
-        - name: Menyambung ke akun penyimpanan ADLS dengan prinsipal Layanan
-          href: audience-insights/connect-service-principal.md
         - name: Bahasa yang didukung
           href: audience-insights/supported-languages.md
+        - name: Keamanan
+          items:
+            - name: Bawa Key Vault Anda sendiri
+              href: audience-insights/use-azure-key-vault.md
+            - name: Menyambung ke akun penyimpanan ADLS dengan prinsipal Layanan
+              href: audience-insights/connect-service-principal.md
     - name: Dapat diperluas
       items:
         - name: Mengintegrasikan data web dari wawasan keterlibatan
@@ -248,6 +262,8 @@
       items:
         - name: Panduan mulai cepat
           href: engagement-insights/get-started.md
+        - name: Buat lingkungan
+          href: engagement-insights/create-new-environment.md
         - name: Buat ruang kerja
           href: engagement-insights/create-workspace.md
         - name: Ambil Aktivitas dari situs web dan aplikasi seluler

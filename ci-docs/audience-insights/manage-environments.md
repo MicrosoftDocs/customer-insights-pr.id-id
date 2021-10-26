@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola lingkungan
 description: Pelajari cara mendaftar ke layanan dan cara mengelola lingkungan.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034181"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645130"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
@@ -26,7 +26,7 @@ Pilih kontrol **lingkungan** di sudut kanan atas halaman untuk mengubah lingkung
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Cuplikan layar kontrol untuk beralih lingkungan.":::
 
-Administrator dapat [membuat](get-started-paid.md) dan mengelola lingkungan.
+Administrator dapat [membuat](create-environment.md) dan mengelola lingkungan.
 
 ## <a name="edit-an-existing-environment"></a>Edit lingkungan yang ada
 
@@ -36,23 +36,9 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
 
 2.  Pilih ikon **Edit**.
 
-3. Di kotak **Edit lingkungan**, Anda dapat memperbarui **nama tampilan** lingkungan, tetapi Anda tidak dapat mengubah **Kawasan** atau **Jenis**.
+3. Di kotak **Edit lingkungan**, Anda dapat memperbarui pengaturan lingkungan.
 
-4. Jika lingkungan dikonfigurasi untuk menyimpan data dalam Azure Data Lake Storage, Anda dapat memperbarui **kunci Akun**. Namun, Anda tidak dapat mengubah **nama akun** atau nama **penampung**.
-
-5. Atau, Anda dapat memperbarui dari sambungan berbasis kunci akun ke sambungan berbasis sumber daya atau berbasis langganan. Setelah ditingkatkan, Anda tidak dapat kembali ke kunci akun setelah pembaruan. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Anda tidak dapat **mengubah** informasi penampung saat memperbarui sambungan.
-
-6. Secara opsional, Anda dapat menyediakan URL lingkungan Microsoft Dataverse di **konfigurasikan berbagi data dengan Microsoft Dataverse dan aktifkan kemampuan tambahan**. Kemampuan ini melibatkan berbagi data dengan aplikasi dan solusi berdasarkan Microsoft Dataverse, penyerapan data dari sumber data lokal, atau [prediksi](predictions.md) penggunaan. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Berbagi data dengan Data Lake terkelola Microsoft Dataverse saat ini tidak didukung bila Anda menyimpan semua data untuk Azure Data Lake Storage Anda sendiri.
-   > - [Prediksi nilai yang tidak ditemukan dalam entitas](predictions.md) dan laporan PowerBI Embedded dalam wawasan audiens (jika diaktifkan pada lingkungan Anda) saat ini tidak didukung bila Anda mengaktifkan berbagi data dengan telaga data terkelola Microsoft Dataverse.
-
-   Setelah mengaktifkan berbagi data dengan Microsoft Dataverse, refresh penuh pada sumber data Anda dan proses lainnya akan dimulai. Jika proses saat ini berjalan, Anda tidak melihat opsi untuk mengaktifkan berbagi data dengan Microsoft Dataverse. Tunggu proses tersebut selesai atau membatalkannya untuk mengaktifkan berbagi data. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
-   
-   Bila Anda menjalankan proses, seperti konsumsi data atau pembuatan segmen, folder yang sesuai akan dibuat di akun penyimpanan yang Anda tentukan di atas. File data dan file model.json akan dibuat dan ditambahkan ke subfolder masing-masing, tergantung pada proses yang Anda jalankan.
+Untuk informasi lebih lanjut tentang pengaturan lingkungan, lihat [Membuat lingkungan baru](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi lingkungan
 

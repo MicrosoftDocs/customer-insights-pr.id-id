@@ -4,17 +4,17 @@ description: Cara membuat, mengganti nama, dan menghapus ruang kerja dan lingkun
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486039"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645450"
 ---
 # <a name="manage-environments-and-workspaces"></a>Mengelola lingkungan dan ruang kerja
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486039"
 
 ## <a name="overview"></a>Gambaran Umum
 
-Ruang kerja adalah ruang menyimpan dan mengelola aktivitas dan laporan. Di sini Anda dapat melihat aktivitas pengguna secara real time. Saat membuat ruang kerja, Anda dapat memilih jenis data untuk dikirimkan ke ruang kerja. Saat ini, data web dan aplikasi perangkat bergerak didukung.
+Topik ini akan membahas cara mengelola ruang kerja dan lingkungan setelah dibuat. 
 
-Lingkungan adalah ruang yang memungkinkan Anda mengelola ruang kerja dan sambungan. Cara menggunakan lingkungan tergantung pada organisasi dan kasus penggunaan Anda. Misalnya, Anda dapat membuat:
+- *Ruang kerja* adalah ruang menyimpan dan mengelola aktivitas dan laporan. Di sini Anda dapat melihat aktivitas pengguna secara real time. Saat membuat ruang kerja, Anda dapat memilih jenis data untuk dikirimkan ke ruang kerja. Saat ini, data web dan aplikasi perangkat bergerak didukung. Untuk informasi lebih lanjut, lihat [Membuat ruang kerja dan menambahkan anggota](create-workspace.md).
 
--   Satu lingkungan.
--   Lingkungan terpisah untuk pengujian dan produksi.
--   Lingkungan terpisah untuk tim atau departemen tertentu di organisasi Anda yang berisi aktivitas relevan untuk setiap audiens.
--   Lingkungan terpisah untuk berbagai cabang global perusahaan Anda.
--   Koneksi ke kemampuan wawasan audiens Customer Insights.
+- *Lingkungan* adalah ruang yang memungkinkan Anda mengelola ruang kerja dan sambungan. Untuk informasi lebih lanjut, lihat [Membuat lingkungan baru](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Memilih lingkungan dan membuat ruang kerja 
-
-Setiap ruang kerja harus berada dalam lingkungan. Anda dapat memilih lingkungan yang sudah ada sebelumnya atau membuat yang baru saat membuat ruang kerja. Selanjutnya, Anda dapat memilih untuk menambahkan anggota ruang kerja dan mulai mengumpulkan data.
-
-**Untuk membuat ruang kerja pertama Anda**
-
-1. Dalam wawasan keterlibatan, pilih **Baru** dari pengalih ruang kerja. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Pemilih ruang kerja halaman Customer Insights.":::
-
-1. Pilih lingkungan dari daftar atau pilih **Buat lingkungan baru**.
-
-1. Masukkan nama di **nama ruang kerja**. 
-
-1. Pilih jenis lingkungan yang ingin Anda buat, tergantung pada apakah Anda ingin mengukur apa yang terjadi di situs web atau di aplikasi seluler. 
-
-1. Anda dapat menambahkan anggota dan menetapkan tingkat izin mereka dari daftar **Peran**. Selanjutnya, pilih **Selesai** untuk membuat ruang kerja atau **Berikutnya** untuk menginstal kode. 
-
-1. Instal cuplikan kode untuk mulai menerima data, lalu pilih **Selesai**. 
-
-## <a name="manage-a-workspace"></a>Kelola ruang kerja
+## <a name="manage-an-existing-workspace"></a>Kelola ruang kerja yang ada
 
 Anda dapat mengelola beberapa ruang kerja secara bersamaan di lingkungan. [Peran](user-roles.md) Anda menentukan cara kerja Anda di dalamnya. 
 
  - Anda harus menjadi admin Lingkungan atau admin Ruang Kerja untuk mengelola ruang kerja.
  - Sebagai admin Ruang Kerja, Anda dapat mengganti nama ruang kerja yang ada atau menghapusnya. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Pusat Admin ruang kerja.":::
 
 ### <a name="edit-a-workspace-name"></a>Edit nama ruang kerja
 
@@ -75,7 +53,7 @@ Menghapus ruang kerja akan menghapus semua konten, data, pengaturan, dan izinnya
 
 1. Pilih **Hapus ruang kerja**. 
 
-1. Masukkan **KONFIRMASIKAN PENGHAPUSAN** di dialog **Hapus ruang kerja**. 
+1. Dalam dialog **Hapus ruang kerja**, masukkan **KONFIRMASIKAN HAPUS** dengan huruf besar semua. 
 
 1. Pilih **Hapus** untuk menghapus ruang kerja secara permanen.
 
@@ -87,27 +65,11 @@ Menghapus ruang kerja akan menghapus semua konten, data, pengaturan, dan izinnya
 
 1. Pilih **Tambah anggota** untuk menambahkannya ke ruang kerja Anda.
 
-## <a name="manage-an-environment"></a>Kelola lingkungan
+## <a name="manage-an-existing-environment"></a>Kelola lingkungan yang ada
 
 Sebagai admin Lingkungan, Anda dapat mengakses lingkungan dari panel navigasi kiri. Anda dapat mengkonfigurasi pengaturan lingkungan, admin lingkungan lainnya, dan ruang kerja. Pilih tab untuk berpindah antar area berbeda di pusat admin.
 
-:::image type="content" source="media/New-environment.png" alt-text="Pusat admin lingkungan.":::
-
-### <a name="create-an-environment"></a>Buat lingkungan
-
-1. Di pemilih kerja, pilih **+Baru**.
-
-1. Dalam pengalaman berpemandu, buka menu drop-down **Lingkungan** dan pilih **Buat lingkungan baru**. 
-
-1. Berikan **nama Lingkungan**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Langkah dalam pengalaman berpemandu untuk menentukan detail lingkungan.":::
-
-1. Pilih **Kawasan** dan pilih **Berikutnya**. 
-
-1. Sediakan nama Ruang Kerja dan pilih tipe ruang kerja yang ingin Anda buat. 
-
-1.  Atau, tambahkan anggota dan salin cuplikan kode untuk menyelesaikan proses pembuatan.
+:::image type="content" source="media/environment-edit.png" alt-text="Pusat admin lingkungan.":::
 
 ### <a name="rename-an-environment"></a>Ubah nama lingkungan
 
@@ -131,7 +93,7 @@ Admin lingkungan dapat menghapus lingkungan. Sebelum dapat menghapus lingkungan,
 
 1. Pilih **hapus lingkungan**. 
 
-1. Masukkan **KONFIRMASIKAN PENGHAPUSAN** di dialog **Hapus ruang kerja**. 
+1. Dalam dialog **Hapus ruang kerja**, masukkan **KONFIRMASIKAN HAPUS** dengan huruf besar semua. 
 
 1. Pilih **Hapus** untuk menghapus lingkungan secara permanen.
 

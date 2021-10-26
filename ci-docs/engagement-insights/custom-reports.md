@@ -4,23 +4,23 @@ description: Pelajari cara membuat laporan kustom.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 2540221710786dc1c84b231fbb23b9749b601cc6a2aeb78614e16002302a80a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3fa801bfc8b0aee65c21b90de2423a3d5d5e4e26
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036967"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582881"
 ---
 # <a name="create-and-edit-custom-reports"></a>Buat dan edit laporan kustom
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Selain laporan standar, Anda dapat membuat laporan kustom dengan visualisasi diagram dan tabel untuk membantu Anda memahami perilaku pengguna. Artikel ini menjelaskan cara membuat laporan dengan data yang Anda perlukan menggunakan visualisasi tabel dan diagram. 
+Selain laporan out-of-box (OOB), Anda dapat membuat laporan kustom dengan visualisasi diagram dan tabel untuk membantu Anda memahami perilaku pengguna. Artikel ini menjelaskan cara membuat laporan dengan data yang Anda perlukan menggunakan visualisasi tabel dan diagram. Untuk informasi tentang laporan OOB, lihat [Melihat laporan](view-reports.md).
 
 ## <a name="create-a-custom-report"></a>Buat laporan kustom
 
@@ -35,11 +35,13 @@ Selain laporan standar, Anda dapat membuat laporan kustom dengan visualisasi dia
     - Pilih **Tambah visual** di bilah perintah untuk membuat visualisasi tabel default.
     - Atau, pilih kolom, bilah, baris, area, pai, donat, atau visualisasi tabel dari panel **editor Laporan**.
 
-1. Di panel **Data**, pilih salah satu **Metrik** yang tersedia (misalnya, tampilan halaman) untuk ditampilkan. Kemudian tambahkan **Dimensi** (misalnya, negara) untuk ditampilkan pada visualisasi. Untuk informasi lebih lanjut tentang menambahkan pilihan tambahan untuk dipilih, lihat [Melihat serta membuat metrik](metrics.md) dan [Melihat serta membuat dimensi](dimensions.md).
+1. Di bagian **Data** pada panel **editor Visualisasi**, pilih salah satu pilihan yang tersedia (misalnya, tampilan halaman) dari dropdown **Metrik**. Anda juga dapat menambahkan **Dimensi** (contoh: negara) untuk ditampilkan pada visualisasi. Untuk informasi lebih lanjut, lihat [Melihat dan membuat metrik](metrics.md) serta [Melihat dan membuat dimensi](dimensions.md).
 
-1. Pilih **Desain** dalam panel **editor Visualisasi** untuk menambahkan **teks Judul**, dan atur **Posisi**, **Label Data**, dan **sumbu**.  Anda juga dapat mengubah visualisasi dengan memilih jenis diagram lain.
+   :::image type="content" source="media/page-views.png" alt-text="Pilih metrik untuk laporan Anda.":::
 
-1. Anda dapat mengubah ukuran dan posisi visualisasi:
+1. Pilih bagian **Desain** pada panel **editor Visualisasi** untuk menambahkan **teks Judul** dan alihkan **Judul** ke aktif dan nonaktif.  Anda juga dapat mengubah jenis visualisasi dengan memilih diagram lain, misalnya **diagram pai**.
+
+1. Untuk mengubah ukuran dan posisi visualisasi:
    - Pilih visualisasi, lalu tarik salah satu sudut atau batas untuk menyesuaikan ukurannya.
    - Pilih visualisasi, lalu pindahkan ke posisi baru. Anda juga dapat menggunakan tombol panah untuk mengubah posisi.
 1. Klik **Tambah visual** di bilah perintah untuk menambahkan visualisasi lain.
@@ -47,17 +49,27 @@ Selain laporan standar, Anda dapat membuat laporan kustom dengan visualisasi dia
 
 1. Berikan nama untuk laporan kustom, lalu pilih **Simpan** untuk membuatnya.
  
+## <a name="filter-a-custom-report"></a>Filter laporan kustom
+
+Anda dapat memilih jangka waktu atau rentang tanggal dalam laporan kustom untuk fokus pada nilai atau periode waktu.
+
+Untuk memilih jangka waktu, di sudut kanan atas tampilan laporan, pilih nilai dari daftar dropdown laporan. Anda juga dapat memilih **Rentang tanggal tetap*.
+
+:::image type="content" source="media/filter-time-date-range.png" alt-text="Filter berdasarkan waktu atau rentang tanggal.":::
+
+Untuk sebagian besar laporan, pilih **+ Tambah kondisi**, untuk memilih dimensi atau segmen untuk memfilter laporan. Untuk informasi lebih lanjut, lihat [Melihat dan membuat segmen](segments.md).
+
 ## <a name="edit-a-custom-report"></a>Mengedit laporan kustom
 
 1. Buka **Analisis** > **Kustom** untuk mengakses daftar laporan kustom.
 
 1. Dalam daftar laporan kustom, pilih **Lainnya [...]** 
 
-1. Pilih **Edit rincian** untuk mengubah nama laporan.
+1. Pilih **Edit nama** untuk mengubah nama laporan.
 
-1. Pilih nama laporan, lalu gunakan pilihan **Tambah visual** dan **Edit** untuk menambahkan, menghilangkan, memposisikan ulang, atau mengubah ukuran visualisasi.
+1. Pilih nama laporan, lalu gunakan pilihan **+ Tambah visual** dan **Edit** untuk menambahkan, menghilangkan, memposisikan ulang, atau mengubah ukuran visualisasi.
 
-1. Untuk mengubah properti visualisasi, pilih **...** dan kemudian pilih **Edit visual**.
+1. Untuk mengubah properti visualisasi, pilih visual, pilih **...** dan kemudian **Edit visual**.
 
    :::image type="content" source="media/edit-visual-control.png" alt-text="Mengedit properti diagram untuk laporan kustom.":::
 
@@ -72,5 +84,6 @@ Selain laporan standar, Anda dapat membuat laporan kustom dengan visualisasi dia
 1. Pilih **Hapus** untuk menghapus laporan.
 
 1. Konfirmasikan penghapusan untuk menghapus laporan secara permanen.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

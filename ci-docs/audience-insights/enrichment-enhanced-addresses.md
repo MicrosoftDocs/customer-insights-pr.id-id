@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: fb3fee72b3420c636d549b600c468c574ee33a662bfafd096247dfddf40150bd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032670"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643400"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang disempurnakan
 
@@ -23,6 +23,8 @@ Alamat pada data dapat tidak terstruktur, tidak lengkap, atau salah. Gunakan mod
 ## <a name="how-we-enhance-addresses"></a>Cara kami meningkatkan alamat
 
 Model kami melalui proses dua langkah untuk meningkatkan alamat. Pertama, ia mengurai alamat untuk mengidentifikasi komponennya dan memasukkannya ke dalam format terstruktur. Selanjutnya, kami akan menggunakan AI untuk mengoreksi, menyelesaikan, dan membuat standar nilai di alamat.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Contoh
 
@@ -102,6 +104,6 @@ Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lih
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

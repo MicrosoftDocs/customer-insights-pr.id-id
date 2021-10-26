@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466581"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645268"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Memulai kemampuan wawasan audiens Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Wawasan audiens dapat membantu Anda membangun pemahaman yang lebih mendalam tent
 
 ## <a name="step-1-create-an-environment"></a>Langkah 1: Membuat lingkungan
 
-Untuk memulai, Anda harus terlebih dulu membuat lingkungan untuk bekerja. Jika organisasi Anda telah membeli lisensi, lihat [Memulai langganan berbayar](get-started-paid.md). Untuk memulai uji coba wawasan audiens, lihat [Mengkonfigurasi lingkungan uji coba](get-started-trial.md). 
+Untuk memulai, Anda harus terlebih dulu membuat lingkungan untuk bekerja. Jika organisasi Anda telah membeli lisensi, lihat [Membuat lingkungan](create-environment.md). Untuk memulai uji coba wawasan audiens, lihat [Mengkonfigurasi lingkungan uji coba](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Langkah 2: Jelajahi wawasan audiens
 

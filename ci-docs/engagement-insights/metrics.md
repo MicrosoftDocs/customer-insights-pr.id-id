@@ -4,17 +4,17 @@ description: Bagaimana membuat, mengedit, dan menghapus metrik.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 79600a14bc7e98dfd066270f19c353fd007e1341
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034273"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623726"
 ---
 # <a name="view-and-create-metrics"></a>Melihat dan membuat metrik
 
@@ -38,21 +38,24 @@ Metrik sistem ini didasarkan pada properti aktivitas yang ada di aktivitas dasar
 1. Di panel navigasi kiri, buka **Data**. 
 1. Pilih tab **Metrik** untuk melihat daftar semua metrik di ruang kerja. 
    > [!NOTE]
-   > Metrik yang dihasilkan sistem hanya dapat baca. Anda tidak dapat mengubah atau menghapusnya. Anda hanya dapat membuat dan mengedit metrik kustom.
+   > Metrik yang dihasilkan sistem hanya dapat baca. Anda tidak dapat mengedit atau menghapusnya. Anda hanya dapat membuat dan mengedit metrik kustom.
 
 ## <a name="create-a-metric"></a>Buat metrik
 
 Admin lingkungan dan ruang kerja dapat membuat metrik. Properti aktivitas harus dikirim ke ruang kerja sebelum Anda membuat metrik. Anda dapat membuat metrik berdasarkan properti aktivitas yang dikirim oleh aktivitas dasar atau menggunakan SDK web untuk [mengirim properti aktivitas kustom](advanced-SDK-implementation.md).
 
 1. Buka **data** > **Metrik**.
-1. Pilih **metrik baru**.
+1. Pilih **Metrik baru** untuk membuka **Pustaka Sumber Daya** dan dialog **metrik tanpa judul baru**.
 
    :::image type="content" source="media/new-metric.png" alt-text="Menambahkan metrik ke aktivitas.":::
 
-1. Untuk format, pilih jenis data **Bilangan bulat** atau **Ganda**. Bilangan bulat di sini adalah bilangan cacah. Untuk Ganda, Anda dapat memilih antara satu hingga tiga tempat desimal.
-1. Di panel **Pustaka sumber daya**, cari properti aktivitas sebagai dasar metrik.
-1. Pilih **tanda plus (+)** di sebelah properti untuk menggunakannya dalam rumus. Anda hanya dapat membuat rumus berdasarkan satu properti. 
-1. Pilih salah satu dari fungsi agregat berikut ini. 
+1. Dalam dialog **metrik tanpa judul baru**, pilih daftar dropdown **Format**, dan pilih jenis data **bilangan bulat** atau **ganda**. Bilangan bulat di sini adalah bilangan cacah. Untuk Ganda, Anda dapat memilih satu dan tiga tempat desimal.
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="Membuat metrik baru.":::
+   
+5. Di panel **Pustaka sumber daya**, cari properti aktivitas sebagai dasar metrik.
+6. Pilih **tanda plus (+)** di sebelah properti untuk menggunakannya dalam rumus. Anda hanya dapat membuat rumus berdasarkan satu properti. 
+7. Pilih salah satu dari fungsi agregat berikut ini. 
 
    - Jumlah: total aritmetika dari semua nilai 
    - Rata-rata: rata-rata dari semua nilai
@@ -68,12 +71,16 @@ Diperlukan waktu hingga satu menit untuk metrik sebelum Anda dapat menggunakanny
 
 ## <a name="edit-a-metric"></a>Mengedit metrik
 
+Anda hanya dapat mengedit metrik kustom.
+
 1. Buka **data** > **Metrik**.
 1. Pilih metrik dalam daftar.
 1. Mengubah definisi metrik
 1. Pilih **Simpan**.
 
 ## <a name="change-the-name-of-a-metric"></a>Ubah nama metrik
+
+Anda hanya dapat mengubah nama metrik kustom.
 
 1. Buka **data** > **Metrik**.
 1. Pilih **Lainnya [...]** untuk metrik dan pilih **Edit nama**.
@@ -82,11 +89,15 @@ Diperlukan waktu hingga satu menit untuk metrik sebelum Anda dapat menggunakanny
 
 ## <a name="delete-a-metric"></a>Hapus metrik
 
+Anda hanya dapat menghapus metrik kustom.
+
 1. Buka **data** > **Metrik**.
 1. Pilih **Lainnya [...]** untuk metrik dan pilih **Hapus**.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Hapus metrik pada aktivitas.":::
 
 1. Klik **Hapus**, untuk mengonfirmasi penghapusan tersebut.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
