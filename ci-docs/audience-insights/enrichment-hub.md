@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617559"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673003"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
@@ -29,7 +29,7 @@ Anda harus memiliki izin kontributor atau Administrator untuk membuat atau menge
 
 Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 
-# <a name="individual-customers-b2c"></a>[Pelanggan perorangan (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
 - [Merek](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
@@ -38,7 +38,7 @@ Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 - [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
 
-# <a name="business-accounts-b2b"></a>[Akun bisnis (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
 - [Data perusahaan](enrichment-leadspace.md) yang disediakan oleh Leadspace
 - [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 

@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623120"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673327"
 ---
 # <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
@@ -32,14 +32,14 @@ Ada dua jenis utama ekspor:
 
 ### <a name="export-segments"></a>Ekspor segmen
 
-**Mengekspor segmen di lingkungan untuk akun bisnis (B2B) atau pelanggan individual (B2C)**  
-Sebagian besar pilihan ekspor mendukung kedua jenis lingkungan. Mengekspor segmen ke berbagai sistem target memiliki persyaratan khusus. Secara umum, anggota segmen, profil pelanggan, berisi informasi kontak. Meskipun kasus ini biasanya adalah kasus untuk segmen yang dibangun berdasarkan pelanggan individual (B2C), namun tidak harus demikian untuk segmen berdasarkan akun bisnis (B2B). 
+**Mengekspor segmen di lingkungan untuk akun bisnis (B to B) atau pelanggan individual (B to C)**  
+Sebagian besar pilihan ekspor mendukung kedua jenis lingkungan. Mengekspor segmen ke berbagai sistem target memiliki persyaratan khusus. Secara umum, anggota segmen, profil pelanggan, berisi informasi kontak. Meskipun kasus ini biasanya adalah kasus untuk segmen yang dibangun berdasarkan konsumen individual (B to C), namun tidak harus demikian untuk segmen berdasarkan akun bisnis (B to B). 
 
-**lingkungan ekspor Segmentasi untuk akun bisnis (B2B)**  
+**lingkungan ekspor Segmentasi untuk akun bisnis (B to B)**  
 - Segmen dalam konteks lingkungan untuk akun bisnis dibangun pada entitas *akun*. Untuk mengekspor segmen akun sebagaimana adanya, sistem target harus mendukung segmen akun murni. Hal ini terjadi untuk [LinkedIn](export-linkedin-ads.md) bila Anda memilih pilihan **perusahaan** saat menentukan ekspor.
 - Semua sistem target lainnya memerlukan bidang dari entitas kontak. Untuk memastikan segmen akun dapat mengambil data dari kontak terkait, definisi segmen Anda harus memproyeksikan atribut entitas kontak. Pelajari lebih lanjut tentang cara [mengkonfigurasi segmen dan atribut proyek](segment-builder.md).
 
-**Segmentasi ekspor di lingkungan untuk pelanggan perorangan (B2C)**  
+**Segmentasi ekspor di lingkungan untuk konsumen perorangan (B to C)**  
 - Segmen dalam konteks lingkungan untuk pelanggan individual dibangun pada entitas *profil pelanggan terpadu*. Setiap segmen yang memenuhi persyaratan sistem target (contoh: alamat email) dapat diekspor.
 
 **Batas pada ekspor segmen**  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617973"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673142"
 ---
 # <a name="customer-activities"></a>Aktivitas pelanggan
 
@@ -49,7 +49,7 @@ Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan d
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Tentukan relasi entitas.":::
 
    > [!TIP]
-   > Di lingkungan B2B, Anda dapat memilih antara entitas akun dan entitas lain. Jika Anda memilih entitas akun, jalur relasi akan secara otomatis diatur. Untuk entitas lain, Anda harus menentukan jalur relasi pada satu atau beberapa entitas menengah hingga mencapai entitas akun.
+   > Di lingkungan B to B, Anda dapat memilih antara entitas akun dan entitas lain. Jika Anda memilih entitas akun, jalur relasi akan secara otomatis diatur. Untuk entitas lain, Anda harus menentukan jalur relasi pada satu atau beberapa entitas menengah hingga mencapai entitas akun.
 
 1. Pilih **Berikutnya** untuk masuk ke langkah berikutnya. 
 

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622974"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673469"
 ---
 # <a name="define-and-manage-measures"></a>Menentukan dan mengelola ukuran
 
@@ -28,7 +28,7 @@ Gunakan pembuat ukuran untuk merencanakan aktivitas bisnis dengan mengkueri data
 
 Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membuat pengukuran dengan atribut data dari entitas data yang telah diatur relasinya untuk terhubung dengan entitas profil pelanggan terpadu.
 
-# <a name="individual-customers-b2c"></a>[Pelanggan perorangan (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
 1. Di wawasan audiens, buka **Ukuran**.
 
@@ -92,7 +92,7 @@ Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membu
 
 1. Buka **Ukuran** untuk melihat ukuran yang baru dibuat dalam daftar.
 
-# <a name="business-accounts-b2b"></a>[Akun bisnis (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
 1. Di wawasan audiens, buka **Ukuran**.
 
@@ -164,7 +164,7 @@ Bagian ini akan memandu Anda membuat pengukuran baru dari awal. Anda dapat membu
 
 Anda dapat menggunakan templat yang sudah ditentukan sebelumnya dari langkah-langkah yang umum digunakan untuk membuatnya. Deskripsi terperinci tentang templat dan pengalaman terpandu membantu Anda mengukur pembuatan yang efisien. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
 
-# <a name="individual-customers-b2c"></a>[Pelanggan perorangan (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
 Anda dapat menggunakan templat yang sudah ditentukan sebelumnya dari langkah-langkah yang umum digunakan untuk membuatnya. Deskripsi terperinci tentang templat dan pengalaman terpandu membantu Anda mengukur pembuatan yang efisien. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
 
@@ -212,7 +212,7 @@ Prosedur berikut ini menguraikan langkah-langkah untuk menyusun ukuran baru meng
 
 1. Sekarang Anda dapat memilih **Jalankan** untuk menghitung hasil pengukuran. Untuk memperbaikinya nanti, pilih **Simpan draf**.
 
-# <a name="business-accounts-b2b"></a>[Akun bisnis (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
 Fitur ini hanya tersedia untuk langkah-langkah yang dibuat di lingkungan dengan pelanggan individual sebagai target audiens.
 

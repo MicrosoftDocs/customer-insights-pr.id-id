@@ -1,7 +1,7 @@
 ---
 title: Saran segmen yang didukung oleh Pembelajaran Mesin
 description: Biarkan Pembelajaran Mesin anda menemukan segmen baru dan menarik berdasarkan atribut pelanggan.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028364"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673187"
 ---
 # <a name="suggested-segments-preview"></a>Segmen yang disarankan (pratinjau)
 
@@ -23,7 +23,7 @@ Temukan segmen menarik pelanggan Anda dengan bantuan model AI. Fitur Pembelajara
 > [!NOTE]
 > Fitur segmen yang disarankan menggunakan cara otomatis untuk mengevaluasi data dan membuat prediksi berdasarkan data tersebut, dan oleh karena itu, memiliki kemampuan untuk digunakan sebagai metode pembuatan profil, sebagaimana istilah tersebut ditentukan oleh Peraturan Perlindungan Data Umum ("GDPR"). Penggunaan fitur ini oleh Anda untuk memproses data mungkin diatur dalam GDPR atau hukum atau peraturan lainnya. Anda bertanggung jawab untuk memastikan bahwa penggunaan Dynamics 365 Customer Insights, termasuk fitur ini, mematuhi semua hukum dan peraturan yang berlaku, termasuk hukum yang terkait dengan privasi, data pribadi, data biometrik, perlindungan data, dan kerahasiaan komunikasi.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Halaman segmen yang disarankan di Customer insights yang menampilkan rincian saran di panel sisi.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Halaman segmen yang disarankan yang menampilkan rincian saran di panel sisi.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segmen yang disarankan untuk meningkatkan KPI
 
@@ -49,7 +49,7 @@ Saran segmen berbeda jika Anda memilih atribut numerik atau atribut kategoris se
 
 Dengan atribut angka seperti *penghasilan tahunan* atau *periode keanggotaan* sebagai atribut utama, sistem menyarankan segmen yang memiliki nilai rata-rata atribut numerik yang lebih tinggi atau lebih rendah bila dibandingkan dengan semua pelanggan.
 
-Atribut kategoris seperti *kepuasan pelanggan* sebagai atribut utama menghasilkan segmen yang disarankan dengan persentase pelanggan yang lebih tinggi atau lebih rendah milik kategori tertentu bila dibandingkan dengan persentase semua pelanggan yang termasuk dalam kategori yang sama. Misalnya, *kepuasan pelanggan* dipilih sebagai atribut utama dan terdiri dari tiga kategori (*Rendah*, *Sedang* dan *Tinggi*). Untuk tiap kategori, segmen akan disarankan memiliki persentase pelanggan yang jauh lebih tinggi atau lebih rendah milik kategori tersebut dibandingkan dengan perbandingan semua pelanggan dalam kategori yang sama. Jika 22% dari semua pelanggan memiliki kepuasan *Tinggi*, maka hanya segmen yang memiliki perbandingan pelanggan yang jauh lebih tinggi atau lebih rendah dengan kepuasan *Tinggi* dibandingkan dengan 22% yang akan disarankan untuk kategori tersebut. Dengan cara yang sama, segmen akan disarankan untuk masing-masing kategori lain (*Rendah* dan *Sedang*) jika secara statistik signifikan.
+Atribut kategoris seperti *kepuasan pelanggan* sebagai atribut utama menghasilkan segmen yang disarankan dengan persentase pelanggan yang lebih tinggi atau lebih rendah milik kategori tertentu bila dibandingkan dengan persentase semua pelanggan yang termasuk dalam kategori yang sama. Misalnya, *kepuasan pelanggan* dipilih sebagai atribut utama dan terdiri dari tiga kategori (*Rendah*, *Sedang* dan *Tinggi*). Untuk setiap kategori, segmen akan disarankan memiliki persentase pelanggan yang lebih tinggi atau lebih rendah milik kategori tersebut dibandingkan dengan proporsi semua pelanggan dalam kategori yang sama. Jika 22% dari semua pelanggan memiliki kepuasan *Tinggi*, maka hanya segmen yang memiliki proporsi pelanggan yang lebih tinggi atau lebih rendah dengan kepuasan *Tinggi* dibandingkan dengan 22% yang akan disarankan untuk kategori tersebut. Dengan cara yang sama, segmen akan disarankan untuk masing-masing kategori lain (*Rendah* dan *Sedang*) jika secara statistik signifikan.
 
 > [!NOTE]
 > Saat ini, kami hanya mendukung atribut kategoris utama yang memiliki hingga 10 kategori. Jika Anda ingin melihat saran segmen berdasarkan atribut utama dengan lebih dari 10 kategori, sebaiknya kelompokkan beberapa kategori untuk mengurangi jumlah kategori menjadi 10 atau lebih sedikit. Pembatasan ini hanya berlaku untuk atribut utama. Untuk atribut kategoris yang mempengaruhi, saat ini kami mendukung maksimum 100 kategori.
@@ -77,7 +77,7 @@ Atribut kategoris seperti *kepuasan pelanggan* sebagai atribut utama menghasilka
 
 Setelah model AI menghasilkan saran, Anda akan menemukannya terdaftar di **Segmen** > **Saran (pratinjau)**.
  
-Pilih segmen yang disarankan untuk meninjau rincian saran tersebut, termasuk perbandingan nilai rata-rata dan jumlah anggota segmen. Anda juga dapat meninjau nilai atribut atau aturan yang dipelajari model AI untuk menyarankan segmen yang dipilih.
+Pilih segmen yang disarankan untuk meninjau rincian saran tersebut. Anda juga dapat meninjau nilai atribut atau aturan yang dipelajari model AI untuk menyarankan segmen yang dipilih.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Simpan saran sebagai segmen
 

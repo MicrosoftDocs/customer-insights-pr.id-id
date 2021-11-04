@@ -1,7 +1,7 @@
 ---
 title: Buat segmen dengan pembuat segmen
 description: Buat segmen pelanggan untuk mengelompokkan mereka berdasarkan berbagai atribut.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623033"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673554"
 ---
 # <a name="create-segments"></a>Buat segmen
 
@@ -23,6 +23,7 @@ Tentukan filter kompleks di sekitar entitas pelanggan terpadu dan entitas terkai
 > [!TIP]
 > - Segmen singkat hanya didukung di lingkungan untuk **pelanggan individual**.    
 > - Segmen berdasarkan **pelanggan individual** secara otomatis mencakup informasi kontak yang tersedia untuk anggota segmen. Di lingkungan untuk **akun bisnis**, segmen didasarkan pada akun (perusahaan atau anak perusahaan). Untuk menyertakan informasi kontak dalam segmen, gunakan fungsi **atribut Proyek** dalam pembuat segmen.
+>    - Pastikan sumber data kontak [dipetakan secara semantis ke entitas ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Pembuat segmen
 
@@ -52,7 +53,7 @@ Contoh di atas menjelaskan kemampuan segmentasi. Kami telah mendefinisikan segme
 
 Tersedia beberapa cara untuk membuat segmen baru. Bagian ini menjelaskan cara membangun segmen Anda sendiri dari awal. Anda juga dapat membuat *segmen cepat* berdasarkan entitas yang ada atau menggunakan model Pembelajaran Mesin untuk mendapatkan *segmen yang disarankan*. Untuk informasi lebih lanjut, buka [Ikhtisar segmen](segments.md).
 
-Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimpan sebagai segmen tidak aktif. Setelah menyelesaikan konfigurasi segmen, jalankan untuk mengaktifkan segmen. Atau, Anda dapat ***Aktifkan** _ segmen dari halaman _ *Semua segmen**.
+Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimpan sebagai segmen tidak aktif. Setelah menyelesaikan konfigurasi segmen, jalankan untuk mengaktifkan segmen. Anda juga dapat **Aktifkan** segmen dari halaman **Semua segmen**.
 
 1. Buka halaman **Segmen**.
 
@@ -86,17 +87,25 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
 
    Saat menggunakan operator OR, semua kondisi harus didasarkan pada entitas yang tercakup dalam jalur relasi.
 
-   - Anda dapat membuat beberapa aturan untuk membuat kumpulan rekaman pelanggan yang berbeda. Anda dapat menggabungkan grup untuk menyertakan pelanggan yang diperlukan untuk kasus bisnis Anda. Pilih **Tambah aturan** untuk membuat aturan baru. Secara khusus, jika Anda tidak dapat menyertakan entitas dalam aturan karena jalur relasi yang ditentukan, Anda harus membuat aturan baru untuk memilih formulir atribut.
+   - Anda dapat membuat beberapa aturan untuk membuat kumpulan rekaman pelanggan yang berbeda. Anda dapat menggabungkan grup untuk menyertakan pelanggan yang diperlukan untuk kasus bisnis Anda. Pilih **Tambah aturan** untuk membuat aturan baru. Secara khusus, jika Anda tidak dapat menyertakan entitas dalam aturan karena jalur relasi yang ditentukan, Anda harus membuat aturan baru untuk memilih atribut darinya.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Tambahkan aturan baru ke segmen, lalu pilih operator yang ditentukan.":::
 
    - Pilih salah satu operator rangkaian: **Gabungan**, **Irisan**, atau **Lepas**.
 
       - **Semesta** menyatukan dua kelompok.
-      - **Berpotongan** tumpang-tindih kedua grup. Hanya data yang *umum* untuk kedua grup yang dipertahankan dalam Grup Terpadu.
-      - **Kecuali** menggabungkan dua grup. Hanya data dalam grup A yang *tidak umum* untuk data di Grup B yang dipertahankan.
+      - **Berpotongan** tumpang-tindih kedua grup. Hanya data yang *umum* untuk kedua grup yang tetap dalam Grup Terpadu.
+      - **Kecuali** menggabungkan dua grup. Hanya data dalam grup A yang *tidak umum* pada data di grup B yang dipertahankan.
 
-1. Secara default, segmen akan menghasilkan entitas output yang berisi semua atribut profil pelanggan yang cocok dengan filter yang ditentukan. Jika segmen didasarkan pada entitas lain dari entitas *Pelanggan*, Anda dapat menambahkan lebih banyak atribut dari entitas ini ke entitas output. Pilih **atribut Proyek** untuk memilih atribut yang akan ditambahkan ke entitas output.  
+1. Secara default, segmen akan menghasilkan entitas output yang berisi semua atribut profil pelanggan yang cocok dengan filter yang ditentukan. Jika segmen didasarkan pada entitas lain dari entitas *Pelanggan*, Anda dapat menambahkan lebih banyak atribut dari entitas ini ke entitas output. Pilih **atribut Proyek** untuk memilih atribut yang akan ditambahkan ke entitas output. 
+
+   > [!IMPORTANT]
+   > Untuk segmen berdasarkan akun bisnis, rincian satu atau beberapa kontak dari setiap akun dari entitas *ContactProfile* harus disertakan dalam segmen agar segmen tersebut dapat diaktifkan atau diekspor ke tujuan yang memerlukan informasi kontak. Untuk informasi lebih lanjut tentang entitas *ContactProfile*, lihat [pemetaan Semantis](semantic-mappings.md).
+   > Output sampel untuk segmen berdasarkan akun bisnis dengan atribut kontak yang diproyeksikan dapat terlihat seperti ini: 
+   >
+   > |ID  |Nama akun  |Pendapatan  |Nama kontak  | Peran Kontak|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100 K | [Abbie Moss, Ruth Soto]  | [CEO, manajer Pengadaan]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Contoh atribut yang diproyeksikan dipilih di panel sisi untuk ditambahkan ke entitas output.":::
   
@@ -107,13 +116,14 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
    > - Jika atribut yang ingin Anda proyeksikan lebih dari satu lompatan dari entitas *Pelanggan*, sebagaimana ditentukan oleh relasi, atribut tersebut harus digunakan di setiap aturan kueri segmen yang Anda bentuk. 
    > - Jika atribut yang ingin Anda proyeksikan hanya satu lompatan dari entitas *Pelanggan*, atribut tersebut tidak harus ada di setiap aturan kueri segmen yang Anda bentuk. 
    > - **Atribut yang diproyeksikan** digunakan saat menggunakan operator yang ditentukan.
-   > - Untuk segmen berdasarkan akun bisnis, rincian satu atau beberapa kontak dari setiap akun harus disertakan dalam segmen agar segmen tersebut dapat diaktifkan atau diekspor ke tujuan yang memerlukan informasi kontak.
 
 1. Sebelum Anda menyimpan dan menjalankan segmen, Pilih **Edit rincian** di samping nama segmen. Berikan nama untuk segmen Anda dan perbarui **nama entitas Output** yang disarankan untuk segmen. Anda juga dapat menambahkan deskripsi ke segmen.
 
 1. Pilih **Jalankan** untuk menyimpan segmen, aktifkan dan mulai memproses segmen Anda berdasarkan semua aturan dan kondisi. Jika tidak, maka akan disimpan sebagai segmen tidak aktif.
-
+   
 1. Untuk kembali ke halaman **Segmen**, pilih **kembali ke segmen**.
+
+1. Secara default, segmen dibuat sebagai segmen dinamis. Berarti segmen di-refresh selama pembaruan sistem. Untuk [menghentikan pembaruan otomatis](segments.md#manage-existing-segments), pilih segmen, pilih pilihan **Buat statis**. Segmen statis dapat [di-refresh secara manual](segments.md#refresh-segments) kapan saja.
 
 > [!TIP]
 > - Pembuat segmen tidak akan menyarankan nilai yang valid dari entitas saat mengatur operator untuk kondisi tersebut. Anda dapat membuka **Data** > **Entitas** dan mengunduh data entitas untuk melihat nilai yang tersedia.

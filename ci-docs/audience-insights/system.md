@@ -1,7 +1,7 @@
 ---
 title: Konfigurasi sistem dalam wawasan audiens
 description: Pelajari tentang pengaturan sistem di kemampuan wawasan audiens Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035912"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651844"
 ---
 # <a name="system-configuration"></a>Konfigurasi sistem
 
@@ -24,9 +24,9 @@ Halaman **Sistem** mencakup tab berikut:
 - [Penggunaan API](#api-usage-tab)
 - [Tentang](#about-tab)
 - [Umum](#general-tab)
+- [Keamanan](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Halaman sistem.](media/system-tabs.png "Halaman sistem")
+:::image type="content" source="media/system-tabs.png" alt-text="Tab Pengaturan di halaman sistem.":::
 
 ## <a name="status-tab"></a>Tab status
 
@@ -84,9 +84,15 @@ tab **tentang** berisi **nama tampilan** organisasi anda, **id lingkungan** akti
 
 ## <a name="general-tab"></a>Tab Umum
 
-Terdapat dua pilihan pada format tab **Umum**, **bahasa**, dan **negara/kawasan**.
+Anda dapat mengubah bahasa dan format negara/kawasan pada tab **Umum**.
 
-Aplikasi ini [mendukung sejumlah bahasa](supported-languages.md). Untuk mengubah bahasa yang diinginkan, pilih **bahasa** dari menu pilihan.
+Customer Insights [mendukung sejumlah bahasa](/dynamics365/get-started/availability). Aplikasi menggunakan preferensi bahasa Anda untuk menampilkan elemen seperti menu, teks label, dan pesan sistem dalam bahasa pilihan Anda.
+
+Data dan informasi impor yang Anda masukkan secara manual tidak diterjemahkan.
+
+### <a name="update-the-settings"></a>Perbarui pengaturan
+
+Untuk mengubah bahasa yang diinginkan, pilih **bahasa** dari menu pilihan.
 
 Untuk mengubah pemformatan yang diinginkan untuk tanggal, waktu, dan angka, gunakan menu pilihan **format negara/kawasan**. Pratinjau pemformatan ditampilkan di bidang ini. Sistem akan secara otomatis menyarankan pilihan saat Anda memilih bahasa baru.
 
@@ -105,6 +111,13 @@ Cari rincian tentang penggunaan API real-time dan lihat kejadian yang terjadi pa
 
    Operasi yang menggunakan [penyerapan data real-time](real-time-data-ingestion.md) berisi tombol dengan simbol teropong untuk melihat penggunaan API real-time. Pilih tombol untuk membuka panel samping berisi rincian penggunaan untuk penggunaan API real-time di lingkungan saat ini.   
    Gunakan kotak **Grup berdasarkan** di panel **penggunaan API Real-time** untuk memilih cara terbaik menyajikan interaksi real-time Anda. Anda dapat mengelompokkan data berdasarkan metode API, nama berkualifikasi entitas (entitas yang diserap), dibuat oleh (sumber aktivitas), hasil (keberhasilan atau kegagalan), atau kode kesalahan. Data tersedia dalam bentuk grafik riwayat dan sebagai tabel.
+
+## <a name="security-tab"></a>tab Keamanan
+
+Tab **Keamanan** memungkinkan Anda menautkan dan mengelola [Azure key vault](/azure/key-vault/general/basic-concepts) Anda sendiri ke lingkungan.
+Key Vault khusus dapat digunakan untuk melakukan tahapan dan menggunakan rahasia di batas kepatuhan organisasi. Audiens dapat menggunakan rahasia di Azure Key Vault untuk [mengkonfigurasi sambungan](connections.md) ke sistem pihak ketiga.
+
+Untuk informasi lebih lanjut, lihat [bawa Azure key vault Anda sendiri](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

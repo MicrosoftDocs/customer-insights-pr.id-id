@@ -1,7 +1,7 @@
 ---
 title: Memulai akun bisnis sebagai audiens target utama
 description: Pelajari tentang akun bisnis sebagai audiens target utama Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644992"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673691"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Bekerja dengan akun bisnis di wawasan audiens
 
-Kemampuan audiens di Dynamics 365 Customer Insights memungkinkan Anda mengkonfigurasi lingkungan untuk audiens target utama yang berbeda: pelanggan perorangan (B2C) dan akun bisnis (B2B). Dalam skenario B2C, data dipusatkan di sekitar individu. Untuk B2B, target utama audiens adalah akun - organisasi atau perusahaan - dan kontak. Artikel ini membantu Anda memulai lingkungan untuk akun bisnis. Fitur ini mencantumkan perbedaan untuk area fitur dalam wawasan audiens Anda, tergantung pada fokus lingkungan Anda. Untuk informasi lebih lanjut tentang perbedaan, lihat dokumen area fitur. 
+Kemampuan audiens di Dynamics 365 Customer Insights memungkinkan Anda mengkonfigurasi lingkungan untuk audiens target utama yang berbeda: konsumen perorangan (B to C) dan akun bisnis (B to B). Dalam skenario B to C, data dipusatkan di sekitar individu. Untuk B to B, target utama audiens adalah akun - organisasi atau perusahaan - dan kontak. Artikel ini membantu Anda memulai lingkungan untuk akun bisnis. Fitur ini mencantumkan perbedaan untuk area fitur dalam wawasan audiens Anda, tergantung pada fokus lingkungan Anda. Untuk informasi lebih lanjut tentang perbedaan, lihat dokumen area fitur. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Membuat lingkungan untuk akun bisnis
 
@@ -32,7 +32,7 @@ Setelah menyatukan data, [tentukan hierarki akun](relationships.md#set-up-accoun
 
 Jika organisasi Anda memelihara lingkungan untuk pelanggan perorangan dan akun bisnis, Anda dapat menggunakan pengalih di panel kiri untuk memilih audiens target utama.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Pengalih untuk mengubah audiens target utama antara pelanggan individual dan akun bisnis.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Pengalih untuk mengubah audiens target utama antara pelanggan individual dan akun bisnis.":::
 
 ## <a name="supported-feature-areas"></a>Area Fitur yang didukung
 

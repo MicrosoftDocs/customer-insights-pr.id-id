@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617379"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673837"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -26,7 +26,7 @@ Profil pelanggan yang cocok dengan filter definisi segmen disebut sebagai *anggo
 
 Tersedia beberapa cara untuk membuat segmen baru: 
 
-# <a name="individual-customers-b2c"></a>[Pelanggan perorangan (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
 - Segmen yang kompleks dengan pembuat segmen: [Buat milik kita sendiri](segment-builder.md#create-a-new-segment) 
 - Segmen sederhana dengan satu operator: [Segmen cepat](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Tersedia beberapa cara untuk membuat segmen baru:
 - Saran yang didukung AI berdasarkan tindakan atau atribut: [Segmen yang disarankan untuk meningkatkan ukuran](suggested-segments.md) 
 - Saran berdasarkan aktivitas: [Segmen yang disarankan berdasarkan aktivitas pelanggan](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Akun bisnis (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
 - Segmen yang kompleks dengan pembuat segmen: [Buat milik kita sendiri](segment-builder.md#create-a-new-segment)
 

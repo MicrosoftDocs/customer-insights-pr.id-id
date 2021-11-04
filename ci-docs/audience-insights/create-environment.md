@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645698"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673395"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Buat lingkungan di wawasan audiens
 
@@ -46,7 +46,7 @@ Pada langkah **informasi Dasar**, pilih apakah Anda ingin membuat lingkungan dar
 
 Sediakan rincian berikut:
    - **Nama**: Ketik nama untuk lingkungan ini. Bidang ini telah diisi jika Anda telah menyalin dari lingkungan yang ada, namun Anda dapat mengubahnya.
-   - **Pilih bisnis Anda**: Pilih audiens primer untuk lingkungan baru. Anda dapat bekerja dengan pelanggan perorangan (B2C) atau [akun bisnis](work-with-business-accounts.md) (B2B).
+   - **Pilih bisnis Anda**: Pilih audiens primer untuk lingkungan baru. Anda dapat bekerja dengan konsumen individual (B-to-C) atau [akun bisnis](work-with-business-accounts.md) (B-to-B).
    - **Jenis**: Pilih Apakah Anda ingin membuat lingkungan produksi atau Sandbox. Lingkungan sandbox tidak mengizinkan pembaruan data terjadwal dan ditujukan untuk penerapan dan pengujian sebelumnya. Lingkungan sandbox menggunakan audiens utama yang sama seperti lingkungan produksi yang saat ini dipilih.
    - **Kawasan**: kawasan tempat layanan disebarkan dan dihosting.
 
@@ -66,7 +66,7 @@ Dengan menyimpan data ke Azure Data Lake Storage, berarti Anda menyetujui bahwa 
 > - Akun Azure Data Lake Storage dari kawasan Azure yang sama yang Anda pilih saat membuat lingkungan.
 > - Akun Azure Data Lake Storage yang telah mengaktifkan *namespace hierarkis*.
 
-Untuk pilihan Azure Data Lake Storage tersebut, Anda dapat memilih antara pilihan berbasis sumber daya dan pilihan berbasis langganan untuk otentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Nama **Wadah** akan menjadi `customerinsights` dan tidak dapat diubah.
+Untuk pilihan Azure Data Lake Storage tersebut, Anda dapat memilih antara pilihan berbasis sumber daya dan pilihan berbasis langganan untuk otentikasi. Untuk informasi lebih lanjut, lihat [Menyambung ke akun Azure Data Lake Storage menggunakan prinsipal layanan Azure](connect-service-principal.md). Nama **Wadah** akan menjadi `customerinsights` dan tidak dapat diubah.
 
 Setelah proses sistem seperti penyerapan data selesai, sistem akan membuat folder terkait di akun penyimpanan yang Anda tentukan. File data dan file *model.json* dibuat dan ditambahkan ke folder berdasarkan nama proses.
 
@@ -82,8 +82,8 @@ Untuk [menggunakan model prediksi siap pakai](predictions-overview.md#out-of-box
 
 > [!NOTE]
 > Customer Insights tidak mendukung skenario berbagi data berikut ini:
-> - Jika Anda menyimpan semua data ke Azure Data Lake Storage Anda sendiri, Anda tidak akan dapat mengaktifkan berbagi data dengan Data Lake Terkelola Microsoft Dataverse.
-> - Jika Anda mengaktifkan berbagi data dengan Data Lake Terkelola Microsoft Dataverse, Anda tidak akan dapat [membuat nilai yang terduga atau tidak ada dalam entitas](predictions.md).
+> - Jika Anda menyimpan semua data ke Azure Data Lake Storage Anda sendiri, Anda tidak akan dapat mengaktifkan berbagi data dengan Data Lake Terkelola Dataverse.
+> - Jika Anda mengaktifkan berbagi data dengan Dataverse, Anda tidak akan dapat [membuat nilai yang terduga atau tidak ada dalam entitas](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Langkah 4: Selesaikan Pengaturan
 
@@ -93,10 +93,10 @@ Anda juga dapat mengubah sebagian besar pengaturan nanti. Untuk informasi lebih 
 
 ## <a name="work-with-your-new-environment"></a>Bekerja dengan lingkungan baru Anda
 
-Tinjau artikel berikut untuk membantu Anda memulai mengonfigurasi Customer Insights. 
+Lihat artikel berikut untuk membantu Anda memulai konfigurasi Customer Insights: 
 
 - [Tambahkan lebih banyak pengguna dan tetapkan izin](permissions.md).
 - [Serap sumber data Anda](data-sources.md) dan jalankan semua melalui [proses penyatuan data](data-unification.md) untuk mendapatkan [profil pelanggan terpadu](customer-profiles.md).
 - [Perkaya profil pelanggan terpadu](enrichment-hub.md) atau [jalankan model prediktif](predictions-overview.md).
-- [Buat segmen](segments.md) untuk mengelompokkan pelanggan dan [mengukur](measures.md) KPI ulasan.
+- [Buat segmen](segments.md) untuk mengelompokkan pelanggan dan [ukuran](measures.md) untuk meninjau KPI.
 - [Siapkan koneksi](connections.md) dan [ekspor](export-destinations.md) untuk memproses subkumpulan data Anda di aplikasi lain.

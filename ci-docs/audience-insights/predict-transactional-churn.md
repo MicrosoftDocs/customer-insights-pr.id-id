@@ -1,7 +1,7 @@
 ---
 title: prediksi kehilangan transaksi
 description: Prediksi apakah pelanggan berisiko tidak lagi membeli atau layanan Anda.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643381"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673049"
 ---
 # <a name="transaction-churn-prediction-preview"></a>prediksi kehilangan transaksi (Pratinjau)
 
@@ -28,6 +28,32 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
 > Coba tutorial untuk prediksi kehilangan transaksi dengan menggunakan data sampel: [Panduan sampel prediksi kehilangan transaksi (pratinjau)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Prasyarat
+
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
+
+- Sekurangnya [izin kontributor](permissions.md) di Customer Insights.
+- Pengetahuan bisnis untuk memahami apa arti kehilangan untuk bisnis Anda. Kami mendukung definisi kehilangan pelanggan berdasarkan waktu, yang berarti pelanggan dianggap bergejolak setelah periode tanpa pembelian.
+- Data tentang transaksi/pembelian dan Riwayat mereka:
+    - Pengidentifikasi transaksi untuk membedakan pembelian/transaksi.
+    - Pengidentifikasi pelanggan untuk mencocokkan transaksi dengan pelanggan Anda.
+    - Tanggal aktivitas transaksi, yang menentukan tanggal terjadinya transaksi.
+    - Skema data semantik untuk pembelian/transaksi memerlukan informasi berikut:
+        - **ID transaksi**: pengidentifikasi unik pembelian atau transaksi.
+        - **Tanggal transaksi**: tanggal pembelian atau transaksi.
+        - **Nilai transaksi**: mata uang/nilai numerik dari transaksi/item.
+        - (Opsional) **ID Produk unik**: id produk atau layanan yang dibeli jika data Anda berada pada tingkat item baris.
+        - (Opsional) **Apakah transaksi ini adalah retur**: bidang benar/salah yang mengidentifikasi apakah transaksi tersebut merupakan retur atau tidak. Jika **nilai transaksi** negatif, kita juga akan menggunakan informasi ini untuk menyimpulkan retur.
+- (Opsional) Data tentang aktivitas pelanggan:
+    - Pengidentifikasi aktivitas untuk membedakan aktivitas dari jenis yang sama.
+    - Pengidentifikasi pelanggan untuk memetakan aktivitas dengan pelanggan Anda.
+    - Informasi aktivitas berisi nama dan tanggal aktivitas.
+    - Skema data semantik untuk aktivitas pelanggan mencakup:
+        - **Kunci primer:** pengidentifikasi unik untuk aktivitas. Misalnya, kunjungan situs web atau rekaman penggunaan yang menunjukkan pelanggan mencoba sampel produk Anda.
+        - **Cap waktu:** tanggal dan waktu aktivitas yang diidentifikasi oleh kunci primer.
+        - **Aktivitas**: nama aktivitas yang ingin Anda gunakan. Misalnya, bidang yang disebut "UserAction" di toko kelontong mungkin adalah kupon yang digunakan oleh pelanggan.
+        - **Rincian:** informasi rinci tentang aktivitas. Misalnya, bidang yang disebut "CouponValue" di toko kelontong mungkin merupakan nilai mata uang kupon.
+
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
 - Sekurangnya [izin kontributor](permissions.md) di Customer Insights.
 - Pengetahuan bisnis untuk memahami apa arti kehilangan untuk bisnis Anda. Kami mendukung definisi kehilangan pelanggan berdasarkan waktu, yang berarti pelanggan dianggap bergejolak setelah periode tanpa pembelian.
@@ -51,7 +77,7 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
         - **Aktivitas**: nama aktivitas yang ingin Anda gunakan. Misalnya, bidang yang disebut "UserAction" di toko kelontong mungkin adalah kupon yang digunakan oleh pelanggan.
         - **Rincian:** informasi rinci tentang aktivitas. Misalnya, bidang yang disebut "CouponValue" di toko kelontong mungkin merupakan nilai mata uang kupon.
 - (Opsional) Data tentang pelanggan Anda:
-    - Data ini hanya boleh jarang terjadi, dan harus selaras terhadap atribut lebih statis untuk memastikan model berkinerja terbaik.
+    - Data ini hharus selaras terhadap atribut lebih statis untuk memastikan model berkinerja terbaik.
     - Skema data semantis untuk data pelanggan mencakup:
         - **CustomerID:** Pengidentifikasi unik untuk pelanggan.
         - **Tanggal Dibuat:** Tanggal awal pelanggan ditambahkan.
@@ -59,6 +85,9 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
         - **Negara:** Negara pelanggan.
         - **Industri:** Jenis industri pelanggan. Misalnya, bidang yang disebut "Industri" dalam pemanggang kopi dapat menunjukkan apakah pelanggan tersebut adalah pelanggan ritel.
         - **Klasifikasi:** Kategorisasi pelanggan untuk bisnis Anda. Contohnya, bidang yang disebut "ValueSegment" dalam mesin pemanggang kopi dapat menjadi tingkat pelanggan berdasarkan ukuran pelanggan.
+
+---
+
 - Karakteristik Data yang Disarankan:
     - Data historis yang memadai: Data transaksi untuk setidaknya dua kali lipat dari periode waktu yang dipilih. Sebaiknya, dua hingga tiga tahun riwayat transaksi. 
     - Beberapa pembelian per pelanggan: Idealnya setidaknya dua transaksi per Pelanggan.
@@ -114,6 +143,32 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
 
 1. Pilih **Selanjutnya**.
 
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Tambahkan data tambahan (opsional)
+
+Konfigurasikan relasi dari entitas aktivitas pelanggan Anda ke entitas *Pelanggan*.
+
+1. Pilih bidang yang mengidentifikasi pelanggan di tabel aktivitas pelanggan. Hal ini dapat langsung terkait dengan ID pelanggan utama entitas *pelanggan* Anda.
+
+1. Pilih entitas yang merupakan entitas *Pelanggan* utama Anda.
+
+1. Masukkan nama yang mendeskripsikan relasi.
+
+#### <a name="customer-activities"></a>Aktivitas pelanggan
+
+1. Atau, pilih **Tambah data** untuk **aktivitas pelanggan**.
+
+1. Pilih jenis aktivitas semantis berisi data yang akan digunakan, lalu pilih satu atau beberapa aktivitas dalam bagian **Aktivitas**.
+
+1. Pilih jenis aktivitas yang cocok dengan jenis aktivitas Pelanggan yang Anda konfigurasikan. Pilih **Buat baru** dan pilih jenis aktivitas yang tersedia atau buat jenis baru.
+
+1. Pilih **Berikutnya** lalu **Simpan**.
+
+1. Jika Anda memiliki aktivitas pelanggan lain yang ingin Anda masukkan, ulangi langkah di atas.
+
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Pilih Tingkat prediksi
 
 Sebagian besar prediksi dibuat pada tingkat pelanggan. Dalam situasi tertentu, hal tersebut mungkin tidak cukup rinci untuk memenuhi kebutuhan bisnis Anda. Anda dapat menggunakan fitur ini untuk memperkirakan kehilangan cabang pelanggan, misalnya, dan bukan untuk pelanggan secara keseluruhan.
@@ -122,9 +177,9 @@ Sebagian besar prediksi dibuat pada tingkat pelanggan. Dalam situasi tertentu, h
 
 1. Perluas entitas yang akan dipilih tingkat kedua, atau gunakan kotak filter pencarian untuk memfilter pilihan yang dipilih.
 
-1. Pilih atribut yang akan digunakan sebagai tingkat kedua, lalu pilih **Tambah**
+1. Pilih atribut yang akan digunakan sebagai tingkat kedua, lalu pilih **Tambah**.
 
-1. Pilih **berikutnya**
+1. Pilih **Selanjutnya**.
 
 > [!NOTE]
 > Entitas yang tersedia di bagian ini ditampilkan karena memiliki relasi dengan entitas yang Anda pilih di bagian sebelumnya. Jika Anda tidak melihat entitas yang ingin Anda tambahkan, pastikan entitas memiliki relasi valid yang ada di **Relasi**. Hanya Relasi banyak ke satu dan satu-ke-satu yang valid untuk konfigurasi ini.
@@ -159,7 +214,7 @@ Konfigurasikan relasi dari entitas aktivitas pelanggan Anda ke entitas *Pelangga
 
 1. Pilih **Selanjutnya**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Memberikan daftar opsional akun tolok ukur (hanya akun bisnis)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Memberikan daftar opsional akun tolok ukur
 
 Tambahkan daftar pelanggan bisnis dan akun yang akan digunakan sebagai tolok ukur. Anda akan mendapatkan [rincian untuk akun tolok ukur ini](#review-a-prediction-status-and-results) termasuk skor kehilangan dan fitur paling berpengaruh yang mempengaruhi prediksi kehilangannya.
 
@@ -168,6 +223,8 @@ Tambahkan daftar pelanggan bisnis dan akun yang akan digunakan sebagai tolok uku
 1. Pilih pelanggan yang berfungsi sebagai tolok ukur.
 
 1. Untuk melanjutkan, klik **Berikutnya**.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Mengatur konfigurasi jadwal dan ulasan
 
@@ -201,6 +258,25 @@ Tambahkan daftar pelanggan bisnis dan akun yang akan digunakan sebagai tolok uku
 1. Pilih elips vertikal di samping prediksi yang ingin Anda tinjau hasilnya dan pilih **Lihat**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="lihat kontrol untuk melihat hasil prediksi.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
+
+1. Terdapat tiga bagian utama data dalam halaman hasil:
+   - **Performa model pelatihan**: A, B, atau C adalah Skor yang mungkin. Skor ini menunjukkan performa prediksi, dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang tersimpan di entitas output. Skor ditentukan berdasarkan aturan berikut: 
+        - **A** bila model ini secara akurat memprediksi minimal 50% dari total prediksi, dan bila persentase prediksi yang akurat untuk pelanggan yang pergi lebih besar dari tingkat dasar setidaknya 10%.
+            
+        - **B** bila model ini secara akurat memprediksi minimal 50% dari total prediksi, dan bila persentase prediksi yang akurat untuk pelanggan yang pergi adalah hingga 10% lebih besar dari tingkat dasar.
+            
+        - **C** bila model ini secara akurat memprediksi kurang 50% dari total prediksi, atau bila persentase prediksi yang akurat untuk pelanggan yang pergi kurang dari tingkat dasar.
+               
+        - **Dasar** memerlukan input periode waktu prediksi untuk model (misalnya, satu tahun) dan model membuat pecahan waktu yang berbeda dengan membaginya dengan 2 hingga mencapai satu bulan atau kurang. Ia menggunakan pecahan ini untuk membuat aturan bisnis untuk pelanggan yang belum membeli dalam jangka waktu ini. Pelanggan ini dianggap sebagai pergi. Aturan bisnis berbasis waktu dengan kemampuan tertinggi untuk memprediksi siapa yang cenderung pergi dipilih sebagai model dasar.
+            
+    - **Kecenderungan untuk kehilangan (jumlah pelanggan)**: grup pelanggan berdasarkan prediksi risiko kehilangan. Data ini dapat membantu Anda nanti jika Anda ingin membuat segmen pelanggan dengan risiko kehilangan tinggi. Segmen tersebut membantu memahami tempat batas Anda untuk keanggotaan segmen.
+       
+    - **Faktor yang paling berpengaruh**: ada banyak faktor yang diperhitungkan saat membuat prediksi. Masing-masing faktor memiliki kepentingan yang dihitung untuk membuat prediksi model agregat. Anda dapat menggunakan faktor-faktor tersebut untuk membantu memvalidasi prediksi hasil, atau Anda dapat menggunakan informasi ini nanti untuk [membuat segmen](segments.md) yang dapat membantu mempengaruhi risiko kehilangan untuk para pelanggan.
+
+
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
 1. Terdapat tiga bagian utama data dalam halaman hasil:
    - **Performa model pelatihan**: A, B, atau C adalah Skor yang mungkin. Skor ini menunjukkan performa prediksi, dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang tersimpan di entitas output. Skor ditentukan berdasarkan aturan berikut: 
@@ -237,6 +313,11 @@ Tambahkan daftar pelanggan bisnis dan akun yang akan digunakan sebagai tolok uku
        Bila Anda memperkirakan kehilangan pada tingkat akun, semua akun akan dipertimbangkan dalam memperoleh nilai fitur rata-rata untuk segmen kehilangan. Untuk prediksi kehilangan pada tingkat kedua untuk setiap akun, turunan segmen kehilangan bergantung pada tingkat kedua item yang dipilih di panel sisi. Misalnya, jika item memiliki tingkat kedua dari kategori produk = perlengkapan kantor, maka hanya item yang memiliki perlengkapan kantor karena kategori produk yang dipertimbangkan bila mengambil nilai fitur rata-rata untuk segmen kehilangan. Logika ini diterapkan untuk memastikan perbandingan wajar nilai fitur item dengan nilai rata-rata di segmen rendah, sedang, dan tinggi.
 
        Pada kasus tertentu, nilai rata-rata segmen kehilangan rendah, sedang, atau tinggi adalah kosong atau tidak tersedia karena tidak ada item yang merupakan milik segmen kehilangan terkait berdasarkan definisi di atas.
+       
+       > [!NOTE]
+       > Kategorikan nilai dalam kolom rendah, sedang, dan tinggi rata-rata berbeda untuk fitur kategoris seperti negara atau industri. Karena keterangan tentang nilai fitur "rata-rata" tidak berlaku untuk fitur kategoris, nilai di kolom ini adalah perbandingan pelanggan pada segmen rendah, sedang, atau tinggi yang memiliki nilai sama dengan fitur kategoris dibandingkan item yang dipilih di panel sisi.
+
+---
 
 ## <a name="manage-predictions"></a>Kelola prediksi
 
