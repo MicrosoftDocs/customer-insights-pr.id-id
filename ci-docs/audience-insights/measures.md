@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola ukuran
 description: Menentukan ukuran untuk menganalisis dan mencerminkan kinerja bisnis Anda.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673469"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732730"
 ---
 # <a name="define-and-manage-measures"></a>Menentukan dan mengelola ukuran
 
@@ -238,10 +238,9 @@ Pilih ukuran dari daftar untuk pilihan berikut:
 - **Hapus** ukuran.
 - **Aktifkan** atau **Nonaktifkan**. Ukuran yang tidak aktif tidak akan di-refresh selama [refresh terjadwal](system.md#schedule-tab).
 
-> [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda akan menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, serta semua kesalahan dan peringatan yang terkait dengan tugas.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
-## <a name="next-step"></a>Langkah selanjutnya
+## <a name="next-step"></a>Langkah berikutnya
 
 Anda dapat menggunakan langkah-langkah yang ada untuk membuat [segmen pelanggan](segments.md).
 

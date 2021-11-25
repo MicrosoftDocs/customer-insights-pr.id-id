@@ -1,7 +1,7 @@
 ---
 title: Konfigurasi sistem dalam wawasan audiens
-description: Pelajari tentang pengaturan sistem di kemampuan wawasan audiens Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+description: Pelajari tentang pengaturan sistem dalam kemampuan wawasan Dynamics 365 Customer Insights audiens.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651844"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732374"
 ---
 # <a name="system-configuration"></a>Konfigurasi sistem
+
+Untuk mengakses konfigurasi sistem dalam audiens wawasan, dari bilah navigasi kiri pilih **Sistem Admin untuk melihat daftar tugas dan proses** > **·** sistem.
 
 Halaman **Sistem** mencakup tab berikut:
 - [Status](#status-tab)
@@ -30,39 +32,55 @@ Halaman **Sistem** mencakup tab berikut:
 
 ## <a name="status-tab"></a>Tab status
 
-**Tab status** memungkinkan Anda melacak kemajuan konsumsi data, ekspor data, serta beberapa proses produk penting lainnya. Tinjau informasi pada tab ini untuk memastikan kelengkapan proses aktif.
+Tab **Status memungkinkan Anda melacak kemajuan** tugas, konsumsi data, ekspor data, dan beberapa proses produk penting lainnya. Tinjau informasi pada tab ini untuk memastikan kelengkapan tugas dan proses aktif Anda.
 
-Tab ini mencakup tabel dengan status dan informasi pemrosesan untuk berbagai proses. Setiap tabel akan melacak **nama** tugas dan entitas yang sesuai, **status** dijalankan terbaru, dan Kapan **terakhir diperbarui**.
+Tab ini mencakup tabel dengan status dan informasi pemrosesan untuk berbagai proses. Setiap tabel akan melacak **nama** tugas dan entitas yang sesuai, **status** dijalankan terbaru, dan Kapan **terakhir diperbarui**. Anda dapat melihat detail beberapa run terakhir dengan memilih tugas atau nama proses. 
 
-Lihat rincian beberapa aktivitas terakhir dari tugas dengan memilih nama.
+Pilih status di samping tugas atau proses di **kolom Status untuk membuka panel Detail** **·** Kemajuan.
 
-### <a name="status-types"></a>Jenis status
+   :::image type="content" source="media/system-progress-details.png" alt-text="Panel detail kemajuan sistem":::
 
-Ada enam jenis status untuk tugas. Jenis status berikut juga menampilkan tentang *kecocokan*, *penggabungan*, *sumber data*, *segmen*, *Ukuran*, *pengayaan*, *aktivitas*, dan halaman *prediksi*:
+### <a name="status-definitions"></a>Definisi status
 
-- **Pemrosesan:** tugas sedang berlangsung. Status dapat berubah menjadi sukses atau kegagalan.
-- **Berhasil:** tugas berhasil diselesaikan.
-- **Dilewati:** tugas dilewati. Satu atau beberapa proses hilir yang tugas ini tergantung padanya gagal atau dilewati.
-- **Kegagalan:** pemrosesan tugas gagal.
-- **Dibatalkan:** pemrosesan dibatalkan oleh pengguna sebelum selesai.
-- **Antrean:** Pemrosesan diantrekan dan akan dimulai setelah semua tugas hulu selesai. Untuk informasi selengkapnya, lihat [Segarkan kebijaksanaan](#refresh-policies).
+Sistem menggunakan status berikut untuk tugas dan proses:
 
-### <a name="refresh-policies"></a>Segarkan kebijakan
+|Status  |Devinisi  |
+|---------|---------|
+|Dibatalkan |Pemrosesan dibatalkan oleh pengguna sebelum selesai.   |
+|Gagal   |Penyerapan data mengalami kesalahan.         |
+|Kegagalan  |Pengolahannya gagal.  |
+|Belum dimulai   |Sumber data belum diserap datanya atau masih dalam mode draf.         |
+|Sedang memproses  |Tugas atau proses sedang berlangsung.  |
+|Me-refresh    |Penyerapan data sedang berlangsung. Anda dapat membatalkan operasi ini dengan memilih **berhenti menyegarkan** di kolom **tindakan**. Menghentikan refresh sumber data akan mengembalikannya ke status refresh terakhir.       |
+|Dilewati  |Tugas atau proses dilewati. Satu atau beberapa proses hilir yang tugas ini tergantung padanya gagal atau dilewati.|
+|Berhasil  |Tugas atau proses berhasil diselesaikan. Untuk sumber data, menunjukkan data telah berhasil dicerna jika suatu waktu disebutkan dalam **kolom** Refreshed.|
+|Diantrekan | Pemrosesan diantri dan akan dimulai setelah semua tugas dan proses hulu selesai. Untuk informasi selengkapnya, lihat [Refresh proses](#refresh-processes).|
 
-Daftar ini menampilkan kebijakan penyegaran untuk setiap proses utama:
+### <a name="refresh-processes"></a>Proses refresh
 
-- **Sumber data:** berjalan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tidak tergantung pada proses lainnya. Kecocokan tergantung pada keberhasilan penyelesaian proses ini.
-- **Kecocokan:** berjalan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada pemrosesan sumber data yang digunakan dalam definisi pencocokan. Penggabungan tergantung pada keberhasilan penyelesaian proses ini.
-- **Gabungkan**: berjalan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada penyelesaian proses kecocokan. Segmen, tindakan, pengayaan, pencarian, aktivitas, Prediksi, dan persiapan data tergantung pada keberhasilan penyelesaian proses ini.
-- **Segmen**: berjalan secara manual (refresh waktu tunggal) dan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada penggabungan. Wawasan tergantung pada prosesnya.
-- **Ukuran**: berjalan secara manual (refresh waktu tunggal) dan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada penggabungan.
-- **Aktivitas**: berjalan secara manual (refresh waktu tunggal) dan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada penggabungan.
-- **Pengayaan**: berjalan secara manual (refresh waktu tunggal) dan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada penggabungan.
-- **Pencarian**: berjalan secara manual (refresh waktu tunggal) dan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada penggabungan.
-- **Persiapan data**: berjalan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada penggabungan.
-- **Wawasan**: berjalan secara manual (refresh waktu tunggal) dan berdasarkan [jadwal yang dikonfigurasi](#schedule-tab). Tergantung pada segmen.
+Refresh untuk tugas dan proses dijalankan sesuai dengan [jadwal yang](#schedule-tab) dikonfigurasi. 
 
-Pilih status tugas untuk melihat rincian kemajuan seluruh pekerjaan tempatnya berada. Kebijakan penyegaran di atas dapat membantu memahami tindakan yang dapat Anda lakukan untuk menangani tugas yang **dilewati** atau **Mengantre**.
+|Proses  |KETERANGAN  |
+|---------|---------|
+|Aktivitas  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. Wawasan tergantung pada prosesnya.|
+|Penautan analisis |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
+|Persiapan analisis |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
+|Persiapan data   |Tergantung pada penggabungan.   |
+|Sumber Data   |Tidak tergantung pada proses lainnya. Kecocokan tergantung pada keberhasilan penyelesaian proses ini.  |
+|Pengayaan   |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. |
+|Tujuan ekspor |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
+|Wawasan |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
+|Kecerdasan   |Tergantung pada penggabungan.   |
+|Cocokkan |Tergantung pada pemrosesan sumber data yang digunakan dalam definisi pencocokan.      |
+|Pengukuran  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan.  |
+|Penggabungan   |Tergantung pada penyelesaian proses kecocokan. Segmen, tindakan, pengayaan, pencarian, aktivitas, Prediksi, dan persiapan data tergantung pada keberhasilan penyelesaian proses ini.   |
+|Profil   |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. |
+|Pencarian   |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. |
+|Segmen  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. Wawasan tergantung pada prosesnya.|
+|Sistem   |Tergantung pada penyelesaian proses kecocokan. Segmen, tindakan, pengayaan, pencarian, aktivitas, Prediksi, dan persiapan data tergantung pada keberhasilan penyelesaian proses ini.   |
+|Pengguna  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada entitas.  |
+
+Pilih status proses untuk melihat detail kemajuan dari seluruh pekerjaan yang ada di dalamnya. Proses penyegaran di atas dapat membantu memahami apa yang dapat Anda lakukan untuk mengatasi tugas atau proses yang **Dilewati** atau Di **·** antrian.
 
 ## <a name="schedule-tab"></a>tab Jadwal
 
@@ -86,7 +104,7 @@ tab **tentang** berisi **nama tampilan** organisasi anda, **id lingkungan** akti
 
 Anda dapat mengubah bahasa dan format negara/kawasan pada tab **Umum**.
 
-Customer Insights [mendukung sejumlah bahasa](/dynamics365/get-started/availability). Aplikasi menggunakan preferensi bahasa Anda untuk menampilkan elemen seperti menu, teks label, dan pesan sistem dalam bahasa pilihan Anda.
+Customer Insights [mendukung banyak](/dynamics365/get-started/availability) bahasa. Aplikasi menggunakan preferensi bahasa Anda untuk menampilkan elemen seperti menu, teks label, dan pesan sistem dalam bahasa pilihan Anda.
 
 Data dan informasi impor yang Anda masukkan secara manual tidak diterjemahkan.
 
@@ -109,7 +127,7 @@ Cari rincian tentang penggunaan API real-time dan lihat kejadian yang terjadi pa
 
 -  **Operasi** - tabel dengan baris untuk setiap operasi API yang tersedia dan rincian tentang penggunaan operasi. Anda dapat memilih nama operasi untuk membuka [referensi API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operasi yang menggunakan [penyerapan data real-time](real-time-data-ingestion.md) berisi tombol dengan simbol teropong untuk melihat penggunaan API real-time. Pilih tombol untuk membuka panel samping berisi rincian penggunaan untuk penggunaan API real-time di lingkungan saat ini.   
+   Operasi yang menggunakan [konsumsi data real-time](real-time-data-ingestion.md) berisi tombol dengan simbol teropong untuk melihat penggunaan API real-time. Pilih tombol untuk membuka panel samping berisi rincian penggunaan untuk penggunaan API real-time di lingkungan saat ini.   
    Gunakan kotak **Grup berdasarkan** di panel **penggunaan API Real-time** untuk memilih cara terbaik menyajikan interaksi real-time Anda. Anda dapat mengelompokkan data berdasarkan metode API, nama berkualifikasi entitas (entitas yang diserap), dibuat oleh (sumber aktivitas), hasil (keberhasilan atau kegagalan), atau kode kesalahan. Data tersedia dalam bentuk grafik riwayat dan sebagai tabel.
 
 ## <a name="security-tab"></a>tab Keamanan

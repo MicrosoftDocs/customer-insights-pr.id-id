@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035327"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799732"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prediksi kehilangan langganan (pratinjau)
 
 Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan besar tidak lagi menggunakan produk atau layanan langganan perusahaan Anda. Anda dapat membuat prediksi kehilangan langganan baru pada halaman **intelijen** > **prediksi**. Pilih **prediksi saya** untuk melihat prediksi lain yang Anda buat.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Cobalah tutorial untuk prediksi kehilangan pelanggan berlangganan menggunakan data sampel: [panduan sampel prediksi kehilangan pelanggan langganan](sample-guide-predict-subscription-churn.md).

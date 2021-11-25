@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643434"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792031"
 ---
 # <a name="customer-card-add-in-preview"></a>Add-in Kartu Pelanggan (pratinjau)
 
@@ -27,20 +27,20 @@ Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamic
 ## <a name="prerequisites"></a>Prasyarat
 
 - Add-in hanya berfungsi dengan aplikasi yang diarahkan model Dynamics 365, seperti Sales, atau Customer Service, versi 9.0 dan versi yang lebih baru.
-- Agar data Dynamics 365 Anda dapat memetakan ke profil pelanggan wawasan audiens, mereka perlu [diserap dari aplikasi Dynamics 365 menggunakan konektor Microsoft Dataverse](connect-power-query.md).
+- Agar data Dynamics 365 Anda memetakan ke audiens wawasan profil pelanggan, data tersebut harus [tertelan dari aplikasi Dynamics 365 menggunakan konektor Microsoft Dataverse](connect-power-query.md).
 - Semua pengguna Add-in Kartu Pelanggan Dynamics 365 harus [ditambahkan sebagai pengguna](permissions.md) dalam wawasan audiens untuk melihat data.
 - [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md) di audiens wawasan diperlukan agar pencarian data dapat bekerja.
 - Setiap kontrol add-in mengandalkan data tertentu dalam wawasan audiens. Beberapa data dan kontrol hanya tersedia di lingkungan dengan jenis tertentu. Konfigurasi add-in akan menginformasikan Anda jika kontrol tidak tersedia karena jenis lingkungan yang dipilih. Selengkapnya tentang [kasus penggunaan lingkungan](work-with-business-accounts.md).
   - **Kontrol ukuran**: Memerlukan [ukuran terkonfigurasi](measures.md) jenis atribut pelanggan.
   - **Kontrol inteligensi**: Memerlukan data yang dihasilkan menggunakan [prediksi](predictions.md) atau [model kustom](custom-models.md).
   - **Kontrol rincian pelanggan**: Semua bidang dari profil tersedia di profil pelanggan terpadu.
-  - **Kontrol pengayaan**: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan.
+  - **Kontrol pengayaan**: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan. Add-in kartu mendukung pengayaan ini: [Merek yang disediakan oleh](enrichment-microsoft.md) Microsoft, Minat yang disediakan oleh [...](enrichment-microsoft.md) Microsoft.
   - **Kontrol kontak**: Memerlukan definisi entitas semantis dari kontak jenis.
   - **Kontrol Timeline**: memerlukan [aktivitas yang dikonfigurasi](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instal Add-in Kartu Pelanggan
 
-Add-in kartu pelanggan adalah solusi untuk aplikasi Customer Engagement di Dynamics 365. Untuk menginstal solusi, buka AppSource dan Cari **kartu pelanggan Dynamics**. Pilih [Add-in kartu pelanggan di AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) dan pilih **Dapatkan sekarang**.
+Add-in kartu pelanggan adalah solusi untuk aplikasi Customer Engagement di Dynamics 365. Untuk menginstal solusi, buka AppSource dan cari **Dynamics Customer Card**. Pilih [Add-in Kartu Pelanggan di AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) dan pilih Dapatkan Sekarang [·](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview).
 
 Anda mungkin harus masuk dengan kredensial admin Anda agar aplikasi Dynamics 365 menginstal solusi. Bisa diperlukan beberapa waktu agar solusi dapat diinstal ke lingkungan Anda.
 
@@ -48,7 +48,7 @@ Anda mungkin harus masuk dengan kredensial admin Anda agar aplikasi Dynamics 365
 
 1. Sebagai admin, buka bagian **pengaturan** dalam Dynamics 365, lalu pilih **solusi**.
 
-1. Pilih tautan **nama tampilan** untuk solusi **Add-in Kartu Pelanggan Dynamics 365 Customer Insights (Pratinjau)**.
+1. Pilih **tautan nama tampilan** untuk **solusi Add-in (Pratinjau) Kartu Pelanggan** Dynamics 365 Customer Insights.
 
    > [!div class="mx-imgBorder"]
    > ![pilih Nama tampilan.](media/select-display-name.png "pilih Nama tampilan.")

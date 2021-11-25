@@ -1,7 +1,7 @@
 ---
 title: Sesuaikan entitas untuk penyatuan data
 description: Cocokkan entitas untuk menggabungkan dataset dan membuat profil pelanggan terpadu.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648212"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732638"
 ---
 # <a name="match-entities"></a>Pencocokan Entitas
 
@@ -180,10 +180,7 @@ Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Jalankan** untuk memula
 
 Anda akan menemukan hasil penjalanan yang sukses,entitas profil pelanggan terpadu, pada halaman **Entitas**. Entitas pelanggan terpadu Anda disebut **Pelanggan** di bagian **Profil**. Keberhasilan menjalankan kecocokan pertama akan membuat entitas *Pelanggan* terpadu. Semua penjalanan kecocokan berikutnya memperluas entitas tersebut.
 
-> [!TIP]
-> Setelah menjalankan proses pencocokan, pilih status proses untuk membuka panel **Detail tugas**. Ini memberikan gambaran umum tentang waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan dan peringatan yang terkait dengan tugas. Pilih **Lihat detail** untuk melihat entitas mana yang berpartisipasi dalam proses pencocokan, aturan mana yang diterapkan kepada mereka, dan apakah pembaruan berhasil diterbitkan.  
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Jalur telusuri paling detail untuk mendapatkan detail proses dari link status tugas.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Tinjau dan validasi kecocokan Anda
 

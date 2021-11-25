@@ -1,26 +1,26 @@
 ---
-title: Memulai SDK Android
-description: Pelajari cara mempersonalkan dan menjalankan SDK Android
+title: Mulai dengan SDK Android
+description: Pelajari cara mempersonalisasi dan menjalankan SDK Android
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/15/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494279"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655346"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Memulai SDK Android
+# <a name="get-started-with-the-android-sdk"></a>Mulai dengan SDK Android
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Tutorial ini akan memandu Anda melalui proses penyiapan instrumen aplikasi Android dengan SDK wawasan keterlibatan Dynamics 365 Customer Insights. Anda akan mulai melihat aktivitas di portal dalam lima menit atau lebih cepat.
+Tutorial ini memandu Anda melalui proses instrumenting aplikasi Android Anda dengan SDK wawasan keterlibatan Dynamics 365 Customer Insights. Anda akan mulai melihat aktivitas di portal dalam lima menit atau lebih cepat.
 
 ## <a name="configuration-options"></a>Pilihan Konfigurasi
 Pilihan konfigurasi berikut dapat dilewatkan ke SDK:
@@ -31,23 +31,23 @@ Pilihan konfigurasi berikut dapat dilewatkan ke SDK:
 
 - Android Studio
 
-- Tingkat API Android Minimum: 16 (Jelly Bean)
+- Level API Android Minimum: 16 (Jelly Bean)
 
 - Tombol penyerapan (lihat di bawah ini untuk petunjuk cara mendapatkan)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Mengintegrasikan SDK ke aplikasi Anda
-Mulai proses dengan memilih ruang kerja, memilih platform seluler Android, dan mengunduh SDK Android.
+Mulailah proses dengan memilih ruang kerja, memilih platform seluler Android, dan mengunduh SDK Android.
 
 - Gunakan switcher ruang kerja di panel navigasi kiri untuk memilih ruang kerja Anda.
 
 - Jika Anda tidak memiliki ruang kerja yang lama, pilih  **Ruang Kerja Baru**, lalu ikuti langkah-langkah untuk membuat [ruang kerja baru](create-workspace.md).
 
-- Setelah membuat ruang kerja, buka **Admin** > **Ruang Kerja**, lalu pilih  **Panduan penginstalan**. 
+- Setelah membuat ruang kerja, buka **Admin** > **Ruang Kerja**, lalu pilih  **Panduan penginstalan**.
 
 ## <a name="configure-the-sdk"></a>Mengonfigurasi SDK
 
-Setelah mengunduh SDK, Anda dapat menggunakannya di Android Studio untuk mengaktifkan dan mendefinisikan aktivitas. Ada dua cara untuk melakukannya:
-### <a name="option-1-using-jitpack-recommended"></a>Pilihan 1: Menggunakan JitPack (disarankan)
+Setelah mengunduh SDK, Anda dapat bekerja dengannya dalam Android Studio untuk mengaktifkan dan menentukan peristiwa. Ada dua cara untuk melakukannya:
+### <a name="option-1-use-jitpack-recommended"></a>Opsi 1: Gunakan JitPack (disarankan)
 1. Tambahkan penyimpanan JitPack ke root `build.gradle` Anda:
     ```gradle
     allprojects {
@@ -61,13 +61,13 @@ Setelah mengunduh SDK, Anda dapat menggunakannya di Android Studio untuk mengakt
 1. Tambahkan dependensi:
     ```gradle
     dependencies {
-        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:v1.0.0'
         api 'com.google.code.gson:gson:2.8.1'
     }
     ```
 
-### <a name="option-2-using-download-link"></a>Pilihan 2: Menggunakan tautan unduhan
-1. Unduh [SDK Android wawasan keterlibatan](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan letakkan file `eiandroidsdk-debug.aar` dalam folder `libs`.
+### <a name="option-2-use-download-link"></a>Opsi 2: Gunakan tautan unduhan
+1. Unduh [wawasan keterlibatan Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan tempatkan file di `eiandroidsdk-debug.aar``libs` folder.
 
 1. Buka file `build.gradle` tingkat proyek Anda, lalu tambahkan cuplikan berikut:
     ```gradle
@@ -83,22 +83,23 @@ Setelah mengunduh SDK, Anda dapat menggunakannya di Android Studio untuk mengakt
     }
     ```
 
-1. Tambah izin untuk jaringan dan internet di file `AndroidManifest.xml` yang terletak di dalam folder `manifests`. 
+## <a name="enable-auto-instrumentation"></a>Aktifkan instrumentasi otomatis
+
+1. Tambah izin untuk jaringan dan internet di file `AndroidManifest.xml` yang terletak di dalam folder `manifests`.
     ```xml
     <manifest>
         ...
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     ```
-    
-1. Konfigurasi SDK wawasan keterlibatan melalui file `AndroidManifest.xml` Anda. 
 
-## <a name="enable-auto-instrumentation"></a>Aktifkan instrumentasi otomatis
+1. Konfigurasi SDK wawasan keterlibatan melalui file `AndroidManifest.xml` Anda.
+
 1. Salin cuplikan XML dari **panduan Penginstalan**. `Your-Ingestion-Key` seharusnya secara otomatis diisi.
 
    > [!NOTE]
    > Anda tidak perlu mengganti bagian `${applicationId}` tersebut. Ini akan secara otomatis diisi.
-   
+
 
    ```xml
    <application>
@@ -116,20 +117,24 @@ Setelah mengunduh SDK, Anda dapat menggunakannya di Android Studio untuk mengakt
    </application>
    ```
 
-1. Aktifkan atau nonaktifkan pengambilan otomatis aktivitas `View` dengan mengatur bidang `autoCapture` ke `true` atau `false`. Aktivitas `Action` saat ini harus ditambahkan secara manual.
+1. Aktifkan atau nonaktifkan pengambilan otomatis aktivitas `View` dengan mengatur bidang `autoCapture` ke `true` atau `false`. 
 
-1. (Opsional) Konfigurasi lain mencakup pengaturan URL pengumpul titik akhir. Semua dapat ditambahkan dalam metadata kunci penyerapan di `AndroidManifest.xml`:
-    ```xml
+   >[!NOTE]
+   >`Action` Acara harus ditambahkan secara manual.
+
+1. (Opsional) Konfigurasi lain mencakup pengaturan URL pengumpul titik akhir. Mereka dapat ditambahkan di bawah metadata kunci konsumsi di `AndroidManifest.xml`.
+
+   ```xml
         <meta-data
             android:name="com.microsoft.engagementinsights.endpointUrl"
             android:value="https://some-endpoint-url.com" />
-    ```
+   ```
 
 ## <a name="implement-custom-events"></a>Menerapkan aktivitas kustom
 
 Setelah menginisialisasi SDK, Anda dapat bekerja dengan aktivitas dan propertinya di lingkungan `MainActivity`.
 
-    
+
 Java:
 ```java
 Analytics analytics = new Analytics();
@@ -141,7 +146,7 @@ var analytics = Analytics()
 ```
 
 ### <a name="set-property-for-all-events-optional"></a>Atur properti untuk semua aktivitas (opsional)
-    
+
 Java:
 ```java
 analytics.setProperty("year", 2021);

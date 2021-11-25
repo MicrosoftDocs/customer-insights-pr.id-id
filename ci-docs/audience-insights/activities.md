@@ -1,7 +1,7 @@
 ---
 title: Aktivitas pelanggan
 description: Tentukan aktivitas pelanggan dan lihat di timeline pada profil pelanggan.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673142"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732464"
 ---
 # <a name="customer-activities"></a>Aktivitas pelanggan
 
-Gabungkan aktivitas pelanggan dari [berbagai sumber data](data-sources.md) di Dynamics 365 Customer Insights untuk membuat timeline yang mencantumkan aktivitas secara kronologis. Sertakan timeline di aplikasi Dynamics 365 dengan solusi [add-in Kartu Pelanggan](customer-card-add-in.md), atau di dasbor Power BI.
+Gabungkan aktivitas pelanggan dari [berbagai sumber data di Dynamics 365 Customer Insights untuk membuat timeline yang mencantumkan aktivitas secara](data-sources.md) kronologis. Sertakan garis waktu di aplikasi Dynamics 365 dengan [solusi add-in Kartu](customer-card-add-in.md) Pelanggan, atau di dasbor Power BI.
 
 ## <a name="define-an-activity"></a>Menentukan Aktivitas
 
@@ -82,9 +82,7 @@ Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan d
 
 1. Pada halaman **Aktivitas**, pilih **Jalankan** untuk memproses aktivitas. 
 
-> [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Mengelola aktivitas yang ada
 

@@ -1,7 +1,7 @@
 ---
 title: Melengkapi data parsial menggunakan prediksi
 description: Gunakan prediksi untuk mengisi data pelanggan yang tidak lengkap.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,31 +9,32 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645038"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732410"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Lengkapi data parsial dengan prediksi
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Lengkapi data parsial Anda dengan prediksi (usang)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Fitur ini akan **didepresiasi** pada **5 November 2021**. Implementasi saat ini akan terus bekerja sampai fitur dihapus, tetapi Anda tidak akan dapat membuat integrasi baru menggunakan instruksi di bawah ini.
 
 Prediksi memungkinkan Anda dengan mudah membuat nilai prediksi yang dapat meningkatkan pemahaman Anda tentang pelanggan. Pada halaman **intelijen** > **prediksi**, anda dapat memilih **prediksi saya** untuk melihat prediksi yang telah dikonfigurasi di bagian lain dari wawasan audiens, dan memungkinkan anda menyesuaikannya lebih lanjut.
 
 > [!NOTE]
 > Anda tidak dapat menggunakan fitur ini jika lingkungan Anda menggunakan penyimpanan Azure data Lake gen 2.
 >
-> Fitur prediksi menggunakan cara otomatis untuk mengevaluasi data dan membuat prediksi berdasarkan data tersebut, sehingga memiliki kemampuan untuk digunakan sebagai metode pembuatan profil, sebagaimana istilah tersebut didefinisikan oleh peraturan perlindungan data umum ("GDPR"). Penggunaan fitur ini oleh pelanggan untuk memproses data dapat tergantung pada GDPR atau hukum atau peraturan lain. Anda bertanggung jawab untuk memastikan bahwa penggunaan Dynamics 365 Customer Insights, termasuk prediksi, mematuhi semua hukum dan peraturan yang berlaku, termasuk hukum yang terkait dengan privasi, data pribadi, data biometrik, perlindungan data, dan kerahasiaan komunikasi.
+> Fitur prediksi menggunakan cara otomatis untuk mengevaluasi data dan membuat prediksi berdasarkan data tersebut, sehingga memiliki kemampuan untuk digunakan sebagai metode pembuatan profil, sebagaimana istilah tersebut didefinisikan oleh peraturan perlindungan data umum ("GDPR"). Penggunaan fitur ini oleh pelanggan untuk memproses data dapat tergantung pada GDPR atau hukum atau peraturan lain. Anda bertanggung jawab untuk memastikan bahwa penggunaan Dynamics 365 Customer Insights, termasuk prediksi, sesuai dengan semua hukum dan peraturan yang berlaku, termasuk undang-undang yang terkait dengan privasi, data pribadi, data biometrik, perlindungan data, dan kerahasiaan komunikasi.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 Sebelum organisasi Anda dapat menggunakan fitur prediksi, prasyarat berikut harus terpenuhi:
 
-1. Organisasi Anda memiliki instans yang [disiapkan di Microsoft Dataverse](/ai-builder/build-model#prerequisites) dan berada di organisasi yang sama dengan Customer Insights.
+1. Organisasi Anda memiliki contoh yang [disiapkan di Microsoft Dataverse dan berada di organisasi yang sama dengan Customer](/ai-builder/build-model#prerequisites) Insights.
 
-2. Lingkungan audiens Anda melekat pada instans Dataverse Anda.
+2. Lingkungan wawasan audiens Anda melekat pada contoh Dataverse Anda.
 
 Untuk informasi lebih lanjut, lihat [Membuat lingkungan baru](create-environment.md).
 
@@ -60,6 +61,8 @@ Untuk informasi lebih lanjut, lihat [Membuat lingkungan baru](create-environment
    > ![Contoh yang menampilkan nilai bidang yang dipetakan ke kategori.](media/intelligence-categorymapping.png "Contoh yang menampilkan nilai bidang yang dipetakan ke kategori")
 
 8. Pilih **selesai** dan prediksi akan diproses. Pemrosesan akan memakan waktu, tergantung pada ukuran dan kompleksitas data. Hasil akan tersedia di entitas baru berdasarkan **nama entitas output** prediksi yang Anda buat.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Buat prediksi saat membuat segmen
 
@@ -137,9 +140,9 @@ Langkah berikutnya dari prediksi Anda akan menggunakan model yang telah diperbar
 
 4. Konfirmasikan Penghapusan.
 
-## <a name="troubleshooting"></a>Pemecahan masalah
+## <a name="troubleshooting"></a>Penyelesaian Masalah
 
-Jika Anda tidak dapat menyelesaikan proses lampirkan Dataverse karena kesalahan, Anda dapat mencoba menyelesaikan proses secara manual. Ada dua masalah umum yang dapat terjadi di proses melampirkan:
+Jika Anda tidak dapat menyelesaikan proses Dataverse lampirkan karena kesalahan, Anda dapat mencoba menyelesaikan proses secara manual. Ada dua masalah umum yang dapat terjadi di proses melampirkan:
 
 - Solusi Add-in kartu pelanggan tidak diinstal.
     1. Selesaikan petunjuk untuk [menginstal dan mengkonfigurasi solusi](customer-card-add-in.md).

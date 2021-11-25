@@ -1,7 +1,7 @@
 ---
 title: Gabungkan entitas dalam penyatuan data
 description: Gabungkan entitas untuk membuat profil pelanggan terpadu.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648258"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732776"
 ---
 # <a name="merge-entities"></a>Gabungkan Entitas
 
@@ -24,7 +24,7 @@ Fase gabungkan adalah fase terakhir dalam proses penyatuan data. Tujuannya adala
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Halaman gabungan dalam proses penyatuan data yang menampilkan tabel dengan bidang gabungan yang mendefinisikan profil pelanggan terpadu.":::
 
-Setelah menyelesaikan [fase kecocokan](match-entities.md), Anda memulai fase penggabungan dengan memilih ubin **gabungkan** pada halaman **satukan**.
+Setelah menyelesaikan [fase kecocokan](match-entities.md), Anda memulai fase penggabungan dengan memilih ubin [gabungkan](match-entities.md) pada halaman [satukan](match-entities.md).
 
 ## <a name="review-system-recommendations"></a>Tinjau rekomendasi sistem
 
@@ -187,10 +187,9 @@ Pilih **Jalankan Proses Penggabungan dan hilir** untuk me-refresh sistem dengan 
 
 Untuk membuat perubahan lebih banyak dan menjalankan ulang langkah, Anda dapat membatalkan penggabungan yang sedang berlangsung. Pilih teks **menyegarkan...** dan pilih **Batalkan pekerjaan**  di panel sisi yang muncul.
 
-> [!TIP]
-> Setelah menjalankan proses penggabungan, pilih status proses untuk membuka panel **Detail tugas**. Ini memberikan gambaran umum tentang waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan dan peringatan yang terkait dengan tugas. Pilih **Lihat detail** untuk melihat entitas mana yang berpartisipasi dalam proses pencocokan, apakah resolusi konflik berhasil, dan apakah pembaruan berhasil diterbitkan.  
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Jalur telusuri paling detail untuk mendapatkan detail proses dari link status tugas.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Jalur telusuri paling detail untuk mendapatkan detail proses dari link status tugas.":::
 
 ## <a name="next-step"></a>Langkah Berikutnya
 

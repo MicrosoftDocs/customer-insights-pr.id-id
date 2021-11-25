@@ -4,7 +4,7 @@
   href: overview.md
 - name: uji coba gratis
   items:
-    - name: Daftar untuk uji coba gratis
+    - name: Daftar uji coba gratis
       href: trial-signup.md
     - name: Tanya Jawab Uji Coba
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Tambahkan folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
-        - name: Menambahkan data lake terkelola Dataverse
+        - name: Menambahkan danau data yang dikelola Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Refresh inkremental untuk sumber data
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Alamat yang disempurnakan
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Meningkatkan data perusahaan
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Perkaya dengan Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Perkaya dengan HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Memperkaya dengan Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Perkaya dengan Experian
+        - name: Memperkaya dengan Experian
           href: audience-insights/enrichment-experian.md
         - name: Perkaya dengan impor kustom SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -164,7 +166,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
+            - name: Analisis Azure Synapse
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Meninjau skema entitas dalam Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Data Customer Insights di Dataverse
+        - name: Data Wawasan Pelanggan dalam Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Bekerja dengan API
           href: audience-insights/apis.md
         - name: Referensi API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Manajemen persetujuan (pratinjau)
+  items:
+    - name: Pusat Bantuan
+      href: consent-management/index.yml
+    - name: Ikhtisar kemampuan
+      href: consent-management/overview.md
+    - name: Mulai
+      items:
+        - name: Mulai
+          href: consent-management/get-started.md
+        - name: Konsep dan terminologi
+          href: consent-management/glossary.md
+    - name: Impor data persetujuan
+      items:
+        - name: Impor data persetujuan
+          href: consent-management/import-consent-data.md
+        - name: Mengatur data persetujuan dan menerapkan preferensi persetujuan
+          href: consent-management/set-consent-rules.md
+    - name: Mengelola data persetujuan
+      items:
+        - name: Aktifkan aturan persetujuan dalam wawasan audiens
+          href: audience-insights/activate-consent.md
+        - name: Mengelola aturan persetujuan default di segmen wawasan audiens
+          href: audience-insights/change-default-consent-rules.md
+    - name: Mengelola pengaturan dan pengguna
+      items:
+        - name: Mengonfigurasi setelan sistem
+          href: consent-management/system-settings.md
+        - name: Mengelola pengguna dan izin
+          href: consent-management/manage-users.md
+    - name: Menggunakan data persetujuan
+      items:
+        - name: Membuat prediksi dengan data persetujuan
+          href: consent-management/predictions-consent-data.md
 - name: Wawasan keterlibatan (pratinjau)
   items:
     - name: Pusat Bantuan

@@ -1,7 +1,7 @@
 ---
 title: Segmen di wawasan audiens
 description: Ikhtisar tentang segmen dan cara membuat dan mengelolanya.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 56978c984a91e85e86956e7eac1d59609c349b6a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673837"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732592"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -54,7 +54,7 @@ Tindakan berikut tersedia bila Anda memilih segmen:
 - **Edit** segmen untuk mengubah properti.
 - **Membuat duplikat** segmen. Anda dapat langsung memilih untuk mengedit propertinya atau cukup menyimpan duplikat.
 - **Refresh** segmen untuk menyertakan data terbaru.
-- **Aktifkan** atau **Nonaktifkan** segmen. Segmen memiliki dua kemungkinan status - aktif atau tidak aktif. Status ini berguna saat mengedit segmen. Untuk segmen yang tidak aktif, definisi segmen ada, namun tidak berisi pelanggan. Bila Anda mengaktifkan segmen, status akan berubah dari ' tidak aktif ' menjadi ' aktif ' dan mulai mencari Pelanggan yang cocok dengan definisi segmen. Jika [penyegaran terjadwal](system.md#schedule-tab) dikonfigurasi, segmen yang tidak aktif memiliki **status** yang didaftarkan sebagai **dilewati**, yang menunjukkan bahwa penyegaran bahkan tidak dicoba. Bila segmen aktif diaktifkan, segmen akan diperbarui dan akan disertakan dalam penyegaran terjadwal.
+- **Aktifkan** atau **Nonaktifkan** segmen. Segmen memiliki dua kemungkinan status - aktif atau tidak aktif. Status ini berguna saat mengedit segmen. Untuk segmen yang tidak aktif, definisi segmen ada, namun tidak berisi pelanggan. Bila Anda mengaktifkan segmen, status akan berubah dari ' tidak aktif ' menjadi ' aktif ' dan mulai mencari Pelanggan yang cocok dengan definisi segmen. Jika [penyegaran terjadwal](system.md#schedule-tab) dikonfigurasi, segmen yang tidak aktif memiliki [status](system.md#schedule-tab) yang didaftarkan sebagai [dilewati](system.md#schedule-tab), yang menunjukkan bahwa penyegaran bahkan tidak dicoba. Bila segmen aktif diaktifkan, segmen akan diperbarui dan akan disertakan dalam penyegaran terjadwal.
   Atau, Anda dapat menggunakan fungsi **jadwalkan nanti** dalam menu menurun **Aktifkan/Nonaktifkan** untuk menentukan tanggal dan waktu di masa mendatang untuk pengaktifan dan penonaktifan segmen tertentu.
 - **Ganti nama** segmen.
 - **Unduh** Daftar anggota sebagai File .CSV.
@@ -65,8 +65,7 @@ Tindakan berikut tersedia bila Anda memilih segmen:
 
 Anda dapat menyegarkan semua segmen sekaligus dengan memilih **Segarkan semua** pada halaman **segmen** atau Anda dapat menyegarkan satu atau beberapa segmen saat memilih dan memilih **Segarkan** dari pilihan. Atau, Anda dapat mengkonfigurasi refresh berulang pada **Admin** > **sistem** > **jadwal**.
 
-> [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Ekspor segmen
 
@@ -105,5 +104,6 @@ Bagian bawah berisi daftar anggota segmen.
 > Bidang yang muncul di daftar ini didasarkan pada atribut entitas segmen.
 >
 >Daftar ini adalah pratinjau anggota segmen yang cocok dan menampilkan rekaman 100 pertama segmen Anda sehingga Anda dapat dengan cepat mengevaluasinya dan meninjau definisinya jika diperlukan. Untuk melihat semua rekaman yang cocok, Anda harus [mengekspor segmen](export-destinations.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

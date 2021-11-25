@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola lingkungan
 description: Pelajari cara mendaftar ke layanan dan cara mengelola lingkungan.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673737"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799640"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
@@ -39,6 +39,19 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
 3. Di kotak **Edit lingkungan**, Anda dapat memperbarui pengaturan lingkungan.
 
 Untuk informasi lebih lanjut tentang pengaturan lingkungan, lihat [Membuat lingkungan baru](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Terhubung ke Microsoft Dataverse
+   
+Langkah **Microsoft Dataverse memungkinkan Anda menghubungkan Wawasan Pelanggan dengan lingkungan Dataverse** Anda.
+
+Untuk menggunakan [model prediksi di luar](predictions-overview.md#out-of-box-models) kotak, konfigurasikan berbagi data dengan Dataverse. Atau Anda dapat mengaktifkan konsumsi data dari sumber data lokal, menyediakan URL lingkungan Microsoft Dataverse yang dikelola organisasi Anda. Pilih **Aktifkan berbagi data untuk berbagi data output Customer Insights dengan danau data yang dikelola** Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opsi konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights tidak mendukung skenario berbagi data berikut ini:
+> - Jika Anda menyimpan semua data ke Azure Data Lake Storage Anda sendiri, Anda tidak akan dapat mengaktifkan berbagi data dengan danau data yang dikelola Dataverse.
+> - Jika Anda mengaktifkan berbagi data dengan Dataverse, Anda tidak akan dapat [membuat nilai yang diprediksi atau hilang dalam](predictions.md) entitas.
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi lingkungan
 
@@ -68,7 +81,7 @@ Data berikut ini *tidak* disalin:
 - Profil pelanggan.
 - Kredensial sumber data. Anda harus memberikan kredensial untuk setiap sumber data dan menyegarkan sumber data secara manual.
 
-- Sumber data dari folder Common Data Model dan data lake terkelola Dataverse. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
+- Sumber data dari folder Common Data Model dan data lake yang dikelola Dataverse. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
 
 Bila Anda menyalin lingkungan, Anda akan melihat pesan konfirmasi bahwa lingkungan baru telah dibuat. Pilih **buka sumber data** untuk melihat daftar sumber data.
 

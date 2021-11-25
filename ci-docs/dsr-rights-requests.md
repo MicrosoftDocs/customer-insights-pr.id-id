@@ -1,6 +1,6 @@
 ---
 title: Permintaan hak subjek data (DSR) di bawah GDPR | Microsoft Docs
-description: Merespons permintaan subjek Data untuk kemampuan wawasan audiens Dynamics 365 Customer Insights.
+description: Menanggapi Permintaan Subjek Data untuk kemampuan wawasan Dynamics 365 Customer Insights audiens.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483676"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732684"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan hak subjek data (DSR) di bawah GDPR
 
@@ -24,7 +24,7 @@ Kami berkomitmen untuk membantu pelanggan memenuhi persyaratan GDPR. Ini mencaku
 
 ## <a name="audience-insights"></a>Wawasan audiens
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Merespons permintaan penghapusan subjek GDPR untuk kemampuan wawasan audiens Dynamics 365 Customer Insights
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Menanggapi permintaan penghapusan subjek data GDPR untuk kemampuan wawasan Dynamics 365 Customer Insights audiens
 
 "Hak untuk menghapus" data pribadi dari data pelanggan organisasi adalah perlindungan kunci dalam peraturan perlindungan data umum (GDPR). Menghapus data pribadi mencakup penghapusan semua data pribadi dan log yang dihasilkan sistem, kecuali informasi log audit.
 
@@ -79,7 +79,14 @@ Administrator penyewa dapat mengikuti langkah berikut untuk mengekspor data:
 2. Berikan konfirmasi untuk mengekspor data untuk pengguna yang diminta.
 3. Terima data yang diekspor melalui alamat email admin penyewa.
 
-## <a name="engagement-insights"></a>Wawasan keterlibatan
+## <a name="consent-management-preview"></a>Manajemen persetujuan (pratinjau)
+
+Kemampuan manajemen persetujuan tidak mengumpulkan data pengguna secara langsung. Ini hanya mengimpor dan memproses data persetujuan yang disediakan oleh pengguna di aplikasi lain.
+
+Untuk menghapus data persetujuan tentang pengguna tertentu, hapus di sumber data yang tertelan dengan kemampuan manajemen persetujuan. Setelah menyegarkan sumber data, data yang dihapus akan dihapus di Pusat Persetujuan juga. Aplikasi yang menggunakan entitas persetujuan juga akan menghapus data yang telah dihapus pada sumber setelah [penyegaran](audience-insights/system.md#refresh-processes). Kami merekomendasikan penyegaran sumber data dengan cepat setelah menanggapi permintaan subjek data untuk menghapus data pengguna dari semua proses dan aplikasi lainnya.
+
+
+## <a name="engagement-insights-preview"></a>Wawasan keterlibatan (pratinjau)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Menghapus dan mengekspor data aktivitas yang berisi informasi identitas pengguna akhir
 

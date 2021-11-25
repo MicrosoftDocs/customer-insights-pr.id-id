@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033589"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732268"
 ---
 # <a name="work-with-customer-insights-apis"></a>Bekerja dengan API Customer Insights
 
-Dynamics 365 Customer Insights menyediakan API untuk membangun aplikasi Anda sendiri berdasarkan data Anda dalam Customer Insights.
+Dynamics 365 Customer Insights menyediakan API untuk membangun aplikasi Anda sendiri berdasarkan data Anda di Customer Insights.
 
 > [!IMPORTANT]
 > Rincian API ini, tercantum pada [referensi API customer insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Mereka mencakup informasi tambahan tentang operasi, parameter, dan respons.
@@ -117,17 +117,17 @@ Bagian ini akan membantu Anda memulai menggunakan pustaka klien yang tersedia un
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informasi lebih lanjut tentang paket NuGet, lihat [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Saat ini, paket ini menargetkan kerangka kerja netstandard2.0 dan netcoreapp2.0.
+Pelajari cara memulai menggunakan pustaka klien C # dari NuGet.org. Untuk informasi selengkapnya tentang paket NuGet, lihat [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Saat ini, paket ini menargetkan kerangka kerja netstandard2.0 dan netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Tambahkan pustaka klien C# ke proyek C#
 
-1. Di Visual Studio, buka **manajer paket NuGet** untuk proyek Anda.
+1. Di Visual Studio, buka **NuGet Package Manager** untuk proyek Anda.
 
 1. Cari **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Pilih **Instal** untuk menambahkan paket ke proyek.
  
-   Atau, jalankan perintah ini di **konsol manajer paket NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Atau, jalankan perintah ini di **NuGet Package Manager** Console:`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Tambahkan paket NuGet ke proyek Visual Studio.":::
 
@@ -135,7 +135,7 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
 
 1. Gunakan [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) untuk membuat `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) yang ada.
 
-1. Setelah berhasil mengautentikasi dan memperoleh token, buat baru atau gunakan `HttpClient` yang ada dengan **"otorisasi" defaultrequestheaders** diatur ke **pembawa <access token>** dan **OCP-apim-Subscription-Key** diatur ke [**kunci langganan** dari lingkungan Customer Insights Anda ](#get-started-trying-the-customer-insights-apis).   
+1. Setelah berhasil mengautentikasi dan memperoleh token, bangun yang baru atau gunakan yang sudah ada `HttpClient` dengan **"Otorisasi" DefaultRequestHeaders tambahan yang** diatur ke **Bearer "token akses"** dan **Ocp-Apim-Subscription-Key** yang diatur ke kunci langganan dari lingkungan Wawasan Pelanggan [**·**](#get-started-trying-the-customer-insights-apis) Anda.   
  
    Atur ulang header **otorisasi** bila sesuai. Misalnya, saat token kedaluwarsa.
 

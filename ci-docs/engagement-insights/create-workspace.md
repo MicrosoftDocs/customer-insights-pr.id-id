@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645314"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673447"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Membuat ruang kerja baru dan menambahkan anggota
 
@@ -26,17 +26,17 @@ Saat membuat ruang kerja, Anda dapat memilih jenis data yang akan difokuskan. An
 
 ## <a name="create-a-new-workspace"></a>Buat ruang kerja baru
 
-Proses pembuatan ruang kerja mencakup pengaturan *lingkungan* untuk mengatur ruang kerja Anda. Lingkungan adalah ruang yang dapat berisi satu atau beberapa ruang kerja. Anda dapat menggunakan lingkungan untuk mengelola ruang kerja dan koneksi ke kemampuan wawasan audiens Customer Insights.
+Proses pembuatan ruang kerja mencakup pengaturan *lingkungan* untuk mengatur ruang kerja Anda. Lingkungan adalah ruang yang dapat berisi satu atau beberapa ruang kerja. Anda dapat menggunakan lingkungan untuk mengelola ruang kerja dan koneksi Anda ke kemampuan wawasan audiens.
 
-1. Pilih **Baru** dari pengalih ruang kerja.
+1. Pilih **+Baru** dari pengalih ruang kerja.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Halaman Customer Insights dengan info pada panel navigasi dan deskripsi.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Halaman Wawasan Pelanggan dengan callout di panel navigasi dan deskripsi.":::
 
 1. Di panel **Ruang Kerja**, masukkan **nama Ruang Kerja**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Ketikkan Nama ruang kerja.":::
 
-1. Pilih jenis platform (Web atau Mobile) yang akan diukur.
+1. Pilih jenis platform (web atau seluler) yang ingin Anda ukur.
 
 1. Pilih **Tampilkan pengaturan lanjutan** untuk mengaktifkan atau menonaktifkan pengaturan opsional ini:
 

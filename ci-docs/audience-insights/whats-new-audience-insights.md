@@ -1,7 +1,7 @@
 ---
 title: Fitur baru dan mendatang
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,58 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673844"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753121"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Apa yang baru dalam kemampuan wawasan audiens dari Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [Dynamics 365 dan rencana rilis Power Platform](/dynamics365/release-plans/).
+Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [rencana rilis Dynamics 365 dan Power Platform](/dynamics365/release-plans/).
 
 Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tertentu mungkin melihat fitur sebelum orang lain. Kecuali ditentukan berbeda, Anda tidak perlu melakukan tindakan apa pun dan kami akan memperbarui aplikasi secara otomatis tanpa waktu henti.
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Pembaruan Oktober 2021
+
+Pembaruan pada Oktober 2021 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="b-to-b"></a>B-to-B
+
+Mulai Oktober 2021, Anda dapat bekerja dengan akun bisnis dan kontak terkait mereka di Customer Insights. Sebelumnya, aplikasi ini sebagian besar disesuaikan dengan konsumen individu. Beberapa area fitur diperbarui untuk mendukung skenario B-to-B di atas jenis lingkungan baru. Untuk gambaran umum tentang fitur B-to-B yang didukung, lihat [Bekerja dengan akun bisnis dalam audiens wawasan](work-with-business-accounts.md).
+
+Bagian berikut menyoroti beberapa bidang utama yang disesuaikan untuk mendukung akun bisnis dan konsumen individu.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Segmen ekspor berdasarkan akun bisnis
+
+Semua ekspor segmen dalam wawasan audiens tersedia dalam konteks akun bisnis. Sebagian besar ekspor segmen memerlukan konfigurasi tambahan dan [informasi kontak yang diproyeksikan di segmen yang](segment-builder.md#create-a-new-segment) mendasarinya berlaku untuk akun bisnis. Untuk informasi selengkapnya, lihat [Segmen ekspor](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Menggunakan ekspor Iklan LinkedIn dengan akun bisnis
+
+Ekspor Iklan LinkedIn sekarang tersedia untuk kontak dan penargetan perusahaan dalam konteks akun bisnis. Saat memilih penargetan perusahaan sebagai fokus utama ekspor LinkedIn, Anda dapat mengekspor segmen yang dibangun di akun bisnis tanpa perlu memproyeksikan informasi kontak. Untuk informasi lebih lanjut, buka dokumen tentang [ekspor Iklan LinkedIn](export-linkedin-ads.md) dan perbedaan antara penargetan kontak dan penargetan [...](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)[...](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) perusahaan. 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Membuat langkah-langkah berdasarkan akun bisnis dan hierarkinya
+
+Pembangun ukuran memungkinkan Anda membuat langkah-langkah di sekitar akun bisnis dan secara opsional menggunakan informasi hierarki. Informasi hierarki digunakan untuk menggulung perhitungan ukuran di seluruh akun dan semua sub akun terkaitnya. Misalnya, Anda dapat membuat langkah-langkah seperti total pendapatan untuk setiap kelompok akun bisnis yang diidentifikasi oleh hierarki mereka. Untuk informasi lebih lanjut, lihat [menentukan dan mengelola langkah](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Membuat segmen berdasarkan akun bisnis dan hierarkinya
+
+Pembuat segmen memungkinkan Anda untuk membuat segmen akun bisnis yang secara opsional menyertakan informasi kontak untuk setiap akun dalam suatu segmen. Jika Anda menyiapkan hierarki akun, Anda dapat menggunakan informasi hierarki akun dalam pembuatan segmen. Untuk informasi selengkapnya, lihat [Membuat segmen baru](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Pertahankan akun bisnis Anda dengan wawasan mendalam tentang kecenderungan churn mereka
+
+Model prediksi churn pelanggan sekarang mendukung akun bisnis juga. Anda dapat mengevaluasi risiko churn tidak hanya untuk akun tetapi untuk kombinasi akun dan kategori produk atau layanan yang mereka beli dari Anda. Penambahan ini membantu Anda untuk memahami apakah akun lebih mungkin untuk berhenti membeli dari Anda secara umum atau hanya untuk kategori barang atau jasa tertentu. Untuk lebih membantu Anda menggunakan model AI ini, itu juga mencantumkan alasan mengapa akun cenderung bergejolak. Untuk informasi selengkapnya, lihat [Transaksi churn prediksi](predict-transactional-churn.md) (pratinjau).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Melihat kontak akun bisnis dalam tampilan Pelanggan
+
+Jika akun bisnis dipetakan ke akun terkait, aplikasi Wawasan Pelanggan menunjukkan kontak terkait ini sebagai bagian dari tampilan detail pelanggan. Untuk informasi selengkapnya, lihat [Profil](customer-profiles.md) pelanggan.
+
 
 ## <a name="september-2021-updates"></a>Pembaruan September 2021
 
@@ -78,7 +113,7 @@ Pembaruan pada bulan Mei 2021 mencakup beberapa fitur, peningkatan kinerja, dan 
 
 ### <a name="data-ingestion"></a>Penyerapan data
 
-- **Melihat atau memodifikasi metadata atau definisi entitas saat melampirkan data dari Azure Data Lake Storage** Sekarang Anda dapat melihat dan mengedit metadata atau definisi entitas dalam wawasan audiens saat melampirkan data dari folder Common Data Model di Azure Data Lake Storage Anda. Kemampuan ini memberikan tanggapan real-time, validasi model, dan pemeriksaan kesalahan. Memungkinkan Anda mengedit model.json dan manifest.json dengan lancar.
+- **Menampilkan atau memodifikasi metadata atau definisi entitas saat melampirkan data dari Azure Data Lake Storage** Anda sekarang dapat melihat dan mengedit metadata atau definisi entitas dalam wawasan audiens saat melampirkan data dari folder Model Data Umum di Azure Data Lake Storage Anda. Kemampuan ini memberikan tanggapan real-time, validasi model, dan pemeriksaan kesalahan. Memungkinkan Anda mengedit model.json dan manifest.json dengan lancar.
 
 ### <a name="extensibility"></a>Dapat diperluas
 
@@ -153,7 +188,7 @@ Pembaruan pada bulan Maret 2021 mencakup beberapa fitur, peningkatan kinerja, da
 
 ### <a name="data-ingestion"></a>Penyerapan data
 
-- **Menyambungkan ke sumber data lokal menggunakan aliran data Power Platform dan gateway** Kami dengan senang hati mengumumkan pratinjau aliran data Power Platform dan konektivitas lokal menggunakan gateway di Customer Insights dengan lingkungan Power Platform atau Dataverse terkait. Setiap sumber data baru yang dibuat di lingkungan Customer Insights dengan lingkungan Dataverse tertaut akan default ke aliran data Power Platform yang membawa konektivitas data lokal dan serangkaian konektor dan kemampuan transformasi yang kaya.
+- **Terhubung ke sumber data lokal menggunakan Power Platform aliran data dan gateway** Kami dengan senang hati mengumumkan pratinjau arus data Power Platform dan konektivitas lokal menggunakan gateway di Customer Insights dengan Power Platform atau konektivitas terkait Dataverse lingkungan. Setiap sumber data baru yang dibuat di lingkungan Customer Insights dengan lingkungan Dataverse terkait akan default untuk Power Platform aliran data yang membawa konektivitas data lokal dan serangkaian konektor dan kemampuan transformasi yang kaya.
 
 ### <a name="extensibility"></a>Dapat diperluas
 
@@ -167,7 +202,7 @@ Pembaruan pada bulan Maret 2021 mencakup beberapa fitur, peningkatan kinerja, da
    Untuk informasi lebih lanjut, lihat [Mengekspor ke Constant Contact](export-constant-contact.md).
 
 - **Segmen ekspor ke RollWorks** Kami telah memperluas tujuan ekspor kami untuk menyertakan RollWorks. Anda sekarang dapat mengekspor segmen dari Customer Insights ke audiens RollWork dan menggunakannya sebagai dasar untuk iklan B-to-B Anda.    
-   Untuk informasi lebih lanjut, lihat [Mengekspor ke RollWorks ](export-rollworks.md).
+   Untuk informasi lebih lanjut, lihat [Mengekspor ke RollWorks](export-rollworks.md).
 
 - **Segmen ekspor ke Snapchat** Kami telah memperluas tujuan ekspor kami untuk menyertakan Snapchat. Kini Anda dapat mengekspor segmen dari Customer Insights ke audiens Snapchat dan menggunakannya sebagai dasar untuk periklanan Anda.     
    Untuk informasi lebih lanjut, lihat [Mengekspor ke Snapchat](export-snapchat.md).
@@ -215,7 +250,7 @@ Pembaruan pada Februari 2021 mencakup beberapa fitur, peningkatan kinerja, dan p
 
 - **Salin lingkungan mendukung lebih banyak jenis sumber data**
 
-  Admin dapat menyalin konfigurasi lingkungan ke lingkungan baru di organisasi yang sama. Fitur ini memperluas fungsionalitas salin lingkungan untuk kasus di mana sumber data yang didasarkan pada data lake terkelola Microsoft Dataverse atau folder Common Data Model digunakan.
+  Admin dapat menyalin konfigurasi lingkungan ke lingkungan baru di organisasi yang sama. Fitur ini memperluas fungsi lingkungan salinan untuk kasus-kasus di mana sumber data berdasarkan Microsoft Dataverse danau data yang dikelola atau folder Common Data Model digunakan.
 
 ## <a name="january-2021-updates"></a>Pembaruan Januari 2021
 
@@ -241,7 +276,7 @@ Pembaruan pada Januari 2021 mencakup beberapa fitur, peningkatan kinerja, dan pe
 
 #### <a name="system-administration"></a>Administrasi Sistem
 
-- **Dengan lancar berbagi data ke Microsoft Dataverse** Anda, sekarang Anda dapat berbagi output Customer Insights dengan aplikasi Microsoft Dataverse menggunakan Data Lake terkelola Microsoft Dataverse. Setelah mengaitkan lingkungan Dataverse dengan Customer Insights, Anda mendapatkan pilihan untuk mengaktifkan berbagi data.
+- **Berbagi data dengan lancar ke Microsoft Dataverse** Anda sekarang dapat berbagi output Wawasan Pelanggan dengan aplikasi Microsoft Dataverse menggunakan Microsoft Dataverse Managed Data Lake. Setelah Anda mengaitkan lingkungan Dataverse dengan Wawasan Pelanggan, Anda mendapatkan opsi untuk mengaktifkan berbagi data.
   Untuk informasi lebih lanjut, lihat [Kelola lingkungan](manage-environments.md).
 
 

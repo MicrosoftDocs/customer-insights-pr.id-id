@@ -1,7 +1,7 @@
 ---
 title: Serap data melalui Power Query connector
 description: Konektor untuk sumber data berdasarkan Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643498"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732222"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambungkan ke sumber data Power Query
 
@@ -79,6 +79,8 @@ Konektor dengan tanda centang di kolom **Customer Insights (aliran data)** terse
    > [!div class="mx-imgBorder"]
    > ![Opsi edit.](media/edit-option-data-sources.png "Opsi edit")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Terapkan perubahan dan transformasi anda di **dialog Power Query-Edit kueri** seperti yang dijelaskan di bagian [buat sumber data baru](#create-a-new-data-source).
 
 4. Pilih **simpan** di Power Query setelah menyelesaikan pengeditan untuk menyimpan perubahan.

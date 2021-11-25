@@ -1,7 +1,7 @@
 ---
 title: Tugas bersama untuk skenario prediksi
 description: Pelajari cara mengelola, memecahkan masalah, dan menyempurnakan prediksi.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036469"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731992"
 ---
 # <a name="manage-predictions"></a>Kelola prediksi
 
@@ -50,12 +50,12 @@ Kolom berikut dalam laporan berisi informasi bermanfaat untuk meningkatkan data 
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Contoh laporan kegunaan data input yang memperlihatkan tabel dengan kesalahan, peringatan, dan rekomendasi.":::
 
-- Nama: Nama deskriptif dari kesalahan, peringatan, atau rekomendasi.
-- Langkah: Fase model, latih atau skor, informasi mengacu pada.
-- Status: Tingkat keparahan informasi (kesalahan, peringatan, rekomendasi).
-- Nama kolom: Kolom dalam entitas yang perlu dimodifikasi untuk meningkatkan kinerja model.
-- Nama entitas: Nama entitas yang perlu dimodifikasi untuk meningkatkan kinerja model.
-- Detail: Detail tentang kesalahan, peringatan, atau rekomendasi.
+- **Nama:** Nama deskriptif dari kesalahan, peringatan, atau rekomendasi.
+- **Langkah:** Fase model, kereta api atau skor, informasi mengacu pada.
+- **Negara:** Tingkat keparahan informasi (kesalahan, peringatan, rekomendasi).
+- **Nama kolom:** Kolom dalam entitas yang perlu dimodifikasi untuk meningkatkan kinerja model.
+- **Nama entitas:** Nama entitas yang perlu dimodifikasi untuk meningkatkan kinerja model.
+- **Detail:** Detail tentang kesalahan, peringatan, atau rekomendasi.
 
 ## <a name="refresh-a-prediction"></a>Segarkan prediksi
 
@@ -66,6 +66,8 @@ Prediksi akan secara otomatis diperbarui pada jadwal yang sama [dengan penyegara
 1. Pilih elipsis vertikal di sebelah prediksi yang ingin Anda segarkan.
 
 1. Pilih **Segarkan**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Hapus prediksi
 
