@@ -1,7 +1,7 @@
 ---
 title: Peningkatan data perusahaan
 description: Memperkaya dan menormalkan data perusahaan dengan model Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770174"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813922"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Pengayaan profil perusahaan dengan data perusahaan yang disempurnakan
 
@@ -51,13 +51,14 @@ Ada beberapa batasan dengan data yang disempurnakan. Item dalam daftar di bawah 
 
 1.  Konfirmasikan identitas perusahaan. Kami tidak memverifikasi apakah input adalah organisasi yang ada atau bahwa perusahaan menggunakan output sebagai nama standarnya.
 2.  Secara komprehensif mencakup perusahaan secara global. Data perusahaan Microsoft yang dikompilasi memiliki cakupan global, tetapi menawarkan sebagian besar cakupan di Australia, Kanada, Inggris, dan Amerika Serikat.
-3.  Menjamin akurasi atau kesegaran data. Karena informasi bisnis sering berubah, kami tidak dapat menjamin bahwa data perusahaan yang disempurnakan yang diberikan selalu tepat atau terkini.
+3.  Standar alamat perusahaan secara global. Saat ini kami mendukung standarisasi alamat di negara atau wilayah ini: Australia, Kanada, Prancis, Jerman, Italia, Jepang, Inggris, dan Amerika Serikat.
+4.  Menjamin akurasi atau kesegaran data. Karena informasi bisnis sering berubah, kami tidak dapat menjamin bahwa data perusahaan yang disempurnakan yang diberikan selalu tepat atau terkini.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 
 1. Buka **Data** > **Pengayaan**.
 
-1. Pilih **Memperkaya data saya pada petak data perusahaan yang** **·** disempurnakan.
+1. Pilih **Memperkaya data saya pada petak** **data perusahaan yang**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Ubin pengayaan di pusat pengayaan untuk data perusahaan.":::
 
