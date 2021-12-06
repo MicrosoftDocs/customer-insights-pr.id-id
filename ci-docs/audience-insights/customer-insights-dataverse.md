@@ -1,7 +1,7 @@
 ---
-title: Data Customer Insights di Microsoft Dataverse
-description: Gunakan entitas Customer Insights sebagai tabel di Microsoft Dataverse.
-ms.date: 10/14/2021
+title: Data Wawasan Pelanggan dalam Microsoft Dataverse
+description: Gunakan entitas Wawasan Pelanggan sebagai tabel dalam Microsoft Dataverse.
+ms.date: 11/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645222"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866938"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan Customer Insights di Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan data Customer Insights di Microsoft Dataverse
 
-Customer Insights memberikan pilihan untuk menyediakan entitas output dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Integrasi ini memungkinkan pembagian data yang mudah dan pengembangan kustom melalui kode rendah/tanpa pendekatan kode. Entitas output akan tersedia sebagai tabel dalam Dataverse. Tabel ini mengaktifkan skenario seperti [alur kerja otomatis melalui Power Automate](/power-automate/getting-started), [aplikasi berdasarkan model](/powerapps/maker/model-driven-apps/), dan [aplikasi kanvas](/powerapps/maker/canvas-apps/) melalui Power Apps. Anda dapat menggunakan data untuk aplikasi lain yang didasarkan pada tabel Dataverse. Penerapan saat ini terutama mendukung pencarian dengan data dari entitas wawasan audiens yang tersedia dapat diambil untuk ID pelanggan tertentu.
+Customer Insights menyediakan opsi untuk membuat entitas output tersedia di [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Integrasi ini memungkinkan pembagian data yang mudah dan pengembangan kustom melalui kode rendah/tanpa pendekatan kode. Entitas output akan tersedia sebagai tabel dalam Dataverse. Tabel ini memungkinkan skenario seperti [alur kerja otomatis melalui](/power-automate/getting-started) Power Automate, aplikasi berbasis [model](/powerapps/maker/model-driven-apps/), dan aplikasi [kanvas melalui](/powerapps/maker/canvas-apps/) Power Apps. Anda dapat menggunakan data untuk aplikasi lain yang didasarkan pada tabel Dataverse. Penerapan saat ini terutama mendukung pencarian dengan data dari entitas wawasan audiens yang tersedia dapat diambil untuk ID pelanggan tertentu.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Melampirkan lingkungan Dataverse ke Customer Insights
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Melampirkan lingkungan Dataverse ke Wawasan Pelanggan
 
 **Organisasi dengan lingkungan Dataverse yang ada**
 
-Organisasi yang telah menggunakan Dataverse dapat [menggunakan salah satu lingkungan Dataverse yang ada](create-environment.md) saat administrator menyiapkan audiens wawasan. Dengan menyediakan URL ke lingkungan Dataverse, maka URL tersebut akan dilampirkan ke lingkungan wawasan audiens baru. Untuk memastikan kinerja terbaik, lingkungan Customer Insights dan Dataverse harus di-host di kawasan yang sama.
+Organisasi yang sudah menggunakan Dataverse dapat [menggunakan salah satu lingkungan Dataverse yang ada ketika administrator menyiapkan wawasan](create-environment.md) audiens. Dengan menyediakan URL ke lingkungan Dataverse, itu melekat pada lingkungan wawasan audiens baru mereka. Untuk memastikan kinerja terbaik, Wawasan Pelanggan dan lingkungan Dataverse harus dihosting di wilayah yang sama.
 
 **Organisasi baru**
 
-Jika Anda membuat organisasi baru saat menyiapkan Customer Insights, Anda akan secara otomatis mendapatkan lingkungan baru Dataverse.
+Jika Anda membuat organisasi baru saat menyiapkan Wawasan Pelanggan, Anda akan secara otomatis mendapatkan lingkungan Dataverse baru.
 
 > [!NOTE]
-> Jika organisasi Anda telah menggunakan penyewa Dataverse, maka penting untuk diingat bahwa pembuatan [lingkungan Dataverse dikontrol oleh admin](/power-platform/admin/control-environment-creation.md). Contohnya, jika Anda menyiapkan lingkungan wawasan audiens baru dengan akun organisasional Anda dan admin telah menonaktifkan pembuatan lingkungan uji coba Dataverse untuk semua orang, kecuali admin, Anda tidak dapat membuat lingkungan uji coba baru.
+> Jika organisasi Anda sudah menggunakan Dataverse di penyewa mereka, penting untuk diingat bahwa [pembuatan lingkungan Dataverse dikendalikan oleh](/power-platform/admin/control-environment-creation.md) admin. Misalnya, jika Anda menyiapkan lingkungan wawasan audiens baru dengan akun organisasi Anda dan admin telah menonaktifkan pembuatan lingkungan uji coba Dataverse untuk semua orang kecuali admin, Anda tidak dapat membuat lingkungan uji coba baru.
 > 
-> Lingkungan uji coba Dataverse yang dibuat dalam Customer Insights memiliki penyimpanan sebesar 3 GB yang tidak akan dihitung terhadap kapasitas keseluruhan yang diberikan kepada penyewa. Langganan berbayar mendapatkan penetapan Dataverse 15 GB untuk database dan 20 GB untuk penyimpanan file.
+> Lingkungan uji coba Dataverse yang dibuat dalam Customer Insights memiliki penyimpanan 3 GB yang tidak akan dihitung terhadap kapasitas keseluruhan yang berhak atas penyewa. Langganan berbayar mendapatkan hak Dataverse sebesar 15 GB untuk database dan 20 GB untuk penyimpanan file.
 
 ## <a name="output-entities"></a>Entitas output
 
@@ -45,6 +45,7 @@ Beberapa entitas output dari audiens wawasan tersedia sebagai tabel dalam Datave
 - [CustomerMeasure](#customermeasure)
 - [Pengayaan](#enrichment)
 - [Prediksi](#prediction)
+- [Keanggotaan segmen](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -121,3 +122,16 @@ Tabel ini berisi output prediksi model.
 | Nilai               | String JSON | Daftar atribut yang dihasilkan oleh model |
 | msdynci_predictionid | GUID        | GUID deterministis yang dihasilkan dari msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Keanggotaan segmen
+
+Tabel ini berisi informasi keanggotaan segmen profil pelanggan.
+
+| Column        | Tipe | Deskripsi                        |
+|--------------------|--------------|-----------------------------|
+| ID Pelanggan        | String       | ID Profil pelanggan        |
+| SegmentProvider      | String       | Aplikasi yang menerbitkan segmen. Default: audiens wawasan         |
+| SegmentMembershipType | String       | Jenis pelanggan catatan keanggotaan segmen ini. Mendukung beberapa jenis seperti Pelanggan, Kontak, atau Akun. Default: Pelanggan  |
+| Segmen       | String JSON  | Daftar segmen unik yang profil pelanggan adalah anggota      |
+| msdynci_identifier  | String   | Pengenal unik dari catatan keanggotaan segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID deterministik yang dihasilkan dari`msdynci_identifier`          |

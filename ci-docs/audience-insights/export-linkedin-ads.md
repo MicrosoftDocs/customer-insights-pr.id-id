@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618295"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866892"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Mengekspor segmen ke LinkedIn Ads (pratinjau)
 
@@ -22,12 +22,13 @@ Ekspor segmen profil pelanggan terpadu ke Iklan LinkedIn untuk membuat audiens y
 
 ## <a name="prerequisites"></a>Prasyarat
 
--   Anda memiliki [akun LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) dan kredensial administrator terkait.
+-   Anda memiliki [akun LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) dan kredensial administrator yang sesuai.
 -   Anda telah [mengonfigurasikan segmen](segments.md) di wawasan audiens.
 -   Profil pelanggan di segmen yang diekspor berisi bidang dengan alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Segmen Anda di Customer Insights harus berisi setidaknya 300 profil unik. 
 - Anda dapat mengekspor hingga 100K profil pelanggan per ekspor ke LinkedIn Ads.
 - Mengekspor ke LinkedIn Ads terbatas pada segmen.
 - Mengekspor hingga 100K profil pelanggan ke LinkedIn Ads dapat berlangsung selama 10 menit. 
@@ -42,7 +43,7 @@ Ekspor segmen profil pelanggan terpadu ke Iklan LinkedIn untuk membuat audiens y
 
 1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Berikan [ID Akun LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270) Anda.
+1. Berikan [ID Akun LinkedIn Campaign Manager Anda](https://www.linkedin.com/help/lms/answer/a424270).
 
 1. Pilih **saya setuju** untuk mengonfirmasi **privasi dan kepatuhan data**.
 
@@ -79,6 +80,6 @@ Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 
-Saat Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke LinkedIn Ads, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa LinkedIn Ads memenuhi kewajiban privasi atau keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Saat Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Iklan LinkedIn, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa LinkedIn Ads memenuhi kewajiban privasi atau keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
+Administrator Dynamics 365 Customer Insights Anda dapat menghapus tujuan ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.

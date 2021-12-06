@@ -1,7 +1,7 @@
 ---
 title: Sesuaikan entitas untuk penyatuan data
-description: Cocokkan entitas untuk menggabungkan dataset dan membuat profil pelanggan terpadu.
-ms.date: 11/01/2021
+description: Sesuaikan entitas untuk membuat profil pelanggan terpadu.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732638"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863815"
 ---
 # <a name="match-entities"></a>Pencocokan Entitas
 
@@ -224,17 +224,24 @@ Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kec
 
 ## <a name="specify-custom-match-conditions"></a>Menentukan kondisi kecocokan kustom
 
-Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok dengan rekaman tertentu. Aturan ini dapat diunggah untuk menimpa proses kecocokan standar. Misalnya, jika ada John Doe I dan John Doe II di rekaman kita, sistem mungkin cocok dengan mereka sebagai satu orang. Aturan kecocokan kustom memungkinkan Anda menentukan bahwa profil mereka merujuk ke orang lain. 
+Anda dapat menentukan kondisi yang menimpa logika pertandingan default. Ada empat pilihan yang tersedia: 
+
+|Opsi  |Deskripsi |Contoh  |
+|---------|---------|---------|
+|Selalu cocok     | Mendefinisikan nilai-nilai yang selalu cocok.         |  Selalu cocok *dengan Mike* dan *MikeR*.       |
+|Tidak pernah cocok     | Mendefinisikan nilai-nilai yang tidak pernah cocok.        | Tidak pernah cocok *dengan John* dan *Jonathan*.        |
+|Bypass kustom     | Mendefinisikan nilai-nilai yang harus selalu diabaikan sistem dalam fase pertandingan. |  Abaikan nilai *11111* dan Tidak Dikenal selama *pertandingan*.        |
+|Pemetaan alias    | Mendefinisikan nilai-nilai yang harus dipertimbangkan sistem sebagai nilai yang sama.         | Pertimbangkan *Joe untuk menjadi setara dengan* *Joseph*.        |
 
 1. Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Kecocokan kustom** di bagian **rincian rekaman yang cocok**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Tangkapan layar dari bagian aturan kecocokan dengan kontrol kecocokan kustom disorot.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Tangkapan layar dari bagian aturan kecocokan dengan kontrol kecocokan kustom disorot.":::
 
-1. Jika Anda tidak memiliki rangkaian aturan kecocokan kustom, Anda akan melihat panel **Kecocokan kustom** baru dengan rincian lebih lanjut.
+1. Di **panel** Kustom, buka **tab** Catatan.
 
-1. Pilih **isi template** untuk mendapatkan file template yang dapat menentukan rekaman mana dari entitas mana yang harus selalu cocok atau tidak pernah cocok. Anda harus mengisi secara terpisah rekaman "selalu Cocok" dan rekaman "tidak pernah cocok" dalam dua file berbeda.
+1. Pilih opsi pencocokan kustom dari **dropdown tipe kustom** dan pilih Unduh **templat**. Anda memerlukan template terpisah untuk setiap opsi pertandingan.
 
-1. Template berisi bidang untuk menentukan entitas dan nilai kunci primer entitas yang akan digunakan dalam pencocokan kustom. Misalnya, jika Anda menginginkan kunci utama *12345* dari entitas *Penjualan* agar selalu cocok dengan kunci utama *34567* dari entitas *Kontak*, isi template:
+1. Sebuah file template download. Buka dan isi detailnya. Template berisi bidang untuk menentukan entitas dan nilai kunci primer entitas yang akan digunakan dalam pencocokan kustom. Misalnya, jika Anda menginginkan kunci utama *12345* dari entitas *Penjualan* agar selalu cocok dengan kunci utama *34567* dari entitas *Kontak*, isi template:
     - Entity1: Penjualan
     - Entity1Key: 12345
     - Entity2: Kontak
@@ -244,26 +251,32 @@ Anda dapat menentukan kondisi yang harus selalu cocok atau tidak pernah cocok de
    
    Jika Anda ingin menentukan pencocokan kustom untuk deduplikasi pada entitas, berikan entitas yang sama seperti Entity1 dan Entity2 dan atur nilai kunci utama yang berbeda.
 
-1. Setelah menambahkan semua penimpaan yang ingin Anda terapkan, Simpan file template.
+1. Setelah menambahkan semua overrides, simpan file template.
 
-1. Buka **data** > **sumber data** dan serap file template sebagai entitas baru. Setelah diserap, Anda dapat menggunakannya untuk menentukan konfigurasi kecocokan.
+1. Buka **data** > **sumber data** dan serap file template sebagai entitas baru.
 
-1. Setelah mengupload file dan entitas yang tersedia, pilih opsi **pencocokan kustom** lagi. Anda akan melihat opsi untuk menentukan entitas yang ingin Anda sertakan. Pilih entitas yang diperlukan dari menu dropdown.
+1. Setelah mengupload file dan entitas yang tersedia, pilih opsi **pencocokan kustom** lagi. Anda akan melihat opsi untuk menentukan entitas yang ingin Anda sertakan. Pilih entitas yang diperlukan dari menu dropdown dan pilih **Selesai**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Cuplikan layar dialog untuk memilih menimpa skenario kecocokan kustom.":::
 
-1. Pilih entitas yang akan digunakan untuk **selalu cocok** dan **tidak pernah cocok**, pilih **selesai**.
+1. Menerapkan kecocokan khusus tergantung pada opsi pertandingan yang ingin Anda gunakan. 
+
+   - Untuk **Selalu cocok atau tidak pernah** **cocok**, lanjutkan ke langkah berikutnya.
+   - Untuk **bypass Kustom atau pemetaan** **Alias**, pilih Edit pada aturan pertandingan **yang ada atau buat aturan** baru. Dalam dropdown Normalisasi, pilih **opsi** bypass kustom atau **pemetaan Alias dan pilih Selesai** **·**.
 
 1. Pilih **Simpan** pada halaman **Cocokkan** untuk menerapkan konfigurasi kecocokan kustom.
 
 1. Pilih **Jalankan** pada halaman **Cocokkan** untuk memulai proses pencocokan. Aturan kecocokan tertentu lainnya ditimpa oleh konfigurasi kecocokan kustom.
 
-> [!TIP]
-> Buka **Data** > **Entitas** dan periksa entitas **ConflationMatchPair** untuk mengkonfirmasikan bahwa penimpaan diterapkan.
+### <a name="known-issues"></a>Masalah yang diketahui
+
+- Self-conflation tidak menunjukkan data yang dinormalisasi dalam entitas deduplication. Namun, itu menerapkan normalisasi secara internal selama deduplication. Ini dengan desain untuk semua normalisasi. 
+- Jika pengaturan tipe semantik dihapus dalam **fase Peta ketika aturan pertandingan menggunakan pemetaan Alias atau bypass** Kustom, normalisasi tidak akan diterapkan. Itu hanya terjadi jika Anda menghapus jenis semantik setelah mengkonfigurasi normalisasi dalam aturan pertandingan karena jenis semantik akan tidak diketahui.
+
 
 ## <a name="next-step"></a>Langkah selanjutnya
 
-Setelah menyelesaikan proses pencocokan untuk setidaknya satu pasangan pencocokan, Anda siap menangani kemungkinan kontradiksi dalam data Anda dengan membuka topik [**penggabungan**](merge-entities.md).
+Setelah menyelesaikan proses pertandingan untuk setidaknya satu pasangan pertandingan, lanjutkan ke [**·**](merge-entities.md) langkah Merge.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
