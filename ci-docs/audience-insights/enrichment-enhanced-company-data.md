@@ -1,7 +1,7 @@
 ---
 title: Peningkatan data perusahaan
 description: Memperkaya dan menormalkan data perusahaan dengan model Microsoft.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813922"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927586"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Pengayaan profil perusahaan dengan data perusahaan yang disempurnakan
 
@@ -58,7 +58,7 @@ Ada beberapa batasan dengan data yang disempurnakan. Item dalam daftar di bawah 
 
 1. Buka **Data** > **Pengayaan**.
 
-1. Pilih **Memperkaya data saya pada petak** **data perusahaan yang**.
+1. Pilih **Memperkaya data saya pada petak data perusahaan yang** **disempurnakan**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Ubin pengayaan di pusat pengayaan untuk data perusahaan.":::
 
@@ -83,6 +83,16 @@ Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda jug
 Setelah proses pengayaan selesai, Anda dapat meninjau data profil pelanggan baru yang diperkaya di dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
 
 Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lihat data yang diperkaya**.
+
+### <a name="overview-card"></a>Kartu gambaran umum
+
+Kartu ikhtisar menunjukkan rincian tentang cakupan pengayaan. 
+
+* **Pelanggan diproses dan** diubah: Jumlah profil pelanggan yang berhasil diperkaya.
+
+* **Pelanggan diproses dan tidak** berubah: Jumlah profil pelanggan yang diakui tetapi tidak berubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
+
+* **Pelanggan tidak diproses dan tidak** berubah: Jumlah profil yang tidak diakui. Biasanya untuk input data yang tidak valid atau tidak didukung oleh pengayaan.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 

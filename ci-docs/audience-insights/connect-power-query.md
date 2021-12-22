@@ -1,7 +1,7 @@
 ---
-title: Serap data melalui Power Query connector
+title: Menelan data melalui konektor Power Query (Video)
 description: Konektor untuk sumber data berdasarkan Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732222"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903844"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambungkan ke sumber data Power Query
 
-Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebagian besar konektor ini didukung oleh Dynamics 365 Customer Insights. Menambahkan sumber data berdasarkan Power Query connectors biasanya mengikuti langkah yang diuraikan di bagian berikutnya. Namun, tergantung pada konektor yang Anda gunakan, informasi yang berbeda diperlukan. Untuk informasi lebih lanjut, lihat dokumentasi tentang konektor individual di [Power Query connector](/power-query/connectors/).
+Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebagian besar konektor ini didukung oleh Dynamics 365 Customer Insights. 
+
+Menambahkan sumber data berdasarkan konektor Power Query umumnya mengikuti langkah-langkah yang diuraikan di bagian ini. Namun, tergantung pada konektor yang Anda gunakan, informasi yang berbeda diperlukan. Untuk mempelajari selengkapnya, lihat dokumentasi tentang konektor individual dalam [referensi konektor Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebag
 
 1. Pilih **Tambahkan sumber data**.
 
-1. Pilih metode **impor data** dan pilih **berikutnya**.
+1. Pilih **Microsoft Power Query, lalu pilih** **Berikutnya**.
 
-1. Berikan **nama** untuk sumber data, lalu pilih **berikutnya** untuk membuat sumber data. Panduan nama: 
-   - Diawali dengan huruf.
-   - Gunakan huruf dan angka saja. Spasi atau karakter khusus tidak dibolehkan.
-   - Gunakan antara 3 hingga 64 karakter.
+1. Berikan **nama** untuk sumber data, lalu pilih **berikutnya** untuk membuat sumber data.
 
-1. Pilih salah satu dari [konektor yang tersedia](#available-power-query-data-sources). Untuk contoh ini, kita pilih konektor **teks/CSV**.
+1. Pilih salah satu dari [konektor yang tersedia](#available-power-query-data-sources). Dalam contoh ini, kami memilih **konektor Teks** /CSV.
 
 1. Masukkan rincian yang diperlukan dalam **pengaturan sambungan** untuk konektor yang dipilih dan pilih **berikutnya** untuk melihat pratinjau data.
 
@@ -50,7 +49,7 @@ Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebag
 
 1. Anda dapat menambahkan entitas tambahan ke sumber data dengan memilih **dapatkan data**, dalam dialog **Edit kueri**.
 
-   Transformasi ini sangat dianjurkan:
+   Kami menyarankan Anda untuk menggunakan transformasi berikut:
 
    - Jika Anda menyerap data dari file CSV, baris pertama sering berisi header. Buka **Transformasi tabel** dan pilih **Gunakan header sebagai baris pertama**.
    - Pastikan jenis data diatur dengan benar.
@@ -61,7 +60,7 @@ Power Query menawarkan seperangkat konektor yang luas untuk menyerap data. Sebag
 
 ## <a name="available-power-query-data-sources"></a>Sumber data Power Query yang tersedia
 
-Lihat referensi [Power Query connector](/power-query/connectors/) untuk daftar konektor terkini yang dapat Anda pilih untuk mengimpor data ke Customer Insights. 
+Lihat [referensi konektor Power Query](/power-query/connectors/) untuk daftar konektor yang dapat Anda gunakan untuk mengimpor data ke Wawasan Pelanggan. 
 
 Konektor dengan tanda centang di kolom **Customer Insights (aliran data)** tersedia untuk membuat sumber data baru berdasarkan Power query. Tinjau dokumentasi konektor tertentu untuk mempelajari lebih lanjut tentang prasyarat, batasan, dan rincian lainnya.
 
@@ -70,7 +69,7 @@ Konektor dengan tanda centang di kolom **Customer Insights (aliran data)** terse
 > [!NOTE]
 > Anda mungkin tidak dapat melakukan perubahan pada sumber data yang saat ini sedang digunakan di salah satu proses aplikasi *(segmentasi*, *kecocokan*, atau *penggabungan*, misalnya). 
 >
-> Dengan menggunakan halaman **pengaturan**, Anda dapat melacak progres setiap proses aktif. Setelah proses selesai, Anda dapat kembali ke halaman **sumber data** dan melakukan perubahan.
+> Di **halaman** Pengaturan, Anda dapat melacak kemajuan masing-masing proses aktif. Setelah proses selesai, Anda dapat kembali ke halaman **sumber data** dan melakukan perubahan.
 
 1. Di wawasan audiens, buka **Data** > **Sumber data**.
 

@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770126"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884220"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
@@ -34,7 +34,7 @@ Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 - [Merek](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
-- [Demografi](enrichment-experian.md) Disediakan oleh Experian
+- [Demografi](enrichment-experian.md) yang disediakan oleh Experian
 - [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
 
@@ -46,6 +46,7 @@ Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 - [data lokasi](enrichment-here.md) disediakan oleh HERE Technologies 
 - [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
+- [Data keterlibatan akun](enrichment-office.md) yang disediakan oleh Microsoft
 
 ---
 
@@ -77,7 +78,7 @@ Entitas yang akan diperkaya ditentukan selama konfigurasi pengayaan, yang memung
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
 
-Anda dapat menemukan rincian tentang pemrosesan pengayaan, termasuk statusnya dan kemungkinan masalah saat sedang menyegarkan atau setelah penyegaran selesai. Pahami proses yang terlibat untuk me-refresh pengayaan dan berapa lama waktu yang digunakan untuk menjalankan proses. Status pengayaan didukung untuk Experian, Leadspace, HERE Technologies, SFTP Import, dan Azure Maps.
+Anda dapat menemukan rincian tentang pemrosesan pengayaan, termasuk statusnya dan kemungkinan masalah saat sedang menyegarkan atau setelah penyegaran selesai. Pahami proses yang terlibat untuk me-refresh pengayaan dan berapa lama waktu yang digunakan untuk menjalankan proses. Status pengayaan didukung untuk Experian, Leadspace, HERE Technologies, Impor SFTP, dan Azure Maps.
 
 Untuk melihat status pengayaan
 

@@ -1,7 +1,7 @@
 ---
 title: Mengaktifkan aturan persetujuan untuk segmen
 description: Ikuti langkah-langkah ini untuk menautkan data persetujuan dan aktifkan pemeriksaan persetujuan dalam wawasan audiens. Admin juga dapat menonaktifkan pemeriksaan persetujuan.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790780"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884078"
 ---
 # <a name="activate-consent-rules"></a>Mengaktifkan aturan persetujuan
 
@@ -48,4 +48,7 @@ Untuk berhenti menggunakan data persetujuan dalam wawasan audiens, admin harus m
 
 1. Pilih **tab Persetujuan** (pratinjau).
 
-1. Di **bagian Aktifkan pemeriksaan** persetujuan, atur sakelar ke **·** Mati.
+1. Di **bagian Aktifkan pemeriksaan** persetujuan, atur sakelar ke **Mati**.
+
+> [!TIP]
+> Untuk berhenti menggunakan kemampuan manajemen persetujuan, lihat [Pengaturan sistem di Pusat Persetujuan (pratinjau).](../consent-management/system-settings.md)

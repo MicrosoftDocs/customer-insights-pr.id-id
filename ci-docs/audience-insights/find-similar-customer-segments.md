@@ -1,5 +1,5 @@
 ---
-title: Temukan pelanggan serupa dengan AI
+title: Temukan pelanggan serupa dengan AI (Video)
 description: Temukan segmen pelanggan serupa dengan kecerdasan buatan.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: MT
+ms.openlocfilehash: 7999c4964773c3b5c49537027a2ed67f0ad57ec5
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799686"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903894"
 ---
 # <a name="similar-customers-preview"></a>Pelanggan serupa (pratinjau)
 
@@ -23,7 +23,7 @@ Fitur ini memungkinkan Anda menemukan pelanggan serupa di basis pelanggan menggu
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Menemukan Pelanggan yang serupa* menggunakan sarana otomatis untuk mengevaluasi data dan membuat prediksi berdasarkan data tersebut, sehingga memiliki kemampuan untuk digunakan sebagai metode pembuatan profil, karena istilah tersebut ditentukan oleh peraturan perlindungan data umum ("GDPR"). Penggunaan fitur ini oleh pelanggan untuk memproses data dapat tergantung pada GDPR atau hukum atau peraturan lain. Anda bertanggung jawab untuk memastikan bahwa penggunaan Dynamics 365 Customer Insights, termasuk prediksi, sesuai dengan semua hukum dan peraturan yang berlaku, termasuk undang-undang yang terkait dengan privasi, data pribadi, data biometrik, perlindungan data, dan kerahasiaan komunikasi.
+> *Menemukan Pelanggan yang serupa* menggunakan sarana otomatis untuk mengevaluasi data dan membuat prediksi berdasarkan data tersebut, sehingga memiliki kemampuan untuk digunakan sebagai metode pembuatan profil, karena istilah tersebut ditentukan oleh peraturan perlindungan data umum ("GDPR"). Penggunaan fitur ini oleh pelanggan untuk memproses data dapat tergantung pada GDPR atau hukum atau peraturan lain. Anda bertanggung jawab untuk memastikan bahwa penggunaan Dynamics 365 Customer Insights, termasuk prediksi, mematuhi semua hukum dan peraturan yang berlaku, termasuk hukum yang terkait dengan privasi, data pribadi, data biometrik, perlindungan data, dan kerahasiaan komunikasi.
 
 ## <a name="finding-similar-customers"></a>Menemukan Pelanggan serupa
 

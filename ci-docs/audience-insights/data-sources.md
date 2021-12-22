@@ -1,7 +1,7 @@
 ---
 title: Gunakan sumber data untuk menyerap data
 description: Pelajari cara mengimpor data dari berbagai sumber.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,36 +10,39 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732146"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900363"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Kemampuan wawasan audiens dalam Dynamics 365 Customer Insights terhubung ke data dari serangkaian sumber yang luas. Menghubungkan ke sumber data sering disebut sebagai proses *penyerapan data*. Setelah menyerap data, Anda dapat [menyatukan](data-unification.md), dan melakukan tindakan padanya.
+Kemampuan wawasan audiens di Dynamics 365 Customer Insights terhubung ke data dari sekumpulan sumber yang luas. Menghubungkan ke sumber data sering disebut sebagai proses *penyerapan data*. Setelah menyerap data, Anda dapat [menyatukan](data-unification.md), dan melakukan tindakan padanya.
 
 ## <a name="add-a-data-source"></a>Tambahkan sumber data
 
-Lihat artikel rinci tentang cara menambahkan sumber data, tergantung pada pilihan yang anda pilih.
+Lihat artikel terperinci untuk cara menambahkan sumber data, tergantung pada opsi yang Anda pilih.
 
-Anda dapat menambahkan sumber data dengan tiga cara utama:
+Anda dapat menambahkan sumber data berikut:
 
-- [melalui lusinan Power Query connectors](connect-power-query.md)
-- [Dari folder Common Data Model](connect-common-data-model.md)
-- [Dari danau Microsoft Dataverse Anda sendiri](connect-dataverse-managed-lake.md)
+- [konektor Power Query](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse danau](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Jika Anda menggunakan versi uji coba, bagian metode impor menyertakan **opsi pustaka data Wawasan** Pelanggan. Pilih opsi ini untuk memilih dataset sampel yang tersedia untuk berbagai industri. Untuk informasi lebih lanjut, lihat [Dynamics 365 Customer Insights uji coba](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Menambahkan data dari sumber data lokal
 
-Menelan data dari sumber data lokal dalam wawasan audiens didukung berdasarkan arus data Microsoft Power Platform. Aliran data dapat diaktifkan dalam Wawasan Pelanggan dengan [menyediakan URL lingkungan Microsoft Dataverse saat menyiapkan](create-environment.md) lingkungan.
+Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Microsoft Power Platform. Anda dapat mengaktifkan Dataflows in Customer Insights [dengan menyediakan URL lingkungan saat menyiapkan Microsoft Dataverse](create-environment.md) lingkungan.
 
-Sumber data yang dibuat setelah mengaitkan lingkungan Dataverse dengan Wawasan Pelanggan akan menggunakan [Power Platform aliran data secara](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Menghapus dan membuat ulang sumber data yang ada sebelum lingkungan Dataverse dikaitkan untuk [menggunakan gateway data lokal](/data-integration/gateway/service-gateway-app).
+Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Wawasan Pelanggan menggunakan aliran data secara [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang ada sebelum Dataverse lingkungan dikaitkan menggunakan lokal gateway [data](/data-integration/gateway/service-gateway-app).
 
-Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali dalam Wawasan Pelanggan. Halaman sumber data menunjukkan tautan untuk masuk ke lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengonfigurasi gateway data lokal.
+Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
 
 ## <a name="review-ingested-data"></a>Meninjau data yang diserap
 

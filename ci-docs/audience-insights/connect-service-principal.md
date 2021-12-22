@@ -1,7 +1,7 @@
 ---
 title: Menyambung ke akun Azure Data Lake Storage menggunakan prinsipal layanan
 description: Gunakan prinsipal layanan Azure untuk terhubung ke data lake Anda sendiri.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645176"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900262"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Menyambung ke akun Azure Data Lake Storage menggunakan prinsipal layanan Azure
 
-Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas. Selain masuk aplikasi sebagai pengguna yang memiliki hak istimewa, Azure menawarkan prinsipal layanan. Baca terus untuk mempelajari cara menghubungkan Dynamics 365 Customer Insights dengan akun Azure Data Lake Storage menggunakan prinsipal layanan Azure, bukan kunci akun penyimpanan. 
+Artikel ini membahas cara terhubung Dynamics 365 Customer Insights dengan akun dengan menggunakan prinsip layanan Azure Azure Data Lake Storage alih-alih kunci akun penyimpanan. 
 
-Anda dapat menggunakan prinsipal utama untuk [menambahkan atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md), atau [membuat atau memperbarui lingkungan](create-environment.md).
+Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas. Selain masuk aplikasi sebagai pengguna yang memiliki hak istimewa, Azure menawarkan prinsipal layanan. Anda dapat menggunakan prinsip layanan untuk menambahkan atau mengedit folder Common Data Model dengan aman [sebagai sumber data atau membuat atau memperbarui](connect-common-data-model.md)[lingkungan](create-environment.md).
 
 > [!IMPORTANT]
 > - Akun Data Lake Storage yang akan menggunakan layanan utama harus telah mengaktifkan [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace).
-> - Anda memerlukan izin admin untuk langganan Azure Anda untuk membuat prinsipal layanan.
+> - Anda memerlukan izin admin untuk langganan Azure Anda untuk membuat prinsip layanan.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Membuat prinsipal layanan Azure untuk Customer Insights
 
-Sebelum membuat layanan baru untuk wawasan audiens atau wawasan keterlibatan, pastikan sudah ada di organisasi Anda.
+Sebelum membuat prinsip layanan baru untuk Wawasan Pelanggan, periksa apakah itu sudah ada di organisasi Anda.
 
 ### <a name="look-for-an-existing-service-principal"></a>Mencari prinsipal layanan yang ada
 

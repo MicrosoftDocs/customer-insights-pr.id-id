@@ -1,7 +1,7 @@
 ---
-title: Pengayaan peningkatan alamat
+title: Pengayaan peningkatan alamat (Video)
 description: Perkaya dan normalisasi informasi alamat profil pelanggan dengan model Microsoft.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643400"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927515"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang disempurnakan
 
@@ -101,6 +101,16 @@ Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda jug
 Setelah proses pengayaan selesai, Anda dapat meninjau data profil pelanggan baru yang diperkaya di dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
 
 Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lihat data yang diperkaya**.
+
+### <a name="overview-card"></a>Kartu gambaran umum
+
+Kartu ikhtisar menunjukkan rincian tentang cakupan pengayaan. 
+
+* **Pelanggan diproses dan** diubah: Jumlah profil pelanggan yang berhasil diperkaya.
+
+* **Pelanggan diproses dan tidak** berubah: Jumlah profil pelanggan yang diakui tetapi tidak berubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
+
+* **Pelanggan tidak diproses dan tidak** berubah: Jumlah profil yang tidak diakui. Biasanya untuk input data yang tidak valid atau tidak didukung oleh pengayaan.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 

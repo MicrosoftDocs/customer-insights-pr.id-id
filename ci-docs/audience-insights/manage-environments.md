@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola lingkungan
 description: Pelajari cara mendaftar ke layanan dan cara mengelola lingkungan.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799640"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892388"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
@@ -40,18 +40,21 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
 
 Untuk informasi lebih lanjut tentang pengaturan lingkungan, lihat [Membuat lingkungan baru](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Terhubung ke Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Sambungkan ke Microsoft Dataverse
    
-Langkah **Microsoft Dataverse memungkinkan Anda menghubungkan Wawasan Pelanggan dengan lingkungan Dataverse** Anda.
+Langkah **Microsoft Dataverse** memungkinkan Anda menghubungkan Customer Insights dengan lingkungan Dataverse Anda.
 
-Untuk menggunakan [model prediksi di luar](predictions-overview.md#out-of-box-models) kotak, konfigurasikan berbagi data dengan Dataverse. Atau Anda dapat mengaktifkan konsumsi data dari sumber data lokal, menyediakan URL lingkungan Microsoft Dataverse yang dikelola organisasi Anda. Pilih **Aktifkan berbagi data untuk berbagi data output Customer Insights dengan danau data yang dikelola** Dataverse.
+Untuk [menggunakan model prediksi siap pakai](predictions-overview.md#out-of-box-models), konfigurasikan berbagi data dengan Dataverse. Atau Anda dapat mengaktifkan penyerapan data dari sumber data lokal, yang memberikan URL lingkungan Microsoft Dataverse yang dikelola organisasi Anda. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Dataverse.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opsi konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Wawasan Pelanggan dan Dataverse harus berada di wilayah yang sama untuk mengaktifkan berbagi data.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights tidak mendukung skenario berbagi data berikut ini:
-> - Jika Anda menyimpan semua data ke Azure Data Lake Storage Anda sendiri, Anda tidak akan dapat mengaktifkan berbagi data dengan danau data yang dikelola Dataverse.
-> - Jika Anda mengaktifkan berbagi data dengan Dataverse, Anda tidak akan dapat [membuat nilai yang diprediksi atau hilang dalam](predictions.md) entitas.
+> - Jika Anda menyimpan semua data ke Azure Data Lake Storage Anda sendiri, Anda tidak akan dapat mengaktifkan berbagi data dengan Data Lake Terkelola Dataverse.
+> - Jika Anda mengaktifkan berbagi data dengan Dataverse, Anda tidak akan dapat [membuat nilai yang terduga atau tidak ada dalam entitas](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi lingkungan
 
@@ -81,7 +84,7 @@ Data berikut ini *tidak* disalin:
 - Profil pelanggan.
 - Kredensial sumber data. Anda harus memberikan kredensial untuk setiap sumber data dan menyegarkan sumber data secara manual.
 
-- Sumber data dari folder Common Data Model dan data lake yang dikelola Dataverse. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
+- Sumber data dari folder Common Data Model dan data lake terkelola Dataverse. Anda harus membuat sumber data secara manual dengan nama yang sama seperti di lingkungan sumber.
 
 Bila Anda menyalin lingkungan, Anda akan melihat pesan konfirmasi bahwa lingkungan baru telah dibuat. Pilih **buka sumber data** untuk melihat daftar sumber data.
 

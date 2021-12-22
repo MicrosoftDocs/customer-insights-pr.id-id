@@ -1,5 +1,5 @@
 ---
-title: Ekspor data Customer Insights ke host SFTP
+title: Mengekspor data Wawasan Pelanggan ke host SFTP (Video)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke lokasi SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673920"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927561"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Mengekspor segmen dan data lainnya ke SFTP (pratinjau)
 
@@ -28,6 +28,7 @@ Gunakan data pelanggan Anda dalam aplikasi pihak ketiga dengan mengekspornya ke 
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tujuan SFTP di belakang firewall saat ini tidak didukung. 
 - Runtime ekspor tergantung pada kinerja sistem Anda. Sebaiknya dua inti CPU dan memori 1 Gb sebagai konfigurasi minimal server Anda. 
 - Mengekspor entitas dengan hingga 100 juta profil pelanggan dapat berlangsung selama 90 menit bila menggunakan konfigurasi minimal yang disarankan untuk dua inti CPU dan 1 Gb memori. 
 

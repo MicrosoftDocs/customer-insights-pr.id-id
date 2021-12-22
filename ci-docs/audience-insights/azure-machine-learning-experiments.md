@@ -1,7 +1,7 @@
 ---
 title: Eksperimen Pembelajaran Mesin Azure
 description: Gunakan model berbasis pembelajaran mesin Azure di Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033176"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881742"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berbasis pembelajaran mesin Azure
 
-Data terpadu di Dynamics 365 Customer Insights adalah sumber untuk membangun model Pembelajaran Mesin yang dapat menghasilkan wawasan bisnis tambahan. Customer Insights berintegrasi dengan Studio Pembelajaran Mesin (klasik) dan Pembelajaran Mesin Azure untuk menggunakan model kustom Anda sendiri. Lihat [eksperimen studio Pembelajaran Mesin (klasik)](machine-learning-studio-experiments.md) untuk contoh eksperimen yang dibuat di studio Pembelajaran Mesin (klasik). 
+Data terpadu di Dynamics 365 Customer Insights adalah sumber untuk membangun model Pembelajaran Mesin yang dapat menghasilkan wawasan bisnis tambahan. Customer Insights berintegrasi dengan Pembelajaran Mesin Azure untuk menggunakan model kustom Anda sendiri.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -35,7 +35,7 @@ Data terpadu di Dynamics 365 Customer Insights adalah sumber untuk membangun mod
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Bekerja dengan desainer Pembelajaran Mesin Azure
 
-Desainer Pembelajaran Mesin Azure menyediakan kanvas visual untuk menyeret dan menjatuhkan kumpulan data dan modul, mirip dengan Studio Pembelajaran Mesin (klasik). Alur kerja batch yang dibuat dari desainer dapat diintegrasikan ke dalam Customer Insights jika dikonfigurasi dengan sesuai. 
+Desainer Azure Pembelajaran Mesin menyediakan kanvas visual di mana Anda dapat menyeret dan menjatuhkan dataset dan modul. Alur kerja batch yang dibuat dari desainer dapat diintegrasikan ke dalam Customer Insights jika dikonfigurasi dengan sesuai. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Bekerja dengan SDK Pembelajaran Mesin Azure
 

@@ -1,7 +1,7 @@
 ---
 title: Menyambungkan tabel di Microsoft Dataverse
 description: Impor data dari Data Lake terkelola Microsoft Dataverse.
-ms.date: 07/23/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,22 +9,25 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: ffeccffd0e353cb5490b537552d585c184ad672f9c806e673bd04743214ad068
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033084"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900155"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Menyambung ke data di Data Lake yang dikelola oleh Microsoft Dataverse
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Artikel ini menyediakan informasi tentang bagaimana pengguna Dataverse dapat dengan cepat terhubung ke entitas analitik mereka di danau terkelola Dataverse. Anda harus menjadi admin pada organisasi Dataverse untuk melanjutkan dan melihat daftar entitas yang tersedia di Danau terkelola.
+Artikel ini memberikan informasi tentang bagaimana Dataverse pengguna dapat dengan cepat terhubung ke entitas analitis di danau yang Microsoft Dataverse dikelola. 
+
+> [!NOTE]
+> Anda harus menjadi admin di Dataverse organisasi untuk melanjutkan dan melihat daftar entitas yang tersedia di danau terkelola.
 
 ## <a name="important-considerations"></a>Pertimbangan penting
 
-Data yang tersimpan di layanan online, misalnya Azure Data Lake Storage, dapat disimpan di lokasi yang berbeda dengan data yang diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menyambung ke data yang tersimpan di layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari lebih lanjut di pusat kepercayaan Microsoft.](https://www.microsoft.com/trust-center)
+Data yang tersimpan di layanan online, misalnya Azure Data Lake Storage, dapat disimpan di lokasi yang berbeda dengan data yang diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights .  [Pelajari selengkapnya di Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Terhubung ke danau yang dikelola Dataverse
 
@@ -32,12 +35,9 @@ Data yang tersimpan di layanan online, misalnya Azure Data Lake Storage, dapat d
 
 2. Pilih **Tambahkan sumber data**.
 
-3. Pilih **Sambungkan ke danau terkelola Microsoft Dataverse** dan pilih **Berikutnya**.
+3. Pilih **Microsoft Dataverse** dan pilih **Berikutnya**.
 
-4. Masukkan **nama** untuk sumber data, lalu pilih **Berikutnya**. Panduan nama: 
-   - Diawali dengan huruf.
-   - Gunakan huruf dan angka saja. Spasi atau karakter khusus tidak dibolehkan.
-   - Gunakan antara 3 hingga 64 karakter.
+4. Masukkan **nama** untuk sumber data, lalu pilih **Berikutnya**. 
 
 5. Sediakan **alamat Server** untuk organisasi Dataverse, dan pilih **masuk**.
 
