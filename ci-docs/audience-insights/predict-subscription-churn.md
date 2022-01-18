@@ -1,5 +1,5 @@
 ---
-title: Prediksi churn langganan (Video)
+title: Prediksi churn langganan (berisi video)
 description: Memprediksi apakah pelanggan kemungkinan besar tidak lagi menggunakan produk atau layanan langganan perusahaan Anda.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903993"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967705"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Prediksi kehilangan langganan (pratinjau)
 
@@ -77,7 +77,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 1. Masukkan jumlah **hari sejak langganan berakhir** sehingga bisnis Anda mempertimbangkan pelanggan untuk berada dalam status bergejolak. Periode ini biasanya disukai untuk aktivitas bisnis seperti Penawaran atau upaya pemasaran lainnya yang mencoba mencegah hilangnya pelanggan.
 1. Masukkan jumlah **hari untuk menyelidiki masa depan untuk memprediksi kehilangan pelanggan** untuk mengatur periode untuk memprediksi kehilangan pelanggan. Contohnya, untuk memprediksi risiko kehilangan pelanggan untuk pelanggan Anda selama 90 hari berikutnya untuk menyelaraskan upaya retensi Marketing Anda. Memprediksi risiko kehilangan untuk jangka waktu yang lebih lama atau lebih singkat dapat membuatnya lebih sulit untuk mengatasi faktor-faktor dalam profil risiko kehilangan Anda, tergantung pada persyaratan bisnis spesifik Anda. Untuk melanjutkan, klik **Berikutnya**
    >[!TIP]
-   > Anda dapat memilih **Simpan dan tutup** Kapan pun untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi dalam tab **prediksi saya** untuk melanjutkan.
+   > Anda dapat memilih **Simpan draf** kapan saja untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi dalam tab **prediksi saya** untuk melanjutkan.
 
 ### <a name="add-required-data"></a>Tambahkan data yang diperlukan
 

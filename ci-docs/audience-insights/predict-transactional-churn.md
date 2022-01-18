@@ -1,7 +1,7 @@
 ---
-title: Transaksi churn prediksi (Video)
+title: Transaksi churn prediksi (berisi video)
 description: Prediksi apakah pelanggan berisiko tidak lagi membeli atau layanan Anda.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904076"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967751"
 ---
 # <a name="transaction-churn-prediction-preview"></a>prediksi kehilangan transaksi (Pratinjau)
 
@@ -103,10 +103,10 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
 
 1. Pilih petak **model kehilangan pelanggan (pratinjau)** dan pilih **gunakan model ini**.
 
-1. Pada panel **Model kehilangan pelanggan**, pilih **Transaksi**, lalu pilih **Mulai**.
+1. Di **panel model churn Pelanggan (pratinjau),** pilih Transaksi dan **pilih** **Mulai**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Tangkapan layar dengan pilihan transaksi yang dipilih dalam panel model kehilangan pelanggan.":::
-
+ 
 ### <a name="name-model"></a>Beri nama model
 
 1. Berikan nama model untuk membedakannya dari model lain.
@@ -117,11 +117,11 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
 
 ### <a name="define-customer-churn"></a>Tentukan kehilangan pelanggan
 
-1. Atur periode hari untuk memprediksi kehilangan pelanggan untuk **mengidentifikasi Pelanggan yang mungkin hilang** di bidang berikutnya. Misalnya, memprediksi risiko kehilangan pelanggan untuk pelanggan Anda selama 90 hari berikutnya untuk menyelaraskan upaya retensi pemasaran Anda. Memprediksi risiko kehilangan pelanggan selama periode waktu yang lebih lama atau lebih singkat dapat membuatnya lebih sulit untuk mengatasi faktor dalam profil risiko kehilangan pelanggan Anda, namun tergantung pada kebutuhan bisnis Anda yang spesifik.
+1. Atur **jendela prediksi**. Misalnya, memprediksi risiko kehilangan pelanggan untuk pelanggan Anda selama 90 hari berikutnya untuk menyelaraskan upaya retensi pemasaran Anda. Memprediksi risiko kehilangan pelanggan selama periode waktu yang lebih lama atau lebih singkat dapat membuatnya lebih sulit untuk mengatasi faktor dalam profil risiko kehilangan pelanggan Anda, namun tergantung pada kebutuhan bisnis Anda yang spesifik.
    >[!TIP]
-   > Anda dapat memilih **Simpan dan tutup** Kapan pun untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi dalam tab **prediksi saya** untuk melanjutkan.
+   > Anda dapat memilih **Simpan draf** kapan saja untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi dalam tab **prediksi saya** untuk melanjutkan.
 
-1. Masukkan jumlah hari untuk menentukan kehilangan pelanggan di bidang **pelanggan telah pergi jika mereka tidak melakukan pembelian dalam**:. Contohnya, jika pelanggan tidak melakukan pembelian dalam 30 hari terakhir, maka pelanggan dapat dianggap pergi dari bisnis Anda. 
+1. Masukkan jumlah hari untuk menentukan churn di **bidang definisi** Churn. Contohnya, jika pelanggan tidak melakukan pembelian dalam 30 hari terakhir, maka pelanggan dapat dianggap pergi dari bisnis Anda. 
 
 1. Untuk melanjutkan, klik **Berikutnya**.
 
@@ -129,19 +129,16 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
 
 1. Pilih **Tambah data** dan pilih jenis aktivitas pada panel sisi yang berisi informasi transaksi atau riwayat pembelian yang diperlukan.
 
-1. Dalam **Pilih aktivitas**, pilih aktivitas tertentu dari aktivitas yang dipilih yang akan difokuskan perhitungannya.
+1. Di bawah **Pilih** aktivitas, pilih aktivitas tertentu dari tipe aktivitas yang dipilih yang ingin anda fokuskan.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel sisi yang menunjukkan pemilihan aktivitas tertentu dalam jenis semantik.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Panel sisi yang menunjukkan pemilihan aktivitas tertentu dalam jenis semantik.":::
 
-1. Jika Anda belum memetakan aktivitas ke jenis semantis, pilih **Edit** untuk melakukannya. Pengalaman terpandu untuk memetakan aktivitas semantis akan terbuka. Petakan data Anda ke bidang terkait di jenis aktivitas yang dipilih.
+   Jika Anda belum memetakan aktivitas ke jenis semantis, pilih **Edit** untuk melakukannya. Pengalaman terpandu untuk memetakan aktivitas semantis akan terbuka. Petakan data Anda ke bidang terkait di jenis aktivitas yang dipilih.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Jenis aktivitas pengaturan halaman.":::
+1. Petakan atribut semantis ke bidang yang diperlukan untuk menjalankan model. Jika bidang di bawah ini tidak terisi, konfigurasikan relasi dari entitas Riwayat Pembelian Anda ke entitas *pelanggan*. Pilih **Simpan**.
 
-1. Setelah memetakan aktivitas ke jenis semantik yang sesuai, pilih **Berikutnya** untuk melanjutkan
+1. Dalam **langkah Tambahkan data yang** diperlukan, pilih **Berikutnya untuk melanjutkan jika Anda tidak ingin menambahkan lebih banyak** aktivitas.
 
-1. Petakan atribut semantis ke bidang yang diperlukan untuk menjalankan model. Jika bidang di bawah ini tidak terisi, konfigurasikan relasi dari entitas Riwayat Pembelian Anda ke entitas *pelanggan*.
-
-1. Pilih **Selanjutnya**.
 
 # <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 

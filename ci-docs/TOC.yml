@@ -44,7 +44,7 @@
       items:
         - name: Ikhtisar sumber data
           href: audience-insights/data-sources.md
-        - name: Tambahkan sumber data melalui Power Query connectors
+        - name: Menambahkan sumber data melalui Power Query konektor
           href: audience-insights/connect-power-query.md
         - name: Tambahkan folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
@@ -80,7 +80,7 @@
       items:
         - name: Perkaya profil pelanggan
           href: audience-insights/enrichment-hub.md
-        - name: Afinitas minat dan merek
+        - name: Merek dan minat
           href: audience-insights/enrichment-microsoft.md
         - name: Alamat yang disempurnakan
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Memprediksi kehilangan transaksi
               href: audience-insights/predict-transactional-churn.md
+            - name: Menganalisis sentimen dalam umpan balik pelanggan
+              href: audience-insights/sentiment-analysis.md
             - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
               href: audience-insights/custom-models.md
             - name: Lengkapi data yang hilang sebagian

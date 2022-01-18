@@ -1,26 +1,27 @@
 ---
-title: Mulai dengan SDK Android
-description: Pelajari cara mempersonalisasi dan menjalankan SDK Android
+title: Memulai SDK Android
+description: Pelajari cara mempersonalkan dan menjalankan SDK Android
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
-ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
+ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7655346"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977579"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Mulai dengan SDK Android
+# <a name="get-started-with-the-android-sdk"></a>Memulai SDK Android
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Tutorial ini memandu Anda melalui proses instrumenting aplikasi Android Anda dengan SDK wawasan keterlibatan Dynamics 365 Customer Insights. Anda akan mulai melihat aktivitas di portal dalam lima menit atau lebih cepat.
+Tutorial ini akan memandu Anda melalui proses penyiapan instrumen aplikasi Android dengan SDK wawasan keterlibatan Dynamics 365 Customer Insights. Anda akan mulai melihat aktivitas di portal dalam lima menit atau lebih cepat.
 
 ## <a name="configuration-options"></a>Pilihan Konfigurasi
 Pilihan konfigurasi berikut dapat dilewatkan ke SDK:
@@ -31,12 +32,12 @@ Pilihan konfigurasi berikut dapat dilewatkan ke SDK:
 
 - Android Studio
 
-- Level API Android Minimum: 16 (Jelly Bean)
+- Tingkat API Android Minimum: 16 (Jelly Bean)
 
 - Tombol penyerapan (lihat di bawah ini untuk petunjuk cara mendapatkan)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Mengintegrasikan SDK ke aplikasi Anda
-Mulailah proses dengan memilih ruang kerja, memilih platform seluler Android, dan mengunduh SDK Android.
+Mulai proses dengan memilih ruang kerja, memilih platform seluler Android, dan mengunduh SDK Android.
 
 - Gunakan switcher ruang kerja di panel navigasi kiri untuk memilih ruang kerja Anda.
 
@@ -46,7 +47,7 @@ Mulailah proses dengan memilih ruang kerja, memilih platform seluler Android, da
 
 ## <a name="configure-the-sdk"></a>Mengonfigurasi SDK
 
-Setelah mengunduh SDK, Anda dapat bekerja dengannya dalam Android Studio untuk mengaktifkan dan menentukan peristiwa. Ada dua cara untuk melakukannya:
+Setelah mengunduh SDK, Anda dapat menggunakannya di Android Studio untuk mengaktifkan dan mendefinisikan aktivitas. Ada dua cara untuk melakukannya:
 ### <a name="option-1-use-jitpack-recommended"></a>Opsi 1: Gunakan JitPack (disarankan)
 1. Tambahkan penyimpanan JitPack ke root `build.gradle` Anda:
     ```gradle
@@ -67,7 +68,7 @@ Setelah mengunduh SDK, Anda dapat bekerja dengannya dalam Android Studio untuk m
     ```
 
 ### <a name="option-2-use-download-link"></a>Opsi 2: Gunakan tautan unduhan
-1. Unduh [wawasan keterlibatan Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan tempatkan file di `eiandroidsdk-debug.aar``libs` folder.
+1. Unduh [SDK Android wawasan keterlibatan](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan letakkan file `eiandroidsdk-debug.aar` dalam folder `libs`.
 
 1. Buka file `build.gradle` tingkat proyek Anda, lalu tambahkan cuplikan berikut:
     ```gradle

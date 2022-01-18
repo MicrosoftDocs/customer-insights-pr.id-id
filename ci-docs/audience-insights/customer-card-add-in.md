@@ -1,7 +1,7 @@
 ---
-title: Add-in Kartu Pelanggan untuk aplikasi Dynamics 365 (Video)
+title: Add-in Kartu Pelanggan untuk aplikasi Dynamics 365 (berisi video)
 description: Tampilkan data wawasan audiens di aplikasi Dynamics 365 dengan add-in ini.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921869"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945431"
 ---
 # <a name="customer-card-add-in-preview"></a>Add-in Kartu Pelanggan (pratinjau)
 
@@ -27,12 +27,12 @@ Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamic
 ## <a name="prerequisites"></a>Prasyarat
 
 - Add-in hanya berfungsi dengan aplikasi yang diarahkan model Dynamics 365, seperti Sales, atau Customer Service, versi 9.0 dan versi yang lebih baru.
-- Agar data Dynamics 365 Anda dapat memetakan ke profil pelanggan wawasan audiens, mereka perlu [diserap dari aplikasi Dynamics 365 menggunakan konektor Microsoft Dataverse](connect-power-query.md).
+- Agar data Dynamics 365 Anda memetakan ke audiens wawasan profil pelanggan, kami sarankan data tersebut [tertelan dari aplikasi Dynamics 365 menggunakan Microsoft Dataverse konektor](connect-power-query.md). Jika Anda menggunakan metode yang berbeda untuk menelan kontak Dynamics 365 (atau akun), Anda perlu memastikan `contactid` bidang `accountid` (atau) ditetapkan sebagai kunci utama untuk sumber data dalam langkah peta proses penyatuan [data](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Semua pengguna Add-in Kartu Pelanggan Dynamics 365 harus [ditambahkan sebagai pengguna](permissions.md) dalam wawasan audiens untuk melihat data.
 - [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md) di audiens wawasan diperlukan agar pencarian data dapat bekerja.
 - Setiap kontrol add-in mengandalkan data tertentu dalam wawasan audiens. Beberapa data dan kontrol hanya tersedia di lingkungan dengan jenis tertentu. Konfigurasi add-in akan menginformasikan Anda jika kontrol tidak tersedia karena jenis lingkungan yang dipilih. Selengkapnya tentang [kasus penggunaan lingkungan](work-with-business-accounts.md).
   - **Kontrol ukuran**: Memerlukan [ukuran terkonfigurasi](measures.md) jenis atribut pelanggan.
-  - **Kontrol** intelijen: Membutuhkan data yang dihasilkan menggunakan [prediksi atau model kustom](predictions-overview.md).
+  - **Kontrol** intelijen: Membutuhkan data yang dihasilkan menggunakan [prediksi atau model](predictions-overview.md) kustom.
   - **Kontrol rincian pelanggan**: Semua bidang dari profil tersedia di profil pelanggan terpadu.
   - **Kontrol pengayaan**: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan. Add-in kartu mendukung pengayaan ini: [Merek yang disediakan oleh](enrichment-microsoft.md) Microsoft, Minat yang disediakan oleh [Microsoft](enrichment-microsoft.md), dan data keterlibatan Office yang [disediakan oleh](enrichment-office.md) Microsoft.
   - **Kontrol kontak**: Memerlukan definisi entitas semantis dari kontak jenis.
