@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: id-ID
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380747"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Skema entitas dalam Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) adalah spesifikasi deklaratif, dan definisi entitas stAndar yang menunjukkan konsep, dan aktivitas yang sering digunakan di seluruh aplikasi bisnis dan produktivitas. Model ini diperluas ke data pengamatan dan analitik juga. Common Data Model menyediakan entitas bisnis yang terdefinisi, modular, dan Terluaskan seperti akun, unit bisnis, kasus, kontak, prospek, peluang, dan produk, serta interaksi dengan vendor, pekerja, dan pelanggan, seperti aktivitas dan perjanjian tingkat layanan. Siapa pun dapat membangun dan memperluas definisi Common Data Model untuk mendapatkan ide khusus bisnis tambahan.
 

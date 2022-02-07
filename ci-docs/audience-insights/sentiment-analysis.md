@@ -1,5 +1,5 @@
 ---
-title: Analisis semantik untuk umpan balik pelanggan
+title: Analisis sentimen untuk umpan balik pelanggan
 description: Pelajari cara menggunakan model analisis sentimen pada umpan balik pelanggan di Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: MT
-ms.contentlocale: id-ID
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951110"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Menganalisis sentimen dalam umpan balik pelanggan (Pratinjau)
 
 Pelanggan mengharapkan produk, layanan, dan pengalaman berkualitas tinggi akhir-akhir ini. Terutama pelanggan yang berbagi feedback. Sangat menantang bagi organisasi untuk menganalisis peningkatan volume data tanpa menurunkan akurasi dan biaya tenaga kerja yang lebih tinggi. Dynamics 365 Customer Insights Menawarkan model analisis sentimen untuk umpan balik pelanggan yang memungkinkan organisasi untuk menganalisis data mereka dengan lebih akurat dan dengan biaya lebih rendah.
@@ -36,9 +31,9 @@ Informasi ini dapat membantu Anda mencapai hasil berikut:
 
 Untuk memastikan bahwa Anda dapat mempercayai hasil model, kami memberikan informasi transparan tentang bagaimana model membuat keputusan. Anda akan mendapatkan daftar kata-kata yang mempengaruhi keputusan model untuk menetapkan skor sentimen tertentu atau aspek bisnis untuk komentar umpan balik.  
 
-Kami menggunakan dua **model Natural Language Processing (NLP):** Yang pertama memberikan setiap komentar umpan balik skor sentimen. Model kedua mengaitkan setiap umpan balik dengan semua aspek bisnis yang berlaku. Model-model tersebut dilatih pada data publik dari sumber di media sosial, ritel, restoran, produk konsumen, dan industri otomotif.    
+Kami menggunakan dua **model** Natural Language Processing (NLP): Yang pertama memberikan setiap komentar umpan balik skor sentimen. Model kedua mengaitkan setiap umpan balik dengan semua aspek bisnis yang berlaku. Model-model tersebut dilatih pada data publik dari sumber di media sosial, ritel, restoran, produk konsumen, dan industri otomotif.    
   
-- Aspek bisnis yang telah ditentukan sebelumnya untuk model yang harus dikaitkan dengan data umpan balik meliputi:
+Aspek bisnis yang telah ditentukan sebelumnya untuk model yang harus dikaitkan dengan data umpan balik meliputi:
 -   Manajemen akun
 -   Selesai dan pembayaran
 -   Dukungan pelanggan
@@ -58,16 +53,16 @@ Kami menggunakan dua **model Natural Language Processing (NLP):** Yang pertama m
 
 ## <a name="prerequisites"></a>Prasyarat
 
-Analisis sentimen didasarkan pada data umpan balik teks yang telah melalui [proses penyatuan data](data-unification.md). Kami sangat menyarankan Anda [mengkonfigurasi entitas data umpan balik Anda sebagai entitas aktivitas tipe semantik](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (tipe Umpan Balik) sebelumnya. 
+Analisis sentimen didasarkan pada data umpan balik teks yang telah melalui proses [penyatuan data](data-unification.md). Kami sangat menyarankan Anda [mengkonfigurasi entitas data umpan balik Anda sebagai entitas](map-entities.md#select-primary-key-and-semantic-type-for-attributes) aktivitas tipe semantik (tipe Umpan Balik) sebelumnya. 
 
-Untuk mengonfigurasi model analisis sentimen, Anda memerlukan setidaknya [izin](permissions.md) kontributor.
+Untuk mengonfigurasi model analisis sentimen, Anda memerlukan setidaknya [izin kontributor](permissions.md).
 
 Customer Insights dapat memproses hingga 10 juta catatan umpan balik untuk satu model yang dijalankan. Model ini dapat menganalisis komentar umpan balik hingga 128 kata. Jika komentar umpan balik lebih panjang, analisis hanya mempertimbangkan 128 kata pertama.
 
 ### <a name="data-requirements"></a>Persyaratan data
   
 Atribut data berikut diperlukan:
-- Unified Customer ID (UCID) agar sesuai dengan catatan data umpan balik teks dengan pelanggan individu. ID ini adalah hasil dari [proses penyatuan](data-unification.md) data.
+- Unified Customer ID (UCID) agar sesuai dengan catatan data umpan balik teks dengan pelanggan individu. ID ini adalah hasil dari proses [penyatuan](data-unification.md) data.
 - ID tanggapan
 - Umpan balik timestamp
 - Teks tanggapan   
@@ -79,33 +74,33 @@ Atribut data berikut diperlukan:
 
 1. Di Customer Insights, buka **Intelijen** > **Prediksi**.
 
-1. Pada **ubin analisis sentimen** Pelanggan, pilih **Gunakan** model.
+1. **Pada ubin analisis** sentimen Pelanggan, pilih **Gunakan model**.
 
-1. Di **panel Analisis Sentimen Pelanggan (pratinjau),** pilih **Mulai**.
+1. **Di panel Analisis Sentimen Pelanggan (pratinjau**), pilih **Mulai**.
 
-1. Dalam **langkah nama** Model, berikan **Nama untuk** analisis Anda. 
+1. **Dalam langkah nama** Model, berikan **Nama** untuk analisis Anda. 
 
-1. Berikan **nama entitas output aspek Bisnis** dan nama entitas output skor **Sentimen**, lalu pilih **Berikutnya**.
+1. **Berikan nama** entitas output aspek Bisnis dan **nama** entitas output skor Sentimen, lalu pilih **Berikutnya**.
 
-1. Dalam langkah data yang **diperlukan**, pilih **Tambahkan data**.
+1. Dalam langkah data yang **diperlukan, pilih** Tambahkan data **.**
 
    :::image type="content" source="media/sentiment-add-data.png" alt-text="Tambahkan aliran data dalam model analisis sentimen.":::
 
-1. Di **panel Tambahkan** data, pilih tipe semantik **Umpan Balik** dari daftar.
+1. **Di panel Tambahkan data**, pilih tipe **semantik Umpan Balik** dari daftar.
 
    :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Langkah konfigurasi untuk memilih aktivitas umpan balik untuk analisis sentimen.":::
 
 1. Pilih aktivitas yang akan digunakan untuk analisis sentimen ini, lalu pilih **Berikutnya**.
  
-1. Petakan atribut dalam data Anda ke atribut model. Pilih **Simpan untuk menerapkan pilihan** Anda. 
+1. Petakan atribut dalam data Anda ke atribut model. Pilih **Simpan** untuk menerapkan pilihan Anda. 
 
 1. Anda melihat status pemetaan data. Untuk melanjutkan, klik **Berikutnya**. 
 
-1. Dalam **langkah Tinjau detail model** Anda, validasi konfigurasi analisis sentimen Anda. Anda dapat kembali ke bagian mana pun dari konfigurasi prediksi. Pilih **Simpan dan jalankan untuk memulai** analisis. 
+1. **Dalam langkah Tinjau detail** model Anda, validasi konfigurasi analisis sentimen Anda. Anda dapat kembali ke bagian mana pun dari konfigurasi prediksi. Pilih **Simpan dan jalankan** untuk memulai analisis. 
 
    :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Tinjau langkah untuk model sentimen yang menampilkan semua item yang dikonfigurasi.":::
 
-1. Pilih **Selesai untuk meninggalkan pengalaman** konfigurasi. Proses ini mungkin memakan waktu beberapa jam untuk menyelesaikan tergantung pada jumlah data yang digunakan. 
+1. Pilih **Selesai** untuk meninggalkan pengalaman konfigurasi. Proses ini mungkin memakan waktu beberapa jam untuk menyelesaikan tergantung pada jumlah data yang digunakan. 
 
 ## <a name="review-analysis-status"></a>Meninjau status analisis
 
@@ -121,7 +116,7 @@ Atribut data berikut diperlukan:
   - **gagal**: prediksi yang jalankan gagal. Tinjau log untuk rincian selengkapnya.
   - **berhasil**: prediksi telah berhasil. Pilih Lihat di dalam elips vertikal untuk meninjau hasil prediksi.
 - **Diedit**: tanggal konfigurasi untuk prediksi telah diubah.
-- **Terakhir disegarkan:** Tanggal prediksi telah menyegarkan hasil pada entitas output.
+- **Terakhir disegarkan**: Tanggal prediksi telah menyegarkan hasil pada entitas output.
 
 ## <a name="manage-sentiment-analysis"></a>Mengelola analisis sentimen
 
@@ -136,18 +131,18 @@ Anda dapat mengoptimalkan, memecahkan masalah, menyegarkan, atau menghapus predi
 
 Ada empat bagian utama data dalam halaman hasil. 
 
-- **Skor sentimen rata-rata:** Membantu Anda memahami sentimen keseluruhan di semua pelanggan. Skor sentimen dikelompokkan dalam tiga kategori: 
+- **Skor** sentimen rata-rata: Membantu Anda memahami sentimen keseluruhan di semua pelanggan. Skor sentimen dikelompokkan dalam tiga kategori: 
   1.    Negatif (-5 > 2)
   2.    Netral (-1 > 1)
   3.    Positif (2 > 5) 
   
   :::image type="content" source="media/overall-customer-sentiment.png" alt-text="Representasi visual dari keseluruhan sentimen pelanggan.":::
 
-- **Distribusi pelanggan dengan skor** sentimen: Pelanggan dikategorikan ke dalam kelompok negatif, netral, dan positif berdasarkan skor sentimen mereka. Arahkan kursor ke bar di histogram untuk melihat jumlah pelanggan dan skor sentimen rata-rata di setiap grup. Data ini dapat membantu Anda [membuat segmen pelanggan berdasarkan skor sentimen](segments.md) mereka.  
+- **Distribusi pelanggan dengan skor** sentimen: Pelanggan dikategorikan ke dalam kelompok negatif, netral, dan positif berdasarkan skor sentimen mereka. Arahkan kursor ke bar di histogram untuk melihat jumlah pelanggan dan skor sentimen rata-rata di setiap grup. Data ini dapat membantu Anda [membuat segmen pelanggan](segments.md) berdasarkan skor sentimen mereka.  
 
   :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="diagram batang menunjukkan sentimen pelanggan di tiga kelompok sentimen.":::
 
-- **Skor sentimen rata-rata dari waktu ke** waktu: Sentimen pelanggan dapat berubah dari waktu ke waktu. Kami memberikan tren sentimen pelanggan Anda untuk rentang waktu data Anda. Pandangan ini dapat membantu Anda mengukur efek promosi musiman, peluncuran produk, atau intervensi terikat waktu lainnya pada sentimen pelanggan. Lihat grafik dengan memilih tahun-of-interest dari menu dropdown. 
+- **Skor sentimen rata-rata dari waktu ke waktu**: Sentimen pelanggan dapat berubah dari waktu ke waktu. Kami memberikan tren sentimen pelanggan Anda untuk rentang waktu data Anda. Pandangan ini dapat membantu Anda mengukur efek promosi musiman, peluncuran produk, atau intervensi terikat waktu lainnya pada sentimen pelanggan. Lihat grafik dengan memilih tahun-of-interest dari menu dropdown. 
 
   :::image type="content" source="media/sentiment-score-over-time.png" alt-text="bagan riwayat dengan skor sentimen dari waktu ke waktu yang diwakili sebagai garis.":::
  
@@ -157,12 +152,12 @@ Ada empat bagian utama data dalam halaman hasil.
  
   Pilih nama aspek bisnis untuk melihat informasi tambahan bagaimana aspek bisnis diidentifikasi oleh model. Ada dua bagian di panel ini: 
 
-  - **Kata**-kata berpengaruh: Menunjukkan kata-kata teratas yang mempengaruhi identifikasi model AI dari aspek bisnis dalam umpan balik pelanggan. 
+  - **Kata-kata** berpengaruh: Menunjukkan kata-kata teratas yang memengaruhi identifikasi model AI tentang aspek bisnis dalam umpan balik pelanggan. 
     **Tampilkan kata-kata** ofensif: Memungkinkan Anda memasukkan kata-kata ofensif dalam daftar dari data umpan balik pelanggan asli. Secara default, itu dimatikan.  Masking kata ofensif didukung oleh model AI dan mungkin tidak mendeteksi semua kata ofensif. Kami terus iterasi dan melatih pengklasifikasi untuk kinerja yang optimal. Jika Anda mendeteksi kata ofensif yang tidak disaring seperti yang diharapkan, beri tahu kami. 
     
     :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Daftar kata-kata berpengaruh dengan tombol untuk menunjukkan atau menyembunyikan kata-kata ofensif.":::
  
-  - **Sampel umpan** balik: Menampilkan catatan umpan balik aktual dalam data Anda. Kata-kata dikodekan warna sesuai dengan pengaruhnya terhadap identifikasi aspek bisnis. 
+  - **Sampel** umpan balik: Menampilkan catatan umpan balik aktual dalam data Anda. Kata-kata dikodekan warna sesuai dengan pengaruhnya terhadap identifikasi aspek bisnis. 
 
 
 ### <a name="influential-words-analysis-tab"></a>Tab analisis kata-kata berpengaruh
@@ -171,8 +166,8 @@ Ada tiga bagian informasi tambahan yang menjelaskan cara kerja model sentimen.
   
 1. **Kata-kata teratas yang berkontribusi terhadap sentimen** positif: Menunjukkan kata-kata top yang mempengaruhi identifikasi model AI tentang sentimen positif dalam umpan balik pelanggan.  
 2. **Kata-kata teratas yang berkontribusi terhadap sentimen** negatif: Menunjukkan kata-kata top yang mempengaruhi identifikasi model AI tentang sentimen negatif dalam umpan balik pelanggan.  
-3. **Sampel umpan** balik: Menunjukkan catatan umpan balik aktual, satu dengan sentimen negatif dan satu dengan sentimen positif. Kata-kata dalam catatan umpan balik disorot sesuai dengan kontribusi mereka terhadap skor sentimen yang ditugaskan. Kata-kata yang berkontribusi terhadap skor sentimen positif disorot dalam warna hijau. Kata-kata yang berkontribusi terhadap skor negatif disorot dengan warna merah.
-   Pilih **Lihat lebih lanjut untuk memuat lebih banyak sampel umpan balik yang memberikan lebih banyak informasi dan konteks tentang** cara kerja model sentimen.
+3. **Sampel** umpan balik: Menunjukkan catatan umpan balik aktual, satu dengan sentimen negatif dan satu dengan sentimen positif. Kata-kata dalam catatan umpan balik disorot sesuai dengan kontribusi mereka terhadap skor sentimen yang ditugaskan. Kata-kata yang berkontribusi terhadap skor sentimen positif disorot dalam warna hijau. Kata-kata yang berkontribusi terhadap skor negatif disorot dengan warna merah.
+   Pilih **Lihat lebih** lanjut untuk memuat lebih banyak sampel umpan balik yang memberikan lebih banyak informasi dan konteks tentang cara kerja model sentimen.
    
    :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Contoh analisis sentimen pada umpan balik pelanggan.":::
  
@@ -180,7 +175,7 @@ Ada tiga bagian informasi tambahan yang menjelaskan cara kerja model sentimen.
 
 ## <a name="act-on-analysis-results"></a>Bertindak berdasarkan hasil analisis
 
-Anda dapat dengan mudah mulai membuat segmen pelanggan baru dari halaman hasil analisis sentimen dengan memilih **Buat segmen di bagian atas halaman hasil** model.
+Anda dapat dengan mudah mulai membuat segmen pelanggan baru dari halaman hasil analisis sentimen dengan **memilih Buat segmen** di bagian atas halaman hasil model.
 
 :::image type="content" source="media/create-segment-model.png" alt-text="Command bar dengan opsi pada model prediksi.":::
  

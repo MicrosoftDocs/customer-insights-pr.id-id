@@ -1,7 +1,7 @@
 ---
 title: Sesuaikan entitas untuk penyatuan data
 description: Sesuaikan entitas untuk membuat profil pelanggan terpadu.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: MT
-ms.contentlocale: id-ID
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863815"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Pencocokan Entitas
 
 Fase pencocokan menentukan cara menggabungkan kumpulan data menjadi himpunan data profil pelanggan terpadu. Setelah menyelesaikan [langkah peta](map-entities.md) dalam proses penyatuan data, Anda siap untuk mencocokkan entitas Anda. Fase pencocokan memerlukan setidaknya dua entitas yang dipetakan.
@@ -35,7 +30,7 @@ Setiap kecocokan menggabungkan dua atau beberapa entitas ke dalam satu entitas t
 
 :::image type="content" source="media/match-page.png" alt-text="Tangkapan layar halaman Kecocokan di area Satukan pada proses penyatuan data.":::
   
-Entitas utama *eCommerce:e CommerceContacts* cocok dengan entitas berikutnya *LoyaltyScheme:loyCustomers*. Set data yang dihasilkan oleh langkah kecocokan pertama cocok dengan entitas berikut jika Anda memiliki lebih dari dua entitas.
+Entitas utama *eCommerce:e CommerceContacts* cocok dengan entitas berikutnya *LoyaltyScheme:loyCustomers*. Kumpulan data yang dihasilkan dari langkah pertandingan pertama dicocokkan dengan entitas berikut jika Anda memiliki lebih dari dua entitas.
 
 > [!IMPORTANT]
 > Entitas yang Anda pilih sebagai entitas utama akan berfungsi sebagai dasar untuk himpunan data profil terpadu Anda. Entitas tambahan yang dipilih selama fase pencocokan akan ditambahkan ke entitas ini. Ini tidak berarti bahwa entitas terpadu akan mencakup *semua* data yang tercakup dalam entitas ini.
@@ -108,7 +103,7 @@ Aturan kecocokan menunjukkan rangkaian kondisi. Untuk mencocokkan entitas menuru
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Mengubah urutan entitas dalam aturan kecocokan
 
-Anda dapat mengurutkan ulang entitas untuk aturan kecocokan untuk mengubah urutan prosesnya. Aturan yang bertentangan karena urutan yang diubah akan dihilangkan. Anda harus membuat ulang aturan yang dihilangkan dengan konfigurasi yang diperbarui.
+Anda dapat menyusun ulang entitas untuk aturan pertandingan untuk mengubah urutan di mana mereka diproses. Aturan yang bertentangan karena urutan yang diubah akan dihilangkan. Anda harus membuat ulang aturan yang dihilangkan dengan konfigurasi yang diperbarui.
 
 1. Buka **Data** > **Satukan** > **Kecocokan**, lalu pilih **Edit**.
 
@@ -130,17 +125,21 @@ Menentukan aturan deduplikasi tidak wajib. Jika tidak ada aturan yang dikonfigur
 
 1. Buka **Data** > **Satukan** > **Cocokkan**.
 
-1. Di Bagian **duplikat yang digabungkan**, pilih **Atur entitas**. Jika aturan deduplikasi telah dibuat, pilih **Edit**.
+1. **Di bagian detail** catatan Deduplicated, pilih **Atur entitas**. Jika aturan deduplikasi telah dibuat, pilih **Edit**.
 
 1. Di panel **preferensi penggabungan**, pilih entitas yang akan dijalankan deduplikasinya.
 
-1. Tentukan cara menggabungkan rekaman duplikat dan memilih salah satu dari tiga pilihan:
-   - **Paling terisi**: mengidentifikasi rekaman dengan bidang atribut yang paling banyak diisi sebagai rekaman pemenang. Ini adalah pilihan penggabungan default.
-   - **Terbaru** : mengidentifikasi rekaman pemenang berdasarkan keterkinian. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
-   - **Paling lama** : mengidentifikasi rekaman pemenang berdasarkan keterkinian terlama. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
+   1. Tentukan cara menggabungkan rekaman duplikat dan memilih salah satu dari tiga pilihan:
+      - **Paling terisi**: mengidentifikasi rekaman dengan bidang atribut yang paling banyak diisi sebagai rekaman pemenang. Ini adalah pilihan penggabungan default.
+      - **Terbaru** : mengidentifikasi rekaman pemenang berdasarkan keterkinian. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
+      - **Paling lama** : mengidentifikasi rekaman pemenang berdasarkan keterkinian terlama. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
+
+   1. Secara opsional, pilih **Tingkat Lanjut** untuk menentukan aturan deduplikasi pada atribut individual suatu entitas. Misalnya, Anda dapat memilih untuk menyimpan email terbaru DAN alamat paling lengkap dari catatan yang berbeda. Perluas entitas untuk melihat semua atributnya dan tentukan opsi mana yang akan digunakan untuk atribut individual. Jika Anda memilih opsi berbasis recency, Anda juga perlu menentukan bidang tanggal / waktu yang menentukan recency. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Aturan deduplikasi langkah 1.](media/match-selfconflation.png "Aturan deduplikasi langkah 1")
+      > [!div class="mx-imgBorder"]
+      > ![Aturan deduplikasi langkah 1.](media/match-selfconflation.png "Aturan deduplikasi langkah 1")
+
+   1. Pilih **Selesai** untuk menerapkan preferensi gabungan Anda untuk deduplikasi.
  
 1. Setelah entitas dipilih dan preferensi penggabungan mereka diatur, pilih **Tambahkan aturan** untuk menentukan aturan deduplikasi pada tingkat entitas.
    - **Pilih bidang** mencantumkan semua bidang yang tersedia dari entitas tersebut. Pilih bidang yang ingin Anda periksa duplikatnya. Pilih bidang yang mungkin unik untuk setiap pelanggan. Contohnya, alamat email, atau kombinasi nama, kota, dan nomor telepon.
@@ -158,7 +157,7 @@ Menentukan aturan deduplikasi tidak wajib. Jika tidak ada aturan yang dikonfigur
 
 1. Aturan kecocokan kustom yang ditentukan akan menimpa aturan deduplikasi. Jika aturan deduplikasi mengidentifikasi rekaman yang cocok dan aturan kecocokan kustom diatur untuk tidak pernah cocok dengan rekaman tersebut, maka kedua rekaman tersebut tidak akan dicocokkan.
 
-1. Setelah [menjalankan proses pencocokan](#run-the-match-process), Anda akan melihat status deduplikasi dalam petak metrik utama.
+1. Setelah [menjalankan proses](#run-the-match-process) pertandingan, Anda akan melihat statistik deduplication di ubin metrik utama.
 
 ### <a name="deduplication-output-as-an-entity"></a>Output deduplikasi sebagai entitas
 
@@ -222,26 +221,42 @@ Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kec
 
 - **Hapus aturan** dengan memilih simbol **Hapus**.
 
-## <a name="specify-custom-match-conditions"></a>Menentukan kondisi kecocokan kustom
+## <a name="advanced-options"></a>Pilihan tingkat lanjut
+
+### <a name="add-exceptions-to-a-rule"></a>Menambahkan pengecualian ke aturan
+
+Dalam kebanyakan kasus, pencocokan entitas mengarah ke profil pengguna yang unik dengan data konsolidasi. Untuk secara dinamis mengatasi kasus positif palsu dan negatif palsu yang jarang terjadi, Anda dapat menentukan pengecualian untuk aturan pertandingan. Pengecualian diterapkan setelah memproses aturan pertandingan dan menghindari pencocokan semua catatan, yang memenuhi kriteria pengecualian.
+
+Misalnya, jika aturan pertandingan Anda menggabungkan nama belakang, kota, dan tanggal lahir, sistem akan mengidentifikasi kembar dengan nama belakang yang sama yang tinggal di kota yang sama dengan profil yang sama. Anda dapat menentukan pengecualian yang tidak cocok dengan profil jika nama depan di entitas yang Anda gabungkan tidak sama.
+
+1. Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Edit** pada aturan yang akan ditambahkan kondisinya.
+
+1. Di panel **Edit aturan**, pilih **Tambahkan pengecualian**.
+
+1. Tentukan kriteria pengecualian. 
+
+1. Untuk menyimpan aturan, pilih **Selesai**.
+
+### <a name="specify-custom-match-conditions"></a>Menentukan kondisi kecocokan kustom
 
 Anda dapat menentukan kondisi yang menimpa logika pertandingan default. Ada empat pilihan yang tersedia: 
 
 |Opsi  |Deskripsi |Contoh  |
 |---------|---------|---------|
-|Selalu cocok     | Mendefinisikan nilai-nilai yang selalu cocok.         |  Selalu cocok *dengan Mike* dan *MikeR*.       |
-|Tidak pernah cocok     | Mendefinisikan nilai-nilai yang tidak pernah cocok.        | Tidak pernah cocok *dengan John* dan *Jonathan*.        |
-|Bypass kustom     | Mendefinisikan nilai-nilai yang harus selalu diabaikan sistem dalam fase pertandingan. |  Abaikan nilai *11111* dan Tidak Dikenal selama *pertandingan*.        |
-|Pemetaan alias    | Mendefinisikan nilai-nilai yang harus dipertimbangkan sistem sebagai nilai yang sama.         | Pertimbangkan *Joe untuk menjadi setara dengan* *Joseph*.        |
+|Selalu cocok     | Mendefinisikan nilai-nilai yang selalu cocok.         |  Selalu cocok dengan *Mike* dan *MikeR*.       |
+|Tidak pernah cocok     | Mendefinisikan nilai-nilai yang tidak pernah cocok.        | Tidak pernah cocok dengan *John* dan *Jonathan*.        |
+|Bypass kustom     | Mendefinisikan nilai-nilai yang harus selalu diabaikan sistem dalam fase pertandingan. |  Abaikan nilai *11111* dan *Tidak Dikenal* selama pertandingan.        |
+|Pemetaan alias    | Mendefinisikan nilai-nilai yang harus dipertimbangkan sistem sebagai nilai yang sama.         | Anggap *Joe* setara dengan *Yusuf*.        |
 
 1. Buka **Data** > **Satukan** > **Cocokkan**, lalu pilih **Kecocokan kustom** di bagian **rincian rekaman yang cocok**.
 
    :::image type="content" source="media/custom-match-create.png" alt-text="Tangkapan layar dari bagian aturan kecocokan dengan kontrol kecocokan kustom disorot.":::
 
-1. Di **panel** Kustom, buka **tab** Catatan.
+1. Di panel **Kustom**, buka **tab Catatan**.
 
-1. Pilih opsi pencocokan kustom dari **dropdown tipe kustom** dan pilih Unduh **templat**. Anda memerlukan template terpisah untuk setiap opsi pertandingan.
+1. Pilih opsi pencocokan kustom dari **dropdown tipe** Kustom dan pilih **Unduh templat**. Anda memerlukan template terpisah untuk setiap opsi pertandingan.
 
-1. Sebuah file template download. Buka dan isi detailnya. Template berisi bidang untuk menentukan entitas dan nilai kunci primer entitas yang akan digunakan dalam pencocokan kustom. Misalnya, jika Anda menginginkan kunci utama *12345* dari entitas *Penjualan* agar selalu cocok dengan kunci utama *34567* dari entitas *Kontak*, isi template:
+1. Buka file template yang diunduh dan isi detailnya. Template berisi bidang untuk menentukan entitas dan nilai kunci primer entitas yang akan digunakan dalam pencocokan kustom. Misalnya, jika Anda menginginkan kunci utama *12345* dari entitas *Penjualan* agar selalu cocok dengan kunci utama *34567* dari entitas *Kontak*, isi template:
     - Entity1: Penjualan
     - Entity1Key: 12345
     - Entity2: Kontak
@@ -261,22 +276,22 @@ Anda dapat menentukan kondisi yang menimpa logika pertandingan default. Ada empa
 
 1. Menerapkan kecocokan khusus tergantung pada opsi pertandingan yang ingin Anda gunakan. 
 
-   - Untuk **Selalu cocok atau tidak pernah** **cocok**, lanjutkan ke langkah berikutnya.
-   - Untuk **bypass Kustom atau pemetaan** **Alias**, pilih Edit pada aturan pertandingan **yang ada atau buat aturan** baru. Dalam dropdown Normalisasi, pilih **opsi** bypass kustom atau **pemetaan Alias dan pilih Selesai** **·**.
+   - Untuk **Selalu cocok** atau **tidak pernah cocok**, lanjutkan ke langkah berikutnya.
+   - Untuk **bypass** Kustom atau **pemetaan** Alias, pilih **Edit** pada aturan pertandingan yang ada atau buat aturan baru. Dalam dropdown Normalisasi, pilih **opsi bypass** kustom atau **pemetaan** Alias dan pilih **Selesai**.
 
 1. Pilih **Simpan** pada halaman **Cocokkan** untuk menerapkan konfigurasi kecocokan kustom.
 
 1. Pilih **Jalankan** pada halaman **Cocokkan** untuk memulai proses pencocokan. Aturan kecocokan tertentu lainnya ditimpa oleh konfigurasi kecocokan kustom.
 
-### <a name="known-issues"></a>Masalah yang diketahui
+#### <a name="known-issues"></a>Masalah yang diketahui
 
 - Self-conflation tidak menunjukkan data yang dinormalisasi dalam entitas deduplication. Namun, itu menerapkan normalisasi secara internal selama deduplication. Ini dengan desain untuk semua normalisasi. 
-- Jika pengaturan tipe semantik dihapus dalam **fase Peta ketika aturan pertandingan menggunakan pemetaan Alias atau bypass** Kustom, normalisasi tidak akan diterapkan. Itu hanya terjadi jika Anda menghapus jenis semantik setelah mengkonfigurasi normalisasi dalam aturan pertandingan karena jenis semantik akan tidak diketahui.
+- Jika pengaturan tipe semantik dihapus dalam **fase Peta** ketika aturan pertandingan menggunakan pemetaan Alias atau bypass Kustom, normalisasi tidak akan diterapkan. Itu hanya terjadi jika Anda menghapus jenis semantik setelah mengkonfigurasi normalisasi dalam aturan pertandingan karena jenis semantik akan tidak diketahui.
 
 
 ## <a name="next-step"></a>Langkah selanjutnya
 
-Setelah menyelesaikan proses pertandingan untuk setidaknya satu pasangan pertandingan, lanjutkan ke [**·**](merge-entities.md) langkah Merge.
+Setelah menyelesaikan proses pertandingan untuk setidaknya satu pasangan pertandingan, lanjutkan ke [**langkah Merge**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

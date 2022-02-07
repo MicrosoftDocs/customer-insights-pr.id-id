@@ -1,7 +1,7 @@
 ---
 title: Sambungkan data Common Data Model ke akun Azure Data Lake
 description: Bekerja dengan Common Data Model menggunakan Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: id-ID
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900201"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Sambungkan ke folder Common Data Model dengan akun Azure Data Lake Store
 
 Artikel ini memberikan informasi tentang cara menyerap data dari folder Common Data Model menggunakan akun Azure Data Lake Storage Gen2 Anda.
@@ -26,11 +21,13 @@ Artikel ini memberikan informasi tentang cara menyerap data dari folder Common D
 
 - Konsumsi data mendukung akun penyimpanan Azure data Lake *Gen2* secara eksklusif. Anda tidak dapat menggunakan akun penyimpanan Azure Data Lake Gen1 untuk menyerap data.
 
+- Akun penyimpanan Azure Data Lake harus mengaktifkan [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Untuk mengautentikasi dengan prinsipal Layanan Azure, pastikan perangkat dikonfigurasi di penyewa Anda. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md).
 
 - Azure Data Lake yang akan disambungkan dan diserap datanya harus berada di kawasan Azure yang sama dengan lingkungan Dynamics 365 Customer Insights. Koneksi ke folder Common Data Model dari Data Lake di kawasan Azure berbeda tidak didukung. Untuk mengetahui kawasan Azure lingkungan, buka **Admin** > **sistem** > **tentang** di wawasan audiens.
 
-- Data yang disimpan dalam layanan online dapat disimpan di lokasi yang berbeda dari tempat data diproses atau disimpan di dalamnya Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights .  [Pelajari selengkapnya di Microsoft Trust Center](https://www.microsoft.com/trust-center).
+- Data yang disimpan dalam layanan online dapat disimpan di lokasi yang berbeda dari tempat data diproses atau disimpan di dalamnya Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari selengkapnya di Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Sambungkan ke folder Model Data Umum
 
@@ -38,11 +35,11 @@ Artikel ini memberikan informasi tentang cara menyerap data dari folder Common D
 
 1. Pilih **Tambahkan sumber data**.
 
-1. Pilih **Penyimpanan data lake** Azure, masukkan Nama untuk **sumber** data, lalu pilih **Berikutnya**.
+1. Pilih **penyimpanan** data lake Azure, masukkan **Nama** untuk sumber data, lalu pilih **Berikutnya**.
 
    - Jika diminta, pilih salah satu dataset sampel yang berkaitan dengan industri Anda, lalu pilih **Berikutnya**. 
 
-1. Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). Masukkan **alamat** Server, pilih **masuk**, lalu pilih **Berikutnya**.
+1. Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi lebih lanjut, lihat [menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure](connect-service-principal.md). **Masukkan alamat** Server, pilih **masuk**, lalu pilih **Berikutnya**.
    > [!div class="mx-imgBorder"]
    > ![Kotak dialog untuk memasukkan rincian sambungan baru untuk Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]

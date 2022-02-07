@@ -1,7 +1,7 @@
 ---
 title: Peningkatan data perusahaan
 description: Memperkaya dan menormalkan data perusahaan dengan model Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,15 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: MT
-ms.contentlocale: id-ID
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927586"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Pengayaan profil perusahaan dengan data perusahaan yang disempurnakan
 
-Gunakan model Microsoft dan data perusahaan yang dikompilasi untuk memperbaiki, melengkapi, dan membakukan profil perusahaan Anda. Kami akan menggunakan [format Common Data Model untuk akurasi dan wawasan yang lebih](/common-data-model/schema/core/applicationcommon/account) baik.
+Gunakan model Microsoft dan data perusahaan yang dikompilasi untuk memperbaiki, melengkapi, dan membakukan profil perusahaan Anda. Kami akan menggunakan [format](/common-data-model/schema/core/applicationcommon/account) Common Data Model untuk akurasi dan wawasan yang lebih baik.
 
 ## <a name="how-we-enhance-company-data"></a>Bagaimana kami meningkatkan data perusahaan
 
-Model kami melalui proses dua langkah untuk meningkatkan profil perusahaan. Pertama, normalisasi nama perusahaan. Misalnya, *Microsoft Corp* akan diperbaiki dan distandarisasi ke Microsoft *Corporation*. Ini mencoba untuk menemukan kecocokan dalam data perusahaan yang dikompilasi Microsoft. Jika kecocokan ditemukan, kami memperkaya profil perusahaan dengan informasi dari data perusahaan kami yang dikompilasi, termasuk nama perusahaan.
+Model kami melalui proses dua langkah untuk meningkatkan profil perusahaan. Pertama, normalisasi nama perusahaan. Misalnya, *Microsoft Corp* akan diperbaiki dan distandarisasi ke *Microsoft Corporation*. Ini mencoba untuk menemukan kecocokan dalam data perusahaan yang dikompilasi Microsoft. Jika kecocokan ditemukan, kami memperkaya profil perusahaan dengan informasi dari data perusahaan kami yang dikompilasi, termasuk nama perusahaan.
 
 
 ### <a name="example"></a>Contoh
@@ -58,7 +53,7 @@ Ada beberapa batasan dengan data yang disempurnakan. Item dalam daftar di bawah 
 
 1. Buka **Data** > **Pengayaan**.
 
-1. Pilih **Memperkaya data saya pada petak data perusahaan yang** **disempurnakan**.
+1. Pilih **Memperkaya data** saya pada petak data **perusahaan yang** disempurnakan.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Ubin pengayaan di pusat pengayaan untuk data perusahaan.":::
 
@@ -82,17 +77,17 @@ Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda jug
 
 Setelah proses pengayaan selesai, Anda dapat meninjau data profil pelanggan baru yang diperkaya di dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
 
-Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lihat data yang diperkaya**.
+Anda dapat melihat sampel data yang diperkaya di ubin pratinjau **pelanggan yang** diperkaya. Pilih **Lihat selengkapnya** **dan pilih tab Data** untuk mengakses tampilan terperinci dari setiap profil yang diperkaya.
 
 ### <a name="overview-card"></a>Kartu gambaran umum
 
 Kartu ikhtisar menunjukkan rincian tentang cakupan pengayaan. 
 
-* **Pelanggan diproses dan** diubah: Jumlah profil pelanggan yang berhasil diperkaya.
+* **Perusahaan diproses dan diubah**: Jumlah profil perusahaan pelanggan yang berhasil diperkaya.
 
-* **Pelanggan diproses dan tidak** berubah: Jumlah profil pelanggan yang diakui tetapi tidak berubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
+* **Perusahaan diproses dan tidak berubah**: Jumlah profil perusahaan pelanggan yang diakui tetapi tidak berubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
 
-* **Pelanggan tidak diproses dan tidak** berubah: Jumlah profil yang tidak diakui. Biasanya untuk input data yang tidak valid atau tidak didukung oleh pengayaan.
+* **Perusahaan tidak diproses dan tidak berubah**: Jumlah profil perusahaan pelanggan yang tidak diakui. Hal ini biasanya terjadi untuk input data yang tidak valid atau tidak didukung oleh pengayaan.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 

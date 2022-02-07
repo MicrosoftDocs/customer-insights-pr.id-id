@@ -1,7 +1,7 @@
 ---
 title: Gabungkan entitas dalam penyatuan data
 description: Gabungkan entitas untuk membuat profil pelanggan terpadu.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,21 +10,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: id-ID
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732776"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Gabungkan Entitas
 
 Fase gabungkan adalah fase terakhir dalam proses penyatuan data. Tujuannya adalah merekonsiliasi data yang berkonflik. Contoh data yang berkonflik dapat mencakup nama pelanggan yang berada di dua dataset, namun ditampilkan sedikit berbeda di masing-masing ("Grant Marshall" versus "Grant"), atau format nomor telepon yang berbeda format (617-803-091X versus 617803091X). Penggabungan titik data yang berkonflik dilakukan pada basis atribut demi atribut.
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Halaman gabungan dalam proses penyatuan data yang menampilkan tabel dengan bidang gabungan yang mendefinisikan profil pelanggan terpadu.":::
 
-Setelah menyelesaikan [fase kecocokan](match-entities.md), Anda memulai fase penggabungan dengan memilih ubin [gabungkan](match-entities.md) pada halaman [satukan](match-entities.md).
+Setelah menyelesaikan [fase kecocokan](match-entities.md), Anda memulai fase penggabungan dengan memilih ubin **gabungkan** pada halaman **satukan**.
 
 ## <a name="review-system-recommendations"></a>Tinjau rekomendasi sistem
 
@@ -99,11 +94,13 @@ Pada halaman **Gabung**, pilih **Bidang yang dikecualikan** untuk melihat daftar
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
 
-## <a name="manually-combine-fields"></a>Gabungkan bidang secara manual
+## <a name="combine-fields-manually"></a>Menggabungkan bidang secara manual
 
-Tentukan atribut gabungan secara manual. 
+Tentukan atribut gabungan secara manual.
 
-1. Pada halaman **Gabung**, pilih **Gabungkan bidang**.
+1. Pada halaman **Gabungkan**, pilih **Gabungkan**.
+
+1. **Pilih opsi Bidang**.
 
 1. Tentukan kebijakan pemenang gabungan di dropdown **Gabungkan bidang berdasarkan**.
 
@@ -114,6 +111,26 @@ Tentukan atribut gabungan secara manual.
 1. Pilih **Selesai** untuk menerapkan perubahan.
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
+## <a name="combine-a-group-of-fields"></a>Menggabungkan sekelompok bidang
+
+Perlakukan sekelompok bidang sebagai satu unit. Misalnya, ketika jika catatan kami berisi bidang Alamat1, Alamat2, Kota, Negara Bagian, dan Zip. Kami mungkin tidak ingin bergabung dalam Address2 catatan yang berbeda, berpikir itu akan membuat data kami lebih lengkap.
+
+1. Pada halaman **Gabungkan**, pilih **Gabungkan**.
+
+1. **Pilih opsi Grup bidang**.
+
+1. Tentukan kebijakan pemenang gabungan dalam grup Peringkat berdasarkan **dropdown**.
+
+1. Pilih **Tambahkan** dan pilih jika Anda ingin menambahkan lebih banyak bidang atau grup tambahan ke bidang.
+
+1. **Berikan Nama** dan **nama** Output untuk setiap bidang gabungan.
+
+1. Berikan **Nama** untuk kelompok bidang. 
+
+1. Pilih **Selesai** untuk menerapkan perubahan.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
 ## <a name="change-the-order-of-fields"></a>Ubah urutan bidang
 
