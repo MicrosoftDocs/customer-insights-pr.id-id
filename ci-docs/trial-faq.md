@@ -3,18 +3,18 @@ title: Tanya-Jawab Uji coba - Dynamics 365 Customer Insights
 description: Solusi untuk pertanyaan umum terkait penyiapan dan manajemen uji coba Customer Insights. Pelajari cara menangani masalah platform dan khusus aplikasi.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642880"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115972"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Tanya Jawab uji coba Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "7642880"
 
 Aplikasi ini adalah layanan berbasis cloud yang tidak memerlukan perangkat lunak khusus selain web browser terbaru, meskipun beberapa batasan berlaku. Untuk pengalaman uji coba terbaik, hindari mengakses situs uji coba dalam mode penyamaran dan pilih lokasi uji coba yang paling dekat dengan Anda. [Pelajari lebih lanjut persyaratan aplikasi web.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Bagaimana cara mendaftar uji coba tanpa penyewa Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Bagaimana cara mendaftar untuk uji coba tanpa Microsoft 365 penyewa?
 
 Anda dapat memasukkan alamat email non-kerja dan kami akan membuat akun dan penyewa untuk Anda.
 
@@ -43,7 +43,7 @@ Saat mendaftar uji coba, Anda akan menerima email berisi detail uji coba. Jika A
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Bagaimana cara menambahkan lebih banyak pengguna ke uji coba?
 
-Untuk menambahkan pengguna, buka [Pusat admin Microsoft 365](https://admin.microsoft.com) menggunakan akun admin uji coba. Ikuti [panduan pusat admin](/microsoft-365/admin/add-users/add-users) untuk menambahkan pengguna hingga batas lisensi uji coba. Jika pengguna yang Anda tambahkan telah memiliki akun Microsoft 365, tetapkan untuk pengguna peran keamanan yang sesuai di organisasi uji coba. Untuk informasi lebih lanjut, lihat [Menetapkan peran keamanan untuk pengguna](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Untuk menambahkan pengguna, buka [Microsoft 365 pusat](https://admin.microsoft.com) admin menggunakan akun admin uji coba. Ikuti [panduan pusat admin](/microsoft-365/admin/add-users/add-users) untuk menambahkan pengguna hingga batas lisensi uji coba. Jika pengguna yang Anda tambahkan sudah memiliki Microsoft 365 akun, tetapkan peran keamanan yang sesuai di organisasi uji coba. Untuk informasi selengkapnya, lihat [Menetapkan peran keamanan ke pengguna](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Berapa pengguna yang dapat saya tambahkan ke lingkungan uji coba saya?
 
@@ -63,7 +63,7 @@ Anda dapat memperpanjang uji coba dalam aplikasi secara langsung. Anda dapat mem
 
 Umumnya, kami sarankan untuk memulai dari awal dengan data Anda sendiri saat memutakhirkan ke versi berbayar Customer Insights. 
 
-Atau, jika Anda hanya menggunakan audiens wawasan, Anda dapat menyalin data dari lingkungan uji coba jika Anda membeli Customer Insights. Anda harus menjadi administrator uji coba Customer Insights dan admin global penyewa Microsoft 365 Anda, atau administrator Dynamics 365 di organisasi Anda untuk memigrasikan pengaturan dari lingkungan uji coba ke lingkungan berbayar. 
+Atau, jika Anda hanya menggunakan audiens wawasan, Anda dapat menyalin data dari lingkungan uji coba jika Anda membeli Customer Insights. Anda harus menjadi administrator uji coba Wawasan Pelanggan dan admin global penyewa Anda Microsoft 365, atau administrator Dynamics 365 di organisasi Anda untuk memigrasikan pengaturan dari lingkungan uji coba ke lingkungan berbayar. 
 
 Setelah masuk ke instans Customer Insights berbayar Anda untuk pertama kalinya, Anda diminta untuk membuat lingkungan baru. Dalam proses ini, Anda dapat memilih untuk menyalin konfigurasi dari lingkungan yang ada dan memigrasikan sebagian besar pengaturan. Jika Anda memiliki izin yang disebutkan di atas, lingkungan uji coba akan ditampilkan dalam daftar ini. Untuk informasi selengkapnya, lihat [Menyalin konfigurasi lingkungan](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +82,9 @@ Setelah mendaftar uji coba, Anda akan dialihkan ke layar utama aplikasi. Layar u
 
 Sebagian besar fitur kemampuan Customer Insights tersedia dalam uji coba.
 
-Fitur berikut ini tidak tersedia: 
+Fitur-fitur **berikut tidak tersedia**: 
 - Anda tidak dapat membuat lingkungan baru yang menggunakan akun penyimpanan Azure Data Lake Storage.
+- Anda tidak dapat menghapus lingkungan uji coba. 
 
 ### <a name="how-long-does-the-trial-last"></a>Berapa lama uji coba berlangsung?
 

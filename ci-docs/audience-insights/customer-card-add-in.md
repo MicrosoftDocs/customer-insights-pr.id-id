@@ -1,7 +1,7 @@
 ---
 title: Add-in Kartu Pelanggan untuk aplikasi Dynamics 365 (berisi video)
 description: Tampilkan data wawasan audiens di aplikasi Dynamics 365 dengan add-in ini.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: id-ID
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085252"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Add-in Kartu Pelanggan (pratinjau)
 
 
@@ -22,14 +27,14 @@ Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamic
 ## <a name="prerequisites"></a>Prasyarat
 
 - Add-in hanya berfungsi dengan aplikasi yang diarahkan model Dynamics 365, seperti Sales, atau Customer Service, versi 9.0 dan versi yang lebih baru.
-- Agar data Dynamics 365 Anda memetakan ke audiens wawasan profil pelanggan, kami sarankan data [tersebut tertelan dari aplikasi Dynamics 365 menggunakan Microsoft Dataverse konektor](connect-power-query.md). Jika Anda menggunakan metode yang berbeda untuk menelan kontak Dynamics 365 (atau akun), Anda perlu memastikan `contactid` bidang (atau`accountid`) ditetapkan sebagai [kunci utama untuk sumber data dalam langkah peta proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Agar data Dynamics 365 Anda dipetakan ke audiens profil pelanggan insight, sebaiknya [data tersebut tertelan dari aplikasi Dynamics 365 menggunakan Microsoft Dataverse konektor](connect-power-query.md). Jika Anda menggunakan metode yang berbeda untuk menelan kontak Dynamics 365 (atau akun), Anda perlu memastikan `contactid` bidang (atau`accountid`) ditetapkan sebagai [kunci utama untuk sumber data tersebut dalam langkah peta proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Semua pengguna Add-in Kartu Pelanggan Dynamics 365 harus [ditambahkan sebagai pengguna](permissions.md) dalam wawasan audiens untuk melihat data.
 - [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md) di audiens wawasan diperlukan agar pencarian data dapat bekerja.
 - Setiap kontrol add-in mengandalkan data tertentu dalam wawasan audiens. Beberapa data dan kontrol hanya tersedia di lingkungan dengan jenis tertentu. Konfigurasi add-in akan menginformasikan Anda jika kontrol tidak tersedia karena jenis lingkungan yang dipilih. Selengkapnya tentang [kasus penggunaan lingkungan](work-with-business-accounts.md).
   - **Kontrol ukuran**: Memerlukan [ukuran terkonfigurasi](measures.md) jenis atribut pelanggan.
-  - **Kontrol intelijen**: Memerlukan data yang dihasilkan menggunakan [prediksi atau model](predictions-overview.md) kustom.
+  - **Kontrol kecerdasan**: Memerlukan data yang dihasilkan menggunakan [prediksi atau model](predictions-overview.md) kustom.
   - **Kontrol rincian pelanggan**: Semua bidang dari profil tersedia di profil pelanggan terpadu.
-  - **Kontrol pengayaan**: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan. Add-in kartu mendukung pengayaan ini: [Merek yang](enrichment-microsoft.md) disediakan oleh Microsoft, [Minat yang](enrichment-microsoft.md) disediakan oleh Microsoft, dan [data](enrichment-office.md) keterlibatan Office yang disediakan oleh Microsoft.
+  - **Kontrol pengayaan**: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan. Add-in kartu mendukung pengayaan ini: [Merek](enrichment-microsoft.md) yang disediakan oleh Microsoft, [Minat yang](enrichment-microsoft.md) disediakan oleh Microsoft, dan [data](enrichment-office.md) keterlibatan Office yang disediakan oleh Microsoft.
   - **Kontrol kontak**: Memerlukan definisi entitas semantis dari kontak jenis.
   - **Kontrol Timeline**: memerlukan [aktivitas yang dikonfigurasi](activities.md).
 
@@ -113,5 +118,26 @@ Add-in Kartu Pelanggan tidak ditingkatkan secara otomatis. Untuk meningkatkan ke
 
 1. Setelah memulai proses peningkatan, Anda akan melihat indikator pemuatan hingga peningkatan selesai. Jika tidak ada versi yang lebih baru, peningkatan akan menampilkan pesan kesalahan.
 
+## <a name="troubleshooting"></a>Mengatasi Masalah
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kontrol dari Add-in Kartu Pelanggan tidak menemukan data
+
+**Masalah:**
+
+Bahkan dengan bidang ID yang dikonfigurasi dengan benar, kontrol tidak dapat menemukan data untuk pelanggan mana pun.  
+
+**Resolusi:**
+
+1. Pastikan Anda mengonfigurasi Add-in Kartu sesuai dengan petunjuk: [Mengonfigurasi Add-in Kartu Pelanggan](#configure-the-customer-card-add-in) 
+
+1. Tinjau konfigurasi konsumsi data. Edit sumber data untuk sistem Dynamics 365 yang berisi ID kontak GUID. Jika ID kontak GUID ditampilkan dengan karakter huruf besar di Power Query editor, coba hal berikut: 
+    1. Edit sumber data untuk membuka sumber data di Power Query Editor.
+    1. Pilih kolom ID kontak.
+    1. Pilih **Ubah** di bilah header untuk melihat tindakan yang tersedia.
+    1. Pilih **huruf kecil**. Validasi apakah GUID dalam tabel sekarang huruf kecil.
+    1. Simpan Sumber Data.
+    1. Jalankan proses konsumsi data, penyatuan, dan hilir untuk menyebarkan perubahan pada GUID. 
+
+Setelah menyelesaikan refresh penuh, kontrol Add-in Kartu Pelanggan harus menampilkan data yang diharapkan. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: id-ID
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090927"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Gunakan segmen di Dynamics 365 Sales (pratinjau)
 
 
 
 Gunakan data pelanggan Anda untuk membuat daftar pemasaran, alur kerja tindak lanjut, dan mengirim promosi dengan Dynamics 365 Sales.
+
+## <a name="known-limitations"></a>Pembatasan yang diketahui
+
+- Ekspor ke Dynamics 365 Sales dibatasi hingga 100.000 anggota per segmen.
+- Ekspor segmen ke Dynamics 365 Sales dapat memakan waktu hingga 3 jam untuk menyelesaikannya. 
 
 ## <a name="prerequisite-for-connection"></a>Prasyarat untuk koneksi
 

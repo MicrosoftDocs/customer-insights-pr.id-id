@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900262"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088151"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Menyambung ke akun Azure Data Lake Storage menggunakan prinsipal layanan Azure
 
-Artikel ini membahas cara terhubung Dynamics 365 Customer Insights dengan akun dengan menggunakan prinsip layanan Azure Azure Data Lake Storage alih-alih kunci akun penyimpanan. 
+Artikel ini membahas cara terhubung Dynamics 365 Customer Insights dengan akun dengan Azure Data Lake Storage menggunakan prinsipal layanan Azure alih-alih kunci akun penyimpanan. 
 
-Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas. Selain masuk aplikasi sebagai pengguna yang memiliki hak istimewa, Azure menawarkan prinsipal layanan. Anda dapat menggunakan prinsip layanan untuk menambahkan atau mengedit folder Common Data Model dengan aman [sebagai sumber data atau membuat atau memperbarui](connect-common-data-model.md)[lingkungan](create-environment.md).
+Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas. Selain masuk aplikasi sebagai pengguna yang memiliki hak istimewa, Azure menawarkan prinsipal layanan. Anda dapat menggunakan prinsipal layanan untuk menambahkan atau mengedit folder Model Data Umum dengan [aman sebagai sumber data](connect-common-data-model.md) atau [membuat atau memperbarui lingkungan](create-environment.md).
 
 > [!IMPORTANT]
-> - Akun Data Lake Storage yang akan menggunakan layanan utama harus telah mengaktifkan [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace).
-> - Anda memerlukan izin admin untuk langganan Azure Anda untuk membuat prinsip layanan.
+> - Akun Penyimpanan Danau Data yang akan menggunakan prinsipal layanan harus Gen2 dan memiliki [ruang nama hierarki diaktifkan](/azure/storage/blobs/data-lake-storage-namespace). Akun penyimpanan Azure Data Lake Gen1 tidak didukung.
+> - Anda memerlukan izin admin untuk langganan Azure untuk membuat prinsipal layanan.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Membuat prinsipal layanan Azure untuk Customer Insights
 
-Sebelum membuat prinsip layanan baru untuk Wawasan Pelanggan, periksa apakah itu sudah ada di organisasi Anda.
+Sebelum membuat prinsipal layanan baru untuk Wawasan Pelanggan, periksa apakah itu sudah ada di organisasi Anda.
 
 ### <a name="look-for-an-existing-service-principal"></a>Mencari prinsipal layanan yang ada
 

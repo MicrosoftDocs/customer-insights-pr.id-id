@@ -2,6 +2,22 @@
   href: index.yml
 - name: Ikhtisar produk
   href: overview.md
+- name: Katalog pembelajaran
+  items:
+    - name: Memulai
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Menyerap data
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Buat profil pelanggan terpadu
+      href: /learn/modules/unified-customer-profile/
+    - name: Bekerja dengan wawasan audiens
+      href: /learn/modules/working-with-customer-insights/
+    - name: Memperkaya data dan membuat prediksi
+      href: /learn/modules/enrich-data/
+    - name: Mengelola koneksi eksternal
+      href: /learn/modules/configure-third-party-connections/
+    - name: Kelola Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: uji coba gratis
   items:
     - name: Daftar untuk uji coba gratis
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: Menangani akun bisnis
       href: audience-insights/work-with-business-accounts.md
-    - name: Pelajari modul
-      items:
-        - name: Menyerap data
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Buat profil pelanggan terpadu
-          href: /learn/modules/unified-customer-profile/
-        - name: Bekerja dengan aplikasi
-          href: /learn/modules/working-with-customer-insights/
-        - name: Memperkaya data dan prediksi
-          href: /learn/modules/enrich-data/
     - name: Sumber Data
       items:
         - name: Ikhtisar sumber data
@@ -276,13 +282,13 @@
           href: consent-management/set-consent-rules.md
     - name: Mengelola data persetujuan
       items:
-        - name: Aktifkan aturan persetujuan dalam wawasan audiens
+        - name: Aktifkan aturan persetujuan dalam audiens wawasan
           href: audience-insights/activate-consent.md
-        - name: Mengelola aturan persetujuan default di segmen wawasan audiens
+        - name: Mengelola aturan persetujuan default di segmen audiens insight
           href: audience-insights/change-default-consent-rules.md
     - name: Mengelola pengaturan dan pengguna
       items:
-        - name: Mengonfigurasi setelan sistem
+        - name: Mengonfigurasi pengaturan sistem
           href: consent-management/system-settings.md
         - name: Mengelola pengguna dan izin
           href: consent-management/manage-users.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: Permintaan dan hak DSR
   href: dsr-rights-requests.md
+- name: Dapatkan Dukungan
+  href: /power-platform/admin/get-help-support

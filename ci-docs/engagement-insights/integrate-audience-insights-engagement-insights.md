@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645586"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116018"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Membuat tautan antara wawasan audiens dan wawasan keterlibatan
 
@@ -25,7 +25,7 @@ Gunakan profil terpadu dan segmen dari audiens wawasan untuk pilihan analisis la
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Profil wawasan Audiens harus disimpan di akun Azure Data Lake Storage yang Anda miliki atau di data lake terkelola&ndash;[Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
+- Profil wawasan Audiens harus disimpan di akun Azure Data Lake Storage yang Anda miliki atau di data lake terkelola&ndash;[Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). 
 - Wawasan audiens Anda harus memiliki lingkungan Dataverse terkait. Dan jika lingkungan tersebut juga menggunakan Dataverse untuk penyimpanan data, pastikan Anda memeriksa pilihan **Aktifkan berbagi data** di wawasan audiens. Untuk informasi lebih lanjut, lihat [Membuat dan mengkonfigurasi lingkungan dalam wawasan audiens](../audience-insights/create-environment.md).
 - Anda memerlukan izin administrator untuk lingkungan wawasan keterlibatan dan wawasan audiens.
 - Lingkungan yang ditautkan harus berada di kawasan geografis yang sama.
