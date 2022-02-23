@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: id-ID
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008769"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Menganalisis sentimen dalam umpan balik pelanggan (Pratinjau)
 
 Pelanggan mengharapkan produk, layanan, dan pengalaman berkualitas tinggi akhir-akhir ini. Terutama pelanggan yang berbagi feedback. Sangat menantang bagi organisasi untuk menganalisis peningkatan volume data tanpa menurunkan akurasi dan biaya tenaga kerja yang lebih tinggi. Dynamics 365 Customer Insights Menawarkan model analisis sentimen untuk umpan balik pelanggan yang memungkinkan organisasi untuk menganalisis data mereka dengan lebih akurat dan dengan biaya lebih rendah.
