@@ -1,7 +1,7 @@
 ---
 title: Perkaya profil pelanggan dengan data dari Microsoft
-description: Gunakan data kepemilikan dari Microsoft untuk memperkaya data pelanggan Anda dengan afinitas dan Pangsa Suara.
-ms.date: 11/11/2021
+description: Gunakan data kepemilikan dari Microsoft untuk memperkaya data pelanggan Anda dengan afinitas merek dan minat.
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,29 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
-ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "7793708"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305160"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Memperkaya profil pelanggan dengan afinitas dan Pangsa Suara (pratinjau)
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Memperkaya profil pelanggan dengan merek dan afinitas minat (pratinjau)
 
-Gunakan data kepemilikan Microsoft untuk memperkaya data pelanggan Anda dengan afinitas merek, afinitas minat, dan Pangsa Suara (SoV). Afinitas dan SoV ini didasarkan pada data dari orang-orang dengan demografi yang mirip dengan pelanggan Anda. Informasi ini membantu Anda untuk lebih memahami dan mengelompokkan pelanggan Anda berdasarkan afinitas atau SoV mereka terhadap merek dan minat tertentu.
+Gunakan data kepemilikan dari Microsoft untuk memperkaya data pelanggan Anda dengan afinitas merek dan minat. Afinitas ini didasarkan pada data dari orang-orang dengan demografi yang serupa dengan pelanggan Anda. Informasi ini membantu Anda lebih memahami dan menyegmentasikan pelanggan berdasarkan minat mereka terhadap merek dan minat tertentu.
 
 Di wawasan audiens, buka **data** > **pengayaan** untuk [mengkonfigurasi dan melihat pengayaan](enrichment-hub.md).
 
-Untuk mengonfigurasi afinitas merek dan pengayaan SoV, buka **tab Temukan dan pilih Memperkaya data saya di ubin** **·** **Merek**.
+Untuk mengkonfigurasi pengayaan afinitas merek, buka tab **temukan** dan pilih **Perkaya data saya** di ubin **merek**.
 
-Untuk mengonfigurasi afinitas minat dan pengayaan SoV, buka **tab Temukan dan pilih Memperkaya data saya di ubin** **·** **Minat**.
+Untuk mengkonfigurasi pengayaan afinitas minat, buka tab **temukan** dan pilih **Perkaya data saya** di ubin **minat**.
 
    > [!div class="mx-imgBorder"]
-   > ![Petak merek dan minat.](media/BrandsInterest-tile-Hub.png "Petak merek dan minat")
+   > ![Petak merek dan minat](media/BrandsInterest-tile-Hub.png "Petak merek dan minat")
 
-## <a name="how-we-determine-affinities-and-sov"></a>Bagaimana kita menentukan afinitas dan SoV
+## <a name="how-we-determine-affinities"></a>Bagaimana kami menentukan afinitas
 
-Kami menggunakan data pencarian online Microsoft untuk menemukan afinitas dan SoV untuk merek dan minat di berbagai segmen demografis (ditentukan berdasarkan usia, jenis kelamin, atau lokasi). Volume pencarian online untuk merek atau minat membentuk dasar untuk menentukan afinitas atau SoV. Namun, masing-masing memberikan perspektif yang berbeda untuk memahami pelanggan Anda.
-
-- Afinitas adalah perbandingan di seluruh segmen demografis. Anda dapat menggunakan informasi ini untuk mengidentifikasi segmen demografis yang memiliki afinitas tertinggi untuk merek atau minat tertentu, dibandingkan dengan segmen lain.
-
-- Pangsa Suara adalah perbandingan di seluruh merek atau minat yang Anda pilih. Anda dapat menggunakan informasi ini untuk mengidentifikasi merek atau minat mana yang memiliki pangsa suara tertinggi untuk segmen demografis tertentu, dibandingkan dengan merek atau minat lain yang Anda pilih.
+Kami menggunakan data pencarian online Microsoft untuk menemukan afinitas untuk merek dan minat di berbagai segmen demografis (didefinisikan berdasarkan usia, jenis kelamin, atau lokasi). Volume pencarian online untuk merek atau minat menentukan seberapa besar afinitas yang dimiliki segmen demografis, dibandingkan dengan segmen lain, atas merek atau minat tersebut.
 
 ## <a name="affinity-level-and-score"></a>Tingkat afinitas dan skor
 
@@ -52,10 +48,6 @@ Pada setiap profil pelanggan yang diperkaya, kami menyediakan dua nilai terkait,
 |Kurang Penting     | 1-34        |
 
 Tergantung pada perincian yang ingin Anda ukur afinitasnya, Anda dapat menggunakan tingkat afinitas atau skor. Skor afinitas memberi Anda kontrol yang lebih akurat.
-
-## <a name="share-of-voice-sov"></a>Pangsa Suara (SoV)
-
-Kami menghitung SoV pada skala 100 poin. Total SoV di semua merek atau minat untuk setiap profil pelanggan yang diperkaya menambahkan hingga 100. Tidak seperti afinitas, SoV relatif terhadap merek dan minat yang Anda pilih. Misalnya, nilai SoV untuk 'Microsoft' bisa berbeda jika merek yang dipilih adalah ('Microsoft', 'GitHub') versus ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Negara/kawasan yang didukung
 
@@ -90,7 +82,7 @@ Tinjau preferensi pengayaan default dan perbarui jika diperlukan.
 
 ### <a name="select-entity-to-enrich"></a>Pilih entitas yang akan diperkaya
 
-Pilih **Entitas yang Diperkaya dan pilih himpunan data ingin Anda memperkaya dengan data dari** Microsoft. Anda dapat memilih entitas Pelanggan untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
+Pilih **Entitas yang diperkaya** dan pilih himpunan data yang ingin Anda perkaya dengan data perusahaan dari Microsoft. Anda dapat memilih entitas Pelanggan untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
 
 ### <a name="map-your-fields"></a>Petakan bidang Anda
 
@@ -124,25 +116,26 @@ Jalankan pengayaan setelah mengonfigurasi merek, minat, dan pemetaan bidang untu
 
 Tergantung pada ukuran data pelanggan Anda, diperlukan waktu beberapa menit untuk pengayaan yang dijalankan untuk diselesaikan.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda akan menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, serta semua kesalahan dan peringatan yang terkait dengan tugas.
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
 
 Setelah menjalankan proses pengayaan, buka **Pengayaan saya** untuk meninjau total jumlah pelanggan yang diperkaya dan perincian merek atau minat atas profil pelanggan yang diperkaya.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Pratinjau hasil setelah menjalankan proses pengayaan.":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Pratinjau hasil setelah menjalankan proses pengayaan":::
 
-Anda akan menemukan bagan dengan jumlah profil pelanggan yang diperkaya dari waktu ke waktu dan pratinjau entitas yang diperkaya. Tinjau data yang diperkaya dengan memilih **Lihat** selengkapnya di **bagan Tingkat Afinitas** atau **Pangsa** Suara. Data yang diperkaya untuk merek masuk ke **entitas BrandAffinityFromMicrosoft** dan **BrandShareOfVoiceDariMicrosoft.** Data untuk kepentingan ada di **entitas InterestAffinityDariMicrosoft** dan **InterestShareOfVoiceDariMicrosoft.** Anda juga akan menemukan entitas yang tercantum di grup **pengayaan** dalam **data** > **entitas**.
+Tinjau data yang diperkaya dengan memilih **Lihat data yang diperkaya** di diagram. Data yang diperkaya untuk merek beralih ke entitas **BrandAffinityFromMicrosoft**. Data untuk minat ada di entitas **InterestAffinityFromMicrosoft**. Anda juga akan menemukan entitas yang tercantum di grup **pengayaan** dalam **data** > **entitas**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Melihat data pengayaan pada kartu pelanggan
 
-Merek dan minat SoV juga dapat dilihat pada masing-masing kartu pelanggan. Buka **pelanggan** dan pilih profil pelanggan. Dalam kartu pelanggan, Anda akan menemukan grafik untuk merek atau minat SoV berdasarkan orang-orang di profil demografis pelanggan itu.
+afinitas Merek dan minat juga dapat dilihat pada kartu Pelanggan perorangan. Buka **pelanggan** dan pilih profil pelanggan. Di kartu pelanggan, Anda akan menemukan diagram untuk merek atau minat yang dimiliki afinitasnya oleh orang dalam profil demografi pelanggan.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartu pelanggan dengan data yang diperkaya.":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartu pelanggan dengan data yang diperkaya":::
 
-## <a name="next-steps"></a>Langkah berikutnya
+## <a name="next-steps"></a>Langkah-langkah berikutnya
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

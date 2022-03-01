@@ -1,20 +1,20 @@
 ---
 title: Konektor Power Apps
 description: Hubungkan Power Apps dengan Power Automate.
-ms.date: 10/01/2021
-ms.reviewer: mhart
+ms.date: 08/21/2020
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: Nils-2m
-ms.author: nikeller
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 985e6c85795fba8ca3063cdffc7f9012e798856a
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623227"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406037"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps connector (pratinjau)
 
@@ -22,55 +22,53 @@ Bawa profil pelanggan terpadu ke aplikasi Anda yang disesuaikan dengan Power App
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Hubungkan Power Apps dan Dynamics 365 Customer Insights
 
-Customer Insights adalah salah satu dari banyak [sumber yang tersedia untuk data di Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights adalah salah satu dari banyak [sumber yang tersedia untuk data di Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Lihat dokumentasi Power Apps untuk mempelajari cara [menambahkan sambungan data ke aplikasi](/powerapps/maker/canvas-apps/add-data-connection). Sebaiknya Anda juga meninjau [cara Power Apps menggunakan delegasi untuk menangani kumpulan data besar di aplikasi Canvas](/powerapps/maker/canvas-apps/delegation-overview).
+Lihat dokumentasi Power Apps untuk mempelajari cara [menambahkan sambungan data ke aplikasi](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Sebaiknya Anda juga meninjau [cara Power Apps menggunakan delegasi untuk menangani kumpulan data besar di aplikasi Canvas](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entitas yang tersedia
 
 Setelah menambahkan Customer Insights sebagai sambungan data, Anda dapat memilih entitas berikut di Power Apps:
 
-- **Pelanggan**: untuk menggunakan data dari [profil pelanggan terpadu](customer-profiles.md).
-- **UnifiedActivity**: untuk menampilkan [timeline aktivitas](activities.md) dalam aplikasi.
-- **ContactProfile**: untuk menampilkan kontak pelanggan. Entitas ini hanya tersedia di lingkungan Wawasan Audiens untuk akun bisnis.
+- Pelanggan: untuk menggunakan data dari [profil pelanggan terpadu](customer-profiles.md).
+- Aktivitas pelanggan terpadu: untuk menampilkan [Timeline aktivitas](activities.md) pada aplikasi.
 
 ## <a name="limitations"></a>Pembatasan
 
 ### <a name="retrievable-entities"></a>Entitas yang dapat diambil
 
-Anda hanya dapat mengambil entitas **Pelanggan**, **UnifiedActivity**, **Segmen**, dan **ContactProfile** melalui konektor Power Apps. ContactProfile ini hanya tersedia di instans Wawasan Audiens untuk akun bisnis. Entitas lain ditampilkan karena konektor yang mendasari mendukung mereka melalui pemicu di Power Automate.
+Anda hanya dapat mengambil entitas **pelanggan**, **unifiedactivity**, dan **segmen** melalui Power Apps connector. Entitas lain ditampilkan karena konektor yang mendasari mendukung mereka melalui pemicu di Power Automate.  
 
 ### <a name="delegation"></a>Delegasi
 
-Delegasi bekerja untuk entitas **pelanggan** dan entitas **UnifiedActivity**. 
+Delegasi bekerja untuk entitas pelanggan dan entitas UnifiedActivity. 
 
 - Delegasi untuk entitas **pelanggan**: untuk menggunakan delegasi untuk entitas ini, bidang harus diindeks dalam [index pencarian & Filter](search-filter-index.md).  
-- Delegasi untuk **unifiedactivity** : delegasi untuk entitas ini hanya berfungsi untuk bidang **activityid** dan **customerid**.  
-- Delegasi untuk **ContactProfile**: Delegasi untuk entitas ini hanya berfungsi untuk bidang **ContactId** dan **CustomerId**. ContactProfile ini hanya tersedia di lingkungan Wawasan Audiens untuk akun bisnis.
 
-Untuk informasi lebih lanjut tentang delegasi, buka [fungsi dan operasi yang dapat didelegasikan Power Apps](/powerapps/maker/canvas-apps/delegation-overview). 
+- Delegasi untuk **unifiedactivity** : delegasi untuk entitas ini hanya berfungsi untuk bidang **activityid** dan **customerid**.  
+
+- Untuk informasi lebih lanjut tentang delegasi, lihat [fungsi dan operasi Power Apps yang dapat didelegasikan](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Kontrol galeri contoh
 
-Anda dapat menambahkan profil pelanggan ke [kontrol galeri](/powerapps/maker/canvas-apps/add-gallery).
+Misalnya, Anda menambahkan profil pelanggan ke [kontrol Galeri](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
 
-1. Tambahkan kontrol **galeri** ke aplikasi yang sedang Anda bangun.
+1. Tambahkan **kontrol galeri** ke aplikasi yang sedang Anda bangun.
+
+> [!div class="mx-imgBorder"]
+> ![Menambahkan elemen galeri](media/connector-powerapps9.png "Menambahkan elemen galeri")
+
+1. Pilih **pelanggan** sebagai sumber data item.
 
     > [!div class="mx-imgBorder"]
-    > ![Menambahkan elemen galeri.](media/connector-powerapps9.png "Menambahkan elemen galeri.")
+    > ![Pilih sumber data](media/choose-datasource-powerapps.png "Pilih sumber data")
 
-2. Pilih **pelanggan** sebagai sumber data item.
+1. Anda dapat mengubah panel data di sebelah kanan untuk memilih bidang untuk entitas Pelanggan yang akan ditampilkan di galeri.
 
-    > [!div class="mx-imgBorder"]
-    > ![Pilih sumber data.](media/choose-datasource-powerapps.png "Pilih sumber data.")
+1. Jika Anda ingin menampilkan bidang apa pun dari pelanggan yang dipilih di Galeri, isi properti teks label:  **{Name_of_the_gallery}.Selected.{property_name}**
 
-3. Anda dapat mengubah panel data di sebelah kanan untuk memilih bidang untuk entitas Pelanggan yang akan ditampilkan di galeri.
+    Contoh: Gallery1. Selected. address1_city
 
-4. Jika Anda ingin menampilkan bidang apa pun dari pelanggan yang dipilih di Galeri, isi properti **teks** label dengan **{Name_of_the_gallery}.Selected.{property_name}**  
-    - Contoh: _Gallery1. Selected. address1_city_
+1. Untuk menampilkan Timeline terpadu untuk pelanggan, tambahkan elemen Galeri, dan tambahkan properti item: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
-5. Untuk menampilkan Timeline terpadu untuk pelanggan, tambahkan elemen Galeri, dan tambahkan properti **item** dengan **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
-    - Contoh: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+    Contoh: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)

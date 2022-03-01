@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Snapchat
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618664"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760555"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Mengekspor segmen ke Snapchat (pratinjau)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Mengekspor daftar segmen ke Snapchat (pratinjau)
 
 Ekspor segmen profil pelanggan terpadu ke Snapchat dan gunakan untuk periklanan. 
 
@@ -29,7 +29,7 @@ Ekspor segmen profil pelanggan terpadu ke Snapchat dan gunakan untuk periklanan.
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
 - Mengekspor ke Snapchat terbatas pada segmen.
-- Mengekspor hingga 1 juta profil pelanggan ke Snapchat dapat berlangsung selama 15 menit. 
+- Mengekspor hingga 1 juta profil ke Snapchat dapat memakan waktu hingga 15 menit untuk diselesaikan. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Konfigurasikan koneksi ke Snapchat
 
@@ -63,7 +63,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan [**ID audiens Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Segmen harus diekspor ke Snapchat.
+1. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Segmen harus diekspor ke Snapchat.
 
 1. Pilih segmen yang ingin diekspor. 
 

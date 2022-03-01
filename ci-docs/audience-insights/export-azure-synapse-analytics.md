@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Azure Synapse Analytics
 description: Pelajari lebih lanjut cara mengkonfigurasi sambungan ke Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951046"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327368"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Ekspor data ke Azure Synapse Analytics (pratinjau)
 
@@ -49,8 +49,6 @@ Di Azure:
 
 ### <a name="configure-a-connection"></a>Mengonfigurasi koneksi
 
-Untuk membuat koneksi, prinsipal layanan dan akun pengguna di Customer Insights memerlukan **izin Pembaca pada grup sumber daya tempat ruang kerja Synapse Analytics** *berada*. Selain itu, prinsip layanan dan pengguna di ruang kerja Synapse Analytics memerlukan **izin Synapse** Administrator. 
-
 1. Buka **Admin** > **Koneksi**.
 
 1. Pilih **Tambah koneksi** dan pilih **Azure Synapse Analytics** atau pilih **Konfigurasi** dalam petak **Azure Synapse Analytics** untuk mengonfigurasikan koneksi.
@@ -65,7 +63,7 @@ Untuk membuat koneksi, prinsipal layanan dan akun pengguna di Customer Insights 
 
 ### <a name="configure-an-export"></a>Mengonfigurasi ekspor
 
-Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk mengonfigurasi ekspor dengan koneksi bersama, Anda memerlukan setidaknya **kontributor izin dalam Wawasan** Pelanggan. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
 
 1. Buka **Data** > **Ekspor**.
 
@@ -84,8 +82,6 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 Menyimpan ekspor tidak segera menjalankan ekspor.
 
 Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand).
-
-Untuk meminta data yang diekspor ke Synapse Analytics, Anda memerlukan **Data Blob Penyimpanan Pembaca** akses ke penyimpanan tujuan di ruang kerja ekspor. 
 
 ### <a name="update-an-export"></a>Memperbarui ekspor
 

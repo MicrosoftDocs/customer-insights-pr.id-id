@@ -1,7 +1,7 @@
 ---
 title: Mengekspor data Customer Insights ke Microsoft Advertising
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618065"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124504"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Mengekspor segmen ke Microsoft Advertising (pratinjau)
 
@@ -29,9 +29,9 @@ Ekspor segmen Customer Insights ke Microsoft Advertising untuk membuat audiens C
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 500.000 profil pelanggan per ekspor ke Microsoft Advertising.
+- Anda dapat mengekspor hingga 500 ribu profil per ekspor ke Microsoft Advertising.
 - Mengekspor ke Microsoft Advertising terbatas pada segmen.
-- Mengekspor hingga 500.000 profil pelanggan ke Microsoft Advertising dapat berlangsung selama 10 menit. 
+- Mengekspor hingga 500 ribu profil ke Microsoft Advertising dapat memakan waktu hingga 10 menit untuk diselesaikan. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Siapkan sambungan ke Microsoft Advertising
@@ -68,7 +68,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan **ID Pelanggan Microsoft Advertising dan ID Akun** Anda. Anda dapat menemukan ID Pelanggan (`cid`) dan ID Akun (`aid`) dalam parameter URL saat Anda masuk ke Microsoft Advertising.
 
-1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang dengan alamat email pelanggan. Segmen harus diekspor ke Microsoft Advertising.
+1. Di bagian **Pencocokan data**, di bidang **email** pilih bidang di profil pelanggan terpadu Anda dengan alamat email pelanggan. Segmen harus diekspor ke Microsoft Advertising.
 
 1. Pilih **Simpan**.
 

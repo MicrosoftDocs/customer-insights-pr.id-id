@@ -4,17 +4,17 @@ description: Cara membuat, mengedit, dan menghapus segmen serta lokasi penggunaa
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623591"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036152"
 ---
 # <a name="view-and-create-segments"></a>Melihat dan membuat segmen
 
@@ -44,27 +44,22 @@ Bagian ini menjelaskan cara membuat *segmen kosong* dari awal.
 
 1. pilih **Segmen baru**.
 
-1. Di **Pustaka Sumber Daya**, pilih (+) di sebelah atribut yang akan difilter. Saat ini, Anda hanya dapat membuat segmen berdasarkan dimensi.
+1. Di **pustaka Sumber Daya**, pilih atribut untuk memfilter. Saat ini, Anda hanya dapat membuat segmen berdasarkan dimensi.
 
-   :::image type="content" source="media/create-new-segment.png" alt-text="Buat segmen baru.":::
-
-1. Di bagian **Aturan**, pilih operator dan nilai untuk atribut yang dipilih. Operasi berikut didukung.
-
-   :::image type="content" source="media/choose-operator-segment.png" alt-text="Pilih operator untuk segmen baru Anda.":::
-
+1. Pilih operator dan nilai untuk atribut dipilih. Operasi berikut didukung.
    - **is**: memerlukan pencocokan sama persis untuk mencakup nilai. Menggunakan **equal to** untuk satu nilai atau **any of** untuk mencakup beberapa nilai.
    - **is not**: memerlukan pencocokan sama persis untuk memisahkan nilai. Menggunakan **equal to** untuk satu nilai atau **any of** untuk mencakup beberapa nilai.
    - **starts with**: string yang mengawali nilai yang cocok.
    - **ends with**: string yang mengakhiri nilai yang cocok.
    - **contains**: string yang terdapat dalam nilai yang cocok.
 
-1. Untuk menambahkan kondisi lainnya ke grup, Anda dapat menggunakan operator logika. Atribut yang diproyeksikan digunakan saat menggunakan operator yang ditentukan.
+1. Untuk menambahkan kondisi ke grup, Anda dapat menggunakan dua operator logika. Atribut yang diproyeksikan digunakan saat menggunakan operator yang ditentukan.
    - Operator **AND**: kedua kondisi harus dipenuhi sebagai bagian dari proses segmentasi. Pilihan ini paling berguna saat Anda menentukan kondisi di seluruh entitas yang berbeda.
    - Operator **OR**: Salah satu dari kondisi harus dipenuhi sebagai bagian dari proses segmentasi. Pilihan ini paling berguna saat Anda menentukan beberapa kondisi untuk entitas yang sama.
 
 1. Pilih **Simpan** dan nama segmen. 
 
-Segmen akan didaftarkan pada halaman **Segmen** dan Anda dapat menerapkannya ke semua laporan dan corong di ruang kerja.
+Segmen akan didaftarkan pada halaman Segmen dan Anda dapat menerapkannya ke semua laporan dan corong di ruang kerja.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Menggunakan segmen dalam laporan atau corong
 
@@ -72,7 +67,7 @@ Anda dapat menerapkan segmen ke laporan atau corong untuk memfilternya berdasark
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Laporan tampilan halaman dengan daftar dropdown diperluas untuk memilih segmen yang akan diterapkan.":::
 
-Untuk menerapkan segmen, buka laporan atau corong. Pilih **+ Tambah kondisi**, lalu pilih **Filter berdasarkan segmen**. Pilih segmen dari daftar yang ingin Anda terapkan. Segmen diterapkan ke laporan. Jika diagram tidak mendukung segmen, diagram akan menampilkan kesalahan. Untuk informasi lebih lanjut, lihat [Membuat dan mengelola laporan corong](funnel-reports.md).
+Untuk menerapkan segmen, buka laporan atau corong. Pilih **Tambah kondisi**, lalu pilih **Filter berdasarkan segmen**. Pilih segmen dari daftar yang ingin Anda terapkan. Segmen diterapkan ke laporan. Jika diagram tidak mendukung segmen, diagram akan menampilkan kesalahan.
  
 Anda dapat menerapkan *hingga tiga segmen* ke laporan atau corong.
 
@@ -96,7 +91,5 @@ Anda dapat menerapkan *hingga tiga segmen* ke laporan atau corong.
 1. Dalam daftar segmen, pilih **Lainnya [...]**. 
 1. Pilih **Hapus** dari daftar dropdown.
 1. Untuk mengonfirmasikan, pilih **Hapus**.
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cbeac7e25d83df152c38d1c59cc6734a3d1fee97
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618571"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466766"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Pengayaan profil pelanggan dengan Azure Maps (pratinjau)
 
@@ -86,7 +86,7 @@ Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lih
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tindakan](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman yang disesuaikan bagi pelanggan Anda.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 

@@ -1,75 +1,50 @@
 ---
-title: Mengekspor data Customer Insights ke Penyimpanan Azure Blob
-description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke penyimpanan Blob.
-ms.date: 10/06/2021
-ms.reviewer: mhart
+title: Mengekspor data Customer Insights ke penyimpanan Azure Blob
+description: Pelajari cara mengkonfigurasi sambungan ke Penyimpanan Blob Azure.
+ms.date: 09/18/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: 925b53260e7c633e17d7f172d2dd2d581e982e10
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605854"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667143"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Mengekspor daftar segmen dan data lainnya ke Penyimpanan Blob Azure (pratinjau)
+# <a name="connector-for-azure-blob-storage-preview"></a>Konektor untuk Penyimpanan Blob Azure (pratinjau)
 
-Simpan data Customer Insights Anda di penyimpanan Blob atau gunakan untuk mentransfer data ke aplikasi lainnya.
+Simpan data Customer Insights Anda di Azure Data Lake storage atau gunakan untuk mentransfer data Anda ke aplikasi lain.
 
-## <a name="known-limitations"></a>Pembatasan yang diketahui
+## <a name="configure-the-connector-for-azure-blob-storage"></a>Konfigurasikan konektor untuk Penyimpanan Blob Azure
 
-1. Untuk Azure Blob Storage, Anda dapat memilih antara [tingkat performa Standar dan performa Premium](/azure/storage/blobs/storage-blob-performance-tiers). Jika Anda memilih tingkat performa Premium, pilih [blob blok premium sebagai jenis akun](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+1. Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Siapkan sambungan ke penyimpanan Blob
+1. Di **Penyimpanan Blob Azure**, pilih **konfigurasi**.
 
-1. Buka **Admin** > **Koneksi**.
+1. Masukkan **nama akun**, **kunci akun**, dan **penampung** untuk akun penyimpanan Blob Azure Anda.
+    - Untuk mempelajari lebih lanjut tentang cara menemukan kunci akun dan nama akun penyimpanan Azure Blob, lihat [mengelola pengaturan akun penyimpanan di portal Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Untuk mempelajari cara membuat penampung, lihat [membuat penampung](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Pilih **Tambahkan koneksi** dan pilih **penyimpanan Blob Azure** untuk mengonfigurasi koneksi.
+1. Beri nama yang dikenali di bidang **nama tampilan** tujuan anda.
 
-1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
-
-1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Masukkan **Nama akun**, **Kunci akun**, dan **Wadah** untuk akun penyimpanan Blob Anda.
-    - Untuk mempelajari selengkapnya tentang cara menemukan nama akun penyimpanan Blob dan kunci akun, lihat [Mengelola pengaturan akun penyimpanan di portal Azure](/azure/storage/common/storage-account-manage).
-    - Untuk mempelajari cara membuat penampung, lihat [membuat penampung](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-
-1. Pilih **Simpan** untuk menyelesaikan koneksi. 
-
-## <a name="configure-an-export"></a>Mengonfigurasi ekspor
-
-Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
-
-> [!IMPORTANT]
-> Jika Anda mengaktifkan pengaturan penghapusan lunak untuk akun Azure Blob Storage, ekspor akan gagal. Nonaktifkan penghapusan lunak untuk mengekspor data ke blob. Untuk informasi selengkapnya, lihat [Mengaktifkan penghapusan lunak blob](/azure/storage/blobs/soft-delete-blob-enable.md)
-
-1. Buka **Data** > **Ekspor**.
-
-1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
-
-1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Penyimpanan Blob Azure. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
+1. Pilih **Selanjutnya**.
 
 1. Centang kotak di samping masing-masing entitas yang akan diekspor ke tujuan ini.
 
 1. Pilih **Simpan**.
 
-Menyimpan ekspor tidak segera menjalankan ekspor.
+Data yang diekspor disimpan dalam wadah penyimpanan Azure Blob yang Anda konfigurasikan. Jalur folder berikut dibuat secara otomatis dalam penampung:
 
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).     
-
-Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
-
-Data yang diekspor disimpan dalam wadah Blob Storage yang dikonfigurasi. Jalur folder berikut dibuat secara otomatis dalam penampung:
-
-- Untuk entitas sumber dan entitas yang dihasilkan oleh sistem:   
-  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
+- Untuk entitas sumber dan entitas yang dihasilkan oleh sistem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
-- Model.json untuk entitas yang diekspor akan berada di tingkat %ExportDestinationName%.  
+- Model .JSON untuk entitas yang diekspor akan berada di tingkat %ExportDestinationName%
   - Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+## <a name="export-the-data"></a>Mengekspor data
+
+Anda dapat [mengekspor data sesuai permintaan](/export-destinations.md#export-data-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).

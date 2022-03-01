@@ -2,19 +2,19 @@
 title: Konsumsi data real-time dan keterbatasan
 description: Informasi umum tentang kemampuan real-time dalam wawasan audiens.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035281"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689179"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Konsumsi data real-time (pratinjau)
 
@@ -54,7 +54,7 @@ API real-time memungkinkan Anda mempublikasikan aktivitas baru dari sistem sumbe
 
 Ada dua cara untuk menyambung ke API real-time:
 
-- [secara tidak langsung](#connect-via-the-dynamics-365-customer-insights-connector), menggunakan [Dynamics 365 Customer Insights connector](/connectors/customerinsights/)
+- [secara tidak langsung](#connect-via-the-dynamics-365-customer-insights-connector), menggunakan [Dynamics 365 Customer Insights connector](https://docs.microsoft.com/connectors/customerinsights/)
 - [secara langsung](#connect-directly-to-the-real-time-api), dengan kode
 
 Kedua cara sama-sama memiliki prasyarat berikut:
@@ -66,13 +66,13 @@ Kedua cara sama-sama memiliki prasyarat berikut:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Sambungkan melalui Dynamics 365 Customer Insights connector
 
-Real-Time API dapat menyerap data dari Power Platform connector khusus, [Dynamics 365 Customer Insights connector](/connectors/customerinsights/), tanpa harus menulis dan menyebarkan kode apa pun.    
-Konektor dapat melakukan tindakan real-time yang sama dengan API. Anda memerlukan lisensi yang valid untuk konektor Premium. Untuk informasi lebih lanjut, lihat [pertanyaan umum lisensi Power Automate dan Power Apps](/power-platform/admin/powerapps-flow-licensing-faq).
+Real-Time API dapat menyerap data dari Power Platform connector khusus, [Dynamics 365 Customer Insights connector](https://docs.microsoft.com/connectors/customerinsights/), tanpa harus menulis dan menyebarkan kode apa pun.    
+Konektor dapat melakukan tindakan real-time yang sama dengan API. Anda memerlukan lisensi yang valid untuk konektor Premium. Untuk informasi lebih lanjut, lihat [pertanyaan umum lisensi Power Automate dan Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps dan/atau Power Automate](/connectors/)
-- Azure [Aplikasi Logika](/azure/connectors/apis-list)
+- Power Platform [Power Apps dan/atau Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Aplikasi Logika](https://docs.microsoft.com/azure/connectors/apis-list)
 
-Untuk rincian tentang pembuatan alur, lihat [dokumentasi Power Automate](/power-automate/).
+Untuk rincian tentang pembuatan alur, lihat [dokumentasi Power Automate](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Terhubung langsung ke API real-time
 
@@ -83,7 +83,6 @@ Rincian API ini, termasuk parameter dan respons, dapat ditemukan di bagian **Ent
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami penggunaan real-time Anda dengan telemetri
 
-Dapatkan ikhtisar tentang volume permintaan ke API real-time dan informasi tentang masalah yang mungkin dihadapi sistem. Anda dapat [mengakses telemetri real-time](system.md#api-usage-tab). 
+Dapatkan ikhtisar tentang volume permintaan ke API real-time dan informasi tentang masalah yang mungkin dihadapi sistem. Anda dapat [mengakses telemetri real-time](system.md#api-usage-tab) dengan membuka **admin** > **sistem** > **penggunaan api**. Di tabel **operasi**, baris untuk operasi API yang menggunakan metode real-time berisi tombol untuk menampilkan penggunaan api real-time. Tombol ini divisualisasikan dengan simbol teropong. Pilih tombol untuk membuka panel samping berisi rincian penggunaan untuk penggunaan API real-time di lingkungan saat ini.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Gunakan pemilih **Kelompokkan menurut** untuk memilih cara terbaik untuk menyajikan interaksi real-time Anda di Timeline mulai dari 24 jam terakhir hingga 30 hari terakhir. Anda dapat mengelompokkan data berdasarkan metode API, nama berkualifikasi entitas (entitas yang diserap), dibuat oleh (sumber aktivitas), hasil (keberhasilan atau kegagalan), atau kode kesalahan. Data tersedia dalam bentuk grafik riwayat dan sebagai tabel.

@@ -1,65 +1,43 @@
 ---
 title: Ekspor data Customer Insights ke Azure Data Lake Storage Gen2
 description: Pelajari cara mengkonfigurasi sambungan ke Azure Data Lake Storage Gen2.
-ms.date: 10/06/2021
-ms.reviewer: mhart
+ms.date: 02/04/2021
+ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: stefanie-msft
-ms.author: sthe
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 934c396559d4c4be8e640917d2265805753eb62d
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605907"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477183"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Mengekspor daftar segmen dan data lainnya ke Azure Data Lake Storage Gen2 (pratinjau)
+# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Konektor untuk Azure Data Lake Storage Gen2 (pratinjau)
 
-Simpan data Customer Insights Anda di akun Data Lake Storage Gen2 atau gunakan untuk mentransfer data Anda ke aplikasi lain.
+Simpan data Customer Insights Anda di Azure Data Lake Storage Gen2 atau gunakan untuk mentransfer data ke aplikasi lainnya.
 
-## <a name="known-limitations"></a>Pembatasan yang diketahui
+## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a>Mengkonfigurasi konektor untuk Azure Data Lake Storage Gen2
 
-1. Untuk Azure Data Lake Storage Gen2, Anda dapat memilih antara [tingkat performa Standar dan tingkat performa Premium](/azure/storage/blobs/create-data-lake-storage-account) saat membuat akun penyimpanan untuk data lake. Jika Anda memilih tingkat performa Premium, pilih blob blok premium sebagai jenis akun. 
+1. Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.
 
+1. Dalam **Azure Data Lake Storage Gen2**, pilih **Konfigurasi**.
 
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Siapkan sambungan ke Azure Data Lake Storage Gen2 
-
-
-1. Buka **Admin** > **Koneksi**.
-
-1. Pilih **Tambahkan koneksi** dan pilih **Azure Data Lake Gen 2** untuk mengonfigurasi koneksi.
-
-1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
-
-1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Beri nama yang dikenali di bidang **nama tampilan** tujuan anda.
 
 1. Masukkan **Nama akun**, **Kunci akun**, dan **Wadah** untuk Azure Data Lake Storage Gen2 Anda.
-    - Untuk mempelajari cara membuat akun penyimpanan yang akan digunakan dengan Azure Data Lake Storage Gen2, lihat [Membuat akun penyimpanan](/azure/storage/blobs/create-data-lake-storage-account). 
-    - Untuk mempelajari selengkapnya tentang nama akun Azure Data Lake Gen 2 dan kunci akun, lihat [Mengelola pengaturan akun penyimpanan di portal Azure](/azure/storage/common/storage-account-manage).
+    - Untuk mempelajari cara membuat akun penyimpanan yang akan digunakan dengan Azure Data Lake Storage Gen2, lihat [Membuat akun penyimpanan](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
+    - Untuk mempelajari lebih lanjut tentang cara menemukan nama akun dan kunci akun penyimpanan Azure Data Lake Gen2, lihat [Mengelola pengaturan akun penyimpanan di portal Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
 
-1. Pilih **Simpan** untuk menyelesaikan koneksi. 
-
-## <a name="configure-an-export"></a>Mengonfigurasi ekspor
-
-Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
-
-1. Buka **Data** > **Ekspor**.
-
-1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
-
-1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian **Azure Data Lake**. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+1. Pilih **Selanjutnya**.
 
 1. Centang kotak di samping masing-masing entitas yang akan diekspor ke tujuan ini.
 
 1. Pilih **Simpan**.
 
-Menyimpan ekspor tidak segera menjalankan ekspor.
+## <a name="export-the-data"></a>Mengekspor data
 
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
-
-Data yang diekspor disimpan dalam wadah penyimpanan Azure Data Lake Gen 2 yang dikonfigurasi. 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Anda dapat [mengekspor data sesuai permintaan](export-destinations.md#export-data-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).

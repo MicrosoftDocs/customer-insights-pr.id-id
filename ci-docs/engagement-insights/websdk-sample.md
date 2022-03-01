@@ -4,17 +4,17 @@ description: Pelajari cara mempersonalisasikan dan menjalankan sampel SDK web.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/01/2021
+ms.date: 10/30/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606225"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036607"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Jalankan sampel SDK web untuk kemampuan wawasan keterlibatan Dynamics 365 Customer Insights
 
@@ -26,7 +26,7 @@ Pustaka SDK web kemampuan wawasan keterlibatan adalah pustaka JavaScript dengan 
 
 - Instal [Kode Visual Studio](https://code.visualstudio.com/).
 - [Instal ekstensi Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) dalam Kode Visual Studio dan kenali cara menjalankan Live Server.
-- Anda harus memiliki [ruang kerja wawasan keterlibatan](create-workspace.md).
+- Anda harus memiliki [kunci penyerapan](instrument-website.md).
 
 ## <a name="run-sample"></a>Jalankan sampel
 
@@ -36,11 +36,7 @@ Pustaka SDK web kemampuan wawasan keterlibatan adalah pustaka JavaScript dengan 
 
 1. Buka folder yang di-zip dari Code Visual Studio.
 
-1. Buka portal wawasan keterlibatan untuk ruang kerja Anda. Pilih **admin** > **Ruang Kerja**  lalu **Panduan penginstalan**. Ikuti pilihan pertama, lalu pilih **Salin kode** untuk menyalin cuplikan kode JavaScript.
-
-1. Di file `ei_websdk_sample.html`, rekatkan cuplikan kode yang baru saja Anda salin di bawah baris ini:
-
-   - <-- REKATKAN CUPlIKAN KODE JAVASCRIPT DARI PORTAL WAWASAN KETERLIBATAN DI BAWAH BARIS INI -->
+1. Di file `ei_websdk_sample.html`, ganti string "INGESTION_KEY" dengan kunci penyerapan dari portal kemampuan wawasan keterlibatan, dan string "NAME" dengan nama global yang diinginkan agar SDK dipakai di dalamnya. Pastikan Anda mengganti semua kejadian.
 
 1. Buka file `ei_websdk_sample.html` menggunakan Live Server in Code Visual Studio dengan memilih **Tayangkan Langsung** dari bilah status.
 

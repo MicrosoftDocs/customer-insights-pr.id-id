@@ -2,19 +2,19 @@
 title: Panduan sampel prediksi kehilangan pelanggan langganan
 description: Gunakan contoh panduan ini untuk mencoba model prediksi kehilangan pelanggan langganan bawaan.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e2360c707bcbdfa64482f06f0a0cd0783a377b4fd79620ffd3cc1c9c6cad9ed3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
+ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029587"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "4653984"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan langganan (pratinjau)
 
@@ -22,7 +22,7 @@ Kami akan menjelaskan kepada Anda contoh akhir dari prediksi kehilangan pelangga
 
 ## <a name="scenario"></a>Skenario
 
-Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang mereka jual melalui situs web Kopi Contoso mereka. Mereka baru saja memulai bisnis langganan untuk pelanggan mereka agar mendapatkan kopi secara teratur. Tujuannya adalah untuk memahami, pelanggan langganan mana yang dapat membatalkan langganan dalam beberapa bulan ke depan. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
+Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang dijual melalui situs web Kopi Aswono. Mereka baru saja memulai bisnis langganan untuk pelanggan mereka agar mendapatkan kopi secara teratur. Tujuannya adalah untuk memahami, pelanggan langganan mana yang dapat membatalkan langganan dalam beberapa bulan ke depan. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -46,9 +46,10 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **DateOfBirth**: tanggal
    - **CreatedOn**: Tanggal/Waktu/Zona
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Ubah tanggal lahir sampai saat ini.":::
+   [!div class="mx-imgBorder"]
+   ![Mengubah DoB ke Tanggal](media/ecommerce-dob-date.PNG "Ubah tanggal lahir sampai saat ini")
 
-1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommerceContacts**
+1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommerceContacts**
 
 1. Simpan Sumber Data.
 
@@ -66,7 +67,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **RewardsPoints**: Bilangan Cacah
    - **CreatedOn**: Waktu/Tanggal
 
-1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
+1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
 
 1. Simpan Sumber Data.
 
@@ -89,7 +90,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **Is_auto_renew**: Benar/Salah
    - **RecurringFrequencyInMonths**: Bilangan Cacah
 
-1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **subscriptionhistory**.
+1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **subscriptionhistory**.
 
 1. Simpan Sumber Data.
 
@@ -128,9 +129,9 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
 
-1. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
+1. Di daftar drop-down **utama**, pilih **ecommercecontacts: eCommerce** sebagai sumber utama dan mencakup semua rekaman.
 
-1. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
+1. Pada daftar drop-down **entitas 2**, pilih **Loycustomer: LoyaltyScheme** dan sertakan semua rekaman.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Satukan dan cocokkan eCommerce dan Loyalty.":::
 
@@ -138,16 +139,16 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Tambahkan kondisi pertama Anda menggunakan FullName.
 
-   * Untuk eCommerceContacts, pilih **FullName** di dropdown.
-   * Untuk loyCustomers, pilih **FullName** di dropdown.
+   * Untuk eCommerceContacts, pilih **fullname** di drop-down.
+   * Untuk loyCustomers, pilih **fullname** di drop-down.
    * Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
 1. Masukkan nama **fullname, email** untuk aturan baru.
 
    * Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   * Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
-   * Untuk entitas loyCustomers, pilih **EMail** di dropdown. 
+   * Untuk eCommerceContacts entitas, pilih **email** di drop-down.
+   * Untuk loyCustomers entitas, pilih **email** di drop-down. 
    * Biarkan Normalkan kosong. 
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
@@ -229,6 +230,3 @@ Anda dapat membuat segmen baru berdasarkan entitas yang dibuat oleh model.
 Anda sekarang memiliki segmen yang diperbarui secara dinamis yang mengidentifikasi pelanggan berisiko kehilangan pelanggantinggi untuk bisnis langganan ini.
 
 Untuk informasi lebih lanjut, lihat [Membuat dan mengelola segmen](segments.md).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

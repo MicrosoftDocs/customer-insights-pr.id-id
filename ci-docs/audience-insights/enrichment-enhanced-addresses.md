@@ -1,7 +1,7 @@
 ---
 title: Pengayaan peningkatan alamat (berisi video)
 description: Perkaya dan normalisasi informasi alamat profil pelanggan dengan model Microsoft.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010905"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934927"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang disempurnakan
 
@@ -100,17 +100,17 @@ Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda jug
 
 Setelah proses pengayaan selesai, Anda dapat meninjau data profil pelanggan baru yang diperkaya di dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
 
-Anda dapat melihat sampel data yang diperkaya di ubin pratinjau **pelanggan yang** diperkaya. Pilih **Lihat selengkapnya** **dan pilih tab Data** untuk mengakses tampilan terperinci dari setiap profil yang diperkaya.
+Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lihat data yang diperkaya**.
 
 ### <a name="overview-card"></a>Kartu gambaran umum
 
 Kartu ikhtisar menunjukkan rincian tentang cakupan pengayaan. 
 
-* **Alamat diproses dan diubah**: Jumlah profil pelanggan dengan alamat yang berhasil diperkaya.
+* **Pelanggan diproses dan** diubah: Jumlah profil pelanggan yang berhasil diperkaya.
 
-* **Alamat diproses dan tidak diubah**: Jumlah profil pelanggan dengan alamat yang diakui tetapi tidak diubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
+* **Pelanggan diproses dan tidak** berubah: Jumlah profil pelanggan yang diakui tetapi tidak berubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
 
-* **Alamat tidak diproses dan tidak diubah**: Jumlah profil dengan alamat yang tidak dikenali. Biasanya untuk input data yang tidak valid atau tidak didukung oleh pengayaan.
+* **Pelanggan tidak diproses dan tidak** berubah: Jumlah profil yang tidak diakui. Biasanya untuk input data yang tidak valid atau tidak didukung oleh pengayaan.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 

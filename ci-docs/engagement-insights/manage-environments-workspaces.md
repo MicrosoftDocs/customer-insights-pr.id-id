@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673794"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645450"
 ---
 # <a name="manage-environments-and-workspaces"></a>Mengelola lingkungan dan ruang kerja
 
@@ -24,7 +24,7 @@ ms.locfileid: "7673794"
 
 Topik ini akan membahas cara mengelola ruang kerja dan lingkungan setelah dibuat. 
 
-- *Ruang kerja* adalah ruang menyimpan dan mengelola aktivitas dan laporan. Di sini Anda dapat melihat aktivitas pengguna secara real time. Saat membuat ruang kerja, Anda dapat memilih jenis data untuk dikirimkan ke ruang kerja. Saat ini, data web dan aplikasi perangkat bergerak didukung. Untuk informasi selengkapnya, lihat [Membuat ruang kerja baru dan menambahkan anggota](create-workspace.md).
+- *Ruang kerja* adalah ruang menyimpan dan mengelola aktivitas dan laporan. Di sini Anda dapat melihat aktivitas pengguna secara real time. Saat membuat ruang kerja, Anda dapat memilih jenis data untuk dikirimkan ke ruang kerja. Saat ini, data web dan aplikasi perangkat bergerak didukung. Untuk informasi lebih lanjut, lihat [Membuat ruang kerja dan menambahkan anggota](create-workspace.md).
 
 - *Lingkungan* adalah ruang yang memungkinkan Anda mengelola ruang kerja dan sambungan. Untuk informasi lebih lanjut, lihat [Membuat lingkungan baru](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Anda dapat mengelola beberapa ruang kerja secara bersamaan di lingkungan. [Peran
 
 ### <a name="delete-a-workspace"></a>Hapus ruang kerja
 
-Menghapus ruang kerja secara permanen menghapus semua konten, data, pengaturan, dan izinnya. Ini tidak dapat dibatalkan.
+Menghapus ruang kerja akan menghapus semua konten, data, pengaturan, dan izinnya secara permanen. Ini tidak dapat dibatalkan.
 
 1. Buka **Admin** > **Ruang kerja** dan pilih **Pengaturan**.
 
@@ -71,11 +71,19 @@ Sebagai admin Lingkungan, Anda dapat mengakses lingkungan dari panel navigasi ki
 
 :::image type="content" source="media/environment-edit.png" alt-text="Pusat admin lingkungan.":::
 
-### <a name="edit-an-environment-name"></a>Mengedit nama lingkungan
+### <a name="rename-an-environment"></a>Ubah nama lingkungan
 
 1. Buka **Admin** > **Lingkungan** dan pilih **Pengaturan**.
 
 1. Perbarui **nama lingkungan**, lalu pilih **Simpan** untuk menerapkan perubahan Anda.
+
+### <a name="manage-environment-members"></a>Kelola anggota lingkungan
+
+1. Buka **Admin** > **Lingkungan** dan pilih **anggota**.
+
+1. Pilih **Tambah anggota** untuk memperbarui anggota dan [menetapkan peran](user-roles.md). Saat ini, hanya **admin Lingkungan** yang tersedia.
+
+1. Pilih **Tambah anggota** untuk menambahkannya ke lingkungan Anda.
 
 ### <a name="delete-an-environment"></a>Hapus lingkungan
 
@@ -89,14 +97,6 @@ Admin lingkungan dapat menghapus lingkungan. Sebelum dapat menghapus lingkungan,
 
 1. Pilih **Hapus** untuk menghapus lingkungan secara permanen.
 
-### <a name="manage-environment-members"></a>Kelola anggota lingkungan
-
-1. Buka **Admin** > **Lingkungan** dan pilih **anggota**.
-
-1. Pilih **Tambah anggota** untuk memperbarui anggota dan [menetapkan peran](user-roles.md). Saat ini, hanya **admin Lingkungan** yang tersedia.
-
-1. Pilih **Tambah anggota** untuk menambahkannya ke lingkungan Anda.
-
 ## <a name="manage-connections"></a>Kelola koneksi
 
 Menetapkan sambungan ke wawasan audiens memungkinkan Anda melihat laporan dalam wawasan keterlibatan berdasarkan profil pelanggan terpadu. 
@@ -107,6 +107,7 @@ Untuk informasi lebih lanjut, lihat [Membuat tautan antara wawasan audiens dan w
 
 Untuk melindungi data pribadi pelanggan, Anda dapat menghapus atau mengekspor data identifikasi pengguna akhir.
 
-Untuk informasi lebih lanjut, lihat [Menghapus dan mengekspor data aktivitas yang berisi informasi pribadi](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
+Untuk informasi lebih lanjut, lihat [Menghapus dan mengekspor data aktivitas yang berisi informasi pribadi](delete-export-personal-data.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

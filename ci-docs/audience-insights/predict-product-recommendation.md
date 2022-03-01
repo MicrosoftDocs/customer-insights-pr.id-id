@@ -1,7 +1,7 @@
 ---
 title: prediksi Rekomendasi produk
 description: Memperkirakan produk yang mungkin dibeli atau berinteraksi dengan pelanggan.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967798"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494543"
 ---
 # <a name="product-recommendation-prediction-preview"></a>prediksi Rekomendasi produk (pratinjau)
 
@@ -54,7 +54,7 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 
 > [!NOTE]
 > - Model ini memerlukan riwayat transaksi pelanggan Anda. Definisi transaksi cukup fleksibel. Data apa pun yang menjelaskan interaksi produk pengguna dapat berfungsi sebagai input. Misalnya, membeli produk, mengikuti kelas, atau menghadiri acara.
-> - Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian, serikatkan Power Query mereka sebelum konsumsi data.
+> - Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian, satukan di Power Query sebelum menyerap data.
 > - Jika detail pesanan dan pesanan adalah entitas yang berbeda, gabunglah mereka sebelum digunakan dalam model. Model tidak hanya berfungsi dengan ID pesanan atau ID tanda terima dalam entitas.
 
 
@@ -79,11 +79,11 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 1. Atur **Jumlah produk** yang akan direkomendasikan ke pelanggan. Nilai ini tergantung pada cara metode pengiriman Anda mengisi data. Jika Anda dapat merekomendasikan tiga produk, atur nilai ini dengan sesuai.
    
    >[!TIP]
-   > Anda dapat memilih **Simpan draf** kapan saja untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi di tab **prediksi saya**.
+   > Anda dapat memilih **Simpan dan tutup** Kapan pun untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi di tab **prediksi saya**.
 
-1. Pilih apakah Anda ingin menyertakan produk yang baru saja dibeli pelanggan di **bidang pembelian Berulang yang** diharapkan.
+1. Pilih jika Anda ingin **menyarankan produk yang baru saja dibeli pelanggan**.
 
-1. Atur **jendela Look back**. Pengaturan ini menentukan jangka waktu yang dipertimbangkan model sebelum merekomendasikan produk kepada pengguna lagi. Misalnya, tunjukkan pelanggan membeli laptop setiap dua tahun. Jendela ini akan melihat riwayat pembelian selama dua tahun terakhir, dan jika mereka menemukan item, item akan difilter dari rekomendasi.
+1. Jika Anda memilih untuk *tidak* menyarankan produk yang baru dibeli, atur **Periode Lihat kembali**. Pengaturan ini menentukan jangka waktu yang dipertimbangkan model sebelum merekomendasikan produk kepada pengguna lagi. Misalnya, tunjukkan pelanggan membeli laptop setiap dua tahun. Jendela ini akan melihat riwayat pembelian selama dua tahun terakhir, dan jika mereka menemukan item, item akan difilter dari rekomendasi.
 
 1. Pilih **berikutnya**
 

@@ -2,30 +2,8 @@
   href: index.yml
 - name: Ikhtisar produk
   href: overview.md
-- name: Katalog pembelajaran
-  items:
-    - name: Memulai
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Menyerap data
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Buat profil pelanggan terpadu
-      href: /learn/modules/unified-customer-profile/
-    - name: Bekerja dengan wawasan audiens
-      href: /learn/modules/working-with-customer-insights/
-    - name: Memperkaya data dan membuat prediksi
-      href: /learn/modules/enrich-data/
-    - name: Mengelola koneksi eksternal
-      href: /learn/modules/configure-third-party-connections/
-    - name: Kelola Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
-- name: uji coba gratis
-  items:
-    - name: Daftar untuk uji coba gratis
-      href: trial-signup.md
-    - name: Tanya Jawab Uji Coba
-      href: trial-FAQ.md
-- name: Mulai dengan lisensi berbayar
-  href: paid-license.md
+- name: Membuat Uji Coba
+  href: audience-insights/get-started-trial.md
 - name: Nilai lingkungan Anda
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Wawasan audiens
@@ -41,16 +19,24 @@
         - name: Panduan mulai cepat
           href: audience-insights/get-started.md
         - name: Buat lingkungan baru
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Jelajahi wawasan audiens
           href: audience-insights/home.md
-    - name: Menangani akun bisnis
-      href: audience-insights/work-with-business-accounts.md
+    - name: Pelajari modul
+      items:
+        - name: Menyerap data
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Buat profil pelanggan terpadu
+          href: /learn/modules/unified-customer-profile/
+        - name: Bekerja dengan aplikasi
+          href: /learn/modules/working-with-customer-insights/
+        - name: Memperkaya data dan prediksi
+          href: /learn/modules/enrich-data/
     - name: Sumber Data
       items:
         - name: Ikhtisar sumber data
           href: audience-insights/data-sources.md
-        - name: Menambahkan sumber data melalui Power Query konektor
+        - name: Tambahkan sumber data melalui Power Query connectors
           href: audience-insights/connect-power-query.md
         - name: Tambahkan folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Mencatumkan Aktivitas Pelanggan
           href: audience-insights/activities.md
-        - name: Menentukan pemetaan semantik
-          href: audience-insights/semantic-mappings.md
     - name: Pengayaan data
       items:
         - name: Perkaya profil pelanggan
           href: audience-insights/enrichment-hub.md
-        - name: Merek dan minat
+        - name: Afinitas minat dan merek
           href: audience-insights/enrichment-microsoft.md
         - name: Alamat yang disempurnakan
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Data perusahaan yang disempurnakan
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Perkaya dengan Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Perkaya dengan HERE Technologies
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Perkaya dengan Experian
           href: audience-insights/enrichment-experian.md
-        - name: Memperkaya dengan Office 365 data
-          href: audience-insights/enrichment-office.md
         - name: Perkaya dengan impor kustom SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmen
@@ -134,10 +114,8 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Memprediksi kehilangan langganan
               href: audience-insights/predict-subscription-churn.md
-            - name: Memprediksi kehilangan transaksi
+            - name: Prediksi kehilangan pelanggan transaksional
               href: audience-insights/predict-transactional-churn.md
-            - name: Menganalisis sentimen dalam umpan balik pelanggan
-              href: audience-insights/sentiment-analysis.md
             - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
               href: audience-insights/custom-models.md
             - name: Lengkapi data yang hilang sebagian
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Panduan sampel untuk prediksi kehilangan pelanggan langganan
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Panduan sampel untuk prediksi kehilangan transaksi
+            - name: Panduan sampel untuk prediksi kehilangan pelanggan transaksional
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Panduan sampel untuk prediksi Rekomendasi produk
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Eksperimen dengan Pembelajaran Mesin Azure
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Eksperimen dengan Pembelajaran Mesin Azure
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Kelola prediksi
           href: audience-insights/manage-predictions.md
         - name: Membuat segmen berdasarkan prediksi
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Kelola beberapa lingkungan
           href: audience-insights/manage-environments.md
-        - name: Keamanan
-          items:
-            - name: Bawa Key Vault Anda sendiri
-              href: audience-insights/use-azure-key-vault.md
-            - name: Menyambung ke akun penyimpanan ADLS dengan prinsipal Layanan
-              href: audience-insights/connect-service-principal.md
-            - name: Mengekspor log diagnostik
-              href: audience-insights/diagnostics.md
+        - name: Menyambung ke akun penyimpanan ADLS dengan prinsipal Layanan
+          href: audience-insights/connect-service-principal.md
+        - name: Bahasa yang didukung
+          href: audience-insights/supported-languages.md
     - name: Dapat diperluas
       items:
         - name: Mengintegrasikan data web dari wawasan keterlibatan
@@ -262,40 +238,6 @@
           href: audience-insights/apis.md
         - name: Referensi API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Manajemen persetujuan (pratinjau)
-  items:
-    - name: Pusat Bantuan
-      href: consent-management/index.yml
-    - name: Ikhtisar kemampuan
-      href: consent-management/overview.md
-    - name: Memulai
-      items:
-        - name: Memulai
-          href: consent-management/get-started.md
-        - name: Konsep dan terminologi
-          href: consent-management/glossary.md
-    - name: Impor data persetujuan
-      items:
-        - name: Impor data persetujuan
-          href: consent-management/import-consent-data.md
-        - name: Mengatur data persetujuan dan menerapkan preferensi persetujuan
-          href: consent-management/set-consent-rules.md
-    - name: Mengelola data persetujuan
-      items:
-        - name: Aktifkan aturan persetujuan dalam audiens wawasan
-          href: audience-insights/activate-consent.md
-        - name: Mengelola aturan persetujuan default di segmen audiens insight
-          href: audience-insights/change-default-consent-rules.md
-    - name: Mengelola pengaturan dan pengguna
-      items:
-        - name: Mengonfigurasi pengaturan sistem
-          href: consent-management/system-settings.md
-        - name: Mengelola pengguna dan izin
-          href: consent-management/manage-users.md
-    - name: Menggunakan data persetujuan
-      items:
-        - name: Membuat prediksi dengan data persetujuan
-          href: consent-management/predictions-consent-data.md
 - name: Wawasan keterlibatan (pratinjau)
   items:
     - name: Pusat Bantuan
@@ -306,8 +248,6 @@
       items:
         - name: Panduan mulai cepat
           href: engagement-insights/get-started.md
-        - name: Buat lingkungan
-          href: engagement-insights/create-new-environment.md
         - name: Buat ruang kerja
           href: engagement-insights/create-workspace.md
         - name: Ambil Aktivitas dari situs web dan aplikasi seluler
@@ -378,5 +318,3 @@
   href: service-limits.md
 - name: Permintaan dan hak DSR
   href: dsr-rights-requests.md
-- name: Dapatkan Dukungan
-  href: /power-platform/admin/get-help-support
