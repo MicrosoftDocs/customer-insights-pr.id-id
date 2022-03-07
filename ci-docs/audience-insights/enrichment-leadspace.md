@@ -1,78 +1,50 @@
 ---
 title: Pengayaan profil perusahaan dengan pengayaan pihak ketiga Leadspace
 description: Informasi umum tentang pengayaan pihak ketiga Leadspace.
-ms.date: 09/30/2021
-ms.reviewer: mhart
+ms.date: 11/24/2020
+ms.reviewer: kishorem
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
+ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230638"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4668727"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil perusahaan dengan Leadspace (pratinjau)
 
-Leadspace adalah perusahaan ilmu data yang menyediakan Platform Data Pelanggan B-to-B. Ini memungkinkan lingkungan dengan profil pelanggan terpadu berdasarkan akun untuk memperkaya data mereka. Perkaya *profil pelanggan* dengan atribut seperti ukuran perusahaan, lokasi, atau industri. Perkaya *Profil kontak* dengan atribut seperti judul, persona, atau verifikasi email.
+Leadspace adalah perusahaan ilmu data yang menyediakan platform data pelanggan B2B. Hal ini memungkinkan pelanggan dengan profil pelanggan terpadu untuk perusahaan untuk memperkaya data mereka. Pengayaan mencakup atribut tambahan seperti ukuran perusahaan, lokasi, industri, dan lainnya.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 Untuk mengonfigurasikan Leadspace, prasyarat berikut harus dipenuhi:
 
-- Anda memiliki lisensi Leadspace aktif.
-- Anda memiliki [profil pelanggan terpadu](customer-profiles.md) berdasarkan akun.
-- Koneksi Leadspace telah dikonfigurasi oleh administrator atau Anda memiliki izin [administrator](permissions.md#administrator) dan "kunci abadi" (disebut sebagai **token Leadspace**). Hubungi [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) secara langsung untuk detail tentang produk mereka.
+- Anda memiliki lisensi Leadspace aktif dan "kunci permanen" (disebut sebagai **token leadspace**). Hubungi langsung [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) untuk rincian tentang produk mereka.
+- Anda memiliki izin [administratif](permissions.md#administrator).
+- Anda memiliki [profil pelanggan terpadu](customer-profiles.md) untuk perusahaan.
 
-## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
+## <a name="configuration"></a>Konfigurasi
 
 1. Di wawasan audiens, buka **Data** > **pengayaan**.
 
-1. Pilih **Perkaya data** saya di petak Leadspace dan pilih **Mulai**.
+1. Pilih **Perkaya data saya** di ubin Leadspace.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Tangkapan layar petak Leadspace.":::
 
-1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda adalah administrator, Anda bisa membuat koneksi dengan memilih **Tambahkan koneksi** dan memilih **Leadspace**. 
+1. Pilih **persiapan,** lalu masukkan **token leadspace** aktif (kunci permanen). Tinjau dan berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**. Konfirmasikan kedua input dengan memilih **Sambungkan ke Leadspace**.
 
-1. Pilih **Sambungkan ke Leadspace** untuk mengonfirmasi koneksi.
-
-1. Pilih **Berikutnya** dan pilih **himpunan data Pelanggan** yang ingin Anda perkaya dengan data perusahaan dari Leadspace. Anda dapat memilih entitas **Pelanggan** untuk memperkaya semua profil pelanggan atau memilih entitas segmen untuk memperkaya hanya profil pelanggan yang terdapat dalam segmen tersebut.
-
-    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Tangkapan layar saat memilih himpunan data pelanggan.":::
-
-1. Pilih **Berikutnya** dan tentukan bidang mana dari profil terpadu Anda yang digunakan untuk mencari data perusahaan yang cocok dari Leadspace. Bidang **Nama perusahaan** diperlukan. Untuk akurasi kecocokan yang lebih tinggi, hingga dua bidang lainnya, **situs web perusahaan** dan **lokasi perusahaan**, dapat ditambahkan.
+1. Pilih **data peta** dan tentukan bidang mana dari profil terpadu yang Anda harus gunakan untuk mencari data perusahaan yang cocok dari leadspace. Bidang **Nama perusahaan** diperlukan. Untuk akurasi kecocokan yang lebih tinggi, hingga dua bidang lainnya, **situs web perusahaan** dan **lokasi perusahaan**, dapat ditambahkan.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Panel pemetaan bidang leadspace.":::
-
-1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
-
-1. Pilih kotak centang jika Anda memiliki *profil Kontak* yang akan di perkaya. Wawasan Audiens akan secara otomatis memetakan bidang yang diperlukan.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Pengayaan rekaman kontak Leadspace.":::
- 
-1. Berikan nama untuk pengayaan dan pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
-
-
-## <a name="configure-the-connection-for-leadspace"></a>Mengonfigurasi koneksi untuk Leadspace 
-
-Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan *atau* masuk ke **Admin** > **Koneksi** dan pilih **Konfigurasi** pada petak Leadspace.
-
-1. Pilih **Mulai**. 
-
-1. Masukkan nama untuk koneksi dalam kotak **nama tampilan**.
-
-1. Berikan token Leadspace yang valid.
-
-1. Baca dan berikan persetujuan Anda untuk **privasi dan kesesuaian Data** dengan memilih **Saya setuju**.
-
-1. Pilih **Verifikasi** untuk memvalidasi konfigurasi.
-
-1. Setelah menyelesaikan verifikasi, pilih **Simpan**.
    
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Halaman konfigurasi koneksi Leadspace.":::
+1. Pilih **Terapkan** untuk menyelesaikan pemetaan bidang.
+
+1. Pilih **Jalankan** untuk memperkaya profil perusahaan. Berapa lama pengayaan diperlukan tergantung pada jumlah profil pelanggan terpadu.
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
 
@@ -84,13 +56,9 @@ Untuk informasi lebih lanjut, lihat [api leadspace](https://support.leadspace.co
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md), [tindakan](measures.md), dan bahkan [ekspor data](export-destinations.md) untuk memberikan pengalaman yang disesuaikan bagi pelanggan Anda.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 
 Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Leadspace, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa Leadspace memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

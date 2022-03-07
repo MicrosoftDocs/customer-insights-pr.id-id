@@ -1,23 +1,24 @@
 ---
 title: Fitur baru dan mendatang
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 03/02/2022
+ms.date: 08/31/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232662"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606086"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [Dynamics 365 dan rencana rilis Power Platform](/dynamics365/release-plans/).
 
@@ -25,108 +26,6 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
-
-
-## <a name="january-2022-updates"></a>Pembaruan Januari 2022
-
-Pembaruan pada Januari 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
-
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analisis sentimen umpan balik pelanggan Anda
-
-Customer Insights menyediakan fitur bertenaga AI baru untuk mensintesis sentimen pelanggan dan mengidentifikasi aspek bisnis tertentu sebagai peluang untuk peningkatan yang ditargetkan. Dengan menganalisis umpan balik tertulis dari pelanggan Anda, Anda bisa mendapatkan wawasan yang akurat dengan biaya rendah. Analisis sentimen didukung oleh model Natural Language Processing (NLP) yang menghasilkan dua wawasan turunan untuk setiap ID pelanggan. Skor sentimen (-5 hingga 5) dan daftar aspek bisnis yang berlaku. 
-
-Untuk informasi selengkapnya, lihat [Menganalisis sentimen dalam umpan balik pelanggan (Pratinjau)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Pembaruan Desember 2021
-
-Pembaruan pada bulan Desember 2021 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Meneruskan log Wawasan Pelanggan ke Azure Monitor
-
-Customer Insights menyediakan integrasi langsung dengan Azure Monitor. Fitur ini mencakup peristiwa audit dan acara operasional. Log sumber daya Azure Monitor memungkinkan Anda memantau dan mengirim log ke Azure Storage, Azure Log Analytics, atau mengalirkannya ke Azure Pusat Aktivitas.
-
-Untuk informasi selengkapnya, lihat [Masuk Dynamics 365 Customer Insights dengan Azure Monitor (Pratinjau)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Memperkaya profil pelanggan dengan data keterlibatan
-
-Gunakan data untuk Microsoft Office 365 memperkaya profil akun pelanggan Anda dengan wawasan tentang keterlibatan melalui Office 365 aplikasi. Data keterlibatan terdiri dari aktivitas email dan rapat, yang dikumpulkan pada tingkat akun. Misalnya, jumlah email dari akun bisnis atau jumlah rapat dengan akun. Tidak ada data tentang pengguna individual yang dibagikan. Pengayaan ini tersedia di wilayah berikut: Inggris, Eropa, Amerika Utara.
-
-Untuk informasi selengkapnya, lihat [Memperkaya profil pelanggan dengan data keterlibatan (Pratinjau)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Fitur penyatuan data tingkat lanjut
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Mengaktifkan kebijakan resolusi konflik di tingkat atribut individual
-
-Saat deduplicating catatan pelanggan dalam suatu entitas, Anda mungkin tidak ingin harus memilih catatan lengkap sebagai pemenang. Kami sekarang memungkinkan Anda untuk menggabungkan bidang terbaik dari berbagai catatan berdasarkan aturan untuk setiap atribut. Misalnya, Anda dapat memilih untuk menyimpan email terbaru DAN alamat terlengkap dari catatan yang berbeda. 
-
-Anda sekarang dapat menentukan aturan penggabungan terpisah untuk atribut individual sambil menggabungkan dan menggabungkan rekaman dalam satu entitas. Sebelumnya, kami hanya mengizinkan Anda memilih aturan gabungan tunggal (menyimpan catatan berdasarkan kelengkapan data kebaruan) dan aturan tersebut diterapkan pada tingkat rekaman ke semua atribut. Itu tidak ideal ketika beberapa data yang ingin Anda simpan ditemukan dalam catatan A, dan data bagus lainnya yang ditemukan dalam catatan B.
-
-Untuk informasi lebih lanjut, lihat [menentukan deduplikasi pada entitas kecocokan](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Aturan kustom untuk pencocokan
-
-Ada kalanya Anda perlu menentukan pengecualian untuk aturan umum agar TIDAK cocok dengan catatan. Hal ini dapat terjadi ketika beberapa individu berbagi informasi yang cukup sehingga sistem akan mencocokkan mereka sebagai satu individu. Misalnya, kembar dengan nama belakang yang sama, tinggal di kota yang sama, dan berbagi tanggal lahir.
-
-Pengecualian memastikan bahwa penyatuan data yang salah dapat diatasi dalam aturan penyatuan. Anda dapat menambahkan beberapa pengecualian ke aturan.
-
-Untuk informasi selengkapnya, lihat [Menambahkan pengecualian ke aturan](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Menyediakan kebijakan resolusi konflik tambahan dan mengaktifkan pengelompokan atribut
-
-Fitur ini memungkinkan Anda memperlakukan sekelompok bidang sebagai satu unit. Misalnya, saat jika catatan kami berisi bidang Alamat1, Alamat2, Kota, Negara Bagian, dan Zip. Kami mungkin tidak ingin bergabung dalam Address2 rekaman yang berbeda, berpikir itu akan membuat data kami lebih lengkap.
-
-Anda sekarang dapat menggabungkan sekelompok bidang terkait dan menerapkan kebijakan penggabungan tunggal ke grup. 
-
-Untuk informasi selengkapnya, lihat [Menggabungkan grup bidang](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Pembaruan November 2021
-
-Pembaruan pada November 2021 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Keanggotaan segmen sekarang tersedia di Dataverse
-
-Informasi keanggotaan segmen untuk profil pelanggan sekarang tersedia Dataverse bersama dengan profil dan wawasan pelanggan. Aplikasi aksi Dynamics 365 dan aplikasi berbasis model dapat menggunakan data ini mencari detail keanggotaan segmen untuk pelanggan tertentu.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivitas mendukung detail tingkat kontak untuk akun bisnis
-
-Anda sekarang dapat mengonfigurasi, menampilkan, dan memfilter aktivitas untuk kontak di linimasa aktivitas akun bisnis Anda untuk lebih memahami kontak akun mana yang mengambil bagian dalam aktivitas tertentu.
-
-## <a name="october-2021-updates"></a>Pembaruan Oktober 2021
-
-Pembaruan pada Oktober 2021 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
-
-### <a name="b-to-b"></a>B-to-B
-
-Mulai Oktober 2021, Anda dapat bekerja dengan akun bisnis dan kontak terkait mereka di Customer Insights. Sebelumnya, aplikasi ini sebagian besar disesuaikan dengan konsumen individu. Beberapa area fitur diperbarui untuk mendukung skenario B-to-B di atas jenis lingkungan baru. Untuk gambaran umum tentang fitur B-to-B yang didukung, lihat [Bekerja dengan akun bisnis di audiens wawasan](work-with-business-accounts.md).
-
-Bagian berikut menyoroti beberapa bidang utama yang disesuaikan untuk mendukung akun bisnis dan konsumen individu.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Mengekspor segmen berdasarkan akun bisnis
-
-Semua ekspor segmen dalam audiens insight tersedia dalam konteks akun bisnis. Sebagian besar ekspor segmen memerlukan konfigurasi tambahan dan [informasi kontak yang](segment-builder.md#create-a-new-segment) diproyeksikan di segmen yang mendasarinya agar valid untuk akun bisnis. Untuk informasi selengkapnya, lihat [Mengekspor segmen](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Menggunakan ekspor Iklan LinkedIn dengan akun bisnis
-
-Ekspor Iklan LinkedIn sekarang tersedia untuk penargetan kontak dan perusahaan dalam konteks akun bisnis. Saat memilih penargetan perusahaan sebagai fokus utama ekspor LinkedIn, Anda dapat mengekspor segmen yang dibangun di akun bisnis tanpa perlu memproyeksikan informasi kontak. Untuk informasi selengkapnya, buka dokumen tentang [ekspor](export-linkedin-ads.md) Iklan LinkedIn dan perbedaan antara [penargetan](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kontak dan [penargetan](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) perusahaan. 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Membuat langkah-langkah berdasarkan akun bisnis dan hierarkinya
-
-Penyusun ukuran memungkinkan Anda membuat langkah-langkah di sekitar akun bisnis dan secara opsional menggunakan informasi hierarki. Informasi hierarki digunakan untuk menggulung perhitungan ukuran di seluruh akun dan semua sub akun terkait. Misalnya, Anda dapat membuat langkah-langkah seperti total pendapatan untuk setiap kelompok akun bisnis yang diidentifikasi oleh hierarki mereka. Untuk informasi lebih lanjut, lihat [menentukan dan mengelola langkah](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Membuat segmen berdasarkan akun bisnis dan hierarkinya
-
-Pembuat segmen memungkinkan Anda membuat segmen akun bisnis yang secara opsional menyertakan informasi kontak untuk setiap akun di segmen. Jika Anda telah menyiapkan hierarki akun, Anda dapat menggunakan informasi hierarki akun dalam pembuatan segmen. Untuk informasi selengkapnya, lihat [Membuat segmen](segment-builder.md#create-a-new-segment) baru.
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Pertahankan akun bisnis Anda dengan wawasan mendalam tentang kecenderungan churn mereka
-
-Model churn prediksi pelanggan sekarang juga mendukung akun bisnis. Anda dapat mengevaluasi risiko churn tidak hanya untuk akun tetapi untuk kombinasi akun dan kategori produk atau layanan yang mereka beli dari Anda. Penambahan ini membantu Anda memahami apakah akun lebih cenderung berhenti membeli dari Anda secara umum atau hanya untuk kategori barang atau jasa tertentu. Untuk lebih membantu Anda menggunakan model AI ini, ini juga mencantumkan alasan mengapa akun cenderung bergejolak. Untuk informasi selengkapnya, lihat [Churn transaksi prediksi (pratinjau)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Melihat kontak akun bisnis dalam tampilan Pelanggan
-
-Jika akun bisnis dipetakan ke akun terkait, aplikasi Wawasan Pelanggan akan menampilkan kontak terkait ini sebagai bagian dari tampilan detail pelanggan. Untuk informasi selengkapnya, lihat [Profil pelanggan](customer-profiles.md).
-
 
 ## <a name="september-2021-updates"></a>Pembaruan September 2021
 
@@ -267,7 +166,7 @@ Pembaruan pada bulan Maret 2021 mencakup beberapa fitur, peningkatan kinerja, da
 - **Segmen ekspor ke Constant Contact** Kami telah memperluas tujuan ekspor kami untuk menyertakan Constant Contact. Kini Anda dapat mengekspor segmen dari Customer Insights ke daftar Constant Contact dan menggunakannya sebagai dasar untuk kampanye pemasaran Anda.   
    Untuk informasi lebih lanjut, lihat [Mengekspor ke Constant Contact](export-constant-contact.md).
 
-- **Segmen ekspor ke RollWorks** Kami telah memperluas tujuan ekspor kami untuk menyertakan RollWorks. Anda sekarang dapat mengekspor segmen dari Customer Insights ke audiens RollWork dan menggunakannya sebagai dasar untuk iklan B-to-B Anda.    
+- **Segmen ekspor ke RollWorks** Kami telah memperluas tujuan ekspor kami untuk menyertakan RollWorks. Kini Anda dapat mengekspor segmen dari Customer Insights ke audiens RollWorks dan menggunakannya sebagai dasar untuk periklanan B2B Anda.    
    Untuk informasi lebih lanjut, lihat [Mengekspor ke RollWorks ](export-rollworks.md).
 
 - **Segmen ekspor ke Snapchat** Kami telah memperluas tujuan ekspor kami untuk menyertakan Snapchat. Kini Anda dapat mengekspor segmen dari Customer Insights ke audiens Snapchat dan menggunakannya sebagai dasar untuk periklanan Anda.     

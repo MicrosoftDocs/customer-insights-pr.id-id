@@ -1,27 +1,28 @@
 ---
 title: Peningkatan data perusahaan
 description: Memperkaya dan menormalkan data perusahaan dengan model Microsoft.
-ms.date: 01/19/2022
+ms.date: 11/05/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229407"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770174"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Pengayaan profil perusahaan dengan data perusahaan yang disempurnakan
 
-Gunakan model Microsoft dan data perusahaan yang dikompilasi untuk memperbaiki, melengkapi, dan menstandardisasi profil perusahaan Anda. Kami akan menggunakan [format](/common-data-model/schema/core/applicationcommon/account) Common Data Model untuk akurasi dan wawasan yang lebih baik.
+Gunakan model Microsoft dan data perusahaan yang dikompilasi untuk memperbaiki, melengkapi, dan membakukan profil perusahaan Anda. Kami akan menggunakan [format Common Data Model untuk akurasi dan wawasan yang lebih](/common-data-model/schema/core/applicationcommon/account) baik.
 
 ## <a name="how-we-enhance-company-data"></a>Bagaimana kami meningkatkan data perusahaan
 
-Model kami melalui proses dua langkah untuk meningkatkan profil perusahaan. Pertama, menormalkan nama perusahaan. Misalnya, *Microsoft Corp* akan diperbaiki dan distandarisasi ke *Microsoft Corporation*. Ini mencoba untuk menemukan kecocokan dalam data perusahaan Microsoft yang dikompilasi. Jika kecocokan ditemukan, kami memperkaya profil perusahaan dengan informasi dari data perusahaan kami yang dikompilasi, termasuk nama perusahaan.
+Model kami melalui proses dua langkah untuk meningkatkan profil perusahaan. Pertama, normalisasi nama perusahaan. Misalnya, *Microsoft Corp* akan diperbaiki dan distandarisasi ke Microsoft *Corporation*. Ini mencoba untuk menemukan kecocokan dalam data perusahaan yang dikompilasi Microsoft. Jika kecocokan ditemukan, kami memperkaya profil perusahaan dengan informasi dari data perusahaan kami yang dikompilasi, termasuk nama perusahaan.
 
 
 ### <a name="example"></a>Contoh
@@ -48,24 +49,23 @@ Microsft
 
 Ada beberapa batasan dengan data yang disempurnakan. Item dalam daftar di bawah ini tidak didukung oleh model.
 
-1.  Konfirmasi identitas perusahaan. Kami tidak memverifikasi apakah input adalah organisasi yang ada atau bahwa perusahaan menggunakan output sebagai nama standarnya.
+1.  Konfirmasikan identitas perusahaan. Kami tidak memverifikasi apakah input adalah organisasi yang ada atau bahwa perusahaan menggunakan output sebagai nama standarnya.
 2.  Secara komprehensif mencakup perusahaan secara global. Data perusahaan Microsoft yang dikompilasi memiliki cakupan global, tetapi menawarkan sebagian besar cakupan di Australia, Kanada, Inggris, dan Amerika Serikat.
-3.  Standarisasi alamat perusahaan secara global. Saat ini kami mendukung standarisasi alamat di negara atau wilayah tersebut: Australia, Kanada, Prancis, Jerman, Italia, Jepang, Inggris, dan Amerika Serikat.
-4.  Menjamin keakuratan atau kesegaran data. Karena informasi bisnis sering berubah, kami tidak dapat menjamin bahwa data perusahaan yang disempurnakan yang diberikan selalu tepat atau terkini.
+3.  Menjamin akurasi atau kesegaran data. Karena informasi bisnis sering berubah, kami tidak dapat menjamin bahwa data perusahaan yang disempurnakan yang diberikan selalu tepat atau terkini.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 
 1. Buka **Data** > **Pengayaan**.
 
-1. Pilih **Perkaya data** saya pada ubin data **perusahaan yang** disempurnakan.
+1. Pilih **Memperkaya data saya pada petak data perusahaan yang** **·** disempurnakan.
 
-   :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Ubin pengayaan di hub pengayaan untuk data perusahaan.":::
+   :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Ubin pengayaan di pusat pengayaan untuk data perusahaan.":::
 
 1. Pilih **himpunan data Pelanggan** dan pilih entitas berisi alamat yang akan diperkaya. Anda dapat memilih entitas *Pelanggan* untuk memperkaya alamat di semua profil pelanggan atau memilih entitas segmen untuk memperkaya alamat hanya dalam profil pelanggan yang terdapat dalam segmen tersebut.
 
-1. Pilih jenis bidang dari profil perusahaan Anda yang harus digunakan untuk pencocokan dengan data perusahaan yang dikompilasi Microsoft. Pilihan ini akan memengaruhi bidang pemetaan yang dapat Anda akses di langkah berikutnya.
+1. Pilih jenis bidang mana dari profil perusahaan Anda yang harus digunakan untuk mencocokkan dengan data perusahaan yang dikompilasi Microsoft. Pilihan ini akan memengaruhi bidang pemetaan yang dapat Anda akses di langkah berikutnya.
 
-1.  Petakan bidang perusahaan dari entitas pelanggan terpadu Anda. Semakin banyak pengidentifikasi dan bidang utama yang Anda petakan, semakin besar kemungkinan tingkat kecocokan yang lebih tinggi.
+1.  Petakan bidang perusahaan dari entitas pelanggan terpadu Anda. Semakin banyak pengidentifikasi kunci dan bidang yang Anda petakan, semakin besar kemungkinan tingkat kecocokan yang lebih tinggi.
 
     :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Langkah pemetaan data saat mengonfigurasi pengayaan perusahaan.":::
 
@@ -81,17 +81,7 @@ Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda jug
 
 Setelah proses pengayaan selesai, Anda dapat meninjau data profil pelanggan baru yang diperkaya di dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
 
-Anda dapat melihat sampel data yang diperkaya di **ubin pratinjau** pelanggan yang diperkaya. Pilih **Lihat selengkapnya** **dan pilih tab Data** untuk mengakses tampilan terperinci dari setiap profil yang diperkaya.
-
-### <a name="overview-card"></a>Kartu Gambaran Umum
-
-Kartu ikhtisar menunjukkan detail tentang cakupan pengayaan. 
-
-* **Perusahaan diproses dan diubah**: Jumlah profil perusahaan pelanggan yang berhasil diperkaya.
-
-* **Perusahaan diproses dan tidak berubah**: Jumlah profil perusahaan pelanggan yang diakui tetapi tidak berubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
-
-* **Perusahaan tidak diproses dan tidak berubah**: Jumlah profil perusahaan pelanggan yang tidak diakui. Ini biasanya terjadi untuk data input yang tidak valid atau tidak didukung oleh pengayaan.
+Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lihat data yang diperkaya**.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 

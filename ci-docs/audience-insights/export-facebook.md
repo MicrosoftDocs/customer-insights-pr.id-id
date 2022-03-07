@@ -1,25 +1,24 @@
 ---
-title: Mengekspor data Wawasan Pelanggan ke Facebook Pengelola Iklan (berisi video)
+title: Ekspor data Customer Insights ke Facebook Ads Manager
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Facebook Ads Manager.
 ms.date: 04/15/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 781cf10e1bb5ddaf82d4a17c7a77e0c43c41a1c2
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226499"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619215"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Mengekspor daftar segmen ke Facebook Ads Manager (pratinjau)
 
 Ekspor segmen profil pelanggan terpadu ke pengelola iklan Facebook untuk membuat kampanye di Facebook dan Instagram.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk koneksi
 

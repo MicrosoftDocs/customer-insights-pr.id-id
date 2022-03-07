@@ -2,17 +2,18 @@
 title: Menggunakan dimensi demografis untuk memecah data perilaku (dimensi pilihan)
 description: Gunakan dimensi pilihan profil terpadu untuk mengaktifkan properti profil pelanggan wawasan audiens.
 ms.date: 07/27/2021
+ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8233051"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461107"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Menggunakan dimensi demografis untuk memecah data perilaku
 
@@ -28,7 +29,7 @@ Dengan menggunakan dimensi metrik profil terpadu, pengguna wawasan keterlibatan 
 - Lingkungan wawasan keterlibatan dengan data profil pelanggan Anda yang ditautkan ke lingkungan wawasan audiens tempat profil pelanggan dibuat. Informasi lebih lanjut, lihat [Membuat tautan antara wawasan audiens dan wawasan keterlibatan](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Setelah membuat tautan antara lingkungan audiens dan wawasan keterlibatan, Anda hanya memerlukan data khusus untuk properti profil pelanggan yang dapat berguna sebagai dimensi dalam wawasan keterlibatan. Untuk informasi lebih lanjut, buka [Aktifkan atribut dan segmen profil terpadu wawasan audiens](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Setelah membuat tautan antara lingkungan audiens dan wawasan keterlibatan, Anda hanya memerlukan data khusus untuk properti profil pelanggan yang dapat berguna sebagai dimensi dalam wawasan keterlibatan. Untuk informasi lebih lanjut, buka [Aktifkan atribut dan segmen profil terpadu wawasan audiens](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Buat laporan baru kustom
 

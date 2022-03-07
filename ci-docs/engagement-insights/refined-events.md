@@ -1,96 +1,72 @@
 ---
-title: Membuat dan memodifikasi aktivitas
-description: Cara membuat dan memodifikasi aktivitas.
+title: Buat dan modifikasi aktivitas yang disempurnakan
+description: Cara membuat dan memodifikasi aktivitas yang disempurnakan.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 10/01/2021
+ms.date: 04/30/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: dbafa2231daa82c34ee2ec8292111575e95af675
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228207"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034778"
 ---
-# <a name="create-and-modify-events"></a>Membuat dan memodifikasi aktivitas
+# <a name="create-and-modify-refined-events"></a>Buat dan modifikasi aktivitas yang disempurnakan
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
+
 
 Aktivitas adalah data yang menunjukkan perilaku pengguna, seperti aktivitas di situs web.
 
 - Rekaman aktivitas *dasar* ketika pengguna melihat halaman (aktivitas melihat) atau berinteraksi dengan konten (aktivitas tindakan).
 - Aktivitas *yang disempurnakan* adalah tampilan virtual aktivitas dasar. Anda mendefinisikan aktivitas yang disempurnakan dengan menghapus dan menambahkan properti atau dengan memfilter aktivitas berdasarkan nilai properti.
 
-## <a name="prerequisites"></a>Prasyarat
-
-Untuk mendapatkan aktivitas, data situs web Anda pertama harus dihubungkan ke wawasan keterlibatan dengan cuplikan kode. Untuk informasi lebih lanjut, lihat [Menginstal SDK web di situs web](instrument-website.md).
-
- :::image type="content" source="media/new-events-connect-data.png" alt-text="Sambungkan data Anda terlebih dulu.":::
+Gunakan aktivitas disempurnakan untuk mengurangi cakupan aktivitas dasar untuk [ekspor](export-events.md) atau menghilangkan properti yang tidak diperlukan untuk paparan ata.
 
 ## <a name="create-refined-events"></a>Buat aktivitas yang disempurnakan
 
-Gunakan aktivitas disempurnakan untuk mengurangi cakupan aktivitas dasar untuk [ekspor](export-events.md) atau menghilangkan properti yang tidak diperlukan untuk paparan ata.
+Tersedia tiga cara untuk membuat aktivitas disempurnakan dari aktivitas dasar. 
 
-> [!NOTE]
-> Setelah menambahkan SDK web ke situs web, Anda dapat melihat aktivitas dasar dan membuat aktivitas disempurnakan. 
+1. Buka **Data**> **Aktivitas**, lalu tentukan salah satu pilihan berikut:
+    - Pilih **Aktivitas baru**, lalu pilih **Buat aktivitas disempurnakan**.
+    - Pilih aktivitas dasar untuk membuka tampilan rinci, lalu pilih **Buat aktivitas disempurnakan** dari menu atas.
+    - Pilih **Lainnya [...]** untuk membuka menu pintasan untuk aktivitas dasar. Kemudian pilih **Buat aktivitas disempurnakan**.
+    
+    :::image type="content" source="media/create-refined-events-options.png" alt-text="Pilihan untuk membuat aktivitas disempurnakan.":::
 
-Untuk melihat aktivitas dasar Anda:
+1. Dalam dialog **Buat aktivitas yang disempurnakan**, masukkan informasi berikut:
 
-1. Di panel navigasi kiri, buka **Data**.
+- Pilih aktivitas dari dropdown **Aktivitas dasar** jika Anda membuat aktivitas baru.
+- Masukkan nama dalam kotak **nama tampilan aktivitas yang disempurnakan**.
+- Atau, perbarui **nama Aktual** yang disarankan tanpa menggunakan spasi.
 
-1. Pilih **Aktivitas** untuk melihat daftar semua aktivitas di ruang kerja.
+3. Pilih **Buat** untuk menerapkan pengaturan.
 
-    :::image type="content" source="media/data-events.png" alt-text="Lihat aktivitas.":::
+1. Di tampilan rinci aktivitas disempurnakan Anda, pilih **Tambah dan hilangkan properti** untuk membuka panel **Edit properti**. 
 
-Untuk membuat aktivitas disempurnakan dari aktivitas dasar: 
+1. Gunakan kotak centang untuk memilih properti yang ingin Anda tampilkan dan properti yang akan disembunyikan. 
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Mengedit properti untuk aktivitas disempurnakan.":::
 
-1. Buka **Data** > **Aktivitas**, lalu pilih **+ Aktivitas baru** di bagian atas layar.
+1. Pilih **Konfirmasi** untuk menerapkan pilihan Anda.
 
-1. Dalam dialog **Aktivitas baru**, pilih **Buat aktivitas disempurnakan**, lalu pilih **Berikutnya**.
-   
-     :::image type="content" source="media/new-events-wizard.png" alt-text="Wizard aktivitas baru.":::
-     
-1. Dalam dialog **Aktivitas baru**, masukkan informasi berikut:
+1. Pilih **Simpan** untuk menyimpan konfigurasi.
 
-   - Pilih aktivitas dari dropdown **Aktivitas dasar**.
-   - Masukkan nama dalam kotak **nama tampilan aktivitas yang disempurnakan**.
-   - Atau, perbarui **nama Aktual** yang disarankan tanpa menggunakan spasi.
+## <a name="edit-refined-events"></a>Mengedit aktivitas disempurnakan
 
-1. Pilih **Buat** untuk menerapkan pengaturan.
-
-Aktivitas yang disempurnakan sekarang akan ditampilkan dalam daftar **Aktivitas**.
+Anda dapat mengubah nama dan properti aktivitas disempurnakan.
 
 ### <a name="edit-event-name"></a>Mengedit Nama aktivitas
 
-Anda dapat mengubah nama dan properti aktivitas dasar atau disempurnakan.
-
 1. Buka **data** > **aktivitas**. 
-
 1. Pilih **Lainnya [...]** untuk aktivitas, lalu pilih **Edit nama**.
-    
-     :::image type="content" source="media/create-refined-events-options.png" alt-text="Pilihan untuk membuat aktivitas disempurnakan.":::
+1. Perbarui nama aktivitas, lalu pilih **Ganti nama**.
 
-3. Perbarui nama aktivitas, lalu pilih **Ganti nama**.
-
-### <a name="view-the-details-of-a-refined-event"></a>Melihat rincian aktivitas disempurnakan:
-
-1. Dalam daftar **Aktivitas**, pilih aktivitas dasar atau yang disempurnakan. 
-
-1. Pilih **Tambah dan hilangkan properti** di bagian atas layar untuk membuka panel **Edit properti**. 
-
-     :::image type="content" source="media/add-remove-properties.png" alt-text="Menambahkan dan menghapus properti.":::
-
-1. Gunakan kotak centang untuk memilih properti yang ingin Anda tampilkan dan properti yang akan disembunyikan. 
-
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Mengedit properti untuk aktivitas disempurnakan.":::
-
-1. Pilih **Konfirmasi** untuk menerapkan pilihan, lalu pilih **Simpan**.
-
-
-### <a name="edit-selected-properties-for-a-refined-event"></a>Mengedit properti yang dipilih untuk aktivitas disempurnakan
+### <a name="edit-selected-properties"></a>Edit Properti yang dipilih
 
 1. Buka **Data** > **Aktivitas**, lalu pilih aktivitas disempurnakan untuk membuka tampilan rinci.
 1. Pilih **Tambah dan hilangkan properti**. 

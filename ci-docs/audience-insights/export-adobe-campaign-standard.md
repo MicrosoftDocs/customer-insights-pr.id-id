@@ -1,23 +1,24 @@
 ---
 title: Mengekspor data Customer Insights ke Adobe Campaign Standard
-description: Pelajari bagaimana menggunakan segmen wawasan audiens di Adobe Campaign Standard.
+description: Pelajari bagaimana menggunakan segmen wawasan audiens dalam Adobe Campaign Standard.
 ms.date: 03/29/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 6b90ee53236fdd601ecdfd8e6117a15269a08084
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227762"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305390"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Menggunakan segmen Customer Insights di Adobe Campaign Standard (pratinjau)
+# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Gunakan segmen Customer Insights dalam Adobe Campaign Standard (pratinjau)
 
-Sebagai pengguna wawasan audiens di Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran yang lebih efisien dengan menargetkan audiens yang relevan. Agar dapat menggunakan segmen dari audiens wawasan dalam Adobe Experience Platform dan aplikasi seperti Adobe Campaign Standard, Anda harus mengikuti beberapa langkah yang diuraikan dalam artikel ini.
+Sebagai pengguna wawasan audiens di Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran yang lebih efisien dengan menargetkan audiens yang relevan. Agar dapat menggunakan segmen audiens wawasan dalam Adobe Experience Platform dan aplikasi seperti Adobe Campaign Standard, Anda harus mengikuti beberapa langkah yang diuraikan dalam artikel ini.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagram proses dari langkah-langkah yang diuraikan dalam artikel ini.":::
 
@@ -29,11 +30,11 @@ Sebagai pengguna wawasan audiens di Dynamics 365 Customer Insights, Anda mungkin
 
 ## <a name="campaign-overview"></a>Ikhtisar Kampanye
 
-Untuk lebih memahami cara menggunakan segmen dari audiens wawasan di Adobe Experience Platform, lihat kampanye sampel fiktif.
+Untuk lebih memahami bagaimana Anda dapat menggunakan segmen wawasan audiens dalam Adobe Experience Platform, lihat kampanye sampel fiktif.
 
-Misalnya, perusahaan Anda menawarkan layanan berbasis langganan bulanan kepada pelanggan Anda di Amerika Serikat. Anda ingin mengidentifikasi pelanggan yang langganannya harus diperpanjang dalam delapan hari berikutnya tetapi belum memperbarui langganan mereka. Untuk menjaga pelanggan ini, Anda ingin mengirimkan penawaran promosi melalui email, menggunakan Adobe Campaign Standard.
+Misalnya, perusahaan Anda menawarkan layanan berbasis langganan bulanan kepada pelanggan Anda di Amerika Serikat. Anda ingin mengidentifikasi pelanggan yang langganannya harus diperpanjang dalam delapan hari berikutnya tetapi belum memperbarui langganan mereka. Untuk menjaga pelanggan ini, Anda perlu mengirimkan penawaran promosi melalui email, menggunakan Adobe Campaign Standard.
 
-Di contoh ini, kita ingin menjalankan kampanye email promosi sekali. Artikel ini tidak mencakup kasus penggunaan dalam menjalankan kampanye lebih dari satu kali. Namun, wawasan audiens dan Adobe Campaign Standard dapat dikonfigurasi untuk bekerja untuk skenario kampanye berulang juga.
+Di contoh ini, kita ingin menjalankan kampanye email promosi sekali. Artikel ini tidak mencakup kasus penggunaan dalam menjalankan kampanye lebih dari satu kali. Namun, audiens dan Adobe Campaign Standard juga dapat dikonfigurasi untuk mengerjakan skenario kampanye berulang.
 
 ## <a name="identify-your-target-audience"></a>Identifikasikan target audiens
 
@@ -53,9 +54,9 @@ Dengan target audiens, kita dapat mengkonfigurasi ekspor dari wawasan audiens ke
 
 1. Dalam audiens wawasan, buka **Koneksi** > **Admin**.
 
-1. Pilih **Tambah koneksi** dan pilih **Adobe Campaign** untuk mengkonfigurasi koneksi atau pilih **Konfigurasi** dalam petak **Adobe Campaign**.
+1. Pilih **Tambah koneksi** dan pilih **Kampanye Adobe** untuk mengkonfigurasi koneksi atau pilih **Konfigurasi** dalam petak **Kampanye Adobe**.
 
-   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="petak konfigurasi untuk Adobe Campaign Standard.":::
+   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Petak konfigurasi untuk Adobe Campaign Standard.":::
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
@@ -79,7 +80,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
 
-1. Di bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Adobe Campaign. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Kampanye Adobe. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
 
 1. Pilih segmen yang ingin Anda ekspor. Di contoh ini, itu adalah **ChurnProneCustomers**.
 
@@ -87,14 +88,14 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pilih **Selanjutnya**.
 
-1. Sekarang kita memetakan bidang **Sumber** dari segmen wawasan audiens ke nama bidang **Target** dalam skema profil Standar Adobe Campaign Standard.
+1. Sekarang kami memetakan bidang **Sumber** dari segmen wawasan audiens ke nama bidang **Target** dalam skema profil Adobe Campaign Standard.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Pemetaan bidang untuk konektor Adobe Campaign Standard.":::
 
    Jika Anda ingin menambahkan atribut lainnya, pilih **Tambah atribut**. Nama target dapat berbeda dari nama bidang sumber, sehingga Anda tetap dapat memetakan output segmen dari wawasan audiens ke Adobe Campaign Standard jika bidang tidak memiliki nama yang sama di kedua sistem.
 
    > [!NOTE]
-   > Alamat email digunakan sebagai bidang identitas, namun Anda dapat menggunakan pengidentifikasi lain dari profil pelanggan wawasan audiens untuk memetakan data ke Adobe Campaign Standard.
+   > Alamat email digunakan sebagai bidang identitas, namun Anda dapat menggunakan pengidentifikasi lainnya dari profil pelanggan wawasan audiens untuk memetakan data ke Adobe Campaign Standard.
 
 1. Pilih **Simpan**.
 
@@ -103,7 +104,7 @@ Setelah menyimpan tujuan ekspor, Anda menemukannya di **Ekspor** > **Data**.
 Anda sekarang dapat [mengekspor segmen sesuai permintaan](export-destinations.md#run-exports-on-demand). Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md).
 
 > [!NOTE]
-> Pastikan jumlah rekaman dalam segmen yang diekspor berada dalam batas yang diizinkan untuk lisensi Adobe Campaign Standard Anda.
+> Pastikan jumlah rekaman dalam segmen yang diekspor berada dalam batas yang diizinkan untuk lisensi Adobe Campaign Standard.
 
 Data yang diekspor disimpan dalam wadah Azure Blob storage yang dikonfigurasi di atas. Jalur folder berikut dibuat secara otomatis dalam wadah Anda:
 
@@ -113,9 +114,9 @@ Contoh: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f
 
 ## <a name="configure-adobe-campaign-standard"></a>Konfigurasikan Adobe Campaign Standard
 
-Bila segmen dari wawasan audiens diekspor, segmen tersebut berisi kolom yang Anda pilih saat menentukan tujuan ekspor pada langkah sebelumnya. Data ini dapat digunakan untuk [membuat profil dalam Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Bila segmen dari wawasan audiens diekspor, segmen tersebut berisi kolom yang Anda pilih saat menentukan tujuan ekspor pada langkah sebelumnya. Data ini dapat digunakan untuk [membuat profil di Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Agar dapat menggunakan segmen dalam Adobe Campaign Standard, kami harus memperluas skema profil di Adobe Campaign Standard agar dapat mencakup dua bidang tambahan. Pelajari lebih lanjut cara [memperluas sumber daya profil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) dengan bidang baru di Adobe Campaign Standard.
+Agar dapat menggunakan segmen dalam Adobe Campaign Standard, kita harus memperluas skema profil di Adobe Campaign Standard agar dapat mencakup dua bidang tambahan. Pelajari lebih lanjut cara [memperluas sumber daya profil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) dengan bidang baru di Adobe Campaign Standard.
 
 Di contoh kami, bidang ini adalah *Nama Segmen dan Tanggal Segmen (opsional)*.
 
@@ -125,15 +126,15 @@ Jika tidak ada rekaman lain dalam Adobe Campaign Standard, selain yang akan diim
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Mengimpor data ke Adobe Campaign Standard
 
-Setelah semuanya tersedia, kita harus mengimpor data audiens yang telah siap ke Adobe Campaign Standard untuk membuat profil. Pelajari lebih lanjut [cara mengimpor profil dalam Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) menggunakan alur kerja.
+Setelah semuanya tersedia, kita harus mengimpor data audiens yang disiapkan dari wawasan audiens ke Adobe Campaign Standard untuk membuat profil. Pelajari [cara mengimpor profil di Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) menggunakan alur kerja.
 
-Alur kerja impor pada gambar di bawah ini telah dikonfigurasi untuk dijalankan setiap delapan jam dan mencari segmen wawasan audiens yang diekspor (file.csv dalam Penyimpanan Blob Azure). Alur kerja mengekstrak konten file .csv dalam urutan kolom yang ditentukan. Alur kerja ini telah dibuat untuk melakukan penanganan kesalahan dasar dan memastikan setiap rekaman memiliki alamat email sebelum menghidrasi data dalam Adobe Campaign Standard. Alur kerja juga mengekstrak nama segmen dari nama file sebelum melakukan upserting ke data profil Adobe Campaign Standard.
+Alur kerja impor pada gambar di bawah ini telah dikonfigurasi untuk dijalankan setiap delapan jam dan mencari segmen wawasan audiens yang diekspor (file.csv dalam Penyimpanan Blob Azure). Alur kerja mengekstrak konten file .csv dalam urutan kolom yang ditentukan. Alur kerja ini telah dibuat untuk melakukan penanganan kesalahan dasar dan memastikan setiap rekaman memiliki alamat email sebelum menghidrasi data di Adobe Campaign Standard. Alur kerja juga mengekstrak nama segmen dari nama file sebelum melakukan upserting ke data profil Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Cuplikan layar alur kerja impor di antarmuka pengguna Adobe Campaign Standard.":::
 
-## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Mengambil audiens dalam Adobe Campaign Standard
+## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Mengambil audiens di Adobe Campaign Standard
 
-Setelah data diimpor ke Adobe Campaign Standard, Anda [dapat membuat alur kerja](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) dan [mengkueri](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) pelanggan berdasarkan *Nama Segmen* dan *Tanggal Segmen* untuk memilih profil yang diidentifikasi untuk kampanye sampel kita.
+Setelah data diimpor ke Adobe Campaign Standard, Anda dapat [membuat alur kerja](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) dan [mengkueri](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) pelanggan berdasarkan *Nama Segmen* dan *Tanggal Segmen* untuk memilih profil yang diidentifikasi untuk kampanye sampel kita.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Membuat dan mengirim email menggunakan Adobe Campaign Standard
 
