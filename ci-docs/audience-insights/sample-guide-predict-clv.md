@@ -3,18 +3,17 @@ title: Contoh panduan prediksi nilai seumur hidup pelanggan
 description: Gunakan panduan sampel ini untuk mencoba model prediksi pelanggan nilai seumur hidup.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306353"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354835"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Contoh panduan prediksi nilai seumur hidup pelanggan (CLV)
 
@@ -22,7 +21,7 @@ Panduan ini akan menjelaskan kepada Anda contoh komprehensif dari nilai seumur h
 
 ## <a name="scenario"></a>Skenario
 
-Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi. Mereka menjual produk melalui situs web Kopi Contoso mereka. Perusahaan ingin memahami nilai (pendapatan) yang dapat dihasilkan pelanggan mereka dalam 12 bulan ke depan. Mengetahui nilai yang diharapkan dari pelanggan mereka dalam 12 bulan ke depan akan membantu mereka mengarahkan upaya pemasaran mereka pada pelanggan bernilai tinggi.
+Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi. Mereka menjual produk melalui situs web Contoso Coffee mereka. Perusahaan ingin memahami nilai (pendapatan) yang dapat dihasilkan pelanggan mereka dalam 12 bulan ke depan. Mengetahui nilai yang diharapkan dari pelanggan mereka dalam 12 bulan ke depan akan membantu mereka mengarahkan upaya pemasaran mereka pada pelanggan bernilai tinggi.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -31,7 +30,7 @@ Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tingg
 
 ## <a name="task-1---ingest-data"></a>Tugas 1- Serap Data
 
-Tinjau artikel tentang [penyerapan data](data-sources.md) dan [mengimpor sumber data menggunakan Power Query connector](connect-power-query.md). Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum.
+Tinjau artikel [tentang konsumsi](data-sources.md) data dan [mengimpor sumber data menggunakan Power Query konektor](connect-power-query.md). Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Menyerap data pelanggan dari platform eCommerce
 
@@ -164,7 +163,7 @@ Setelah menyerap data, kami sekarang memulai proses penyatuan data untuk membuat
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tugas 3 - Mengonfigurasi prediksi nilai seumur hidup pelanggan
 
-Dengan adanya profil pelanggan terpadu, kita sekarang dapat menjalankan prediksi nilai seumur hidup pelanggan. Untuk langkah-langkah mendetail, [lihat Prediksi Nilai Seumur Pelanggan (pratinjau)](predict-customer-lifetime-value.md).
+Dengan adanya profil pelanggan terpadu, kita sekarang dapat menjalankan prediksi nilai seumur hidup pelanggan. Untuk langkah mendetail, lihat [Prediksi Nilai Seumur Hidup Pelanggan](predict-customer-lifetime-value.md).
 
 1. Buka  **Kecerdasan**  > **Prediksi**  dan pilih **model nilai seumur hidup Pelanggan**.
 

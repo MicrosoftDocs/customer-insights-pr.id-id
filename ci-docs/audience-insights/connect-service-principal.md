@@ -1,62 +1,73 @@
 ---
-title: Menyambung ke akun Azure Data Lake Storage Gen2 dengan prinsipal Layanan
-description: Gunakan prinsipal layanan Azure untuk wawasan audiens untuk menyambung ke Data Lake Anda sendiri saat melampirkan ke wawasan audiens.
-ms.date: 02/10/2021
-ms.service: customer-insights
+title: Menyambung ke akun Azure Data Lake Storage menggunakan prinsipal layanan
+description: Gunakan prinsipal layanan Azure untuk terhubung ke data lake Anda sendiri.
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: d593880b06bd21e96826039a67382b75a4296a87
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692117"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354192"
 ---
-# <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Menyambungkan wawasan audiens ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure untuk wawasan audiens
+# <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Menyambung ke akun Azure Data Lake Storage menggunakan prinsipal layanan Azure
 
-Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas. Selain masuk aplikasi sebagai pengguna yang memiliki hak istimewa, Azure menawarkan prinsipal layanan. Baca terus untuk mempelajari cara menyambung wawasan audiens dengan akun Azure Data Lake Storage Gen2 menggunakan prinsip layanan Azure dan bukan kunci akun penyimpanan. 
+Artikel ini membahas cara terhubung Dynamics 365 Customer Insights dengan akun dengan Azure Data Lake Storage menggunakan prinsipal layanan Azure alih-alih kunci akun penyimpanan. 
 
-Anda dapat menggunakan prinsipal layanan untuk [menambahkan atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [membuat yang baru atau memperbarui lingkungan yang ada](get-started-paid.md).
+Alat otomatis yang menggunakan layanan Azure harus selalu memiliki izin terbatas. Selain masuk aplikasi sebagai pengguna yang memiliki hak istimewa, Azure menawarkan prinsipal layanan. Anda dapat menggunakan prinsipal layanan untuk menambahkan atau mengedit folder Model Data Umum dengan [aman sebagai sumber data](connect-common-data-model.md) atau [membuat atau memperbarui lingkungan](create-environment.md).
 
 > [!IMPORTANT]
-> - Akun penyimpanan Azure Data Lake Gen2 yang ingin menggunakan layanan utama harus [mengaktifkan Spasi Nama hierarkis (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
-> - Anda memerlukan izin admin untuk langganan Azure Anda untuk membuat prinsipal layanan.
+> - Akun Penyimpanan Danau Data yang akan menggunakan prinsipal layanan harus Gen2 dan memiliki [ruang nama hierarki diaktifkan](/azure/storage/blobs/data-lake-storage-namespace). Akun penyimpanan Azure Data Lake Gen1 tidak didukung.
+> - Anda memerlukan izin admin untuk langganan Azure untuk membuat prinsipal layanan.
 
-## <a name="create-azure-service-principal-for-audience-insights"></a>Membuat prinsipal layanan Azure untuk wawasan audiens
+## <a name="create-an-azure-service-principal-for-customer-insights"></a>Membuat prinsipal layanan Azure untuk Customer Insights
 
-Sebelum membuat prinsipal layanan baru untuk wawasan audiens, periksa apakah sudah ada di organisasi anda.
+Sebelum membuat prinsipal layanan baru untuk Wawasan Pelanggan, periksa apakah itu sudah ada di organisasi Anda.
 
 ### <a name="look-for-an-existing-service-principal"></a>Mencari prinsipal layanan yang ada
 
 1. Buka [portal admin Azure](https://portal.azure.com), lalu masuk ke organisasi Anda.
 
-2. Pilih **Azure Active Directory** dari layanan Azure.
+2. Dari **Layanan Azure**, pilih **Azure Active Directory**.
 
 3. Di dalam **Kelola**, pilih **aplikasi Enterprise**.
 
-4. Cari ID aplikasi pihak pertama wawasan audiens `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` atau nama `Dynamics 365 AI for Customer Insights`.
+4. Mencari ID aplikasi Microsoft:
+   - Wawasan Audiens: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` dengan nama `Dynamics 365 AI for Customer Insights`
+   - Wawasan keterlibatan: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` dengan nama `Dynamics 365 AI for Customer Insights engagement insights`
 
-5. Jika Anda menemukan rekaman yang cocok, berarti prinsipal layanan untuk wawasan audiens ada. Anda tidak perlu membuatnya lagi.
+5. Jika Anda menemukan rekaman yang cocok, berarti principal layanan sudah ada. 
    
-   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Screenshot yang menunjukkan prinsipal layanan yang ada.":::
+   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Cuplikan layar yang menampilkan prinsipal layanan yang ada.":::
    
 6. Jika tidak ada hasil, buat prinsipal layanan baru.
 
+>[!NOTE]
+>Agar dapat menggunakan kemampuan penuh Dynamics 365 Customer Insights, sebaiknya tambahkan kedua aplikasi ke prinsipal layanan.
+
 ### <a name="create-a-new-service-principal"></a>Buat prinsipal layanan baru
 
-1. Instal versi terbaru **Azure Active Directory PowerShell for Graph**. Untuk informasi lebih lanjut, lihat [menginstal Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
-   - Di PC, pilih tombol Windows di keyboard dan Cari **Windows PowerShell** dan **Jalankan sebagai administrator**.
-   
-   - Di jendela PowerShell yang terbuka, masukkan `Install-Module AzureAD`.
+1. Instal versi terbaru Azure Active Directory PowerShell untuk Graph. Untuk informasi lebih lanjut, buka [Menginstal Azure Active Directory PowerShell untuk Graph](/powershell/azure/active-directory/install-adv2).
 
-2. Buat prinsipal layanan untuk audiens wawasan dengan modul Azure AD PowerShell.
-   - Di jendela PowerShell, masukkan `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Ganti "ID penyewa Anda" dengan ID sebenarnya dari penyewa Anda yang akan membuat prinsipal layanan. Parameter nama lingkungan `AzureEnvironmentName` adalah opsional.
+   1. Di PC, pilih tombol Windows di keyboard dan cari **Windows PowerShell**, lalu pilih **Jalankan sebagai administrator**.
+   
+   1. Di jendela PowerShell yang terbuka, masukkan `Install-Module AzureAD`.
+
+2. Buat prinsipal layanan untuk Customer Insights dengan modul Azure AD PowerShell.
+
+   1. Di jendela PowerShell, masukkan `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Ganti *[ID penyewa Anda]* dengan ID sebenarnya dari penyewa Anda yang akan membuat prinsipal layanan. Parameter nama lingkungan, `AzureEnvironmentName` adalah opsional.
   
-   - Masukkan `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Perintah ini akan membuat prinsipal layanan untuk wawasan audiens pada penyewa yang dipilih.  
+   1. Masukkan `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Perintah ini akan membuat prinsipal layanan untuk wawasan audiens pada penyewa yang dipilih. 
+
+   1. Masukkan `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Perintah ini membuat prinsipal layanan untuk wawasan keterlibatan di penyewa yang dipilih.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Berikan izin kepada prinsipal layanan untuk mengakses akun Penyimpanan
 
@@ -66,51 +77,49 @@ Buka portal Azure untuk memberikan izin kepada prinsipal layanan untuk akun peny
 
 1. Buka akun penyimpanan yang akan menjadi prinsipal layanan untuk wawasan audiens agar dapat diakses.
 
-1. Pilih **kontrol akses (IAM)** dari panel navigasi dan pilih **Tambah** > **Tambah penetapan peran**.
-   
-   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Screeshot menampilkan portal Azure saat menambahkan penetapan peran.":::
-   
+1. Pada panel kiri, pilih **kontrol akses (IAM)**, lalu pilih **Tambah** > **Tambah penetapan peran**.
+
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Cuplikan layar yang menampilkan portal Azure saat menambahkan penetapan peran.":::
+
 1. Di panel **Tambah penetapan peran**, atur properti berikut:
-   - Peran: *kontributor data Blob penyimpanan*
-   - Tetapkan akses ke: *pengguna, grup, atau prinsipal Layanan*
-   - Pilih: *Dynamics 365 AI for Customer Insights* ([prinsipal layanan yang Anda buat](#create-a-new-service-principal))
+   - Peran: **kontributor data Blob penyimpanan**
+   - Tetapkan akses ke: **pengguna, grup, atau prinsipal Layanan**
+   - Pilih: **Dynamics 365 AI for Customer Insights** dan **wawasan keterlibatan Dynamics 365 AI for Customer Insights** (kedua [prinsipal layanan](#create-a-new-service-principal) yang Anda buat sebelumnya dalam prosedur ini)
 
 1.  Pilih **Simpan**.
 
 Dapat memakan waktu hingga 15 menit untuk menyebarkan perubahan.
 
-## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Masukkan ID sumber daya azure atau rincian langganan azure di lampiran akun penyimpanan ke wawasan audiens.
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Masukkan ID sumber daya azure atau rincian langganan azure di lampiran akun penyimpanan ke wawasan audiens
 
-Lampirkan akun penyimpanan Azure Data Lake di wawasan audiens untuk [menyimpan data output](manage-environments.md) atau [gunakan sebagai sumber data](connect-dataverse-managed-lake.md). Memilih pilihan Azure data Lake memungkinkan Anda memilih antara pendekatan berbasis sumber daya atau berbasis langganan.
-
-Ikuti langkah-langkah berikut untuk menyediakan informasi yang diperlukan tentang pendekatan yang dipilih.
+Anda dapat melampirkan akun Data Lake Storage dalam wawasan audiens untuk [menyimpan data output](manage-environments.md) atau [menggunakannya sebagai sumber data](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). Pilihan ini memungkinkan Anda memilih antara pendekatan berbasis sumber daya atau berbasis langganan. Tergantung pada pendekatan yang Anda pilih, ikuti prosedur di salah satu bagian berikut.
 
 ### <a name="resource-based-storage-account-connection"></a>Koneksi akun penyimpanan berbasis sumber daya
 
 1. Buka [portal admin Azure](https://portal.azure.com), masuk ke langganan Anda dan buka akun penyimpanan.
 
-1. Buka **pengaturan** > **properti** di panel navigasi.
+1. Pada panel kiri, buka **Pengaturan** > **Properti**.
 
 1. Salin nilai ID sumber daya akun penyimpanan.
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Salin ID sumber daya akun penyimpanan.":::
 
-1. Di wawasan audiens, masukkan ID sumber daya di bidang sumber daya yang ditampilkan di layar koneksi akun penyimpanan.
+1. Dalam audiens, masukkan ID sumber daya pada bidang sumber daya yang ditampilkan di layar sambungan akun penyimpanan.
 
    :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Masukkan informasi ID sumber daya akun penyimpanan.":::   
-   
+
 1. Lanjutkan dengan langkah yang tersisa di wawasan audiens untuk melampirkan akun penyimpanan.
 
 ### <a name="subscription-based-storage-account-connection"></a>Koneksi akun penyimpanan berbasis langganan
 
 1. Buka [portal admin Azure](https://portal.azure.com), masuk ke langganan Anda dan buka akun penyimpanan.
 
-1. Buka **pengaturan** > **properti** di panel navigasi.
+1. Pada panel kiri, buka **Pengaturan** > **Properti**.
 
 1. Tinjau **langganan**, **grup sumber daya**, dan **nama** akun penyimpanan untuk memastikan bahwa anda memilih nilai yang tepat di wawasan audiens.
 
-1. Di wawasan audiens, pilih nilai atau untuk bidang yang terkait saat melampirkan akun penyimpanan.
-   
+1. Di wawasan audiens, pilih nilai untuk bidang terkait saat melampirkan akun penyimpanan.
+
 1. Lanjutkan dengan langkah yang tersisa di wawasan audiens untuk melampirkan akun penyimpanan.
 
 

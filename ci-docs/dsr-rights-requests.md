@@ -3,18 +3,17 @@ title: Permintaan hak subjek data (DSR) di bawah GDPR | Microsoft Docs
 description: Merespons permintaan subjek Data untuk kemampuan wawasan audiens Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483676"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350273"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan hak subjek data (DSR) di bawah GDPR
 
@@ -79,71 +78,78 @@ Administrator penyewa dapat mengikuti langkah berikut untuk mengekspor data:
 2. Berikan konfirmasi untuk mengekspor data untuk pengguna yang diminta.
 3. Terima data yang diekspor melalui alamat email admin penyewa.
 
-## <a name="engagement-insights"></a>Wawasan keterlibatan
+## <a name="consent-management-preview"></a>Manajemen persetujuan (pratinjau)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Menghapus dan mengekspor data aktivitas yang berisi informasi identitas pengguna akhir
+Kemampuan manajemen persetujuan tidak mengumpulkan data pengguna secara langsung. Ini hanya mengimpor dan memproses data persetujuan yang disediakan oleh pengguna di aplikasi lain.
 
-Bagian berikut menjelaskan cara menghapus dan mengekspor data aktivitas yang mungkin berisi data pribadi.
+Untuk menghapus data persetujuan tentang pengguna tertentu, hapus di sumber data yang tertelan ke kemampuan manajemen persetujuan. Setelah menyegarkan sumber data, data yang dihapus akan dihapus di Pusat Persetujuan juga. Aplikasi yang menggunakan entitas persetujuan juga akan menghapus data yang telah dihapus pada sumber setelah [penyegaran](audience-insights/system.md#refresh-processes). Sebaiknya per refreshing sumber data dengan cepat setelah menanggapi permintaan subjek data untuk menghapus data pengguna dari semua proses dan aplikasi lainnya.
 
-Untuk menghapus atau mengekspor data:
 
-1. Tandai properti aktivitas yang berisi data dengan informasi pribadi.
-2. Hapus atau ekspor data yang terkait dengan nilai tertentu (contoh: ID pengguna tertentu).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Tandai dan perbarui properti aktivitas
+### Deleting and exporting event data containing end user identifiable information
 
-Data pribadi ditandai pada tingkat properti aktivitas. Pertama, tandai properti yang sedang dipertimbangkan untuk penghapusan atau ekspor.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Untuk menandai properti aktivitas sebagai berisi informasi pribadi, ikuti langkah-langkah berikut:
+To delete or export data:
 
-1. Buka ruang kerja yang berisi aktivitas.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Buka **Data** > **Aktivitas** untuk melihat daftar aktivitas dalam ruang kerja yang dipilih.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Pilih aktivitas yang ingin Anda tandai.
+1. Select the event you want to tag.
 
-1. Pilih **Edit properti** untuk membuka daftar panel semua properti dari aktivitas yang dipilih.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Pilih **...** dan kemudian pilih **Edit** untuk mencapai dialog **Perbarui properti**.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Edit aktivitas.](engagement-insights/media/edit-event.png "Edit aktivitas")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. Di jendela **Perbarui Properti**, pilih **...** di sudut kanan atas, lalu pilih kotak **Berisi EUII**. Pilih **Perbarui** untuk menyimpan perubahan.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Simpan perubahan.](engagement-insights/media/update-property.png "Simpan perubahan")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Setiap kali skema aktivitas berubah atau Anda membuat aktivitas baru, Sebaiknya Anda mengevaluasi properti dan tag aktivitas terkait atau hapus tag mereka sebagai berisi data pribadi, jika perlu.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>Menghapus atau mengekspor data aktivitas yang ditandai
+#### Delete or export tagged event data
 
-Jika semua properti aktivitas telah ditandai dengan benar sebagaimana dijelaskan pada langkah sebelumnya, admin lingkungan dapat mengeluarkan permintaan penghapusan terhadap data aktivitas yang ditandai.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-Untuk mengelola permintaan penghapusan atau ekspor EUII
+To manage EUII deletion or export requests
 
-1. Buka **Admin** > **Lingkungan** > **Pengaturan**.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. Di bagian **Kelola informasi identifikasi pengguna akhir (EUII)**, pilih **Kelola EUII**.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Penghapusan
+##### Deletion
 
-Untuk penghapusan, Anda dapat memasukkan daftar ID pengguna di bagian **hapus informasi identifikasi pengguna akhir (EUII)**. ID ini kemudian akan dibandingkan dengan semua properti aktivitas yang ditandai dari semua proyek di lingkungan saat ini melalui pencocokan string yang sama persis. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Jika nilai properti sesuai dengan salah satu ID yang disediakan, aktivitas terkait akan dihapus secara permanen. Karena tindakan ini tidak dapat diurungkan, Anda harus mengkonfirmasi penghapusan setelah memilih **Hapus**.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-Proses ekspor sama dengan proses penghapusan dalam menentukan nilai properti aktivitas di bagian **Ekspor informasi identifikasi pengguna akhir (EUII)**. Selain itu, Anda harus menyediakan **URL penyimpanan blob Azure** untuk menentukan tujuan ekspor. URL Azure Blob harus mencakup [SAS (Tanda Tangan Akses Bersama)](/azure/storage/common/storage-sas-overview).
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-Setelah memilih **Ekspor**, semua aktivitas tim saat ini yang berisi properti yang ditandai dan cocok akan diekspor dalam format CSV ke tujuan ekspor.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>Praktik yang baik
+### Good practices
 
-* Coba untuk menghindari pengiriman aktivitas yang berisi data pribadi.
-* Jika Anda perlu mengirim aktivitas yang berisi data EUII, batasi jumlah properti aktivitas dan aktivitas yang berisi data EUII. Idealnya, batasi diri Anda pada salah satu aktivitas tersebut.
-* Pastikan hanya sedikit orang yang memiliki akses ke data pribadi yang dikirim.
-* Untuk aktivitas yang berisi data pribadi, pastikan Anda mengatur satu properti untuk menghasilkan pengidentifikasi unik yang dapat dengan mudah ditautkan ke pengguna tertentu (misalnya, ID pengguna). Hal ini memudahkan untuk memisahkan data dan mengekspor atau menghapus data yang benar.
-* Cukup tandai satu properti per aktivitas sebagai berisi data pribadi. Idealnya adalah yang hanya berisi pengidentifikasi unik.
-* Jangan tandai properti yang berisi nilai terlalu besar (misalnya, seluruh badan permintaan). Kemampuan wawasan keterlibatan menggunakan pencocokan string sama persis saat menentukan aktivitas yang akan dihapus atau diekspor.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

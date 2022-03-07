@@ -4,17 +4,16 @@ description: Pelajari cara mempersonalisasikan dan menjalankan sampel SDK web.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: a50a10db784ec7c1943c94e74000713309787e5c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036607"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225335"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Jalankan sampel SDK web untuk kemampuan wawasan keterlibatan Dynamics 365 Customer Insights
 
@@ -26,7 +25,7 @@ Pustaka SDK web kemampuan wawasan keterlibatan adalah pustaka JavaScript dengan 
 
 - Instal [Kode Visual Studio](https://code.visualstudio.com/).
 - [Instal ekstensi Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) dalam Kode Visual Studio dan kenali cara menjalankan Live Server.
-- Anda harus memiliki [kunci penyerapan](instrument-website.md).
+- Anda harus memiliki [ruang kerja wawasan keterlibatan](create-workspace.md).
 
 ## <a name="run-sample"></a>Jalankan sampel
 
@@ -36,7 +35,11 @@ Pustaka SDK web kemampuan wawasan keterlibatan adalah pustaka JavaScript dengan 
 
 1. Buka folder yang di-zip dari Code Visual Studio.
 
-1. Di file `ei_websdk_sample.html`, ganti string "INGESTION_KEY" dengan kunci penyerapan dari portal kemampuan wawasan keterlibatan, dan string "NAME" dengan nama global yang diinginkan agar SDK dipakai di dalamnya. Pastikan Anda mengganti semua kejadian.
+1. Buka portal wawasan keterlibatan untuk ruang kerja Anda. Pilih **admin** > **Ruang Kerja**  lalu **Panduan penginstalan**. Ikuti pilihan pertama, lalu pilih **Salin kode** untuk menyalin cuplikan kode JavaScript.
+
+1. Di file `ei_websdk_sample.html`, rekatkan cuplikan kode yang baru saja Anda salin di bawah baris ini:
+
+   - <-- REKATKAN CUPlIKAN KODE JAVASCRIPT DARI PORTAL WAWASAN KETERLIBATAN DI BAWAH BARIS INI -->
 
 1. Buka file `ei_websdk_sample.html` menggunakan Live Server in Code Visual Studio dengan memilih **Tayangkan Langsung** dari bilah status.
 

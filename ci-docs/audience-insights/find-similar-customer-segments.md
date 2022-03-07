@@ -1,20 +1,23 @@
 ---
-title: Temukan pelanggan serupa dengan AI (Video)
+title: Temukan pelanggan serupa dengan AI (berisi video)
 description: Temukan segmen pelanggan serupa dengan kecerdasan buatan.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7999c4964773c3b5c49537027a2ed67f0ad57ec5
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903894"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355249"
 ---
 # <a name="similar-customers-preview"></a>Pelanggan serupa (pratinjau)
 

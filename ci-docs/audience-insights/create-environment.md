@@ -1,21 +1,23 @@
 ---
 title: Membuat lingkungan di Customer Insights
 description: Langkah-langkah membuat lingkungan dengan langganan berlisensi untuk Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088117"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354099"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Buat lingkungan di wawasan audiens
 
@@ -76,12 +78,14 @@ Jika Anda membuat beberapa lingkungan Customer Insights dan memilih untuk menyim
    
 Langkah **Microsoft Dataverse** memungkinkan Anda menghubungkan Customer Insights dengan lingkungan Dataverse Anda.
 
-Untuk [menggunakan model prediksi siap pakai](predictions-overview.md#out-of-box-models), konfigurasikan berbagi data dengan Dataverse. Atau Anda dapat mengaktifkan penyerapan data dari sumber data lokal, yang memberikan URL lingkungan Microsoft Dataverse yang dikelola organisasi Anda. Pilih **Aktifkan berbagi data** untuk berbagi data output Customer Insights dengan Data Lake terkelola Dataverse.
+Menyediakan lingkungan Anda sendiri Microsoft Dataverse untuk berbagi data (profil dan wawasan) dengan aplikasi bisnis berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi berbasis model di Power Apps. Biarkan bidang ini kosong jika Anda tidak memiliki lingkungan Anda sendiri Dataverse dan kami akan menyediakannya untuk Anda.
+
+Menghubungkan ke lingkungan Anda Dataverse juga memungkinkan Anda untuk [menelan data dari sumber data lokal menggunakan Power Platform aliran data dan gateway](data-sources.md#add-data-from-on-premises-data-sources). Anda juga dapat menggunakan [model](predictions-overview.md?tabs=b2c#out-of-box-models) prediksi out-of-box dengan Dataverse terhubung ke lingkungan.
 
 > [!IMPORTANT]
 > Wawasan Pelanggan dan Dataverse harus berada di wilayah yang sama untuk memungkinkan berbagi data.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="berbagi data dengan Microsoft Dataverse auto diaktifkan untuk instans baru bersih.":::
 
 > [!NOTE]
 > Customer Insights tidak mendukung skenario berbagi data berikut ini:

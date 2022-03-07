@@ -3,18 +3,17 @@ title: Pengayaan dengan impor kustom SFTP
 description: Informasi umum tentang pengayaan impor kustom SFTP.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304654"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229642"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Memperkaya profil pelanggan dengan data kustom (pratinjau)
 
@@ -45,6 +44,8 @@ Untuk mengkonfigurasikan impor kustom SFTP, persyaratan berikut harus dipenuhi:
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Cuplikan layar saat memasukkan lokasi data.":::
 
+1. Pilih **Berikutnya**, lalu pilih rangkaian data pelanggan. Pilihan ini dapat berupa semua profil pelanggan atau satu segmen.
+
 1. Pilih **Selanjutnya** dan berikan nama untuk pengayaan dan nama untuk entitas output. 
 
 1. Pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
@@ -64,7 +65,7 @@ Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan
 1. Setelah verifikasi selesai, sambungan dapat disimpan dengan memilih **Simpan**.
 
    > [!div class="mx-imgBorder"]
-   > ![halaman Panel Konfigurasi koneksi Experian](media/enrichment-SFTP-connection.png "halaman Panel Konfigurasi koneksi Experian")
+   > ![halaman Panel Konfigurasi koneksi Experian.](media/enrichment-SFTP-connection.png "halaman Panel Konfigurasi koneksi Experian")
 
 
 ## <a name="defining-field-mappings"></a>Menentukan pemetaan bidang 
@@ -123,6 +124,6 @@ Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lih
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Bangun di atas data pelanggan yang diperkaya. Buat [segmen](segments.md) dan [ukuran](measures.md), dan [ekspor data](export-destinations.md) untuk memberikan pengalaman pribadi kepada pelanggan Anda.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

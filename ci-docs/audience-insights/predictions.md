@@ -1,24 +1,28 @@
 ---
 title: Melengkapi data parsial menggunakan prediksi
 description: Gunakan prediksi untuk mengisi data pelanggan yang tidak lengkap.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645038"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354007"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Lengkapi data parsial dengan prediksi
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Lengkapi data parsial Anda dengan prediksi (usang)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Fitur ini akan **tidak digunakan lagi pada** **5 November 2021**. Implementasi saat ini akan terus berfungsi sampai fitur dihapus, tetapi Anda tidak akan dapat membuat integrasi baru menggunakan instruksi di bawah ini.
 
 Prediksi memungkinkan Anda dengan mudah membuat nilai prediksi yang dapat meningkatkan pemahaman Anda tentang pelanggan. Pada halaman **intelijen** > **prediksi**, anda dapat memilih **prediksi saya** untuk melihat prediksi yang telah dikonfigurasi di bagian lain dari wawasan audiens, dan memungkinkan anda menyesuaikannya lebih lanjut.
 
@@ -60,6 +64,8 @@ Untuk informasi lebih lanjut, lihat [Membuat lingkungan baru](create-environment
    > ![Contoh yang menampilkan nilai bidang yang dipetakan ke kategori.](media/intelligence-categorymapping.png "Contoh yang menampilkan nilai bidang yang dipetakan ke kategori")
 
 8. Pilih **selesai** dan prediksi akan diproses. Pemrosesan akan memakan waktu, tergantung pada ukuran dan kompleksitas data. Hasil akan tersedia di entitas baru berdasarkan **nama entitas output** prediksi yang Anda buat.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Buat prediksi saat membuat segmen
 
@@ -110,7 +116,7 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 ## <a name="edit-a-prediction"></a>Edit Prediksi
 
-Setelah membuat prediksi, Anda dapat menyesuaikan model di AI Builder untuk meningkatkan efektivitas model Anda.  
+Setelah membuat prediksi, Anda dapat menyesuaikan model AI Builder untuk meningkatkan efektivitas model Anda.  
 
 1. Di wawasan audiens, buka **Intelijen** > **Prediksi** > **Prediksi Saya**.
 
@@ -118,14 +124,14 @@ Setelah membuat prediksi, Anda dapat menyesuaikan model di AI Builder untuk meni
 
 3. Pilih elipsis di kolom **tindakan** dan pilih **tampilan**.
 
-4. pilih **Sesuaikan di AI Builder**.
+4. Pilih **Kustomisasi di AI Builder**.
 
 5. Perbarui model Anda di AI Builder. [Pelajari lebih lanjut tentang cara mengelola model di AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Langkah berikutnya dari prediksi Anda akan menggunakan model yang telah diperbarui yang telah Anda buat.
 
 > [!NOTE]
-> Model baru yang dibuat di AI Builder tidak akan ditampilkan di wawasan audiens kecuali model dibuat dari pengalaman yang tercantum di atas.
+> Model baru yang dibuat AI Builder tidak akan ditampilkan dalam audiens wawasan kecuali model dibuat dari pengalaman yang tercantum di atas.
 
 ## <a name="remove-a-prediction"></a>Hilangkan prediksi
 

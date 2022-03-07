@@ -3,36 +3,38 @@ title: Entitas dan himpunan data
 description: Lihat data pada halaman entitas.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900431"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355302"
 ---
 # <a name="entities-in-audience-insights"></a>Entitas dalam wawasan audiens
 
 Setelah [mengkonfigurasi sumber data](data-sources.md), buka halaman **entitas** untuk mengevaluasi kualitas data yang terserap. Entitas dianggap sebagai himpunan data. Beberapa kemampuan Dynamics 365 Customer Insights dibangun di sekitar entitas ini. Meninjau mereka secara dekat dapat membantu Anda memvalidasi output dari kemampuan tersebut.
 
-Halaman **Entitas mencantumkan entitas dan menyertakan kolom** ini:
+Halaman **Entitas** mencantumkan entitas dan menyertakan kolom ini:
 
-- **Nama** : Nama entitas data. Jika Anda melihat simbol peringatan di samping nama entitas, berarti bahwa data untuk entitas tersebut tidak berhasil dimuat.
-- **Sumber:** Jenis sumber data yang menelan entitas.
-- **Diperbarui:** Waktu entitas terakhir diperbarui.
-- **Status:** Detail tentang pembaruan terakhir entitas.
+- **Nama**: Nama entitas data. Jika Anda melihat simbol peringatan di samping nama entitas, berarti bahwa data untuk entitas tersebut tidak berhasil dimuat.
+- **Sumber**: Jenis sumber data yang menelan entitas.
+- **Diperbarui**: Waktu entitas terakhir diperbarui.
+- **Status**: Detail tentang pembaruan terakhir entitas.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Jelajahi data entitas tertentu
 
 1. Di wawasan audiens, buka **Data** > **Entitas**.
-1. Dari **halaman** Entitas, pilih entitas untuk membuka halaman detail.  
+1. **Dari halaman Entitas**, pilih entitas untuk membuka halaman detail.  
 1. Jelajahi berbagai bidang dan catatan yang disertakan untuk entitas tersebut.
 
 - Tab **Atribut** dipilih secara default dan menampilkan tabel untuk meninjau rincian entitas yang dipilih, seperti nama bidang, jenis data, dan jenis. Kolom **jenis** menunjukkan jenis terkait Common Data Model, yang baik yang diidentifikasi secara otomatis oleh sistem, atau yang [dipetakan secara manual](map-entities.md) oleh pengguna. Jenis ini adalah jenis semantik yang dapat berbeda dari jenis data atribut. Misalnya, bidang *email* di bawah ini memiliki jenis data *teks* namun jenis Common Data Model (semantik)-nya mungkin *email* atau *EmailAddress*.
@@ -41,7 +43,7 @@ Halaman **Entitas mencantumkan entitas dan menyertakan kolom** ini:
 > ![Tabel bidang.](media/data-manager-entities-fields.PNG "Tabel bidang")
 
 > [!NOTE]
-> Halaman ini hanya menampilkan sampel data entitas Anda. Untuk melihat himpunan data lengkap, buka halaman **sumber data**, pilih entitas, pilih **Edit**, lalu lihat data entitas ini dengan editor Power Query seperti dijelaskan dalam [sumber data](data-sources.md).
+> Halaman ini hanya menampilkan sampel data entitas Anda. Untuk melihat himpunan data lengkap, buka **halaman Sumber** data, pilih entitas, pilih **Edit**, lalu lihat data entitas ini dengan Power Query editor seperti yang dijelaskan dalam [sumber](data-sources.md) data.
 
 Untuk mempelajari lebih lanjut tentang data yang terserap di entitas, kolom **ringkasan** memberi Anda beberapa karakteristik penting data, seperti null, nilai yang tidak ada, nilai unik, jumlah, dan distribusi, sebagaimana berlaku untuk data Anda. Pilih ikon diagram untuk melihat ringkasan data.
 
@@ -53,13 +55,13 @@ Untuk mempelajari lebih lanjut tentang data yang terserap di entitas, kolom **ri
 > [!div class="mx-imgBorder"]
 > ![Pilih entitas.](media/data-manager-entities-data.png "Pilih satu entitas")
 
-- Tab **Laporan** (tersedia untuk beberapa entitas) memungkinkan Anda untuk memvisualisasikan data Anda dengan membuat laporan, dan menyertakan kolom ini:
+- Tab **Laporan** (tersedia untuk beberapa entitas) memungkinkan Anda memvisualisasikan data dengan membuat laporan, dan menyertakan kolom ini:
 
-  - **Nama** laporan: Nama laporan.
-  - **Dibuat** oleh: Nama orang yang menciptakan entitas.
-  - **Dibuat:** Tanggal dan waktu pembuatan entitas.
-  - **Diedit** oleh: Nama orang yang memodifikasi entitas.
-  - **Diedit:** Tanggal dan waktu modifikasi entitas. 
+  - **Nama laporan**: Nama laporan.
+  - **Dibuat oleh**: Nama orang yang menciptakan entitas.
+  - **Dibuat**: Tanggal dan waktu pembuatan entitas.
+  - **Diedit oleh**: Nama orang yang memodifikasi entitas.
+  - **Diedit**: Tanggal dan waktu modifikasi entitas. 
 
 ## <a name="entity-specific-information"></a>Informasi spesifik Entitas
 
@@ -71,7 +73,9 @@ Bidang dari sumber data yang diserap dapat berisi data yang rusak. Rekaman denga
 
 Misalnya, kolom 'ulang tahun' memiliki himpunan tipe data sebagai 'tanggal'. Rekaman pelanggan memasukkan ulang tahun mereka sebagai '01/01/19777'. Sistem akan menandai rekaman ini sebagai rusak. Seseorang sekarang dapat mengubah ulang tahun dalam sistem sumber menjadi '1977'. Setelah refresh otomatis sumber data, bidang sekarang memiliki format yang valid dan rekaman akan dihapus dari entitas yang rusak. 
 
-Buka **Data** > **Entitas** dan cari entitas yang rusak di bagian **Sistem**. Penamaan skema entitas yang rusak: 'DataSourceName_EntityName_corrupt'.
+Buka **Data** > **Entitas** dan cari entitas yang rusak di bagian **Sistem**. Penamaan skema entitas yang rusak: 'DataSourceName_EntityName_corrupt'. Pilih entitas yang rusak untuk mengidentifikasi semua bidang yang rusak dan alasannya pada tingkat catatan individu.
+> [!div class="mx-imgBorder"]
+> ![Alasan korupsi.](media/corruption-reason.png "Alasan Korupsi")
 
 Customer Insights masih memproses rekaman yang rusak. Namun, mereka dapat menyebabkan masalah saat bekerja dengan data terpadu.
 
@@ -79,7 +83,7 @@ Pemeriksaan berikut ini berjalan pada data yang diserap untuk mengekspos rekaman
 
 - Nilai bidang tidak cocok dengan tipe data kolomnya.
 - Bidang berisi karakter yang menyebabkan kolom tidak cocok dengan skema yang diharapkan. Misalnya: kutipan yang salah diformat, tanda kutip yang tidak di-escape, atau karakter baris baru.
-- Jika ada kolom datetime/date/datetimeoffset, formatnya harus ditentukan dalam model jika tidak mengikuti format ISO standar.
+- Jika ada kolom datetime/date/datetimeoffset, formatnya perlu ditentukan dalam model jika tidak mengikuti format ISO standar.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

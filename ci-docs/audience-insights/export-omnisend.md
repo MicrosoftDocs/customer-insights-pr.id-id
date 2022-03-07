@@ -1,20 +1,19 @@
 ---
 title: Mengekspor data Customer Insights ke Omnisend
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Omnisend.
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: 15fc6fc2426ad3958268e5bcc200b8eb2b0fd13a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124505"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226766"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Mengekspor segmen ke Omnisend (pratinjau)
 
@@ -28,9 +27,9 @@ Ekspor segmen profil pelanggan terpadu ke Omnisend dan gunakan untuk aktivitas p
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 1 juta profil per ekspor ke Omnisend dan dapat memakan waktu hingga 4 jam untuk menyelesaikannya.
+- Anda dapat mengekspor hingga 1 juta profil pelanggan per ekspor ke Omnisend dan dapat berlangsung hingga 4 jam.
 - Mengekspor ke Omnisend terbatas pada segmen.
-- Jumlah profil yang dapat Anda ekspor ke Omnisend tergantung pada kontrak Anda dengan Omnisend.
+- Jumlah profil pelanggan yang dapat Anda ekspor ke Omnisend tergantung pada kontrak Anda dengan Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Konfigurasikan koneksi ke Omnisend
 
@@ -62,7 +61,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Omnisend. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
 
-1. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Segmen harus diekspor ke Omnisend. Secara opsional, Anda dapat mengekspor nama depan, nama belakang, Alamat, Negara/Kawasan, Negara bagian, kota, dan Kode Pos untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Segmen harus diekspor ke Omnisend. Secara opsional, Anda dapat mengekspor nama depan, nama belakang, Alamat, Negara/Kawasan, Negara bagian, kota, dan Kode Pos untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
 
 1. Pilih **Simpan**.
 

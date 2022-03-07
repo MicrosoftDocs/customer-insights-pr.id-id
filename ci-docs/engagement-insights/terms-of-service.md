@@ -5,26 +5,25 @@ author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
 ms.date: 06/09/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 101888ecc3a741a1ab6eb87c20055644eb8022b2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7774124"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228076"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS – Wawasan keterlibatan (pratinjau) 
 
-Engagement insights (preview) adalah kemampuan pratinjau pra-rilis, yang berarti memiliki ukuran keamanan, privasi, dan lokasi data yang kurang atau berbeda daripada fitur dan kemampuan yang tersedia secara umum di Dynamics 365 Customer Insights. Lihat persyaratan di bawah ini dan dokumentasi produk untuk menentukan apakah wawasan keterlibatan (pratinjau) sesuai untuk data Anda.
+Wawasan keterlibatan (pratinjau) adalah kemampuan pratinjau pra-rilis, yang berarti bahwa fitur ini memiliki ukuran keamanan, privasi, dan data yang kurang atau berbeda dibandingkan fitur dan kemampuan yang disediakan secara umum dalam Dynamics 365 Customer Insights. Lihat persyaratan di bawah ini dan dokumentasi produk untuk menentukan apakah wawasan keterlibatan (pratinjau) sesuai untuk data Anda.
 
 ## <a name="preview-terms-of-service"></a>PRATINJAU KEtENTUaN LAYANAN
 
 TERAKHIr DIPERBARUI OKTOBER 2020 
 
-Dengan mengakses atau menggunakan pratinjau layanan Dynamics 365 Customer Insights - Wawasan Keterlibatan (bersama dengan sumber data yang disediakan Microsoft, "Layanan"), Anda menerima syarat dan ketentuan Perjanjian ini. Jika Anda tidak menerimanya, jangan akses atau gunakan Layanan.
+Dengan mengakses atau menggunakan pratinjau layanan Dynamics 365 Customer Insights – Wawasan keterlibatan (bersama dengan sumber data yang disediakan Microsoft, "Layanan"), Anda menyetujui persyaratan dan ketentuan Perjanjian ini. Jika Anda tidak menerimanya, jangan akses atau gunakan Layanan.
 
 ## <a name="1-what-this-agreement-covers"></a>1. APA YANG DICAKUP PERJANJIAN INI
 
@@ -154,7 +153,7 @@ APABILA DIIZINKAN OLEH HUKUM, DALAM AKTIVITAS APA PUN MICROSOFT TIDAK BERTANGGUN
 
 ### <a name="111-term"></a>11.1. Istilah
 
-Perjanjian ini berlaku pada tanggal persetujuan Anda pertama kali. Perjanjian ini menggantikan perjanjian sebelumnya di mana Anda telah menggunakan Dynamics 365 Product Insights atau layanan pendahulu apa pun. Perjanjian ini akan berakhir mana pun yang lebih dulu antara (i) tanggal ketersediaan pertama rilis komersial Layanan (jika ada) atau (ii) tanggal di mana Microsoft memberikan pemberitahuan pembatalan langganan kepada Anda. Microsoft dapat menghentikan sementara atau membatalkan penggunaan dan akses Anda ke semua atau bagian mana pun dari Layanan, atau menghentikan Perjanjian ini, kapan pun dengan alasan apa pun dan dalam kebijakan penuhnya.
+Perjanjian ini berlaku pada tanggal persetujuan Anda pertama kali. Perjanjian ini menggantikan perjanjian sebelumnya untuk penggunaan Dynamics 365 Product Insights atau layanan sebelumnya oleh Anda. Perjanjian ini akan berakhir mana pun yang lebih dulu antara (i) tanggal ketersediaan pertama rilis komersial Layanan (jika ada) atau (ii) tanggal di mana Microsoft memberikan pemberitahuan pembatalan langganan kepada Anda. Microsoft dapat menghentikan sementara atau membatalkan penggunaan dan akses Anda ke semua atau bagian mana pun dari Layanan, atau menghentikan Perjanjian ini, kapan pun dengan alasan apa pun dan dalam kebijakan penuhnya.
 
 ### <a name="112-effect-of-termination"></a>11.2. Akibat Penghentian
 

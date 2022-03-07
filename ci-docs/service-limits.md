@@ -1,20 +1,19 @@
 ---
-title: Batas layanan dalam Dynamics 365 Customer Insights
+title: Batas layanan di Dynamics 365 Customer Insights
 description: Pahami batasan dan larangan.
 ms.date: 09/03/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
-ms.translationtype: HT
+ms.openlocfilehash: 9bf8f03b785fb3035e3fc979a3304d4e98fd8d28
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7791985"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350411"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Batas layanan di kemampuan Customer Insights
 
@@ -22,27 +21,25 @@ Artikel ini menjelaskan batas internal untuk Layanan Customer Insights, yang dir
 
 ## <a name="audience-insights"></a>Wawasan audiens
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Batas layanan dalam kemampuan wawasan Dynamics 365 Customer Insights audiens
-
 | Luas  | Batas  | Catatan |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmen, ukuran, dan prediksi | 300  | Jumlah total [...](audience-insights/segments.md) segmen, [...](audience-insights/measures.md) ukuran, dan [prediksi gabungan tidak dapat](audience-insights/predictions.md) melebihi 300.  |
+| Segmen, ukuran, dan prediksi | 300  | Jumlah [total segmen](audience-insights/segments.md), [ukuran](audience-insights/measures.md), dan [prediksi](audience-insights/predictions.md) gabungan tidak dapat melebihi 300.  |
 | Hubungan | 20 tingkat kedalaman pada Relasi dalam jalur entitas. | Saat membuat [segmen](audience-insights/segments.md) atau [ukuran](audience-insights/measures.md) menggunakan antarmuka pembuat, jalur entitas dapat memiliki hingga 20 lompatan relasi antara entitas awal dan entitas target.  |
 
+<!--
+## Engagement insights
 
-## <a name="engagement-insights"></a>Wawasan keterlibatan
+### Workspace and event quotas
 
-### <a name="workspace-and-event-quotas"></a>Kuota ruang kerja dan aktivitas
+Engagement insights is a highly scalable application that can support millions of events per second. During public preview, events have a volume threshold. There's also a limit to the number of workspaces in an organization.
 
-Wawasan keterlibatan adalah aplikasi yang sangat dapat diskalakan yang dapat mendukung jutaan aktivitas per detik. Selama pratinjau umum, aktivitas memiliki ambang batas volume. Juga ada batas untuk jumlah ruang kerja di organisasi.
+### Engagement insights limits
 
-### <a name="engagement-insights-limits"></a>Batas Wawasan keterlibatan
+- Maximum event volume per workspace  = 100 events per second
 
-- Volume aktivitas maksimum per ruang kerja = 100 aktivitas per detik
+- Maximum number of workspaces per organization = 100
 
-- Jumlah ruang kerja maksimum per organisasi = 100
-
-Bila aktivitas melebihi ambang batas, maka aktivitas dapat mengakibatkan hilangnya data dalam laporan berdasarkan aktivitas tersebut. Anda dapat [menghubungi dukungan](https://go.microsoft.com/fwlink/?linkid=2145734) untuk meminta peningkatan volume sebelum melampaui batas. Kami akan bekerja sama dengan Anda untuk menentukan kebutuhan Anda untuk peningkatan volume dan mendukung permintaan Anda.
-
+When events exceed the threshold, it can lead to loss of data in reports based on those events. You can [contact support](https://go.microsoft.com/fwlink/?linkid=2145734) to request a volume increase before you exceed limits. We'll work with you to determine your need for a volume increase and support your request.
+-->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

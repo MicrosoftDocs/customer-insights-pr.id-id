@@ -3,20 +3,24 @@ title: Prediksi nilai selama hubungan dengan pelanggan (CLV)
 description: Prediksi potensi pendapatan untuk pelanggan aktif di masa mendatang.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035373"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355793"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV) (pratinjau)
+# <a name="customer-lifetime-value-clv-prediction"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV)
 
 Perkipkan nilai potensial (pendapatan) yang akan diberikan pelanggan aktif individual ke bisnis Anda hingga periode waktu mendatang yang ditentukan. Fitur ini dapat membantu Anda mencapai berbagai sasaran: 
 - Mengidentifikasi pelanggan bernilai tinggi dan memproses wawasan ini
@@ -65,7 +69,7 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
     - Kelengkapan data: Kurang dari 20% nilai hilang pada bidang yang diperlukan dalam data input   
 
 > [!NOTE]
-> - Model ini memerlukan riwayat transaksi pelanggan Anda. Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian/transaksi, Anda dapat menyatukan di Power Query sebelum menyerap data.
+> - Model ini memerlukan riwayat transaksi pelanggan Anda. Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian /transaksi, Anda dapat menyatukannya Power Query sebelum konsumsi data.
 > - Namun untuk data aktivitas pelanggan tambahan (opsional), Anda dapat menambahkan entitas aktivitas pelanggan sebanyak yang ingin Anda pertimbangkan berdasarkan model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Buat Prediksi nilai selama hubungan dengan pelanggan
@@ -74,7 +78,7 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
 
 1. Pilih petak **nilai selama hubungan dengan pelanggan** dan pilih **Gunakan model**. 
 
-1. Di panel **Nilai selama hubungan dengan pelanggan (pratinjau)**, pilih **Mulai**.
+1. **Di panel Nilai** seumur hidup Pelanggan, pilih **Mulai**.
 
 1. **Namai model ini** dan **nama entitas Output** untuk membedakannya dari model atau entitas lain.
 

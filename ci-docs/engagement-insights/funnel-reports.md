@@ -4,17 +4,16 @@ description: Cara menggunakan laporan corong untuk memahami cara audiens membuat
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
-ms.translationtype: HT
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498646"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226264"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Membuat dan mengelola laporan corong
 
@@ -163,13 +162,23 @@ Anda dapat mengubah nama laporan corong, menghapusnya, atau memodifikasi langkah
 
 Wawasan keterlibatan sekarang menawarkan wawasan corong untuk pelanggan. Gunakan wawasan corong untuk mendapatkan wawasan yang lebih mendalam mengenai perilaku pelanggan tentang langkah-langkah dalam laporan corong Anda. Saat Anda membuat dan menyimpan laporan corong baru, wawasan corong secara otomatis dibuat untuk laporan Anda. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Wawasan corong.":::
+
+> [!NOTE]
+> Wawasan corong hanya dapat dibuat untuk langkah corong yang **tidak** mencakup dimensi kustom. Untuk membuat wawasan corong untuk semua langkah di corong, gunakan dimensi default wawasan keterlibatan untuk membuat langkah corong Anda. 
+
 Anda dapat melihat wawasan corong dari kategori berikut, di tingkat utama dan langkah: 
 
- - Rasio konversi 
+ - Rasio konversi
+ -    Rasio konversi antara pembayaran dan Beli adalah 22%.
  - Waktu Transisi 
+ -    Waktu transisi rata-rata antara Troli dan Pembayaran adalah 23 menit. 
  - Waktu Penyelesaian 
+ -    Jumlah rata-rata waktu yang diperlukan pelanggan untuk menyelesaikan corong adalah 47 menit. 
 
 Gunakan wawasan ini untuk mempelajari lebih dalam perilaku pelanggan dan lebih memahami poin mampir dan beralih untuk laporan corong Anda. 
+
+Untuk membandingkan wawasan di berbagai langkah, pilih **Lihat perincian langkah** atau **Bandingkan dengan langkah lain** dari kartu wawasan. Diagram ini akan menampilkan grafik batang yang membandingkan metrik untuk setiap langkah corong. 
 
 Wawasan corong akan dihitung ulang setiap 24 jam, atau saat Anda **Menyimpan** laporan corong. 
 

@@ -3,26 +3,29 @@ title: Panduan sampel prediksi Rekomendasi produk
 description: Gunakan contoh panduan ini untuk mencoba model prediksi rekomendasi produk siap pakai.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129903"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354651"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel prediksi Rekomendasi produk (pratinjau)
+# <a name="product-recommendation-prediction-sample-guide"></a>Panduan sampel prediksi Rekomendasi produk
 
 Kami akan menjelaskan kepada Anda contoh akhir dari prediksi rekomendasi produk menggunakan data sampel yang diberikan di bawah ini.
 
 ## <a name="scenario"></a>Skenario
 
-Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang mereka jual melalui situs web Kopi Contoso mereka. Tujuan mereka adalah untuk memahami produk yang harus mereka rekomendasikan kepada pelanggan berulang mereka. Mengetahui pelanggan **lebih cenderung membeli** dapat membantu mereka menghemat upaya pemasaran dengan berfokus pada item tertentu.
+Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang dijual melalui situs web Kopi Aswono. Tujuan mereka adalah untuk memahami produk yang harus mereka rekomendasikan kepada pelanggan berulang mereka. Mengetahui pelanggan **lebih cenderung membeli** dapat membantu mereka menghemat upaya pemasaran dengan berfokus pada item tertentu.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -31,7 +34,7 @@ Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tingg
 
 ## <a name="task-1---ingest-data"></a>Tugas 1- Serap Data
 
-Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber data menggunakan konektor connector](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum.
+Tinjau artikel [tentang konsumsi](data-sources.md) data dan [impor sumber data menggunakan Power Query konektor](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Menyerap data pelanggan dari platform eCommerce
 
@@ -105,9 +108,9 @@ Setelah menyerap data, kami sekarang memulai proses penyatuan data untuk membuat
 
 1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
 
-2. Di daftar drop-down **utama**, pilih **ecommercecontacts: eCommerce** sebagai sumber utama dan mencakup semua rekaman.
+2. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
 
-3. Pada daftar drop-down **entitas 2**, pilih **Loycustomer: LoyaltyScheme** dan sertakan semua rekaman.
+3. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
 
    ![Satukan dan cocokkan eCommerce dan Loyalty.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Setelah menyerap data, kami sekarang memulai proses penyatuan data untuk membuat
 
 5. Tambahkan kondisi pertama Anda menggunakan FullName.
 
-   - Untuk eCommerceContacts, pilih **fullname** di drop-down.
-   - Untuk loyCustomers, pilih **fullname** di drop-down.
+   - Untuk eCommerceContacts, pilih **FullName** di dropdown.
+   - Untuk loyCustomers, pilih **FullName** di dropdown.
    - Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
    - Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
 6. Masukkan nama **fullname, email** untuk aturan baru.
 
    - Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   - Untuk eCommerceContacts entitas, pilih **email** di drop-down.
-   - Untuk loyCustomers entitas, pilih **email** di drop-down.
+   - Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
+   - Untuk entitas loyCustomers, pilih **EMail** di dropdown.
    - Biarkan Normalkan kosong.
    - Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 

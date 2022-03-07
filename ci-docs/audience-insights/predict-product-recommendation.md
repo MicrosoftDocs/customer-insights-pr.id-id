@@ -1,22 +1,21 @@
 ---
 title: prediksi Rekomendasi produk
 description: Memperkirakan produk yang mungkin dibeli atau berinteraksi dengan pelanggan.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494543"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355755"
 ---
-# <a name="product-recommendation-prediction-preview"></a>prediksi Rekomendasi produk (pratinjau)
+# <a name="product-recommendation-prediction"></a>prediksi Rekomendasi produk
 
 Model rekomendasi produk membuat rangkaian rekomendasi produk prediktif. Rekomendasi didasarkan pada perilaku pembelian sebelumnya dan pelanggan dengan pola pembelian yang serupa. Anda dapat membuat prediksi rekomendasi produk baru pada halaman **Intelijen** > **Prediksi**. Pilih **prediksi saya** untuk melihat prediksi lain yang Anda buat.
 
@@ -54,7 +53,7 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 
 > [!NOTE]
 > - Model ini memerlukan riwayat transaksi pelanggan Anda. Definisi transaksi cukup fleksibel. Data apa pun yang menjelaskan interaksi produk pengguna dapat berfungsi sebagai input. Misalnya, membeli produk, mengikuti kelas, atau menghadiri acara.
-> - Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian, satukan di Power Query sebelum menyerap data.
+> - Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian, serikat mereka Power Query sebelum konsumsi data.
 > - Jika detail pesanan dan pesanan adalah entitas yang berbeda, gabunglah mereka sebelum digunakan dalam model. Model tidak hanya berfungsi dengan ID pesanan atau ID tanda terima dalam entitas.
 
 
@@ -62,7 +61,7 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 
 1. Di Customer Insights, buka **Intelijen** > **Prediksi**.
 
-1. Pilih petak **model rekomendasi produk (pratinjau)** dan pilih **gunakan model ini**.
+1. **Pilih ubin model** rekomendasi produk dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
    > ![petak model Rekomendasi Produk dengan Tombol Gunakan model ini.](media/product-recommendation-usethismodel.PNG "petak model Rekomendasi Produk dengan Tombol Gunakan model ini")
 
@@ -79,11 +78,11 @@ Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi pe
 1. Atur **Jumlah produk** yang akan direkomendasikan ke pelanggan. Nilai ini tergantung pada cara metode pengiriman Anda mengisi data. Jika Anda dapat merekomendasikan tiga produk, atur nilai ini dengan sesuai.
    
    >[!TIP]
-   > Anda dapat memilih **Simpan dan tutup** Kapan pun untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi di tab **prediksi saya**.
+   > Anda dapat memilih **Simpan draf** kapan saja untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi di tab **prediksi saya**.
 
-1. Pilih jika Anda ingin **menyarankan produk yang baru saja dibeli pelanggan**.
+1. Pilih apakah Anda ingin menyertakan produk yang baru saja dibeli pelanggan di **bidang Ulangi pembelian yang diharapkan**.
 
-1. Jika Anda memilih untuk *tidak* menyarankan produk yang baru dibeli, atur **Periode Lihat kembali**. Pengaturan ini menentukan jangka waktu yang dipertimbangkan model sebelum merekomendasikan produk kepada pengguna lagi. Misalnya, tunjukkan pelanggan membeli laptop setiap dua tahun. Jendela ini akan melihat riwayat pembelian selama dua tahun terakhir, dan jika mereka menemukan item, item akan difilter dari rekomendasi.
+1. **Atur jendela Lihat kembali**. Pengaturan ini menentukan jangka waktu yang dipertimbangkan model sebelum merekomendasikan produk kepada pengguna lagi. Misalnya, tunjukkan pelanggan membeli laptop setiap dua tahun. Jendela ini akan melihat riwayat pembelian selama dua tahun terakhir, dan jika mereka menemukan item, item akan difilter dari rekomendasi.
 
 1. Pilih **berikutnya**
 

@@ -1,24 +1,26 @@
 ---
-title: Penyegaran tambahan untuk sumber data berbasis kueri daya
-description: Refresh data baru dan yang diperbarui untuk sumber data besar berdasarkan Power Query.
+title: Penyegaran inkremental untuk Power Query sumber data berbasis
+description: Refresh data baru dan terbaru untuk sumber data besar berdasarkan Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900272"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353686"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Penyegaran inkremental untuk sumber daya berbasis Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Penyegaran inkremental untuk sumber data berdasarkan Power Query
 
-Artikel ini membahas cara mengonfigurasi penyegaran inkremental untuk sumber data berdasarkan Power Query.
+Artikel ini membahas cara mengonfigurasi refresh inkremental untuk sumber data berdasarkan Power Query.
 
 Peningkatan refresh secara bertahap untuk sumber data memberikan keuntungan berikut:
 
@@ -28,13 +30,13 @@ Peningkatan refresh secara bertahap untuk sumber data memberikan keuntungan beri
 
 ## <a name="configure-incremental-refresh"></a>Konfigurasikan refresh bertahap
 
-Wawasan audiens memungkinkan refresh tambahan untuk sumber data yang diimpor melalui Power Query yang mendukung konsumsi inkremental. Misalnya, database Azure SQL dengan bidang tanggal dan waktu, yang menunjukkan Kapan rekaman data terakhir diperbarui.
+Audiens wawasan memungkinkan penyegaran tambahan untuk sumber data yang diimpor melalui Power Query dukungan penyerapan inkremental tersebut. Misalnya, database Azure SQL dengan bidang tanggal dan waktu, yang menunjukkan Kapan rekaman data terakhir diperbarui.
 
-1. [buat sumber data baru berdasarkan Power Query](connect-power-query.md).
+1. [Buat sumber data baru berdasarkan Power Query](connect-power-query.md).
 
-1. Berikan **nama** untuk sumber data.
+1. **Berikan nama** untuk sumber data.
 
-1. Pilih sumber data yang mendukung penyegaran inkremental, seperti [database Azure SQL](/power-query/connectors/azuresqldatabase).
+1. Pilih sumber data yang mendukung refresh inkremental, seperti [database](/power-query/connectors/azuresqldatabase) Azure SQL.
 
 1. Pilih entitas atau tabel untuk diserap.
 

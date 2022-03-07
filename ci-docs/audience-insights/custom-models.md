@@ -3,25 +3,27 @@ title: Model Pembelajaran Mesin kustom | Microsoft Docs
 description: Bekerja dengan model kustom dari Azure Machine Learning di Dynamics 365 Customer Insights
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881788"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355079"
 ---
 # <a name="custom-machine-learning-models"></a>Model Pembelajaran Mesin kustom
 
 > [!NOTE]
-> Dukungan untuk Pembelajaran Mesin Studio (klasik) akan berakhir pada 31 Agustus 2024. Kami menyarankan Anda bertransisi ke [Azure Pembelajaran Mesin pada tanggal](/azure/machine-learning/overview-what-is-azure-machine-learning) tersebut.
+> Dukungan untuk Pembelajaran Mesin Studio (klasik) akan berakhir pada 31 Agustus 2024. Sebaiknya transisi ke [Azure Pembelajaran Mesin](/azure/machine-learning/overview-what-is-azure-machine-learning) pada tanggal tersebut.
 >
-> Mulai 1 Desember 2021, Anda tidak akan dapat membuat sumber daya studio (klasik) Pembelajaran Mesin baru. Hingga 31 Agustus 2024, Anda dapat terus menggunakan sumber daya Pembelajaran Mesin Studio (klasik) yang ada. Untuk informasi selengkapnya, lihat [Migrasi ke Azure Pembelajaran Mesin](/azure/machine-learning/migrate-overview).
+> Mulai 1 Desember 2021, Anda tidak akan dapat membuat sumber daya Pembelajaran Mesin Studio (klasik) baru. Hingga 31 Agustus 2024, Anda dapat terus menggunakan sumber daya Pembelajaran Mesin Studio (klasik) yang ada. Untuk informasi selengkapnya, lihat [Bermigrasi ke Azure Pembelajaran Mesin](/azure/machine-learning/migrate-overview).
 
 
 **Kecerdasan** > **Model Kustom** memungkinkan Anda mengelola alur kerja berdasarkan model Pembelajaran Mesin Azure. Alur kerja membantu Anda memilih data yang ingin Anda hasilkan wawasannya dan memetakan hasil ke data pelanggan terpadu Anda. Untuk informasi lebih lanjut tentang cara membuat model kustom ML, lihat [menggunakan model berbasis pembelajaran mesin Azure](azure-machine-learning-experiments.md).
@@ -32,7 +34,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Fitur ini mendukung layanan web yang diterbitkan melalui [pipa batch Azure Pembelajaran Mesin](/azure/machine-learning/concept-ml-pipelines).
+- Fitur ini mendukung layanan web yang diterbitkan melalui [Azure Pembelajaran Mesin jaringan pipa batch](/azure/machine-learning/concept-ml-pipelines).
 
 - Anda memerlukan akun Azure data Lake Gen2 Storage yang terkait dengan instans Azure studio Anda untuk menggunakan fitur ini. Untuk informasi lebih lanjut, Lihat [membuat akun penyimpanan Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -40,6 +42,8 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
    > [!NOTE]
    > Data akan ditransfer antara instans Customer Insights dan alur atau layanan web Azure terpilih dalam alur kerja. Jika Anda mentransfer data ke layanan Azure, pastikan layanan dikonfigurasi untuk memproses data dengan cara dan lokasi yang diperlukan agar sesuai dengan persyaratan hukum atau peraturan untuk data tersebut di organisasi Anda.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Tambahkan alur kerja baru
 
@@ -56,7 +60,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
 1. Pilih **ruang kerja** yang terkait dengan layanan web Anda. 
 
-1. Pilih pipa Azure Pembelajaran Mesin di **layanan Web yang berisi dropdown model** Anda. Kemudian pilih **Berikutnya**.    
+1. Pilih alur Azure Pembelajaran Mesin di **layanan Web yang berisi dropdown model** Anda. Kemudian pilih **Berikutnya**.    
    Pelajari lebih lanjut tentang cara [mempublikasi alur kerja di Pembelajaran Mesin Azure menggunakan desainer](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Alur anda harus dipublikasikan dalam [titik akhir alur](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Untuk setiap **input Layanan web**, pilih **entitas** yang cocok dari Customer Insights dari wawasan audiens dan pilih **Berikutnya**.

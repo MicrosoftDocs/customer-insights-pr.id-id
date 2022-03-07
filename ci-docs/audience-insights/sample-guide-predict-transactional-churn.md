@@ -3,26 +3,25 @@ title: Panduan sampel prediksi kehilangan pelanggan transaksional
 description: Gunakan contoh panduan ini untuk mencoba model prediksi kehilangan pelanggan transaksional bawaan.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029449"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354605"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan transaksional (pratinjau)
+# <a name="transactional-churn-prediction-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan transaksional
 
-Panduan ini akan memandu Anda tentang contoh komprehensif prediksi kehilangan pelanggan transaksional di Customer Insights menggunakan data sampel yang diberikan di bawah ini. Semua data yang digunakan dalam panduan ini bukan data pelanggan nyata dan merupakan bagian dari dataset Contoso yang ditemukan di lingkungan *Demo* dalam Langganan Customer Insights Anda.
+Panduan ini akan memandu Anda tentang contoh komprehensif prediksi kehilangan pelanggan transaksional di Customer Insights menggunakan data sampel yang diberikan di bawah ini. Semua data yang digunakan dalam panduan ini bukan data pelanggan nyata dan merupakan bagian dari himpunan data Aswono yang ditemukan dalam lingkungan *demo* dalam langganan customer Insights Anda.
 
 ## <a name="scenario"></a>Skenario
 
-Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang mereka jual melalui situs web Kopi Contoso mereka. Tujuan mereka adalah untuk mengetahui Pelanggan mana yang biasanya membeli produk mereka secara teratur, yang akan berhenti menjadi pelanggan aktif dalam 60 hari berikutnya. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
+Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi, yang dijual melalui situs web Kopi Aswono. Tujuan mereka adalah untuk mengetahui Pelanggan mana yang biasanya membeli produk mereka secara teratur, yang akan berhenti menjadi pelanggan aktif dalam 60 hari berikutnya. Mengetahui pelanggan mana yang **cenderung pergi**, dapat membantu mereka menyelamatkan upaya pemasaran dengan berfokus pada menjaganya.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -31,7 +30,7 @@ Contoso adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tingg
 
 ## <a name="task-1---ingest-data"></a>Tugas 1- Serap Data
 
-Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber data menggunakan konektor connector](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum. 
+Tinjau artikel [tentang konsumsi](data-sources.md) data dan [impor sumber data menggunakan Power Query konektor](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Menyerap data pelanggan dari platform eCommerce
 
@@ -149,7 +148,7 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tugas 3-konfigurasi prediksi kehilangan pelanggan transaksi
 
-Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan prediksi kehilangan pelanggan langganan. Untuk langkah rinci, lihat artikel [prediksi kehilangan pelanggan langganan](predict-subscription-churn.md) (pratinjau). 
+Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan prediksi kehilangan pelanggan langganan. Untuk langkah-langkah mendetail, lihat [artikel Churn prediksi](predict-subscription-churn.md) langganan. 
 
 1. Buka **intelijen** > **Temukan** dan pilih untuk menggunakan **model kehilangan pelanggan**.
 

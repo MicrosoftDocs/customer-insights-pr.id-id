@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648121"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225428"
 ---
 # <a name="create-a-new-environment"></a>Buat lingkungan baru 
 
@@ -40,13 +39,13 @@ Lingkungan adalah ruang yang memungkinkan Anda mengelola ruang kerja dan sambung
 
 1. Pilih **Kawasan** dan pilih **Berikutnya**. 
 
-1. Ketik **nama Ruang Kerja**, yang memungkinkan Anda mengumpulkan data untuk situs web atau aplikasi tertentu. Untuk informasi lebih lanjut lihat [Buat ruang kerja](create-workspace.md).
+1. **Ketik nama** Workspace, yang memungkinkan Anda mengumpulkan data untuk situs web atau aplikasi tertentu. Untuk informasi lebih lanjut lihat [Buat ruang kerja](create-workspace.md).
 
-1. Pilih **jenis Ruang Kerja** (Web atau Mobile) yang akan dibuat. 
+1. Pilih jenis **Workspace** (web atau seluler) yang ingin Anda buat. 
 
 1. Pilih **Tampilkan pengaturan lanjutan** untuk mengaktifkan atau menonaktifkan pengaturan opsional ini:
 
-   - Alihkan **Tidak Dikenal ke dikenal** ke "diaktifkan" untuk mengaitkan aktivitas web dengan pengguna yang sebelumnya diautentikasi. Untuk informasi lebih lanjut, lihat [Mengenali aktivitas web dari pengunjung yang diautentikasi sebelumnya](unknown-to-known.md)
+   - Alihkan **Tidak Dikenal ke dikenal** ke "diaktifkan" untuk mengaitkan aktivitas web dengan pengguna yang sebelumnya diautentikasi. Untuk informasi selengkapnya, lihat [Mengenali peristiwa web dari pengunjung yang diautentikasi sebelumnya](unknown-to-known.md).
    - Alihkan **Filter lalu lintas bot** ke "diaktifkan" untuk menghilangkan lalu lintas web oleh bot untuk ruang kerja ini. 
 
 1. Pilih **Selesai** setelah selesai. 

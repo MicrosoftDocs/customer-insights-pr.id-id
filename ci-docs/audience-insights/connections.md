@@ -3,18 +3,20 @@ title: Koneksi ke layanan lain dari Customer Insights.
 description: Bagikan data ke layanan lain.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304976"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354388"
 ---
 # <a name="connections-preview-overview"></a>Ikhtisar koneksi (pratinjau)
 
@@ -47,6 +49,7 @@ Untuk menambahkan koneksi, Anda perlu memiliki [izin administrator](permissions.
 1. Di panel **Siapkan koneksi**, berikan detail yang diperlukan. 
    1. **Nama tampilan** dan tipe koneksi menjelaskan koneksi. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi ini.
    1. Bidang yang tepat tergantung pada layanan apa yang Anda sambungkan. Anda dapat mempelajari detail jenis koneksi tertentu di artikel tentang layanan target.
+   1. Jika Anda [menggunakan Key Vault](use-azure-key-vault.md) untuk menyimpan rahasia, aktifkan **Gunakan Key Vault** dan pilih rahasia dari daftar.
 
 1. Pilih **Simpan** untuk membuat koneksi.
 
@@ -93,3 +96,6 @@ Pengayaan dan ekspor terpisah menjadi tidak aktif. Anda mengaktifkannya kembali 
 
 1. Pilih **Hapus**, untuk mengonfirmasi penghapusan tersebut.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Mengkonfigurasikan sambungan dengan rahasia yang dikelola oleh Key Vault Anda sendiri
+
+Beberapa sambungan memerlukan rahasia seperti kunci API atau sandi. Beberapa sambungan mendukung rahasia yang tersimpan di Key Vault Anda sendiri. Pelajari lebih lanjut tentang sambungan yang didukung dan cara mengkonfigurasi [Key Vault anda sendiri wawasan audiens](use-azure-key-vault.md).

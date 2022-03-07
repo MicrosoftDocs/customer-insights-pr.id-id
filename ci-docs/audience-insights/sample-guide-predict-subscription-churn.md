@@ -2,21 +2,23 @@
 title: Panduan sampel prediksi kehilangan pelanggan langganan
 description: Gunakan contoh panduan ini untuk mencoba model prediksi kehilangan pelanggan langganan bawaan.
 ms.date: 11/19/2020
-ms.reviewer: digranad
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653984"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355617"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan langganan (pratinjau)
+# <a name="subscription-churn-prediction-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan langganan
 
 Kami akan menjelaskan kepada Anda contoh akhir dari prediksi kehilangan pelanggan langganan menggunakan data sampel yang diberikan di bawah ini. 
 
@@ -31,7 +33,7 @@ Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi
 
 ## <a name="task-1---ingest-data"></a>Tugas 1- Serap Data
 
-Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber data menggunakan konektor connector](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum. 
+Tinjau artikel [tentang konsumsi](data-sources.md) data dan [impor sumber data menggunakan Power Query konektor](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Menyerap data pelanggan dari platform eCommerce
 
@@ -46,10 +48,9 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **DateOfBirth**: tanggal
    - **CreatedOn**: Tanggal/Waktu/Zona
 
-   [!div class="mx-imgBorder"]
-   ![Mengubah DoB ke Tanggal](media/ecommerce-dob-date.PNG "Ubah tanggal lahir sampai saat ini")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Ubah tanggal lahir sampai saat ini.":::
 
-1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommerceContacts**
+1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **eCommerceContacts**
 
 1. Simpan Sumber Data.
 
@@ -67,7 +68,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **RewardsPoints**: Bilangan Cacah
    - **CreatedOn**: Waktu/Tanggal
 
-1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
+1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
 
 1. Simpan Sumber Data.
 
@@ -90,7 +91,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
    - **Is_auto_renew**: Benar/Salah
    - **RecurringFrequencyInMonths**: Bilangan Cacah
 
-1. Di bidang ' nama ' pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **subscriptionhistory**.
+1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **subscriptionhistory**.
 
 1. Simpan Sumber Data.
 
@@ -129,9 +130,9 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
 
-1. Di daftar drop-down **utama**, pilih **ecommercecontacts: eCommerce** sebagai sumber utama dan mencakup semua rekaman.
+1. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
 
-1. Pada daftar drop-down **entitas 2**, pilih **Loycustomer: LoyaltyScheme** dan sertakan semua rekaman.
+1. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Satukan dan cocokkan eCommerce dan Loyalty.":::
 
@@ -139,16 +140,16 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Tambahkan kondisi pertama Anda menggunakan FullName.
 
-   * Untuk eCommerceContacts, pilih **fullname** di drop-down.
-   * Untuk loyCustomers, pilih **fullname** di drop-down.
+   * Untuk eCommerceContacts, pilih **FullName** di dropdown.
+   * Untuk loyCustomers, pilih **FullName** di dropdown.
    * Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
 1. Masukkan nama **fullname, email** untuk aturan baru.
 
    * Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   * Untuk eCommerceContacts entitas, pilih **email** di drop-down.
-   * Untuk loyCustomers entitas, pilih **email** di drop-down. 
+   * Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
+   * Untuk entitas loyCustomers, pilih **EMail** di dropdown. 
    * Biarkan Normalkan kosong. 
    * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
@@ -169,7 +170,7 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tugas 3-konfigurasi prediksi kehilangan pelanggan langganan
 
-Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan prediksi kehilangan pelanggan langganan. Untuk langkah rinci, lihat artikel [prediksi kehilangan pelanggan langganan](predict-subscription-churn.md) (pratinjau). 
+Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan prediksi kehilangan pelanggan langganan. Untuk langkah-langkah mendetail, lihat [artikel Churn prediksi](predict-subscription-churn.md) langganan. 
 
 1. Buka **intelijen** > **Temukan** dan pilih untuk menggunakan **model kehilangan pelanggan**.
 
@@ -230,3 +231,6 @@ Anda dapat membuat segmen baru berdasarkan entitas yang dibuat oleh model.
 Anda sekarang memiliki segmen yang diperbarui secara dinamis yang mengidentifikasi pelanggan berisiko kehilangan pelanggantinggi untuk bisnis langganan ini.
 
 Untuk informasi lebih lanjut, lihat [Membuat dan mengelola segmen](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

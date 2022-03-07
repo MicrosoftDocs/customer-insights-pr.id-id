@@ -1,20 +1,19 @@
 ---
 title: Mengekspor data Customer Insights ke Klaviyo
 description: Pelajari lebih lanjut cara mengkonfigurasi sambungan dan mengekspor ke Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
+ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385792"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225456"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Mengekspor daftar segmen ke Klaviyo (pratinjau)
 
@@ -28,10 +27,10 @@ Mengekspor segmen profil pelanggan terpadu ke Klaviyo dan menggunakannya untuk a
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 100.000 profil per ekspor ke Klaviyo.
+- Anda dapat mengekspor hingga 100.000 profil pelanggan per ekspor ke Klaviyo.
 - Mengekspor ke Klaviyo terbatas pada segmen.
-- Mengekspor hingga 1 juta profil ke Klaviyo dapat berlangsung hingga 20 menit untuk menyelesaikannya. 
-- Jumlah profil yang dapat Anda ekspor ke Klaviyo tergantung dan terbatas pada kontrak Anda dengan Klaviyo.
+- Mengekspor hingga 1 juta profil pelanggan ke Klaviyo dapat berlangsung selama 20 menit. 
+- Jumlah profil pelanggan yang dapat Anda ekspor ke Klaviyo tergantung dan dibatasi oleh kontrak Anda dengan Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Konfigurasikan sambungan ke Klaviyo
 
@@ -67,7 +66,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan [**ID daftar Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID) Anda.     
 
-3. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Mengekspor segmen ke Klaviyo harus dilakukan.
+3. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Mengekspor segmen ke Klaviyo harus dilakukan.
 
 1. Pilih **Simpan**.
 

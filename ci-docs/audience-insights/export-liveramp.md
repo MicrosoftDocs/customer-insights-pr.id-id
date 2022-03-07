@@ -1,37 +1,38 @@
 ---
 title: Konektor LiveRamp
-description: Pelajari cara mengekspor data ke LiveRamp.
-ms.date: 12/02/2020
-ms.reviewer: kishorem
-ms.service: customer-insights
+description: Pelajari cara mengonfigurasi koneksi dan ekspor ke LiveRamp.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: kishorem-ms
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 86aa8c66a47ee61741082c95f05d2e5ce3f06f35
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
-ms.translationtype: HT
+ms.openlocfilehash: 4c0f58083e8486d2042d8efcc8b3690020efb1c3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667188"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226356"
 ---
-# <a name="liverampreg-connector-preview"></a>Konektor LiveRamp&reg; (pratinjau)
+# <a name="export-segments-to-liverampreg-preview"></a>Mengekspor segmen ke LiveRamp&reg; (pratinjau)
 
-Aktifkan data Anda di LiveRamp untuk terhubung dengan lebih dari 500 platform lintas ekosistem digital, sosial, dan TV. Bekerja dengan data Anda di LiveRamp untuk menargetkan, menekan, dan mempersonalisasi kampanye iklan.
+Aktifkan data Anda di LiveRamp untuk terhubung dengan lebih dari 500 platform di seluruh digital, sosial, dan TV. Bekerja dengan data Anda di LiveRamp untuk menargetkan, menekan, dan mempersonalisasi kampanye iklan.
 
-## <a name="prerequisites"></a>Prasyarat
+## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk koneksi
 
 - Anda memerlukan langganan LiveRamp untuk menggunakan konektor ini.
 - Untuk mendapatkan langganan, [hubungi langsung LiveRamp](https://liveramp.com/contact/). [Pelajari lebih lanjut tentang LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Hubungkan ke LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Konfigurasikan koneksi ke LiveRamp
 
-1. Di wawasan audiens, buka **Admin** > **Tujuan ekspor**.
+1. Buka **Admin** > **Koneksi**.
 
-1. Di petak **LiveRamp** pilih **Konfigurasi**.
+1. Pilih **Tambahkan koneksi** dan pilih **LiveRamp** untuk mengonfigurasi koneksi.
 
-1. Beri nama yang dikenali di bidang **nama tampilan** tujuan anda.
+1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
+
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Berikan **nama pengguna** dan **sandi** untuk akun LiveRamp Secure FTP (SFTP) Anda.
 Kredensial ini mungkin berbeda dengan kredensial LiveRamp Onboarding Anda.
@@ -40,15 +41,25 @@ Kredensial ini mungkin berbeda dengan kredensial LiveRamp Onboarding Anda.
 
 1. Setelah verifikasi berhasil, berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**.
 
-1. Pilih **berikutnya** untuk mengkonfigurasi konektor liveramp.
+1. Pilih **Simpan** untuk menyelesaikan koneksi.
 
-## <a name="configure-the-connector"></a>Konfigurasikan konektor
+## <a name="configure-an-export"></a>Mengonfigurasi ekspor
+
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+
+1. Buka **Data** > **Ekspor**.
+
+1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian LiveRamp. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
 
 1. Di bidang **Pilih pengidentifikasi kunci Anda**, pilih **email**,  **nama dan alamat**, atau **telepon** untuk dikirim ke LiveRamp untuk resolusi identitas.
+   > [!div class="mx-imgBorder"]
+   > ![Konektor LiveRamp dengan pemetaan atribut.](media/export-liveramp-segments.png "Konektor LiveRamp dengan pemetaan atribut")
 
-1. Petakan atribut yang terkait dari entitas pelanggan terpadu Anda untuk pengidentifikasi kunci yang dipilih.
+1. Petakan atribut yang sesuai dari entitas *Pelanggan* untuk pengidentifikasi utama yang dipilih.
 
-1. Pilih **Tambah atribut** untuk memetakan atribut tambahan untuk dikirim ke LiveRamp.
+1. Pilih **Tambahkan atribut** untuk memetakan lebih banyak atribut untuk dikirim ke LiveRamp.
 
    > [!TIP]
    > Mengirimkan lebih banyak atribut pengidentifikasi kunci ke LiveRamp kemungkinan akan memberi Anda tingkat kecocokan yang lebih tinggi.
@@ -57,15 +68,14 @@ Kredensial ini mungkin berbeda dengan kredensial LiveRamp Onboarding Anda.
 
 1. Pilih **Simpan**.
 
-> [!div class="mx-imgBorder"]
-> ![Konektor LiveRamp dengan pemetaan atribut](media/export-liveramp-segments.png "Konektor LiveRamp dengan pemetaan atribut")
+Menyimpan ekspor tidak segera menjalankan ekspor.
 
-## <a name="export-the-data"></a>Mengekspor data
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
 
-Ekspor akan segera dimulai jika semua prasyarat untuk ekspor telah diselesaikan. Ekspor juga akan berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
-Setelah ekspor berhasil diselesaikan, Anda dapat masuk ke LiveRamp Onboarding untuk mengaktifkan dan mendistribusikan data.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 
 Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Liveramp, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa Liveramp memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

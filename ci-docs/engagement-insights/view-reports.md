@@ -4,17 +4,16 @@ description: Gunakan laporan yang tersedia untuk melihat aktivitas real-time di 
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 03b0b4bab0d5d9c2ae641c85aac8174ec1668d45
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036652"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229744"
 ---
 # <a name="view-reports"></a>Lihat laporan
 
@@ -92,12 +91,18 @@ Laporan seluler dikelompokkan dalam kategori penggunaan, aplikasi, dan pengguna 
 
 - **Lokasi** menampilkan informasi tentang pengguna aplikasi berdasarkan negara, kawasan, dan kota.
 
-## <a name="filter-by-time-or-value"></a>Filter berdasarkan waktu atau nilai
+## <a name="filter-by-time-or-date-range"></a>Filter berdasarkan waktu atau rentang tanggal
 
-Anda dapat memilih jangka waktu atau nilai di laporan web atau perangkat bergerak untuk fokus pada nilai atau periode waktu. 
+Anda dapat memilih jangka waktu atau rentang tanggal dalam laporan web atau seluler untuk fokus pada nilai atau periode waktu. 
 
-- Untuk memilih jangka waktu, pilih **Lainnya [...]** dari daftar dropdown laporan. Pilihan rentang waktu dinonaktifkan untuk laporan penggunaan real-time; rentang waktu untuk laporan penggunaan real-time adalah "sekarang".
+- Untuk memilih jangka waktu, di sudut kanan atas tampilan laporan, pilih nilai dari daftar dropdown laporan. Anda juga dapat memilih **Rentang tanggal tetap**. 
 
-- Di sebagian besar laporan, pilih nilai dalam diagram atau daftar untuk memfilter laporan mengenai nilai yang dipilih.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filter berdasarkan waktu atau rentang tanggal.":::   
+
+- Untuk sebagian besar laporan, pilih nilai dalam diagram atau daftar untuk memfilter laporan.
+
+> [!NOTE]
+> Pilihan rentang waktu dinonaktifkan untuk laporan penggunaan real-time; rentang waktu untuk laporan penggunaan real-time adalah "sekarang".
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

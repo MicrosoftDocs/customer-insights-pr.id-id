@@ -4,22 +4,21 @@ author: m-hartmann
 description: Akrabkan diri dengan pengalaman penjalanan pertama dalam Dynamics 365 Customer Insights dan jelajahi kemampuannya.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645697"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350135"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Mulai setelah membeli Customer Insights
 
 Artikel ini menjelaskan cara melakukan langkah pertama di Dynamics 365 Customer Insights setelah organisasi Anda membeli langganan. Jika Anda ingin membeli Customer Insights, pilihan kontak kami akan tercantum di [situs web Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Setelah membeli lisensi langganan untuk Customer Insights, administrator global penyewa Microsoft 365 menerima email yang mengundang mereka untuk membuat lingkungan. 
+Setelah membeli lisensi langganan untuk Wawasan Pelanggan, administrator Microsoft 365 global penyewa menerima email yang mengundang mereka untuk menciptakan lingkungan. 
 
 Customer Insights berlisensi per penyewa dan mencakup beberapa kemampuan. Anda dapat membeli lebih banyak kapasitas dan lisensi untuk meningkatkan kuota default. 
 - [Ikhtisar harga](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ Pengalaman menjalankan pertama akan membantu Anda memilih fokus awal dengan Cust
 
 ## <a name="create-your-own-environment"></a>Buat lingkungan Anda sendiri
 
-Setelah masuk pertama kali, Anda akan melihat lingkungan dengan data sampel. Anda dapat menggunakan data tersebut untuk menjelajahi berbagai fitur dan memahami aplikasi. Untuk menggunakan data sendiri, Anda harus membuat lingkungan sesuai kemampuan yang akan digunakan.
-
-- [Buat lingkungan di wawasan audiens.](audience-insights/get-started-paid.md)
-- [Buat lingkungan di wawasan keterlibatan.](engagement-insights/create-new-environment.md) 
+Setelah masuk pertama kali, Anda akan melihat lingkungan dengan data sampel. Anda dapat menggunakan data tersebut untuk menjelajahi berbagai fitur dan memahami aplikasi. Untuk menggunakan data Anda sendiri, Anda harus [membuat lingkungan](audience-insights/get-started-paid.md).
 
 
 

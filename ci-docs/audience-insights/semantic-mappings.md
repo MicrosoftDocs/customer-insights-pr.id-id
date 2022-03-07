@@ -1,22 +1,24 @@
 ---
 title: Pemetaan semantik (pratinjau)
 description: Ikhtisar pemetaan semantis dan cara menggunakannya.
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622939"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353961"
 ---
-# <a name="semantic-mappings"></a>Pemetaan semantik
+# <a name="semantic-mappings-preview"></a>Pemetaan semantik (pratinjau)
 
 Pemetaan semantis memungkinkan Anda memetakan data non-aktivitas ke skema yang telah ditentukan sebelumnya. Skema ini membantu wawasan audiens untuk lebih memahami atribut data Anda. Pemetaan semantis dan data yang diberikan memungkinkan wawasan dan fitur baru di wawasan audiens. Untuk memetakan data aktivitas Anda ke skema, tinjau dokumentasi [aktivitas](activities.md).
 
@@ -75,8 +77,7 @@ Pemetaan semantis memungkinkan Anda memetakan data non-aktivitas ke skema yang t
 
 1. Untuk menjalankan pemetaan semantis di titik kemudian, pilih pemetaan semantik dan pilih **Segarkan**.
 
-> [!TIP]
-> Ada [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, sebagian besar proses [tergantung pada proses hilir lainnya](system.md#refresh-policies). Anda dapat memilih status proses untuk melihat rincian kemajuan seluruh pekerjaan. Setelah memilih **Lihat rincian** untuk salah satu tugas pekerjaan, Anda menemukan informasi tambahan: waktu pemrosesan, tanggal pemrosesan terakhir, dan semua kesalahan serta peringatan yang terkait dengan tugas.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Mengelola pemetaan semantis yang ada
 
@@ -91,5 +92,41 @@ Pada **Data** > **pemetaan Semantik (pratinjau)**, Anda dapat melihat semua peme
 - **Ganti nama**: membuka dialog yang memungkinkan Anda memasukkan nama lain untuk pemetaan semantis yang dipilih. Pilih **Simpan** untuk menerapkan perubahan.
 
 - **Hapus**: Membuka dialog untuk mengkonfirmasi penghapusan pemetaan semantis yang dipilih. Anda juga dapat menghapus lebih dari satu pemetaan semantis sekaligus dengan memilih pemetaan semantis dan ikon hapus. Klik **Hapus**, untuk mengonfirmasi penghapusan tersebut.
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Menggunakan pemetaan entitas semantik ContactProfile untuk membuat aktivitas tingkat kontak
+
+Setelah membuat *pemetaan entitas semantik ContactProfile*, Anda dapat menangkap aktivitas kontak. Ini memungkinkan Anda untuk melihat di timeline aktivitas untuk akun yang kontak bertanggung jawab untuk setiap aktivitas. Sebagian besar langkah mengikuti konfigurasi pemetaan aktivitas yang khas.
+
+   > [!NOTE]
+   > Agar aktivitas tingkat kontak berfungsi, Anda harus memiliki **atribut AccountID** dan **ContactID** untuk setiap rekaman dalam data aktivitas Anda.
+
+1. [*Tentukan pemetaan entitas semantik ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) Dan menjalankan pemetaan semantik.
+
+1. Di wawasan audiens, buka **Data** > **aktivitas**.
+
+1. Pilih **Tambahkan Aktivitas** untuk membuat aktivitas baru.
+
+1. Beri nama aktivitas, pilih entitas aktivitas sumber, dan pilih kunci utama entitas aktivitas.
+
+1. **Pada langkah Relasi**, buat hubungan tidak langsung antara data sumber aktivitas Anda ke akun, menggunakan data kontak Anda sebagai entitas perantara. Untuk informasi lebih lanjut, lihat [jalur](relationships.md#relationship-paths) hubungan langsung dan tidak langsung.
+   - Contoh hubungan untuk aktivitas yang disebut *Pembelian*:
+      - **Membeli DataKontact** > **Aktivitas** Sumber pada atribut **ContactID**
+      - **Data** > **KontakAccount Data** pada atribut **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh pengaturan hubungan.":::
+
+1. Setelah menyiapkan Relasi, pilih **Berikutnya** dan selesaikan konfigurasi pemetaan aktivitas Anda. Untuk langkah-langkah mendetail tentang pembuatan aktivitas, lihat [menentukan aktivitas](activities.md).
+
+1. Jalankan pemetaan aktivitas Anda.
+
+1. Aktivitas tingkat kontak Anda sekarang akan terlihat di timeline pelanggan Anda.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Hasil akhir setelah mengonfigurasi aktivitas kontak":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Pemfilteran garis waktu aktivitas tingkat kontak
+
+Setelah mengonfigurasi pemetaan aktivitas tingkat kontak dan menjalankannya, garis waktu aktivitas untuk pelanggan Anda akan diperbarui. Ini termasuk ID atau nama mereka, tergantung pada konfigurasi ContactProfile *Anda*, untuk aktivitas yang mereka tindak. Anda dapat memfilter aktivitas menurut kontak di linimasa untuk melihat kontak tertentu yang Anda minati. Selain itu, Anda dapat melihat semua aktivitas yang tidak ditetapkan ke kontak tertentu dengan memilih Aktivitas yang **tidak dipetakan ke Kontak**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opsi pemfilteran tersedia untuk aktivitas tingkat Kontak.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

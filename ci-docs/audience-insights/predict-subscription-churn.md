@@ -1,22 +1,21 @@
 ---
-title: Prediksi churn langganan (berisi video)
+title: Churn langganan prediksi (berisi video)
 description: Memprediksi apakah pelanggan kemungkinan besar tidak lagi menggunakan produk atau layanan langganan perusahaan Anda.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967705"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354697"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Prediksi kehilangan langganan (pratinjau)
+# <a name="subscription-churn-prediction"></a>Prediksi kehilangan langganan
 
 Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan besar tidak lagi menggunakan produk atau layanan langganan perusahaan Anda. Anda dapat membuat prediksi kehilangan langganan baru pada halaman **intelijen** > **prediksi**. Pilih **prediksi saya** untuk melihat prediksi lain yang Anda buat.
 
@@ -63,7 +62,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 ## <a name="create-a-subscription-churn-prediction"></a>Buat prediksi kehilangan langganan
 
 1. Di wawasan audiens, buka **Intelijen** > **Prediksi**.
-1. Pilih ubin **model kehilangan langganan (pratinjau)** dan pilih **gunakan model ini**.
+1. **Pilih ubin model** churn langganan dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
    > ![Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini.](media/subscription-churn-usethismodel.PNG "Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini")
 

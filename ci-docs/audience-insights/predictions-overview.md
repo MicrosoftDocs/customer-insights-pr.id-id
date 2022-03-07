@@ -1,21 +1,19 @@
 ---
 title: Gambaran umum tentang skenario prediksi yang didukung
 description: Prediksi dan opsi yang dicakup oleh aplikasi Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: b73046844f6009a2b163b5eaadf5f63f75cda1d8
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
-ms.translationtype: HT
+ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539165"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228248"
 ---
 # <a name="predictions-overview"></a>Ikhtisar prediksi
 
@@ -24,15 +22,26 @@ Dynamics 365 Customer Insights hadir dengan berbagai opsi yang memanfaatkan AI d
 ## <a name="out-of-box-models"></a>Model siap pakai
 
 Cara termudah untuk memulai dengan memprediksi data adalah model yang sudah ditentukan sebelumnya, sering disebut sebagai model siap pakai. Mereka hanya memerlukan data dan struktur tertentu untuk menghasilkan wawasan dengan cepat. Saat ini, model berikut tersedia: 
-- [Nilai seumur hidup pelanggan](predict-customer-lifetime-value.md): Memprediksi potensi pendapatan pelanggan di seluruh interaksi dengan bisnis. 
+
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
+
+- [Nilai seumur hidup pelanggan](predict-customer-lifetime-value.md): Memprediksi potensi pendapatan pelanggan di seluruh interaksi dengan bisnis.
 - [Rekomendasi produk](predict-product-recommendation.md): Menyarankan set rekomendasi produk prediktif berdasarkan perilaku pembelian dan pelanggan dengan pola pembelian yang sama.
 - [Kehilangan langganan](predict-subscription-churn.md): Memprediksi apakah pelanggan berisiko karena tidak lagi menggunakan produk atau layanan langganan perusahaan Anda.
 - [Kehilangan transaksional](predict-transactional-churn.md): Prediksi apakah pelanggan tidak akan lagi membeli produk atau layanan Anda dalam jangka waktu tertentu.
+- [Analisis sentimen](sentiment-analysis.md): Menganalisis sentimen umpan balik pelanggan dan mengidentifikasi aspek bisnis yang sering disebutkan.
+
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
+
+- [Kehilangan transaksional](predict-transactional-churn.md): Prediksi apakah pelanggan tidak akan lagi membeli produk atau layanan Anda dalam jangka waktu tertentu.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integasi Pembelajaran Mesin Azure
 
 Jika organisasi sudah menggunakan Pembelajaran Mesin berdasarkan eksperimen Azure Pembelajaran Mesin, fitur model kustom di Customer Insights membantu menghubungkan titik-titik. Buat alur kerja yang membantu Anda memilih data yang ingin Anda hasilkan wawasannya dan petakan hasilnya ke profil pelanggan terpadu Anda. Untuk informasi lebih lanjut, lihat [model Pembelajaran Mesin kustom](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Menggunakan prediksi AI Builder
+## <a name="ai-builder-prediction"></a>AI Builder prediksi
 
 Terkadang, himpunan data tidak lengkap dan beberapa nilai hilang. Customer Insights dapat membantu memprediksi nilai yang hilang untuk entitas dan segmen Pelanggan. Untuk informasi selengkapnya, lihat [Melengkapi data parsial Anda dengan prediksi](predictions.md).

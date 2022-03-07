@@ -3,18 +3,20 @@ title: Ekspor data Customer Insights ke Dynamics 365 Marketing
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2ec9f1cc11fdab5ff313bb3041d2b158ed6ca67
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
-ms.translationtype: HT
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046700"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353915"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Gunakan segmen di Dynamics 365 Marketing (pratinjau)
 
@@ -45,7 +47,7 @@ Jika Anda menggunakan kemampuan baru Dynamics 365 Marketing untuk orkestrasi per
 
 1. Di Bagian **akun admin server**, pilih **masuk** dan pilih akun Dynamics 365 Marketing.
 
-1. Peta bidang ID Kontak di entitas Pelanggan ke ID Kontak Dynamics 365.
+1. Petakan bidang ID Kontak di entitas Pelanggan ke ID Kontak Dynamics 365.
 
 1. Pilih **Simpan** untuk menyelesaikan koneksi. 
 
