@@ -1,27 +1,30 @@
 ---
 title: Mencari dan memfilter Profil Pelanggan
 description: Temukan informasi tentang profil pelanggan terpadu dan filter untuk atribut tertentu dengan cepat.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554025"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354513"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profil pelanggan: Indeks Cari & Filter
 
 Hasil mempersatukan data pelanggan adalah entitas profil pelanggan yang memberikan tampilan terpadu ke basis pelanggan Total Anda. Untuk dengan cepat [mencari informasi tentang pelanggan atau grup pelanggan tertentu](customer-profiles.md), Anda dapat mengkonfigurasi kemampuan **pencarian** dan **filter** pada halaman **pelanggan**. Baca terus untuk mempelajari cara admin dapat mengedit atribut pada halaman **indeks pencarian & Filter**, yang tersedia bagi pengguna untuk mencari dan memfilter.
 
-> [!div class="mx-imgBorder"]
-> ![Cari filter.](media/search-filter.png "Cari filter")
+   :::image type="content" source="media/search-filter.png" alt-text="Cari filter":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Tambahkan bidang dan tentukan atribut
 
@@ -56,11 +59,11 @@ Menu **filter** pada halaman **pelanggan** dapat mencakup berbagai tingkat atrib
 
 2. Pilih **Simpan** untuk menerapkan perubahan.
 
-3. Pilih **Jalankan** setelah Anda siap menerapkan pengaturan Anda.
+3. Pilih **Jalankan** setelah Anda siap menerapkan pengaturan Anda. Setelah perubahan diproses, Anda akan menemukannya di [kartu pelanggan pada halaman Pelanggan](customer-profiles.md). 
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
-Buka halaman **Pelanggan** untuk mencari profil pelanggan atau gunakan bidang yang diindeks untuk melihat subset semua profil pelanggan.
+Tinjau [halaman profil terpadu](customer-profiles.md) untuk mencari profil atau gunakan bidang yang diindeks untuk melihat subset semua profil terpadu.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

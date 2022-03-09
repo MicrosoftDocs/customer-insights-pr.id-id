@@ -3,18 +3,30 @@ title: Hubungan antara entitas dan jalur entitas
 description: Buat dan kelola Relasi antara entitas dari beberapa sumber data.
 ms.date: 09/27/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- ci-entities
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segments
+- ci-segment-builder
+- ci-measure-builder
+- ci-measure-template
+- ci-permissions
+- customerInsights
+ms.openlocfilehash: db8822aa9e89afb9dc16428af6ca202de789ba1c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623014"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355709"
 ---
 # <a name="relationships-between-entities"></a>Relasi di antara dua entitas
 

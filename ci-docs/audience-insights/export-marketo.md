@@ -3,18 +3,17 @@ title: Ekspor data Customer Insights ke Marketo
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Marketo.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619169"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231983"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Mengekspor segmen ke Marketo (pratinjau)
 

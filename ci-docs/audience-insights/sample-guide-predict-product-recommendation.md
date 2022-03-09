@@ -2,21 +2,24 @@
 title: Panduan sampel prediksi Rekomendasi produk
 description: Gunakan contoh panduan ini untuk mencoba model prediksi rekomendasi produk siap pakai.
 ms.date: 02/10/2021
-ms.reviewer: digranad
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 0ee873d9b7caa5f891cb2d5b8c665dec90ad0e59
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270502"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354651"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel prediksi Rekomendasi produk (pratinjau)
+# <a name="product-recommendation-prediction-sample-guide"></a>Panduan sampel prediksi Rekomendasi produk
 
 Kami akan menjelaskan kepada Anda contoh akhir dari prediksi rekomendasi produk menggunakan data sampel yang diberikan di bawah ini.
 
@@ -31,7 +34,7 @@ Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi
 
 ## <a name="task-1---ingest-data"></a>Tugas 1- Serap Data
 
-Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber data menggunakan konektor connector](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum.
+Tinjau artikel [tentang konsumsi](data-sources.md) data dan [impor sumber data menggunakan Power Query konektor](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Menyerap data pelanggan dari platform eCommerce
 
@@ -65,7 +68,7 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
 
 1. Di bidang **nama** pada panel sisi, ganti nama sumber data dari **kueri** menjadi **eCommercePurchases**.
 
-1. Simpan Sumber Data.
+1. **Simpan** Sumber Data.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Menyerap data pelanggan dari skema kesetiaan
@@ -83,11 +86,11 @@ Tinjau artikel [tentang konsumsi data](data-sources.md) dan [mengimpor sumber da
 
 1. Di bidang **nama** pada panel sisi kanan, ganti nama sumber data dari **kueri** menjadi **loyCustomers**.
 
-1. Simpan Sumber Data.
+1. **Simpan** Sumber Data.
 
 ## <a name="task-2---data-unification"></a>Tugas 2-penyatuan data
 
-Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, menggabungkan** untuk membuat profil pelanggan terpadu. Untuk informasi selengkapnya, lihat [Penyatuan data](data-unification.md).
+Setelah menyerap data, kami sekarang memulai proses penyatuan data untuk membuat profil pelanggan terpadu. Untuk informasi selengkapnya, lihat [Penyatuan data](data-unification.md).
 
 ### <a name="map"></a>Peta
 
@@ -105,9 +108,9 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
 
-2. Di daftar drop-down **utama**, pilih **ecommercecontacts: eCommerce** sebagai sumber utama dan mencakup semua rekaman.
+2. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
 
-3. Pada daftar drop-down **entitas 2**, pilih **Loycustomer: LoyaltyScheme** dan sertakan semua rekaman.
+3. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
 
    ![Satukan dan cocokkan eCommerce dan Loyalty.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 5. Tambahkan kondisi pertama Anda menggunakan FullName.
 
-   - Untuk eCommerceContacts, pilih **fullname** di drop-down.
-   - Untuk loyCustomers, pilih **fullname** di drop-down.
+   - Untuk eCommerceContacts, pilih **FullName** di dropdown.
+   - Untuk loyCustomers, pilih **FullName** di dropdown.
    - Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
    - Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
 6. Masukkan nama **fullname, email** untuk aturan baru.
 
    - Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   - Untuk eCommerceContacts entitas, pilih **email** di drop-down.
-   - Untuk loyCustomers entitas, pilih **email** di drop-down.
+   - Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
+   - Untuk entitas loyCustomers, pilih **EMail** di dropdown.
    - Biarkan Normalkan kosong.
    - Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
 
@@ -156,7 +159,7 @@ Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan predik
 
    - **Jumlah produk**: Atur nilai ini ke **5**. Pengaturan ini menentukan seberapa banyak produk yang ingin Anda rekomendasikan kepada pelanggan.
 
-   - **Sarankan produk yang baru saja dibeli pelanggan?**: Pilih **Ya** untuk menunjukkan bahwa Anda ingin menyertakan produk dalam rekomendasi yang telah dibeli pelanggan sebelumnya.
+   - **Ulangi pembelian yang diharapkan**: Pilih **Ya** untuk menunjukkan bahwa Anda ingin menyertakan produk dalam rekomendasi yang telah dibeli pelanggan Anda sebelumnya.
 
    - **Periode lihat kembali:** Pilih sekurangnya **365 hari**. Pengaturan ini menentukan berapa lama model akan melihat kembali aktivitas pelanggan untuk menggunakannya sebagai input untuk rekomendasi mereka.
    

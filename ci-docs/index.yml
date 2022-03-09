@@ -4,15 +4,14 @@ metadata:
   author: m-hartmann
   description: Cari artikel yang relevan untuk memulai dengan konten bantuan.
   ms.author: mhart
-  ms.date: 07/30/2021
-  ms.service: customer-insights
+  ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
-  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
-  ms.translationtype: HT
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: id-ID
-  ms.lasthandoff: 09/17/2021
-  ms.locfileid: "7498601"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350473"
 title: Dokumentasi Dynamics 365 Customer Insights
 summary: Temukan sumber daya yang bermanfaat untuk memulai dan mempelajari tentang fitur dan kemampuan Customer Insights.
 landingContent:
@@ -23,9 +22,13 @@ landingContent:
     - text: Ikhtisar Customer Insights
       url: overview.md
     - text: Rencana rilis
-      url: /dynamics365-release-plan/
+      url: /dynamics365/release-plans/
     - text: Jelajahi CDP
       url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Jalur pembelajaran Wawasan Pelanggan
+      url: /learn/paths/build-customer-insights/
 - title: Memulai Customer Insights
   linkLists:
   - linkListType: get-started
@@ -34,8 +37,26 @@ landingContent:
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
     - text: Apa yang baru dalam wawasan audiens
       url: audience-insights/whats-new-audience-insights.md
-    - text: Info terkini di wawasan keterlibatan
-      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
+    - text: Panduan mulai cepat
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Memulai
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Kelola Customer Insights
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Mengkonfigurasi sistem
+      url: audience-insights/system.md
+    - text: Tentukan izin pengguna
+      url: audience-insights/permissions.md
+    - text: Kelola beberapa lingkungan
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Kelola Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Berkomunikasi
   linkLists:
   - linkListType: overview
@@ -46,63 +67,3 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Laporkan masalah
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Berbagi data di antara kemampuan
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Membuat tautan antara kemampuan
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: Membuat segmen untuk digunakan di laporan
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: Gunakan properti profil untuk analisis interaktif
-      url: engagement-insights/curate-dimensions.md
-- title: Ekspor data wawasan audiens
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Konfigurasi Tujuan ekspor
-      url: audience-insights/export-destinations.md
-    - text: Kartu pelanggan di aplikasi Dynamics 365
-      url: audience-insights/customer-card-add-in.md
-    - text: Konektor Power BI
-      url: audience-insights/export-power-bi.md
-- title: Kelola Wawasan audiens
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Mengkonfigurasi sistem
-      url: audience-insights/system.md
-    - text: Tentukan izin pengguna
-      url: audience-insights/permissions.md
-    - text: Kelola beberapa lingkungan
-      url: audience-insights/manage-environments.md
-- title: Tentang Wawasan keterlibatan (pratinjau)
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Ikhtisar kemampuan
-      url: engagement-insights/overview.md
-    - text: Istilah dan konsep
-      url: engagement-insights/glossary.md
-    - text: Mulai
-      url: engagement-insights/get-started.md
-- title: Laporan untuk wawasan keterlibatan (pratinjau)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Lihat laporan
-      url: engagement-insights/view-reports.md
-    - text: Buat Laporan Kustom
-      url: engagement-insights/custom-reports.md
-    - text: Lihat laporan Profil terpadu
-      url: engagement-insights/profile-reports.md
-- title: Aktivitas untuk wawasan keterlibatan (pratinjau)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Buat aktivitas yang disempurnakan
-      url: engagement-insights/refined-events.md
-    - text: Ekspor aktivitas
-      url: engagement-insights/export-events.md
-    - text: Menghapus dan mengekspor data pribadi
-      url: engagement-insights/delete-export-personal-data.md

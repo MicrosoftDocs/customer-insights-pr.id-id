@@ -1,20 +1,23 @@
 ---
 title: Kelola izin pengguna
 description: Pelajari tentang izin dan peran pengguna.
-ms.date: 10/27/2020
-ms.reviewer: nimagen
-ms.service: customer-insights
+ms.date: 03/25/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-permissions
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268414"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355941"
 ---
 # <a name="user-permissions"></a>Izin pengguna
 
@@ -31,7 +34,7 @@ Ada tiga jenis peran:
 - Lihat dan Jelajahi halaman **pengayaan**.
 - Jelajahi serta ekspor entitas menggunakan halaman **entitas**.
 - Lihat status proses sistem menggunakan halaman **sistem**.
-- Ekspor segmen dari halaman **segmen**.
+- Lihat ekspor dalam halaman **Ekspor**.
 - Menginstal dan menggunakan dasbor **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Kontributor
@@ -43,6 +46,7 @@ Ada tiga jenis peran:
 - Buat segmen menggunakan halaman **segmen**.
 - Buat ukuran menggunakan halaman **ukuran**.
 - Kelola konfigurasi dan Perkaya profil pelanggan dari halaman **pengayaan** (hanya untuk pengayaan pihak pertama).
+- Kelola dan buat ekspor berdasarkan koneksi yang dibagikan dengan kontributor. [Selengkapnya tentang cara administrator mengizinkan kontributor menggunakan sambungan untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrator
 
@@ -50,8 +54,9 @@ Ada tiga jenis peran:
 - Ubah pengaturan pada halaman **sistem**, termasuk bahasa kerja dan refresh jadwal untuk proses sistem Anda.
 - Lihat dan tambahkan izin menggunakan halaman **izin**.
 - Atur definisi pencarian dan filter untuk halaman pelanggan menggunakan halaman **indeks pencarian & Filter** (dapat diakses melalui halaman **pelanggan**).
-- Tentukan tujuan segmen Dynamics 365 Sales menggunakan halaman **Tujuan ekspor**.
+- Kelola koneksi dan izinkan mereka untuk peran pengguna lain di halaman **Koneksi**.
 - Kelola konfigurasi dan Perkaya profil pelanggan dari halaman **pengayaan** (untuk semua pengayaan).
+- Mengelola dan membuat ekspor di halaman **Ekspor**.
 - Instal dan gunakan **Add -in kartu pelanggan**.
 - Tambahkan dan gunakan **Power Apps connector**.
 - Aktifkan penggunaan [API Customer Insights](apis.md).

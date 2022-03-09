@@ -1,20 +1,19 @@
 ---
 title: Mengekspor data Customer Insights ke RollWorks
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke RollWorks.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 392084105628ba4e6008a1386a5ac80c809a004e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034594"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225569"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Mengekspor segmen ke RollWorks (pratinjau)
 
@@ -28,11 +27,11 @@ Ekspor segmen profil pelanggan terpadu ke RollWorks dan gunakan untuk periklanan
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 250.000 profil per ekspor ke RollWorks.
-- Anda tidak dapat mengekspor segmen dengan kurang dari 100 profil ke RollWorks. 
+- Anda dapat mengekspor hingga 250.000 profil pelanggan per ekspor ke RollWorks.
+- Anda tidak dapat mengekspor segmen dengan kurang dari 100 profil pelanggan ke RollWorks. 
 - Mengekspor ke RollWorks terbatas pada segmen.
-- Mengekspor hingga 250.000 profil ke RollWorks dapat memakan waktu hingga 10 menit untuk diselesaikan. 
-- Jumlah profil yang dapat Anda ekspor ke RollWorks tergantung dan terbatas pada kontrak Anda dengan RollWorks.
+- Mengekspor hingga 250.000 profil pelanggan ke RollWorks dapat berlangsung selama 10 menit. 
+- Jumlah profil pelanggan yang dapat Anda ekspor ke RollWorks tergantung dan dibatasi oleh kontrak Anda dengan RollWorks.
 
 ## <a name="set-up-connection-to-rollworks"></a>Konfigurasikan koneksi ke RollWorks
 
@@ -66,7 +65,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan **ID Pengiklan RollWorks** [RollWorks yang Dapat Diiklankan](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Di Bagian **pencocokan data**, di bidang **email**, pilih bidang di profil pelanggan terpadu Anda yang menunjukkan alamat email pelanggan. Segmen harus diekspor ke RollWorks.
+1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Segmen harus diekspor ke RollWorks.
 
 1. Pilih segmen yang ingin diekspor. Pilih segmen dengan minimal 100 anggota. Anda tidak dapat mengekspor segmen yang lebih kecil. Selain itu, ukuran maksimum segmen untuk diekspor adalah 250.000 anggota per ekspor. 
 
