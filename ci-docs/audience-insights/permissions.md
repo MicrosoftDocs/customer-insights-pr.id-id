@@ -1,7 +1,7 @@
 ---
 title: Kelola izin pengguna
 description: Pelajari tentang izin dan peran pengguna.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355941"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376742"
 ---
 # <a name="user-permissions"></a>Izin pengguna
 
@@ -48,7 +48,7 @@ Ada tiga jenis peran:
 - Kelola konfigurasi dan Perkaya profil pelanggan dari halaman **pengayaan** (hanya untuk pengayaan pihak pertama).
 - Kelola dan buat ekspor berdasarkan koneksi yang dibagikan dengan kontributor. [Selengkapnya tentang cara administrator mengizinkan kontributor menggunakan sambungan untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrator
+## <a name="admin"></a>Admin
 
 - Semua izin yang tersedia untuk Kontributor.
 - Ubah pengaturan pada halaman **sistem**, termasuk bahasa kerja dan refresh jadwal untuk proses sistem Anda.
@@ -60,6 +60,12 @@ Ada tiga jenis peran:
 - Instal dan gunakan **Add -in kartu pelanggan**.
 - Tambahkan dan gunakan **Power Apps connector**.
 - Aktifkan penggunaan [API Customer Insights](apis.md).
+- [Tetapkan kepemilikan](manage-environments.md#change-the-owner-of-an-environment) lingkungan ke admin lain.
+
+## <a name="admin-owner"></a>Admin (pemilik)
+
+- Semua izin tersedia untuk Admin.
+- [Atur ulang dan hapus](manage-environments.md#reset-an-existing-environment) lingkungan.
 
 ## <a name="assign-roles-and-permissions"></a>Menetapkan izin dan peran
 

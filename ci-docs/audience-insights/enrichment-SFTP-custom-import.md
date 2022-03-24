@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229642"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376558"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Memperkaya profil pelanggan dengan data kustom (pratinjau)
 
@@ -25,7 +25,7 @@ Untuk mengkonfigurasikan impor kustom SFTP, persyaratan berikut harus dipenuhi:
 
 - Anda memiliki nama file dan lokasi (jalur) file yang akan diimpor di host SFTP.
 - Ada file *model.json* yang menentukan [skema Common Data Model](/common-data-model/) untuk data yang akan diimpor. File ini harus berada di direktori yang sama dengan file yang akan diimpor.
-- Koneksi SFTP telah dikonfigurasi oleh administrator *atau* Anda memiliki izin [administrator](permissions.md#administrator). Anda akan memerlukan kredensial pengguna, URL, dan nomor port untuk lokasi SFTP tempat Anda ingin mengimpor data.
+- Koneksi SFTP telah dikonfigurasi oleh administrator *atau* Anda memiliki izin [administrator](permissions.md#admin). Anda akan memerlukan kredensial pengguna, URL, dan nomor port untuk lokasi SFTP tempat Anda ingin mengimpor data.
 
 
 ## <a name="configure-the-import"></a>Mengonfigurasi impor

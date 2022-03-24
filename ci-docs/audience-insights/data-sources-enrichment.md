@@ -8,39 +8,39 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373066"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376583"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (pratinjau)
 
-Gunakan data dari sumber seperti Microsoft dan mitra lainnya untuk memperkaya data pelanggan Anda sebelum penyatuan data. Sumber data pengayaan membantu menghasilkan kelengkapan dan kualitas data yang lebih tinggi yang dapat membantu mencapai hasil yang lebih baik setelah Anda menyatukan data Anda. Misalnya, menggunakan format yang dinormalisasi dan distandarisasi untuk alamat meningkatkan kualitas hasil pertandingan. Untuk daftar pengayaan yang didukung, lihat [opsi pengayaan sumber data yang didukung](#supported-data-source-enrichments).
+Gunakan data dari sumber seperti Microsoft dan mitra lainnya untuk memperkaya data pelanggan Anda sebelum penyatuan data. Sumber data membantu menghasilkan kelengkapan dan kualitas data yang lebih tinggi yang dapat membantu mencapai hasil yang lebih baik setelah Anda menyatukan data Anda. Misalnya, menggunakan format yang dinormalisasi dan distandarisasi untuk alamat meningkatkan kualitas hasil pertandingan. Untuk daftar pengayaan yang didukung, lihat [opsi pengayaan sumber data yang didukung](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Memperkaya sumber data
 
 Anda harus memiliki izin kontributor atau Administrator untuk membuat atau mengedit pengayaan. Untuk informasi lebih lanjut, lihat [izin](permissions.md).  
 
-1. **Buka DataUnify** > **·**. Pilih entitas yang ingin Anda memperkaya dan memilih satu atribut sebagai kunci utama untuk entitas. Untuk informasi selengkapnya, lihat [Memilih kunci utama](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. **Buka DataUnify** > **·**. Pilih entitas yang ingin Anda perkaya dan pilih satu atribut sebagai kunci utama untuk entitas. Untuk informasi selengkapnya, lihat [Memilih kunci utama](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Buka **Data** > **Sumber data**.
  
-1. Pilih elipsis vertikal di samping sumber data yang ingin Anda memperkaya dan memilih **Perkaya**.
+1. Pilih elipsis vertikal di samping sumber data yang ingin Anda perkaya dan pilih **Enrich**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Halaman pengayaan sumber data.":::
 
-   Tab **Discover** menampilkan [opsi](#supported-data-source-enrichments) pengayaan sumber data yang didukung.
+   Tab **Temukan** menampilkan opsi [pengayaan sumber data yang](#supported-data-source-enrichments) didukung.
 
-1. Pilih **Perkaya data** saya untuk mengonfigurasi pengayaan sumber data. Nama entitas output secara otomatis diisi.
+1. Pilih **Perkaya data** saya untuk mengonfigurasi pengayaan sumber data. Nama entitas output diisi secara otomatis.
 
 ## <a name="supported-data-source-enrichments"></a>Pengayaan sumber data yang didukung
 
 Pengayaan berikut saat ini tersedia untuk sumber data. Tinjau langkah-langkah terperinci untuk pengayaan untuk mempelajari cara mengonfigurasinya.
 
 - [Alamat yang disempurnakan](enrichment-enhanced-addresses.md)
-- [Data identitas dari LiveRamp](enrichment-liveramp.md)
+- [Data perusahaan yang disempurnakan](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Mengelola pengayaan sumber data yang ada
 

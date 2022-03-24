@@ -1,7 +1,7 @@
 ---
 title: Membuat dan mengelola lingkungan
 description: Pelajari cara mendaftar ke layanan dan cara mengelola lingkungan.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354283"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376880"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
-
-
 
 ## <a name="switch-environments"></a>Alihkan Lingkungan
 
@@ -49,7 +47,7 @@ Langkah **Microsoft Dataverse** memungkinkan Anda menghubungkan Customer Insight
 Untuk [menggunakan model prediksi siap pakai](predictions-overview.md#out-of-box-models), konfigurasikan berbagi data dengan Dataverse. Atau Anda dapat mengaktifkan penyerapan data dari sumber data lokal, yang memberikan URL lingkungan Microsoft Dataverse yang dikelola organisasi Anda.
 
 > [!IMPORTANT]
-> Wawasan Pelanggan dan Dataverse harus berada di wilayah yang sama untuk memungkinkan berbagi data.
+> Wawasan Pelanggan dan Dataverse harus berada di wilayah yang sama untuk mengaktifkan berbagi data.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="Pilihan konfigurasi untuk mengaktifkan berbagi data dengan Microsoft Dataverse.":::
 
@@ -98,9 +96,29 @@ Setelah menyegarkan sumber data, buka **data** > **Satukan**. Di sini Anda akan 
 
 Bila penyatuan data selesai, buka **langkah** dan **segmen** untuk me-refresh juga.
 
+## <a name="change-the-owner-of-an-environment"></a>Mengubah pemilik lingkungan
+
+Sementara beberapa pengguna dapat memiliki izin admin di Customer Insights, hanya satu pengguna yang merupakan pemilik lingkungan. Secara default, adminlah yang membuat lingkungan pada awalnya. Sebagai admin lingkungan, Anda dapat menetapkan kepemilikan ke pengguna lain dengan izin admin.
+
+1. Pilih pemilih **Lingkungan** di header aplikasi.
+
+1. Pilih ikon **Edit**.
+
+1. **Dalam kotak Edit lingkungan**, buka **langkah Informasi** dasar.
+
+1. **Di bidang Ubah pemilik lingkungan**, pilih pemilik baru lingkungan.  
+
+1. Pilih **Tinjau dan selesaikan**, lalu **Perbarui** untuk menerapkan perubahan. 
+
+## <a name="claim-ownership-of-an-environment"></a>Klaim kepemilikan lingkungan
+
+Jika pemilik lingkungan meninggalkan organisasi atau akun pengguna mereka dihapus, lingkungan tidak akan memiliki pemilik. Pengguna dengan izin admin dapat mengklaim kepemilikan dan menjadi pemilik baru. Mereka dapat terus memiliki lingkungan atau [mengubah kepemilikan ke admin](#change-the-owner-of-an-environment) lain. 
+
+Untuk mengklaim kepemilikan, pilih **tombol Ambil kepemilikan** yang ditampilkan di bagian atas setiap halaman di Wawasan Pelanggan saat pemilik asli meninggalkan organisasi.
+
 ## <a name="reset-an-existing-environment"></a>Mengatur ulang lingkungan yang ada
 
-Sebagai administrator, Anda dapat mengatur ulang lingkungan ke status kosong jika Anda ingin menghapus semua konfigurasi dan menghapus data yang diserap.
+Sebagai pemilik lingkungan, Anda dapat mengatur ulang lingkungan ke status kosong jika Anda ingin menghapus semua konfigurasi dan menghapus data yang tertelan.
 
 1.  Pilih pemilih **Lingkungan** di header aplikasi. 
 
@@ -112,7 +130,7 @@ Sebagai administrator, Anda dapat mengatur ulang lingkungan ke status kosong jik
 
 ## <a name="delete-an-existing-environment"></a>Menghapus lingkungan yang ada
 
-Sebagai administrator, Anda dapat menghapus lingkungan yang dikelola.
+Sebagai pemilik lingkungan, Anda dapat menghapus lingkungan yang Anda kelola.
 
 1.  Pilih pemilih **Lingkungan** di header aplikasi.
 

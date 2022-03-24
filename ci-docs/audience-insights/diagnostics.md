@@ -11,47 +11,47 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354412"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376420"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Masuk dengan Dynamics 365 Customer Insights Azure Monitor (Pratinjau)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Penerusan log Dynamics 365 Customer Insights dengan Azure Monitor (Pratinjau)
 
 Dynamics 365 Customer Insights menyediakan integrasi langsung dengan Azure Monitor. Log sumber daya Azure Monitor memungkinkan Anda memantau dan mengirim log ke [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), atau mengalirkannya ke [Azure Pusat Aktivitas](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights mengirimkan log peristiwa berikut:
 
 - **Peristiwa Audit**
-  - **APIEvent** - memungkinkan pelacakan perubahan yang dilakukan melalui Dynamics 365 Customer Insights UI.
+  - **APIEvent** - memungkinkan pelacakan perubahan yang Dynamics 365 Customer Insights dilakukan melalui UI.
 - **Acara Operasional**
-  - **WorkflowEvent** - Alur Kerja memungkinkan seseorang untuk mengatur [Sumber](data-sources.md) Data, [menyatukan](data-unification.md) dan memperkaya [dan](enrichment-hub.md) akhirnya [mengekspor](export-destinations.md) data ke sistem lain. Semua langkah tersebut dapat dilakukan secara individual (misalnya memicu ekspor tunggal) atau diatur (misalnya penyegaran data dari sumber data yang memicu proses penyatuan yang akan menarik pengayaan tambahan dan setelah selesai mengekspor data ke sistem lain). Untuk detail selengkapnya [lihat Skema](#workflow-event-schema) WorkflowEvent.
-  - **APIEvent** - semua panggilan API ke instans pelanggan ke Dynamics 365 Customer Insights. Untuk detail selengkapnya [lihat Skema](#api-event-schema) APIEvent.
+  - **WorkflowEvent** - Alur Kerja memungkinkan seseorang untuk mengatur [Sumber](data-sources.md) Data, [menyatukan](data-unification.md) dan [memperkaya](enrichment-hub.md) dan akhirnya [mengekspor](export-destinations.md) data ke sistem lain. Semua langkah tersebut dapat dilakukan secara individual (misalnya memicu ekspor tunggal) atau diatur (misalnya penyegaran data dari sumber data yang memicu proses penyatuan yang akan menarik pengayaan tambahan dan setelah dilakukan mengekspor data ke sistem lain). Untuk detail selengkapnya lihat [Skema](#workflow-event-schema) WorkflowEvent.
+  - **APIEvent** - semua panggilan API ke instans pelanggan ke Dynamics 365 Customer Insights. Untuk detail selengkapnya lihat [Skema](#api-event-schema) APIEvent.
 
 ## <a name="set-up-the-diagnostic-settings"></a>Menyiapkan pengaturan diagnostik
 
 ### <a name="prerequisites"></a>Prasyarat
 
-Untuk mengonfigurasi diagnostik di Customer Insights, prasyarat berikut harus dipenuhi:
+Untuk mengonfigurasi diagnostik di Wawasan Pelanggan, prasyarat berikut harus dipenuhi:
 
 - Anda memiliki Langganan [Azure aktif](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Anda memiliki [izin Administrator](permissions.md#administrator) di Wawasan Pelanggan.
-- Anda memiliki **peran administrator kontributor** dan **Akses** Pengguna pada sumber daya tujuan di Azure. Sumber daya dapat menjadi akun Azure Storage, Azure Event Hub, atau ruang kerja Azure Log Analytics. Untuk informasi selengkapnya, lihat [Menambahkan atau menghapus penetapan peran Azure menggunakan portal](/azure/role-based-access-control/role-assignments-portal) Microsoft Azure.
-- [Persyaratan tujuan](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) untuk Azure Storage, Azure Event Hub, atau Azure Log Analytics met.
-- Anda memiliki setidaknya **peran Pembaca** pada kelompok sumber daya sumber daya milik.
+- Anda memiliki [izin Administrator](permissions.md#admin) di Customer Insights.
+- Anda memiliki **peran Administrator** akses kontributor **dan** Pengguna pada sumber daya tujuan di Azure. Sumber daya dapat menjadi akun Azure Storage, Azure Event Hub, atau ruang kerja Azure Log Analytics. Untuk informasi selengkapnya, lihat [Menambahkan atau menghapus penetapan peran Azure menggunakan portal](/azure/role-based-access-control/role-assignments-portal) Microsoft Azure.
+- [Persyaratan tujuan](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) untuk Azure Storage, Azure Event Hub, atau Azure Log Analytics terpenuhi.
+- Anda memiliki setidaknya **peran Pembaca** pada grup sumber daya milik sumber daya.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Menyiapkan diagnostik dengan Azure Monitor
 
-1. Di Wawasan Pelanggan, pilih **SystemDiagnostics** > **untuk** melihat tujuan diagnostik yang dikonfigurasi instans ini.
+1. Di Customer Insights, pilih **SystemDiagnostics** > **untuk** melihat tujuan diagnostik yang dikonfigurasi instans ini.
 
 1. Pilih **Tambahkan tujuan**.
 
    > [!div class="mx-imgBorder"]
    > ![Koneksi diagnostik](media/diagnostics-pane.png "Koneksi diagnostik")
 
-1. Berikan nama di **bidang Nama untuk tujuan** diagnostik.
+1. Berikan nama di bidang **Nama untuk tujuan** diagnostik.
 
 1. **Pilih Penyewa** langganan Azure dengan sumber daya tujuan dan pilih **masuk**.
 
@@ -69,17 +69,17 @@ Untuk mengonfigurasi diagnostik di Customer Insights, prasyarat berikut harus di
 
 ### <a name="remove-a-destination"></a>Menghapus tujuan
 
-1. **Buka SystemDiagnostics** > **·**.
+1. Pergi ke **SystemDiagnostics** > **·**.
 
 1. Pilih tujuan diagnostik dalam daftar.
 
 1. **Di kolom Tindakan**, pilih **ikon Hapus**.
 
-1. Konfirmasi penghapusan untuk menghentikan penerusan log. Sumber daya pada langganan Azure tidak akan dihapus. Anda dapat memilih tautan di **kolom Tindakan** untuk membuka portal Microsoft Azure untuk sumber daya yang dipilih dan menghapusnya di sana.
+1. Konfirmasikan penghapusan untuk menghentikan penerusan log. Sumber daya pada langganan Azure tidak akan dihapus. Anda dapat memilih tautan di **kolom Tindakan** untuk membuka portal Azure untuk sumber daya yang dipilih dan menghapusnya di sana.
 
-## <a name="log-categories-and-event-schemas"></a>Kategori log dan skema peristiwa
+## <a name="log-categories-and-event-schemas"></a>Mencatat kategori dan skema peristiwa
 
-Saat [ini peristiwa](apis.md) API dan peristiwa alur kerja didukung dan kategori dan skema berikut berlaku.
+Saat ini [peristiwa](apis.md) API dan peristiwa alur kerja didukung dan kategori serta skema berikut berlaku.
 Skema log mengikuti [skema umum Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
 
 ### <a name="categories"></a>Kategori
@@ -91,25 +91,25 @@ Customer Insights menyediakan dua kategori:
 
 ## <a name="configuration-on-the-destination-resource"></a>Konfigurasi pada sumber daya tujuan
 
-Berdasarkan pilihan Anda pada jenis sumber daya, langkah-langkah berikut akan secara otomatis berlaku:
+Berdasarkan pilihan Anda pada jenis sumber daya, langkah-langkah berikut akan diterapkan secara otomatis:
 
 ### <a name="storage-account"></a>Akun Penyimpanan
 
-Prinsipal layanan Customer Insights mendapatkan **izin kontributor** Akun Penyimpanan pada sumber daya yang dipilih dan membuat dua kontainer di bawah namespace yang dipilih:
+Perwakilan layanan Wawasan Pelanggan mendapatkan **izin Kontributor** Akun Penyimpanan pada sumber daya yang dipilih dan membuat dua kontainer di bawah ruang nama yang dipilih:
 
 - `insight-logs-audit` berisi **peristiwa audit**
 - `insight-logs-operational` berisi **acara operasional**
 
 ### <a name="event-hub"></a>Pusat Aktivitas
 
-Prinsipal layanan Customer Insights mendapatkan **izin Pemilik** Data Azure Pusat Aktivitas pada sumber daya dan akan membuat dua Pusat Aktivitas di bawah namespace yang dipilih:
+Perwakilan layanan Wawasan Pelanggan mendapatkan **izin Azure Pusat Aktivitas Data Owner** pada sumber daya dan akan membuat dua Pusat Aktivitas di bawah ruang nama yang dipilih:
 
 - `insight-logs-audit` berisi **peristiwa audit**
 - `insight-logs-operational` berisi **acara operasional**
 
-### <a name="log-analytics"></a>Analitik Log
+### <a name="log-analytics"></a>Analisis Log
 
-Prinsip layanan Customer Insights mendapatkan **izin kontributor** Analitik Log pada sumber daya. Log akan tersedia di bawah **Manajemen** > **LogsTablesLog** > **di** ruang kerja Analitik Log yang dipilih. **Perluas solusi Manajemen** Log dan temukan `CIEventsAudit` tabel dan `CIEventsOperational` tabel.
+Perwakilan layanan Wawasan Pelanggan mendapatkan **izin kontributor** Analitik Log pada sumber daya. Log akan tersedia di bawah **Manajemen** > **LogsTablesLog** > **di** ruang kerja Analitik Log yang dipilih. **Perluas solusi Manajemen** Log dan temukan `CIEventsAudit` tabel `CIEventsOperational`.
 
 - `CIEventsAudit` berisi **peristiwa audit**
 - `CIEventsOperational` berisi **acara operasional**
@@ -118,23 +118,23 @@ Prinsip layanan Customer Insights mendapatkan **izin kontributor** Analitik Log 
 
 ## <a name="event-schemas"></a>Skema peristiwa
 
-Peristiwa API dan peristiwa alur kerja memiliki struktur dan detail umum di mana mereka berbeda, lihat [skema](#api-event-schema) peristiwa API atau [skema](#workflow-event-schema) peristiwa alur kerja.
+Peristiwa API dan peristiwa alur kerja memiliki struktur dan detail umum di mana perbedaannya, lihat [skema](#api-event-schema) peristiwa API atau [skema](#workflow-event-schema) peristiwa alur kerja.
 
 ### <a name="api-event-schema"></a>Skema peristiwa API
 
-| Bidang             | Datatype  | Diperlukan/Opsional | Deskripsi       | Contoh        |
+| Bidang             | Datatype  | Wajib/Opsional | Deskripsi       | Contoh        |
 | ----------------- | --------- | ----------------- | --------------------- | ------------------------ |
 | `time`            | Tanda Waktu | Wajib          | Stempel waktu acara (UTC)       | `2020-09-08T09:48:14.8050869Z`         |
-| `resourceId`      | String    | Wajib          | ResourceId dari instance yang memancarkan peristiwa         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
+| `resourceId`      | String    | Wajib          | ResourceId dari instance yang dipancarkan peristiwa         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
 | `operationName`   | String    | Wajib          | Nama operasi yang diwakili oleh acara ini.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
-| `category`        | String    | Wajib          | Kategori log acara. Salah satu `Operational` atau `Audit`. Semua Permintaan HTTP POST/PUT/PATCH/DELETE ditandai dengan `Audit`, semuanya dengan`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `category`        | String    | Wajib          | Catat kategori acara. Salah satu `Operational` atau `Audit`. Semua POSTING / PUT / PATCH / HAPUS Permintaan HTTP ditandai dengan `Audit`, segala sesuatu yang lain dengan`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resultType`      | String    | Wajib          | Status acara. `Success`, `ClientError`, `Failure`                                                                                                        |                                                                                                                                                                          |
-| `resultSignature` | String    | Opsional          | Status hasil dari peristiwa tersebut. Jika operasi sesuai dengan panggilan REST API, itu adalah kode status HTTP.        | `200`             |
+| `resultSignature` | String    | Opsional          | Status hasil dari acara tersebut. Jika operasi sesuai dengan panggilan REST API, itu adalah kode status HTTP.        | `200`             |
 | `durationMs`      | Panjang      | Opsional          | Durasi operasi dalam milidetik.     | `133`     |
 | `callerIpAddress` | String    | Opsional          | Alamat IP penelepon, jika operasi sesuai dengan panggilan API yang berasal dari alamat IP yang tersedia untuk umum.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Opsional          | Objek JSON yang menggambarkan identitas pengguna atau aplikasi yang melakukan operasi.       | Lihat [bagian Identitas](#identity-schema).     |  |
-| `properties`      | String    | Opsional          | Objek JSON dengan lebih banyak properti ke kategori peristiwa tertentu.      | Lihat [bagian Properti](#api-properties-schema).    |
-| `level`           | String    | Wajib          | Tingkat keparahan peristiwa.    | `Informational`, `Warning`, `Error` atau `Critical`.           |
+| `identity`        | String    | Opsional          | Objek JSON yang menjelaskan identitas pengguna atau aplikasi yang melakukan operasi.       | Lihat [bagian Identitas](#identity-schema).     |  
+| `properties`      | String    | Opsional          | JSON objek dengan lebih banyak properti ke kategori peristiwa tertentu.      | Lihat [bagian Properti](#api-properties-schema).    |
+| `level`           | String    | Wajib          | Tingkat keparahan peristiwa tersebut.    | `Informational`, `Warning`,, `Error`, atau `Critical`.           |
 | `uri`             | String    | Opsional          | Permintaan mutlak URI.    |               |
 
 #### <a name="identity-schema"></a>Skema identitas
@@ -161,7 +161,7 @@ Objek `identity` JSON memiliki struktur berikut
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Peran yang ditetapkan untuk pengguna atau aplikasi. Untuk informasi selengkapnya, lihat [izin](permissions.md) pengguna.                                     |
 | `Authorization.RequiredRoles` | Peran yang diperlukan untuk melakukan operasi. `Admin` peran diperbolehkan untuk melakukan semua operasi.                                                    |
-| `Claims`                      | Klaim pengguna atau aplikasi JSON web token (JWT). Properti klaim bervariasi per organisasi dan Azure Active Directory konfigurasi. |
+| `Claims`                      | Klaim pengguna atau aplikasi JSON web token (JWT). Properti klaim bervariasi per organisasi dan konfigurasi.Azure Active Directory |
 
 #### <a name="api-properties-schema"></a>Skema properti API
 
@@ -170,11 +170,11 @@ Objek `identity` JSON memiliki struktur berikut
 | Bidang                        | Deskripsi                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `properties.eventType`       | Selalu `ApiEvent`, menandai peristiwa log sebagai peristiwa API.                                                                 |
-| `properties.userAgent`       | Agen browser yang mengirimkan permintaan atau `unknown`.                                                                        |
+| `properties.userAgent`       | Agen browser mengirim permintaan atau `unknown`.                                                                        |
 | `properties.method`          | Metode HTTP:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
-| `properties.path`            | Jalur relatif dari permintaan tersebut.                                                                                          |
-| `properties.origin`          | URI menunjukkan dari mana pengambilan berasal atau `unknown`.                                                                  |
-| `properties.operationStatus` | `Success` untuk kode Status HTTP < 400 <br> `ClientError` untuk kode Status HTTP < 500 <br> `Error` untuk status HTTP >= 500 |
+| `properties.path`            | Jalur relatif dari permintaan.                                                                                          |
+| `properties.origin`          | URI menunjukkan dari mana fetch berasal atau `unknown`.                                                                  |
+| `properties.operationStatus` | `Success` untuk kode Status HTTP < 400 <br> `ClientError` untuk kode Status HTTP < 500 <br> `Error` untuk Status HTTP >= 500 |
 | `properties.tenantId`        | ID Organisasi                                                                                                        |
 | `properties.tenantName`      | Nama organisasi.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory ObjectId dari penelepon.                                                                         |
@@ -189,11 +189,11 @@ Alur kerja berisi beberapa langkah. [Menelan sumber](data-sources.md) data, [men
 | OperationType     | Grupkan                                     |
 | ----------------- | ----------------------------------------- |
 | Konsumsi         | [Sumber data](data-sources.md)           |
-| Persiapan Data   | [Sumber data](data-sources.md)           |
+| DataPreparasi   | [Sumber data](data-sources.md)           |
 | Peta               | [Penyatuan data](data-unification.md)   |
 | Cocokkan             | [Penyatuan data](data-unification.md)   |
 | Penggabungan             | [Penyatuan data](data-unification.md)   |
-| ProfileStore      | [Profil pelanggan](customer-profiles.md) |
+| Toko Profil      | [Profil pelanggan](customer-profiles.md) |
 | Pencarian            | [Profil pelanggan](customer-profiles.md) |
 | Aktivitas          | [Aktivitas](activities.md)                  |
 | AttributeMeasures | [Segmen dan Ukuran](segments.md)      |
@@ -210,16 +210,16 @@ Alur kerja berisi beberapa langkah. [Menelan sumber](data-sources.md) data, [men
 
 #### <a name="field-description"></a>Deskripsi bidang
 
-| Bidang           | Datatype  | Diperlukan/Opsional | Deskripsi                                                                                                                                                   | Contoh                                                                                                                                                                  |
+| Bidang           | Datatype  | Wajib/Opsional | Deskripsi                                                                                                                                                   | Contoh                                                                                                                                                                  |
 | --------------- | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `time`          | Tanda Waktu | Wajib          | Stempel waktu acara (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
-| `resourceId`    | String    | Wajib          | ResourceId dari instance yang memancarkan peristiwa tersebut.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
+| `resourceId`    | String    | Wajib          | ResourceId dari instance yang dipancarkan peristiwa tersebut.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Wajib          | Nama operasi yang diwakili oleh acara ini. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Lihat [Jenis](#operation-types) Operasi untuk referensi. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Wajib          | Kategori log acara. Selalu `Operational` untuk peristiwa Alur Kerja                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Wajib          | Catat kategori acara. Selalu `Operational` untuk acara Alur Kerja                                                                                           | `Operational`                                                                                                                                                            | 
 | `resultType`    | String    | Wajib          | Status acara. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Panjang      | Opsional          | Durasi operasi dalam milidetik.                                                                                                                    | `133`                                                                                                                                                                    |
-| `properties`    | String    | Opsional          | Objek JSON dengan lebih banyak properti ke kategori peristiwa tertentu.                                                                                        | Lihat properti alur kerja sub [bagian](#workflow-properties-schema)                                                                                                       |
-| `level`         | String    | Wajib          | Tingkat keparahan peristiwa.                                                                                                                                  | `Informational`, `Warning`, atau `Error`                                                                                                                                   |
+| `properties`    | String    | Opsional          | JSON objek dengan lebih banyak properti ke kategori peristiwa tertentu.                                                                                        | Lihat sub bagian [Properti Alur Kerja](#workflow-properties-schema)                                                                                                       |
+| `level`         | String    | Wajib          | Tingkat keparahan peristiwa tersebut.                                                                                                                                  | `Informational`, `Warning`, atau `Error`                                                                                                                                   |
 |                 |
 
 #### <a name="workflow-properties-schema"></a>Skema properti alur kerja
@@ -228,22 +228,22 @@ Peristiwa alur kerja memiliki properti berikut.
 
 | Bidang              | Alur kerja | Tugas | Deskripsi            |
 | ------------------------------- | -------- | ---- | ----------- |
-| `properties.eventType`                       | Ya      | Ya  | Selalu `WorkflowEvent`, menandai peristiwa sebagai peristiwa alur kerja.                                                                                                                                                                                                |
-| `properties.workflowJobId`                   | Ya      | Ya  | Pengidentifikasi alur kerja dijalankan. Semua alur kerja dan peristiwa tugas dalam eksekusi alur kerja memiliki hal yang sama `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Ya      | Ya  | Pengidentifikasi operasi, lihat [Jenis operasi]. (tipe #operation)                                                                                                                                                                                       |
+| `properties.eventType`                       | Ya      | Ya  | Selalu `WorkflowEvent`, menandai acara sebagai peristiwa alur kerja.                                                                                                                                                                                                |
+| `properties.workflowJobId`                   | Ya      | Ya  | Pengidentifikasi alur kerja berjalan. Semua alur kerja dan peristiwa tugas dalam eksekusi alur kerja memiliki hal yang sama `workflowJobId`.                                                                                                                                   |
+| `properties.operationType`                   | Ya      | Ya  | Pengidentifikasi operasi, lihat [Tipe operasi].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Ya      | No   | Alur kerja saja. Jumlah tugas yang dipicu alur kerja.                                                                                                                                                                                                       |
-| `properties.submittedBy`                     | Ya      | No   | Opsional. Hanya peristiwa alur kerja. ObjekId Azure Active Directory [pengguna](/azure/marketplace/find-tenant-object-id#find-user-object-id) yang memicu alur kerja, lihat juga `properties.workflowSubmissionKind`.                                   |
+| `properties.submittedBy`                     | Ya      | No   | Opsional. Peristiwa alur kerja saja. ObjectId Azure Active Directory [pengguna](/azure/marketplace/find-tenant-object-id#find-user-object-id) yang memicu alur kerja, lihat juga `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ya      | No   | `full` atau `incremental` refresh.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Ya      | No   | `OnDemand` atau `Scheduled`.                                                                                                                                                                                                                                  |
 | `properties.workflowStatus`                  | Ya      | No   | `Running` atau `Successful`.                                                                                                                                                                                                                                 |
 | `properties.startTimestamp`                  | Ya      | Ya  | Stempel Waktu UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Ya      | Ya  | Stempel Waktu UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Ya      | Ya  | Stempel Waktu UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Ya      | Ya  | Wawasan Pelanggan`instanceId`                                                                                                                                                                                                                              |  |
-| `properties.identifier`                      | No       | Ya  | - Untuk OperationType = `Export`, pengidentifikasi adalah panduan dari konfigurasi ekspor. <br> - Untuk OperationType = `Enrichment`, itu adalah panduan pengayaan <br> - Untuk OperationType `Measures` dan `Segmentation`, pengidentifikasi adalah nama entitas. |
-| `properties.friendlyName`                    | No       | Ya  | Nama ekspor yang mudah digunakan atau entitas yang diproses.                                                                                                                                                                                           |
-| `properties.error`                           | No       | Ya  | Opsional. Pesan kesalahan dengan detail selengkapnya.                                                                                                                                                                                                                  |
+| `properties.instanceId`                      | Ya      | Ya  | Wawasan Pelanggan`instanceId`                                                                                                                                                                                                                              |  
+| `properties.identifier`                      | No       | Ya  | - Untuk OperationType = `Export`, pengidentifikasi adalah panduan konfigurasi ekspor. <br> - Untuk OperationType = `Enrichment`, ini adalah panduan pengayaan <br> - Untuk OperationType `Measures` dan `Segmentation`, pengidentifikasi adalah nama entitas. |
+| `properties.friendlyName`                    | No       | Ya  | Nama ekspor yang ramah pengguna atau entitas yang diproses.                                                                                                                                                                                           |
+| `properties.error`                           | No       | Ya  | Opsional. Pesan kesalahan dengan detail lebih lanjut.                                                                                                                                                                                                                  |
 | `properties.additionalInfo.Kind`             | No       | Ya  | Opsional. Hanya untuk OperationType `Export`. Mengidentifikasi jenis ekspor. Untuk informasi selengkapnya, lihat [gambaran umum tujuan](export-destinations.md) ekspor.                                                                                          |
 | `properties.additionalInfo.AffectedEntities` | No       | Ya  | Opsional. Hanya untuk OperationType `Export`. Berisi daftar entitas yang dikonfigurasi dalam ekspor.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Ya  | Opsional. Hanya untuk OperationType `Export`. Pesan terperinci untuk ekspor.                                                                                                                                                                                 |
-| `properties.additionalInfo.entityCount`      | No       | Ya  | Opsional. Hanya untuk OperationType `Segmentation`. Menunjukkan jumlah total anggota yang dimiliki segmen tersebut.                                                                                                                                                    |
+| `properties.additionalInfo.entityCount`      | No       | Ya  | Opsional. Hanya untuk OperationType `Segmentation`. Menunjukkan jumlah total anggota yang dimiliki segmen.                                                                                                                                                    |

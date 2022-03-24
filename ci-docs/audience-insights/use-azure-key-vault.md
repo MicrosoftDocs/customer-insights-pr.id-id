@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355895"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376512"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Bawa Azure key vault Anda sendiri (pratinjau)
 
@@ -31,7 +31,7 @@ Untuk mengkonfigurasi Key Vault dalam wawasan audiens, prasyarat berikut harus d
 
 - Anda memiliki langganan Azure.
 
-- Anda memiliki peran [Administrator](permissions.md#administrator) di wawasan audiens. Pelajari lebih lanjut tentang [izin pengguna di wawasan audiens](permissions.md#assign-roles-and-permissions).
+- Anda memiliki peran [Administrator](permissions.md#admin) di wawasan audiens. Pelajari lebih lanjut tentang [izin pengguna di wawasan audiens](permissions.md#assign-roles-and-permissions).
 
 - Anda memiliki peran [kontributor](/azure/role-based-access-control/built-in-roles#contributor) dan [Administrator Akses Pengguna](/azure/role-based-access-control/built-in-roles#user-access-administrator) di Key Vault atau grup sumber daya yang memiliki Key Vault. Untuk informasi lebih lanjut, lihat [Menambah atau menghilangkan penetapan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal). Jika Anda tidak memiliki peran Administrator Akses Pengguna di Key Vault, Anda harus mengkonfigurasi izin kontrol akses berbasis peran untuk prinsipal layanan Azure untuk Dynamics 365 Customer Insights secara terpisah. Ikuti langkah-langkah untuk [menggunakan prinsipal layanan Azure](connect-service-principal.md) untuk Key Vault yang harus ditautkan.
 

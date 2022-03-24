@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353640"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376301"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang disempurnakan
 
 Alamat pada data dapat tidak terstruktur, tidak lengkap, atau salah. Gunakan model Microsoft untuk menormalkan dan memperkaya alamat Anda ke dalam [format Common Data Model](/common-data-model/schema/core/applicationcommon/address) untuk keakuratan dan wawasan yang lebih baik.
+
+Anda juga [dapat memperkaya alamat pada sumber](data-sources-enrichment.md) data untuk meningkatkan akurasi kecocokan dalam proses penyatuan data. 
 
 ## <a name="how-we-enhance-addresses"></a>Cara kami meningkatkan alamat
 
@@ -105,9 +107,9 @@ Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda jug
 
 Setelah proses pengayaan selesai, Anda dapat meninjau data profil pelanggan baru yang diperkaya di dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
 
-Anda dapat melihat sampel data yang diperkaya di **ubin pratinjau** pelanggan yang diperkaya. Pilih **Lihat selengkapnya** **dan pilih tab Data** untuk mengakses tampilan terperinci dari setiap profil yang diperkaya.
+Anda dapat melihat sampel data yang diperkaya di **ubin Pratinjau** pelanggan yang diperkaya. Pilih **Lihat selengkapnya** dan pilih **tab Data** untuk mengakses tampilan terperinci dari setiap profil yang diperkaya.
 
-### <a name="overview-card"></a>Kartu Gambaran Umum
+### <a name="overview-card"></a>Kartu gambaran umum
 
 Kartu ikhtisar menunjukkan detail tentang cakupan pengayaan. 
 

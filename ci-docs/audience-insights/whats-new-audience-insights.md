@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232662"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376466"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Yang baru di kemampuan audiens wawasan Dynamics 365 Customer Insights
-
-
 
 Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [Dynamics 365 dan rencana rilis Power Platform](/dynamics365/release-plans/).
 
@@ -27,54 +25,110 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>Pembaruan Februari 2022
+
+Pembaruan pada Februari 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="general-availability-for-prediction-models"></a>Ketersediaan umum untuk model prediksi
+
+Model prediksi out-of-the-box, termasuk **churn** berlangganan, **churn** transaksional, dan **nilai masa pakai pelanggan (CLV)** menjadi tersedia secara umum sebagai bagian dari Customer Insights. 
+
+Untuk informasi selengkapnya, lihat [Ikhtisar Prediksi](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Sumber data Baru: Integrasi dengan Azure Synapse Analytics (Pratinjau)
+
+Azure Synapse Analytics adalah layanan analitik perusahaan yang mempercepat waktu untuk wawasan di seluruh gudang data dan sistem data besar.
+
+Jika organisasi Anda sudah menggunakan kemampuan Azure Synapse Analytics analitik tingkat lanjut dan menyimpan output dalam database Di Data Lake, Anda dapat dengan mudah menelan data tersebut ke Customer Insights. Untuk informasi selengkapnya, lihat [Menyambungkan Azure Synapse sumber data (Pratinjau)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Pengayaan LiveRamp (Pratinjau)
+
+LiveRamp menyediakan resolusi identitas offline deterministik dan konsolidasi data pelanggan. Anda dapat memetakan pengidentifikasi pribadi dalam data pelanggan Anda ke grafik identitas AbiliTec dan menerima ID AbiliTec. Anda kemudian dapat menggunakan DAFTAR ini untuk penyatuan data pelanggan Anda dengan lebih baik.
+
+Untuk informasi selengkapnya, lihat [Memperkaya profil pelanggan dengan data identitas dari LiveRamp (Pratinjau)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (Pratinjau)
+
+Gunakan data dari sumber seperti Microsoft dan mitra lainnya untuk memperkaya data pelanggan Anda sebelum penyatuan data. Sumber data membantu menghasilkan kelengkapan dan kualitas data yang lebih tinggi yang dapat membantu mencapai hasil yang lebih baik setelah Anda menyatukan data Anda.
+
+Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber data (Pratinjau)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Ubah pemilik lingkungan
+
+Sementara beberapa pengguna dapat memiliki izin admin di Customer Insights, hanya satu pengguna yang merupakan pemilik lingkungan. Pengalaman yang ditingkatkan memungkinkan Anda mengubah pemilik lingkungan dan mengklaim kepemilikan jika mantan pemilik meninggalkan organisasi. 
+
+Untuk informasi selengkapnya, lihat [Mengubah pemilik lingkungan](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Proses persiapan data mencantumkan alasan korupsi untuk catatan yang rusak
+
+Proses persiapan data sekarang menunjukkan alasan korupsi untuk semua bidang dengan data yang rusak pada tingkat catatan individu untuk identifikasi yang mudah. 
+
+Untuk informasi selengkapnya, lihat [Sumber](entities.md#corrupted-data-sources) data yang rusak.
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Akhir pratinjau untuk melaporkan fitur dalam kemampuan wawasan keterlibatan
+
+Pratinjau Dynamics 365 Customer Insights kemampuan wawasan keterlibatan berakhir 15 Februari 2022.  
+Perubahan ini berarti pengalaman uji coba Customer Insights tidak lagi mencakup kemampuan untuk membuat corong atau fungsi pelaporan lainnya.
+
+Kami mengundang Anda untuk menjelajahi dan mengevaluasi banyak fitur lain dari [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/), platform data pelanggan Microsoft (CDP).    
+ 
+Untuk masa transisi, peserta pratinjau yang ada masih memiliki akses ke beberapa kemampuan dan fungsionalitas pratinjau:
+
+- Mendapatkan kode untuk instrumen situs web atau aplikasi ponsel 
+- Melihat properti acara dan acara 
+- Tingkatkan profil terpadu dengan peristiwa yang dicerna dan disempurnakan untuk mendapatkan manfaat dari nilai penuh data pelanggan mereka
+  
+Selama masa transisi, peristiwa yang ditangkap masih dialirkan ke Danau Data yang terhubung. Setelah fungsi ini dimatikan, berbagi data antara wawasan keterlibatan dan wawasan audiens akan berhenti dan tidak ada peristiwa baru yang dikirim ke penyimpanan yang terhubung.
+Silakan hubungi tim Akun Microsoft Anda secara langsung jika Anda memiliki pertanyaan tentang akhir pratinjau kemampuan. Tim Akun Anda akan membuat Anda tetap up-to-date pada peluncuran mendatang. 
+
 ## <a name="january-2022-updates"></a>Pembaruan Januari 2022
 
 Pembaruan pada Januari 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
 
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analisis sentimen umpan balik pelanggan Anda
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analisis sentimen dari umpan balik pelanggan Anda
 
-Customer Insights menyediakan fitur bertenaga AI baru untuk mensintesis sentimen pelanggan dan mengidentifikasi aspek bisnis tertentu sebagai peluang untuk peningkatan yang ditargetkan. Dengan menganalisis umpan balik tertulis dari pelanggan Anda, Anda bisa mendapatkan wawasan yang akurat dengan biaya rendah. Analisis sentimen didukung oleh model Natural Language Processing (NLP) yang menghasilkan dua wawasan turunan untuk setiap ID pelanggan. Skor sentimen (-5 hingga 5) dan daftar aspek bisnis yang berlaku. 
+Customer Insights menyediakan fitur baru bertenaga AI untuk mensintesis sentimen pelanggan dan mengidentifikasi aspek bisnis tertentu sebagai peluang untuk peningkatan yang ditargetkan. Dengan menganalisis umpan balik tertulis dari pelanggan Anda, Anda bisa mendapatkan wawasan yang akurat dengan biaya rendah. Analisis sentimen didukung oleh model Natural Language Processing (NLP) yang menghasilkan dua wawasan turunan untuk setiap ID pelanggan. Skor sentimen (dari -5 hingga 5) dan daftar aspek bisnis yang berlaku. 
 
 Untuk informasi selengkapnya, lihat [Menganalisis sentimen dalam umpan balik pelanggan (Pratinjau)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Pembaruan Desember 2021
 
-Pembaruan pada bulan Desember 2021 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+Pembaruan pada Desember 2021 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
 
 ### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Meneruskan log Wawasan Pelanggan ke Azure Monitor
 
-Customer Insights menyediakan integrasi langsung dengan Azure Monitor. Fitur ini mencakup peristiwa audit dan acara operasional. Log sumber daya Azure Monitor memungkinkan Anda memantau dan mengirim log ke Azure Storage, Azure Log Analytics, atau mengalirkannya ke Azure Pusat Aktivitas.
+Customer Insights menyediakan integrasi langsung dengan Azure Monitor. Fitur ini mencakup acara audit dan acara operasional. Log sumber daya Azure Monitor memungkinkan Anda memantau dan mengirim log ke Azure Storage, Azure Log Analytics, atau mengalirkannya ke Azure Pusat Aktivitas.
 
-Untuk informasi selengkapnya, lihat [Masuk Dynamics 365 Customer Insights dengan Azure Monitor (Pratinjau)](diagnostics.md).
+Untuk informasi selengkapnya, lihat [Penerusan log Dynamics 365 Customer Insights dengan Azure Monitor (Pratinjau)](diagnostics.md).
 
 ### <a name="enrich-customer-profiles-with-engagement-data"></a>Memperkaya profil pelanggan dengan data keterlibatan
 
-Gunakan data untuk Microsoft Office 365 memperkaya profil akun pelanggan Anda dengan wawasan tentang keterlibatan melalui Office 365 aplikasi. Data keterlibatan terdiri dari aktivitas email dan rapat, yang dikumpulkan pada tingkat akun. Misalnya, jumlah email dari akun bisnis atau jumlah rapat dengan akun. Tidak ada data tentang pengguna individual yang dibagikan. Pengayaan ini tersedia di wilayah berikut: Inggris, Eropa, Amerika Utara.
+Gunakan data untuk Microsoft Office 365 memperkaya profil akun pelanggan Anda dengan wawasan tentang keterlibatan melalui Office 365 aplikasi. Data keterlibatan terdiri dari email dan aktivitas rapat, yang dikumpulkan pada tingkat akun. Misalnya, jumlah email dari akun bisnis atau jumlah rapat dengan akun. Tidak ada data tentang pengguna individu yang dibagikan. Pengayaan ini tersedia di wilayah berikut: Inggris, Eropa, Amerika Utara.
 
 Untuk informasi selengkapnya, lihat [Memperkaya profil pelanggan dengan data keterlibatan (Pratinjau)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Fitur penyatuan data tingkat lanjut
 
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Mengaktifkan kebijakan resolusi konflik di tingkat atribut individual
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Mengaktifkan kebijakan resolusi konflik pada tingkat atribut individual
 
 Saat deduplicating catatan pelanggan dalam suatu entitas, Anda mungkin tidak ingin harus memilih catatan lengkap sebagai pemenang. Kami sekarang memungkinkan Anda untuk menggabungkan bidang terbaik dari berbagai catatan berdasarkan aturan untuk setiap atribut. Misalnya, Anda dapat memilih untuk menyimpan email terbaru DAN alamat terlengkap dari catatan yang berbeda. 
 
-Anda sekarang dapat menentukan aturan penggabungan terpisah untuk atribut individual sambil menggabungkan dan menggabungkan rekaman dalam satu entitas. Sebelumnya, kami hanya mengizinkan Anda memilih aturan gabungan tunggal (menyimpan catatan berdasarkan kelengkapan data kebaruan) dan aturan tersebut diterapkan pada tingkat rekaman ke semua atribut. Itu tidak ideal ketika beberapa data yang ingin Anda simpan ditemukan dalam catatan A, dan data bagus lainnya yang ditemukan dalam catatan B.
+Anda sekarang dapat menentukan aturan penggabungan terpisah untuk atribut individual saat deduplicating dan menggabungkan rekaman dalam satu entitas. Sebelumnya, kami hanya mengizinkan Anda memilih satu aturan gabungan (menyimpan catatan berdasarkan kelengkapan data keterusteran) dan aturan itu diterapkan pada tingkat perekaman ke semua atribut. Itu tidak ideal ketika beberapa data yang ingin Anda simpan ditemukan dalam catatan A, dan data bagus lainnya yang ditemukan dalam catatan B.
 
 Untuk informasi lebih lanjut, lihat [menentukan deduplikasi pada entitas kecocokan](match-entities.md#define-deduplication-on-a-match-entity).
 
-#### <a name="custom-rules-for-matching"></a>Aturan kustom untuk pencocokan
+#### <a name="custom-rules-for-matching"></a>Aturan khusus untuk pencocokan
 
-Ada kalanya Anda perlu menentukan pengecualian untuk aturan umum agar TIDAK cocok dengan catatan. Hal ini dapat terjadi ketika beberapa individu berbagi informasi yang cukup sehingga sistem akan mencocokkan mereka sebagai satu individu. Misalnya, kembar dengan nama belakang yang sama, tinggal di kota yang sama, dan berbagi tanggal lahir.
+Ada kalanya Anda perlu menentukan pengecualian untuk aturan umum agar TIDAK cocok dengan catatan. Hal ini dapat terjadi ketika beberapa individu berbagi informasi yang cukup sehingga sistem akan mencocokkan mereka sebagai individu tunggal. Misalnya, kembar dengan nama belakang yang sama, tinggal di kota yang sama, dan berbagi tanggal lahir.
 
 Pengecualian memastikan bahwa penyatuan data yang salah dapat diatasi dalam aturan penyatuan. Anda dapat menambahkan beberapa pengecualian ke aturan.
 
 Untuk informasi selengkapnya, lihat [Menambahkan pengecualian ke aturan](match-entities.md#add-exceptions-to-a-rule).
 
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Menyediakan kebijakan resolusi konflik tambahan dan mengaktifkan pengelompokan atribut
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Memberikan kebijakan resolusi konflik tambahan dan memungkinkan pengelompokan atribut
 
-Fitur ini memungkinkan Anda memperlakukan sekelompok bidang sebagai satu unit. Misalnya, saat jika catatan kami berisi bidang Alamat1, Alamat2, Kota, Negara Bagian, dan Zip. Kami mungkin tidak ingin bergabung dalam Address2 rekaman yang berbeda, berpikir itu akan membuat data kami lebih lengkap.
+Fitur ini memungkinkan Anda untuk memperlakukan sekelompok bidang sebagai satu unit. Misalnya, jika catatan kami berisi bidang Alamat1, Alamat2, Kota, Negara Bagian, dan Zip. Kami mungkin tidak ingin bergabung dalam Alamat rekaman yang berbeda2, berpikir itu akan membuat data kami lebih lengkap.
 
 Anda sekarang dapat menggabungkan sekelompok bidang terkait dan menerapkan kebijakan penggabungan tunggal ke grup. 
 
@@ -83,15 +137,15 @@ Untuk informasi selengkapnya, lihat [Menggabungkan grup bidang](merge-entities.m
 
 ## <a name="november-2021-updates"></a>Pembaruan November 2021
 
-Pembaruan pada November 2021 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+Pembaruan pada November 2021 mencakup fitur baru, peningkatan performa, dan perbaikan bug.
 
 ### <a name="segment-membership-now-available-in-dataverse"></a>Keanggotaan segmen sekarang tersedia di Dataverse
 
-Informasi keanggotaan segmen untuk profil pelanggan sekarang tersedia Dataverse bersama dengan profil dan wawasan pelanggan. Aplikasi aksi Dynamics 365 dan aplikasi berbasis model dapat menggunakan data ini mencari detail keanggotaan segmen untuk pelanggan tertentu.
+Informasi keanggotaan segmen untuk profil pelanggan sekarang tersedia Dataverse bersama dengan profil dan wawasan pelanggan. Aplikasi tindakan Dynamics 365 dan aplikasi berbasis model dapat menggunakan data ini mencari detail keanggotaan segmen untuk pelanggan tertentu.
 
 ### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivitas mendukung detail tingkat kontak untuk akun bisnis
 
-Anda sekarang dapat mengonfigurasi, menampilkan, dan memfilter aktivitas untuk kontak di linimasa aktivitas akun bisnis Anda untuk lebih memahami kontak akun mana yang mengambil bagian dalam aktivitas tertentu.
+Anda sekarang dapat mengonfigurasi, menampilkan, dan memfilter aktivitas untuk kontak di jadwal aktivitas akun bisnis Anda untuk lebih memahami kontak akun mana yang mengambil bagian dalam aktivitas tertentu.
 
 ## <a name="october-2021-updates"></a>Pembaruan Oktober 2021
 
@@ -105,27 +159,27 @@ Bagian berikut menyoroti beberapa bidang utama yang disesuaikan untuk mendukung 
 
 #### <a name="export-segments-based-on-business-accounts"></a>Mengekspor segmen berdasarkan akun bisnis
 
-Semua ekspor segmen dalam audiens insight tersedia dalam konteks akun bisnis. Sebagian besar ekspor segmen memerlukan konfigurasi tambahan dan [informasi kontak yang](segment-builder.md#create-a-new-segment) diproyeksikan di segmen yang mendasarinya agar valid untuk akun bisnis. Untuk informasi selengkapnya, lihat [Mengekspor segmen](export-destinations.md#export-segments).
+Semua ekspor segmen dalam audiens wawasan tersedia dalam konteks akun bisnis. Sebagian besar ekspor segmen memerlukan konfigurasi tambahan dan [informasi kontak yang](segment-builder.md#create-a-new-segment) diproyeksikan di segmen yang mendasarinya valid untuk akun bisnis. Untuk informasi selengkapnya, lihat [Mengekspor segmen](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Menggunakan ekspor Iklan LinkedIn dengan akun bisnis
 
-Ekspor Iklan LinkedIn sekarang tersedia untuk penargetan kontak dan perusahaan dalam konteks akun bisnis. Saat memilih penargetan perusahaan sebagai fokus utama ekspor LinkedIn, Anda dapat mengekspor segmen yang dibangun di akun bisnis tanpa perlu memproyeksikan informasi kontak. Untuk informasi selengkapnya, buka dokumen tentang [ekspor](export-linkedin-ads.md) Iklan LinkedIn dan perbedaan antara [penargetan](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kontak dan [penargetan](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) perusahaan. 
+Ekspor Iklan LinkedIn sekarang tersedia untuk penargetan kontak dan perusahaan dalam konteks akun bisnis. Saat memilih penargetan perusahaan sebagai fokus utama ekspor LinkedIn Anda, Anda dapat mengekspor segmen yang dibangun di akun bisnis tanpa perlu memproyeksikan informasi kontak. Untuk informasi selengkapnya, buka dokumen tentang [ekspor](export-linkedin-ads.md) Iklan LinkedIn dan perbedaan antara [penargetan kontak dan](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) penargetan [perusahaan](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Membuat langkah-langkah berdasarkan akun bisnis dan hierarkinya
 
-Penyusun ukuran memungkinkan Anda membuat langkah-langkah di sekitar akun bisnis dan secara opsional menggunakan informasi hierarki. Informasi hierarki digunakan untuk menggulung perhitungan ukuran di seluruh akun dan semua sub akun terkait. Misalnya, Anda dapat membuat langkah-langkah seperti total pendapatan untuk setiap kelompok akun bisnis yang diidentifikasi oleh hierarki mereka. Untuk informasi lebih lanjut, lihat [menentukan dan mengelola langkah](measures.md).
+Pembuat ukuran memungkinkan Anda membuat ukuran di sekitar akun bisnis dan secara opsional menggunakan informasi hierarki. Informasi hierarki digunakan untuk menggulung perhitungan ukuran di seluruh akun dan semua sub akun terkait. Misalnya, Anda dapat membuat ukuran seperti total pendapatan untuk setiap grup akun bisnis yang diidentifikasi oleh hierarki mereka. Untuk informasi lebih lanjut, lihat [menentukan dan mengelola langkah](measures.md).
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Membuat segmen berdasarkan akun bisnis dan hierarkinya
 
-Pembuat segmen memungkinkan Anda membuat segmen akun bisnis yang secara opsional menyertakan informasi kontak untuk setiap akun di segmen. Jika Anda telah menyiapkan hierarki akun, Anda dapat menggunakan informasi hierarki akun dalam pembuatan segmen. Untuk informasi selengkapnya, lihat [Membuat segmen](segment-builder.md#create-a-new-segment) baru.
+Pembuat segmen memungkinkan Anda membuat segmen akun bisnis yang secara opsional menyertakan informasi kontak untuk setiap akun dalam segmen. Jika hierarki akun disiapkan, Anda dapat menggunakan informasi hierarki akun dalam pembuatan segmen. Untuk informasi selengkapnya, lihat [Membuat segmen](segment-builder.md#create-a-new-segment) baru.
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Pertahankan akun bisnis Anda dengan wawasan mendalam tentang kecenderungan churn mereka
 
-Model churn prediksi pelanggan sekarang juga mendukung akun bisnis. Anda dapat mengevaluasi risiko churn tidak hanya untuk akun tetapi untuk kombinasi akun dan kategori produk atau layanan yang mereka beli dari Anda. Penambahan ini membantu Anda memahami apakah akun lebih cenderung berhenti membeli dari Anda secara umum atau hanya untuk kategori barang atau jasa tertentu. Untuk lebih membantu Anda menggunakan model AI ini, ini juga mencantumkan alasan mengapa akun cenderung bergejolak. Untuk informasi selengkapnya, lihat [Churn transaksi prediksi (pratinjau)](predict-transactional-churn.md).
+Model churn prediksi pelanggan sekarang juga mendukung akun bisnis. Anda dapat mengevaluasi risiko churn tidak hanya untuk akun tetapi untuk kombinasi akun dan kategori produk atau layanan yang mereka beli dari Anda. Penambahan ini membantu Anda untuk memahami apakah akun lebih mungkin untuk berhenti membeli dari Anda secara umum atau hanya untuk kategori barang atau jasa tertentu. Untuk lebih membantu Anda menggunakan model AI ini, ini juga mencantumkan alasan mengapa akun cenderung bergejolak. Untuk informasi selengkapnya, lihat [Churn transaksi prediksi (pratinjau)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Melihat kontak akun bisnis dalam tampilan Pelanggan
 
-Jika akun bisnis dipetakan ke akun terkait, aplikasi Wawasan Pelanggan akan menampilkan kontak terkait ini sebagai bagian dari tampilan detail pelanggan. Untuk informasi selengkapnya, lihat [Profil pelanggan](customer-profiles.md).
+Jika akun bisnis dipetakan ke akun terkait, aplikasi Customer Insights akan menampilkan kontak terkait ini sebagai bagian dari tampilan detail pelanggan. Untuk informasi selengkapnya, lihat [Profil pelanggan](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>Pembaruan September 2021

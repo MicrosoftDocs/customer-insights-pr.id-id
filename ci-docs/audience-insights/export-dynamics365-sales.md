@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355021"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455858"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Gunakan segmen di Dynamics 365 Sales (pratinjau)
 
@@ -31,7 +31,7 @@ Gunakan data pelanggan Anda untuk membuat daftar pemasaran, alur kerja tindak la
 
 ## <a name="prerequisite-for-connection"></a>Prasyarat untuk koneksi
 
-1. Rekaman kontak harus ada di Dynamics 365 Sales agar Anda dapat mengekspor segmen dari Customer Insights ke Sales. Baca selengkapnya tentang cara menyerap kontak di [Dynamics 365 Sales menggunakan Microsoft Dataverse](connect-power-query.md).
+1. Rekaman kontak harus ada di Dynamics 365 Sales agar Anda dapat mengekspor segmen dari Customer Insights ke Sales. Baca lebih lanjut tentang cara menelan kontak dari [Dynamics 365 Sales menggunakan Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Mengekspor segmen dari wawasan audiens ke Sales tidak akan membuat rekaman kontak baru di instans Sales. Rekaman kontak dari Sales harus digunakan dalam audiens wawasan dan digunakan sebagai sumber data. Id pelanggan juga harus disertakan dalam entitas Pelanggan terpadu untuk memetakan ID pelanggan agar ID dapat dihubungi sebelum segmen dapat diekspor.

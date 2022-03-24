@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230638"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376788"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil perusahaan dengan Leadspace (pratinjau)
 
@@ -25,7 +25,7 @@ Untuk mengonfigurasikan Leadspace, prasyarat berikut harus dipenuhi:
 
 - Anda memiliki lisensi Leadspace aktif.
 - Anda memiliki [profil pelanggan terpadu](customer-profiles.md) berdasarkan akun.
-- Koneksi Leadspace telah dikonfigurasi oleh administrator atau Anda memiliki izin [administrator](permissions.md#administrator) dan "kunci abadi" (disebut sebagai **token Leadspace**). Hubungi [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) secara langsung untuk detail tentang produk mereka.
+- Koneksi Leadspace telah dikonfigurasi oleh administrator atau Anda memiliki izin [administrator](permissions.md#admin) dan "kunci abadi" (disebut sebagai **token Leadspace**). Hubungi [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) secara langsung untuk detail tentang produk mereka.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 

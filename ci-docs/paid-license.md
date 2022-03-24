@@ -7,18 +7,18 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
-ms.translationtype: HT
+ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350135"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8456002"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Mulai setelah membeli Customer Insights
 
 Artikel ini menjelaskan cara melakukan langkah pertama di Dynamics 365 Customer Insights setelah organisasi Anda membeli langganan. Jika Anda ingin membeli Customer Insights, pilihan kontak kami akan tercantum di [situs web Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Setelah membeli lisensi langganan untuk Wawasan Pelanggan, administrator Microsoft 365 global penyewa menerima email yang mengundang mereka untuk menciptakan lingkungan. 
+Setelah membeli lisensi langganan untuk Customer Insights, administrator Microsoft 365 global penyewa menerima email yang mengundang mereka untuk membuat lingkungan. 
 
 Customer Insights berlisensi per penyewa dan mencakup beberapa kemampuan. Anda dapat membeli lebih banyak kapasitas dan lisensi untuk meningkatkan kuota default. 
 - [Ikhtisar harga](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -39,7 +39,4 @@ Pengalaman menjalankan pertama akan membantu Anda memilih fokus awal dengan Cust
 
 ## <a name="create-your-own-environment"></a>Buat lingkungan Anda sendiri
 
-Setelah masuk pertama kali, Anda akan melihat lingkungan dengan data sampel. Anda dapat menggunakan data tersebut untuk menjelajahi berbagai fitur dan memahami aplikasi. Untuk menggunakan data Anda sendiri, Anda harus [membuat lingkungan](audience-insights/get-started-paid.md).
-
-
-
+Setelah masuk pertama kali, Anda akan melihat lingkungan dengan data sampel. Anda dapat menggunakan data tersebut untuk menjelajahi berbagai fitur dan memahami aplikasi. Untuk menggunakan data Anda sendiri, Anda harus [membuat lingkungan](/dynamics365/customer-insights/audience-insights/create-environment).
