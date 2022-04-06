@@ -1,7 +1,7 @@
 ---
 title: Gunakan sumber data untuk menyerap data
 description: Pelajari cara mengimpor data dari berbagai sumber.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354053"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464078"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
@@ -27,7 +27,7 @@ Kemampuan wawasan audiens di Dynamics 365 Customer Insights terhubung ke data da
 
 ## <a name="add-a-data-source"></a>Tambahkan sumber data
 
-Lihat artikel terperinci untuk cara menambahkan sumber data, tergantung pada opsi yang Anda pilih.
+Lihat artikel terperinci tentang cara menambahkan sumber data, tergantung pada opsi yang Anda pilih.
 
 Anda dapat menambahkan sumber data berikut:
 
@@ -37,17 +37,28 @@ Anda dapat menambahkan sumber data berikut:
 - [Azure Synapse Analytics Dari database](connect-synapse.md)
 
 > [!NOTE]
-> Jika Anda menggunakan versi uji coba, bagian metode impor menyertakan **opsi pustaka** data Wawasan Pelanggan. Pilih opsi ini untuk memilih dataset sampel yang tersedia untuk berbagai industri. Untuk informasi selengkapnya, lihat [Dynamics 365 Customer Insights uji coba](../trial-signup.md).
+> Jika Anda menggunakan versi uji coba, bagian metode impor menyertakan **opsi pustaka** data Wawasan Pelanggan. Pilih opsi ini untuk memilih himpunan data sampel yang tersedia untuk berbagai industri. Untuk informasi selengkapnya, lihat [Dynamics 365 Customer Insights uji coba](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Menambahkan data dari sumber data lokal
 
-Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Microsoft Power Platform. Anda dapat mengaktifkan Aliran Data di Wawasan [Pelanggan dengan menyediakan URL Microsoft Dataverse lingkungan saat](create-environment.md) menyiapkan lingkungan.
+Menyerap data dari sumber data lokal di Wawasan Audiens didukung berdasarkan aliran data Microsoft Power Platform. Anda dapat mengaktifkan Aliran Data di Wawasan [Pelanggan dengan Microsoft Dataverse menyediakan URL](create-environment.md) lingkungan saat menyiapkan lingkungan.
 
-Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Wawasan Pelanggan menggunakan [Power Platform aliran data secara](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang ada sebelum Dataverse lingkungan dikaitkan [menggunakan gateway](/data-integration/gateway/service-gateway-app) data lokal.
+Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Customer Insights menggunakan [Power Platform aliran data secara](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang ada sebelum Dataverse lingkungan dikaitkan [menggunakan gateway](/data-integration/gateway/service-gateway-app) data lokal.
 
 Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
 
+> [!IMPORTANT]
+> Pastikan gateway Anda diperbarui ke versi terbaru. Anda dapat menginstal pembaruan dan mengonfigurasi ulang gateway dari prompt yang ditampilkan di layar gateway secara langsung atau [mengunduh versi](https://powerapps.microsoft.com/downloads/) terbaru. Jika Anda tidak menggunakan versi gateway terbaru, refresh aliran data gagal dengan pesan kesalahan seperti **Kata kunci tidak didukung: properti konfigurasi. Nama parameter: kata kunci**.
+
 ## <a name="review-ingested-data"></a>Meninjau data yang diserap
+Jika lingkungan Anda berisi Power Platform aliran data, **halaman Sumber** Data mencantumkan tiga bagian: 
+- **Dibagikan**: Sumber data yang dapat dikelola oleh semua admin Wawasan Pelanggan. Power BI aliran data, akun penyimpanan Anda sendiri, dan melampirkan ke danau data yang Dataverse dikelola adalah contoh sumber data bersama.
+- **Dikelola oleh saya**: Power Platform aliran data dibuat dan hanya dapat dikelola oleh Anda. Admin Customer Insights lainnya hanya dapat melihat aliran data ini tetapi tidak mengedit, menyegarkan, atau menghapusnya.
+- **Dikelola oleh orang lain**: Power Platform aliran data yang dibuat oleh admin lain. Anda hanya bisa melihatnya. Ini mencantumkan pemilik aliran data untuk dihubungi untuk bantuan apa pun.
+> [!NOTE]
+> Semua entitas dapat dilihat dan digunakan oleh pengguna lain. Kontekstualitas pengguna hanya berlaku untuk sumber data dan bukan untuk entitas yang dihasilkan dari aliran data ini.
+
+Jika tidak ada Power Platform aliran data yang digunakan, Anda tidak akan melihat grup atau bagian apa pun. Halaman **Sumber** Data hanya berisi daftar semua sumber data.
 
 Anda akan melihat nama dari setiap sumber data yang diserap, statusnya, serta waktu terakhir data disegarkan untuk sumber itu. Anda dapat mengurutkan daftar sumber data menurut setiap kolom.
 

@@ -1,7 +1,7 @@
 ---
 title: Segmen di wawasan audiens
 description: Ikhtisar tentang segmen dan cara membuat dan mengelolanya.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355987"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508570"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -68,7 +68,9 @@ Tindakan berikut tersedia bila Anda memilih segmen:
 
 ## <a name="refresh-segments"></a>Refresh Segmen
 
-Anda dapat menyegarkan semua segmen sekaligus dengan memilih **Segarkan semua** pada halaman **segmen** atau Anda dapat menyegarkan satu atau beberapa segmen saat memilih dan memilih **Segarkan** dari pilihan. Atau, Anda dapat mengkonfigurasi refresh berulang pada **Admin** > **sistem** > **jadwal**.
+Anda dapat menyegarkan semua segmen sekaligus dengan memilih **Segarkan semua** pada halaman **segmen** atau Anda dapat menyegarkan satu atau beberapa segmen saat memilih dan memilih **Segarkan** dari pilihan. Atau, Anda dapat mengkonfigurasi refresh berulang pada **Admin** > **sistem** > **jadwal**. Saat refresh berulang dikonfigurasi, aturan berikut berlaku:
+- Semua segmen dengan tipe **Dynamic** atau **Expansion** akan disegarkan secara otomatis pada irama yang ditetapkan. Ketika refresh selesai **, Status** menunjukkan apakah ada masalah dalam menyegarkan segmen. Yang **terakhir disegarkan** menunjukkan stempel waktu dari penyegaran terakhir yang berhasil. Jika terjadi kesalahan, pilih kesalahan untuk melihat detail tentang apa yang terjadi.
+- Segmen dengan tipe **Statis** *tidak* akan disegarkan secara otomatis. Terakhir **disegarkan** menunjukkan stempel waktu terakhir kali segmen statis dijalankan atau disegarkan secara manual.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

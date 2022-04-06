@@ -1,7 +1,7 @@
 ---
 title: Perkaya profil pelanggan terpadu
 description: Gunakan kemampuan untuk memperkaya data pelanggan Anda.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372719"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491962"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
@@ -42,7 +42,7 @@ Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 - [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
 - [data lokasi](enrichment-here.md) disediakan oleh HERE Technologies 
-- [Identitas](enrichment-liveramp.md) yang disediakan oleh LiveRamp AbiliTec
+- [Identitas](enrichment-liveramp.md) disediakan oleh LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
@@ -52,7 +52,7 @@ Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 - [data lokasi](enrichment-here.md) disediakan oleh HERE Technologies 
 - [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
-- [Data keterlibatan akun](enrichment-office.md) yang disediakan oleh Microsoft
+- [Data](enrichment-office.md) keterlibatan akun yang disediakan oleh Microsoft
 
 ---
 
@@ -97,5 +97,19 @@ Untuk melihat status pengayaan
 1. Di panel **Rincian progres**, perluas bagian **Pengayaan**. 
 1. Dalam pengayaan yang ingin Anda lihat kemajuannya, pilih **Lihat rincian**. 
 1. Di panel **Rincian tugas**, pilih **Tampilkan rincian** untuk melihat proses yang terlibat dalam memperbarui pengayaan dan statusnya. 
+
+## <a name="enrichment-results"></a>Hasil pengayaan
+
+Setelah menjalankan pengayaan selesai, Anda dapat meninjau hasil pengayaan.
+
+1. Buka **Data** > **Pengayaan**. 
+1. Pilih pengayaan yang Anda inginkan informasi tentang.
+
+Semua pengayaan menunjukkan informasi dasar seperti jumlah profil yang diperkaya, pratinjau entitas pengayaan yang dihasilkan, dan jumlah profil yang diperkaya dari waktu ke waktu. Jika tersedia, **Jumlah pelanggan yang diperkaya oleh lapangan** menyediakan penelusuran ke dalam cakupan setiap bidang yang diperkaya.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Halaman hasil pengayaan.":::
+
+Beberapa pengayaan juga menunjukkan informasi khusus untuk jenis pengayaan. Lihat dokumentasi untuk pengayaan yang relevan untuk informasi lebih lanjut.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

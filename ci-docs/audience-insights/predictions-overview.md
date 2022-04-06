@@ -1,19 +1,19 @@
 ---
 title: Gambaran umum tentang skenario prediksi yang didukung
 description: Prediksi dan opsi yang dicakup oleh aplikasi Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228248"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487539"
 ---
 # <a name="predictions-overview"></a>Ikhtisar prediksi
 
@@ -36,6 +36,11 @@ Cara termudah untuk memulai dengan memprediksi data adalah model yang sudah dite
 - [Kehilangan transaksional](predict-transactional-churn.md): Prediksi apakah pelanggan tidak akan lagi membeli produk atau layanan Anda dalam jangka waktu tertentu.
 
 ---
+
+> [!TIP]
+> Kami menyarankan Anda secara teratur menyegarkan model out-of-the-box dengan data yang diperbarui untuk memastikan mereka secara akurat menginformasikan kasus penggunaan bisnis Anda. Data disegarkan ad-hoc ketika sistem menelan sumber data baru atau yang diperbarui. Namun, model hanya akan menilai ulang dalam kasus ini dan terus menggunakan data pelatihan yang ada.
+> 
+> Anda dapat mengonfigurasi **jadwal** Pembaruan dengan mengatur jadwal pelatihan ulang model dalam pengalaman konfigurasi. Model akan melatih ulang dan menilai ulang jadwal ini, yang dapat Anda ubah kapan saja.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integasi Pembelajaran Mesin Azure

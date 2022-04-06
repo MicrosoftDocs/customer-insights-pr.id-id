@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231983"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487519"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Mengekspor segmen ke Marketo (pratinjau)
 
@@ -63,7 +63,7 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Masukkan **[id daftar marketo Anda](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID daftar adalah nilai yang semata-mata numerik. Contohnya, jika ID daftar Marketo Anda adalah ST12345A7, hilangkan karakter sebelum dan setelah angka dan masukkan `12345`. 
 
-1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. 
+1. **Di bagian Pencocokan** Data, pilih setidaknya satu bidang yang mewakili alamat email pelanggan atau ID Marketo pelanggan. 
 
 1. Secara opsional, Anda dapat mengekspor **nama depan**, **nama belakang**, **Kota**, dan **Negara Bagian**, dan **Negara/Kawasan**  untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
 

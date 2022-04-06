@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354885"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523730"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
 Halaman **Pelanggan** menampilkan tampilan gabungan profil pelanggan terpadu Anda. Profil pelanggan tersedia setelah Anda [membuat entitas pelanggan terpadu](data-unification.md). Halaman tersebut memungkinkan Anda mencari pelanggan dan menentukan indeks untuk pencarian tersebut.
 
-Pelanggan dapat perorangan atau organisasi. Setiap profil pelanggan ditunjukkan dengan petak. Gunakan kontrol paginasi untuk mendapatkan rekaman lainnya. Kartu akan menampilkan bidang dari entitas *Pelanggan* sebagaimana ditentukan dalam **indeks Pencarian & filter**. Pilih petak untuk melihat data untuk pelanggan yang dipilih di halaman khusus yang disebut [halaman Rincian pelanggan](customer-profiles.md#customer-details-page).
+Pelanggan dapat perorangan atau organisasi. Setiap profil pelanggan ditunjukkan dengan petak. Gunakan kontrol paginasi untuk mendapatkan rekaman lainnya. Kartu akan menampilkan bidang dari entitas *Pelanggan* sebagaimana ditentukan dalam **indeks Pencarian & filter**. Urutan bidang dalam setiap kartu dipilih oleh sistem.
+
+Pilih petak untuk melihat data untuk pelanggan yang dipilih di halaman khusus yang disebut [halaman Rincian pelanggan](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Halaman pelanggan yang menampilkan petak hasil](media/customers-page-result-tiles-B2C.png "Halaman pelanggan yang menampilkan petak hasil")

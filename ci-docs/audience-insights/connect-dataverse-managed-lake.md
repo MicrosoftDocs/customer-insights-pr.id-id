@@ -1,7 +1,7 @@
 ---
 title: Menyambungkan tabel di Microsoft Dataverse
 description: Impor data dari Data Lake terkelola Microsoft Dataverse.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,14 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354145"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464070"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Menyambung ke data di Data Lake yang dikelola oleh Microsoft Dataverse
-
-
 
 Artikel ini memberikan informasi tentang bagaimana Dataverse pengguna dapat dengan cepat terhubung ke entitas analitis di danau yang Microsoft Dataverse dikelola. 
 
@@ -29,7 +27,8 @@ Artikel ini memberikan informasi tentang bagaimana Dataverse pengguna dapat deng
 
 ## <a name="important-considerations"></a>Pertimbangan penting
 
-Data yang tersimpan di layanan online, misalnya Azure Data Lake Storage, dapat disimpan di lokasi yang berbeda dengan data yang diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari lebih lanjut di Microsoft Trust Center](https://www.microsoft.com/trust-center).
+1. Data yang tersimpan di layanan online, misalnya Azure Data Lake Storage, dapat disimpan di lokasi yang berbeda dengan data yang diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari lebih lanjut di Microsoft Trust Center](https://www.microsoft.com/trust-center).
+2. Hanya Dataverse entitas dengan [pelacakan](/power-platform/admin/enable-change-tracking-control-data-synchronization) perubahan yang diaktifkan yang terlihat. Entitas ini dapat diekspor ke Dataverse danau data yang dikelola dan digunakan dalam Customer Insights. Tabel di luar kotak Dataverse telah mengaktifkan pelacakan perubahan secara default. Anda perlu mengaktifkan pelacakan perubahan untuk tabel kustom. Untuk memeriksa apakah Dataverse tabel diaktifkan untuk pelacakan perubahan, buka [Power Apps](https://make.powerapps.com) > **DataTables** > **·**. Temukan tabel minat Anda dan pilih. **Buka SettingsMenmenal** > **dan** tinjau **pengaturan Lacak perubahan**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Terhubung ke danau yang dikelola Dataverse
 

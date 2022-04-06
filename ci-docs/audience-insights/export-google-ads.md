@@ -1,42 +1,37 @@
 ---
 title: Ekspor data Customer Insights ke Google Ads
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227014"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523804"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Mengekspor segmen ke Google Ads (pratinjau)
 
 Ekspor segmen profil pelanggan terpadu ke daftar audiens Google Ads dan gunakan untuk mengiklankan di Google Penelusuran, Gmail, YouTube, dan Google Display Network. 
 
-> [!IMPORTANT]
-> Saat ini, Anda hanya dapat membuat sambungan baru dan mengekspor data ke Google Ads jika telah memiliki token Pengembang Google Ads yang disetujui. Karena perubahan kebijakan, kami akan memperbarui ekspor Google Ads secara tidak langsung dan memberikan pilihan ekspor yang tidak akan memerlukan token pengembang untuk memastikan kesinambungan pengalaman Anda dan menyederhanakan ekspor ke Google Ads. Sebaiknya jangan atur sambungan lainnya ke Google Ads untuk memudahkan beralih ke pilihan ekspor baru.
 
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk koneksi
 
 -   Anda memiliki [akun Google Ads](https://ads.google.com/) dan kredensial administrator yang sesuai.
--   Anda memiliki [token Pengembang Google Ads yang disetujui](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
 -   Anda memenuhi persyaratan [Kebijakan Customer Match](https://support.google.com/adspolicy/answer/6299717).
 -   Anda memenuhi persyaratan [ukuran daftar pemasaran ulang](https://support.google.com/google-ads/answer/7558048).
--   Audiens sudah ada di Google Ads dan id yang sesuai. Untuk informasi lebih lanjut, lihat [audiens Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Anda telah [mengonfigurasi segmen](segments.md).
--   Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email, nama depan, dan nama belakang.
+-   Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email, telepon, ID pengiklan seluler, ID pengguna pihak ketiga, atau alamat.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Hingga 1 juta profil pelanggan per ekspor ke Google Ads.
 - Mengekspor ke Google Ads.terbatas untuk segmen.
-- Mengekspor segmen dengan total 1 juta profil pelanggan dapat berlangsung hingga 5 menit karena keterbatasan pada sisi penyedia. 
+- Mengekspor segmen dengan total 1 juta profil pelanggan dapat berlangsung hingga 30 menit karena keterbatasan pada sisi penyedia. 
 - Pencocokan di Google Ads dapat berlangsung hingga 48 jam.
 
 ## <a name="set-up-connection-to-google-ads"></a>Konfigurasikan koneksi ke Google Ads
@@ -50,8 +45,6 @@ Ekspor segmen profil pelanggan terpadu ke daftar audiens Google Ads dan gunakan 
 1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Masukkan **[ID pelanggan Google Ads](https://support.google.com/google-ads/answer/1704344)** Anda.
-
-1. Masukkan **[token Developer yang disetujui Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
 
 1. Pilih **saya setuju** untuk mengonfirmasi **privasi dan kepatuhan data**.
 
@@ -71,11 +64,11 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Google Ads. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
 
-1. Masukkan **[ID audiens dan google ads anda](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)**, lalu pilih **sambungkan** untuk menginisialisasi sambungan ke google ads.
+1. Jika Anda ingin membuat audiens baru, kosongkan bidang ID Google audiens. Kami akan secara otomatis membuat audiens baru di akun Google Ads Anda dan menggunakan nama segmen yang diekspor. Jika Anda ingin memperbarui audiens Google Ads yang sudah ada, masukkan [ID audiens Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan.
+1. **Di bagian Pencocokan** data, pilih satu atau beberapa bidang data untuk diekspor, dan pilih bidang yang mewakili bidang data yang sesuai di Wawasan Pelanggan.
 
-1. Pilih segmen yang ingin diekspor. Anda dapat mengekspor hingga 1 juta profil pelanggan secara total ke Google Ads.
+1. Pilih segmen yang ingin diekspor. 
 
 Menyimpan ekspor tidak segera menjalankan ekspor.
 

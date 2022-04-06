@@ -1,23 +1,23 @@
 ---
 title: Membuat lingkungan di Customer Insights
 description: Langkah-langkah membuat lingkungan dengan langganan berlisensi untuk Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354099"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491917"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Buat lingkungan di wawasan audiens
 
@@ -30,7 +30,7 @@ Organisasi dapat membuat *dua* lingkungan untuk setiap lisensi Customer Insights
 
 ## <a name="create-a-new-environment"></a>Buat lingkungan baru
 
-Setelah membeli lisensi langganan untuk Wawasan Pelanggan, administrator Microsoft 365 global penyewa menerima email yang mengundang mereka untuk menciptakan lingkungan. Buka [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk memulai. 
+Setelah membeli lisensi langganan untuk Customer Insights, administrator Microsoft 365 global penyewa menerima email yang mengundang mereka untuk membuat lingkungan. Buka [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk memulai. 
 
 Pengalaman terpandu akan membantu Anda melakukan langkah-langkah untuk mengumpulkan semua informasi yang diperlukan untuk lingkungan baru. Anda memerlukan [izin administrator](permissions.md) di wawasan audiens untuk membuat atau mengelola lingkungan.
 
@@ -78,19 +78,21 @@ Jika Anda membuat beberapa lingkungan Customer Insights dan memilih untuk menyim
    
 Langkah **Microsoft Dataverse** memungkinkan Anda menghubungkan Customer Insights dengan lingkungan Dataverse Anda.
 
-Menyediakan lingkungan Anda sendiri Microsoft Dataverse untuk berbagi data (profil dan wawasan) dengan aplikasi bisnis berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi berbasis model di Power Apps. Biarkan bidang ini kosong jika Anda tidak memiliki lingkungan Anda sendiri Dataverse dan kami akan menyediakannya untuk Anda.
+Berikan lingkungan Anda sendiri Microsoft Dataverse untuk berbagi data (profil dan wawasan) dengan aplikasi bisnis berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi berbasis model di Indonesia Power Apps. Biarkan bidang ini kosong jika Anda tidak memiliki lingkungan sendiri Dataverse dan kami akan menyediakannya untuk Anda.
 
-Menghubungkan ke lingkungan Anda Dataverse juga memungkinkan Anda untuk [menelan data dari sumber data lokal menggunakan Power Platform aliran data dan gateway](data-sources.md#add-data-from-on-premises-data-sources). Anda juga dapat menggunakan [model](predictions-overview.md?tabs=b2c#out-of-box-models) prediksi out-of-box dengan Dataverse terhubung ke lingkungan.
+Menghubungkan ke lingkungan Anda Dataverse juga memungkinkan Anda untuk [menelan data dari sumber data lokal menggunakan Power Platform aliran data dan gateway](data-sources.md#add-data-from-on-premises-data-sources). Anda juga dapat menggunakan [model](predictions-overview.md?tabs=b2c#out-of-box-models) prediksi di luar kotak dengan menghubungkan ke Dataverse lingkungan.
 
 > [!IMPORTANT]
-> Wawasan Pelanggan dan Dataverse harus berada di wilayah yang sama untuk memungkinkan berbagi data.
+> 1. Wawasan Pelanggan dan Dataverse harus berada di wilayah yang sama untuk mengaktifkan berbagi data.
+> 1. Anda harus memiliki peran administrator global di Dataverse lingkungan. Verifikasi apakah lingkungan ini [Dataverse terkait dengan](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) grup keamanan tertentu dan pastikan Anda ditambahkan ke grup keamanan tersebut.
+> 1. Tidak ada lingkungan Customer Insights yang sudah terkait dengan lingkungan tersebut Dataverse. Pelajari cara [menghapus koneksi yang ada ke Dataverse lingkungan](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="berbagi data dengan Microsoft Dataverse auto diaktifkan untuk instans baru bersih.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="berbagi data dengan Microsoft Dataverse otomatis diaktifkan untuk instans baru bersih.":::
 
-> [!NOTE]
-> Customer Insights tidak mendukung skenario berbagi data berikut ini:
-> - Jika Anda menyimpan semua data ke Azure Data Lake Storage Anda sendiri, Anda tidak akan dapat mengaktifkan berbagi data dengan Data Lake Terkelola Dataverse.
-> - Jika Anda mengaktifkan berbagi data dengan Dataverse, Anda tidak akan dapat [membuat nilai yang terduga atau tidak ada dalam entitas](predictions.md).
+Untuk informasi selengkapnya tentang mengaktifkan berbagi Microsoft Dataverse data dari Anda sendiri Azure Data Lake Storage, lihat [Sambungkan ke Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights tidak mendukung skenario berbagi data berikut ini:
+- Jika Anda mengaktifkan berbagi data dengan Dataverse, Anda tidak akan dapat [membuat nilai yang terduga atau tidak ada dalam entitas](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Langkah 4: Selesaikan Pengaturan
 

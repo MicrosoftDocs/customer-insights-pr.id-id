@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Tanya Jawab Uji Coba
       href: trial-FAQ.md
-- name: Mulai dengan lisensi berbayar
-  href: paid-license.md
 - name: Nilai lingkungan Anda
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Wawasan audiens
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Fitur baru dan diperbarui
       href: audience-insights/whats-new-audience-insights.md
-    - name: Mulai
+    - name: Memulai
       items:
         - name: Panduan mulai cepat
           href: audience-insights/get-started.md
+        - name: Mulai dengan lisensi berbayar
+          href: paid-license.md
         - name: Buat lingkungan baru
           href: audience-insights/create-environment.md
         - name: Jelajahi wawasan audiens
           href: audience-insights/home.md
-    - name: Menangani akun bisnis
-      href: audience-insights/work-with-business-accounts.md
+        - name: Menangani akun bisnis
+          href: audience-insights/work-with-business-accounts.md
     - name: Sumber Data
       items:
         - name: Ikhtisar sumber data
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Konsumsi data real-time
           href: audience-insights/real-time-data-ingestion.md
-        - name: Memahami entitas dan kumpulan data
-          href: audience-insights/entities.md
     - name: Penyatuan data
       items:
         - name: Ikhtisar penyatuan data
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Gabungkan Entitas
           href: audience-insights/merge-entities.md
-        - name: Tinjau profil pelanggan terpadu
-          href: audience-insights/customer-profiles.md
-        - name: Filter profil pelanggan terpadu
-          href: audience-insights/search-filter-index.md
-        - name: Membangun relasi dan entitas terhubung
-          href: audience-insights/relationships.md
-        - name: Mencatumkan Aktivitas Pelanggan
-          href: audience-insights/activities.md
-        - name: Menentukan pemetaan semantik
-          href: audience-insights/semantic-mappings.md
     - name: Pengayaan data
       items:
         - name: Perkaya profil pelanggan
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: Perkaya dengan impor kustom SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Profil terpadu
+      items:
+        - name: Tinjau profil pelanggan terpadu
+          href: audience-insights/customer-profiles.md
+        - name: Filter profil pelanggan terpadu
+          href: audience-insights/search-filter-index.md
+        - name: Menentukan aktivitas pelanggan
+          href: audience-insights/activities.md
     - name: Segmen
       items:
         - name: Sekilas tentang segmen
@@ -126,7 +122,7 @@
           href: audience-insights/find-similar-customer-segments.md
     - name: Tindakan
       items:
-        - name: Mengukur gambaran umum
+        - name: Gambaran umum ukuran
           href: audience-insights/measures.md
         - name: Membuat ukuran baru
           href: audience-insights/measure-builder.md
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -204,6 +202,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Entitas
+      items:
+        - name: Pahami Entitas
+          href: audience-insights/entities.md
+        - name: Meninjau skema entitas dalam Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Data Customer Insights di Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Membangun relasi dan entitas terhubung
+          href: audience-insights/relationships.md
+        - name: Menentukan pemetaan semantik
+          href: audience-insights/semantic-mappings.md
     - name: Administrasi
       items:
         - name: Atur konfigurasi sistem
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Kelola beberapa lingkungan
           href: audience-insights/manage-environments.md
-        - name: Keamanan
-          items:
-            - name: Bawa Key Vault Anda sendiri
-              href: audience-insights/use-azure-key-vault.md
-            - name: Menyambung ke akun penyimpanan ADLS dengan prinsipal Layanan
-              href: audience-insights/connect-service-principal.md
-            - name: Mengekspor log diagnostik
-              href: audience-insights/diagnostics.md
-    - name: Dapat diperluas
+        - name: Bawa Key Vault Anda sendiri
+          href: audience-insights/use-azure-key-vault.md
+        - name: Menyambungkan ke akun penyimpanan menggunakan Perwakilan Layanan
+          href: audience-insights/connect-service-principal.md
+        - name: Mengekspor log diagnostik
+          href: audience-insights/diagnostics.md
+        - name: Batas Layanan
+          href: service-limits.md
+        - name: Permintaan dan hak DSR
+          href: dsr-rights-requests.md
+    - name: API
       items:
         - name: Meninjau skema entitas dalam Common Data Model
           href: audience-insights/entity-schemas.md
@@ -290,9 +304,9 @@
           href: consent-management/set-consent-rules.md
     - name: Mengelola data persetujuan
       items:
-        - name: Aktifkan aturan persetujuan dalam audiens wawasan
+        - name: Mengaktifkan aturan persetujuan dalam wawasan audiens
           href: audience-insights/activate-consent.md
-        - name: Mengelola aturan persetujuan default di segmen audiens insight
+        - name: Mengelola aturan persetujuan default di segmen wawasan audiens
           href: audience-insights/change-default-consent-rules.md
     - name: Mengelola pengaturan dan pengguna
       items:
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Wawasan keterlibatan (pratinjau)
   href: engagement-insights/overview.md
-- name: Batas Layanan
-  href: service-limits.md
-- name: Permintaan dan hak DSR
-  href: dsr-rights-requests.md
 - name: Dapatkan Dukungan
   href: /power-platform/admin/get-help-support
