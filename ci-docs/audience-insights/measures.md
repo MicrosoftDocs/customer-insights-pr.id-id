@@ -1,12 +1,12 @@
 ---
 title: Memahami dan mengelola langkah-langkah
 description: Pelajari bagaimana langkah-langkah membantu menganalisis dan mencerminkan kinerja bisnis Anda.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,20 +14,20 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359782"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529681"
 ---
-# <a name="measures-overview"></a>Mengukur gambaran umum
+# <a name="measures-overview"></a>Gambaran umum ukuran
 
 Ukuran membantu Anda untuk lebih memahami perilaku pelanggan dan kinerja bisnis. Mereka melihat nilai-nilai yang relevan dari [profil terpadu](data-unification.md). Misalnya, bisnis ingin melihat *total pengeluaran per pelanggan* untuk memahami riwayat pembelian pelanggan individual atau mengukur *total penjualan perusahaan* untuk memahami pendapatan tingkat agregat dalam seluruh bisnis.  
 
-Langkah-langkah dibuat [menggunakan pembangun](measure-builder.md) ukuran, platform kueri data dengan berbagai operator dan opsi pemetaan sederhana. Alat ini memungkinkan Anda memfilter data, mengelompokkan hasil, mendeteksi [jalur relasi entitas](relationships.md), dan mempratinjau output. Anda dapat [menggunakan templat](measure-templates.md) yang telah ditentukan untuk mengonfigurasi tindakan yang umum digunakan secara efisien.
+Langkah-langkah dibuat [menggunakan pembuat](measure-builder.md) ukuran, platform kueri data dengan berbagai operator dan opsi pemetaan sederhana. Alat ini memungkinkan Anda memfilter data, mengelompokkan hasil, mendeteksi [jalur relasi entitas](relationships.md), dan mempratinjau output. Anda dapat [menggunakan templat](measure-templates.md) yang telah ditentukan untuk mengonfigurasi tindakan yang umum digunakan secara efisien.
 
-Gunakan pembuat ukuran untuk merencanakan aktivitas bisnis dengan mengkueri data pelanggan dan mengekstrak wawasan. Contohnya, membuat ukuran *total pengeluaran per pelanggan* dan *penghasilan total per pelanggan* membantu mengidentifikasi grup pelanggan dengan pengeluaran tinggi namun penghasilan yang tinggi. Anda dapat [membuat segmen](segments.md) berdasarkan langkah-langkah ini untuk mendorong tindakan terbaik berikutnya. 
+Gunakan pembuat ukuran untuk merencanakan aktivitas bisnis dengan mengkueri data pelanggan dan mengekstrak wawasan. Contohnya, membuat ukuran *total pengeluaran per pelanggan* dan *penghasilan total per pelanggan* membantu mengidentifikasi grup pelanggan dengan pengeluaran tinggi namun penghasilan yang tinggi. Anda dapat [membuat segmen](segments.md) berdasarkan langkah-langkah ini untuk mendorong tindakan terbaik berikutnya.
 
 ## <a name="manage-your-measures"></a>Kelola ukuran Anda
 
@@ -35,18 +35,17 @@ Anda dapat menemukan daftar ukuran di halaman **Ukuran**.
 
 Anda akan menemukan informasi tentang jenis pengukuran, pembuat, tanggal pembuatan, status, dan status. Bila Anda memilih ukuran dari daftar, Anda dapat mempratinjau output dan mengunduh file CSV.
 
-Untuk me-refresh semua ukuran Anda pada waktu yang sama, pilih **Segarkan semua** tanpa memilih ukuran tertentu.
+:::image type="content" source="media/measures-actions.png" alt-text="Tindakan untuk mengelola ukuran tunggal."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Tindakan untuk mengelola ukuran tunggal.":::
+Tindakan berikut tersedia saat Anda memilih ukuran:
 
-Pilih ukuran dari daftar untuk pilihan berikut:
-
-- Pilih nama ukuran untuk melihat rinciannya.
 - **Edit** konfigurasi ukuran.
-- **segarkan** pengukuran berdasarkan data terbaru.
+- **Duplikat** ukuran. Anda dapat langsung memilih untuk mengedit propertinya atau cukup menyimpan duplikat.
+- **segarkan** pengukuran berdasarkan data terbaru. Untuk menyegarkan semua tindakan Anda secara bersamaan, pilih semua tindakan lalu **Refresh**.
 - **Ubah nama** ukuran.
-- **Hapus** ukuran.
 - **Aktifkan** atau **Nonaktifkan**. Ukuran yang tidak aktif tidak akan di-refresh selama [refresh terjadwal](system.md#schedule-tab).
+- **Tag** untuk [mengelola tag](work-with-tags-columns.md#manage-tags) untuk segmen.
+- **Hapus** ukuran.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

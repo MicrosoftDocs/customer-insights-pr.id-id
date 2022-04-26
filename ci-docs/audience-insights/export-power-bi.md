@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225519"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552060"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor untuk Power BI (pratinjau)
 
@@ -72,6 +72,6 @@ Setelah penghapusan duplikat Relasi, coba untuk mengkonfigurasi Power BI connect
 
 Saat memuat entitas yang berisi bidang dengan format tanggal seperti MM/DD/YYYY, Anda dapat mengalami kesalahan karena format lokal yang tidak cocok. Ketidakcocokan ini terjadi ketika file Power BI Desktop Anda diatur ke lokal lain daripada Inggris (Amerika Serikat), karena bidang tanggal dalam audiens wawasan disimpan dalam format AS.
 
-File Power BI Desktop memiliki satu pengaturan lokal, yang diterapkan saat mengambil data. Untuk mendapatkan tanggal ini ditafsirkan dengan benar, atur lokal .BPI ke Bahasa Inggris (Amerika Serikat). [Pelajari cara mengubah lokal file Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+File Power BI Desktop memiliki satu pengaturan lokal, yang diterapkan saat mengambil data. Untuk mendapatkan tanggal ini ditafsirkan dengan benar, atur lokal .BPI ke Bahasa Inggris (Amerika Serikat). [Pelajari cara mengubah lokal file Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

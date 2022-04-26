@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508570"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529543"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -47,24 +47,30 @@ Tersedia beberapa cara untuk membuat segmen baru:
 
 ## <a name="manage-existing-segments"></a>Mengelola segmen yang ada
 
-Buka halaman **Segmen**, untuk melihat semua segmen tersimpan dan mengelolanya.
+**Buka halaman Segmen** untuk melihat semua segmen yang disimpan dan mengelolanya.
 
 Setiap segmen diwakili oleh baris yang berisi informasi tambahan tentang segmen.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan daftar dropdown pilihan dan pilihan yang tersedia.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan daftar dropdown pilihan dan pilihan yang tersedia." lightbox="media/segments-selected-segment.png":::
 
-Tindakan berikut tersedia bila Anda memilih segmen:
+Tindakan berikut tersedia saat Anda memilih segmen:
 
 - **Lihat** rincian segmen, termasuk tren jumlah anggota yang menampilkan pratinjau anggota segmen.
+- **Unduh** Daftar anggota sebagai File .CSV.
 - **Edit** segmen untuk mengubah properti.
 - **Membuat duplikat** segmen. Anda dapat langsung memilih untuk mengedit propertinya atau cukup menyimpan duplikat.
 - **Refresh** segmen untuk menyertakan data terbaru.
-- **Aktifkan** atau **Nonaktifkan** segmen. Segmen memiliki dua kemungkinan status - aktif atau tidak aktif. Status ini berguna saat mengedit segmen. Untuk segmen yang tidak aktif, definisi segmen ada, namun tidak berisi pelanggan. Bila Anda mengaktifkan segmen, status akan berubah dari ' tidak aktif ' menjadi ' aktif ' dan mulai mencari Pelanggan yang cocok dengan definisi segmen. Jika [penyegaran terjadwal](system.md#schedule-tab) dikonfigurasi, segmen yang tidak aktif memiliki **status** yang didaftarkan sebagai **dilewati**, yang menunjukkan bahwa penyegaran bahkan tidak dicoba. Bila segmen aktif diaktifkan, segmen akan diperbarui dan akan disertakan dalam penyegaran terjadwal.
+- **Aktifkan** atau **Nonaktifkan** segmen. Untuk segmen yang tidak aktif, definisi segmen ada, namun tidak berisi pelanggan. Segmen aktif mencari pelanggan yang sesuai dengan definisi segmen. Jika [penyegaran terjadwal](system.md#schedule-tab) dikonfigurasi, segmen yang tidak aktif memiliki **status** yang didaftarkan sebagai **dilewati**, yang menunjukkan bahwa penyegaran bahkan tidak dicoba. Bila segmen aktif diaktifkan, segmen akan diperbarui dan akan disertakan dalam penyegaran terjadwal.
   Atau, Anda dapat menggunakan fungsi **jadwalkan nanti** dalam menu menurun **Aktifkan/Nonaktifkan** untuk menentukan tanggal dan waktu di masa mendatang untuk pengaktifan dan penonaktifan segmen tertentu.
+- **[Temukan pelanggan](find-similar-customer-segments.md)** serupa dari segmen ini.
 - **Ganti nama** segmen.
+- **Tag** untuk [mengelola tag](work-with-tags-columns.md#manage-tags) untuk segmen.
 - **Unduh** Daftar anggota sebagai File .CSV.
 - **Kelola ekspor** untuk melihat segmen terkait ekspor dan mengelolanya. [Pelajari lebih lanjut tentang ekspor.](export-destinations.md)
 - **Hapus** segmen.
+- **Kolom** untuk [menyesuaikan kolom](work-with-tags-columns.md#customize-columns) yang ditampilkan.
+- **Filter** untuk [memfilter pada tag](work-with-tags-columns.md#filter-on-tags).
+- **Cari nama** untuk dicari berdasarkan nama segmen.
 
 ## <a name="refresh-segments"></a>Refresh Segmen
 

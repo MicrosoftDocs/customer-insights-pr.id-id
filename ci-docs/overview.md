@@ -6,12 +6,12 @@ ms.author: mhart
 ms.date: 07/30/2021
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 82b335388002158885fa55b61562db6c8370dc9d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350181"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560437"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Ikhtisar produk untuk Dynamics 365 Customer Insights
 
@@ -19,7 +19,7 @@ ms.locfileid: "8350181"
 
 [Wawasan audiens](audience-insights/overview.md) akan membantu Anda mengubah bisnis Anda menjadi organisasi yang berfokus pada pelanggan. Profesional pemasaran, penjualan, dan layanan memiliki wawasan yang mereka perlukan untuk mempersonalisasikan pengalaman. Sambungkan data dari sumber transaksi, perilaku, dan pengamatan untuk membuat tampilan pelanggan 360 derajat. Lihat hasil lebih cepat dengan CDP yang dirancang untuk memberikan wawasan yang dapat ditindaklanjuti. 
 
-[Wawasan keterlibatan](engagement-insights/overview.md) adalah kemampuan pratinjau di Wawasan Pelanggan yang berfokus pada pengumpulan acara web dan seluler untuk wawasan tambahan Pratinjau telah berakhir pada 15 Februari 2022.
+[Wawasan keterlibatan](engagement-insights/overview.md) adalah kemampuan pratinjau di Customer Insights yang berfokus pada pengumpulan acara web dan seluler untuk wawasan tambahan. Pratinjau telah berakhir pada 15 Februari 2022.
  
 ## <a name="choose-a-capability"></a>Pilih kemampuan
 

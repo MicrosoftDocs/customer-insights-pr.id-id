@@ -1,19 +1,19 @@
 ---
 title: Mengekspor data Customer Insights ke Azure Synapse Analytics
 description: Pelajari cara mengonfigurasi koneksi ke Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231316"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560391"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Mengekspor data ke Azure Synapse Analytics (Pratinjau)
 
@@ -28,31 +28,31 @@ Prasyarat berikut harus dipenuhi untuk mengkonfigurasi sambungan dari Customer I
 
 ## <a name="prerequisites-in-customer-insights"></a>Prasyarat di Customer Insights
 
-* Anda memiliki peran **Administrator** di wawasan audiens. Selengkapnya tentang [menetapkan izin pengguna di audiens wawasan](permissions.md#assign-roles-and-permissions)
+* Akun pengguna (AD) Anda Azure Active Directory memiliki **peran Administrator** di Wawasan Pelanggan. Selengkapnya tentang [menetapkan izin pengguna di audiens wawasan](permissions.md#assign-roles-and-permissions)
 
 Di Azure: 
 
 - Langganan Azure aktif.
 
-- Jika menggunakan akun Azure Data Lake Storage Gen2 baru, *prinsipal layanan untuk wawasan audiens* memerlukan izin **kontributor Data Blob penyimpanan**. Selengkapnya tentang [menyambung ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure untuk wawasan audiens](connect-service-principal.md). Data Lake Storage Gen2 **harus mengaktifkan** [ruang nama hierarkis](/azure/storage/blobs/data-lake-storage-namespace).
+- Jika menggunakan akun Gen2 baru Azure Data Lake Storage, *perwakilan layanan untuk Wawasan* Pelanggan memerlukan **izin kontributor** Data Blob Penyimpanan. Selengkapnya tentang [menyambung ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure untuk wawasan audiens](connect-service-principal.md). Data Lake Storage Gen2 **harus mengaktifkan** [ruang nama hierarkis](/azure/storage/blobs/data-lake-storage-namespace).
 
-- Pada grup sumber daya, tempat ruang kerja Azure Synapse terletak, *prinsipal layanan* dan *pengguna wawasan audiens* harus ditetapkan sekurangnya izin **Pembaca**. Untuk informasi lebih lanjut, lihat [Menetapkan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
+- Pada grup sumber daya tempat Azure Synapse ruang kerja berada, *perwakilan* layanan dan *Azure AD pengguna dengan izin admin di Customer Insights* perlu ditetapkan setidaknya **Pembaca** izin. Untuk informasi lebih lanjut, lihat [Menetapkan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- *Pengguna* memerlukan izin **kontributor Data Blob Penyimpanan** di akun Azure Data Lake Storage Gen2 dengan data berada dan ditautkan ke ruang kerja Azure Synapse. Pelajari lebih lanjut tentang [menggunakan portal Azure untuk menetapkan peran Azure untuk akses ke data blob dan antrean](/azure/storage/common/storage-auth-aad-rbac-portal) serta [izin kontributor Data Blob Penyimpanan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Pengguna *Azure AD dengan izin admin di Customer Insights* memerlukan **izin Data Blob Penyimpanan kontributor** di Azure Data Lake Storage akun Gen2 tempat data berada dan ditautkan Azure Synapse ke ruang kerja. Pelajari lebih lanjut tentang [menggunakan portal Azure untuk menetapkan peran Azure untuk akses ke data blob dan antrean](/azure/storage/common/storage-auth-aad-rbac-portal) serta [izin kontributor Data Blob Penyimpanan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Identitas yang dikelola Ruang kerja Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* memerlukan memerlukan izin **kontributor Data Blob Penyimpanan** di akun Azure Data Lake Storage Gen2 dengan data berada dan ditautkan ke ruang kerja Azure Synapse. Pelajari lebih lanjut tentang [menggunakan portal Azure untuk menetapkan peran Azure untuk akses ke data blob dan antrean](/azure/storage/common/storage-auth-aad-rbac-portal) serta [izin kontributor Data Blob Penyimpanan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Di ruang kerja Azure Synapse, *prinsipal layanan untuk wawasan audiens* memerlukan **penetapan peran Administrator Synapse**. Untuk informasi lebih lanjut, lihat [Cara mengkonfigurasi kontrol akses untuk ruang kerja Synapse Anda](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Azure Synapse Di ruang kerja, *perwakilan layanan untuk Wawasan* Pelanggan memerlukan **peran Administrator** Synapse yang ditetapkan. Untuk informasi lebih lanjut, lihat [Cara mengkonfigurasi kontrol akses untuk ruang kerja Synapse Anda](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Siapkan sambungan ke dan ekspor ke Azure Synapse
 
 ### <a name="configure-a-connection"></a>Mengonfigurasi koneksi
 
-Untuk membuat koneksi, kepala layanan dan akun pengguna di Customer Insights memerlukan **izin Pembaca** pada *grup* sumber daya tempat ruang kerja Synapse Analytics berada. Selain itu, prinsipal layanan dan pengguna di ruang kerja Synapse Analytics memerlukan **izin Synapse Administrator**. 
+Untuk membuat koneksi, perwakilan layanan dan akun pengguna di Customer Insights memerlukan **izin Pembaca** pada *grup* sumber daya tempat ruang kerja Synapse Analytics berada. Selain itu, perwakilan layanan dan pengguna di ruang kerja Synapse Analytics memerlukan **izin Administrator** Synapse. 
 
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **Azure Synapse Analytics** atau pilih **Siapkan** pada **Azure Synapse Analytics** ubin untuk mengonfigurasi koneksi.
+1. Pilih **Tambahkan koneksi** dan pilih **Azure Synapse Analytics** atau pilih **Set up** pada **Azure Synapse Analytics** petak untuk mengonfigurasi koneksi.
 
 1. Beri koneksi Anda nama yang dikenali di bidang nama tampilan. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
@@ -64,7 +64,7 @@ Untuk membuat koneksi, kepala layanan dan akun pengguna di Customer Insights mem
 
 ### <a name="configure-an-export"></a>Mengonfigurasi ekspor
 
-Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk mengonfigurasi ekspor dengan koneksi bersama, Anda memerlukan setidaknya **izin kontributor** di Wawasan Pelanggan. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk mengonfigurasi ekspor dengan koneksi bersama, Anda memerlukan setidaknya **kontributor** izin di Customer Insights. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
 
 1. Buka **Data** > **Ekspor**.
 
@@ -84,7 +84,7 @@ Menyimpan ekspor tidak segera menjalankan ekspor.
 
 Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand).
 
-Untuk meminta data yang diekspor ke Synapse Analytics, Anda memerlukan **Storage Blob Data Pembaca** akses ke penyimpanan tujuan di ruang kerja ekspor. 
+Untuk mengkueri data yang diekspor ke Synapse Analytics, Anda memerlukan **Data Blob Penyimpanan Pembaca** akses ke penyimpanan tujuan di ruang kerja ekspor. 
 
 ### <a name="update-an-export"></a>Memperbarui ekspor
 

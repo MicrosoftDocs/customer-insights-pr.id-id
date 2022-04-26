@@ -5,15 +5,15 @@ ms.date: 11/19/2020
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d3465b7eaa17a24e2926b8ea432b33e705931b88
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354605"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555363"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan transaksional
 
@@ -30,7 +30,7 @@ Aswono adalah perusahaan yang memproduksi mesin kopi dan kopi berkualitas tinggi
 
 ## <a name="task-1---ingest-data"></a>Tugas 1- Serap Data
 
-Tinjau artikel [tentang konsumsi](data-sources.md) data dan [impor sumber data menggunakan Power Query konektor](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum. 
+Tinjau artikel [tentang penyerapan](data-sources.md) data dan [impor sumber data menggunakan Power Query konektor](connect-power-query.md) secara khusus. Informasi berikut ini mengasumsikan bahwa Anda telah mengenal dan menyerap data secara umum. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Menyerap data pelanggan dari platform eCommerce
 
@@ -148,7 +148,7 @@ Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, me
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tugas 3-konfigurasi prediksi kehilangan pelanggan transaksi
 
-Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan prediksi kehilangan pelanggan langganan. Untuk langkah-langkah mendetail, lihat [artikel Churn prediksi](predict-subscription-churn.md) langganan. 
+Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan prediksi kehilangan pelanggan langganan. Untuk langkah-langkah terperinci, lihat [artikel Churn prediksi](predict-subscription-churn.md) Langganan. 
 
 1. Buka **intelijen** > **Temukan** dan pilih untuk menggunakan **model kehilangan pelanggan**.
 

@@ -1,28 +1,28 @@
 ---
-title: Membuat langkah-langkah dari templat
+title: Membuat ukuran dari templat
 description: Tentukan langkah-langkah menggunakan templat untuk kasus penggunaan umum.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359965"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529405"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Gunakan templat untuk menyusun pengukuran
 
-Anda dapat menggunakan templat yang telah ditentukan dari langkah-langkah [yang umum digunakan](measures.md) untuk membuatnya. Deskripsi terperinci tentang templat dan pengalaman terpandu membantu Anda mengukur pembuatan yang efisien. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
+Anda dapat menggunakan template yang telah ditentukan dari langkah-langkah yang [umum digunakan](measures.md) untuk membuatnya. Deskripsi terperinci tentang templat dan pengalaman terpandu membantu Anda mengukur pembuatan yang efisien. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
 
-Untuk membuat tindakan kustom, lihat [Menggunakan pengukur penyusun untuk membuat langkah-langkah dari awal](measure-builder.md).
+Untuk membuat tindakan kustom, lihat [Menggunakan pembuat ukuran untuk membuat tindakan dari awal](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
@@ -51,7 +51,9 @@ Template ukuran yang tersedia:
 
 1. Tinjau data yang diperlukan dan pilih **Mulai** jika Anda memiliki semua data yang ada.
 
-1. Di panel **Edit nama**, atur nama untuk ukuran Anda dan entitas output. 
+1. Pilih **Edit detail di** samping Ukur nama. Berikan nama untuk ukuran. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke ukuran.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Kotak dialog Edit detail.":::
 
 1. Pilih **Selesai**.
 

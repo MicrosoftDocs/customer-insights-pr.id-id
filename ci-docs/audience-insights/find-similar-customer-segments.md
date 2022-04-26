@@ -1,23 +1,23 @@
 ---
 title: Temukan pelanggan serupa dengan AI (berisi video)
 description: Temukan segmen pelanggan serupa dengan kecerdasan buatan.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355249"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561574"
 ---
 # <a name="similar-customers-preview"></a>Pelanggan serupa (pratinjau)
 
@@ -36,6 +36,8 @@ Fitur ini memungkinkan Anda menemukan pelanggan serupa di basis pelanggan menggu
 
 1. Tinjau nama yang disarankan untuk segmen baru Anda dan ubah jika perlu.
 
+1. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke segmen baru.
+
 1. Tinjau bidang yang menentukan segmen baru Anda. Bidang ini menentukan dasar untuk sistem mencoba menemukan pelanggan serupa dengan segmen sumber Anda. Sistem akan memilih bidang yang disarankan secara default.
   Bidang yang secara signifikan dapat mengurangi performa model secara otomatis dikecualikan:
   
@@ -44,9 +46,9 @@ Fitur ini memungkinkan Anda menemukan pelanggan serupa di basis pelanggan menggu
 
 1. Pilih jika Anda ingin menyertakan **semua pelanggan** atau hanya pelanggan di **segmen tertentu yang ada** di segmen baru.
 
-1. Kecualikan pelanggan di segmen sumber Anda dengan memilih kotak centang **Kecualikan semua orang di segmen sumber**.
-
 1. Secara default, sistem menyarankan memasukkan hanya 20% dari ukuran audiens target dalam output anda. Edit ambang ini bila diperlukan. Meningkatkan ambang batas akan mengurangi presisi.
+
+1. Sertakan pelanggan di segmen sumber Anda dengan **memilih kotak centang Sertakan anggota dari sumber selain pelanggan dengan atribut** serupa.
 
 1. Pilih **jalankan** di bagian bawah halaman untuk memulai tugas klasifikasi biner (metode Pembelajaran Mesin) yang menganalisis himpunan data.
 
@@ -67,7 +69,7 @@ Anda dapat [bekerja dengan output segmen yang serupa](segments.md) seperti yang 
 
 Untuk menyegarkan segmen yang serupa, pilih segmen pada halaman **segmen** dan pilih **Segarkan** di bilah tindakan.
 
-Mengedit segmen serupa akan memproses ulang data Anda. Segmen yang dibuat sebelumnya akan diperbarui dengan data yang diperbarui.    
+Mengedit segmen serupa akan memproses ulang data Anda. Segmen yang dibuat sebelumnya akan diperbarui dengan data yang diperbarui.
 Untuk mengedit segmen yang serupa, pilih segmen pada halaman **segmen** dan pilih **Edit** di bilah tindakan. Terapkan perubahan dan pilih **Jalankan** untuk memulai pemrosesan.
 
 ## <a name="delete-a-similar-segment"></a>Menghapus segmen yang sama
@@ -84,6 +86,5 @@ Model Pembelajaran Mesin klasifikasi biner menetapkan skor untuk pelanggan di se
 - Nilai kemiripan antara 0,85 – 1 adalah pelanggan yang diklasifikasikan sistem sebagai *sangat mirip*
 
 Pelanggan dengan Skor kemiripan di bawah 0,4 tidak disertakan dalam output model. Sistem tidak menganggapnya cukup mirip dengan segmen sumber.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

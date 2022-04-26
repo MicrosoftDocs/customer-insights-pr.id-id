@@ -1,37 +1,36 @@
 ---
 title: Buat segmen dengan pembuat segmen
 description: Buat segmen pelanggan untuk mengelompokkan mereka berdasarkan berbagai atribut.
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354559"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529589"
 ---
 # <a name="create-segments"></a>Buat segmen
 
-Tentukan filter kompleks di sekitar entitas pelanggan terpadu dan entitas terkaitnya. Setiap segmen, setelah pemrosesan, membuat kumpulan rekaman pelanggan yang dapat Anda ekspor dan lakukan tindakan padanya. Segmen dikelola pada halaman **segmen**. Anda dapat [membuat segmen baru](#create-a-new-segment) menggunakan pembuat segmen atau [membuat segmen cepat](#quick-segments) dari area lain dalam aplikasi. 
+Tentukan filter kompleks di sekitar entitas pelanggan terpadu dan entitas terkaitnya. Setiap segmen, setelah pemrosesan, membuat kumpulan rekaman pelanggan yang dapat Anda ekspor dan lakukan tindakan padanya. Segmen dikelola pada halaman **segmen**. Anda dapat [membuat segmen baru](#create-a-new-segment) menggunakan pembuat segmen atau [membuat segmen cepat](#quick-segments) dari area lain dalam aplikasi.
 
 > [!TIP]
-> - Segmen singkat hanya didukung di lingkungan untuk **pelanggan individual**.    
-> - Segmen berdasarkan **pelanggan individual** secara otomatis mencakup informasi kontak yang tersedia untuk anggota segmen. Di lingkungan untuk **akun bisnis**, segmen didasarkan pada akun (perusahaan atau anak perusahaan). Untuk menyertakan informasi kontak dalam segmen, gunakan fungsi **atribut Proyek** dalam pembuat segmen.
->    - Pastikan sumber data kontak [dipetakan secara semantis ke entitas ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> - Segmen singkat hanya didukung di lingkungan untuk **pelanggan individual**.
+> - Segmen berdasarkan **pelanggan individual** secara otomatis mencakup informasi kontak yang tersedia untuk anggota segmen. Di lingkungan untuk **akun bisnis**, segmen didasarkan pada akun (perusahaan atau anak perusahaan). Untuk menyertakan informasi kontak dalam segmen, gunakan fungsi **atribut Proyek** dalam pembuat segmen. Pastikan sumber data kontak [dipetakan secara semantis ke entitas ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Pembuat segmen
 
-Gambar berikut menjelaskan berbagai aspek dari pembuat segmen. Ini menunjukkan segmen yang menghasilkan grup pelanggan. Pelanggan memesan barang dalam waktu jangka waktu dan mengumpulkan poin hadiah atau menggunakan sejumlah uang tertentu. 
+Gambar berikut menjelaskan berbagai aspek dari pembuat segmen. Ini menunjukkan segmen yang menghasilkan grup pelanggan. Pelanggan memesan barang dalam waktu jangka waktu dan mengumpulkan poin hadiah atau menggunakan sejumlah uang tertentu.
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Elemen pembuat segmen." lightbox="media/segment-builder-overview.png":::
 
@@ -65,11 +64,11 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
 
 1. Pada halaman pembuat segmen, Anda menentukan atau menyusun aturan. Aturan terdiri dari satu atau beberapa kondisi yang menentukan rangkaian pelanggan.
 
-1. Di bagian **Aturan1**, pilih atribut entitas yang diinginkan untuk memfilter pelanggan. Ada dua cara untuk memilih atribut: 
+1. **Di bagian Aturan1**, pilih atribut entitas yang ingin Anda filter oleh pelanggan. Ada dua cara untuk memilih atribut:
    - Tinjau daftar entitas dan atribut yang tersedia di panel **Tambah ke Aturan**, lalu pilih ikon **+** di sebelah atribut untuk menambahkan. Pilih jika Anda ingin menambahkan atribut ke aturan yang ada atau menggunakannya untuk membuat aturan baru.
    - Masukkan nama atribut di bagian aturan untuk melihat saran yang cocok.
 
-1. Pilih operator untuk menentukan nilai yang cocok dari kondisi. Atribut dapat memiliki salah satu dari empat jenis data sebagai nilai: numerik, string, tanggal, atau Boolean. Tergantung pada jenis data atribut, operator lain tersedia untuk menentukan kondisi. Untuk segmen dengan akun bisnis, dua operator khusus tersedia untuk mencakup kemungkinan hierarki antara akun yang diserap. Gunakan operator *anak dari* dan *induk dari* untuk menyertakan akun terkait. 
+1. Pilih operator untuk menentukan nilai yang cocok dari kondisi. Atribut dapat memiliki salah satu dari empat jenis data sebagai nilai: numerik, string, tanggal, atau Boolean. Tergantung pada jenis data atribut, operator lain tersedia untuk menentukan kondisi. Untuk segmen dengan akun bisnis, dua operator khusus tersedia untuk mencakup kemungkinan hierarki antara akun yang diserap. Gunakan operator *anak dari* dan *induk dari* untuk menyertakan akun terkait.
 
 1. Pilih **Tambah kondisi** untuk menambahkan kondisi lainnya ke aturan. Untuk membuat aturan di dalam aturan saat ini, pilih **Tambah sub-aturan**.
 
@@ -77,7 +76,7 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
 
    :::image type="content" source="media/relationship-path.png" alt-text="Jalur relasi potensial saat membuat aturan berdasarkan entitas yang dipetakan ke entitas pelanggan terpadu.":::
 
-   Contohnya, entitas *eCommerce_eCommercePurchases* di cuplikan layar memiliki empat opsi untuk memetakan ke entitas *Pelanggan*: 
+   Contohnya, entitas *eCommerce_eCommercePurchases* di cuplikan layar memiliki empat opsi untuk memetakan ke entitas *Pelanggan*:
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Pelanggan
    - eCommerce_eCommercePurchases > Pelanggan
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Pelanggan
@@ -101,11 +100,11 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
       - **Berpotongan** tumpang-tindih kedua grup. Hanya data yang *umum* untuk kedua grup yang tetap dalam Grup Terpadu.
       - **Kecuali** menggabungkan dua grup. Hanya data dalam grup A yang *tidak umum* pada data di grup B yang dipertahankan.
 
-1. Secara default, segmen akan menghasilkan entitas output yang berisi semua atribut profil pelanggan yang cocok dengan filter yang ditentukan. Jika segmen didasarkan pada entitas lain dari entitas *Pelanggan*, Anda dapat menambahkan lebih banyak atribut dari entitas ini ke entitas output. Pilih **atribut Proyek** untuk memilih atribut yang akan ditambahkan ke entitas output. 
+1. Secara default, segmen akan menghasilkan entitas output yang berisi semua atribut profil pelanggan yang cocok dengan filter yang ditentukan. Jika segmen didasarkan pada entitas lain dari entitas *Pelanggan*, Anda dapat menambahkan lebih banyak atribut dari entitas ini ke entitas output. Pilih **atribut Proyek** untuk memilih atribut yang akan ditambahkan ke entitas output.
 
    > [!IMPORTANT]
    > Untuk segmen berdasarkan akun bisnis, rincian satu atau beberapa kontak dari setiap akun dari entitas *ContactProfile* harus disertakan dalam segmen agar segmen tersebut dapat diaktifkan atau diekspor ke tujuan yang memerlukan informasi kontak. Untuk informasi lebih lanjut tentang entitas *ContactProfile*, lihat [pemetaan Semantis](semantic-mappings.md).
-   > Output sampel untuk segmen berdasarkan akun bisnis dengan atribut kontak yang diproyeksikan dapat terlihat seperti ini: 
+   > Output sampel untuk segmen berdasarkan akun bisnis dengan atribut kontak yang diproyeksikan dapat terlihat seperti ini:
    >
    > |ID  |Nama akun  |Pendapatan  |Nama kontak  | Peran Kontak|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
 
    > [!NOTE]
    > - **Atribut proyek** hanya berfungsi untuk entitas yang memiliki relasi satu ke banyak dengan entitas pelanggan. Misalnya, satu pelanggan dapat memiliki beberapa langganan.
-   > - Jika atribut yang ingin Anda proyeksikan lebih dari satu lompatan dari entitas *Pelanggan*, sebagaimana ditentukan oleh relasi, atribut tersebut harus digunakan di setiap aturan kueri segmen yang Anda bentuk. 
-   > - Jika atribut yang ingin Anda proyeksikan hanya satu lompatan dari entitas *Pelanggan*, atribut tersebut tidak harus ada di setiap aturan kueri segmen yang Anda bentuk. 
+   > - Jika atribut yang ingin Anda proyeksikan lebih dari satu lompatan dari entitas *Pelanggan*, sebagaimana ditentukan oleh relasi, atribut tersebut harus digunakan di setiap aturan kueri segmen yang Anda bentuk.
+   > - Jika atribut yang ingin Anda proyeksikan hanya satu lompatan dari entitas *Pelanggan*, atribut tersebut tidak harus ada di setiap aturan kueri segmen yang Anda bentuk.
    > - **Atribut yang diproyeksikan** digunakan saat menggunakan operator yang ditentukan.
 
-1. Sebelum Anda menyimpan dan menjalankan segmen, Pilih **Edit rincian** di samping nama segmen. Berikan nama untuk segmen Anda dan perbarui **nama entitas Output** yang disarankan untuk segmen. Anda juga dapat menambahkan deskripsi ke segmen.
+1. Pilih **Edit detail di** samping segmen Tanpa Judul. Berikan nama untuk segmen Anda dan perbarui **nama entitas Output** yang disarankan untuk segmen. Secara opsional, tambahkan deskripsi dan [tag](work-with-tags-columns.md#manage-tags) ke segmen.
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Kotak dialog Edit detail.":::
 
 1. Pilih **Jalankan** untuk menyimpan segmen, aktifkan dan mulai memproses segmen Anda berdasarkan semua aturan dan kondisi. Jika tidak, maka akan disimpan sebagai segmen tidak aktif.
-   
+
 1. Untuk kembali ke halaman **Segmen**, pilih **kembali ke segmen**.
 
 1. Secara default, segmen dibuat sebagai segmen dinamis. Berarti segmen di-refresh selama pembaruan sistem. Untuk [menghentikan pembaruan otomatis](segments.md#manage-existing-segments), pilih segmen, pilih pilihan **Buat statis**. Segmen statis dapat [di-refresh secara manual](segments.md#refresh-segments) kapan saja.
@@ -132,7 +133,7 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
 > [!TIP]
 > - Pembuat segmen tidak akan menyarankan nilai yang valid dari entitas saat mengatur operator untuk kondisi tersebut. Anda dapat membuka **Data** > **Entitas** dan mengunduh data entitas untuk melihat nilai yang tersedia.
 > - Kondisi berdasarkan tanggal memungkinkan Anda beralih antara tanggal tetap dan rentang tanggal mengambang.
-> - Jika Anda memiliki beberapa aturan untuk segmen, aturan yang sedang Anda edit memiliki garis biru vertikal di sebelahnya. 
+> - Jika Anda memiliki beberapa aturan untuk segmen, aturan yang sedang Anda edit memiliki garis biru vertikal di sebelahnya.
 > - Anda dapat memindahkan aturan dan kondisi ke tempat lain dalam definisi segmen. Pilih [...] di sebelah aturan atau kondisi, lalu pilih cara dan lokasi memindahkannya.
 > - Kontrol **Batalkan** dan **Kembalikan** di bilah perintah memungkinkan Anda membatalkan perubahan.
 
@@ -153,10 +154,9 @@ Segmen singkat memungkinkan Anda membuat segmen sederhana dengan satu operator s
 
 4. Sistem akan memberi Anda **perkiraan ukuran segmen**. Anda dapat memilih apakah akan menghasilkan segmen yang telah Anda tetapkan, atau pertama-tama, mengunjungi kembali untuk mendapatkan ukuran segmen yang berbeda.
 
-    > [!div class="mx-imgBorder"]
-    > ![Nama dan estimasi untuk segmen cepat.](media/quick-segment-name.png "Nama dan estimasi untuk segmen cepat")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="Nama dan estimasi untuk segmen cepat.":::
 
-5. Beri **nama** segmen Anda. Atau, berikan **nama tampilan**.
+5. **Berikan nama** entitas Nama **dan** Output untuk segmen Anda. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags).
 
 6. Klik **Simpan** untuk membuat segmen Anda.
 
