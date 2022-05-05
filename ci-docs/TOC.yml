@@ -2,6 +2,8 @@
   href: index.yml
 - name: Ikhtisar produk
   href: overview.md
+- name: Fitur baru dan diperbarui
+  href: whats-new-customer-insights.md
 - name: Katalog pembelajaran
   items:
     - name: Memulai
@@ -10,7 +12,7 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Buat profil pelanggan terpadu
       href: /learn/modules/unified-customer-profile/
-    - name: Bekerja dengan wawasan audiens
+    - name: Bekerja dengan Customer Insights
       href: /learn/modules/working-with-customer-insights/
     - name: Memperkaya data dan membuat prediksi
       href: /learn/modules/enrich-data/
@@ -26,267 +28,261 @@
       href: trial-FAQ.md
 - name: Nilai lingkungan Anda
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Wawasan audiens
+- name: Memulai
   items:
-    - name: Pusat Bantuan
-      href: audience-insights/index.yml
-    - name: Ikhtisar kemampuan
-      href: audience-insights/overview.md
-    - name: Fitur baru dan diperbarui
-      href: audience-insights/whats-new-audience-insights.md
-    - name: Memulai
+    - name: Panduan mulai cepat
+      href: get-started.md
+    - name: Mulai dengan lisensi berbayar
+      href: paid-license.md
+    - name: Buat lingkungan baru
+      href: create-environment.md
+    - name: Jelajahi Wawasan Pelanggan
+      href: home.md
+    - name: Bekerja dengan tag dan kolom
+      href: work-with-tags-columns.md
+    - name: Menangani akun bisnis
+      href: work-with-business-accounts.md
+    - name: Integrasi dengan Dynamics 365 Marketing
+      href: marketing-get-started.md
+- name: Sumber Data
+  items:
+    - name: Ikhtisar sumber data
+      href: data-sources.md
+    - name: Menambahkan sumber data melalui Power Query konektor
+      href: connect-power-query.md
+    - name: Tambahkan folder Common Data Model sebagai sumber data
+      href: connect-common-data-model.md
+    - name: Menambahkan data lake terkelola Dataverse
+      href: connect-dataverse-managed-lake.md
+    - name: Menambahkan Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Pengayaan untuk sumber data
+      href: data-sources-enrichment.md
+    - name: Refresh inkremental untuk sumber data
+      href: incremental-refresh-data-sources.md
+    - name: Konsumsi data real-time
+      href: real-time-data-ingestion.md
+- name: Penyatuan data
+  items:
+    - name: Ikhtisar penyatuan data
+      href: data-unification.md
+    - name: Memetakan entitas dan atribut
+      href: map-entities.md
+    - name: Pencocokan Entitas
+      href: match-entities.md
+    - name: Gabungkan Entitas
+      href: merge-entities.md
+- name: Pengayaan data
+  items:
+    - name: Perkaya profil pelanggan
+      href: enrichment-hub.md
+    - name: Merek dan minat
+      href: enrichment-microsoft.md
+    - name: Alamat yang disempurnakan
+      href: enrichment-enhanced-addresses.md
+    - name: Data perusahaan yang disempurnakan
+      href: enrichment-enhanced-company-data.md
+    - name: Perkaya dengan Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Memperkaya dengan Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Perkaya dengan HERE Technologies
+      href: enrichment-here.md
+    - name: Memperkaya dengan Leadspace
+      href: enrichment-leadspace.md
+    - name: Memperkaya dengan LiveRamp
+      href: enrichment-liveramp.md
+    - name: Perkaya dengan Experian
+      href: enrichment-experian.md
+    - name: Memperkaya dengan Office 365 data
+      href: enrichment-office.md
+    - name: Perkaya dengan impor kustom SFTP
+      href: enrichment-SFTP-custom-import.md
+- name: Profil terpadu
+  items:
+    - name: Tinjau profil pelanggan terpadu
+      href: customer-profiles.md
+    - name: Filter profil pelanggan terpadu
+      href: search-filter-index.md
+    - name: Tentukan aktivitas pelanggan
+      href: activities.md
+- name: Segmen
+  items:
+    - name: Sekilas tentang segmen
+      href: segments.md
+    - name: Buat segmen
+      href: segment-builder.md
+    - name: Segmen yang disarankan berdasarkan ukuran
+      href: suggested-segments.md
+    - name: Segmen yang disarankan berdasarkan aktivitas
+      href: suggested-segments-activity.md
+    - name: Mendapatkan wawasan tentang segmen
+      href: segment-insights.md
+    - name: Temukan pelanggan serupa
+      href: find-similar-customer-segments.md
+- name: Tindakan
+  items:
+    - name: Gambaran umum pengukuran
+      href: measures.md
+    - name: Membuat ukuran baru
+      href: measure-builder.md
+    - name: Menggunakan templat ukuran
+      href: measure-templates.md
+- name: Prediksi
+  items:
+    - name: Prediksi data dengan bantuan AI
       items:
-        - name: Panduan mulai cepat
-          href: audience-insights/get-started.md
-        - name: Mulai dengan lisensi berbayar
-          href: paid-license.md
-        - name: Buat lingkungan baru
-          href: audience-insights/create-environment.md
-        - name: Jelajahi wawasan audiens
-          href: audience-insights/home.md
-        - name: Bekerja dengan tag dan kolom
-          href: audience-insights/work-with-tags-columns.md
-        - name: Menangani akun bisnis
-          href: audience-insights/work-with-business-accounts.md
-    - name: Sumber Data
+        - name: Tinjauan model Prediksi
+          href: predictions-overview.md
+        - name: Prediksikan nilai selama hubungan dengan pelanggan (CLV)
+          href: predict-customer-lifetime-value.md
+        - name: Prediksikan Rekomendasi produk
+          href: predict-product-recommendation.md
+        - name: Memprediksi kehilangan langganan
+          href: predict-subscription-churn.md
+        - name: Memprediksi kehilangan transaksi
+          href: predict-transactional-churn.md
+        - name: Menganalisis sentimen dalam umpan balik pelanggan
+          href: sentiment-analysis.md
+        - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
+          href: custom-models.md
+        - name: Lengkapi data yang hilang sebagian
+          href: predictions.md
+    - name: Panduan sampel
       items:
-        - name: Ikhtisar sumber data
-          href: audience-insights/data-sources.md
-        - name: Menambahkan sumber data melalui Power Query konektor
-          href: audience-insights/connect-power-query.md
-        - name: Tambahkan folder Common Data Model sebagai sumber data
-          href: audience-insights/connect-common-data-model.md
-        - name: Menambahkan data lake terkelola Dataverse
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Menambahkan Azure Synapse Analytics
-          href: audience-insights/connect-synapse.md
-        - name: Pengayaan untuk sumber data
-          href: audience-insights/data-sources-enrichment.md
-        - name: Refresh inkremental untuk sumber data
-          href: audience-insights/incremental-refresh-data-sources.md
-        - name: Konsumsi data real-time
-          href: audience-insights/real-time-data-ingestion.md
-    - name: Penyatuan data
+        - name: Panduan sampel untuk prediksi CLV
+          href: sample-guide-predict-clv.md
+        - name: Panduan sampel untuk prediksi kehilangan pelanggan langganan
+          href: sample-guide-predict-subscription-churn.md
+        - name: Panduan sampel untuk prediksi kehilangan transaksi
+          href: sample-guide-predict-transactional-churn.md
+        - name: Panduan sampel untuk prediksi Rekomendasi produk
+          href: sample-guide-predict-product-recommendation.md
+        - name: Eksperimen dengan Pembelajaran Mesin Azure
+          href: azure-machine-learning-experiments.md
+    - name: Kelola prediksi
+      href: manage-predictions.md
+    - name: Membuat segmen berdasarkan prediksi
+      href: prediction-based-segment.md
+- name: Opsi ekspor
+  items:
+    - name: Ekspor
       items:
-        - name: Ikhtisar penyatuan data
-          href: audience-insights/data-unification.md
-        - name: Memetakan entitas dan atribut
-          href: audience-insights/map-entities.md
-        - name: Pencocokan Entitas
-          href: audience-insights/match-entities.md
-        - name: Gabungkan Entitas
-          href: audience-insights/merge-entities.md
-    - name: Pengayaan data
+        - name: Ikhtisar Ekspor
+          href: export-destinations.md
+        - name: Active Campaign
+          href: export-active-campaign.md
+        - name: AdRoll
+          href: export-adroll.md
+        - name: Autopilot
+          href: export-autopilot.md
+        - name: Azure Blob Storage
+          href: export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: export-azure-data-lake-storage-gen2.md
+        - name: Azure Synapse Analytics
+          href: export-azure-synapse-analytics.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
+        - name: Braze
+          href: export-braze.md
+        - name: Campaign Monitor
+          href: export-campaign-monitor.md
+        - name: Constant Contact
+          href: export-constant-contact.md
+        - name: DotDigital
+          href: export-dotdigital.md
+        - name: Dynamics 365 Marketing
+          href: export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: export-dynamics365-sales.md
+        - name: Pengelola Iklan Facebook
+          href: export-facebook.md
+        - name: Google Ads
+          href: export-google-ads.md
+        - name: Iterable
+          href: export-iterable.md
+        - name: Klaviyo
+          href: export-klaviyo.md
+        - name: LinkedIn Ads
+          href: export-linkedin-ads.md
+        - name: LiveRamp
+          href: export-liveramp.md
+        - name: Mailchimp
+          href: export-mailchimp.md
+        - name: Marketo
+          href: export-marketo.md
+        - name: Microsoft Advertising
+          href: export-microsoft-advertising.md
+        - name: Omnisend
+          href: export-omnisend.md
+        - name: RollWorks
+          href: export-rollworks.md
+        - name: Salesforce Marketing Cloud
+          href: export-salesforce.md
+        - name: SendGrid
+          href: export-sendgrid.md
+        - name: SendInBlue
+          href: export-sendinblue.md
+        - name: Snapchat
+          href: export-snapchat.md
+        - name: SFTP
+          href: export-sftp.md
+    - name: Penggunaan lain
       items:
-        - name: Perkaya profil pelanggan
-          href: audience-insights/enrichment-hub.md
-        - name: Merek dan minat
-          href: audience-insights/enrichment-microsoft.md
-        - name: Alamat yang disempurnakan
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Data perusahaan yang disempurnakan
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Perkaya dengan Azure Maps
-          href: audience-insights/enrichment-azure-maps.md
-        - name: Perkaya dengan HERE Technologies
-          href: audience-insights/enrichment-here.md
-        - name: Memperkaya dengan Leadspace
-          href: audience-insights/enrichment-leadspace.md
-        - name: Memperkaya dengan LiveRamp
-          href: audience-insights/enrichment-liveramp.md
-        - name: Perkaya dengan Experian
-          href: audience-insights/enrichment-experian.md
-        - name: Memperkaya dengan Office 365 data
-          href: audience-insights/enrichment-office.md
-        - name: Perkaya dengan impor kustom SFTP
-          href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Profil terpadu
-      items:
-        - name: Tinjau profil pelanggan terpadu
-          href: audience-insights/customer-profiles.md
-        - name: Filter profil pelanggan terpadu
-          href: audience-insights/search-filter-index.md
-        - name: Menentukan aktivitas pelanggan
-          href: audience-insights/activities.md
-    - name: Segmen
-      items:
-        - name: Sekilas tentang segmen
-          href: audience-insights/segments.md
-        - name: Buat segmen
-          href: audience-insights/segment-builder.md
-        - name: Segmen yang disarankan berdasarkan ukuran
-          href: audience-insights/suggested-segments.md
-        - name: Segmen yang disarankan berdasarkan aktivitas
-          href: audience-insights/suggested-segments-activity.md
-        - name: Mendapatkan wawasan tentang segmen
-          href: audience-insights/segment-insights.md
-        - name: Temukan pelanggan serupa
-          href: audience-insights/find-similar-customer-segments.md
-    - name: Tindakan
-      items:
-        - name: Gambaran umum ukuran
-          href: audience-insights/measures.md
-        - name: Membuat ukuran baru
-          href: audience-insights/measure-builder.md
-        - name: Menggunakan templat ukuran
-          href: audience-insights/measure-templates.md
-    - name: Prediksi
-      items:
-        - name: Prediksi data dengan bantuan AI
-          items:
-            - name: Tinjauan model Prediksi
-              href: audience-insights/predictions-overview.md
-            - name: Prediksikan nilai selama hubungan dengan pelanggan (CLV)
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Prediksikan Rekomendasi produk
-              href: audience-insights/predict-product-recommendation.md
-            - name: Memprediksi kehilangan langganan
-              href: audience-insights/predict-subscription-churn.md
-            - name: Memprediksi kehilangan transaksi
-              href: audience-insights/predict-transactional-churn.md
-            - name: Menganalisis sentimen dalam umpan balik pelanggan
-              href: audience-insights/sentiment-analysis.md
-            - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
-              href: audience-insights/custom-models.md
-            - name: Lengkapi data yang hilang sebagian
-              href: audience-insights/predictions.md
-        - name: Panduan sampel
-          items:
-            - name: Panduan sampel untuk prediksi CLV
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Panduan sampel untuk prediksi kehilangan pelanggan langganan
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Panduan sampel untuk prediksi kehilangan transaksi
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Panduan sampel untuk prediksi Rekomendasi produk
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Eksperimen dengan Pembelajaran Mesin Azure
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: Kelola prediksi
-          href: audience-insights/manage-predictions.md
-        - name: Membuat segmen berdasarkan prediksi
-          href: audience-insights/prediction-based-segment.md
-    - name: Opsi ekspor
-      items:
-        - name: Ekspor
-          items:
-            - name: Ikhtisar Ekspor
-              href: audience-insights/export-destinations.md
-            - name: Active Campaign
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: Autopilot
-              href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Braze
-              href: audience-insights/export-braze.md
-            - name: Campaign Monitor
-              href: audience-insights/export-campaign-monitor.md
-            - name: Constant Contact
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: Dynamics 365 Marketing
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Pengelola Iklan Facebook
-              href: audience-insights/export-facebook.md
-            - name: Google Ads
-              href: audience-insights/export-google-ads.md
-            - name: Iterable
-              href: audience-insights/export-iterable.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: LinkedIn Ads
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: Mailchimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid
-              href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: Penggunaan lain
-          items:
-            - name: Add-in Kartu Pelanggan untuk Dynamics 365
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (bot)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
-    - name: Entitas
-      items:
-        - name: Pahami Entitas
-          href: audience-insights/entities.md
-        - name: Meninjau skema entitas dalam Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Data Customer Insights di Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Membangun relasi dan entitas terhubung
-          href: audience-insights/relationships.md
-        - name: Menentukan pemetaan semantik
-          href: audience-insights/semantic-mappings.md
-    - name: Administrasi
-      items:
-        - name: Atur konfigurasi sistem
-          href: audience-insights/system.md
-        - name: Menetapkan izin pengguna
-          href: audience-insights/permissions.md
-        - name: Ikhtisar sambungan
-          href: audience-insights/connections.md
-        - name: Kelola beberapa lingkungan
-          href: audience-insights/manage-environments.md
-        - name: Bawa Key Vault Anda sendiri
-          href: audience-insights/use-azure-key-vault.md
-        - name: Menyambungkan ke akun penyimpanan menggunakan Perwakilan Layanan
-          href: audience-insights/connect-service-principal.md
-        - name: Mengekspor log diagnostik
-          href: audience-insights/diagnostics.md
-        - name: Batas Layanan
-          href: service-limits.md
-        - name: Permintaan dan hak DSR
-          href: dsr-rights-requests.md
-    - name: API
-      items:
-        - name: Meninjau skema entitas dalam Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Data Customer Insights di Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Bekerja dengan API
-          href: audience-insights/apis.md
-        - name: Referensi API
-          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Manajemen persetujuan (pratinjau)
+        - name: Add-in Kartu Pelanggan untuk Dynamics 365
+          href: customer-card-add-in.md
+        - name: Microsoft Teams (bot)
+          href: export-teams-bot.md
+        - name: Power Apps
+          href: export-power-apps.md
+        - name: Power Automate
+          href: export-power-automate.md
+        - name: Power BI
+          href: export-power-bi.md
+- name: Entitas
+  items:
+    - name: Pahami Entitas
+      href: entities.md
+    - name: Meninjau skema entitas dalam Common Data Model
+      href: entity-schemas.md
+    - name: Data Customer Insights di Dataverse
+      href: customer-insights-dataverse.md
+    - name: Membangun relasi dan entitas terhubung
+      href: relationships.md
+    - name: Menentukan pemetaan semantik
+      href: semantic-mappings.md
+- name: Administrasi
+  items:
+    - name: Atur konfigurasi sistem
+      href: system.md
+    - name: Mengonfigurasi pengaturan keamanan
+      href: security-overview.md
+    - name: Menetapkan izin pengguna
+      href: permissions.md
+    - name: Ikhtisar sambungan
+      href: connections.md
+    - name: Kelola beberapa lingkungan
+      href: manage-environments.md
+    - name: Bawa Key Vault Anda sendiri
+      href: use-azure-key-vault.md
+    - name: Menyambungkan ke akun penyimpanan menggunakan Perwakilan Layanan
+      href: connect-service-principal.md
+    - name: Mengekspor log diagnostik
+      href: diagnostics.md
+    - name: Batas Layanan
+      href: service-limits.md
+    - name: Permintaan dan hak DSR
+      href: dsr-rights-requests.md
+- name: API
+  items:
+    - name: Bekerja dengan API
+      href: apis.md
+    - name: Referensi API
+      href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Manajemen persetujuan (Pratinjau)
   items:
     - name: Pusat Bantuan
       href: consent-management/index.yml
@@ -306,10 +302,10 @@
           href: consent-management/set-consent-rules.md
     - name: Mengelola data persetujuan
       items:
-        - name: Mengaktifkan aturan persetujuan dalam wawasan audiens
-          href: audience-insights/activate-consent.md
-        - name: Mengelola aturan persetujuan default di segmen wawasan audiens
-          href: audience-insights/change-default-consent-rules.md
+        - name: Mengaktifkan aturan persetujuan di Customer Insights
+          href: activate-consent.md
+        - name: Mengelola aturan persetujuan default di segmen Customer Insights
+          href: change-default-consent-rules.md
     - name: Mengelola pengaturan dan pengguna
       items:
         - name: Mengonfigurasi pengaturan sistem
@@ -320,7 +316,5 @@
       items:
         - name: Membuat prediksi dengan data persetujuan
           href: consent-management/predictions-consent-data.md
-- name: Wawasan keterlibatan (pratinjau)
-  href: engagement-insights/overview.md
 - name: Dapatkan Dukungan
   href: /power-platform/admin/get-help-support

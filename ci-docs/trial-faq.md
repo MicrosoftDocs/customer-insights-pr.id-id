@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229499"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641812"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Tanya Jawab uji coba Dynamics 365 Customer Insights
 
@@ -42,7 +42,7 @@ Saat mendaftar uji coba, Anda akan menerima email berisi detail uji coba. Jika A
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Bagaimana cara menambahkan lebih banyak pengguna ke uji coba?
 
-Untuk menambahkan pengguna, buka [pusat admin Microsoft 365](https://admin.microsoft.com) menggunakan akun admin uji coba. Ikuti [panduan pusat admin](/microsoft-365/admin/add-users/add-users) untuk menambahkan pengguna hingga batas lisensi uji coba. Jika pengguna yang Anda tambahkan sudah memiliki Microsoft 365 akun, tetapkan peran keamanan yang sesuai di organisasi uji coba. Untuk informasi selengkapnya, lihat [Menetapkan peran keamanan ke pengguna](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Untuk menambahkan pengguna, buka [pusat admin Microsoft 365](https://admin.microsoft.com) menggunakan akun admin uji coba. Ikuti [panduan pusat admin](/microsoft-365/admin/add-users/add-users) untuk menambahkan pengguna hingga batas lisensi uji coba. Jika pengguna yang Anda tambahkan sudah memiliki Microsoft 365 akun, tetapkan peran keamanan yang sesuai di organisasi uji coba. Untuk informasi selengkapnya, lihat [Menetapkan peran keamanan kepada pengguna](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Berapa pengguna yang dapat saya tambahkan ke lingkungan uji coba saya?
 
@@ -62,13 +62,13 @@ Anda dapat memperpanjang uji coba dalam aplikasi secara langsung. Anda dapat mem
 
 Umumnya, kami sarankan untuk memulai dari awal dengan data Anda sendiri saat memutakhirkan ke versi berbayar Customer Insights. 
 
-Atau, jika Anda hanya menggunakan audiens wawasan, Anda dapat menyalin data dari lingkungan uji coba jika Anda membeli Customer Insights. Anda harus menjadi administrator uji coba Wawasan Pelanggan dan admin global penyewa Anda Microsoft 365, atau administrator Dynamics 365 di organisasi Anda untuk memigrasikan pengaturan dari lingkungan uji coba ke lingkungan berbayar. 
+Secara opsional, jika Hanya menggunakan Customer Insights, Anda dapat menyalin data dari lingkungan uji coba jika membeli Customer Insights. Anda harus menjadi administrator uji coba Customer Insights dan admin global penyewa Anda Microsoft 365, atau administrator Dynamics 365 di organisasi Anda untuk memigrasikan pengaturan dari lingkungan uji coba ke lingkungan berbayar. 
 
-Setelah masuk ke instans Customer Insights berbayar Anda untuk pertama kalinya, Anda diminta untuk membuat lingkungan baru. Dalam proses ini, Anda dapat memilih untuk menyalin konfigurasi dari lingkungan yang ada dan memigrasikan sebagian besar pengaturan. Jika Anda memiliki izin yang disebutkan di atas, lingkungan uji coba akan ditampilkan dalam daftar ini. Untuk informasi selengkapnya, lihat [Menyalin konfigurasi lingkungan](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Setelah masuk ke instans Customer Insights berbayar Anda untuk pertama kalinya, Anda diminta untuk membuat lingkungan baru. Dalam proses ini, Anda dapat memilih untuk menyalin konfigurasi dari lingkungan yang ada dan memigrasikan sebagian besar pengaturan. Jika Anda memiliki izin yang disebutkan di atas, lingkungan uji coba akan ditampilkan dalam daftar ini. Untuk informasi selengkapnya, lihat [Menyalin konfigurasi lingkungan](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Apa saja batas uji coba dan kuota?
 
-- Anda tidak dapat menggunakan akun Azure Data Lake Storage untuk menyimpan data output selama uji coba wawasan audiens. Namun, Anda dapat menyerap data dari akun Data Lake Storage.
+- Anda tidak dapat menggunakan akun penyimpanan Azure Data Lake Anda sendiri untuk menyimpan data output selama versi uji coba Customer Insights. Namun, Anda dapat menyerap data dari akun Data Lake Storage.
 - Anda dapat menyimpan data hingga 3 GB di lingkungan Dataverse yang disediakan secara otomatis saat memulai uji coba Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Pertanyaan khusus Customer Insights
