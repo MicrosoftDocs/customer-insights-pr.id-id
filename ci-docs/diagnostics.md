@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642480"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755266"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Meneruskan Dynamics 365 Customer Insights dengan Azure Monitor (Pratinjau)
 
@@ -27,8 +27,8 @@ Wawasan Pelanggan mengirimkan log peristiwa berikut:
 - **Peristiwa Audit**
   - **APIEvent** - memungkinkan pelacakan perubahan yang Dynamics 365 Customer Insights dilakukan melalui UI.
 - **Acara Operasional**
-  - **WorkflowEvent** - Alur Kerja memungkinkan seseorang untuk mengatur [Sumber](data-sources.md) Data, [menyatukan](data-unification.md) dan [memperkaya](enrichment-hub.md) dan akhirnya [mengekspor](export-destinations.md) data ke sistem lain. Semua langkah tersebut dapat dilakukan secara individual (misalnya memicu ekspor tunggal) atau diatur (misalnya penyegaran data dari sumber data yang memicu proses penyatuan yang akan menarik pengayaan tambahan dan setelah selesai mengekspor data ke sistem lain). Untuk detail selengkapnya lihat [Skema](#workflow-event-schema) WorkflowEvent.
-  - **APIEvent** - semua panggilan API ke instans pelanggan ke Dynamics 365 Customer Insights. Untuk detail selengkapnya lihat [Skema](#api-event-schema) APIEvent.
+  - **WorkflowEvent** - Alur kerja memungkinkan Anda mengatur [Sumber](data-sources.md) Data, menyatukan [,](data-unification.md)[memperkaya](enrichment-hub.md), dan akhirnya [mengekspor](export-destinations.md) data ke sistem lain. Semua langkah tersebut dapat dilakukan secara individual (misalnya, memicu ekspor tunggal). Dapat juga berjalan diatur (misalnya, refresh data dari sumber data yang memicu proses penyatuan, yang akan menarik pengayaan dan setelah selesai mengekspor data ke sistem lain). Untuk informasi selengkapnya, lihat [Skema](#workflow-event-schema) WorkflowEvent.
+  - **APIEvent** - semua panggilan API ke instans pelanggan ke Dynamics 365 Customer Insights. Untuk informasi selengkapnya, lihat [Skema](#api-event-schema) APIEvent.
 
 ## <a name="set-up-the-diagnostic-settings"></a>Menyiapkan pengaturan diagnostik
 
@@ -44,7 +44,7 @@ Untuk mengonfigurasi diagnostik di Customer Insights, prasyarat berikut harus di
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Menyiapkan diagnostik dengan Azure Monitor
 
-1. Di Wawasan Pelanggan, pilih **SystemDiagnostics** > **untuk** melihat tujuan diagnostik yang dikonfigurasi instans ini.
+1. Di Wawasan Pelanggan, pilih **Diagnostik** > **Sistem** untuk melihat tujuan diagnostik yang mengonfigurasi instans ini.
 
 1. Pilih **Tambahkan tujuan**.
 
@@ -55,7 +55,7 @@ Untuk mengonfigurasi diagnostik di Customer Insights, prasyarat berikut harus di
 
 1. **Pilih Penyewa** langganan Azure dengan sumber daya tujuan dan pilih **masuk**.
 
-1. Pilih jenis **Sumber** Daya (Akun penyimpanan, Hub Peristiwa, atau analitik log).
+1. **Pilih jenis** Sumber Daya (Akun penyimpanan, hub peristiwa, atau analitik log).
 
 1. **Pilih Langganan** untuk sumber daya tujuan.
 
@@ -69,7 +69,7 @@ Untuk mengonfigurasi diagnostik di Customer Insights, prasyarat berikut harus di
 
 ### <a name="remove-a-destination"></a>Menghapus tujuan
 
-1. **Buka SystemDiagnostics** > **·**.
+1. **Buka Diagnostik** > **Sistem**.
 
 1. Pilih tujuan diagnostik dalam daftar.
 
@@ -109,7 +109,7 @@ Perwakilan layanan Customer Insights mendapatkan **izin Azure Pusat Aktivitas Da
 
 ### <a name="log-analytics"></a>Analisis Log
 
-Perwakilan layanan Customer Insights mendapatkan **izin kontributor** Log Analytics pada sumber daya. Log akan tersedia di bawah **LogsTablesLog** > **·** > **Management** di ruang kerja Log Analytics yang dipilih. **Perluas solusi Manajemen** Log dan temukan tabel dan `CIEventsAudit` tabel.`CIEventsOperational`
+Perwakilan layanan Customer Insights mendapatkan **izin kontributor** Log Analytics pada sumber daya. Log akan tersedia di bawah **Manajemen** > **Log Tabel** > **Log** pada ruang kerja Log Analytics yang dipilih. **Perluas solusi Manajemen** Log dan temukan tabel dan `CIEventsAudit` tabel.`CIEventsOperational`
 
 - `CIEventsAudit` berisi **peristiwa audit**
 - `CIEventsOperational` berisi **acara operasional**
@@ -182,7 +182,7 @@ Objek `identity` JSON memiliki struktur berikut
 
 ### <a name="workflow-event-schema"></a>Skema peristiwa alur kerja
 
-Alur kerja berisi beberapa langkah. [Menelan sumber](data-sources.md) data, menyatukan [,](data-unification.md)[memperkaya](enrichment-hub.md), dan [mengekspor](export-destinations.md) data. Semua langkah tersebut dapat berjalan secara individual atau diatur dengan proses berikut. 
+Alur kerja berisi beberapa langkah. [Menelan sumber](data-sources.md) data, menyatukan [,](data-unification.md)[memperkaya](enrichment-hub.md), dan [mengekspor](export-destinations.md) data. Semua langkah tersebut dapat berjalan secara individual atau diatur dengan proses berikut.
 
 #### <a name="operation-types"></a>Tipe operasi
 
@@ -215,7 +215,7 @@ Alur kerja berisi beberapa langkah. [Menelan sumber](data-sources.md) data, meny
 | `time`          | Tanda Waktu | Wajib          | Stempel waktu acara (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Wajib          | ResourceId dari instance yang memancarkan peristiwa tersebut.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Wajib          | Nama operasi yang diwakili oleh acara ini. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Lihat [Tipe](#operation-types) Operasi untuk referensi. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Wajib          | Kategori log acara. Selalu `Operational` untuk acara Alur Kerja                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Wajib          | Kategori log acara. Selalu `Operational` untuk acara Alur Kerja                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Wajib          | Status acara. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Panjang      | Opsional          | Durasi operasi dalam milidetik.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Opsional          | Objek JSON dengan lebih banyak properti ke kategori peristiwa tertentu.                                                                                        | Lihat properti alur kerja sub [bagian](#workflow-properties-schema)                                                                                                       |

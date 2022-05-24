@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653572"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740907"
 ---
 # <a name="user-permissions"></a>Izin pengguna
 
 Halaman **Izin** adalah tempat Anda akan menyiapkan peran dan izin untuk menggunakan Wawasan Pelanggan.
 
-Anda harus memiliki izin administrator untuk melihat halaman. Untuk mengakses halaman izin, buka **AdminSecurityUsers** > **·** > **·**.
+Anda harus memiliki izin administrator untuk melihat halaman. Untuk mengakses halaman izin, buka **Pengguna Keamanan** > **Admin** > **·**.
 
 Ada tiga jenis peran:
 
@@ -41,7 +41,7 @@ Ada tiga jenis peran:
 
 - Semua izin yang tersedia untuk pemirsa.
 - Muat dan Ubah data menggunakan halaman **sumber data**.
-- Lengkapi bagian *penyatuan data* (**memetakan**, **mencocokkan**, dan **menggabungkan**) yang menghasilkan entitas profil pelanggan terpadu.
+- Lengkap ***Penyatuan** Data yang menghasilkan entitas profil pelanggan terpadu.
 - Tentukan **Relasi** dan **aktivitas**.
 - Buat segmen menggunakan halaman **segmen**.
 - Buat ukuran menggunakan halaman **ukuran**.
@@ -69,7 +69,7 @@ Ada tiga jenis peran:
 
 ## <a name="assign-roles-and-permissions"></a>Menetapkan izin dan peran
 
-1. **Buka AdminSecurity** > **·** > **Users***.
+1. **Buka Keamanan** > **Admin**> **Pengguna***.
 
 1. Pilih **Tambah Pengguna** untuk membuka panel **Tambah/Edit izin**.
 
@@ -79,7 +79,7 @@ Ada tiga jenis peran:
 
 ## <a name="view-current-permissions"></a>Lihat izin saat ini
 
-**Buka AdminSecurityUsers** > **·** > **untuk** melihat penetapan peran apa yang saat ini aktif.
+**Buka Pengguna** > **Keamanan** > **Admin** untuk melihat penetapan peran apa yang saat ini aktif.
 
 - Kolom **jenis** menentukan pengguna, grup, atau aplikasi tunggal. Sistem ini mendukung setiap pengguna dan grup.
 - Peran ditentukan dalam kolom **peran**.

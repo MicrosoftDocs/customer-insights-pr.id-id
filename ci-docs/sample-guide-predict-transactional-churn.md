@@ -1,19 +1,19 @@
 ---
 title: Panduan sampel prediksi kehilangan pelanggan transaksional
 description: Gunakan contoh panduan ini untuk mencoba model prediksi kehilangan pelanggan transaksional bawaan.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643742"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741323"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan transaksional
 
@@ -86,69 +86,13 @@ Tinjau artikel [tentang penyerapan](data-sources.md) data dan [mengimpor sumber 
 
 1. Simpan Sumber Data.
 
-
 ## <a name="task-2---data-unification"></a>Tugas 2-penyatuan data
 
-Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, menggabungkan** untuk membuat profil pelanggan terpadu. Untuk informasi selengkapnya, lihat [Penyatuan data](data-unification.md).
-
-### <a name="map"></a>Peta
-
-1. Setelah menyerap data, Petakan kontak dari eCommerce dan data kesetiaan ke jenis data umum. Buka **Data** > **Satukan** > **Petakan**.
-
-1. Pilih entitas yang menunjukkan profil pelanggan- **ecommercecontacts** dan **loycustomer**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="menyatukan sumber data eCommerce dan kesetiaan.":::
-
-1. Pilih **contactid** sebagai kunci primer untuk **ecommercecontacts** dan **loyaltyid** sebagai kunci primer untuk **loycustomer**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Menyatukan LoyaltyId sebagai kunci primer.":::
-
-### <a name="match"></a>Cocokkan
-
-1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
-
-1. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
-
-1. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Satukan dan cocokkan eCommerce dan Loyalty.":::
-
-1. Pilih **Buat aturan baru**
-
-1. Tambahkan kondisi pertama Anda menggunakan FullName.
-
-   * Untuk eCommerceContacts, pilih **FullName** di dropdown.
-   * Untuk loyCustomers, pilih **FullName** di dropdown.
-   * Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
-   * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
-
-1. Masukkan nama **fullname, email** untuk aturan baru.
-
-   * Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   * Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
-   * Untuk entitas loyCustomers, pilih **EMail** di dropdown. 
-   * Biarkan Normalkan kosong. 
-   * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Satukan aturan kecocokan untuk nama dan email.":::
-
-7. Pilih **Simpan** dan **Tutup**.
-
-### <a name="merge"></a>Penggabungan
-
-1. Buka tab **Gabungkan**.
-
-1. Pada entitas **contactid** untuk **loycustomer**, ubah nama tampilan ke **contactidloyalty** untuk membedakannya dari id lain yang diserap.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Ubah nama contactid dari Loyalty id.":::
-
-1. Pilih **Simpan** dan **Jalankan** untuk memulai proses penggabungan.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tugas 3-konfigurasi prediksi kehilangan pelanggan transaksi
 
-Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan prediksi kehilangan pelanggan langganan. Untuk langkah-langkah mendetail, lihat [artikel prediksi churn langganan](predict-subscription-churn.md). 
+Dengan profil pelanggan terpadu di tempat, kita sekarang dapat menjalankan churn transaksi prediksi. Untuk langkah-langkah terperinci, lihat [artikel churn prediksi](predict-transactional-churn.md) transaksi. 
 
 1. Buka **intelijen** > **Temukan** dan pilih untuk menggunakan **model kehilangan pelanggan**.
 
@@ -180,7 +124,7 @@ Dengan profil pelanggan terpadu di tempatnya, kini kita dapat menjalankan predik
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tugas 4-TInjau hasil dan penjelasan model
 
-Biarkan model menyelesaikan pelatihan dan penilaian data. Anda sekarang dapat meninjau penjelasan model kehilangan pelanggan langganan. Untuk informasi lebih lanjut, lihat [meninjau status dan hasil prediksi](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Biarkan model menyelesaikan pelatihan dan penilaian data. Anda sekarang dapat meninjau penjelasan model churn. Untuk informasi lebih lanjut, lihat [meninjau status dan hasil prediksi](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tugas 5-membuat segmen pelanggan berisiko kehilangan tinggi
 
@@ -192,14 +136,12 @@ Anda dapat membuat segmen baru berdasarkan entitas yang dibuat oleh model.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Membuat segmen dengan output model.":::
 
-1. Pilih titik akhir **OOBSubscriptionChurnPrediction** dan tentukan segmen: 
+1. **Pilih titik akhir OoBeCommerceChurnPrediction** dan tentukan segmennya: 
    - Bidang: ChurnScore
    - Operator: Lebih besar dari
    - Nilai: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Siapkan segmen kehilangan pelangganlangganan.":::
 
-Anda sekarang memiliki segmen yang diperbarui secara dinamis yang mengidentifikasi pelanggan berisiko kehilangan pelanggantinggi untuk bisnis langganan ini.
+Anda sekarang memiliki segmen yang diperbarui secara dinamis yang mengidentifikasi pelanggan berisiko tinggi.
 
 Untuk informasi lebih lanjut, lihat [Membuat dan mengelola segmen](segments.md).
 

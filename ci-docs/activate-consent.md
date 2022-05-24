@@ -1,23 +1,22 @@
 ---
 title: Mengaktifkan aturan persetujuan untuk segmen
 description: Ikuti langkah-langkah ini untuk menautkan data persetujuan dan mengaktifkan pemeriksaan persetujuan di Dynamics 365 Customer Insights. Admin juga dapat menonaktifkan pemeriksaan persetujuan.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642529"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755174"
 ---
 # <a name="activate-consent-rules"></a>Mengaktifkan aturan persetujuan
 
-[Pusat Persetujuan (pratinjau)](consent-management/overview.md) membantu Anda menyelaraskan data persetujuan dari berbagai sumber. Gunakan entitas Persetujuan *terpadu* untuk menerapkan pemeriksaan persetujuan default. Setelah mengimpor data persetujuan ke Pusat Persetujuan dan mengonfigurasi aturan untuk data, *entitas Persetujuan* secara otomatis disinkronkan ke Dynamics 365 Customer Insights.
+[Pusat Persetujuan (pratinjau)](consent-management/overview.md) membantu Anda menyelaraskan data persetujuan dari berbagai sumber. Gunakan entitas Persetujuan *terpadu* untuk menerapkan pemeriksaan persetujuan default. Setelah mengimpor data persetujuan dan mengonfigurasi aturan peta, *entitas Persetujuan* secara otomatis disinkronkan ke Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Aktifkan pemeriksaan persetujuan
 

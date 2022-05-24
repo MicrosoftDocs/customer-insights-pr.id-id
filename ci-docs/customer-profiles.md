@@ -1,7 +1,7 @@
 ---
 title: Lihat Profil pelanggan
 description: Dapatkan gabungan tampilan data pelanggan terpadu Anda.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642500"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755786"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -29,7 +29,7 @@ Pelanggan dapat perorangan atau organisasi. Setiap profil pelanggan ditunjukkan 
 
 Pilih petak untuk melihat data untuk pelanggan yang dipilih di halaman khusus yang disebut [halaman Rincian pelanggan](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Halaman pelanggan yang menampilkan petak hasil](media/customers-page-result-tiles-B2C.png "Halaman pelanggan yang menampilkan petak hasil")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Pilih petak untuk melihat data untuk pelanggan yang dipilih di halaman khusus ya
 
 ## <a name="search-for-customers"></a>Cari pelanggan
 
-Cari pelanggan dengan memasukkan nama atau suatu atribut lain di kotak pencarian. Pencarian hanya berfungsi dalam entitas _Pelanggan_ yang dibuat selama proses penyatuan data.
+Cari pelanggan dengan memasukkan nama atau suatu atribut lain di kotak pencarian. Pencarian hanya berfungsi dalam entitas *Pelanggan* yang dibuat selama proses penyatuan data.
 
 Sebagai admin, Anda dapat mengkonfigurasi atribut yang dapat dicari menggunakan halaman **indeks pencarian & filter**. Untuk informasi lebih lanjut, buka [Mengelola indeks pencarian dan filter](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filter pelanggan
 
-Anda dapat memfilter pelanggan berdasarkan bidang entitas _Pelanggan_. Mirip dengan pencarian, admin harus terlebih dulu menentukan bidang tersebut sebagai dapat disaring menggunakan halaman **indeks pencarian & filter**.
+Anda dapat memfilter pelanggan berdasarkan bidang entitas *Pelanggan*. Mirip dengan pencarian, admin harus terlebih dulu menentukan bidang tersebut sebagai dapat disaring menggunakan halaman **indeks pencarian & filter**.
 
 1. Pilih **Tampilkan filter** pada halaman **Pelanggan**.
 
@@ -55,24 +55,25 @@ Anda dapat memfilter pelanggan berdasarkan bidang entitas _Pelanggan_. Mirip den
 
 Pilih salah satu ubin pelanggan untuk membuka **halaman rincian pelanggan**. Tampilan ini berisi informasi terpadu untuk pelanggan yang dipilih. Rincian pelanggan mencakup konten berikut:
 
-**petak profil pelanggan**: petak ini menampilkan nilai yang berbeda dari entitas _Pelanggan_ terpadu. Jika bidang tidak memiliki nilai untuk profil pelanggan yang dipilih, bidang tersebut tidak akan ditampilkan. petak terstruktur ke dalam bagian:  
-  - Bagian pertama menampilkan rangkaian bidang yang ditetapkan sebelumnya diikuti oleh semua bidang yang merupakan bagian dari indeks pencarian &filter. Semua bidang terkait alamat dikombinasikan ke satu baris jika profil berisi bidang tersebut. 
-  - **Kontak untuk pelanggan ini**: Di lingkungan untuk akun bisnis, Anda akan melihat semua kontak terkait untuk pelanggan ini sebagai bagian kedua. Setiap kontak ditampilkan dengan bidangnya. Bidang kosong disembunyikan.
-  - **Bidang tambahan**: Menampilkan bidang lainnya dari pelanggan yang dipilih, kecuali ID. 
-  - **ID**: Daftarkan semua ID di dalam nama entitas terkait. Bidang diidentifikasi sebagai ID berdasarkan semantisnya, yang mengkategorikannya.
+**petak profil pelanggan**: petak ini menampilkan nilai yang berbeda dari entitas *Pelanggan* terpadu. Jika bidang tidak memiliki nilai untuk profil pelanggan yang dipilih, bidang tersebut tidak akan ditampilkan. petak terstruktur ke dalam bagian:
+
+- Bagian pertama menampilkan rangkaian bidang yang ditetapkan sebelumnya diikuti oleh semua bidang yang merupakan bagian dari indeks pencarian &filter. Semua bidang terkait alamat dikombinasikan ke satu baris jika profil berisi bidang tersebut.
+- **Kontak untuk pelanggan ini**: Di lingkungan untuk akun bisnis, Anda akan melihat semua kontak terkait untuk pelanggan ini sebagai bagian kedua. Setiap kontak ditampilkan dengan bidangnya. Bidang kosong disembunyikan.
+- **Bidang tambahan**: Menampilkan bidang lainnya dari pelanggan yang dipilih, kecuali ID.
+- **ID**: Daftarkan semua ID di dalam nama entitas terkait. Bidang diidentifikasi sebagai ID berdasarkan semantisnya, yang mengkategorikannya.
 
 **Timeline aktivitas**: Menampilkan data jika Anda telah mengkonfigurasi aktivitas. Tampilan timeline berisi aktivitas yang diurutkan secara kronologis dari pelanggan yang dipilih, yang diawali dengan aktivitas terbaru. Untuk informasi lebih lanjut, buka [Aktivitas pelanggan](activities.md).
 
-**wawasan**:  
-  - **Ukuran**: Menunjukkan jika Anda mengkonfigurasi satu atau beberapa ukuran atribut pelanggan lainnya. Mereka mencakup KPI yang dihitung di sekitar pelanggan Anda di tingkat pelanggan individual. Untuk informasi lebih lanjut, buka [Menentukan dan mengelola ukuran](measures.md).
+**wawasan**:
 
-  - **Minat potensial, calon merek**: Menunjukkan jika Anda mengonfigurasikan pengayaan afinitas minat atau merek. Profil ini menunjukkan minat dan afiliasi potensial untuk merek berdasarkan pelanggan lain yang profilnya mirip dengan profil pelanggan yang dipilih. Untuk informasi lebih lanjut, buka [Perkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md).
+- **Ukuran**: Menunjukkan jika Anda mengkonfigurasi satu atau beberapa ukuran atribut pelanggan lainnya. Mereka mencakup KPI yang dihitung di sekitar pelanggan Anda di tingkat pelanggan individual. Untuk informasi lebih lanjut, buka [Menentukan dan mengelola ukuran](measures.md).
+
+- **Minat potensial, calon merek**: Menunjukkan jika Anda mengonfigurasikan pengayaan afinitas minat atau merek. Profil ini menunjukkan minat dan afiliasi potensial untuk merek berdasarkan pelanggan lain yang profilnya mirip dengan profil pelanggan yang dipilih. Untuk informasi lebih lanjut, buka [Perkaya profil pelanggan dengan afinitas merek dan minat](enrichment-microsoft.md).
 
 Untuk kembali ke halaman pencarian pelanggan, pilih **Kembali ke Pelanggan**.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
 [Tambahkan sumber data lainnya](data-sources.md), [perkaya profil terpadu](enrichment-hub.md), atau [buat segmen](segments.md) untuk bekerja dengan profil pelanggan terpadu di aplikasi lain.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

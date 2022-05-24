@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642470"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755358"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Pengayaan profil pelanggan dengan Azure Maps (pratinjau)
 
@@ -51,7 +51,7 @@ Untuk mengkonfigurasi pengayaan data Azure Maps, prasyarat berikut harus dipenuh
 
 1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
 
-1. Mengevaluasi apakah Anda ingin memodifikasi **Pengaturan Tingkat Lanjut**. Hal ini diberikan untuk memberikan fleksibilitas maksimum dalam menangani kasus penggunaan lanjutan, namun nilai default akan memadai di sebagian besar kasus:
+1. Mengevaluasi apakah Anda ingin memodifikasi **Pengaturan Tingkat Lanjut**. Pengaturan ini disediakan untuk memberikan fleksibilitas maksimum untuk menangani kasus penggunaan lanjutan, tetapi nilai default akan memadai dalam banyak kasus:
    - **Jenis alamat**: Perilaku default adalah bahwa pengayaan akan mengembalikan kecocokan alamat terbaik meskipun tidak lengkap. Untuk mendapatkan hanya alamat lengkap&mdash;misalnya, alamat yang mencakup nomor rumah&mdash;kosongkan semua kotak centang kecuali **Alamat Titik**. 
    - **Bahasa**: Secara default, alamat akan dikembalikan dalam bahasa untuk kawasan yang ditentukan memiliki alamat tersebut. Untuk menerapkan bahasa alamat standar, pilih bahasa dari menu dropdown. Misalnya, memilih bahasa **Inggris** akan mengembalikan **Copenhagen, Denmark**, bukan **København, Danmark**.
 
@@ -89,7 +89,7 @@ Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lih
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 
-Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mentransmisikan data ke Azure Maps, Anda mengizinkan transfer data di luar batas kesesuaian untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mengalihkan data tersebut berdasarkan instruksi Anda, namun Anda bertanggung jawab untuk memastikan Azure Maps memenuhi privasi atau jaminan keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, buka [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mentransmisikan data ke Azure Maps, Anda mengizinkan transfer data di luar batas kesesuaian untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa Azure Maps memenuhi kewajiban privasi atau keamanan apa pun yang mungkin Anda miliki. Untuk informasi lebih lanjut, buka [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

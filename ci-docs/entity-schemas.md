@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642669"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757436"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skema entitas dalam Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8642669"
 
 Model data bersama ini memungkinkan aplikasi dan integrator data berkolaborasi lebih mudah dengan menyediakan definisi data terpadu. Common Data Model mencakup sistem metadata kaya dengan entitas standar, Relasi, hierarki, properti, dan lainnya. Ini berasal dari aplikasi Dynamics 365 dan bersumber terbuka di GitHub dengan lebih dari 260 entitas standar. Sistem besar mitra internal dan eksternal berkontribusi pada konsep industri khusus untuk Common Data Model.
 
-Beberapa sistem dan platform menerapkan model data umum hari ini, termasuk dataflow Power BI dan Azure Data Services. Ini sudah didukung dalam Microsoft Dataverse, Dynamics 365, Power Apps, Power BI, dan layanan data Azure mendatang, yang langsung menimbulkan nilai terhadap [prakarsa data terbuka](https://www.microsoft.com/open-data-initiative).
+Beberapa sistem dan platform menerapkan model data umum hari ini, termasuk dataflow Power BI dan Azure Data Services. Ini sudah didukung dalam Microsoft Dataverse, Dynamics 365, Power Apps, Power BI, dan layanan data Azure mendatang, yang langsung menimbulkan nilai terhadap [prakarsa data terbuka](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Skema entitas Customer Insights
 

@@ -66,12 +66,18 @@
   items:
     - name: Ikhtisar penyatuan data
       href: data-unification.md
-    - name: Memetakan entitas dan atribut
+    - name: Pilih bidang sumber
       href: map-entities.md
-    - name: Pencocokan Entitas
+    - name: Menghapus catatan duplikat
+      href: remove-duplicates.md
+    - name: Kondisi pertandingan
       href: match-entities.md
-    - name: Gabungkan Entitas
+    - name: Menyatukan bidang pelanggan
       href: merge-entities.md
+    - name: Meninjau penyatuan data
+      href: review-unification.md
+    - name: Memperbarui pengaturan penyatuan
+      href: data-unification-update.md
 - name: Pengayaan data
   items:
     - name: Perkaya profil pelanggan
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Referensi API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Kueri sampel OData
+      href: odata-examples.md
 - name: Manajemen persetujuan (Pratinjau)
   items:
     - name: Pusat Bantuan

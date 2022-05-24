@@ -1,8 +1,8 @@
 ---
 title: Panduan sampel prediksi kehilangan pelanggan langganan
 description: Gunakan contoh panduan ini untuk mencoba model prediksi kehilangan pelanggan langganan bawaan.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643579"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741415"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Panduan sampel prediksi kehilangan pelanggan langganan
 
@@ -112,61 +112,7 @@ Tinjau artikel [tentang penyerapan](data-sources.md) data dan [mengimpor sumber 
 
 ## <a name="task-2---data-unification"></a>Tugas 2-penyatuan data
 
-Setelah menyerap data, kita sekarang memulai proses **Memetakan, Mencocokkan, menggabungkan** untuk membuat profil pelanggan terpadu. Untuk informasi selengkapnya, lihat [Penyatuan data](data-unification.md).
-
-### <a name="map"></a>Peta
-
-1. Setelah menyerap data, Petakan kontak dari eCommerce dan data kesetiaan ke jenis data umum. Buka **Data** > **Satukan** > **Petakan**.
-
-1. Pilih entitas yang menunjukkan profil pelanggan- **ecommercecontacts** dan **loycustomer**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="menyatukan sumber data eCommerce dan kesetiaan.":::
-
-1. Pilih **contactid** sebagai kunci primer untuk **ecommercecontacts** dan **loyaltyid** sebagai kunci primer untuk **loycustomer**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Menyatukan LoyaltyId sebagai kunci primer.":::
-
-### <a name="match"></a>Cocokkan
-
-1. Pergi ke tab **Cocokkan** dan pilih **Atur Urutan**.
-
-1. Dalam daftar dropdown **Utama**, pilih **eCommerceContacts: e Commerce** sebagai sumber utama dan sertakan semua rekaman.
-
-1. Dalam daftar dropdown **Entitas 2**, pilih **loyCustomers: LoyaltyScheme** dan sertakan semua rekaman.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Satukan dan cocokkan eCommerce dan Loyalty.":::
-
-1. Pilih **Buat aturan baru**
-
-1. Tambahkan kondisi pertama Anda menggunakan FullName.
-
-   * Untuk eCommerceContacts, pilih **FullName** di dropdown.
-   * Untuk loyCustomers, pilih **FullName** di dropdown.
-   * Pilih drop-down **normalkan** dan pilih **jenis (telepon, nama, alamat,...)**.
-   * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
-
-1. Masukkan nama **fullname, email** untuk aturan baru.
-
-   * Tambahkan kondisi kedua untuk alamat email dengan memilih **Tambah kondisi**
-   * Untuk entitas eCommerceContacts, pilih **EMail** di dropdown.
-   * Untuk entitas loyCustomers, pilih **EMail** di dropdown. 
-   * Biarkan Normalkan kosong. 
-   * Atur **tingkat presisi**: **dasar** dan **nilai**: **tinggi**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Satukan aturan kecocokan untuk nama dan email.":::
-
-7. Pilih **Simpan** dan **Tutup**.
-
-### <a name="merge"></a>Penggabungan
-
-1. Buka tab **Gabungkan**.
-
-1. Pada entitas **contactid** untuk **loycustomer**, ubah nama tampilan ke **contactidloyalty** untuk membedakannya dari id lain yang diserap.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Ubah nama contactid dari Loyalty id.":::
-
-1. Pilih **Simpan** dan **Jalankan** untuk memulai proses penggabungan.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tugas 3-konfigurasi prediksi kehilangan pelanggan langganan
 

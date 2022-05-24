@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642619"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755502"
 ---
 # <a name="customer-activities"></a>Aktivitas pelanggan
 
-Gabungkan aktivitas pelanggan dari [berbagai sumber data](data-sources.md) di Dynamics 365 Customer Insights untuk membuat timeline yang mencantumkan aktivitas secara kronologis. Sertakan timeline di aplikasi Dynamics 365 dengan solusi [add-in Kartu Pelanggan](customer-card-add-in.md), atau di dasbor Power BI.
+Gabungkan aktivitas pelanggan dari [berbagai sumber data](data-sources.md) di Dynamics 365 Customer Insights. Buat garis waktu yang mencantumkan aktivitas secara kronologis. Sertakan garis waktu di aplikasi Dynamics 365 dengan [solusi add-in](customer-card-add-in.md) Kartu Pelanggan.
 
 ## <a name="define-an-activity"></a>Menentukan Aktivitas
 
@@ -34,7 +34,7 @@ Sumber data Anda dapat mencakup entitas dengan data transaksional dan aktivitas 
 
 Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan dalam kronologi pelanggan dan Anda tidak dapat menambahkan entitas tanpa bidang **tanggal**. Kontrol **Tambah aktivitas** dinonaktifkan jika tidak ada entitas yang ditemukan.
 
-1. **Buka DataActivities** > **·**.
+1. **Buka Aktivitas Data** > **·**.
 
 1. Pilih **Tambahkan aktivitas** untuk memulai pengalaman terpandu untuk proses penyetelan aktivitas.
 
@@ -78,7 +78,7 @@ Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan d
 
 1. Pilih **berikutnya** untuk beralih ke langkah berikutnya. Anda dapat memilih **Selesai dan tinjau** untuk menyimpan aktivitas sekarang dengan tipe aktivitas yang diatur ke **Lainnya**. 
 
-1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, jenis aktivitas *tanggapan*, *loyalitas*, *SalesOrder*, *SalesOrderLine*, dan *langganan* dapat dipetakan secara semantis setelah setuju untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
+1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, *jenis* aktivitas Umpan Balik *,* Loyalitas *, SalesOrder*, *SalesOrderLine*, dan *Langganan* mendukung semantik setelah menyetujui untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
 
 1. Pilih **berikutnya** untuk beralih ke langkah berikutnya. 
 
@@ -110,7 +110,7 @@ Setelah anda mengkonfigurasi aktivitas pelanggan, pilih **Tampilkan dalam timeli
 
 Untuk membuka timeline pelanggan, buka **Pelanggan** dan pilih profil pelanggan yang akan dilihat.
 
-Jika pelanggan telah berpartisipasi dalam aktivitas yang telah dikonfigurasi, Anda akan menemukannya di bagian **timeline Aktivitas**.
+Jika pelanggan telah berpartisipasi dalam aktivitas yang dikonfigurasi, Anda akan menemukannya di **bagian Garis waktu** aktivitas.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Melihat aktivitas terkonfigurasi di Profil Pelanggan.":::
 

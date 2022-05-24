@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643619"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741045"
 ---
 # <a name="manage-environments"></a>Kelola lingkungan
 
@@ -113,7 +113,7 @@ Saat menyambungkan ke Dataverse lingkungan, pesan **kesalahan Organisasi CDS ini
 ATAU 
 
 1. Buka lingkungan Anda Dataverse.
-1. **Buka Pengaturan** > **LanjutanSolutions**.
+1. **Buka Solusi** > **Pengaturan** Lanjutan.
 1. **Hapus instalan solusi CustomerInsightsCustomerCard**.
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi lingkungan
@@ -127,10 +127,10 @@ Anda akan melihat daftar semua lingkungan yang tersedia di organisasi tempat And
 Pengaturan konfigurasi berikut disalin:
 
 - Sumber data yang diserap/diimpor
-- Konfigurasi penyatuan data (petakan, cocokkan, gabungkan)
+- Konfigurasi penyatuan data
 - Segmen
 - Tindakan
-- Relasi
+- Hubungan
 - Aktivitas
 - Indeks Pencarian & filter
 - Tujuan ekspor
@@ -158,7 +158,7 @@ Setelah menyegarkan sumber data, buka **data** > **Satukan**. Di sini Anda akan 
 
 Bila penyatuan data selesai, buka **langkah** dan **segmen** untuk me-refresh juga.
 
-Sebelum Mengaktifkan kembali ekspor dan pengayaan, buka **AdminConnections** > **untuk** mengautentikasi ulang koneksi di lingkungan baru Anda.
+Sebelum mengaktifkan kembali ekspor dan pengayaan, buka **Koneksi** > **Admin** untuk mengautentikasi ulang koneksi di lingkungan baru Anda.
 
 ## <a name="change-the-owner-of-an-environment"></a>Mengubah pemilik lingkungan
 

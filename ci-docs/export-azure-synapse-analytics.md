@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642550"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741507"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Mengekspor data ke Azure Synapse Analytics (Pratinjau)
 
@@ -34,7 +34,7 @@ Di Azure:
 
 - Langganan Azure aktif.
 
-- Jika menggunakan akun Gen2 baru Azure Data Lake Storage, *perwakilan layanan untuk Customer Insights* memerlukan **izin kontributor** Storage Blob Data. Selengkapnya tentang [menyambung ke akun Azure Data Lake Storage Gen2 dengan prinsipal layanan Azure untuk wawasan audiens](connect-service-principal.md). Data Lake Storage Gen2 **harus mengaktifkan** [ruang nama hierarkis](/azure/storage/blobs/data-lake-storage-namespace).
+- Jika menggunakan akun Gen2 baru Azure Data Lake Storage, *perwakilan layanan untuk Customer Insights* memerlukan **izin kontributor** Storage Blob Data. Pelajari lebih [lanjut cara menyambungkan ke Azure Data Lake Storage akun Gen2 dengan perwakilan layanan Azure untuk Wawasan](connect-service-principal.md) Pelanggan. Data Lake Storage Gen2 **harus mengaktifkan** [ruang nama hierarkis](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Pada grup sumber daya tempat Azure Synapse ruang kerja berada, *perwakilan* layanan dan *Azure AD pengguna dengan izin admin di Customer Insights* harus ditetapkan setidaknya **Pembaca** izin. Untuk informasi lebih lanjut, lihat [Menetapkan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643602"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740723"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Lengkapi data parsial Anda dengan prediksi (tidak digunakan lagi)
 
@@ -37,13 +37,13 @@ Sebelum organisasi Anda dapat menggunakan fitur prediksi, prasyarat berikut haru
 
 1. Organisasi Anda memiliki instans yang [disiapkan di Microsoft Dataverse](/ai-builder/build-model#prerequisites) dan berada di organisasi yang sama dengan Customer Insights.
 
-2. Lingkungan audiens Anda melekat pada instans Dataverse Anda.
+2. Lingkungan Customer Insights Anda dilampirkan ke instans Dataverse Anda.
 
 Untuk informasi lebih lanjut, lihat [Membuat lingkungan baru](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Membuat prediksi di entitas pelanggan
 
-1. **Buka DataEntities** > **·**.
+1. **Buka Entitas Data** > **·**.
 
 2. Pilih entitas **pelanggan**.
 
@@ -91,7 +91,7 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 ## <a name="view-a-prediction"></a>Lihat Prediksi
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Prediksi** saya.
+1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang ingin Anda tinjau.
 
@@ -108,7 +108,7 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 ## <a name="update-a-prediction"></a>Perbarui prediksi
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Prediksi** saya.
+1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang ingin Anda perbarui dan pilih ikon **Perbarui**.
 
@@ -118,7 +118,7 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 Setelah membuat prediksi, Anda dapat menyesuaikan model AI Builder untuk meningkatkan efektivitas model Anda.  
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Prediksi** saya.
+1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang akan diedit.
 
@@ -135,7 +135,7 @@ Langkah berikutnya dari prediksi Anda akan menggunakan model yang telah diperbar
 
 ## <a name="remove-a-prediction"></a>Hilangkan prediksi
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Prediksi** saya.
+1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang ingin Anda hapus.
 

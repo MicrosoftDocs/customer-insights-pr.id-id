@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642610"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755454"
 ---
 # <a name="work-with-customer-insights-apis"></a>Bekerja dengan API Customer Insights
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights menyediakan API untuk membangun aplikasi Anda sen
 > [!IMPORTANT]
 > Rincian API ini, tercantum pada [referensi API customer insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Mereka mencakup informasi tambahan tentang operasi, parameter, dan respons.
 
-Artikel ini menjelaskan cara mengakses API Customer Insights, membuat Pendaftaran Aplikasi Azure, dan memulai pustaka klien yang tersedia.
+Artikel ini menjelaskan cara mengakses API Wawasan Pelanggan, membuat Pendaftaran Aplikasi Azure, dan memulai dengan pustaka klien.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Memulai mencoba API Customer Insights
 
@@ -83,7 +83,7 @@ Anda dapat menggunakan ID aplikasi/klien untuk pendaftaran aplikasi ini dengan M
 
 Untuk informasi lebih lanjut tentang MSAL, lihat [ikhtisar dari Microsoft Authentication Library (msal)](/azure/active-directory/develop/msal-overview).
 
-Untuk informasi lebih lanjut tentang pendaftaran aplikasi di Azure, lihat [Mendaftarkan aplikasi](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Untuk informasi lebih lanjut tentang pendaftaran aplikasi di Azure, lihat [Mendaftarkan aplikasi](/graph/auth-register-app-v2).
 
 Untuk informasi tentang menggunakan API di pustaka klien kami, lihat [pustaka klien Customer Insights](#customer-insights-client-libraries).
 
@@ -113,6 +113,10 @@ Untuk informasi tentang menggunakan API di pustaka klien kami, lihat [pustaka kl
 
 1. Cari nama pendaftaran aplikasi, pilih dari hasil pencarian, lalu pilih **Simpan**.
 
+## <a name="sample-queries"></a>Contoh kueri
+
+Kami telah menyusun daftar pendek kueri sampel OData untuk bekerja dengan API: [contoh kueri OData](odata-examples.md).
+
 ## <a name="customer-insights-client-libraries"></a>Pustaka klien Customer Insights
 
 Bagian ini akan membantu Anda memulai menggunakan pustaka klien yang tersedia untuk API Customer Insights. Semua kode sumber pustaka dan aplikasi sampel dapat ditemukan di [halaman GitHub Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
@@ -137,7 +141,7 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
 
 1. Gunakan [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) untuk membuat `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) yang ada.
 
-1. Setelah berhasil mengautentikasi dan memperoleh token, buat token baru atau gunakan yang sudah `HttpClient` ada dengan "Otorisasi"**DefaultRequestHeaders tambahan** yang diatur ke **Bearer "token akses"** dan **Ocp-Apim-Subscription-Key** yang diatur ke [**kunci** langganan dari lingkungan](#get-started-trying-the-customer-insights-apis) Wawasan Pelanggan Anda.   
+1. Setelah berhasil mengautentikasi dan memperoleh token, buat token baru atau gunakan yang sudah `HttpClient` ada dengan **DefaultRequestHeaders "Otorisasi"** diatur ke **Bearer "token akses"** dan **Ocp-Apim-Subscription-Key** yang diatur ke [**kunci** langganan dari lingkungan](#get-started-trying-the-customer-insights-apis) Wawasan Pelanggan Anda.   
  
    Atur ulang header **otorisasi** bila sesuai. Misalnya, saat token kedaluwarsa.
 
@@ -147,7 +151,7 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
 
 1. Lakukan panggilan dengan klien ke "metode ekstensi"—misalnya `GetAllInstancesAsync`. Jika akses ke `Microsoft.Rest.HttpOperationResponse` yang mendasari lebih disukai, gunakan "metode pesan http"—misalnya `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Respons kemungkinan akan berupa jenis `object` karena metode dapat menghasilkan beberapa jenis (misalnya, `IList<InstanceInfo>` dan `ApiErrorResult`). Untuk memeriksa jenis hasil, Anda dapat dengan aman mentransmisikan objek ke jenis respons yang ditentukan pada [halaman rincian API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) untuk operasi tersebut.    
+1. Respons kemungkinan akan berupa jenis `object` karena metode dapat menghasilkan beberapa jenis (misalnya, `IList<InstanceInfo>` dan `ApiErrorResult`). Untuk memeriksa jenis pengembalian, Anda menggunakan objek dalam jenis respons yang ditentukan pada halaman [detail API untuk operasi tersebut](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights).    
    
    Jika diperlukan informasi lebih lanjut tentang permintaan, gunakan **metode pesan http** untuk mengakses objek respons mentah.
 

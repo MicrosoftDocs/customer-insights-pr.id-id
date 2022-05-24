@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642519"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712906"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Membuat lingkungan di Customer Insights
 
@@ -63,8 +63,7 @@ Anda akan memiliki dua pilihan: **penyimpanan Customer Insights** (Azure Data La
 Dengan menyimpan data ke Azure Data Lake Storage, berarti Anda menyetujui bahwa data akan ditransfer dan disimpan di lokasi geografi yang sesuai untuk akun penyimpanan Azure. Lokasi ini mungkin berbeda dengan lokasi penyimpanan data di Dynamics 365 Customer Insights. Pelajari lebih lanjut di [pusat kepercayaan Microsoft](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights saat ini mendukung berikut:
-> - Entitas yang diserap dari aliran data Power BI yang disimpan di Data Lake terkelola Microsoft Dataverse.  
+> Customer Insights saat ini mendukung berikut:  
 > - Akun Azure Data Lake Storage dari kawasan Azure yang sama yang Anda pilih saat membuat lingkungan.
 > - Azure Data Lake Storage akun yang Gen2 dan memiliki *namespace* hierarki diaktifkan. Akun penyimpanan Azure Data Lake Gen1 tidak didukung.
 
@@ -80,7 +79,7 @@ Langkah **Microsoft Dataverse** memungkinkan Anda menghubungkan Customer Insight
 
 Menyediakan lingkungan Anda sendiri Microsoft Dataverse untuk berbagi data (profil dan wawasan) dengan aplikasi bisnis berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi berbasis model di Power Apps. Biarkan bidang ini kosong jika Anda tidak memiliki lingkungan Anda sendiri Dataverse dan kami akan menyediakannya untuk Anda.
 
-Menghubungkan ke lingkungan Anda Dataverse juga memungkinkan Anda untuk [menelan data dari sumber data lokal menggunakan Power Platform aliran data dan gateway](data-sources.md#add-data-from-on-premises-data-sources). Anda juga dapat menggunakan [model](predictions-overview.md?tabs=b2c#out-of-box-models) prediksi out-of-box dengan menghubungkan ke Dataverse lingkungan.
+Menghubungkan ke lingkungan Anda Dataverse juga memungkinkan Anda untuk [menelan data dari sumber data lokal menggunakan Power Platform aliran data dan gateway](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Wawasan Pelanggan dan Dataverse harus berada di wilayah yang sama untuk memungkinkan berbagi data.
