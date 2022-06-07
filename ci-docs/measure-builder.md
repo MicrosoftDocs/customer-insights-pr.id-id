@@ -1,6 +1,6 @@
 ---
-title: Membuat langkah-langkah baru dengan pembuat ukuran
-description: Bangun langkah-langkah dari awal untuk menganalisis metrik utama tentang bisnis Anda.
+title: Buat langkah-langkah baru dengan pembuat ukuran
+description: Buat langkah-langkah dari awal untuk menganalisis metrik utama tentang bisnis Anda.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,40 +11,40 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643762"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800330"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Gunakan pembuat ukuran untuk membuat tindakan dari awal
+# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Gunakan pembuat ukuran untuk membuat ukuran dari awal
 
-Artikel ini menjelaskan cara membuat ukuran baru [dari](measures.md) awal. Pembuat ukuran memungkinkan Anda menentukan perhitungan menggunakan operator matematika, fungsi agregasi, dan filter. Anda dapat membuat ukuran dengan atribut dari entitas yang terkait dengan entitas Pelanggan *terpadu*.
+Artikel ini menjelaskan cara membuat ukuran [baru](measures.md) dari awal. Pembuat pengukuran memungkinkan Anda menentukan perhitungan menggunakan operator matematika, fungsi agregasi, dan filter. Anda dapat membuat pengukuran dengan atribut dari entitas yang terkait dengan entitas Klien *terpadu*.
 
-Membuat langkah-langkah di lingkungan B-to-C dan B-to-B bekerja dengan cara yang sama. Namun, jika lingkungan [B-to-B Anda menggunakan akun dengan hierarki](relationships.md#set-up-account-hierarchies), Anda dapat memilih untuk menggabungkan ukuran di seluruh sub-akun terkait.
+Membuat langkah-langkah di lingkungan B-to-C dan B-to-B bekerja dengan cara yang sama. Namun, jika lingkungan [B-ke-B Anda menggunakan akun dengan hierarki](relationships.md#set-up-account-hierarchies), Anda dapat memilih untuk menggabungkan pengukuran di seluruh sub-akun terkait.
 
-Anda juga dapat dengan cepat membuat ukuran dengan memilih dari serangkaian tindakan yang umum digunakan dan telah ditentukan. Untuk informasi selengkapnya, lihat [Menggunakan templat untuk membuat ukuran](measure-templates.md).
+Anda juga dapat dengan cepat membuat ukuran dengan memilih dari serangkaian tindakan yang umum digunakan dan telah ditentukan sebelumnya. Untuk informasi selengkapnya, lihat [Menggunakan templat untuk membuat pengukuran](measure-templates.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
-Anda dapat membuat ukuran pada tingkat pelanggan individu (atribut pelanggan, ukuran pelanggan) atau pada tingkat bisnis / organisasi (ukuran bisnis). Atribut pelanggan dan ukuran pelanggan adalah dua jenis yang memungkinkan Anda melacak kinerja per pelanggan. Misalnya, total pengeluaran oleh setiap pelanggan. Langkah-langkah bisnis memungkinkan Anda untuk melacak kinerja per bisnis. Misalnya, total pendapatan perusahaan.
+Anda dapat membuat ukuran pada tingkat pelanggan individu (atribut pelanggan, ukuran pelanggan) atau pada tingkat bisnis / organisasi (ukuran bisnis). Atribut pelanggan dan ukuran pelanggan adalah dua jenis yang memungkinkan Anda melacak kinerja per pelanggan. Misalnya, total pembelanjaan oleh setiap pelanggan. Ukuran bisnis memungkinkan Anda melacak kinerja per bisnis. Misalnya, total pendapatan oleh perusahaan.
 
-- Atribut pelanggan: Menghasilkan output sebagai atribut baru, yang disimpan sebagai kolom baru di entitas yang dihasilkan sistem bernama *Customer_Measure*. Saat menyegarkan atribut pelanggan, semua atribut pelanggan lainnya di *entitas Customer_Measure* disegarkan secara bersamaan. Selain itu, atribut pelanggan ditampilkan di kartu profil pelanggan. Setelah dijalankan atau disimpan, atribut pelanggan Anda tidak dapat mengubahnya menjadi ukuran pelanggan.
+- Atribut pelanggan: Menghasilkan output sebagai atribut baru, yang disimpan sebagai kolom baru di entitas yang dihasilkan sistem bernama *Customer_Measure*. Saat me-refresh atribut pelanggan, semua atribut pelanggan lainnya di entitas Customer_Measure *di-refresh* secara bersamaan. Selain itu, atribut pelanggan ditampilkan di kartu profil pelanggan. Setelah dijalankan atau disimpan, atribut pelanggan Anda tidak dapat mengubahnya menjadi ukuran pelanggan.
 
 - Ukuran pelanggan: Menghasilkan output sebagai entitasnya sendiri dan Anda tidak dapat mengubahnya ke atribut pelanggan setelah dijalankan atau disimpan. Tindakan pelanggan tidak ditampilkan di kartu profil pelanggan.
 
-- Ukuran bisnis: Menghasilkan output sebagai entitasnya sendiri dan ditampilkan di halaman beranda lingkungan Wawasan Pelanggan Anda.
+- Ukuran bisnis: Menghasilkan output sebagai entitasnya sendiri dan ditampilkan di halaman beranda lingkungan Customer Insights Anda.
 
-1. Pergi ke **Ukuran**.
+1. Pergi ke **Tindakan**.
 
 1. Pilih **Baru** dan pilih **Bangun milik Anda sendiri**.
 
-   :::image type="content" source="media/measure-b2c.png" alt-text="Layar konfigurasi kosong untuk ukuran B-to-C." lightbox="media/measure-b2c.png":::
+   :::image type="content" source="media/measure-b2c.png" alt-text="Layar konfigurasi kosong untuk pengukuran B-to-C." lightbox="media/measure-b2c.png":::
 
-1. Untuk melacak kinerja tingkat bisnis, alihkan **Tipe ukur** ke **tingkat** Bisnis. **Tingkat pelanggan** dipilih secara default. **Tingkat pelanggan** secara otomatis menambahkan *atribut CustomerId* ke Dimensi sementara **tingkat** Bisnis secara otomatis menghapusnya.
+1. Untuk melacak performa tingkat bisnis, alihkan **Jenis pengukuran** ke **tingkat** Bisnis. **Tingkat** pelanggan dipilih secara default. **Tingkat** pelanggan secara otomatis menambahkan *atribut CustomerId* ke Dimensi sementara **tingkat** Bisnis secara otomatis menghapusnya.
 
-1. Di area konfigurasi, pilih fungsi agregasi dari **menu tarik-turun pilih fungsi**. Fungsi agresi mencakup:
+1. Di area konfigurasi, pilih fungsi agregasi dari **menu tarik-turun Pilih fungsi**. Fungsi agresi mencakup:
    - **Sum**
    - **Rata-rata**
    - **Count**
@@ -66,17 +66,17 @@ Anda dapat membuat ukuran pada tingkat pelanggan individu (atribut pelanggan, uk
 
 1. Untuk membuat ukuran yang lebih kompleks, Anda dapat menambahkan lebih banyak atribut atau menggunakan operator hitung pada fungsi pengukuran Anda.
 
-1. Untuk menambahkan filter, pilih **Filter** pada area konfigurasi. Menerapkan filter hanya akan menggunakan rekaman yang cocok dengan filter untuk menghitung ukuran.
+1. Untuk menambahkan filter, pilih **Filter** pada area konfigurasi. Menerapkan filter hanya akan menggunakan rekaman yang cocok dengan filter untuk menghitung pengukuran.
   
    1. Di bagian **Tambah atribut** pada panel **Filter**, pilih atribut yang akan digunakan untuk membuat filter.
    1. Atur operator filter untuk menentukan filter untuk setiap atribut yang dipilih.
    1. Pilih **Terapkan** untuk menambahkan filter ke ukuran.
 
-1. Pilih **Dimensi** untuk memilih lebih banyak bidang yang ditambahkan sebagai kolom ke entitas output ukuran.
+1. Pilih **Dimensi** untuk memilih bidang lainnya yang ditambahkan sebagai kolom ke entitas output pengukuran.
 
    1. Pilih **Edit dimensi** untuk menambahkan atribut data untuk mengelompokkan nilai ukuran. Misalnya, kota atau jenis kelamin.
    > [!TIP]
-   > Jika Anda memilih **Tingkat** pelanggan sebagai **tipe** Ukur, *atribut CustomerId* sudah ditambahkan. Jika Anda menghapus atribut, **Ukur sakelar tipe** ke **tingkat** Bisnis.
+   > Jika Anda memilih **Tingkat pelanggan** sebagai **jenis** Pengukuran, *atribut CustomerId* sudah ditambahkan. Jika Anda menghapus atribut, **Jenis** pengukuran akan beralih ke **Tingkat bisnis**.
    1. Pilih **Selesai** untuk menambahkan dimensi ke ukuran.
 
 1. Jika ada nilai pada data yang harus ganti dengan bilangan bulat, pilih **Aturan**. Konfigurasikan aturan dan pastikan Anda hanya memilih bilangan cacah sebagai pengganti. Contohnya, ganti *nihil* dengan *0*.
@@ -88,11 +88,11 @@ Anda dapat membuat ukuran pada tingkat pelanggan individu (atribut pelanggan, uk
 
 1. Untuk menambahkan perhitungan lainnya untuk pengukuran, pilih **Penghitungan baru**. Anda hanya dapat menggunakan entitas pada jalur entitas yang sama untuk perhitungan baru. Perhitungan lainnya akan ditampilkan sebagai kolom baru dalam entitas output pengukuran.
 
-1. Pilih **...** pada penghitungan untuk **membuat duplikat**, **Mengganti Nama**, atau **Menghapus perhitungan** dari pengukuran.
+1. Pilih elipsis vertikal (&vellip;) pada perhitungan untuk **Menduplikasi**, **Mengganti Nama**, atau **Menghapus** perhitungan dari pengukuran.
 
 1. Di area **Pratinjau**, Anda akan melihat skema data dari entitas output pengukuran, termasuk filter dan dimensi. Pratinjau merespons secara dinamis terhadap perubahan dalam konfigurasi.
 
-1. Pilih **Edit detail** di samping Ukuran tanpa judul. Berikan nama untuk ukuran. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke ukuran.
+1. Pilih **Edit detail** di samping Pengukuran tanpa judul. Berikan nama untuk ukuran tersebut. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke pengukuran.
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Kotak dialog Edit detail.":::
 
@@ -106,15 +106,15 @@ Anda dapat membuat ukuran pada tingkat akun individu (ukuran pelanggan) atau pad
 
 - Ukuran pelanggan: Menghasilkan output sebagai entitasnya sendiri. Tindakan pelanggan tidak ditampilkan di kartu profil pelanggan.
 
-- Ukuran bisnis: Menghasilkan output sebagai entitasnya sendiri dan ditampilkan di halaman beranda lingkungan Wawasan Pelanggan Anda.
+- Ukuran bisnis: Menghasilkan output sebagai entitasnya sendiri dan ditampilkan di halaman beranda lingkungan Customer Insights Anda.
 
-1. Pergi ke **Ukuran**.
+1. Pergi ke **Tindakan**.
 
 1. Pilih **baru**.
 
-   :::image type="content" source="media/measure-b2b.png" alt-text="Layar konfigurasi kosong untuk ukuran B-to-B.":::
+   :::image type="content" source="media/measure-b2b.png" alt-text="Layar konfigurasi kosong untuk pengukuran B-ke-B.":::
 
-1. Di area konfigurasi, pilih fungsi agregasi dari **menu tarik-turun pilih fungsi**. Fungsi agresi mencakup:
+1. Di area konfigurasi, pilih fungsi agregasi dari **menu tarik-turun Pilih fungsi**. Fungsi agresi mencakup:
    - **Sum**
    - **Rata-rata**
    - **Count**
@@ -134,17 +134,17 @@ Anda dapat membuat ukuran pada tingkat akun individu (ukuran pelanggan) atau pad
 
 1. Untuk membuat ukuran yang lebih kompleks, Anda dapat menambahkan lebih banyak atribut atau menggunakan operator hitung pada fungsi pengukuran Anda.
 
-1. Untuk menambahkan filter, pilih **Filter** pada area konfigurasi. Menerapkan filter hanya akan menggunakan rekaman yang cocok dengan filter untuk menghitung ukuran.
+1. Untuk menambahkan filter, pilih **Filter** pada area konfigurasi. Menerapkan filter hanya akan menggunakan rekaman yang cocok dengan filter untuk menghitung pengukuran.
   
    1. Di bagian **Tambah atribut** pada panel **Filter**, pilih atribut yang akan digunakan untuk membuat filter.
    1. Atur operator filter untuk menentukan filter untuk setiap atribut yang dipilih.
    1. Pilih **Terapkan** untuk menambahkan filter ke ukuran.
 
-1. Pilih **Dimensi** untuk memilih lebih banyak bidang yang ditambahkan sebagai kolom ke entitas output ukuran.
+1. Pilih **Dimensi** untuk memilih bidang lainnya yang ditambahkan sebagai kolom ke entitas output pengukuran.
 
    1. Pilih **Edit dimensi** untuk menambahkan atribut data untuk mengelompokkan nilai ukuran. Misalnya, kota atau jenis kelamin.
       > [!TIP]
-      > Jika Anda memilih **Tingkat** pelanggan sebagai **tipe** Ukur, *atribut CustomerId* sudah ditambahkan. Jika Anda menghapus atribut, **Ukur jenis** beralih ke **tingkat** Bisnis.
+      > Jika Anda memilih **Tingkat pelanggan** sebagai **jenis** Pengukuran, *atribut CustomerId* sudah ditambahkan. Jika Anda menghapus atribut, **Tipe pengukuran** akan beralih ke **tingkat** Bisnis.
    1. Pilih **Selesai** untuk menambahkan dimensi ke ukuran.
 
 1. Jika ada nilai pada data yang harus ganti dengan bilangan bulat, pilih **Aturan**. Konfigurasikan aturan dan pastikan Anda hanya memilih bilangan cacah sebagai pengganti. Contohnya, ganti *nihil* dengan *0*.
@@ -158,11 +158,11 @@ Anda dapat membuat ukuran pada tingkat akun individu (ukuran pelanggan) atau pad
    1. Pilih **Jalur relasi** dan pilih jalur entitas yang harus digunakan untuk mengidentifikasi ukuran Anda. Jika hanya ada satu jalur ke entitas *Pelanggan*, kontrol ini tidak akan ditampilkan.
    1. Pilih **Selesai** untuk menerapkan pilihan Anda.
 
-1. Pilih **...** pada penghitungan untuk **membuat duplikat**, **Mengganti Nama**, atau **Menghapus perhitungan** dari pengukuran.
+1. Pilih elipsis vertikal (&vellip;) pada perhitungan untuk **Menduplikasi**, **Mengganti Nama**, atau **Menghapus** perhitungan dari pengukuran.
 
 1. Di area **Pratinjau**, Anda akan melihat skema data dari entitas output pengukuran, termasuk filter dan dimensi. Pratinjau merespons secara dinamis terhadap perubahan dalam konfigurasi.
 
-1. Pilih **Edit detail** di samping Ukuran tanpa judul. Berikan nama untuk ukuran. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke ukuran.
+1. Pilih **Edit detail** di samping Pengukuran tanpa judul. Berikan nama untuk ukuran tersebut. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke pengukuran.
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Kotak dialog Edit detail.":::
 

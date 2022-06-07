@@ -12,17 +12,17 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740723"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800654"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Lengkapi data parsial Anda dengan prediksi (tidak digunakan lagi)
 
 > [!IMPORTANT]
-> Fitur ini akan **dihentikan pada** **5 November 2021**. Implementasi saat ini akan terus bekerja sampai fitur dihapus, tetapi Anda tidak akan dapat membuat integrasi baru menggunakan instruksi di bawah ini.
+> Fitur ini akan **tidak digunakan lagi per** **5 November 2021**. Implementasi saat ini akan terus berfungsi hingga fitur dihapus, tetapi Anda tidak akan dapat membuat integrasi baru menggunakan instruksi di bawah ini.
 
 Prediksi memungkinkan Anda dengan mudah membuat nilai prediksi yang dapat meningkatkan pemahaman Anda tentang pelanggan. Pada halaman **intelijen** > **prediksi**, Anda dapat memilih **prediksi Saya** untuk melihat prediksi yang telah dikonfigurasi di bagian lain dari Customer Insights, dan memungkinkan Anda menyesuaikannya lebih lanjut.
 
@@ -43,7 +43,7 @@ Untuk informasi lebih lanjut, lihat [Membuat lingkungan baru](create-environment
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Membuat prediksi di entitas pelanggan
 
-1. **Buka Entitas Data** > **·**.
+1. Buka **Entitas Data** > **·**.
 
 2. Pilih entitas **pelanggan**.
 
@@ -91,11 +91,11 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 ## <a name="view-a-prediction"></a>Lihat Prediksi
 
-1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
+1. **Buka Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang ingin Anda tinjau.
 
-3. Pilih elipsis di kolom **tindakan** dan pilih **tampilan**.
+3. Pilih elipsis vertikal (&vellip;) di **kolom Tindakan** dan pilih **Lihat**.
 
 4. Anda akan melihat sejumlah poin data dalam tampilan prediksi.
    > [!div class="mx-imgBorder"]
@@ -108,7 +108,7 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 ## <a name="update-a-prediction"></a>Perbarui prediksi
 
-1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
+1. **Buka Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang ingin Anda perbarui dan pilih ikon **Perbarui**.
 
@@ -116,17 +116,17 @@ Sebagai bagian dari alur ini, Anda memilih atribut khusus untuk mendasarkan segm
 
 ## <a name="edit-a-prediction"></a>Edit Prediksi
 
-Setelah membuat prediksi, Anda dapat menyesuaikan model AI Builder untuk meningkatkan efektivitas model Anda.  
+Setelah Anda membuat prediksi, Anda dapat menyesuaikan model AI Builder untuk meningkatkan efektivitas model Anda.  
 
-1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
+1. **Buka Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang akan diedit.
 
-3. Pilih elipsis di kolom **tindakan** dan pilih **tampilan**.
+3. Pilih elipsis vertikal (&vellip;) di **kolom Tindakan** dan pilih **Lihat**.
 
 4. Pilih **Kustomisasi di AI Builder**.
 
-5. Perbarui model Anda di AI Builder. [Pelajari lebih lanjut tentang cara mengelola model di AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Perbarui model Anda di file AI Builder. [Pelajari lebih lanjut tentang cara mengelola model di AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Langkah berikutnya dari prediksi Anda akan menggunakan model yang telah diperbarui yang telah Anda buat.
 
@@ -135,11 +135,11 @@ Langkah berikutnya dari prediksi Anda akan menggunakan model yang telah diperbar
 
 ## <a name="remove-a-prediction"></a>Hilangkan prediksi
 
-1. Pergi ke **Prediksi** > **Intelijen** > **Prediksi** saya.
+1. **Buka Prediksi** > **Intelijen** > **Prediksi** saya.
 
 2. Pilih prediksi yang ingin Anda hapus.
 
-3. Pilih elipsis di kolom **tindakan** dan pilih **Hapus**.
+3. Pilih elipsis vertikal (&vellip;) di **kolom Tindakan** dan pilih **Hapus**.
 
 4. Konfirmasikan Penghapusan.
 
@@ -153,7 +153,7 @@ Jika Anda tidak dapat menyelesaikan proses lampirkan Dataverse karena kesalahan,
 - Izin aplikasi tidak diberikan.
     1. Tuju [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Pilih **lingkungan**.
-    1. Pilih elipsis di sebelah lingkungan yang akan ditambahkan izin dan pilih **pengaturan**.
+    1. Pilih elipsis vertikal (&vellip;) di samping lingkungan tempat Anda ingin menambahkan izin dan pilih **Pengaturan**.
     1. Perluas **pengguna + izin** dan pilih **pengguna**.
     1. Pilih **+ Baru** dan pilih **Pengguna**.
     1. Pilih **pengguna aplikasi** jika belum dipilih dan masukkan informasi berikut:

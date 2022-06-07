@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641520"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808565"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan hak subjek data (DSR) di bawah GDPR
 
@@ -29,7 +29,7 @@ Kami berkomitmen untuk membantu pelanggan memenuhi persyaratan GDPR. Ini mencaku
 
 #### <a name="manage-data-subject-delete-requests"></a>Mengelola permintaan penghapusan subjek data
 
-Customer Insights menawarkan pengalaman dalam produk berikut untuk menghapus data pribadi untuk pelanggan atau pengguna tertentu:
+Customer Insights menawarkan pengalaman dalam produk berikut untuk menghapus data pribadi bagi pelanggan atau pengguna tertentu:
 
 - **Mengelola permintaan untuk data pelanggan**: data pelanggan dalam Customer Insights terserap dari sumber data asli eksternal untuk Customer Insights. Semua permintaan penghapusan GDPR harus dilakukan di sumber data asli.
 - **Mengelola permintaan penghapusan untuk data pengguna Customer Insights**: data untuk pengguna dibuat oleh Customer Insights. Semua permintaan penghapusan GDPR harus dilakukan di Customer Insights.
@@ -39,9 +39,9 @@ Customer Insights menawarkan pengalaman dalam produk berikut untuk menghapus dat
 Admin Customer Insights dapat mengikuti langkah berikut untuk menghapus data pelanggan yang telah dihapus di sumber data:
 
 1. Masuk ke Dynamics 365 Customer Insights.
-2. **Buka sumber DataData** > **·**
+2. **Buka Sumber Data Data** > **·**
 3. Untuk setiap sumber data dalam daftar berisi data pelanggan yang telah dihapus:
-   1. Pilih (...) dan kemudian pilih **Segarkan**.
+   1. Pilih elipsis vertikal (&vellip;) lalu pilih **Refresh**.
    2. Periksa status sumber data dalam **status**. Tanda centang berarti penyegaran berhasil. Segitiga peringatan berarti terjadi kesalahan. Jika segitiga peringatan ditampilkan, hubungi D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Admin Customer Insights dapat mengikuti langkah berikut untuk menghapus data pel
 Admin Customer Insights dapat mengikuti langkah berikut untuk menghapus data pengguna Customer Insights:
 
 1. Masuk ke Dynamics 365 Customer Insights.
-2. **Buka AdminPermissions** > **·**.
+2. Buka **Izin** > **Keamanan** > **Admin**.
 3. Centang kotak untuk pengguna yang akan dihapus.
 4. Pilih **Hapus**.
 
@@ -82,6 +82,6 @@ Administrator penyewa dapat mengikuti langkah berikut untuk mengekspor data:
 
 Kemampuan manajemen persetujuan tidak mengumpulkan data pengguna secara langsung. Ini hanya mengimpor dan memproses data persetujuan yang disediakan oleh pengguna di aplikasi lain.
 
-Untuk menghapus data persetujuan tentang pengguna tertentu, hapus di sumber data yang dicerna dengan kemampuan manajemen persetujuan. Setelah menyegarkan sumber data, data yang dihapus juga akan dihapus di Pusat Persetujuan. Aplikasi yang menggunakan entitas persetujuan juga akan menghapus data yang telah dihapus pada sumber setelah [refresh](system.md#refresh-processes). Sebaiknya refresh sumber data dengan cepat setelah menanggapi permintaan subjek data untuk menghapus data pengguna dari semua proses dan aplikasi lainnya.
+Untuk menghapus data persetujuan tentang pengguna tertentu, hapus data tersebut di sumber data yang diserap oleh kemampuan pengelolaan persetujuan. Setelah menyegarkan sumber data, data yang dihapus juga akan dihapus di Pusat Persetujuan. Aplikasi yang menggunakan entitas persetujuan juga akan menghapus data yang telah dihapus pada sumber setelah [refresh](system.md#refresh-processes). Sebaiknya refresh sumber data dengan cepat setelah menanggapi permintaan subjek data untuk menghapus data pengguna dari semua proses dan aplikasi lain.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

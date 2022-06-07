@@ -12,16 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740907"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833726"
 ---
 # <a name="user-permissions"></a>Izin pengguna
 
-Halaman **Izin** adalah tempat Anda akan menyiapkan peran dan izin untuk menggunakan Wawasan Pelanggan.
+Halaman **Izin** adalah tempat Anda akan menyiapkan peran dan izin untuk menggunakan Customer Insights.
 
 Anda harus memiliki izin administrator untuk melihat halaman. Untuk mengakses halaman izin, buka **Pengguna Keamanan** > **Admin** > **·**.
 
@@ -65,11 +65,11 @@ Ada tiga jenis peran:
 ## <a name="admin-owner"></a>Admin (pemilik)
 
 - Semua izin tersedia untuk Admin.
-- [Mengatur ulang dan menghapus](manage-environments.md#reset-an-existing-environment) lingkungan.
+- [Atur ulang dan hapus](manage-environments.md#reset-an-existing-environment-preview) lingkungan.
 
 ## <a name="assign-roles-and-permissions"></a>Menetapkan izin dan peran
 
-1. **Buka Keamanan** > **Admin**> **Pengguna***.
+1. Buka **> Keamanan** > **Admin****Pengguna***.
 
 1. Pilih **Tambah Pengguna** untuk membuka panel **Tambah/Edit izin**.
 
@@ -79,7 +79,7 @@ Ada tiga jenis peran:
 
 ## <a name="view-current-permissions"></a>Lihat izin saat ini
 
-**Buka Pengguna** > **Keamanan** > **Admin** untuk melihat penetapan peran apa yang saat ini aktif.
+Buka **Pengguna** > **Keamanan** > **Admin** untuk melihat penetapan peran apa yang saat ini aktif.
 
 - Kolom **jenis** menentukan pengguna, grup, atau aplikasi tunggal. Sistem ini mendukung setiap pengguna dan grup.
 - Peran ditentukan dalam kolom **peran**.

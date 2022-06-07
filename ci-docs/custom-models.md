@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642570"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800424"
 ---
 # <a name="custom-machine-learning-models"></a>Model Pembelajaran Mesin kustom
 
 > [!NOTE]
-> Dukungan untuk Pembelajaran Mesin Studio (klasik) akan berakhir pada 31 Agustus 2024. Sebaiknya anda beralih ke [Azure Pembelajaran Mesin](/azure/machine-learning/overview-what-is-azure-machine-learning) pada tanggal tersebut.
+> Dukungan untuk Pembelajaran Mesin Studio (klasik) akan berakhir pada 31 Agustus 2024. Sebaiknya Anda beralih ke [Azure Pembelajaran Mesin](/azure/machine-learning/overview-what-is-azure-machine-learning) pada tanggal tersebut.
 >
-> Mulai 1 Desember 2021, Anda tidak akan dapat membuat sumber daya Pembelajaran Mesin Studio (klasik) baru. Hingga 31 Agustus 2024, Anda dapat terus menggunakan sumber daya Pembelajaran Mesin Studio (klasik) yang ada. Untuk informasi selengkapnya, lihat [Migrasi ke Azure Pembelajaran Mesin](/azure/machine-learning/migrate-overview).
+> Mulai 1 Desember 2021, Anda tidak akan dapat membuat sumber daya Pembelajaran Mesin Studio (klasik) baru. Hingga 31 Agustus 2024, Anda dapat terus menggunakan sumber daya Pembelajaran Mesin Studio (klasik) yang ada. Untuk informasi selengkapnya, lihat [Bermigrasi ke Azure Pembelajaran Mesin](/azure/machine-learning/migrate-overview).
 
 
 **Kecerdasan** > **Model Kustom** memungkinkan Anda mengelola alur kerja berdasarkan model Pembelajaran Mesin Azure. Alur kerja membantu Anda memilih data yang ingin Anda hasilkan wawasannya dan memetakan hasil ke data pelanggan terpadu Anda. Untuk informasi lebih lanjut tentang cara membuat model kustom ML, lihat [menggunakan model berbasis pembelajaran mesin Azure](azure-machine-learning-experiments.md).
@@ -34,7 +34,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Fitur ini mendukung layanan web yang dipublikasikan melalui [alur batch Azure Pembelajaran Mesin](/azure/machine-learning/concept-ml-pipelines).
+- Fitur ini mendukung layanan web yang diterbitkan melalui [alur batch Azure Pembelajaran Mesin](/azure/machine-learning/concept-ml-pipelines).
 
 - Anda memerlukan akun Azure data Lake Gen2 Storage yang terkait dengan instans Azure studio Anda untuk menggunakan fitur ini. Untuk informasi lebih lanjut, Lihat [membuat akun penyimpanan Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -60,7 +60,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
 1. Pilih **ruang kerja** yang terkait dengan layanan web Anda. 
 
-1. Pilih alur Azure Pembelajaran Mesin di **layanan Web yang berisi dropdown model** Anda. Kemudian pilih **Berikutnya**.    
+1. Pilih alur Azure Pembelajaran Mesin di **layanan Web yang berisi menu tarik-turun model** Anda. Kemudian pilih **Berikutnya**.    
    Pelajari lebih lanjut tentang cara [mempublikasi alur kerja di Pembelajaran Mesin Azure menggunakan desainer](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Alur anda harus dipublikasikan dalam [titik akhir alur](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Untuk setiap **input Layanan web**, pilih **entitas** yang cocok dari Customer Insights dan pilih **berikutnya**.
@@ -84,7 +84,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
    > ![Kaitkan hasil ke panel data pelanggan.](media/intelligence-screen4-relatetocustomer.png "Kaitkan hasil ke panel data pelanggan")
 
 1. Anda akan melihat layar **alur kerja yang tersimpan** dengan rincian tentang alur kerja.    
-   Jika Anda mengonfigurasi alur kerja untuk alur Azure Pembelajaran Mesin, Wawasan Pelanggan dilampirkan ke ruang kerja yang berisi alur. Customer Insights akan mendapatkan **peran kontributor** di ruang kerja Azure.
+   Jika Anda mengonfigurasi alur kerja untuk alur Azure Pembelajaran Mesin, Customer Insights melampirkan ke ruang kerja yang berisi alur. Customer Insights akan mendapatkan **peran kontributor** di ruang kerja Azure.
 
 1. Pilih **Selesai**.
 
@@ -92,11 +92,11 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
 ## <a name="edit-a-workflow"></a>Edit alur kerja
 
-1. Pada halaman **Model Kustom**, pilih elipsis vertikal di kolom **tindakan** di sebelah alur kerja yang telah Anda buat sebelumnya dan pilih **Edit**.
+1. **Pada halaman Model** Kustom, pilih elipsis vertikal (&vellip;) di kolom Tindakan **di** samping alur kerja yang sebelumnya telah Anda buat dan pilih **Edit**.
 
 1. Anda dapat memperbarui nama yang dikenali alur kerja di bidang **nama tampilan**, namun Anda tidak dapat mengubah layanan Web atau alur yang dikonfigurasikan. Pilih **Selanjutnya**.
 
-1. Untuk setiap **input** layanan Web, Anda dapat memperbarui Entitas **yang cocok** dari Customer Insights. Kemudian pilih **Berikutnya**.
+1. Untuk setiap **input** layanan Web, Anda dapat memperbarui Entitas **yang** cocok dari Customer Insights. Kemudian pilih **Berikutnya**.
 
 1. Pada langkah **parameter output model**, atur properti berikut:
       1. Masukkan **nama entitas** yang Anda ingin hasil output alur kerjanya mengalir ke dalamnya.
@@ -108,7 +108,7 @@ Prediksi menawarkan kemampuan untuk membuat pengalaman pelanggan yang lebih baik
 
 ## <a name="run-a-workflow"></a>Menjalankan alur kerja
 
-1. Pada halaman **Model Kustom**, pilih elipsis vertikal di kolom **tindakan** di sebelah alur kerja yang telah Anda buat sebelumnya.
+1. **Pada halaman Model** Kustom, pilih elipsis vertikal (&vellip;) di kolom Tindakan **di** samping alur kerja yang telah Anda buat sebelumnya.
 
 1. Pilih **Jalankan**.
 
@@ -116,7 +116,7 @@ Alur kerja Anda juga berjalan secara otomatis dengan setiap penyegaran terjadwal
 
 ## <a name="delete-a-workflow"></a>Hapus alur kerja
 
-1. Pada halaman **Model Kustom**, pilih elipsis vertikal di kolom **tindakan** di sebelah alur kerja yang telah Anda buat sebelumnya.
+1. **Pada halaman Model** Kustom, pilih elipsis vertikal (&vellip;) di kolom Tindakan **di** samping alur kerja yang telah Anda buat sebelumnya.
 
 1. Klik **Hapus**, dan konfirmasi penghapusan Anda.
 

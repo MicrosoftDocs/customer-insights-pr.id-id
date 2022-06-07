@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755454"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808510"
 ---
 # <a name="work-with-customer-insights-apis"></a>Bekerja dengan API Customer Insights
 
@@ -25,17 +25,17 @@ Dynamics 365 Customer Insights menyediakan API untuk membangun aplikasi Anda sen
 > [!IMPORTANT]
 > Rincian API ini, tercantum pada [referensi API customer insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Mereka mencakup informasi tambahan tentang operasi, parameter, dan respons.
 
-Artikel ini menjelaskan cara mengakses API Wawasan Pelanggan, membuat Pendaftaran Aplikasi Azure, dan memulai dengan pustaka klien.
+Artikel ini menjelaskan cara mengakses API Customer Insights, membuat Azure App Registration, dan mulai menggunakan pustaka klien.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Memulai mencoba API Customer Insights
 
 1. [Masuk](https://home.ci.ai.dynamics.com) ke Customer Insights. Jika Anda belum memiliki langganan, [Daftar untuk versi uji coba dari Customer Insights](https://aka.ms/tryci).
 
-1. Untuk mengaktifkan API di lingkungan Customer Insights Anda, buka **admin** > **izin**. Anda memerlukan izin admin untuk melakukannya.
+1. Untuk mengaktifkan API di lingkungan Customer Insights Anda, buka **Keamanan Admin** > **·**. Anda memerlukan izin admin untuk melakukannya.
 
 1. Buka tab **API** dan pilih tombol **Aktifkan**.    
  
-   Mengaktifkan API akan membuat kunci langganan utama dan sekunder untuk instans yang digunakan dalam permintaan API. Anda dapat membuat ulang kunci dengan memilih **Buat lagi utama** atau **Buat lagi sekunder** pada **admin** > **izin** > **api**.
+   Mengaktifkan API akan membuat kunci langganan utama dan sekunder untuk instans yang digunakan dalam permintaan API. Anda dapat membuat ulang kunci dengan **memilih Regenerasi primer atau** Regenerasi sekunder **pada** **API** > **Keamanan** > **Admin**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Langkah-langkah ini membantu Anda memulai menggunakan API Customer Insights di a
 1. Di sebelah kiri, pilih **pendaftaran aplikasi**.
 
 1. Pilih **pendaftaran baru** berikan nama aplikasi dan pilih jenis akun.
- 
+
    Atau, tambahkan URL pengalihan. http://localhost cukup untuk mengembangkan aplikasi di komputer lokal.
 
 1. Di pendaftaran aplikasi baru, buka **izin API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Pilih **Tambah izin** dan pilih **Customer Insights** di panel sisi.
+1. Pilih **Tambahkan izin** dan pilih **Dynamics 365 AI for Customer Insights** di panel samping.
 
 1. Untuk **jenis izin**, pilih **Izin yang didelegasikan**, lalu izin **user_impersonation**.
 
@@ -109,13 +107,13 @@ Untuk informasi tentang menggunakan API di pustaka klien kami, lihat [pustaka kl
 
 1. Sebagai akhir, kita harus menambahkan nama pendaftaran aplikasi sebagai pengguna di Customer Insights.  
    
-   Buka Customer Insights, buka **admin** > **izin** dan pilih **Tambah Pengguna**.
+   Buka Customer Insights, buka **Keamanan Admin** > **dan** pilih **Tambahkan pengguna**.
 
 1. Cari nama pendaftaran aplikasi, pilih dari hasil pencarian, lalu pilih **Simpan**.
 
 ## <a name="sample-queries"></a>Contoh kueri
 
-Kami telah menyusun daftar pendek kueri sampel OData untuk bekerja dengan API: [contoh kueri OData](odata-examples.md).
+Kami telah menyusun daftar singkat kueri sampel OData untuk bekerja dengan API: [contoh](odata-examples.md) kueri OData.
 
 ## <a name="customer-insights-client-libraries"></a>Pustaka klien Customer Insights
 
@@ -141,7 +139,7 @@ Pelajari cara memulai menggunakan pustaka klien C# dari NuGet.org. Untuk informa
 
 1. Gunakan [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) untuk membuat `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) yang ada.
 
-1. Setelah berhasil mengautentikasi dan memperoleh token, buat token baru atau gunakan yang sudah `HttpClient` ada dengan **DefaultRequestHeaders "Otorisasi"** diatur ke **Bearer "token akses"** dan **Ocp-Apim-Subscription-Key** yang diatur ke [**kunci** langganan dari lingkungan](#get-started-trying-the-customer-insights-apis) Wawasan Pelanggan Anda.   
+1. Setelah berhasil mengautentikasi dan memperoleh token, buat yang baru atau gunakan yang sudah ada `HttpClient` dengan **"Otorisasi"** DefaultRequestHeaders yang diatur ke **Bearer "token akses"** dan **Ocp-Apim-Subscription-Key** yang diatur ke [**kunci** langganan dari lingkungan](#get-started-trying-the-customer-insights-apis) Customer Insights Anda.   
  
    Atur ulang header **otorisasi** bila sesuai. Misalnya, saat token kedaluwarsa.
 

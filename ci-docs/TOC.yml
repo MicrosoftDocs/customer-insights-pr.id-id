@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Katalog pembelajaran
   items:
-    - name: Memulai
+    - name: Sertifikasi sebagai Spesialis Platform Data Pelanggan Microsoft
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Memulai Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Menyerap data
       href: /learn/modules/ingest-data-customer-insights/
@@ -14,7 +16,7 @@
       href: /learn/modules/unified-customer-profile/
     - name: Bekerja dengan Customer Insights
       href: /learn/modules/working-with-customer-insights/
-    - name: Memperkaya data dan membuat prediksi
+    - name: Perkaya data dan buat prediksi
       href: /learn/modules/enrich-data/
     - name: Mengelola koneksi eksternal
       href: /learn/modules/configure-third-party-connections/
@@ -34,15 +36,13 @@
       href: get-started.md
     - name: Mulai dengan lisensi berbayar
       href: paid-license.md
-    - name: Buat lingkungan baru
-      href: create-environment.md
     - name: Jelajahi Wawasan Pelanggan
       href: home.md
     - name: Bekerja dengan tag dan kolom
       href: work-with-tags-columns.md
     - name: Menangani akun bisnis
       href: work-with-business-accounts.md
-    - name: Integrasi dengan Dynamics 365 Marketing
+    - name: Integrasikan dengan Dynamics 365 Marketing
       href: marketing-get-started.md
 - name: Sumber Data
   items:
@@ -68,7 +68,7 @@
       href: data-unification.md
     - name: Pilih bidang sumber
       href: map-entities.md
-    - name: Menghapus catatan duplikat
+    - name: Menghapus rekaman duplikat
       href: remove-duplicates.md
     - name: Kondisi pertandingan
       href: match-entities.md
@@ -90,17 +90,17 @@
       href: enrichment-enhanced-company-data.md
     - name: Perkaya dengan Azure Maps
       href: enrichment-azure-maps.md
-    - name: Memperkaya dengan Dun & Bradstreet
+    - name: Perkaya dengan Dun &Bradstreet
       href: enrichment-dnb.md
     - name: Perkaya dengan HERE Technologies
       href: enrichment-here.md
     - name: Memperkaya dengan Leadspace
       href: enrichment-leadspace.md
-    - name: Memperkaya dengan LiveRamp
+    - name: Perkaya dengan LiveRamp
       href: enrichment-liveramp.md
     - name: Perkaya dengan Experian
       href: enrichment-experian.md
-    - name: Memperkaya dengan Office 365 data
+    - name: Perkaya dengan Office 365 data
       href: enrichment-office.md
     - name: Perkaya dengan impor kustom SFTP
       href: enrichment-SFTP-custom-import.md
@@ -132,7 +132,7 @@
       href: measures.md
     - name: Membuat ukuran baru
       href: measure-builder.md
-    - name: Menggunakan templat ukuran
+    - name: Menggunakan templat pengukuran
       href: measure-templates.md
 - name: Prediksi
   items:
@@ -148,7 +148,7 @@
           href: predict-subscription-churn.md
         - name: Memprediksi kehilangan transaksi
           href: predict-transactional-churn.md
-        - name: Menganalisis sentimen dalam umpan balik pelanggan
+        - name: Analisis sentimen dalam umpan balik pelanggan
           href: sentiment-analysis.md
         - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
           href: custom-models.md
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -208,7 +210,7 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
-        - name: Iterable
+        - name: Dapat diulang
           href: export-iterable.md
         - name: Klaviyo
           href: export-klaviyo.md
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Meninjau skema entitas dalam Common Data Model
       href: entity-schemas.md
-    - name: Data Customer Insights di Dataverse
-      href: customer-insights-dataverse.md
     - name: Membangun relasi dan entitas terhubung
       href: relationships.md
     - name: Menentukan pemetaan semantik
       href: semantic-mappings.md
+- name: Lingkungan
+  items:
+    - name: Buat lingkungan baru
+      href: create-environment.md
+    - name: Sambungkan ke Microsoft Dataverse
+      href: customer-insights-dataverse.md
+    - name: Gunakan milik Anda sendiri Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Kelola pengaturan lingkungan
+      href: manage-environments.md
+    - name: Menyambungkan ke akun penyimpanan menggunakan Perwakilan Layanan
+      href: connect-service-principal.md
 - name: Administrasi
   items:
     - name: Atur konfigurasi sistem
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Menetapkan izin pengguna
       href: permissions.md
-    - name: Ikhtisar sambungan
-      href: connections.md
-    - name: Kelola beberapa lingkungan
-      href: manage-environments.md
     - name: Bawa Key Vault Anda sendiri
       href: use-azure-key-vault.md
-    - name: Menyambungkan ke akun penyimpanan menggunakan Perwakilan Layanan
-      href: connect-service-principal.md
     - name: Mengekspor log diagnostik
       href: diagnostics.md
-    - name: Batas Layanan
-      href: service-limits.md
-    - name: Permintaan dan hak DSR
-      href: dsr-rights-requests.md
+    - name: Ikhtisar sambungan
+      href: connections.md
 - name: API
   items:
     - name: Bekerja dengan API
@@ -314,7 +318,7 @@
           href: activate-consent.md
         - name: Mengelola aturan persetujuan default di segmen Customer Insights
           href: change-default-consent-rules.md
-    - name: Mengelola pengaturan dan pengguna
+    - name: Mengelola setelan dan pengguna
       items:
         - name: Mengonfigurasi pengaturan sistem
           href: consent-management/system-settings.md
@@ -324,5 +328,9 @@
       items:
         - name: Membuat prediksi dengan data persetujuan
           href: consent-management/predictions-consent-data.md
+- name: Batas Layanan
+  href: service-limits.md
+- name: Permintaan dan hak DSR
+  href: dsr-rights-requests.md
 - name: Dapatkan Dukungan
   href: /power-platform/admin/get-help-support

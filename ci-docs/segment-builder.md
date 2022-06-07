@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643559"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800100"
 ---
 # <a name="create-segments"></a>Buat segmen
 
@@ -64,7 +64,7 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
 
 1. Pada halaman pembuat segmen, Anda menentukan atau menyusun aturan. Aturan terdiri dari satu atau beberapa kondisi yang menentukan rangkaian pelanggan.
 
-1. **Di bagian Rule1**, pilih atribut entitas yang ingin Anda filter pelanggan. Ada dua cara untuk memilih atribut:
+1. Di bagian **Aturan1**, pilih atribut entitas yang ingin Anda filter pelanggannya. Ada dua cara untuk memilih atribut:
    - Tinjau daftar entitas dan atribut yang tersedia di panel **Tambah ke Aturan**, lalu pilih ikon **+** di sebelah atribut untuk menambahkan. Pilih jika Anda ingin menambahkan atribut ke aturan yang ada atau menggunakannya untuk membuat aturan baru.
    - Masukkan nama atribut di bagian aturan untuk melihat saran yang cocok.
 
@@ -134,8 +134,9 @@ Saat membuat segmen, Anda dapat menyimpan draf. Pada tahapan draf, segmen disimp
 > - Pembuat segmen tidak akan menyarankan nilai yang valid dari entitas saat mengatur operator untuk kondisi tersebut. Anda dapat membuka **Data** > **Entitas** dan mengunduh data entitas untuk melihat nilai yang tersedia.
 > - Kondisi berdasarkan tanggal memungkinkan Anda beralih antara tanggal tetap dan rentang tanggal mengambang.
 > - Jika Anda memiliki beberapa aturan untuk segmen, aturan yang sedang Anda edit memiliki garis biru vertikal di sebelahnya.
-> - Anda dapat memindahkan aturan dan kondisi ke tempat lain dalam definisi segmen. Pilih [...] di sebelah aturan atau kondisi, lalu pilih cara dan lokasi memindahkannya.
+> - Anda dapat memindahkan aturan dan kondisi ke tempat lain dalam definisi segmen. Pilih elipsis vertikal (&vellip;) di samping aturan atau kondisi dan pilih bagaimana dan di mana harus memindahkannya.
 > - Kontrol **Batalkan** dan **Kembalikan** di bilah perintah memungkinkan Anda membatalkan perubahan.
+> - Setelah membuat segmen, beberapa segmen memungkinkan Anda [melacak penggunaan segmen](segments.md#track-usage-of-a-segment) tersebut.
 
 ## <a name="quick-segments"></a>Segmen ringkas
 
@@ -156,7 +157,7 @@ Segmen singkat memungkinkan Anda membuat segmen sederhana dengan satu operator s
 
    :::image type="content" source="media/quick-segment-name.png" alt-text="Nama dan estimasi untuk segmen cepat.":::
 
-5. **Berikan nama** entitas Nama **dan** Output untuk segmen Anda. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags).
+5. **Berikan nama entitas Nama** dan **Output** untuk segmen Anda. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags).
 
 6. Klik **Simpan** untuk membuat segmen Anda.
 

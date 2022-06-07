@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641812"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833772"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Tanya Jawab uji coba Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ ms.locfileid: "8641812"
 
 Aplikasi ini adalah layanan berbasis cloud yang tidak memerlukan perangkat lunak khusus selain web browser terbaru, meskipun beberapa batasan berlaku. Untuk pengalaman uji coba terbaik, hindari mengakses situs uji coba dalam mode penyamaran dan pilih lokasi uji coba yang paling dekat dengan Anda. [Pelajari lebih lanjut persyaratan aplikasi web.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Bagaimana cara mendaftar untuk uji coba tanpa Microsoft 365 penyewa?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Bagaimana cara mendaftar uji coba tanpa Microsoft 365 penyewa?
 
 Anda dapat memasukkan alamat email non-kerja dan kami akan membuat akun dan penyewa untuk Anda.
 
@@ -62,9 +62,9 @@ Anda dapat memperpanjang uji coba dalam aplikasi secara langsung. Anda dapat mem
 
 Umumnya, kami sarankan untuk memulai dari awal dengan data Anda sendiri saat memutakhirkan ke versi berbayar Customer Insights. 
 
-Secara opsional, jika Hanya menggunakan Customer Insights, Anda dapat menyalin data dari lingkungan uji coba jika membeli Customer Insights. Anda harus menjadi administrator uji coba Customer Insights dan admin global penyewa Anda Microsoft 365, atau administrator Dynamics 365 di organisasi Anda untuk memigrasikan pengaturan dari lingkungan uji coba ke lingkungan berbayar. 
+Secara opsional, jika hanya menggunakan Customer Insights, Anda dapat menyalin data dari lingkungan uji coba jika membeli Customer Insights. Anda harus menjadi administrator uji coba Customer Insights dan admin global penyewa Anda Microsoft 365, atau administrator Dynamics 365 di organisasi Anda untuk memigrasikan pengaturan dari lingkungan uji coba ke lingkungan berbayar.
 
-Setelah masuk ke instans Customer Insights berbayar Anda untuk pertama kalinya, Anda diminta untuk membuat lingkungan baru. Dalam proses ini, Anda dapat memilih untuk menyalin konfigurasi dari lingkungan yang ada dan memigrasikan sebagian besar pengaturan. Jika Anda memiliki izin yang disebutkan di atas, lingkungan uji coba akan ditampilkan dalam daftar ini. Untuk informasi selengkapnya, lihat [Menyalin konfigurasi lingkungan](manage-environments.md#copy-the-environment-configuration).
+Setelah masuk ke instans Customer Insights berbayar Anda untuk pertama kalinya, Anda diminta untuk membuat lingkungan baru. Dalam proses ini, Anda dapat memilih untuk menyalin konfigurasi dari lingkungan yang ada dan memigrasikan sebagian besar pengaturan. Jika Anda memiliki izin yang disebutkan di atas, lingkungan uji coba akan ditampilkan dalam daftar ini. Untuk informasi selengkapnya, lihat [Menyalin konfigurasi lingkungan](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Apa saja batas uji coba dan kuota?
 
@@ -81,9 +81,10 @@ Setelah mendaftar uji coba, Anda akan dialihkan ke layar utama aplikasi. Layar u
 
 Sebagian besar fitur kemampuan Customer Insights tersedia dalam uji coba.
 
-Fitur-fitur **berikut tidak tersedia**: 
+Fitur-fitur **berikut tidak tersedia**:
+
 - Anda tidak dapat membuat lingkungan baru yang menggunakan akun penyimpanan Azure Data Lake Storage.
-- Anda tidak dapat menghapus lingkungan uji coba. 
+- Anda tidak dapat menghapus lingkungan uji coba.
 
 ### <a name="how-long-does-the-trial-last"></a>Berapa lama uji coba berlangsung?
 

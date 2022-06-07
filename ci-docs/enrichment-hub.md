@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653527"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800609"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratinjau)
 
@@ -27,7 +27,7 @@ Gunakan data dari sumber seperti Microsoft dan mitra lainnya untuk memperkaya da
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Halaman hub pengayaan.":::
 
-**Buka DataEnrichment** > **untuk** bekerja dengan opsi pengayaan.  
+Buka **Pengayaan** > **Data** untuk bekerja dengan opsi pengayaan.  
 
 Anda harus memiliki izin kontributor atau Administrator untuk membuat atau mengedit pengayaan. Untuk informasi lebih lanjut, lihat [izin](permissions.md).
 
@@ -48,7 +48,7 @@ Pada tab **Temukan**, Anda akan menemukan semua pilihan pengayaan yang didukung.
 
 - [Data perusahaan](enrichment-leadspace.md) yang disediakan oleh Leadspace
 - [Alamat disempurnakan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
-- [Data](enrichment-enhanced-company-data.md) perusahaan yang disempurnakan disediakan oleh Microsoft
+- [Data](enrichment-enhanced-company-data.md) perusahaan yang disempurnakan yang disediakan oleh Microsoft
 - [data lokasi](enrichment-here.md) disediakan oleh HERE Technologies 
 - [Data Kustom](enrichment-SFTP-custom-import.md) melalui Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
@@ -63,7 +63,7 @@ Pada **tab pengayaan saya**, Anda dapat melihat pengayaan yang telah dikonfigura
 
 Buka tab **Pengayaan saya** untuk melihat semua pengayaan terkonfigurasi. Setiap pengayaan ditunjukkan sebagai baris yang mencakup informasi tambahan tentang pengayaan.
 
-Pilih pengayaan untuk melihat opsi yang tersedia. Anda juga dapat memilih elipsis (...) pada item daftar untuk melihat opsi. Jika Anda mengonfigurasi beberapa pengayaan, Anda bisa menggunakan kotak pencarian untuk menemukannya dengan cepat.
+Pilih pengayaan untuk melihat opsi yang tersedia. Anda juga dapat memilih elipsis vertikal (&vellip;) pada item daftar untuk melihat opsi. Jika Anda mengonfigurasi beberapa pengayaan, Anda bisa menggunakan kotak pencarian untuk menemukannya dengan cepat.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Pilihan untuk mengelola pengayaan dalam daftar pengayaan.":::
 
@@ -83,7 +83,7 @@ Pengayaan pihak ketiga dikonfigurasi menggunakan [koneksi](connections.md), yang
 
 Entitas yang akan diperkaya ditentukan selama konfigurasi pengayaan, yang memungkinkan Anda hanya memperkaya subkumpulan profil Anda. Misalnya, perkaya data hanya untuk segmen tertentu. Anda dapat mengonfigurasi beberapa pengayaan dengan tipe yang sama dan menggunakan kembali koneksi yang sama. Beberapa pengayaan akan memiliki batasan jumlah pengayaan dengan jenis yang sama yang dapat dibuat. Batas dan penggunaan saat ini dapat dilihat pada halaman **Pengayaan**.
 
-## <a name="enrich-data-sources-before-unification"></a>Memperkaya sumber data sebelum penyatuan
+## <a name="enrich-data-sources-before-unification"></a>Perkaya sumber data sebelum penyatuan
 
 Anda dapat memperkaya data pelanggan Anda sebelum penyatuan data untuk membantu meningkatkan kualitas kecocokan data. Untuk informasi selengkapnya, lihat [pengayaan](data-sources-enrichment.md) sumber data.
 
@@ -101,12 +101,12 @@ Untuk melihat status pengayaan
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
 
-Setelah pengayaan selesai dijalankan, Anda dapat meninjau hasil pengayaan.
+Setelah pengayaan selesai, Anda dapat meninjau hasil pengayaan.
 
 1. Buka **Data** > **Pengayaan**. 
-1. Pilih pengayaan yang Anda inginkan informasi tentang.
+1. Pilih pengayaan yang Anda inginkan informasinya.
 
-Semua pengayaan menampilkan informasi dasar seperti jumlah profil yang diperkaya, pratinjau entitas pengayaan yang dihasilkan, dan jumlah profil yang diperkaya dari waktu ke waktu. Jika tersedia, **Jumlah pelanggan yang diperkaya oleh lapangan** memberikan perincian ke dalam cakupan setiap bidang yang diperkaya.
+Semua pengayaan menunjukkan informasi dasar seperti jumlah profil yang diperkaya, pratinjau entitas pengayaan yang dihasilkan, dan jumlah profil yang diperkaya dari waktu ke waktu. Jika tersedia, **Jumlah pelanggan yang diperkaya oleh lapangan** memberikan penelusuran ke dalam cakupan setiap bidang yang diperkaya.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Halaman hasil pengayaan.":::
 

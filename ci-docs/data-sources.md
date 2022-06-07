@@ -12,18 +12,18 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739212"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800470"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
 
 
-Dynamics 365 Customer Insights terhubung ke data dari serangkaian sumber yang luas. Menghubungkan ke sumber data sering disebut sebagai proses *penyerapan data*. Setelah menyerap data, Anda dapat [menyatukan](data-unification.md), dan melakukan tindakan padanya.
+Dynamics 365 Customer Insights terhubung ke data dari sekumpulan sumber yang luas. Menghubungkan ke sumber data sering disebut sebagai proses *penyerapan data*. Setelah menyerap data, Anda dapat [menyatukan](data-unification.md), dan melakukan tindakan padanya.
 
 ## <a name="add-a-data-source"></a>Tambahkan sumber data
 
@@ -31,27 +31,27 @@ Lihat artikel terperinci untuk cara menambahkan sumber data, tergantung pada ops
 
 Anda dapat menambahkan sumber data berikut:
 
-- [Melalui puluhan Power Query konektor](connect-power-query.md)
+- [Melalui lusinan Power Query konektor](connect-power-query.md)
 - [Dari folder Common Data Model](connect-common-data-model.md)
 - [Dari Danau Microsoft Dataverse Anda sendiri](connect-dataverse-managed-lake.md)
 - [Azure Synapse Analytics Dari database](connect-synapse.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Menambahkan data dari sumber data lokal
 
-Menelan data dari sumber data lokal didukung berdasarkan Microsoft Power Platform aliran data. Anda dapat mengaktifkan Aliran Data di Wawasan [Pelanggan dengan Microsoft Dataverse menyediakan URL](create-environment.md) lingkungan saat menyiapkan lingkungan.
+Menyerap data dari sumber data lokal didukung berdasarkan Microsoft Power Platform aliran data. Anda dapat mengaktifkan Aliran Data di Customer Insights [dengan Microsoft Dataverse menyediakan URL](create-environment.md) lingkungan saat menyiapkan lingkungan.
 
-Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Customer Insights menggunakan [Power Platform aliran data secara](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang Dataverse ada sebelum lingkungan dikaitkan [menggunakan gateway](/data-integration/gateway/service-gateway-app) data lokal.
+Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Customer Insights menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang ada sebelum Dataverse lingkungan dikaitkan [menggunakan gateway](/data-integration/gateway/service-gateway-app) data lokal.
 
 Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
 
 > [!IMPORTANT]
-> Pastikan gateway Anda diperbarui ke versi terbaru. Anda dapat menginstal pembaruan dan mengkonfigurasi ulang gateway dari prompt yang ditampilkan di layar gateway secara langsung atau [mengunduh versi](https://powerapps.microsoft.com/downloads/) terbaru. Jika Anda tidak menggunakan versi gateway terbaru, refresh aliran data gagal dengan pesan kesalahan seperti **Kata kunci tidak didukung: properti konfigurasi. Nama parameter: kata kunci**.
+> Pastikan gateway Anda diperbarui ke versi terbaru. Anda dapat menginstal pembaruan dan mengonfigurasi ulang gateway dari prompt yang ditampilkan di layar gateway secara langsung atau [mengunduh versi](https://powerapps.microsoft.com/downloads/) terbaru. Jika Anda tidak menggunakan versi gateway terbaru, refresh aliran data gagal dengan pesan kesalahan seperti **Kata kunci tidak didukung: properti konfigurasi. Nama parameter: kata kunci**.
 
 ## <a name="review-ingested-data"></a>Meninjau data yang diserap
 Jika lingkungan Anda berisi Power Platform aliran data, **halaman Sumber** Data mencantumkan tiga bagian: 
 - **Dibagikan**: Sumber data yang dapat dikelola oleh semua admin Customer Insights. Power BI aliran data, akun penyimpanan Anda sendiri, dan melampirkan ke danau data yang Dataverse dikelola adalah contoh sumber data bersama.
-- **Dikelola oleh saya**: Power Platform aliran data dibuat dan hanya dapat dikelola oleh Anda. Admin Customer Insights lainnya hanya dapat melihat aliran data ini tetapi tidak mengedit, menyegarkan, atau menghapusnya.
-- **Dikelola oleh orang lain**: Power Platform aliran data yang dibuat oleh admin lain. Anda hanya bisa melihatnya. Ini mencantumkan pemilik aliran data untuk menghubungi bantuan apa pun.
+- **Dikelola oleh saya**: Power Platform aliran data dibuat dan hanya dapat dikelola oleh Anda. Admin Customer Insights lainnya hanya dapat melihat aliran data ini tetapi tidak mengedit, me-refresh, atau menghapusnya.
+- **Dikelola oleh orang lain**: Power Platform aliran data yang dibuat oleh admin lain. Anda hanya dapat melihatnya. Ini mencantumkan pemilik aliran data untuk dihubungi untuk bantuan apa pun.
 > [!NOTE]
 > Semua entitas dapat dilihat dan digunakan oleh pengguna lain. Kontekstualitas pengguna hanya berlaku untuk sumber data dan bukan untuk entitas yang dihasilkan dari aliran data ini.
 
@@ -76,7 +76,7 @@ Untuk me-refresh sumber data sesuai permintaan, ikuti langkah berikut:
 
 1. Buka **Data** > **Sumber data**.
 
-2. Pilih elipsis vertikal di sebelah sumber data yang ingin Anda segarkan, lalu pilih **Segarkan** dari daftar dropdown.
+2. Pilih elipsis vertikal (&vellip;) di samping sumber data yang ingin Anda refresh dan pilih **Refresh** dari daftar dropdown.
 
 3. Sumber data sekarang dipicu untuk penyegaran manual. Merefresh sumber data akan memperbarui skema entitas dan data untuk semua entitas yang ditentukan dalam sumber data.
 
@@ -86,7 +86,7 @@ Untuk me-refresh sumber data sesuai permintaan, ikuti langkah berikut:
 
 1. Buka **Data** > **Sumber data**.
 
-2. Pilih elipsis vertikal di sebelah sumber data yang ingin Anda hapus, lalu pilih **Hapus** dari menu dropdown.
+2. Pilih elipsis vertikal (&vellip;) di samping sumber data ingin Anda hapus dan pilih **Hapus** dari menu tarik-turun.
 
 3. Konfirmasikan penghapusan.
 
