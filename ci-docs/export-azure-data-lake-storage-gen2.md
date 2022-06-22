@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642600"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947234"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Mengekspor daftar segmen dan data lainnya ke Azure Data Lake Storage Gen2 (pratinjau)
 
@@ -21,11 +21,9 @@ Simpan data Customer Insights Anda di akun Data Lake Storage Gen2 atau gunakan u
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-1. Untuk Azure Data Lake Storage Gen2, Anda dapat memilih antara [tingkat performa Standar dan tingkat performa Premium](/azure/storage/blobs/create-data-lake-storage-account) saat membuat akun penyimpanan untuk data lake. Jika Anda memilih tingkat performa Premium, pilih blob blok premium sebagai jenis akun. 
+1. Untuk Azure Data Lake Storage Gen2, Anda dapat memilih antara [tingkat performa Standar dan tingkat performa Premium](/azure/storage/blobs/create-data-lake-storage-account) saat membuat akun penyimpanan untuk data lake. Jika Anda memilih tingkat performa Premium, pilih blob blok premium sebagai jenis akun.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Siapkan sambungan ke Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Siapkan sambungan ke Azure Data Lake Storage Gen2
 
 1. Buka **Admin** > **Koneksi**.
 
@@ -39,7 +37,7 @@ Simpan data Customer Insights Anda di akun Data Lake Storage Gen2 atau gunakan u
     - Untuk mempelajari cara membuat akun penyimpanan yang akan digunakan dengan Azure Data Lake Storage Gen2, lihat [Membuat akun penyimpanan](/azure/storage/blobs/create-data-lake-storage-account). 
     - Untuk mempelajari selengkapnya tentang nama akun Azure Data Lake Gen 2 dan kunci akun, lihat [Mengelola pengaturan akun penyimpanan di portal Azure](/azure/storage/common/storage-account-manage).
 
-1. Pilih **Simpan** untuk menyelesaikan koneksi. 
+1. Pilih **Simpan** untuk menyelesaikan koneksi.
 
 ## <a name="configure-an-export"></a>Mengonfigurasi ekspor
 
@@ -57,8 +55,12 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 Menyimpan ekspor tidak segera menjalankan ekspor.
 
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
+Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand).
 
-Data yang diekspor disimpan dalam wadah penyimpanan Azure Data Lake Gen 2 yang dikonfigurasi. 
+Data yang diekspor disimpan dalam wadah penyimpanan Azure Data Lake Gen 2 yang dikonfigurasi.
+
+> [!TIP]
+> Ekspor entitas yang berisi sejumlah besar data dapat menyebabkan beberapa file CSV di folder yang sama untuk setiap ekspor. Pemisahan ekspor terjadi karena alasan kinerja untuk meminimalkan waktu yang diperlukan untuk menyelesaikan ekspor.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

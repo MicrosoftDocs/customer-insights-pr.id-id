@@ -1,7 +1,7 @@
 ---
-title: Pengayaan profil perusahaan dengan Dun & Bradstreet
+title: Pengayaan profil perusahaan dengan Dun &Bradstreet
 description: Informasi umum tentang pengayaan pihak ketiga Dun & Bradstreet.
-ms.date: 04/26/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,27 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c738c2657d4cda213342629156ddc8104366bd8a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755404"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953895"
 ---
 # <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Pengayaan profil perusahaan dengan Dun & Bradstreet (Pratinjau)
 
-Dun & Bradstreet menyediakan data komersial, analitik, dan wawasan untuk bisnis. Hal ini memungkinkan pelanggan dengan profil pelanggan terpadu untuk perusahaan untuk memperkaya data mereka. Pengayaan termasuk atribut seperti nomor DUNS, ukuran perusahaan, lokasi, industri, dan banyak lagi.
+Dun & Bradstreet menyediakan data komersial, analitik, dan wawasan untuk bisnis. Hal ini memungkinkan pelanggan dengan profil pelanggan terpadu untuk perusahaan untuk memperkaya data mereka. Pengayaan mencakup atribut seperti nomor DUNS, ukuran perusahaan, lokasi, industri, dan banyak lagi.
 
 ## <a name="prerequisites"></a>Prasyarat
 
-Untuk mengonfigurasi pengayaan Dun & Bradstreet, prasyarat berikut harus dipenuhi:
+- Lisensi Dun & Bradstreet [yang aktif](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights).
+- [Profil](customer-profiles.md) pelanggan terpadu untuk perusahaan.
+- Sebuah proyek [Dun &Bradstreet](#set-up-your-dun--bradstreet-project) sedang disiapkan.
+- Koneksi Dun &Bradstreet [...](connections.md)[dikonfigurasi](#configure-a-connection-for-dun--bradstreet) oleh administrator.
 
-- Anda memiliki lisensi Dun & Bradstreet [yang aktif](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights).
-- Anda memiliki [profil pelanggan terpadu](customer-profiles.md) untuk perusahaan.
-- Koneksi Dun & Bradstreet [dikonfigurasi](connections.md) oleh administrator. Anda dapat membuatnya jika Anda memiliki [izin administrator](permissions.md#admin) dan kredensial dari Dun & Bradstreet Connect.
+## <a name="set-up-your-dun--bradstreet-project"></a>Siapkan proyek Dun & Bradstreet Anda
 
-## <a name="setting-up-your-dun--bradstreet-project"></a>Menyiapkan proyek Dun & Bradstreet Anda
-
-Sebagai pengguna berlisensi Dun & Bradstreet, Anda dapat membuat proyek di [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
-
+Sebagai pengguna berlisensi Dun & Bradstreet, Anda dapat mengatur proyek di [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
 
 1. Masuk ke [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Untuk mengambil kredensial, [pulihkan kata sandi](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights) Anda.
 
@@ -41,72 +39,75 @@ Sebagai pengguna berlisensi Dun & Bradstreet, Anda dapat membuat proyek di [Dun 
 
 1. Pilih titik horizontal di bawah sumber **yang relevan** dalam proyek Dun & Bradstreet yang baru dibuat untuk melihat opsi yang tersedia.
 
-   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Cuplikan layar titik-titik dalam proyek Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Tangkapan layar titik-titik dalam proyek Dun & Bradstreet.":::
 
 1. Pilih **Dapatkan detail** S3. Simpan informasi ini di tempat yang aman. Anda akan memerlukannya untuk [menyiapkan koneksi untuk pengayaan](#configure-a-connection-for-dun--bradstreet) di Customer Insights.
 
-   :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Tangkapan layar pemilihan informasi s3 dalam proyek Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Cuplikan layar pemilihan informasi s3 dalam proyek Dun & Bradstreet.":::
 
-## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
+## <a name="configure-a-connection-for-dun--bradstreet"></a>Mengonfigurasi koneksi untuk Dun &Bradstreet
 
-1. Buka **Data** > **Pengayaan**.
+Anda harus menjadi [administrator](permissions.md#admin) di Customer Insights dan memiliki kredensial dari Dun &Bradstreet Connect.
 
-1. Pilih **Perkaya data** saya di ubin Dun & Bradstreet dan pilih **Mulailah**.
+1. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan atau buka **Koneksi** > **Admin** dan pilih **Siapkan** di ubin Dun & Bradstreet.
 
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Tangkapan layar ubin Dun & Bradstreet.":::
+1. Masukkan nama untuk koneksi.
 
-1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda seorang administrator, Anda dapat membuat koneksi. Pilih **Tambahkan koneksi** dan pilih **Dun & Bradstreet**.
+1. Berikan kredensial Dun & Bradstreet yang valid dan detail *proyek Dun & Bradstreet Region, Drop folder path, dan Drop folder name*. Anda [mendapatkan informasi](#set-up-your-dun--bradstreet-project) ini dari proyek Dun & Bradstreet.
 
-1. Pilih **Sambungkan ke Dun & Bradstreet** untuk mengonfirmasi koneksi.
+1. Baca dan berikan persetujuan Anda untuk [privasi dan kesesuaian Data](#data-privacy-and-compliance) dengan memilih **Saya setuju**.
 
-1. Pilih **Berikutnya** dan pilih **Pelanggan himpunan data** ingin Anda memperkaya dengan data perusahaan dari Dun & Bradstreet. Anda dapat memilih **entitas Pelanggan** untuk memperkaya semua profil pelanggan Anda atau memilih entitas segmen untuk memperkaya hanya profil pelanggan terpadu yang terdapat dalam segmen tersebut.
-
-1. Pilih **Berikutnya** dan tentukan bidang mana dari profil terpadu Anda yang digunakan untuk mencari data perusahaan yang cocok dari Dun & Bradstreet. Nomor **DUNS** atau **Nama bidang perusahaan** dan **Negara** diperlukan. Bidang negara mendukung [dua atau tiga kode negara huruf, nama](https://www.iso.org/iso-3166-country-codes.html) negara dalam bahasa Inggris, nama negara dalam bahasa asli, dan awalan telepon. Beberapa varian negara yang umum meliputi:
-
-- AS: Amerika Serikat, Amerika Serikat, Amerika Serikat, Amerika Serikat, Amerika.
-- Ca: Kanada.
-- GB: Inggris, Inggris, Britania Raya, GB, Britania Raya dan Irlandia Utara, Britania Raya.
-- AU: Australia, Persemakmuran Australia.
-- FR: Prancis, Republik Prancis.
-- DE: Jerman, Jerman, Deutschland, Allemagne, Republik Federal Jerman, Republik Jerman.
-
-   :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panel pemetaan lapangan Dun & Bradstreet.":::
-
-1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
-
-1. Berikan nama untuk pengayaan dan pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
-
-## <a name="configure-a-connection-for-dun--bradstreet"></a>Mengonfigurasi koneksi untuk Dun & Bradstreet
-
-Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan *atau* buka **Koneksi** > **Admin** dan pilih **Siapkan** di petak Dun & Bradstreet.
-
-1. Pilih **Mulai**.
-
-1. Masukkan nama untuk koneksi dalam kotak **nama tampilan**.
-
-1. Berikan kredensial Dun & Bradstreet yang valid dan detail *proyek Dun & Bradstreet Wilayah, jalur folder Drop, dan nama* folder Drop. Anda [mendapatkan informasi](#setting-up-your-dun--bradstreet-project) ini dari proyek Dun & Bradstreet.
-
-1. Baca dan berikan persetujuan Anda untuk **privasi dan kesesuaian Data** dengan memilih **Saya setuju**.
-
-1. Pilih **Verifikasi** untuk memvalidasi konfigurasi.
-
-1. Setelah menyelesaikan verifikasi, pilih **Simpan**.
+1. Pilih **Verifikasi** untuk memvalidasi konfigurasi lalu pilih **Simpan**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Halaman konfigurasi koneksi Dun & Bradstreet.":::
 
+### <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
+
+Ketika Anda memungkinkan Dynamics 365 Customer Insights untuk mengirimkan data ke Dun & Bradstreet, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa Dun & Bradstreet memenuhi kewajiban privasi atau keamanan apa pun yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
+
+## <a name="supported-countries-or-regions"></a>Negara atau kawasan yang didukung
+
+Saat ini kami mendukung opsi negara/wilayah berikut: Kanada (Inggris) atau Amerika Serikat (Inggris).
+
+## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
+
+1. Buka tab **Data** > **Pengayaan** dan pilih **Temukan**.
+
+1. Pilih **Perkaya data** saya di **petak peta data** Perusahaan untuk Dun & Bradstreet.
+
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Tangkapan layar ubin Dun & Bradstreet.":::
+
+1. Tinjau gambaran umum lalu pilih **Berikutnya**.
+
+1. Pilih koneksi dan konfirmasi. Hubungi administrator jika tidak tersedia.
+
+1. Pilih **Selanjutnya**.
+
+1. **Pilih himpunan data** Pelanggan dan pilih profil atau segmen yang ingin Anda perkaya dengan data perusahaan dari Dun &Bradstreet. Entitas Pelanggan *memperkaya semua profil pelanggan Anda sedangkan segmen hanya memperkaya profil pelanggan yang terkandung dalam segmen tersebut*.
+
+1. Tentukan jenis bidang mana dari profil terpadu Anda yang akan digunakan untuk mencocokkan data perusahaan dari Dun &Bradstreet. Setidaknya salah satu bidang **Nama dan alamat**, **Telepon**, atau **Email** diperlukan.
+
+1. Pilih **berikutnya**
+
+1. Petakan bidang Anda ke data perusahaan dari Dun & Bradstreet. **Nomor DUNS** atau **Nama bidang perusahaan** dan **Negara** diperlukan.
+
+      :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panel pemetaan lapangan Dun & Bradstreet.":::
+
+1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
+
+1. Berikan **Nama** untuk pengayaan dan **nama** entitas Output.
+
+1. Pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
+
+1. Pilih **Jalankan** untuk memulai proses pengayaan atau tutup untuk kembali ke **halaman Pengayaan**.
+
 ## <a name="enrichment-results"></a>Hasil pengayaan
 
-Setelah menyegarkan pengayaan, Anda dapat meninjau data perusahaan yang diperkaya di dalam [pengayaan saya](enrichment-hub.md). Anda dapat menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
-
-Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lihat data yang diperkaya**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Langkah berikutnya
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
-
-Saat Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Dun & Bradstreet, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa Dun & Bradstreet memenuhi kewajiban privasi atau keamanan apa pun yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

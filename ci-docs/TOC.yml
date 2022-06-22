@@ -48,14 +48,14 @@
   items:
     - name: Ikhtisar sumber data
       href: data-sources.md
+    - name: Menyambungkan ke data di Azure Data Lake Storage
+      href: connect-common-data-model.md
+    - name: Menyambungkan ke Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Menyambung ke data di Data Lake yang dikelola oleh Microsoft Dataverse
+      href: connect-dataverse-managed-lake.md
     - name: Menambahkan sumber data melalui Power Query konektor
       href: connect-power-query.md
-    - name: Tambahkan folder Common Data Model sebagai sumber data
-      href: connect-common-data-model.md
-    - name: Menambahkan data lake terkelola Dataverse
-      href: connect-dataverse-managed-lake.md
-    - name: Menambahkan Azure Synapse Analytics
-      href: connect-synapse.md
     - name: Pengayaan untuk sumber data
       href: data-sources-enrichment.md
     - name: Refresh inkremental untuk sumber data
@@ -82,27 +82,27 @@
   items:
     - name: Perkaya profil pelanggan
       href: enrichment-hub.md
+    - name: Akun dari Office 365 data
+      href: enrichment-office.md
     - name: Merek dan minat
       href: enrichment-microsoft.md
+    - name: Data perusahaan dari Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Data perusahaan dari Leadspace
+      href: enrichment-leadspace.md
+    - name: Demografi dengan Experian
+      href: enrichment-experian.md
     - name: Alamat yang disempurnakan
       href: enrichment-enhanced-addresses.md
     - name: Data perusahaan yang disempurnakan
       href: enrichment-enhanced-company-data.md
-    - name: Perkaya dengan Azure Maps
-      href: enrichment-azure-maps.md
-    - name: Perkaya dengan Dun &Bradstreet
-      href: enrichment-dnb.md
-    - name: Perkaya dengan HERE Technologies
-      href: enrichment-here.md
-    - name: Memperkaya dengan Leadspace
-      href: enrichment-leadspace.md
-    - name: Perkaya dengan LiveRamp
+    - name: Identitas dengan LiveRamp
       href: enrichment-liveramp.md
-    - name: Perkaya dengan Experian
-      href: enrichment-experian.md
-    - name: Perkaya dengan Office 365 data
-      href: enrichment-office.md
-    - name: Perkaya dengan impor kustom SFTP
+    - name: Lokasi dari Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Lokasi dari HERE Technologies
+      href: enrichment-here.md
+    - name: Impor kustom SFTP
       href: enrichment-SFTP-custom-import.md
 - name: Profil terpadu
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Tentukan aktivitas pelanggan
       href: activities.md
+    - name: Manajemen persetujuan untuk Customer Insights
+      href: consent-management.md
 - name: Segmen
   items:
     - name: Sekilas tentang segmen
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: Kueri sampel OData
       href: odata-examples.md
-- name: Manajemen persetujuan (Pratinjau)
-  items:
-    - name: Pusat Bantuan
-      href: consent-management/index.yml
-    - name: Ikhtisar kemampuan
-      href: consent-management/overview.md
-    - name: Memulai
-      items:
-        - name: Memulai
-          href: consent-management/get-started.md
-        - name: Konsep dan terminologi
-          href: consent-management/glossary.md
-    - name: Impor data persetujuan
-      items:
-        - name: Impor data persetujuan
-          href: consent-management/import-consent-data.md
-        - name: Mengatur data persetujuan dan menerapkan preferensi persetujuan
-          href: consent-management/set-consent-rules.md
-    - name: Mengelola data persetujuan
-      items:
-        - name: Mengaktifkan aturan persetujuan di Customer Insights
-          href: activate-consent.md
-        - name: Mengelola aturan persetujuan default di segmen Customer Insights
-          href: change-default-consent-rules.md
-    - name: Mengelola setelan dan pengguna
-      items:
-        - name: Mengonfigurasi pengaturan sistem
-          href: consent-management/system-settings.md
-        - name: Mengelola pengguna dan izin
-          href: consent-management/manage-users.md
-    - name: Menggunakan data persetujuan
-      items:
-        - name: Membuat prediksi dengan data persetujuan
-          href: consent-management/predictions-consent-data.md
 - name: Batas Layanan
   href: service-limits.md
 - name: Permintaan dan hak DSR

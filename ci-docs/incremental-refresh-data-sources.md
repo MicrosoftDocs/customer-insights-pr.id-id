@@ -1,26 +1,26 @@
 ---
-title: Refresh inkremental untuk Power Query sumber data berbasis
-description: Refresh data baru dan terbaru untuk sumber data besar berdasarkan Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+title: Refresh inkremental untuk Power Query dan sumber data Azure Data Lake
+description: Refresh data baru dan yang diperbarui untuk sumber data besar berdasarkan Power Query atau sumber data danau data Azure.
+ms.date: 05/30/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 3d21baf9804f300802b066df0183fc8f01abba9a
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643662"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012029"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Penyegaran inkremental untuk sumber data berdasarkan Power Query
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Refresh inkremental untuk Power Query dan sumber data Azure Data Lake
 
-Artikel ini membahas cara mengonfigurasi refresh inkremental untuk sumber data berdasarkan Power Query.
+Artikel ini membahas cara mengonfigurasi refresh inkremental untuk sumber data berdasarkan Power Query atau Azure Data Lake.
 
 Peningkatan refresh secara bertahap untuk sumber data memberikan keuntungan berikut:
 
@@ -28,15 +28,13 @@ Peningkatan refresh secara bertahap untuk sumber data memberikan keuntungan beri
 - **Peningkatan keandalan** -dengan penyegaran lebih kecil, Anda tidak perlu memelihara koneksi ke sistem sumber volatil begitu lama, sehingga mengurangi risiko masalah koneksi.
 - **Pengurangan konsumsi sumber daya** -menyegarkan hanya subset dari total data Anda yang menyebabkan penggunaan sumber daya komputasi lebih efisien dan mengurangi emisi lingkungan.
 
-## <a name="configure-incremental-refresh"></a>Mengonfigurasikan penyegaran tambahan
+## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Mengonfigurasi refresh inkremental untuk sumber data berdasarkan Power Query
 
-Customer Insights memungkinkan penyegaran tambahan untuk sumber data yang diimpor melalui Power Query dukungan penyerapan inkremental tersebut. Misalnya, database Azure SQL dengan bidang tanggal dan waktu, yang menunjukkan Kapan rekaman data terakhir diperbarui.
+Customer Insights memungkinkan refresh inkremental untuk sumber data yang diimpor melalui Power Query yang mendukung penyerapan inkremental. Misalnya, database Azure SQL dengan bidang tanggal dan waktu, yang menunjukkan Kapan rekaman data terakhir diperbarui.
 
-1. [Buat sumber data baru berdasarkan Power Query](connect-power-query.md).
+1. [Buat sumber data baru berdasarkan file Power Query](connect-power-query.md).
 
-1. **Berikan nama** untuk sumber data.
-
-1. Pilih sumber data yang mendukung refresh inkremental, seperti [database](/power-query/connectors/azuresqldatabase) Azure SQL.
+1. Pilih sumber data yang mendukung refresh inkremental, seperti [database Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Pilih entitas atau tabel untuk diserap.
 
@@ -48,7 +46,7 @@ Customer Insights memungkinkan penyegaran tambahan untuk sumber data yang diimpo
 
 1. Pada **pengaturanpenyegaran tambahan**, anda akan mengkonfigurasikan refresh tambahan untuk semua entitas yang anda pilih saat membuat sumber data.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="konfigurasikan entitas di sumber data untuk penyegaran tambahan.":::
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Konfigurasikan pengaturan refresh inkremental.":::
 
 1. Pilih entitas, dan berikan rincian berikut:
 
@@ -58,5 +56,31 @@ Customer Insights memungkinkan penyegaran tambahan untuk sumber data yang diimpo
 
 1. Pilih **simpan** untuk menyelesaikan pembuatan sumber data. Penyegaran data awal akan menjadi penyegaran penuh. Setelah itu, penyegaran data tambahan terjadi sebagaimana dikonfigurasi di langkah sebelumnya.
 
+## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Mengonfigurasi refresh inkremental untuk sumber data Azure Data Lake
+
+Customer Insights memungkinkan refresh inkremental untuk sumber data yang terhubung ke Azure Data Lake Storage. Untuk menggunakan penyerapan dan refresh inkremental untuk entitas, konfigurasikan entitas tersebut saat menambahkan azure Data Lake sumber data atau yang lebih baru saat mengedit sumber data. Folder data entitas harus berisi folder berikut:
+
+- **FullData**: Folder dengan file data yang berisi rekaman awal
+- **IncrementalData**: Folder dengan folder hierarki tanggal/waktu dalam **format yyyy/mm/dd/hh** yang berisi pembaruan inkremental. **hh** mewakili jam UTC pembaruan dan berisi **folder Upserts** dan **Deletes**. **Upsert** berisi file data dengan pembaruan pada rekaman yang sudah ada atau catatan baru. **Penghapusan** berisi file data dengan catatan yang akan dihapus.
+
+1. Saat menambahkan atau mengedit sumber data, navigasikan ke **panel Atribut** untuk entitas tersebut.
+
+1. Tinjau atribut. Pastikan atribut tanggal yang dibuat atau terakhir diperbarui diatur dengan *format Data dateTime* **dan** tipe *Semantik* Calendar.Date **·**. Edit atribut jika perlu dan pilih **Selesai**.
+
+1. **Dari panel Pilih Entitas**, edit entitas. Kotak **centang Penyerapan** inkremental dipilih.
+
+   :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="konfigurasikan entitas di sumber data untuk penyegaran tambahan.":::
+
+   1. Telusuri ke folder akar yang berisi file .csv atau .parquet untuk data lengkap, peningkatan data inkremental, dan penghapusan data inkremental.
+   1. Masukkan ekstensi untuk data lengkap dan kedua file inkremental (\. csv atau \. parket).
+   1. Pilih **Simpan**.
+
+1. Untuk **Terakhir diperbarui**, pilih atribut stempel waktu tanggal.
+
+1. Jika kunci **Utama** tidak dipilih, pilih kunci utama. Kunci utama adalah atribut yang unik untuk entitas. Agar atribut menjadi kunci primer yang valid, ia seharusnya tidak menyertakan nilai duplikat, nilai yang tidak ada, atau nilai null. Atribut tipe data string, integer, dan GUID didukung sebagai kunci utama.
+
+1. Pilih **Tutup** untuk menyimpan dan menutup panel.
+
+1. Lanjutkan dengan menambahkan atau mengedit sumber data.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

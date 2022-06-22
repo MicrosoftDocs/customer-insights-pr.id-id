@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833772"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011891"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Tanya Jawab uji coba Dynamics 365 Customer Insights
 
@@ -66,9 +66,9 @@ Secara opsional, jika hanya menggunakan Customer Insights, Anda dapat menyalin d
 
 Setelah masuk ke instans Customer Insights berbayar Anda untuk pertama kalinya, Anda diminta untuk membuat lingkungan baru. Dalam proses ini, Anda dapat memilih untuk menyalin konfigurasi dari lingkungan yang ada dan memigrasikan sebagian besar pengaturan. Jika Anda memiliki izin yang disebutkan di atas, lingkungan uji coba akan ditampilkan dalam daftar ini. Untuk informasi selengkapnya, lihat [Menyalin konfigurasi lingkungan](create-environment.md#copy-the-environment-configuration).
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>Apa saja batas uji coba dan kuota?
+### <a name="what-are-the-trial-limits-and-quotas"></a>Apa saja kuota dan batasan uji coba?
 
-- Anda tidak dapat menggunakan akun penyimpanan Azure Data Lake Anda sendiri untuk menyimpan data output selama versi uji coba Customer Insights. Namun, Anda dapat menyerap data dari akun Data Lake Storage.
+- Anda tidak dapat menggunakan akun Anda sendiri Azure Data Lake Storage untuk menyimpan data output selama versi uji coba Customer Insights. Namun, Anda dapat menyerap data dari akun Data Lake Storage.
 - Anda dapat menyimpan data hingga 3 GB di lingkungan Dataverse yang disediakan secara otomatis saat memulai uji coba Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Pertanyaan khusus Customer Insights
@@ -83,7 +83,7 @@ Sebagian besar fitur kemampuan Customer Insights tersedia dalam uji coba.
 
 Fitur-fitur **berikut tidak tersedia**:
 
-- Anda tidak dapat membuat lingkungan baru yang menggunakan akun penyimpanan Azure Data Lake Storage.
+- Anda tidak dapat membuat lingkungan baru yang menggunakan akun Anda sendiri Azure Data Lake Storage.
 - Anda tidak dapat menghapus lingkungan uji coba.
 
 ### <a name="how-long-does-the-trial-last"></a>Berapa lama uji coba berlangsung?

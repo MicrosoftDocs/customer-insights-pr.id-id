@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833389"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011845"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Menyambung ke akun Azure Data Lake Storage menggunakan prinsipal layanan Azure
 
@@ -51,7 +51,13 @@ Sebelum membuat perwakilan layanan baru untuk Customer Insights, periksa apakah 
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Berikan izin kepada prinsipal layanan untuk mengakses akun Penyimpanan
 
-Buka portal Microsoft Azure untuk memberikan izin kepada perwakilan layanan untuk akun penyimpanan yang ingin Anda gunakan di Customer Insights.
+Buka portal Microsoft Azure untuk memberikan izin kepada perwakilan layanan untuk akun penyimpanan yang ingin Anda gunakan di Customer Insights. Salah satu peran berikut harus ditetapkan ke akun penyimpanan atau kontainer:
+
+|Credential|Persyaratan|
+|----------|------------|
+|Pengguna yang saat ini masuk log|**Peran**: Pembaca Data Blob Penyimpanan, kontributor Blob Penyimpanan, atau Pemilik Blob Penyimpanan.<br>**Level**: Izin dapat diberikan pada akun penyimpanan atau kontainer.</br>|
+|Perwakilan Layanan Customer Insights -<br>Menggunakan Azure Data Lake Storage sebagai sumber data</br>|Pilihan 1<ul><li>**Peran**: Pembaca Data Blob Penyimpanan, kontributor Data Blob Penyimpanan, atau Pemilik Data Blob Penyimpanan.</li><li>**Level**: Izin harus diberikan pada akun penyimpanan.</li></ul>Opsi 2 *(tanpa berbagi akses Perwakilan Layanan ke akun penyimpanan)*<ul><li>**Peran 1**: Pembaca Data Blob Penyimpanan, kontributor Data Blob Penyimpanan, atau Pemilik Data Blob Penyimpanan.</li><li>**Level**: Izin harus diberikan pada kontainer.</li><li>**Peran 2**: Delegator Data Blob Penyimpanan.</li><li>**Level**: Izin harus diberikan pada akun penyimpanan.</li></ul>|
+|Perwakilan Layanan Customer Insights - <br>Menggunakan Azure Data Lake Storage sebagai output atau tujuan</br>|Pilihan 1<ul><li>**Peran**: Data Blob Penyimpanan kontributor atau Pemilik Blob Penyimpanan.</li><li>**Level**: Izin harus diberikan pada akun penyimpanan.</li></ul>Opsi 2 *(tanpa berbagi akses Perwakilan Layanan ke akun penyimpanan)*<ul><li>**Peran**: Data Blob Penyimpanan kontributor atau Pemilik Blob Penyimpanan.</li><li>**Level**: Izin harus diberikan pada kontainer.</li><li>**Peran 2**: Delegator Blob Penyimpanan.</li><li>**Level**: Izin harus diberikan pada akun penyimpanan.</li></ul>|
 
 1. Buka [portal admin Azure](https://portal.azure.com), lalu masuk ke organisasi Anda.
 
@@ -62,7 +68,7 @@ Buka portal Microsoft Azure untuk memberikan izin kepada perwakilan layanan untu
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Cuplikan layar yang menampilkan portal Azure saat menambahkan penetapan peran.":::
 
 1. Di panel **Tambah penetapan peran**, atur properti berikut:
-   - Peran: **kontributor data Blob penyimpanan**
+   - Peran: Pembaca Data Blob Penyimpanan, kontributor Blob Penyimpanan, atau Pemilik Blob Penyimpanan berdasarkan kredensial yang tercantum di atas.
    - Tetapkan akses ke: **pengguna, grup, atau prinsipal Layanan**
    - Pilih anggota: **Dynamics 365 AI for Customer Insights** ([perwakilan](#create-a-new-service-principal) layanan yang Anda cari sebelumnya dalam prosedur ini)
 

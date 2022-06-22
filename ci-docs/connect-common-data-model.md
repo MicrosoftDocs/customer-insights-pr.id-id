@@ -1,105 +1,186 @@
 ---
 title: Sambungkan data Common Data Model ke akun Azure Data Lake
 description: Bekerja dengan Common Data Model menggunakan Azure Data Lake Storage.
-ms.date: 05/24/2022
-ms.subservice: audience-insights
+ms.date: 05/30/2022
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833363"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011565"
 ---
-# <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Sambungkan ke folder Common Data Model dengan akun Azure Data Lake Store
+# <a name="connect-to-data-in-azure-data-lake-storage"></a>Menyambungkan ke data di Azure Data Lake Storage
 
-Artikel ini menyediakan informasi tentang cara menyerap data dari Dynamics 365 Customer Insights folder Common Data Model menggunakan akun Gen2 Anda Azure Data Lake Storage.
+Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure Data Lake Storage. Penyerapan data bisa penuh atau bertahap.
 
-## <a name="important-considerations"></a>Pertimbangan penting
+## <a name="prerequisites"></a>Prasyarat
 
-- Data di Azure Data Lake data harus mengikuti standar Common Data Model. Format lain tidak didukung saat ini.
+- Penyerapan data mendukung Azure Data Lake Storage *akun Gen2* secara eksklusif. Anda tidak dapat menggunakan akun Data Lake Storage Gen1 untuk menyerap data.
 
-- Konsumsi data mendukung akun penyimpanan Azure data Lake *Gen2* secara eksklusif. Anda tidak dapat menggunakan akun penyimpanan Azure Data Lake Gen1 untuk menyerap data.
+- Akun Azure Data Lake Storage harus mengaktifkan [namespace hierarki](/azure/storage/blobs/data-lake-storage-namespace). Data harus disimpan dalam format folder hierarki yang mendefinisikan folder root dan memiliki subfolder untuk setiap entitas. Subfolder dapat memiliki data lengkap atau folder data inkremental.
 
-- Akun penyimpanan Azure Data Lake harus mengaktifkan [namespace hierarki](/azure/storage/blobs/data-lake-storage-namespace).
+- Untuk mengautentikasi dengan prinsipal Layanan Azure, pastikan perangkat dikonfigurasi di penyewa Anda. Untuk informasi selengkapnya, lihat [Menyambungkan ke Azure Data Lake Storage akun Gen2 dengan perwakilan](connect-service-principal.md) layanan Azure.
 
-- Untuk mengautentikasi dengan prinsipal Layanan Azure, pastikan perangkat dikonfigurasi di penyewa Anda. Untuk informasi selengkapnya, lihat [Menyambungkan ke Azure Data Lake Storage akun Gen2 dengan perwakilan layanan Azure](connect-service-principal.md).
+- Anda Azure Data Lake Storage ingin menyambungkan dan menyerap data dari harus berada di wilayah Azure yang sama dengan Dynamics 365 Customer Insights lingkungan. Koneksi ke folder Common Data Model dari Data Lake di kawasan Azure berbeda tidak didukung. Untuk mengetahui wilayah lingkungan Azure, buka **Sistem** > **Admin** > **Tentang** di Customer Insights.
 
-- Azure Data Lake yang akan disambungkan dan diserap datanya harus berada di kawasan Azure yang sama dengan lingkungan Dynamics 365 Customer Insights. Koneksi ke folder Common Data Model dari Data Lake di kawasan Azure berbeda tidak didukung. Untuk mengetahui wilayah lingkungan Azure, buka **Sistem** > **Admin** > **Tentang** di Customer Insights.
+- Data yang disimpan dalam layanan online dapat disimpan di lokasi yang berbeda dari tempat data diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari selengkapnya di Pusat](https://www.microsoft.com/trust-center) Kepercayaan Microsoft.
 
-- Data yang disimpan dalam layanan online dapat disimpan di lokasi yang berbeda dari tempat data diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari selengkapnya di Pusat Kepercayaan Microsoft](https://www.microsoft.com/trust-center).
+- Perwakilan layanan Customer Insights harus berada di salah satu peran berikut untuk mengakses akun penyimpanan. Untuk informasi selengkapnya, lihat [Memberikan izin kepada perwakilan layanan untuk mengakses akun](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account) penyimpanan.
+  - Pembaca Data Blob Penyimpanan
+  - pemilik Data Blob Penyimpanan
+  - Kontributor data Blob penyimpanan
 
-## <a name="connect-to-a-common-data-model-folder"></a>Sambungkan ke folder Model Data Umum
+- Data di Data Lake Storage Anda harus mengikuti standar Common Data Model untuk penyimpanan data Anda dan memiliki manifes model data umum untuk mewakili skema file data (*.csv atau *.parquet). Manifes harus memberikan detail entitas seperti kolom entitas dan tipe data, serta lokasi file data dan jenis file. Untuk informasi selengkapnya, lihat [Manifes](/common-data-model/sdk/manifest) Common Data Model. Jika manifes tidak ada, pengguna Admin dengan Pemilik Data Blob Penyimpanan atau akses kontributor Data Blob Penyimpanan dapat menentukan skema saat menyerap data.
+
+## <a name="connect-to-azure-data-lake-storage"></a>Menyambungkan ke Azure Data Lake Storage
 
 1. Buka **Data** > **Sumber data**.
 
 1. Pilih **Tambahkan sumber data**.
 
-1. Pilih **Penyimpanan** danau data Azure, masukkan **Nama** untuk sumber data, lalu pilih **Berikutnya**.
+1. Pilih **Penyimpanan** danau data Azure.
 
-   - Jika diminta, pilih salah satu himpunan data sampel yang berkaitan dengan industri Anda, lalu pilih **Berikutnya**.
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Kotak dialog untuk memasukkan detail koneksi untuk Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Anda dapat memilih antara menggunakan pilihan berbasis sumber daya dan pilihan berbasis langganan untuk autentikasi. Untuk informasi selengkapnya, lihat [Menyambungkan ke Azure Data Lake Storage akun Gen2 dengan perwakilan layanan Azure](connect-service-principal.md). Masukkan **Alamat server**, pilih **masuk**, lalu pilih **Berikutnya**.
-   > [!div class="mx-imgBorder"]
-   > ![Kotak dialog untuk memasukkan rincian sambungan baru untuk Azure Data Lake.](media/enter-new-storage-details.png)
+1. **Masukkan Nama** untuk sumber data dan Deskripsi **opsional**. Nama ini secara unik mengidentifikasi sumber data dan dirujuk dalam proses hilir dan tidak dapat diubah.
+
+1. Pilih salah satu opsi berikut untuk **Menyambungkan penyimpanan Anda menggunakan**. Untuk informasi selengkapnya, lihat [Menyambungkan Customer Insights ke Azure Data Lake Storage akun Gen2 dengan perwakilan](connect-service-principal.md) layanan Azure.
+
+   - **Sumber daya** Azure: Masukkan **Id** Sumber Daya. Secara opsional, jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link, pilih **Aktifkan Private Link**. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#private-links-tab) Pribadi.
+   - **Langganan** Azure: Pilih **Langganan** lalu **Grup** sumber daya dan **akun** Penyimpanan. Secara opsional, jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link, pilih **Aktifkan Private Link**. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#private-links-tab) Pribadi.
+  
    > [!NOTE]
-   > Anda memerlukan salah satu peran berikut baik ke kontainer di akun penyimpanan untuk dan membuat sumber data:
+   > Anda memerlukan salah satu peran berikut baik ke kontainer atau akun penyimpanan untuk membuat sumber data:
    >
    >  - Pembaca Data Blob Penyimpanan cukup untuk dibaca dari akun penyimpanan dan menyerap data ke Customer Insights. 
-   >  - Data Blob Penyimpanan kontributor atau Pemilik diperlukan jika Anda ingin mengedit file manifes secara langsung di Customer Insights.
-
-1. Di dialog **Pilih folder Common Data Model**, pilih file model.JSON atau manifest.json untuk diimpor datanya, lalu pilih **berikutnya**.
+   >  - Data Blob Penyimpanan kontributor atau Pemilik diperlukan jika Anda ingin mengedit file manifes secara langsung di Customer Insights.  
+  
+1. Pilih nama **Kontainer** yang berisi data dan skema (file model.json atau manifest.json) untuk mengimpor data, dan pilih **Berikutnya**.
    > [!NOTE]
-   > File model.json atau manifest.json yang terkait dengan sumber data lain di lingkungan tidak akan ditampilkan dalam daftar.
+   > File model.json atau manifest.json yang terkait dengan sumber data lain di lingkungan tidak akan ditampilkan dalam daftar. Namun, file model.json atau manifest.json yang sama dapat digunakan untuk sumber data di beberapa lingkungan.
 
-1. Anda akan melihat daftar entitas yang tersedia dalam file model.json atau manifest.json yang dipilih. Tinjau dan pilih dari daftar entitas yang tersedia, lalu pilih **Simpan**. Semua entitas yang dipilih akan diserap dari sumber data baru.
-   > [!div class="mx-imgBorder"]
-   > ![Kotak dialog menampilkan daftar entitas dari file model.json.](media/review-entities.png)
+1. Untuk membuat skema baru, buka [Membuat file](#create-a-new-schema-file) skema baru.
 
-1. Tunjukkan entitas data mana yang ingin Anda aktifkan pembuatan profil data, lalu pilih **Simpan**. Pembuatan profil data memungkinkan kemampuan analitik dan kemampuan lainnya. Anda dapat memilih seluruh entitas, yang memilih semua atribut dari entitas, atau memilih atribut tertentu pilihan Anda. Secara default, entitas tidak diaktifkan untuk pembuatan profil data.
-   > [!div class="mx-imgBorder"]
-   > ![Kotak dialog menampilkan profil data.](media/dataprofiling-entities.png)
+1. Untuk menggunakan skema yang ada, navigasikan ke folder yang berisi file model.json atau manifest.cdm.json. Anda dapat mencari di dalam direktori untuk menemukan file.
 
-1. Setelah menyimpan pilihan, halaman **sumber data** akan terbuka. Anda seharusnya sekarang melihat koneksi folder Common Data Model sebagai sumber data.
+1. Pilih file json dan pilih **Berikutnya**. Daftar entitas yang tersedia ditampilkan.
 
-> [!NOTE]
-> File model.json atau manifest.json hanya dapat dikaitkan dengan satu sumber data di lingkungan yang sama. Namun, file model.json atau manifest.json yang sama dapat digunakan untuk sumber data di beberapa lingkungan.
+   :::image type="content" source="media/review-entities.png" alt-text="Kotak dialog daftar entitas yang akan dipilih":::
 
-## <a name="edit-a-common-data-model-folder-data-source"></a>Mengedit sumber data folder Common Data Model
+1. Pilih entitas yang ingin Anda sertakan.
 
-Anda dapat memperbarui kunci akses untuk akun penyimpanan yang berisi folder Common Data Model. Anda juga dapat mengubah file model.json atau manifest.json. Untuk menyambung ke kontainer lain dari akun penyimpanan, atau mengubah nama akun, buat [sambungan sumber data baru](#connect-to-a-common-data-model-folder).
+   :::image type="content" source="media/ADLS_required.png" alt-text="Kotak dialog memperlihatkan Diperlukan untuk kunci Utama":::
+
+   > [!TIP]
+   > Untuk mengedit entitas dalam antarmuka pengeditan JSON, pilih **Tampilkan lebih banyak** > **edit file skema**. Buat perubahan dan pilih **Simpan**.
+
+1. Untuk entitas yang dipilih yang memerlukan penyerapan inkremental, **Diperlukan** ditampilkan di bawah **Refresh** inkremental. Untuk setiap entitas ini, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+
+1. Untuk entitas yang dipilih di mana kunci utama belum ditentukan, **Diperlukan** ditampilkan di bawah **Kunci utama**. Untuk masing-masing entitas ini:
+   1. Pilih **Diperlukan**. Panel **Edit entitas** ditampilkan.
+   1. Pilih kunci **Utama**. Kunci utama adalah atribut yang unik untuk entitas. Agar atribut menjadi kunci primer yang valid, ia seharusnya tidak menyertakan nilai duplikat, nilai yang tidak ada, atau nilai null. Atribut tipe data string, integer, dan GUID didukung sebagai kunci utama.
+   1. Secara opsional, ubah pola partisi.
+   1. Pilih **Tutup** untuk menyimpan dan menutup panel.
+
+1. Pilih jumlah **Atribut** untuk setiap entitas yang disertakan. Halaman **Kelola atribut** ditampilkan.
+
+   :::image type="content" source="media/dataprofiling-entities.png" alt-text="Kotak dialog untuk memilih pembuatan profil data.":::
+
+   1. Buat atribut baru, edit, atau hapus atribut yang ada. Anda dapat mengubah nama, format data, atau menambahkan tipe semantik.
+   1. Untuk mengaktifkan analitik dan kemampuan lainnya, pilih **Pembuatan profil data** untuk seluruh entitas atau untuk atribut tertentu. Secara default, entitas tidak diaktifkan untuk pembuatan profil data.
+   1. Pilih **Selesai**.
+
+1. Pilih **Simpan**. Halaman **Sumber data** terbuka memperlihatkan sumber data baru dalam **status Refresh**.
+
+### <a name="create-a-new-schema-file"></a>Membuat file skema baru
+
+1. Pilih **File skema baru**.
+
+1. Masukkan nama untuk file tersebut dan pilih **Simpan**.
+
+1. Pilih **Entitas baru**. Panel **Entitas** Baru ditampilkan.
+
+1. Masukkan nama entitas dan pilih **lokasi File data**.
+   - **Beberapa file** .csv atau .parquet: Telusuri ke folder akar, pilih jenis pola, dan masukkan ekspresi.
+   - **File .csv tunggal atau .parquet**: Telusuri ke file .csv atau .parquet dan pilih file tersebut.
+
+   :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Kotak dialog untuk membuat entitas baru dengan lokasi file Data disorot.":::
+
+1. Pilih **Simpan**.
+
+   :::image type="content" source="media/ADLS_new_entity_define_attributes.png" alt-text="Kotak dialog untuk menentukan atau membuat atribut secara otomatis.":::
+
+1. Pilih **tentukan atribut** untuk menambahkan atribut secara manual, atau pilih buat **atribut** secara otomatis. Untuk menentukan atribut, masukkan nama, pilih format data dan tipe semantik opsional. Untuk atribut yang dibuat secara otomatis:
+
+   1. Setelah atribut dibuat secara otomatis, pilih **Tinjau atribut**. Halaman **Kelola atribut** ditampilkan.
+
+   1. Pastikan format data sudah benar untuk setiap atribut.
+
+   1. Untuk mengaktifkan analitik dan kemampuan lainnya, pilih **Pembuatan profil data** untuk seluruh entitas atau untuk atribut tertentu. Secara default, entitas tidak diaktifkan untuk pembuatan profil data.
+
+      :::image type="content" source="media/dataprofiling-entities.png" alt-text="Kotak dialog untuk memilih pembuatan profil data.":::
+
+   1. Pilih **Selesai**. Halaman **Pilih entitas** ditampilkan.
+
+1. Terus tambahkan entitas dan atribut, jika berlaku.
+
+1. Setelah semua entitas ditambahkan, pilih **Sertakan** untuk menyertakan entitas dalam penyerapan sumber data.
+
+   :::image type="content" source="media/ADLS_required.png" alt-text="Kotak dialog memperlihatkan Diperlukan untuk kunci Utama":::
+
+1. Untuk entitas yang dipilih yang memerlukan penyerapan inkremental, **Diperlukan** ditampilkan di bawah **Refresh** inkremental. Untuk setiap entitas ini, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+
+1. Untuk entitas yang dipilih di mana kunci utama belum ditentukan, **Diperlukan** ditampilkan di bawah **Kunci utama**. Untuk masing-masing entitas ini:
+   1. Pilih **Diperlukan**. Panel **Edit entitas** ditampilkan.
+   1. Pilih kunci **Utama**. Kunci utama adalah atribut yang unik untuk entitas. Agar atribut menjadi kunci primer yang valid, ia seharusnya tidak menyertakan nilai duplikat, nilai yang tidak ada, atau nilai null. Atribut tipe data string, integer, dan GUID didukung sebagai kunci utama.
+   1. Secara opsional, ubah pola partisi.
+   1. Pilih **Tutup** untuk menyimpan dan menutup panel.
+
+1. Pilih **Simpan**. Halaman **Sumber data** terbuka memperlihatkan sumber data baru dalam **status Refresh**.
+
+
+## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage Mengedit sumber data
+
+Anda dapat memperbarui *opsi Sambungkan ke akun penyimpanan menggunakan*. Untuk informasi selengkapnya, lihat [Menyambungkan Customer Insights ke Azure Data Lake Storage akun Gen2 dengan perwakilan](connect-service-principal.md) layanan Azure. Untuk menyambung ke kontainer lain dari akun penyimpanan, atau mengubah nama akun, buat [sambungan sumber data baru](#connect-to-azure-data-lake-storage).
 
 1. Buka **Data** > **Sumber data**.
 
-2. Di samping sumber data yang ingin Anda perbarui, pilih elipsis vertikal (&vellip;).
+1. Di samping sumber data yang ingin Anda perbarui, pilih **Edit**.
 
-3. Pilih opsi **Edit** dari daftar.
+   :::image type="content" source="media/data_sources_edit_ADLS.png" alt-text="Kotak dialog untuk mengedit sumber data Azure Data Lake.":::
 
-4. Atau, perbarui **tombol akses** dan pilih **berikutnya**.
+1. Ubah salah satu informasi berikut:
 
-   ![Dialog untuk mengedit dan memperbarui kunci akses untuk sumber data yang ada.](media/edit-access-key.png)
+   - **KETERANGAN**
+   - **Hubungkan penyimpanan Anda menggunakan** dan informasi koneksi. Anda tidak dapat **mengubah** informasi penampung saat memperbarui sambungan.
+      > [!NOTE]
+      > Salah satu peran berikut harus ditetapkan ke akun penyimpanan atau kontainer:
+        > - Pembaca Data Blob Penyimpanan
+        > - pemilik Data Blob Penyimpanan
+        > - Kontributor data Blob penyimpanan
 
-5. Atau, Anda dapat memperbarui dari sambungan kunci akun ke sambungan berbasis sumber daya atau berbasis langganan. Untuk informasi selengkapnya, lihat [Menyambungkan ke Azure Data Lake Storage akun Gen2 dengan perwakilan layanan Azure](connect-service-principal.md). Anda tidak dapat **mengubah** informasi penampung saat memperbarui sambungan.
-   > [!div class="mx-imgBorder"]
+   - **Aktifkan Private Link** jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#private-links-tab) Pribadi.
 
-   > ![Kotak dialog untuk memasukkan rincian sambungan untuk Azure Data Lake ke akun penyimpanan yang ada.](media/enter-existing-storage-details.png)
+1. Pilih **Selanjutnya**.
+1. Ubah salah satu hal berikut ini:
+   - Navigasikan ke file model.json atau manifest.json yang berbeda dengan sekumpulan entitas yang berbeda dari kontainer.
+   - Untuk menambahkan entitas tambahan ke penyerapan, pilih **Entitas baru**.
+   - Untuk menghapus entitas yang sudah dipilih jika tidak ada dependensi, pilih entitas dan **Hapus**.
+      > [!IMPORTANT]
+      > Jika ada dependensi pada file model.json atau manifest.json yang ada dan rangkaian entitas, Anda akan melihat pesan kesalahan dan tidak dapat memilih file model.json atau json yang berbeda. Hilangkan dependensi tersebut sebelum mengubah file model.json atau manifest.json atau buat sumber data baru dengan file model.json atau manifest.json yang ingin Anda gunakan untuk menghindari dependensi dihapus.
+   - Untuk mengubah lokasi file data atau kunci utama, pilih **Edit**.
+   - Untuk mengubah data penyerapan inkremental, lihat [Mengonfigurasi refresh inkremental untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md)
 
-6. Atau, pilih file model.json atau manifest.json dengan rangkaian entitas yang berbeda dari wadah.
+1. Pilih **Atribut** untuk menambahkan atau mengubah atribut, atau untuk mengaktifkan pembuatan profil data. Kemudian pilih **Selesai**.
 
-7. Atau, Anda dapat memilih entitas tambahan untuk diserap. Anda juga dapat menghapus entitas yang telah dipilih jika tidak ada dependensi.
-
-   > [!IMPORTANT]
-   > Jika ada dependensi pada file model.json atau manifest.json yang ada dan rangkaian entitas, Anda akan melihat pesan kesalahan dan tidak dapat memilih file model.json atau json yang berbeda. Hilangkan dependensi tersebut sebelum mengubah file model.json atau manifest.json atau buat sumber data baru dengan file model.json atau manifest.json yang ingin Anda gunakan untuk menghindari dependensi dihapus.
-
-8. Atau, Anda dapat memilih atribut atau entitas tambahan untuk mengaktifkan pemrofilan data atau menonaktifkan yang telah dipilih.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Klik **Simpan** untuk menerapkan perubahan Anda dan kembali ke **halaman Sumber** data.

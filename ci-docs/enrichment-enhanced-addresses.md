@@ -1,7 +1,7 @@
 ---
 title: Pengayaan peningkatan alamat (berisi video)
 description: Perkaya dan normalisasi informasi alamat profil pelanggan dengan model Microsoft.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642469"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953815"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang disempurnakan
 
@@ -53,17 +53,17 @@ Informasi alamat mungkin berada dalam format nonstandard dan berisi kesalahan ej
 
 ### <a name="limitations"></a>Pembatasan
 
-Alamat yang disempurnakan hanya berfungsi dengan nilai yang sudah ada di data alamat yang diserap. Model tidak: 
+Alamat yang disempurnakan hanya berfungsi dengan nilai yang sudah ada di data alamat yang Anda konsumsi. Model tidak:
 
 1. Memverifikasikan apakah alamat tersebut adalah alamat yang valid.
 2. Memverifikasikan apakah salah satu nilai, seperti kode ZIP atau nama jalan, valid.
 3. Mengubah nilai yang tidak dikenali.
 
-Model menggunakan teknik berbasis pembelajaran mesin untuk meningkatkan alamat. Meskipun kami menerapkan ambang batas keyakinan tinggi bila model mengubah nilai input, seperti model berbasis pembelajaran mesin, keakuratan 100 persen tidak dijamin.
+Model menggunakan teknik berbasis pembelajaran mesin untuk meningkatkan alamat. Seperti halnya model berbasis pembelajaran mesin lainnya, akurasi 100 persen tidak dijamin.
 
 ## <a name="supported-countries-or-regions"></a>Negara atau kawasan yang didukung
 
-Saat ini kami mendukung pengayaan alamat di negara atau kawasan berikut: 
+Saat ini kami mendukung pengayaan alamat di negara atau kawasan berikut:
 
 - Australia
 - Kanada
@@ -74,50 +74,46 @@ Saat ini kami mendukung pengayaan alamat di negara atau kawasan berikut:
 - Inggris Raya
 - Amerika Serikat
 
-Alamat harus berisi nilai negara/kawasan. Kami tidak memproses alamat untuk negara atau kawasan yang tidak didukung dan alamat yang tidak memiliki negara atau kawasan yang disediakan.
-
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 
-1. Buka **Data** > **Pengayaan**.
+1. Buka tab **Data** > **Pengayaan** dan pilih **Temukan**.
 
 1. Pilih **Perkaya data saya** pada ubin **Alamat yang disempurnakan**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Tangkapan layar ubin Alamat yang Disempurnakan.":::
 
-1. Pilih **himpunan data Pelanggan** dan pilih entitas berisi alamat yang akan diperkaya. Anda dapat memilih entitas *Pelanggan* untuk memperkaya alamat di semua profil pelanggan atau memilih entitas segmen untuk memperkaya alamat hanya dalam profil pelanggan yang terdapat dalam segmen tersebut.
+1. Tinjau gambaran umum lalu pilih **Berikutnya**.
+
+1. **Pilih himpunan data** Pelanggan dan pilih profil atau segmen yang ingin Anda perkaya. Entitas Pelanggan *memperkaya semua profil pelanggan Anda sedangkan segmen hanya memperkaya profil pelanggan yang terkandung dalam segmen tersebut*.
 
 1. Pilih format alamat dalam himpunan data Anda. Pilih **Alamat atribut tunggal** jika alamat di data Anda menggunakan satu bidang. Pilih **Beberapa atribut Alamat** jika alamat di data Anda menggunakan lebih dari satu bidang data.
+
+1. Pilih **Berikutnya** dan petakan bidang alamat dari entitas pelanggan terpadu Anda.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Halaman pemetaan bidang alamat yang disempurnakan.":::
 
    > [!NOTE]
    > Negara/Kawasan adalah wajib di alamat atribut tunggal dan beberapa atribut. Alamat yang tidak berisi nilai negara/kawasan yang valid atau yang didukung tidak akan diperkaya.
 
-1.  Petakan bidang alamat dari entitas pelanggan terpadu Anda.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Halaman pemetaan bidang alamat yang disempurnakan.":::
-
 1. Untuk menyelesaikan pemetaan bidang, pilih **berikutnya**.
 
-1. Berikan nama untuk pengayaan dan entitas output.
+1. Berikan **Nama** untuk pengayaan dan **entitas** Output.
 
 1. Pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
 
 ## <a name="enrichment-results"></a>Hasil pengayaan
 
-Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda juga dapat membiarkan sistem menjalankan pengayaan secara otomatis sebagai bagian dari [penyegaran terjadwal](system.md#schedule-tab). Waktu pemrosesan tergantung pada ukuran data pelanggan Anda.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Setelah proses pengayaan selesai, Anda dapat meninjau data profil pelanggan baru yang diperkaya di dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
-
-Anda dapat melihat sampel data yang diperkaya di **petak pratinjau** Pelanggan yang diperkaya. Pilih **Lihat selengkapnya** dan pilih **tab Data** untuk mengakses tampilan mendetail setiap profil yang diperkaya.
+Jumlah **pelanggan yang diperkaya oleh lapangan** memberikan penelusuran ke dalam cakupan setiap bidang yang diperkaya.
 
 ### <a name="overview-card"></a>Kartu gambaran umum
 
-Kartu ringkasan menunjukkan detail tentang cakupan pengayaan. 
+Kartu **ikhtisar** perubahan Pelanggan menunjukkan detail tentang cakupan pengayaan:
 
-* **Alamat diproses dan diubah**: Jumlah profil pelanggan dengan alamat yang berhasil diperkaya.
-
-* **Alamat diproses dan tidak diubah**: Jumlah profil pelanggan dengan alamat yang dikenali tetapi tidak diubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan oleh pengayaan.
-
-* **Alamat tidak diproses dan tidak diubah**: Jumlah profil dengan alamat yang tidak dikenali. Biasanya untuk input data yang tidak valid atau tidak didukung oleh pengayaan.
+- **Alamat diproses dan diubah**: Jumlah profil pelanggan dengan alamat yang berhasil diperkaya.
+- **Alamat diproses dan tidak diubah**: Jumlah profil pelanggan dengan alamat yang dikenali tetapi tidak diubah. Ini biasanya terjadi ketika data input valid dan tidak dapat ditingkatkan dengan pengayaan.
+- **Alamat tidak diproses dan tidak diubah**: Jumlah profil dengan alamat yang tidak dikenali. Biasanya untuk input data yang tidak valid atau tidak didukung oleh pengayaan tersebut.
 
 ## <a name="next-steps"></a>Langkah berikutnya
 

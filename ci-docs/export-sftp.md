@@ -1,19 +1,19 @@
 ---
-title: Mengekspor data Wawasan Pelanggan ke host SFTP (berisi video)
+title: Ekspor data Customer Insights ke host SFTP (berisi video)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke lokasi SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642590"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947188"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Mengekspor segmen dan data lainnya ke SFTP (pratinjau)
 
@@ -28,8 +28,8 @@ Gunakan data pelanggan Anda dalam aplikasi pihak ketiga dengan mengekspornya ke 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
 - Tujuan SFTP di belakang firewall saat ini tidak didukung. 
-- Runtime ekspor tergantung pada kinerja sistem Anda. Sebaiknya dua inti CPU dan memori 1 Gb sebagai konfigurasi minimal server Anda. 
-- Mengekspor entitas dengan hingga 100 juta profil pelanggan dapat berlangsung selama 90 menit bila menggunakan konfigurasi minimal yang disarankan untuk dua inti CPU dan 1 Gb memori. 
+- Runtime ekspor tergantung pada kinerja sistem Anda. Sebaiknya dua inti CPU dan memori 1 Gb sebagai konfigurasi minimal server Anda.
+- Mengekspor entitas dengan hingga 100 juta profil pelanggan dapat berlangsung selama 90 menit bila menggunakan konfigurasi minimal yang disarankan untuk dua inti CPU dan 1 Gb memori.
 
 ## <a name="set-up-connection-to-sftp"></a>Siapkan koneksi ke SFTP
 
@@ -64,13 +64,17 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 1. Pilih entitas, misalnya segmen, yang akan diekspor.
 
    > [!NOTE]
-   > Setiap entitas yang dipilih akan dibagi menjadi hingga lima file output saat diekspor. 
+   > Setiap entitas yang dipilih akan dibagi menjadi hingga lima file output saat diekspor.
 
 1. Pilih **Simpan**.
 
 Menyimpan ekspor tidak segera menjalankan ekspor.
 
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
+Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
+Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Ekspor entitas yang berisi sejumlah besar data dapat menyebabkan beberapa file CSV di folder yang sama untuk setiap ekspor. Pemisahan ekspor terjadi karena alasan kinerja untuk meminimalkan waktu yang diperlukan untuk menyelesaikan ekspor.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
 

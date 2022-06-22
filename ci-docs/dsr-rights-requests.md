@@ -1,19 +1,19 @@
 ---
 title: Permintaan hak subjek data (DSR) di bawah GDPR | Microsoft Docs
 description: Merespons permintaan subjek data untuk Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808565"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947372"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan hak subjek data (DSR) di bawah GDPR
 
@@ -77,11 +77,5 @@ Administrator penyewa dapat mengikuti langkah berikut untuk mengekspor data:
 1. Kirim email ke D365CI@microsoft.com yang menentukan alamat email pengguna yang diminta. Tim Customer Insights akan mengirim email ke alamat email admin penyewa yang terdaftar, meminta konfirmasi untuk mengekspor data.
 2. Berikan konfirmasi untuk mengekspor data untuk pengguna yang diminta.
 3. Terima data yang diekspor melalui alamat email admin penyewa.
-
-## <a name="consent-management-preview"></a>Manajemen persetujuan (pratinjau)
-
-Kemampuan manajemen persetujuan tidak mengumpulkan data pengguna secara langsung. Ini hanya mengimpor dan memproses data persetujuan yang disediakan oleh pengguna di aplikasi lain.
-
-Untuk menghapus data persetujuan tentang pengguna tertentu, hapus data tersebut di sumber data yang diserap oleh kemampuan pengelolaan persetujuan. Setelah menyegarkan sumber data, data yang dihapus juga akan dihapus di Pusat Persetujuan. Aplikasi yang menggunakan entitas persetujuan juga akan menghapus data yang telah dihapus pada sumber setelah [refresh](system.md#refresh-processes). Sebaiknya refresh sumber data dengan cepat setelah menanggapi permintaan subjek data untuk menghapus data pengguna dari semua proses dan aplikasi lain.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

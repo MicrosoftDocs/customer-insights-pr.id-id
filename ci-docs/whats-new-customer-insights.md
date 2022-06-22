@@ -1,19 +1,19 @@
 ---
-title: Fitur baru dan mendatang
+title: Fitur baru dan diperbarui
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833634"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843351"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Yang baru di Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Pembaruan Mei 2022
+
+Pembaruan pada Mei 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="updated-data-unification-experience"></a>Pengalaman penyatuan data yang diperbarui
+
+ Penyatuan data memungkinkan Anda menyatukan sumber data yang dulunya berbeda ke dalam satu himpunan data master yang menyediakan tampilan terpadu dari data tersebut. Data dapat disatukan pada satu entitas atau beberapa entitas. Pertama, Anda [memilih entitas dan bidang](map-entities.md) sumber, [menghapus rekaman](remove-duplicates.md) duplikat, menentukan aturan untuk [kondisi](match-entities.md) yang cocok, dan menentukan bidang mana yang [akan disertakan dalam profil pelanggan terpadu](merge-entities.md).
+
+Untuk informasi selengkapnya, lihat [Gambaran umum penyatuan data](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Halaman beranda yang diperbarui di Customer Insights
+
+**Home** memandu Anda melalui proses konfigurasi untuk fitur-fitur utama dan memberikan gambaran umum tentang segmen, ukuran, dan data pengayaan. Kami telah menyegarkan pengalaman untuk memberikan informasi yang lebih relevan secara sekilas.
+
+Untuk informasi selengkapnya, lihat [Menjelajahi Customer Insights](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Melacak penggunaan segmen
+
+Kini Anda dapat [melacak penggunaan segmen](segments.md#track-usage-of-a-segment) dalam aplikasi, yang didasarkan pada Dataverse organisasi yang terhubung dengan Customer Insights. Untuk [segmen Customer Insights yang digunakan dalam perjalanan pelanggan Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistem memberi tahu Anda tentang penggunaan segmen tersebut.
+
+### <a name="export-to-criteo"></a>Ekspor ke Criteo
+
+Criteo adalah platform online yang membantu pengguna mengelola iklan digital. Anda sekarang dapat mengekspor segmen profil pelanggan terpadu untuk menghasilkan kampanye, menyediakan pemasaran email, dan menggunakan grup pelanggan tertentu dengan Criteo.
+
+Untuk informasi selengkapnya, lihat [Mengekspor segmen ke Criteo (pratinjau)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Struktur dokumentasi yang disempurnakan untuk pembuatan lingkungan
+
+Kami telah meninjau kembali dokumen bantuan yang terkait dengan pembuatan dan pengelolaan lingkungan di Customer Insights. Artikel sekarang dikelompokkan di bawah node Lingkungan dalam daftar isi. Artikel yang direstrukturisasi memberikan lebih banyak panduan untuk berbagai cara untuk mengatur lingkungan dan memiliki struktur yang lebih jelas. Jika Anda memiliki umpan balik untuk dibagikan, beri tahu kami melalui kontrol menjelang akhir artikel bantuan.
+
+Untuk informasi selengkapnya, lihat [Cara: Membuat lingkungan](create-environment.md) baru.
 
 ## <a name="april-2022-updates"></a>Pembaruan April 2022
 
@@ -45,7 +76,7 @@ Untuk informasi selengkapnya, lihat [Menggunakan pembuat pengukuran untuk membua
 
 Kami telah meninjau kembali artikel dokumentasi kami dan menghapus penyebutan wawasan keterlibatan dan kemampuan wawasan audiens. Ke depannya, kami akan merujuk secara konsisten ke nama produk Customer Insights ketika kami menulis tentang fitur inti aplikasi. Perubahan ini juga mengarah pada restrukturisasi yang signifikan dari daftar isi, struktur URL, dan jalur file dalam repositori dokumentasi yang mendasarinya. Semua bookmark atau tautan yang ada terus berfungsi dan dialihkan ke URL yang diperbarui.
 
-Jika Anda ingin memberi tahu kami bagaimana Anda memandang perubahan itu atau menemukan sesuatu yang tidak berfungsi seperti yang diharapkan, beri tahu kami [dengan mengirimkan umpan balik untuk halaman ini](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Jika Anda ingin memberi tahu kami bagaimana Anda memandang perubahan itu atau menemukan sesuatu yang tidak berfungsi seperti yang diharapkan, beri tahu kami [dengan mengirimkan umpan balik untuk halaman](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) ini.
 
 ## <a name="march-2022-updates"></a>Pembaruan Maret 2022
 
@@ -74,7 +105,7 @@ Untuk informasi selengkapnya, lihat [Mengaktifkan berbagi data dengan Dataverse 
 
 Kami terus memperluas ekosistem tujuan ekspor kami dengan koneksi baru. Anda sekarang dapat mengekspor segmen ke Iterable dan Braze untuk menggunakan layanan aktivasi mereka.
 
-Untuk informasi selengkapnya, lihat [Mengekspor segmen ke Segmen yang Dapat Diulang (pratinjau)](export-iterable.md) dan [Ekspor ke Braze (pratinjau)](export-braze.md).
+Untuk informasi selengkapnya, lihat [Mengekspor segmen ke Dapat Diulang (pratinjau)](export-iterable.md) dan [Mengekspor segmen ke Braze (pratinjau)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Peningkatan pada ekspor Marketo dan Google Ads
 
@@ -123,7 +154,7 @@ Untuk informasi selengkapnya, lihat [Mengubah pemilik lingkungan](manage-environ
 
 Persiapan data sekarang menunjukkan alasan korupsi untuk semua bidang dengan data yang rusak. Informasi ini disediakan pada tingkat catatan individu untuk memudahkan identifikasi. 
 
-Untuk informasi selengkapnya, lihat [Sumber data yang rusak](entities.md#corrupted-data-sources).
+Untuk informasi selengkapnya, lihat [Sumber](entities.md#corrupted-data-sources) data yang rusak.
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Akhir pratinjau untuk melaporkan fitur dalam kemampuan wawasan keterlibatan
 

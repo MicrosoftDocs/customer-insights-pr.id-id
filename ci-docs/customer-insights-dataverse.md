@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833680"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011524"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan Customer Insights di Microsoft Dataverse
 
 Customer Insights menyediakan opsi untuk membuat entitas output tersedia sebagai file [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Integrasi ini memungkinkan berbagi data yang mudah dan pengembangan kustom melalui pendekatan kode rendah/tanpa kode. Entitas [output](#output-entities) tersedia sebagai tabel di Dataverse lingkungan. Anda dapat menggunakan data untuk aplikasi lain berdasarkan Dataverse tabel. Tabel ini memungkinkan skenario seperti alur kerja otomatis melalui Power Automate atau membangun aplikasi dengan Power Apps.
 
-Menyambungkan ke lingkungan Anda Dataverse juga memungkinkan Anda menyerap [data dari sumber data lokal menggunakan Power Platform aliran data dan gateway](data-sources.md#add-data-from-on-premises-data-sources).
+Menyambungkan ke lingkungan Anda Dataverse juga memungkinkan Anda menyerap [data dari sumber data lokal menggunakan Power Platform aliran data dan gateway](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -57,7 +57,7 @@ Mengaktifkan berbagi data saat Microsoft Dataverse lingkungan [Anda menggunakan 
 Ada dua batasan saat menggunakan Dataverse dengan akun Anda sendiri Azure Data Lake Storage:
 
 - Ada pemetaan satu-ke-satu antara Dataverse organisasi dan Azure Data Lake Storage akun. Dataverse Setelah organisasi tersambung ke akun penyimpanan, organisasi tidak dapat tersambung ke akun penyimpanan lain. Batasan ini mencegah a Dataverse tidak mengisi beberapa akun penyimpanan.
-- Berbagi data tidak akan berfungsi jika penyiapan Azure Private Link diperlukan untuk mengakses akun penyimpanan Azure Data Lake Anda karena berada di belakang firewall. Dataverse saat ini tidak mendukung koneksi ke titik akhir privat melalui Private Link.
+- Berbagi data tidak akan berfungsi jika penyiapan Azure Private Link diperlukan untuk mengakses akun Anda Azure Data Lake Storage karena berada di belakang firewall. Dataverse saat ini tidak mendukung koneksi ke titik akhir privat melalui Private Link.
 
 ### <a name="set-up-powershell"></a>Menyiapkan PowerShell
 

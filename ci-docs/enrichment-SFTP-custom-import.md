@@ -1,74 +1,33 @@
 ---
 title: Pengayaan dengan impor kustom SFTP
 description: Informasi umum tentang pengayaan impor kustom SFTP.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642479"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953723"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Memperkaya profil pelanggan dengan data kustom (pratinjau)
 
-Impor kustom protokol transfer file aman (SFTP) memungkinkan Anda mengimpor data yang tidak harus melalui proses penyatuan data. Cara yang fleksibel, aman, dan mudah untuk membawa data Anda. Impor kustom SFTP dapat digunakan bersama dengan [ekspor SFTP](export-sftp.md) yang memungkinkan Anda mengekspor data profil pelanggan yang diperlukan untuk pengayaan. Data kemudian dapat diproses dan diperkaya, dan impor kustom SFTP dapat digunakan untuk membawa data yang diperkaya kembali ke Dynamics 365 Customer Insights.
+Impor kustom protokol transfer file aman (SFTP) memungkinkan Anda mengimpor data yang tidak harus melalui proses penyatuan data. Cara yang fleksibel, aman, dan mudah untuk membawa data Anda. Impor kustom SFTP dapat digunakan bersama dengan [ekspor SFTP](export-sftp.md) yang memungkinkan Anda mengekspor data profil pelanggan yang diperlukan untuk pengayaan. Data kemudian dapat diproses dan diperkaya, dan impor kustom SFTP dapat digunakan untuk mengembalikan data yang diperkaya ke Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Prasyarat
 
-Untuk mengkonfigurasikan impor kustom SFTP, persyaratan berikut harus dipenuhi:
+- Nama file dan lokasi (jalur) file yang akan diimpor pada host SFTP diketahui.
 
-- Anda memiliki nama file dan lokasi (jalur) file yang akan diimpor di host SFTP.
-- Ada file *model.json* yang menentukan [skema Common Data Model](/common-data-model/) untuk data yang akan diimpor. File ini harus berada di direktori yang sama dengan file yang akan diimpor.
-- Koneksi SFTP telah dikonfigurasi oleh administrator *atau* Anda memiliki izin [administrator](permissions.md#admin). Anda akan memerlukan kredensial pengguna, URL, dan nomor port untuk lokasi SFTP tempat Anda ingin mengimpor data.
+- File *model.json* yang menentukan skema Common Data Model untuk data yang akan diimpor tersedia. File ini harus berada di direktori yang sama dengan file yang akan diimpor.
 
+- Koneksi [SFTP](connections.md)[dikonfigurasi](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="configure-the-import"></a>Mengonfigurasi impor
-
-1. Buka tab **Data** > **Pengayaan** dan pilih **Temukan**.
-
-1. Pilih **Perkaya data saya** di **petak impor kustom SFTP** lalu pilih **Mulai**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Petak Impor Kustom SFTP.":::
-
-1. Pilih [koneksi](connections.md) dari daftar drop-down. Hubungi administrator jika tidak ada koneksi yang tersedia. Jika Anda administrator, Anda dapat membuat sambungan dengan memilih **Tambah sambungan** dan memilih **Impor Kustom SFTP** dari daftar dropdown.
-
-1. Pilih **Sambungkan ke Impor Kustom** untuk mengonfirmasi koneksi yang dipilih.
-
-1.  Pilih **Berikutnya**, lalu masukkan **Jalur** dan **Nama File** dari file data yang akan diimpor.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Cuplikan layar saat memasukkan lokasi data.":::
-
-1. Pilih **Berikutnya**, lalu pilih rangkaian data pelanggan. Pilihan ini dapat berupa semua profil pelanggan atau satu segmen.
-
-1. Pilih **Selanjutnya** dan berikan nama untuk pengayaan dan nama untuk entitas output. 
-
-1. Pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Mengonfigurasi koneksi untuk Impor Kustom SFTP 
-
-Anda perlu menjadi administrator untuk mengonfigurasi koneksi. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan *atau* masuk ke **Admin** > **Koneksi** dan pilih **Konfigurasi** pada petak Impor Kustom.
-
-1. Masukkan nama untuk koneksi dalam kotak **nama tampilan**.
-
-1. Masukkan nama pengguna, sandi, dan URL host yang valid untuk server tempat SFTP yang datanya akan diimpor berada.
-
-1. Tinjau dan berikan izin untuk **privasi dan kepatuhan data** dengan memilih kotak centang **Saya setuju**.
-
-1. Pilih **Verifikasi** untuk memvalidasi konfigurasi.
-
-1. Setelah verifikasi selesai, sambungan dapat disimpan dengan memilih **Simpan**.
-
-   > [!div class="mx-imgBorder"]
-   > ![halaman Panel Konfigurasi koneksi Experian.](media/enrichment-SFTP-connection.png "halaman Panel Konfigurasi koneksi Experian")
-
-
-## <a name="defining-field-mappings"></a>Menentukan pemetaan bidang 
+## <a name="file-schema-example"></a>Contoh skema file
 
 Direktori yang berisi file yang akan diimpor pada server SFTP juga harus berisi file *model.JSON*. File ini mendefinisikan skema yang akan digunakan untuk mengimpor data. Skema harus menggunakan [Common Data Model](/common-data-model/) untuk menentukan pemetaan bidang. Contoh sederhana dari file model.JSON terlihat seperti ini:
 
@@ -82,12 +41,12 @@ Direktori yang berisi file yang akan diimpor pada server SFTP juga harus berisi 
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,13 +73,56 @@ Direktori yang berisi file yang akan diimpor pada server SFTP juga harus berisi 
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Mengonfigurasi koneksi untuk Impor Kustom SFTP
+
+Anda harus menjadi [administrator](permissions.md#admin) di Customer Insights dan memiliki kredensial pengguna, URL, dan nomor port untuk lokasi SFTP tempat Anda ingin mengimpor data.
+
+1. Pilih **Tambahkan koneksi** saat mengonfigurasi pengayaan atau buka **Koneksi** > **Admin** dan pilih **Siapkan** pada petak peta Impor Kustom.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Halaman konfigurasi koneksi Impor Kustom.":::
+
+1. Masukkan nama untuk koneksi.
+
+1. Masukkan nama pengguna, sandi, dan URL host yang valid untuk server tempat SFTP yang datanya akan diimpor berada.
+
+1. Baca dan berikan persetujuan Anda untuk [privasi dan kesesuaian Data](#data-privacy-and-compliance) dengan memilih **Saya setuju**.
+
+1. Pilih **Verifikasi** untuk memvalidasi konfigurasi lalu pilih **Simpan**.
+
+### <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
+
+Saat Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data menggunakan Impor Kustom, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa data memenuhi kewajiban privasi atau keamanan apa pun yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
+
+## <a name="configure-the-import"></a>Mengonfigurasi impor
+
+1. Buka tab **Data** > **Pengayaan** dan pilih **Temukan**.
+
+1. Pilih **Perkaya data** saya di petak **peta impor** kustom SFTP.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Petak Impor Kustom SFTP.":::
+
+1. Tinjau gambaran umum lalu pilih **Berikutnya**.
+
+1. Pilih koneksi. Hubungi administrator jika tidak tersedia.
+
+1. **Pilih himpunan data** Pelanggan dan pilih profil atau segmen yang ingin Anda perkaya. Entitas Pelanggan *memperkaya semua profil pelanggan Anda sedangkan segmen hanya memperkaya profil pelanggan yang terkandung dalam segmen tersebut*.
+
+1. Pilih **Selanjutnya**.
+
+1. Masukkan **Jalur** dan **Nama** File dari file data yang ingin Anda impor.
+
+1. Pilih **Selanjutnya**.
+
+1. Berikan **Nama** untuk pengayaan dan **nama** entitas Output.
+
+1. Pilih **Simpan pengayaan** setelah meninjau pilihan Anda.
+
+1. Pilih **Jalankan** untuk memulai proses pengayaan atau tutup untuk kembali ke **halaman Pengayaan**.
+
 ## <a name="enrichment-results"></a>Hasil pengayaan
 
-Untuk memulai proses pengayaan, pilih **Jalankan** dari bilah perintah. Anda juga dapat membiarkan sistem menjalankan pengayaan secara otomatis sebagai bagian dari [penyegaran terjadwal](system.md#schedule-tab). Waktu pemrosesan tergantung pada ukuran data yang akan diimpor dan sambungan ke server SFTP.
-
-Setelah proses pengayaan selesai, Anda dapat meninjau data pengayaan kustom yang baru diimpor dalam **pengayaan saya**. Selain itu, Anda akan menemukan waktu pembaruan terakhir dan jumlah profil yang diperkaya.
-
-Anda dapat mengakses tampilan rinci setiap profil diperkaya dengan memilih **Lihat data yang diperkaya**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Langkah berikutnya
 

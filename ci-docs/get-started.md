@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833579"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011983"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Persiapan Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Pertama kali Anda masuk ke Customer Insights, mengonfigurasi pengaturan, dan men
 
 Profil terpadu adalah landasan untuk mendapatkan wawasan dan melakukan tindakan pada data. Bawa data dari berbagai sumber dan jalankan proses penyatuan data untuk menggabungkan profil terpadu. Tentukan Relasi antara entitas yang diserap dan gunakan fitur pengayaan untuk menambahkan informasi ke profil.
 
-1. Serap data dengan membuat sumber data dari beberapa pilihan. Pilih antara [Power Query konektor](connect-power-query.md), [folder](connect-common-data-model.md) Common Data Model, atau [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Serap data dengan membuat sumber data dari beberapa pilihan. Pilih antara [Azure Data Lake Storage, termasuk Common Data Model](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md), atau [Power Query konektor](connect-power-query.md).
 
 1. Jalankan proses penyatuan [data dengan](data-unification.md) mengidentifikasi bidang [sumber, menghapus](map-entities.md) duplikat [,](remove-duplicates.md) kondisi [yang cocok, dan](match-entities.md) bidang [pemersatu.](merge-entities.md)
 

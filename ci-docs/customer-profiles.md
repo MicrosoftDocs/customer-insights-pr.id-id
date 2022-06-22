@@ -1,7 +1,7 @@
 ---
 title: Lihat Profil pelanggan
 description: Dapatkan gabungan tampilan data pelanggan terpadu Anda.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755786"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947050"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -55,9 +55,9 @@ Anda dapat memfilter pelanggan berdasarkan bidang entitas *Pelanggan*. Mirip den
 
 Pilih salah satu ubin pelanggan untuk membuka **halaman rincian pelanggan**. Tampilan ini berisi informasi terpadu untuk pelanggan yang dipilih. Rincian pelanggan mencakup konten berikut:
 
-**petak profil pelanggan**: petak ini menampilkan nilai yang berbeda dari entitas *Pelanggan* terpadu. Jika bidang tidak memiliki nilai untuk profil pelanggan yang dipilih, bidang tersebut tidak akan ditampilkan. petak terstruktur ke dalam bagian:
+**petak profil pelanggan**: petak ini menampilkan nilai yang berbeda dari entitas *Pelanggan* terpadu. Jika bidang tidak memiliki nilai untuk profil pelanggan yang dipilih, bidang tersebut tidak akan ditampilkan kecuali untuk bidang alamat. petak terstruktur ke dalam bagian:
 
-- Bagian pertama menampilkan rangkaian bidang yang ditetapkan sebelumnya diikuti oleh semua bidang yang merupakan bagian dari indeks pencarian &filter. Semua bidang terkait alamat dikombinasikan ke satu baris jika profil berisi bidang tersebut.
+- Bagian pertama menampilkan rangkaian bidang yang ditetapkan sebelumnya diikuti oleh semua bidang yang merupakan bagian dari indeks pencarian &filter. Semua bidang terkait alamat digabungkan menjadi satu baris, yang menunjukkan meskipun profil tidak berisi informasi alamat.
 - **Kontak untuk pelanggan ini**: Di lingkungan untuk akun bisnis, Anda akan melihat semua kontak terkait untuk pelanggan ini sebagai bagian kedua. Setiap kontak ditampilkan dengan bidangnya. Bidang kosong disembunyikan.
 - **Bidang tambahan**: Menampilkan bidang lainnya dari pelanggan yang dipilih, kecuali ID.
 - **ID**: Daftarkan semua ID di dalam nama entitas terkait. Bidang diidentifikasi sebagai ID berdasarkan semantisnya, yang mengkategorikannya.
