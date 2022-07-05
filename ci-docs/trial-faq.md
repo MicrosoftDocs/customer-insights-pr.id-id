@@ -1,5 +1,5 @@
 ---
-title: Tanya-Jawab Uji coba - Dynamics 365 Customer Insights
+title: Tanya Jawab uji coba Dynamics 365 Customer Insights
 description: Solusi untuk pertanyaan umum terkait penyiapan dan manajemen uji coba Customer Insights. Pelajari cara menangani masalah platform dan khusus aplikasi.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011891"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051503"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Tanya Jawab uji coba Dynamics 365 Customer Insights
 

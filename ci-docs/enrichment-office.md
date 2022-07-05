@@ -1,5 +1,5 @@
 ---
-title: Perkaya profil pelanggan dengan data dari Microsoft Office 365
+title: Perkaya profil pelanggan dengan data dari Microsoft Office 365 (pratinjau)
 description: Gunakan data kepemilikan dari Microsoft Office untuk memperkaya profil pelanggan Anda dengan data keterlibatan.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954137"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055678"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Perkaya profil pelanggan dengan data keterlibatan (pratinjau)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Perkaya profil pelanggan dengan data dari Microsoft Office 365 (pratinjau)
 
 Gunakan data dari Microsoft Office 365 untuk memperkaya profil akun pelanggan Anda dengan wawasan tentang keterlibatan melalui Office 365 aplikasi. Data keterlibatan terdiri dari email dan aktivitas rapat, yang dikumpulkan pada tingkat akun. Misalnya, jumlah email dari akun bisnis atau jumlah rapat dengan akun tersebut. Tidak ada data tentang pengguna individu yang tersedia.
 
@@ -75,7 +75,7 @@ Pilih **Jalankan** untuk memulai proses pengayaan.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Hasil pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Ini adalah *entitas Office*. Office_UserEntity *berisi* ID Direktori Aktif untuk alamat email yang dipilih selama konfigurasi pengayaan.
 
@@ -111,6 +111,6 @@ Keterlibatan akun juga dapat dilihat pada kartu pelanggan individu. Buka **pelan
 ## <a name="next-steps"></a>Langkah berikutnya
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-Misalnya, segmen yang berisi semua pelanggan yang memiliki nilai lebih dari 60 untuk *hari sejak email* terakhir dan *hari sejak rapat terakhir*. Segmen tersebut berisi akun basi yang dapat Anda coba aktifkan kembali.
+Misalnya, segmen yang berisi semua pelanggan yang memiliki nilai lebih dari 60 untuk *hari sejak email* terakhir dan *hari sejak rapat* terakhir. Segmen tersebut berisi akun basi yang dapat Anda coba aktifkan kembali.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

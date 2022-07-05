@@ -1,5 +1,5 @@
 ---
-title: Memperkaya profil pelanggan dengan data lokasi dari Azure Maps
+title: Perkaya profil pelanggan dengan data lokasi dari Azure Maps (pratinjau)
 description: Informasi umum tentang pengayaan pihak pertama Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953632"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052611"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Pengayaan profil pelanggan dengan Azure Maps (pratinjau)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Perkaya profil pelanggan dengan data lokasi dari Azure Maps (pratinjau)
 
 Azure Maps menyediakan data dan layanan yang berpusat pada lokasi untuk memberikan pengalaman berdasarkan data geospasial dengan kecerdasan lokasi bawaan. Layanan pengayaan data Azure Maps akan meningkatkan presisi informasi lokasi tentang pelanggan Anda. Ia memberikan kemampuan seperti normalisasi alamat dan ekstrak garis lintang dan garis bujur untuk Dynamics 365 Customer Insights.
 
@@ -82,7 +82,7 @@ Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini 
 
 1. Pilih **Jalankan** untuk memulai proses pengayaan atau tutup untuk kembali ke **halaman Pengayaan**.
 
-## <a name="enrichment-results"></a>Hasil pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

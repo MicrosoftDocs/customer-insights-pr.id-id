@@ -1,5 +1,5 @@
 ---
-title: Menyerap data dari Azure Synapse Analytics
+title: Azure Synapse Menyambungkan sumber data (pratinjau)
 description: Gunakan database sebagai Azure Synapse sumber data di Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011431"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052703"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics Menyambungkan sumber data (pratinjau)
 
@@ -59,7 +59,7 @@ Untuk informasi selengkapnya, lihat [Azure Synapse gambaran umum](/azure/synapse
 
 1. Pilih koneksi [yang](connections.md) tersedia ke Azure Synapse Analytics atau buat yang baru.
 
-1. **Pilih Database** dari ruang kerja yang tersambung dalam koneksi yang Azure Synapse Analytics dipilih dan pilih **Berikutnya**.
+1. **Pilih Database** dari ruang kerja yang tersambung dalam koneksi yang Azure Synapse Analytics dipilih dan pilih **Berikutnya**. Saat ini, kami hanya mendukung database jenis *database* Lake.
 
 1. Pilih entitas yang akan diserap dari database yang terhubung dan pilih **Berikutnya**.
 

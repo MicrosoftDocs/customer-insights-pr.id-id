@@ -1,5 +1,5 @@
 ---
-title: Tugas bersama untuk skenario prediksi
+title: Kelola prediksi
 description: Pelajari cara mengelola, memecahkan masalah, dan menyempurnakan prediksi.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c4d269e1b542e84ade8c6e63c1dadace51ddde32
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643862"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082849"
 ---
 # <a name="manage-predictions"></a>Kelola prediksi
 
@@ -49,11 +49,11 @@ Kolom berikut dalam laporan berisi informasi bermanfaat untuk meningkatkan data 
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Contoh laporan kegunaan data input yang memperlihatkan tabel dengan kesalahan, peringatan, dan rekomendasi.":::
 
-- **Nama:** Nama deskriptif kesalahan, peringatan, atau rekomendasi.
-- **Langkah:** Fase model, kereta api atau skor, informasi mengacu pada.
+- **Nama:** Nama deskriptif dari kesalahan, peringatan, atau rekomendasi.
+- **Langkah:** Fase model, kereta api atau skor, informasi yang dimaksud.
 - **Status:** Tingkat keparahan informasi (kesalahan, peringatan, rekomendasi).
-- **Nama kolom:** Kolom dalam entitas yang perlu dimodifikasi untuk meningkatkan kinerja model.
-- **Nama entitas:** Nama entitas yang perlu dimodifikasi untuk meningkatkan kinerja model.
+- **Nama kolom:** Kolom dalam entitas yang perlu dimodifikasi untuk meningkatkan performa model.
+- **Nama entitas:** Nama entitas yang perlu dimodifikasi untuk meningkatkan performa model.
 - **Detail:** Detail tentang kesalahan, peringatan, atau rekomendasi.
 
 ## <a name="refresh-a-prediction"></a>Segarkan prediksi

@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643822"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055218"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV)
 
-Perkipkan nilai potensial (pendapatan) yang akan diberikan pelanggan aktif individual ke bisnis Anda hingga periode waktu mendatang yang ditentukan. Fitur ini dapat membantu Anda mencapai berbagai sasaran: 
+Perkipkan nilai potensial (pendapatan) yang akan diberikan pelanggan aktif individual ke bisnis Anda hingga periode waktu mendatang yang ditentukan. Fitur ini dapat membantu Anda mencapai berbagai sasaran:
 - Mengidentifikasi pelanggan bernilai tinggi dan memproses wawasan ini
 - Membuat segmen pelanggan yang strategis berdasarkan potensi nilainya untuk menjalankan kampanye pribadi dengan upaya penjualan, pemasaran, dan dukungan yang ditargetkan
 - Memandu pengembangan produk dengan berfokus pada fitur yang meningkatkan nilai pelanggan
@@ -74,11 +74,11 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Buat Prediksi nilai selama hubungan dengan pelanggan
 
-1. Pergi ke **IntelligencePredictions** > **·**.
+1. Pergi ke **Prediksi Intelijen** > **·**.
 
 1. Pilih petak **nilai selama hubungan dengan pelanggan** dan pilih **Gunakan model**. 
 
-1. **Di panel Nilai seumur** hidup pelanggan, pilih **Mulai**.
+1. Di **panel Nilai** seumur hidup pelanggan, pilih **Mulai**.
 
 1. **Namai model ini** dan **nama entitas Output** untuk membedakannya dari model atau entitas lain.
 
@@ -149,7 +149,7 @@ Data yang mencerminkan interaksi pelanggan utama (seperti web, layanan pelanggan
 
 ### <a name="set-update-schedule"></a>Atur Jadwal pembaruan
 
-1. Pada langkah **jadwal pembaruan Data**, pilih frekuensi untuk melatih ulang model Anda berdasarkan data terakhir. Pengaturan ini penting untuk memperbarui keakuratan prediksi karena data baru dicerna dalam Wawasan Pelanggan. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
+1. Pada langkah **jadwal pembaruan Data**, pilih frekuensi untuk melatih ulang model Anda berdasarkan data terakhir. Pengaturan ini penting untuk memperbarui akurasi prediksi karena data baru diserap dalam Customer Insights. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
 
 1. Pilih **Selanjutnya**.
 

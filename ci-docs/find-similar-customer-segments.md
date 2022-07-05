@@ -1,5 +1,5 @@
 ---
-title: Temukan pelanggan serupa dengan AI (berisi video)
+title: Temukan pelanggan serupa dengan AI (pratinjau) (berisi video)
 description: Temukan segmen pelanggan serupa dengan kecerdasan buatan.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642679"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054805"
 ---
-# <a name="similar-customers-preview"></a>Pelanggan serupa (pratinjau)
+# <a name="find-similar-customers-with-ai-preview"></a>Temukan pelanggan serupa dengan AI (pratinjau)
 
 Fitur ini memungkinkan Anda menemukan pelanggan serupa di basis pelanggan menggunakan kecerdasan buatan. Anda harus memiliki minimal satu segmen yang dibuat untuk menggunakan fitur ini. Memperluas kriteria segmen yang ada membantu menemukan Pelanggan yang serupa dengan segmen tersebut.
 
@@ -30,7 +30,7 @@ Fitur ini memungkinkan Anda menemukan pelanggan serupa di basis pelanggan menggu
 
 ## <a name="finding-similar-customers"></a>Menemukan Pelanggan serupa
 
-1. **Buka Segmen** dan pilih segmen yang ingin Anda basis segmen baru Anda. Itulah *segmen sumber* Anda.
+1. Buka **Segmen** dan pilih segmen yang ingin Anda jadikan dasar segmen baru Anda. Itulah *segmen sumber* Anda.
 
 1. Di panel tindakan, pilih **temukan pelanggan serupa**.
 

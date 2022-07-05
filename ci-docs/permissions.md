@@ -12,14 +12,14 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833726"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054873"
 ---
-# <a name="user-permissions"></a>Izin pengguna
+# <a name="manage-user-permissions"></a>Kelola izin pengguna
 
 Halaman **Izin** adalah tempat Anda akan menyiapkan peran dan izin untuk menggunakan Customer Insights.
 

@@ -11,22 +11,22 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643539"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083143"
 ---
 # <a name="semantic-mappings-preview"></a>Pemetaan semantik (pratinjau)
 
-Pemetaan semantis memungkinkan Anda memetakan data non-aktivitas ke skema yang telah ditentukan sebelumnya. Skema ini membantu Customer Insights untuk lebih memahami atribut data Anda. Pemetaan semantik dan data yang disediakan memungkinkan wawasan dan fitur baru di Wawasan Pelanggan. Untuk memetakan data aktivitas Anda ke skema, tinjau dokumentasi [aktivitas](activities.md).
+Pemetaan semantis memungkinkan Anda memetakan data non-aktivitas ke skema yang telah ditentukan sebelumnya. Skema ini membantu Customer Insights untuk lebih memahami atribut data Anda. Pemetaan semantik dan data yang disediakan memungkinkan wawasan dan fitur baru di Customer Insights. Untuk memetakan data aktivitas Anda ke skema, tinjau dokumentasi [aktivitas](activities.md).
 
 **Pemetaan semantis saat ini diaktifkan untuk lingkungan berdasarkan akun bisnis**. *ContactProfile* adalah satu-satunya jenis pemetaan semantik yang saat ini tersedia di Customer Insights.
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Mendefinisikan pemetaan entitas semantis ContactProfile
 
-1. **Buka pemetaan DataSemantic** > **(pratinjau)**.
+1. Buka **pemetaan Semantik Data** > **(pratinjau)**.
 
 1. Pilih **Tambahkan pemetaan semantis** untuk memulai pengalaman terpandu.
 
@@ -95,14 +95,14 @@ Pada **Data** > **pemetaan Semantik (pratinjau)**, Anda dapat melihat semua peme
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Menggunakan pemetaan entitas semantik ContactProfile untuk membuat aktivitas tingkat kontak
 
-Setelah membuat *pemetaan entitas semantik ContactProfile*, Anda dapat menangkap aktivitas kontak. Ini memungkinkan Anda untuk melihat di timeline aktivitas untuk akun yang kontaknya bertanggung jawab untuk setiap aktivitas. Sebagian besar langkah mengikuti konfigurasi pemetaan aktivitas yang khas.
+Setelah membuat *pemetaan entitas semantik ContactProfile*, Anda dapat menangkap aktivitas kontak. Ini memungkinkan Anda untuk melihat di linimasa aktivitas untuk akun kontak mana yang bertanggung jawab atas setiap aktivitas. Sebagian besar langkah mengikuti konfigurasi pemetaan aktivitas yang khas.
 
    > [!NOTE]
    > Agar aktivitas tingkat kontak berfungsi, Anda harus memiliki **atribut AccountID** dan **ContactID** untuk setiap rekaman dalam data aktivitas Anda.
 
-1. [*Tentukan pemetaan entitas semantik ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) Dan jalankan pemetaan semantik.
+1. [*Tentukan pemetaan entitas semantik ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) Dan menjalankan pemetaan semantik.
 
-1. **Buka DataActivities** > **·**.
+1. **Buka Aktivitas** > **Data**.
 
 1. Pilih **Tambahkan Aktivitas** untuk membuat aktivitas baru.
 
@@ -110,22 +110,22 @@ Setelah membuat *pemetaan entitas semantik ContactProfile*, Anda dapat menangkap
 
 1. **Pada langkah Relasi**, buat hubungan tidak langsung antara data sumber aktivitas Anda ke akun, menggunakan data kontak Anda sebagai entitas perantara. Untuk informasi selengkapnya, lihat [jalur](relationships.md#relationship-paths) hubungan langsung dan tidak langsung.
    - Contoh hubungan untuk aktivitas yang disebut *Pembelian*:
-      - **Membeli DataKontak** > **Data** Aktivitas Sumber pada atribut **ContactID**
-      - **·** > **Hubungi DataAccount Data** pada atribut **AccountID**
+      - **Membeli Data** > **Kontak Data** Aktivitas Sumber pada atribut **ContactID**
+      - **Data** > **Akun Data** Kontak pada atribut **AccountID**
 
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh penyiapan hubungan.":::
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh pengaturan hubungan.":::
 
-1. Setelah menyiapkan Relasi, pilih **Berikutnya** dan selesaikan konfigurasi pemetaan aktivitas Anda. Untuk langkah-langkah mendetail tentang pembuatan aktivitas, lihat [menentukan aktivitas](activities.md).
+1. Setelah menyiapkan Relasi, pilih **Berikutnya** dan selesaikan konfigurasi pemetaan aktivitas Anda. Untuk langkah-langkah terperinci tentang pembuatan aktivitas, lihat [menentukan aktivitas](activities.md).
 
 1. Jalankan pemetaan aktivitas Anda.
 
-1. Aktivitas tingkat kontak Anda sekarang akan terlihat di timeline pelanggan Anda.
+1. Aktivitas tingkat kontak Anda sekarang akan terlihat di linimasa pelanggan Anda.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Hasil akhir setelah mengonfigurasi aktivitas kontak":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Pemfilteran garis waktu aktivitas tingkat kontak
 
-Setelah mengonfigurasi pemetaan aktivitas tingkat kontak dan menjalankannya, timeline aktivitas untuk pelanggan Anda akan diperbarui. Ini termasuk ID atau nama mereka, tergantung pada konfigurasi ContactProfile *Anda*, untuk aktivitas yang mereka lakukan. Anda dapat memfilter aktivitas berdasarkan kontak di garis waktu untuk melihat kontak tertentu yang Anda minati. Selain itu, Anda dapat melihat semua aktivitas yang tidak ditetapkan ke kontak tertentu dengan **memilih Aktivitas yang tidak dipetakan ke Kontak**.
+Setelah mengonfigurasi pemetaan aktivitas tingkat kontak dan menjalankannya, linimasa aktivitas untuk pelanggan Anda akan diperbarui. Ini termasuk ID atau nama mereka, tergantung pada konfigurasi ContactProfile *Anda*, untuk aktivitas yang mereka tindak lanjuti. Anda dapat memfilter aktivitas berdasarkan kontak di garis waktu untuk melihat kontak tertentu yang Anda minati. Selain itu, Anda dapat melihat semua aktivitas yang tidak ditetapkan ke kontak tertentu dengan **memilih Aktivitas yang tidak dipetakan ke Kontak**.
 
    :::image type="content" source="media/Contact_Activities3.png" alt-text="Opsi pemfilteran tersedia untuk aktivitas tingkat Kontak.":::
 

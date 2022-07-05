@@ -1,5 +1,5 @@
 ---
-title: Pengayaan dengan pengayaan pihak ketiga Experian
+title: Perkaya profil pelanggan dengan demografi dari Experian (pratinjau)
 description: Informasi umum tentang pengayaan pihak ketiga Experian.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954091"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053025"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Perkaya profil pelanggan dengan demografi dari Experian (pratinjau)
 
@@ -79,7 +79,7 @@ Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mentransmisikan data
 
 1. Pilih **Jalankan** untuk memulai proses pengayaan atau tutup untuk kembali ke **halaman Pengayaan**.
 
-## <a name="enrichment-results"></a>Hasil pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

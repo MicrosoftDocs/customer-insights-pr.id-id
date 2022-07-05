@@ -1,5 +1,5 @@
 ---
-title: Mengekspor data dari Customer Insights
+title: Gambaran umum Ekspor (pratinjau)
 description: Kelola ekspor untuk berbagi data.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9c3b35f1514adcc697672f09cabf593f936e4a82
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d983e84e713003610eb27dc9b3f911b62b01d522
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642689"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082912"
 ---
 # <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
@@ -29,8 +29,8 @@ Buka **Data** > **Ekspor** untuk menampilkan halaman ekspor. Semua peran penggun
 
 Ada dua jenis utama ekspor:  
 
-- **Ekspor data-out** memungkinkan Anda mengekspor semua jenis entitas yang tersedia di Customer Insights. Entitas yang Anda pilih untuk ekspor akan diekspor dengan semua bidang data, metadata, skema, dan rincian pemetaan. 
-- **Ekspor segmen** memungkinkan Anda mengekspor entitas segmen dari Wawasan Pelanggan. Segmen mewakili daftar profil pelanggan. Saat mengkonfigurasi ekspor, Anda dapat memilih bidang data yang tercakup, tergantung pada sistem target yang akan Anda ekspor datanya. 
+- **Ekspor data keluar memungkinkan** Anda mengekspor semua jenis entitas yang tersedia di Customer Insights. Entitas yang Anda pilih untuk ekspor akan diekspor dengan semua bidang data, metadata, skema, dan rincian pemetaan. 
+- **Ekspor segmen memungkinkan** Anda mengekspor entitas segmen dari Customer Insights. Segmen mewakili daftar profil pelanggan. Saat mengkonfigurasi ekspor, Anda dapat memilih bidang data yang tercakup, tergantung pada sistem target yang akan Anda ekspor datanya. 
 
 ### <a name="export-segments"></a>Ekspor segmen
 

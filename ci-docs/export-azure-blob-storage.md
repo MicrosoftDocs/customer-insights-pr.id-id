@@ -1,5 +1,5 @@
 ---
-title: Mengekspor data Customer Insights ke Penyimpanan Azure Blob
+title: Mengekspor data ke Azure Blob Storage (pratinjau)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke penyimpanan Blob.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947142"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055494"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Mengekspor daftar segmen dan data lainnya ke Penyimpanan Blob Azure (pratinjau)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Mengekspor data ke Azure Blob Storage (pratinjau)
 
 Simpan data Customer Insights Anda di penyimpanan Blob atau gunakan untuk mentransfer data ke aplikasi lainnya.
 

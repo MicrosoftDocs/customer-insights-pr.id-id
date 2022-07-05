@@ -1,5 +1,5 @@
 ---
-title: Skema entitas Customer Insights dalam Common Data Model
+title: Skema entitas dalam Common Data Model
 description: Bekerja dengan entitas dalam Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757436"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054758"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skema entitas dalam Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) adalah spesifikasi deklaratif, dan definisi entitas stAndar yang menunjukkan konsep, dan aktivitas yang sering digunakan di seluruh aplikasi bisnis dan produktivitas. Model ini diperluas ke data pengamatan dan analitik juga. Common Data Model menyediakan entitas bisnis yang terdefinisi, modular, dan Terluaskan seperti akun, unit bisnis, kasus, kontak, prospek, peluang, dan produk, serta interaksi dengan vendor, pekerja, dan pelanggan, seperti aktivitas dan perjanjian tingkat layanan. Siapa pun dapat membangun dan memperluas definisi Common Data Model untuk mendapatkan ide khusus bisnis tambahan.
 

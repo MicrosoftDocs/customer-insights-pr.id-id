@@ -1,17 +1,17 @@
 ---
-title: Dynamics 365 Customer Insights ikhtisar produk
+title: Ikhtisar produk untuk Dynamics 365 Customer Insights
 author: m-hartmann
 description: Dapatkan gambaran umum untuk Dynamics 365 Customer Insights dan fitur-fitur utamanya.
 ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: a8b982d761b6598fb5c582963dbc00852089a396
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947096"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051135"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Ikhtisar produk untuk Dynamics 365 Customer Insights
 
@@ -32,7 +32,7 @@ Customer Insights dilisensikan per penyewa dan mencakup kemampuan business-to-co
 
 ## <a name="try-customer-insights-and-get-started"></a>Coba Customer Insights dan mulai
 
-Mulai uji [coba](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) Customer Insights gratis hari ini untuk menguji aplikasi dengan data pelanggan Anda sendiri. [Cari tahu bagaimana Anda dapat dengan cepat mengakses dan menjelajahi banyak fitur](trial-signup.md) utama aplikasi. 
+Mulai uji [coba](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) Customer Insights gratis hari ini untuk menguji aplikasi dengan data pelanggan Anda sendiri. [Cari tahu bagaimana Anda dapat dengan cepat mengakses dan menjelajahi banyak fitur utama aplikasi](trial-signup.md). 
 
 Jelajahi [sumber belajar](https://dynamics.microsoft.com/ai/customer-insights/resources/) unggulan termasuk laporan analis, webinar sesuai permintaan, dan kisah pelanggan.
 

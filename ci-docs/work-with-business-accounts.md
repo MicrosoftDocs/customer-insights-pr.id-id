@@ -1,6 +1,6 @@
 ---
-title: Memulai akun bisnis sebagai audiens target utama
-description: Pelajari tentang akun bisnis sebagai audiens target utama Dynamics 365 Customer Insights.
+title: Menangani akun bisnis
+description: Pelajari tentang akun bisnis sebagai target utama audiens di Dynamics 365 Customer Insights.
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -13,20 +13,20 @@ searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: f16c8ad50ed290562fa9f223a3e8c86228e5331e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642729"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053117"
 ---
 # <a name="work-with-business-accounts"></a>Menangani akun bisnis
 
-Ini Dynamics 365 Customer Insights memungkinkan Anda mengonfigurasi lingkungan Anda untuk audiens target utama yang berbeda: konsumen individu (B-ke-C) dan akun bisnis (B-to-B). Dalam skenario B to C, data dipusatkan di sekitar individu. Untuk B to B, target utama audiens adalah akun - organisasi atau perusahaan - dan kontak. Artikel ini membantu Anda memulai lingkungan untuk akun bisnis. Ini mencantumkan perbedaan untuk area fitur di Wawasan Pelanggan, tergantung pada fokus lingkungan Anda. Untuk informasi lebih lanjut tentang perbedaan, lihat dokumen area fitur. 
+Ini Dynamics 365 Customer Insights memungkinkan Anda mengonfigurasi lingkungan Anda untuk audiens target utama yang berbeda: konsumen individu (B-to-C) dan akun bisnis (B-to-B). Dalam skenario B to C, data dipusatkan di sekitar individu. Untuk B to B, target utama audiens adalah akun - organisasi atau perusahaan - dan kontak. Artikel ini membantu Anda memulai lingkungan untuk akun bisnis. Ini mencantumkan perbedaan untuk area fitur di Customer Insights, tergantung pada fokus lingkungan Anda. Untuk informasi lebih lanjut tentang perbedaan, lihat dokumen area fitur. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Membuat lingkungan untuk akun bisnis
 
-Administrator dapat [membuat lingkungan di organisasi yang ada](create-environment.md). Langkah dalam proses pembuatan lingkungan baru akan meminta administrator untuk audiens target utama lingkungan. Jika ini adalah penyiapan awal setelah membeli lisensi, pengalaman terpandu membantu pembuatan lingkungan pertama.
+Administrator dapat [membuat lingkungan di organisasi yang ada](create-environment.md). Langkah dalam proses pembuatan lingkungan baru akan meminta administrator untuk audiens target utama lingkungan. Jika ini adalah pengaturan awal setelah membeli lisensi, pengalaman terpandu membantu menciptakan lingkungan pertama.
 
 Selanjutnya Anda [menyerap data](data-sources.md) untuk akun bisnis dan kontak terkait sebagai sumber data dari semua sumber yang didukung.
 

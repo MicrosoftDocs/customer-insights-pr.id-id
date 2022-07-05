@@ -1,5 +1,5 @@
 ---
-title: Fitur baru dan diperbarui
+title: Yang baru di Dynamics 365 Customer Insights
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843351"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054022"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Yang baru di Dynamics 365 Customer Insights
 
@@ -105,7 +105,7 @@ Untuk informasi selengkapnya, lihat [Mengaktifkan berbagi data dengan Dataverse 
 
 Kami terus memperluas ekosistem tujuan ekspor kami dengan koneksi baru. Anda sekarang dapat mengekspor segmen ke Iterable dan Braze untuk menggunakan layanan aktivasi mereka.
 
-Untuk informasi selengkapnya, lihat [Mengekspor segmen ke Dapat Diulang (pratinjau)](export-iterable.md) dan [Mengekspor segmen ke Braze (pratinjau)](export-braze.md).
+Untuk informasi selengkapnya, lihat [Mengekspor segmen ke Segmen yang Dapat Diulang (pratinjau)](export-iterable.md) dan [Ekspor ke Braze (pratinjau)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Peningkatan pada ekspor Marketo dan Google Ads
 

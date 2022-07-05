@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643802"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082576"
 ---
-# <a name="relationships-between-entities"></a>Relasi di antara dua entitas
+# <a name="relationships-between-entities-and-entity-paths"></a>Hubungan antara entitas dan jalur entitas
 
 Relasi menghubungkan entitas dan menentukan grafik data Anda saat entitas berbagi pengidentifikasi umum, kunci asing. Kunci asing ini dapat dirujuk dari satu entitas ke entitas lain. Entitas tersambung memungkinkan definisi segmen dan ukuran berdasarkan beberapa sumber data.
 
@@ -84,7 +84,7 @@ Hubungan terdiri dari *entitas sumber* yang berisi kunci asing dan *entitas targ
 
 Lingkungan yang dikonfigurasi untuk menggunakan akun bisnis sebagai audiens target utama dapat mengkonfigurasi hierarki akun untuk akun bisnis terkait. Misalnya, perusahaan yang memiliki unit bisnis terpisah. 
 
-Organisasi membuat hierarki akun untuk lebih baik mengelola akun dan Relasi satu sama lain. Customer Insights mendukung hierarki akun orang tua-anak yang sudah ada dalam data pelanggan yang tertelan. Contohnya, akun dari Dynamics 365 Sales. Hierarki ini dapat dikonfigurasi pada **halaman Relasi**.
+Organisasi membuat hierarki akun untuk lebih baik mengelola akun dan Relasi satu sama lain. Customer Insights mendukung hierarki akun orang tua-turunan yang sudah ada dalam data pelanggan yang diserap. Contohnya, akun dari Dynamics 365 Sales. Hierarki ini dapat dikonfigurasi pada **halaman Relasi**.
 
 1. Buka **data** > **Relasi**.
 1. Pilih tab **hierarki akun**.

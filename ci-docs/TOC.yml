@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: Pengayaan data
   items:
-    - name: Perkaya profil pelanggan
+    - name: Gambaran umum pengayaan data
       href: enrichment-hub.md
     - name: Akun dari Office 365 data
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: Tentukan aktivitas pelanggan
       href: activities.md
-    - name: Manajemen persetujuan untuk Customer Insights
+    - name: Menggunakan manajemen persetujuan
       href: consent-management.md
 - name: Segmen
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
+        - name: DalamMobi
+          href: export-inmobi.md
         - name: Dapat diulang
           href: export-iterable.md
         - name: Klaviyo

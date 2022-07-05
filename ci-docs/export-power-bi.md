@@ -1,5 +1,5 @@
 ---
-title: Konektor Power BI
+title: Power BI connector (pratinjau)
 description: Pelajari cara menggunakan konektor Dynamics 365 Customer Insights di Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643639"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051273"
 ---
-# <a name="connector-for-power-bi-preview"></a>Konektor untuk Power BI (pratinjau)
+# <a name="power-bi-connector-preview"></a>Power BI connector (pratinjau)
 
-Buat visualisasi untuk data Anda dengan Power BI Desktop. Buat wawasan tambahan dan Buat laporan dengan data pelanggan terpadu Anda.
+Buat visualisasi untuk data Anda dengan Microsoft Power BI Desktop. Buat wawasan tambahan dan Buat laporan dengan data pelanggan terpadu Anda.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -56,11 +56,11 @@ Pertimbangkan untuk bekerja dengan subset data Anda. Misalnya, Anda dapat membua
 
 ### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Lingkungan Customer Insights tidak ditampilkan di Power BI
 
-Lingkungan yang memiliki lebih dari satu [hubungan](relationships.md) yang ditentukan antara dua entitas identik dalam Customer Insights tidak akan tersedia di Power BI konektor.
+Lingkungan yang memiliki lebih dari satu [hubungan](relationships.md) yang ditentukan antara dua entitas identik di Customer Insights tidak akan tersedia di Power BI konektor.
 
 Anda dapat mengidentifikasi dan menghilangkan duplikat Relasi.
 
-1. **Buka Data** > **Relasi** tentang lingkungan tempat Anda hilang Power BI.
+1. Buka **Data** > **Relasi** tentang lingkungan tempat Anda hilang Power BI.
 2. Identifikasikan duplikat Relasi:
    - Periksa apakah ada lebih dari satu relasi yang didefinisikan antara dua entitas yang sama.
    - Periksa apakah ada relasi yang dibuat antara dua entitas yang tercakup dalam proses penyatuan. Terdapat relasi implisit yang didefinisikan antara semua entitas yang tercakup dalam proses penyatuan.
@@ -70,7 +70,7 @@ Setelah penghapusan duplikat Relasi, coba untuk mengkonfigurasi Power BI connect
 
 ### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Kesalahan pada bidang tanggal saat memuat entitas di Power BI Desktop
 
-Saat memuat entitas yang berisi bidang dengan format tanggal seperti MM/DD/YYYY, Anda dapat mengalami kesalahan karena format lokal yang tidak cocok. Ketidakcocokan ini terjadi saat file Anda Power BI Desktop diatur ke lokal lain selain bahasa Inggris (Amerika Serikat), karena bidang tanggal di Customer Insights disimpan dalam format AS.
+Saat memuat entitas yang berisi bidang dengan format tanggal seperti MM/DD/YYYY, Anda dapat mengalami kesalahan karena format lokal yang tidak cocok. Ketidakcocokan ini terjadi ketika file Anda Power BI Desktop diatur ke lokal lain selain bahasa Inggris (Amerika Serikat), karena bidang tanggal di Customer Insights disimpan dalam format AS.
 
 File Power BI Desktop memiliki satu pengaturan lokal, yang diterapkan saat mengambil data. Untuk mendapatkan tanggal ini ditafsirkan dengan benar, atur lokal .BPI ke Bahasa Inggris (Amerika Serikat). [Pelajari cara mengubah lokal file Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 

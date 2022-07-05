@@ -1,5 +1,5 @@
 ---
-title: Eksperimen Pembelajaran Mesin Azure
+title: Gunakan model berbasis pembelajaran mesin Azure
 description: Gunakan model berbasis pembelajaran mesin Azure di Dynamics 365 Customer Insights.
 ms.date: 12/02/2021
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cefd037a021b669e827f0593d63b938d452963f7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642609"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082282"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berbasis pembelajaran mesin Azure
 
@@ -34,7 +34,7 @@ Data terpadu di Dynamics 365 Customer Insights adalah sumber untuk membangun mod
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Bekerja dengan desainer Pembelajaran Mesin Azure
 
-Azure Pembelajaran Mesin designer menyediakan kanvas visual tempat Anda dapat menyeret dan melepas himpunan data dan modul. Alur kerja batch yang dibuat dari desainer dapat diintegrasikan ke dalam Customer Insights jika dikonfigurasi dengan sesuai. 
+Azure Pembelajaran Mesin designer menyediakan kanvas visual tempat Anda dapat menarik dan melepas himpunan data dan modul. Alur kerja batch yang dibuat dari desainer dapat diintegrasikan ke dalam Customer Insights jika dikonfigurasi dengan sesuai. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Bekerja dengan SDK Pembelajaran Mesin Azure
 

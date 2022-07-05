@@ -1,5 +1,5 @@
 ---
-title: Perkaya profil pelanggan dengan data merek dan minat dari Microsoft
+title: Perkaya profil pelanggan dengan data merek dan minat dari Microsoft (pratinjau)
 description: Gunakan data kepemilikan dari Microsoft untuk memperkaya data pelanggan Anda dengan afinitas dan Pangsa Suara.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953769"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082702"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Perkaya profil pelanggan dengan afinitas dan Pangsa Suara (pratinjau)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Perkaya profil pelanggan dengan data merek dan minat dari Microsoft (pratinjau)
 
 Gunakan data milik Microsoft untuk memperkaya data pelanggan Anda dengan afinitas merek, afinitas minat, dan Pangsa Suara (SoV). Afinitas dan SoV ini didasarkan pada data dari orang-orang dengan demografi yang mirip dengan pelanggan Anda. Informasi ini membantu Anda untuk lebih memahami dan mengelompokkan pelanggan Anda berdasarkan afinitas atau SoV mereka dengan merek dan minat tertentu.
 
@@ -104,7 +104,7 @@ Saat ini kami mendukung pilihan negara/kawasan berikut: Australia, Kanada (Inggr
 
    Bila memperkaya profil, kami akan memperkaya semua profil pelanggan dengan data yang kami dapatkan untuk merek dan minat tertentu, termasuk profil yang tidak berada di negara atau kawasan tertentu. Misalnya, jika Anda memilih Jerman, kami akan memperkaya profil yang berlokasi di Amerika Serikat jika kami memiliki data yang tersedia untuk merek dan minat yang dipilih di AS.
 
-## <a name="enrichment-results"></a>Hasil pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

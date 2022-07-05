@@ -1,5 +1,5 @@
 ---
-title: Konektor Power Apps
+title: Power Apps connector (pratinjau)
 description: Hubungkan Power Apps dengan Power Automate.
 ms.date: 10/01/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e99d7d4f231eb2ade67f27c9e52c61af3a21b99d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 0b71f723d1e491d422d24b1be6616d2f33c95d40
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643942"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055264"
 ---
-# <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps connector (pratinjau)
+# <a name="power-apps-connector-preview"></a>Power Apps connector (pratinjau)
 
-Bawa profil pelanggan terpadu ke aplikasi Anda yang disesuaikan dengan Power Apps.
+Bawa profil pelanggan terpadu ke aplikasi Anda yang disesuaikan dengan Microsoft Power Apps.
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Hubungkan Power Apps dan Dynamics 365 Customer Insights
 
@@ -37,7 +37,7 @@ Setelah menambahkan Customer Insights sebagai sambungan data, Anda dapat memilih
 
 ### <a name="retrievable-entities"></a>Entitas yang dapat diambil
 
-Anda hanya dapat mengambil entitas **Pelanggan**, **UnifiedActivity**, **Segmen**, dan **ContactProfile** melalui konektor Power Apps. ContactProfile hanya tersedia dalam instans Customer Insights untuk akun bisnis. Entitas lain ditampilkan karena konektor yang mendasari mendukung mereka melalui pemicu di Power Automate.
+Anda hanya dapat mengambil entitas **Pelanggan**, **UnifiedActivity**, **Segmen**, dan **ContactProfile** melalui konektor Power Apps. ContactProfile hanya tersedia di instans Customer Insights untuk akun bisnis. Entitas lain ditampilkan karena konektor yang mendasari mendukung mereka melalui pemicu di Power Automate.
 
 Anda dapat melakukan maksimal 100 panggilan per 60 detik. Anda dapat memanggil API titik akhir beberapa kali dengan menggunakan parameter $skip. [Pelajari parameter $skip lebih lanjut](/connectors/customerinsights/#get-items-from-an-entity).
 

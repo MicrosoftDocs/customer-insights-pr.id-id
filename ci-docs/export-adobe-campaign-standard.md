@@ -1,5 +1,5 @@
 ---
-title: Mengekspor data Customer Insights ke Adobe Campaign Standard
+title: Mengekspor segmen Customer Insights ke Adobe Standar Kampanye (pratinjau)
 description: Pelajari cara menggunakan segmen Customer Insights di Adobe Standar Kampanye.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,38 +8,38 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642710"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082345"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Menggunakan segmen Customer Insights di Adobe Campaign Standard (pratinjau)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Mengekspor segmen Customer Insights ke Adobe Standar Kampanye (pratinjau)
 
-Sebagai pengguna Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran Anda lebih efisien dengan menargetkan audiens yang relevan. Untuk menggunakan segmen dari Customer Insights dan Adobe Experience Platform aplikasi seperti Adobe Campaign Standard, Anda perlu mengikuti beberapa langkah yang diuraikan dalam artikel ini.
+Sebagai pengguna Dynamics 365 Customer Insights, Anda mungkin telah membuat segmen untuk membuat kampanye pemasaran Anda lebih efisien dengan menargetkan audiens yang relevan. Untuk menggunakan segmen dari Customer Insights dan Adobe Experience Platform aplikasi seperti Adobe Standar Kampanye, Anda harus mengikuti beberapa langkah yang diuraikan dalam artikel ini.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagram proses dari langkah-langkah yang diuraikan dalam artikel ini.":::
 
 ## <a name="prerequisites"></a>Prasyarat
 
--   Lisensi Dynamics 365 Customer Insights
--   Lisensi Adobe Campaign Standard
--   Akun Azure Blob Storage
+- Lisensi Dynamics 365 Customer Insights
+- Lisensi Adobe Campaign Standard
+- Akun Azure Blob Storage
 
 ## <a name="campaign-overview"></a>Ikhtisar Kampanye
 
-Untuk lebih memahami bagaimana Anda dapat menggunakan segmen dari Customer Insights di Adobe Experience Platform, mari kita lihat contoh kampanye fiktif.
+Untuk lebih memahami bagaimana Anda dapat menggunakan segmen dari Customer Insights di Adobe Experience Platform, mari kita lihat kampanye sampel fiktif.
 
 Misalnya, perusahaan Anda menawarkan layanan berbasis langganan bulanan kepada pelanggan Anda di Amerika Serikat. Anda ingin mengidentifikasi pelanggan yang langganannya harus diperpanjang dalam delapan hari berikutnya tetapi belum memperbarui langganan mereka. Untuk menjaga pelanggan ini, Anda ingin mengirimkan penawaran promosi melalui email, menggunakan Adobe Campaign Standard.
 
-Di contoh ini, kita ingin menjalankan kampanye email promosi sekali. Artikel ini tidak mencakup kasus penggunaan dalam menjalankan kampanye lebih dari satu kali. Namun, Customer Insights dan Adobe Campaign Standard dapat dikonfigurasi untuk bekerja untuk skenario kampanye berulang juga.
+Di contoh ini, kita ingin menjalankan kampanye email promosi sekali. Artikel ini tidak mencakup kasus penggunaan dalam menjalankan kampanye lebih dari satu kali. Namun, Customer Insights dan Adobe Standar Kampanye juga dapat dikonfigurasi agar berfungsi untuk skenario kampanye berulang.
 
 ## <a name="identify-your-target-audience"></a>Identifikasikan target audiens
 
 Dalam skenario kami, kami berasumsi bahwa alamat email pelanggan tersedia dan preferensi promosi mereka dianalisis untuk mengidentifikasi anggota segmen.
 
-Segmen [yang Anda tentukan dalam Customer Insights](segments.md) disebut **ChurnProneCustomers** dan Anda berencana untuk mengirimkan promosi email kepada pelanggan ini.
+Segmen [yang Anda tentukan di Customer Insights](segments.md) disebut **ChurnProneCustomers** dan Anda berencana untuk mengirimkan promosi email kepada pelanggan ini.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Tangkapan layar halaman segmen dengan segmen ChurnProneCustomers dibuat.":::
 
@@ -51,7 +51,7 @@ Email penawaran yang ingin Anda kirim akan berisi nama depan, nama belakang, dan
 
 Dengan target kami audiens diidentifikasi, kami dapat mengonfigurasi ekspor ke akun Azure Blob Storage.
 
-1. Di Customer Insights, buka **AdminConnections** > **·**.
+1. Di Customer Insights, buka **Koneksi Admin** > **·**.
 
 1. Pilih **Tambah koneksi** dan pilih **Adobe Campaign** untuk mengkonfigurasi koneksi atau pilih **Konfigurasi** dalam petak **Adobe Campaign**.
 
@@ -87,11 +87,11 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pilih **Selanjutnya**.
 
-1. Sekarang kami memetakan **bidang Sumber** dari segmen Wawasan Pelanggan ke **nama bidang Target** dalam Adobe skema profil Standar Kampanye.
+1. Sekarang kita memetakan **bidang Sumber** dari segmen Customer Insights ke **nama bidang Target** dalam Adobe skema profil Standar Kampanye.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Pemetaan bidang untuk konektor Adobe Campaign Standard.":::
 
-   Jika Anda ingin menambahkan atribut lainnya, pilih **Tambah atribut**. Nama target dapat berbeda dari nama bidang sumber sehingga Anda masih dapat memetakan output segmen dari Customer Insights ke Adobe Campaign Standard jika bidang tidak memiliki nama yang sama di kedua sistem.
+   Jika Anda ingin menambahkan atribut lainnya, pilih **Tambah atribut**. Nama target dapat berbeda dari nama bidang sumber sehingga Anda masih dapat memetakan output segmen dari Customer Insights ke Adobe Standar Kampanye jika bidang tidak memiliki nama yang sama di kedua sistem.
 
    > [!NOTE]
    > Alamat email digunakan sebagai bidang identitas, tetapi Anda dapat menggunakan pengidentifikasi lain dari profil pelanggan untuk memetakan data ke Adobe Standar Kampanye.
@@ -125,7 +125,7 @@ Jika tidak ada rekaman lain dalam Adobe Campaign Standard, selain yang akan diim
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Mengimpor data ke Adobe Campaign Standard
 
-Sekarang setelah semuanya sudah ada, kita perlu mengimpor data audiens yang disiapkan dari Wawasan Pelanggan ke dalam Adobe Standar Kampanye untuk membuat profil. Pelajari lebih lanjut [cara mengimpor profil dalam Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) menggunakan alur kerja.
+Sekarang semuanya sudah siap, kita perlu mengimpor data audiens yang disiapkan dari Customer Insights ke dalam Adobe Standar Kampanye untuk membuat profil. Pelajari lebih lanjut [cara mengimpor profil dalam Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) menggunakan alur kerja.
 
 Alur kerja impor pada gambar di bawah ini telah dikonfigurasi untuk berjalan setiap delapan jam dan mencari segmen Customer Insights yang diekspor (.csv file di Azure Blob Storage). Alur kerja mengekstrak konten file .csv dalam urutan kolom yang ditentukan. Alur kerja ini telah dibuat untuk melakukan penanganan kesalahan dasar dan memastikan setiap rekaman memiliki alamat email sebelum menghidrasi data dalam Adobe Campaign Standard. Alur kerja juga mengekstrak nama segmen dari nama file sebelum melakukan upserting ke data profil Adobe Campaign Standard.
 

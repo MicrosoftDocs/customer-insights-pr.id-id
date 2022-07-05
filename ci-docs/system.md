@@ -1,5 +1,5 @@
 ---
-title: Konfigurasi sistem dalam Wawasan Pelanggan
+title: Konfigurasi sistem
 description: Pelajari tentang pengaturan sistem di Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,16 +15,16 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653620"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050675"
 ---
 # <a name="system-configuration"></a>Konfigurasi sistem
 
-Untuk mengakses konfigurasi sistem, buka **AdminSystem** > **untuk** melihat daftar tugas dan proses sistem.
+Untuk mengakses konfigurasi sistem, buka **Sistem** > **Admin** untuk melihat daftar tugas dan proses sistem.
 
 Halaman **Sistem** mencakup tab berikut:
 - [Status](#status-tab)
@@ -58,44 +58,44 @@ Sistem menggunakan status berikut untuk tugas dan proses:
 |Sedang memproses  |Tugas atau proses sedang berlangsung.  |
 |Me-refresh    |Penyerapan data sedang berlangsung. Anda dapat membatalkan operasi ini dengan memilih **berhenti menyegarkan** di kolom **tindakan**. Menghentikan refresh sumber data akan mengembalikannya ke status refresh terakhir.       |
 |Dilewati  |Tugas atau proses dilewati. Satu atau beberapa proses hilir yang tugas ini tergantung padanya gagal atau dilewati.|
-|Berhasil  |Tugas atau proses selesai dengan sukses. Untuk sumber data, menunjukkan data telah berhasil dicerna jika suatu waktu disebutkan di **kolom Refreshed**.|
-|Diantrekan | Pemrosesan diantrekan dan akan dimulai setelah semua tugas dan proses hulu selesai. Untuk informasi selengkapnya, lihat [Proses refresh](#refresh-processes).|
+|Berhasil  |Tugas atau proses berhasil diselesaikan. Untuk sumber data, menunjukkan bahwa data telah berhasil diserap jika waktu disebutkan di **kolom Refresh**.|
+|Dalam Antrean | Pemrosesan diantrekan dan akan dimulai setelah semua tugas dan proses hulu selesai. Untuk informasi selengkapnya, lihat [Merefresh proses](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Proses penyegaran
 
-Refresh untuk tugas dan proses dijalankan sesuai dengan [jadwal](#schedule-tab) yang dikonfigurasi. 
+Refresh untuk tugas dan proses dijalankan sesuai dengan jadwal [yang](#schedule-tab) dikonfigurasi. 
 
 |Proses  |Deskripsi  |
 |---------|---------|
-|Aktivitas  |Berjalan secara manual (single time refresh). Tergantung pada proses penggabungan. Wawasan tergantung pada prosesnya.|
-|Penautan analisis |Berjalan secara manual (single time refresh). Tergantung segmen.  |
-|Persiapan analisis |Berjalan secara manual (single time refresh). Tergantung segmen.  |
-|Persiapan data   |Membutuhkan entitas untuk berjalan. Sumber data entitas bergantung pada konsumsi. Entitas yang diperkaya tergantung pada pengayaan. Entitas Pelanggan bergantung pada penggabungan.  |
+|Aktivitas  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. Wawasan tergantung pada prosesnya.|
+|Penautan analisis |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
+|Persiapan analisis |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
+|Persiapan data   |Membutuhkan entitas untuk dijalankan. Entitas sumber data bergantung pada penyerapan. Entitas yang diperkaya tergantung pada pengayaan. Entitas Pelanggan bergantung pada penggabungan.  |
 |Sumber Data   |Tidak tergantung pada proses lainnya. Kecocokan tergantung pada keberhasilan penyelesaian proses ini.  |
-|Pengayaan   |Berjalan secara manual (single time refresh). Tergantung pada proses penggabungan. |
-|Tujuan ekspor |Berjalan secara manual (single time refresh). Tergantung segmen.  |
-|Wawasan |Berjalan secara manual (single time refresh). Tergantung segmen.  |
+|Pengayaan   |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. |
+|Ekspor tujuan |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
+|Wawasan |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada segmen.  |
 |Intelijen   |Tergantung pada penggabungan.   |
 |Cocokkan |Tergantung pada pemrosesan sumber data yang digunakan dalam definisi pencocokan.      |
-|Tindakan  |Berjalan secara manual (single time refresh). Tergantung pada proses penggabungan.  |
+|Tindakan  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan.  |
 |Penggabungan   |Tergantung pada penyelesaian proses kecocokan. Segmen, tindakan, pengayaan, pencarian, aktivitas, Prediksi, dan persiapan data tergantung pada keberhasilan penyelesaian proses ini.   |
-|Profil   |Berjalan secara manual (single time refresh). Tergantung pada proses penggabungan. |
-|Pencarian   |Berjalan secara manual (single time refresh). Tergantung pada proses penggabungan. |
-|Segmen  |Berjalan secara manual (single time refresh). Tergantung pada proses penggabungan. Wawasan tergantung pada prosesnya.|
+|Profil   |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. |
+|Pencarian   |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. |
+|Segmen  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada proses penggabungan. Wawasan tergantung pada prosesnya.|
 |Sistem   |Tergantung pada penyelesaian proses kecocokan. Segmen, tindakan, pengayaan, pencarian, aktivitas, Prediksi, dan persiapan data tergantung pada keberhasilan penyelesaian proses ini.   |
-|User  |Berjalan secara manual (single time refresh). Tergantung pada entitas.  |
+|User  |Berjalan secara manual (penyegaran waktu tunggal). Tergantung pada entitas.  |
 
-Pilih status proses untuk melihat detail kemajuan dari seluruh pekerjaan yang ada. Proses refresh di atas dapat membantu memahami apa yang dapat Anda lakukan untuk mengatasi **tugas atau** proses yang **Dilewati atau Diantrekan**.
+Pilih status proses untuk melihat detail kemajuan dari seluruh pekerjaan yang dijalaninya. Proses refresh di atas dapat membantu memahami apa yang dapat Anda lakukan untuk mengatasi tugas atau proses yang **Dilewati** atau **Diantrekan**.
 
 ## <a name="schedule-tab"></a>tab Jadwal
 
 Gunakan tab **jadwal** untuk menjadwalkan penyegaran otomatis dari semua [sumber data yang diserap](data-sources.md). Penyegaran otomatis membantu memastikan bahwa pembaruan dari sumber data Anda tercermin dalam profil pelanggan terpadu Anda.
 
 > [!NOTE]
-> Sumber data yang dikelola oleh Anda menyegarkan jadwal mereka sendiri. Untuk menjadwalkan refresh sumber data yang dikelola oleh Anda, konfigurasikan pengaturan refresh pada sumber data tertentu dari **halaman Sumber** data.
+> Sumber data yang dikelola oleh Anda refresh pada jadwal mereka sendiri. Untuk menjadwalkan refresh sumber data yang dikelola oleh Anda, konfigurasikan pengaturan refresh pada sumber data tertentu dari **halaman Sumber** data.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Pengaturan refresh aliran data.":::
 
-1. **Buka AdminSystem** > **dan** pilih **tab Jadwalkan**.
+1. Buka **Sistem** > **Admin** dan pilih tab **Jadwal**.
 
 2. Status default untuk refresh terjadwal adalah **tidak aktif**. Untuk mengaktifkan penyegaran terjadwal, Ubah pengalih di bagian atas layar ke **aktif**.
 

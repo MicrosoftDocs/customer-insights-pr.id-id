@@ -1,6 +1,6 @@
 ---
-title: Membuat langkah-langkah dari templat
-description: Tentukan langkah-langkah menggunakan templat untuk kasus penggunaan umum.
+title: Membuat ukuran dari templat
+description: Tentukan ukuran menggunakan templat untuk kasus penggunaan umum.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642539"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051687"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>Gunakan templat untuk menyusun pengukuran
+# <a name="create-measures-from-templates"></a>Membuat ukuran dari templat
 
 Anda dapat menggunakan templat yang telah ditentukan sebelumnya dari langkah-langkah yang [umum digunakan](measures.md) untuk membuatnya. Deskripsi terperinci tentang templat dan pengalaman terpandu membantu Anda mengukur pembuatan yang efisien. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
 
-Untuk membuat tindakan kustom, lihat [Menggunakan pembuat ukuran untuk membuat tindakan dari awal](measure-builder.md).
+Untuk membuat pengukuran kustom, lihat [Menggunakan pembuat pengukuran untuk membuat pengukuran dari awal](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
@@ -39,9 +39,9 @@ Template ukuran yang tersedia:
 - Durasi keanggotaan loyalitas
 - Waktu sejak pembelian terakhir
 
-## <a name="build-a-new-measure-using-a-template"></a>Membuat ukuran baru menggunakan templat
+## <a name="build-a-new-measure-using-a-template"></a>Membuat pengukuran baru menggunakan templat
 
-1. Pergi ke **Ukuran**.
+1. Pergi ke **Tindakan**.
 
 1. Pilih **Baru** dan pilih **pilih template**.
 
@@ -51,7 +51,7 @@ Template ukuran yang tersedia:
 
 1. Tinjau data yang diperlukan dan pilih **Mulai** jika Anda memiliki semua data yang ada.
 
-1. Pilih **Edit detail** di samping Ukur nama. Berikan nama untuk ukuran. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke ukuran.
+1. Pilih **Edit detail** di samping Ukur nama. Berikan nama untuk ukuran tersebut. Secara opsional, tambahkan [tag](work-with-tags-columns.md#manage-tags) ke pengukuran.
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Kotak dialog Edit detail.":::
 

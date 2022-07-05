@@ -1,7 +1,7 @@
 ---
-title: Menyerap data melalui Power Query konektor (berisi video)
-description: Konektor untuk sumber data berdasarkan file Power Query.
-ms.date: 05/09/2022
+title: Menyambungkan ke Power Query sumber data (berisi video)
+description: Menyerap data melalui Power Query konektor (berisi video).
+ms.date: 06/13/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: b99c3b446e580f455f9678d54d9db414aea9b331
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011661"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082177"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Menyambungkan ke Power Query sumber data
 

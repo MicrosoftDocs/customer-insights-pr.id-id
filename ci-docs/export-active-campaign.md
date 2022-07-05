@@ -1,5 +1,5 @@
 ---
-title: Mengekspor data Customer Insights ke ActiveCampaign
+title: Mengekspor segmen ke ActiveCampaign
 description: Pelajari lebih lanjut cara mengkonfigurasi sambungan dan mengekspor ke ActiveCampaign.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642690"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054712"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Mengekspor segmen ke ActiveCampaign (pratinjau)
 
@@ -21,9 +21,9 @@ Mengekspor segmen profil pelanggan terpadu ke ActiveCampaign dan menggunakannya 
 
 ## <a name="prerequisites"></a>Prasyarat
 
--   Anda memiliki [akun ActiveCampaign](https://www.activecampaign.com/) dan kredensial administrator yang terkait.
--   Anda telah [mengonfigurasi segmen](segments.md) di Customer Insights.
--   Profil pelanggan terpadu di segmen yang diekspor berisi bidang dengan alamat email.
+- Anda memiliki [akun ActiveCampaign](https://www.activecampaign.com/) dan kredensial administrator yang terkait.
+- Anda telah [mengonfigurasi segmen](segments.md) di Customer Insights.
+- Profil pelanggan terpadu di segmen yang diekspor berisi bidang dengan alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 

@@ -1,5 +1,5 @@
 ---
-title: Entitas dan himpunan data
+title: Entitas di Customer Insights
 description: Lihat data pada halaman entitas.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642699"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082723"
 ---
 # <a name="entities-in-customer-insights"></a>Entitas di Customer Insights
 
@@ -33,9 +33,9 @@ Halaman **Entitas** mencantumkan entitas dan menyertakan kolom ini:
 
 ## <a name="explore-a-specific-entitys-data"></a>Jelajahi data entitas tertentu
 
-1. **Buka DataEntities** > **·**.
-1. Dari **halaman Entitas**, pilih entitas untuk membuka halaman detail.  
-1. Jelajahi berbagai bidang dan catatan yang disertakan untuk entitas tersebut.
+1. Buka **Entitas Data** > **·**.
+1. Dari halaman **Entitas**, pilih entitas untuk membuka halaman detail.  
+1. Jelajahi berbagai bidang dan rekaman yang disertakan untuk entitas tersebut.
 
 - Tab **Atribut** dipilih secara default dan menampilkan tabel untuk meninjau rincian entitas yang dipilih, seperti nama bidang, jenis data, dan jenis. Kolom **jenis** menunjukkan jenis terkait Common Data Model, yang baik yang diidentifikasi secara otomatis oleh sistem, atau yang [dipetakan secara manual](map-entities.md) oleh pengguna. Jenis ini adalah jenis semantik yang dapat berbeda dari jenis data atribut. Misalnya, bidang *email* di bawah ini memiliki jenis data *teks* namun jenis Common Data Model (semantik)-nya mungkin *email* atau *EmailAddress*.
 
@@ -43,14 +43,14 @@ Halaman **Entitas** mencantumkan entitas dan menyertakan kolom ini:
 > ![Tabel bidang.](media/data-manager-entities-fields.PNG "Tabel bidang")
 
 > [!NOTE]
-> Halaman ini hanya menampilkan sampel data entitas Anda. Untuk melihat himpunan data lengkap, buka **halaman Sumber data**, pilih entitas, pilih **Edit**, lalu lihat data entitas ini dengan Power Query editor seperti yang dijelaskan di [Sumber data](data-sources.md).
+> Halaman ini hanya menampilkan sampel data entitas Anda. Untuk melihat himpunan data lengkap, buka **halaman Sumber** data, pilih entitas, pilih **Edit**, lalu lihat data entitas ini dengan Power Query editor seperti yang dijelaskan di [Sumber data](data-sources.md).
 
 Untuk mempelajari lebih lanjut tentang data yang terserap di entitas, kolom **ringkasan** memberi Anda beberapa karakteristik penting data, seperti null, nilai yang tidak ada, nilai unik, jumlah, dan distribusi, sebagaimana berlaku untuk data Anda. Pilih ikon diagram untuk melihat ringkasan data.
 
 > [!div class="mx-imgBorder"]
 > ![Simbol ringkasan.](media/data-manager-entities-summary.png "Tabel Ringkasan Data")
 
-- Tab **Data** menampilkan rincian daftar tabel tentang rekaman individual entitas. Detail yang tercantum tergantung pada tipe data entitas.
+- Tab **Data** menampilkan rincian daftar tabel tentang rekaman individual entitas. Detail yang tercantum bergantung pada tipe data entitas.
 
 > [!div class="mx-imgBorder"]
 > ![Pilih entitas.](media/data-manager-entities-data.png "Pilih satu entitas")
@@ -73,7 +73,7 @@ Bidang dari sumber data yang diserap dapat berisi data yang rusak. Rekaman denga
 
 Misalnya, kolom 'ulang tahun' memiliki himpunan tipe data sebagai 'tanggal'. Rekaman pelanggan memasukkan ulang tahun mereka sebagai '01/01/19777'. Sistem akan menandai rekaman ini sebagai rusak. Seseorang sekarang dapat mengubah ulang tahun dalam sistem sumber menjadi '1977'. Setelah refresh otomatis sumber data, bidang sekarang memiliki format yang valid dan rekaman akan dihapus dari entitas yang rusak. 
 
-Buka **Data** > **Entitas** dan cari entitas yang rusak di bagian **Sistem**. Penamaan skema entitas yang rusak: 'DataSourceName_EntityName_corrupt'. Pilih entitas yang rusak untuk mengidentifikasi semua bidang yang rusak dan alasannya di tingkat rekaman individual.
+Buka **Data** > **Entitas** dan cari entitas yang rusak di bagian **Sistem**. Penamaan skema entitas yang rusak: 'DataSourceName_EntityName_corrupt'. Pilih entitas yang rusak untuk mengidentifikasi semua bidang yang rusak dan alasannya di tingkat rekaman individu.
 > [!div class="mx-imgBorder"]
 > ![Alasan korupsi.](media/corruption-reason.png "Alasan Korupsi")
 

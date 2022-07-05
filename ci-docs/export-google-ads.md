@@ -1,5 +1,5 @@
 ---
-title: Ekspor data Customer Insights ke Google Ads
+title: Mengekspor segmen ke Google Ads (pratinjau)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Google Ads.
 ms.date: 03/31/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3e0eb91be97d69a999e90708d29c572f0055527e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b7f08936d7d90322cb4e62396a2961fe06273b76
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642680"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082996"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Mengekspor segmen ke Google Ads (pratinjau)
 
@@ -64,9 +64,9 @@ Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe i
 
 1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Google Ads. Jika Anda tidak melihat nama bagian ini, maka tidak ada sambungan dari jenis ini yang tersedia untuk Anda.
 
-1. Jika Anda ingin membuat audiens baru, biarkan bidang ID Google audiens kosong. Kami akan secara otomatis membuat audiens baru di akun Google Ads Anda dan menggunakan nama segmen yang diekspor. Jika Anda ingin memperbarui audiens Google Ads yang sudah ada, masukkan [ID audiens Google Ads Anda](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
+1. Jika Anda ingin membuat audiens baru, kosongkan kolom Id Google audiens. Kami akan secara otomatis membuat audiens baru di akun Google Ads Anda dan menggunakan nama segmen yang diekspor. Jika Anda ingin mengupdate audiens Google Ads yang sudah ada, masukkan [ID audiens Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. **Di bagian Pencocokan** data, pilih satu atau beberapa bidang data untuk diekspor, dan pilih bidang yang mewakili bidang data yang sesuai di Wawasan Pelanggan.
+1. Di bagian **Pencocokan** data, pilih satu atau beberapa bidang data untuk diekspor, dan pilih bidang yang mewakili bidang data terkait di Customer Insights.
 
 1. Pilih segmen yang ingin diekspor. 
 

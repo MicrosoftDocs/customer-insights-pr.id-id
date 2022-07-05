@@ -1,5 +1,5 @@
 ---
-title: Mengekspor data Customer Insights ke Microsoft Advertising
+title: Mengekspor segmen ke Microsoft Advertising (pratinjau)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Microsoft Advertising.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14479e915dd6ae76e018b59bee5980a600bb222d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ca37159ec6473ad5c331a0ce1aa8424d277529ff
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643919"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082807"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Mengekspor segmen ke Microsoft Advertising (pratinjau)
 
@@ -23,7 +23,7 @@ Ekspor segmen Customer Insights ke Microsoft Advertising untuk membuat audiens C
 
 -   [Akun Microsoft Advertising](https://ads.microsoft.com/) dan kredensial administrator terkait.
 -   Anda telah menerima ketentuan penggunaan Customer Match. 
--   [Segmen](segments.md) yang dikonfigurasi di Wawasan Pelanggan.
+-   [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 -   Profil pelanggan terpadu di segmen yang diekspor berisi bidang dengan alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui

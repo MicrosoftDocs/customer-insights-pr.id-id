@@ -1,5 +1,5 @@
 ---
-title: Contoh panduan prediksi nilai seumur hidup pelanggan
+title: Contoh panduan prediksi nilai seumur hidup pelanggan (CLV)
 description: Gunakan panduan sampel ini untuk mencoba model prediksi pelanggan nilai seumur hidup.
 ms.date: 03/31/2022
 ms.reviewer: v-wendysmith
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740815"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051641"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Contoh panduan prediksi nilai seumur hidup pelanggan (CLV)
 
@@ -106,7 +106,7 @@ Tinjau artikel [tentang penyerapan](data-sources.md) data dan [mengimpor sumber 
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tugas 3 - Mengonfigurasi prediksi nilai seumur hidup pelanggan
 
-Dengan adanya profil pelanggan terpadu, kita sekarang dapat menjalankan prediksi nilai seumur hidup pelanggan. Untuk langkah-langkah mendetail, lihat [prediksi Nilai Seumur Hidup Pelanggan](predict-customer-lifetime-value.md).
+Dengan adanya profil pelanggan terpadu, kita sekarang dapat menjalankan prediksi nilai seumur hidup pelanggan. Untuk langkah-langkah terperinci, lihat [prediksi Nilai Umur Pelanggan](predict-customer-lifetime-value.md).
 
 1. Buka  **Kecerdasan**  > **Prediksi**  dan pilih **model nilai seumur hidup Pelanggan**.
 
