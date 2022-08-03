@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012029"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207141"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Refresh inkremental untuk Power Query dan sumber data Azure Data Lake
 
-Artikel ini membahas cara mengonfigurasi refresh inkremental untuk sumber data berdasarkan Power Query atau Azure Data Lake.
-
-Peningkatan refresh secara bertahap untuk sumber data memberikan keuntungan berikut:
+Refresh inkremental untuk sumber data berdasarkan Power Query atau Azure Data Lake memberikan keuntungan berikut:
 
 - **Refresh lebih cepat** -hanya data yang telah diubah akan disegarkan. Misalnya, Anda mungkin hanya me-refresh lima hari terakhir dari kumpulan data historis.
 - **Peningkatan keandalan** -dengan penyegaran lebih kecil, Anda tidak perlu memelihara koneksi ke sistem sumber volatil begitu lama, sehingga mengurangi risiko masalah koneksi.
@@ -73,6 +71,7 @@ Customer Insights memungkinkan refresh inkremental untuk sumber data yang terhub
 
    1. Telusuri ke folder akar yang berisi file .csv atau .parquet untuk data lengkap, peningkatan data inkremental, dan penghapusan data inkremental.
    1. Masukkan ekstensi untuk data lengkap dan kedua file inkremental (\. csv atau \. parket).
+   1. Untuk file .csv, pilih pembatas kolom dan jika Anda menginginkan baris pertama file sebagai header kolom.
    1. Pilih **Simpan**.
 
 1. Untuk **Terakhir diperbarui**, pilih atribut stempel waktu tanggal.

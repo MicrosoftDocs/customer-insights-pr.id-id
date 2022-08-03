@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947372"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146699"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan hak subjek data (DSR) di bawah GDPR
 
@@ -31,18 +31,22 @@ Kami berkomitmen untuk membantu pelanggan memenuhi persyaratan GDPR. Ini mencaku
 
 Customer Insights menawarkan pengalaman dalam produk berikut untuk menghapus data pribadi bagi pelanggan atau pengguna tertentu:
 
-- **Mengelola permintaan untuk data pelanggan**: data pelanggan dalam Customer Insights terserap dari sumber data asli eksternal untuk Customer Insights. Semua permintaan penghapusan GDPR harus dilakukan di sumber data asli.
+- **Mengelola permintaan untuk data pelanggan**: data pelanggan dalam Customer Insights terserap dari sumber data asli eksternal untuk Customer Insights. Lakukan permintaan penghapusan GDPR di sumber data asli terlebih dahulu.
 - **Mengelola permintaan penghapusan untuk data pengguna Customer Insights**: data untuk pengguna dibuat oleh Customer Insights. Semua permintaan penghapusan GDPR harus dilakukan di Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Mengelola permintaan untuk menghapus data pelanggan
 
-Admin Customer Insights dapat mengikuti langkah berikut untuk menghapus data pelanggan yang telah dihapus di sumber data:
+Admin Customer Insights dapat mengikuti langkah-langkah ini untuk menghapus data pelanggan yang telah dihapus di sumber data. Pastikan bahwa permintaan penghapusan dilakukan di sumber data Anda sebelum melanjutkan dengan langkah-langkah yang tercantum di bawah ini. 
 
 1. Masuk ke Dynamics 365 Customer Insights.
-2. **Buka Sumber Data Data** > **·**
-3. Untuk setiap sumber data dalam daftar berisi data pelanggan yang telah dihapus:
+1. **Buka Sumber Data Data** > **·**
+1. Untuk setiap sumber data dalam daftar berisi data pelanggan yang telah dihapus:
    1. Pilih elipsis vertikal (&vellip;) lalu pilih **Refresh**.
-   2. Periksa status sumber data dalam **status**. Tanda centang berarti penyegaran berhasil. Segitiga peringatan berarti terjadi kesalahan. Jika segitiga peringatan ditampilkan, hubungi D365CI@microsoft.com.
+   1. Periksa status sumber data dalam **status**. Tanda centang berarti penyegaran berhasil. Segitiga peringatan berarti terjadi kesalahan. Jika segitiga peringatan ditampilkan, hubungi D365CI@microsoft.com.
+1. Setelah refresh sumber data berhasil, jalankan refresh hilir juga. Terutama, jika Anda tidak memiliki penyegaran penuh berulang dari Customer Insights yang dijadwalkan. 
+
+> [!IMPORTANT]
+> Segmen statis tidak disertakan dalam refresh penuh atau menjalankan refresh hilir setelah permintaan penghapusan. Untuk memastikan bahwa data pelanggan juga dihapus dari segmen statis, buat ulang segmen statis dengan data sumber yang disegarkan.
 
 > [!div class="mx-imgBorder"]
 > ![Menangani permintaan penghapusan GDPR untuk data pelanggan.](media/gdpr-data-sources.png "Menangani permintaan penghapusan GDPR untuk data pelanggan")
@@ -77,5 +81,10 @@ Administrator penyewa dapat mengikuti langkah berikut untuk mengekspor data:
 1. Kirim email ke D365CI@microsoft.com yang menentukan alamat email pengguna yang diminta. Tim Customer Insights akan mengirim email ke alamat email admin penyewa yang terdaftar, meminta konfirmasi untuk mengekspor data.
 2. Berikan konfirmasi untuk mengekspor data untuk pengguna yang diminta.
 3. Terima data yang diekspor melalui alamat email admin penyewa.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Penanganan penghapusan data di Dynamics 365 Customer Insights
+
+1. Data akan dihapus (partisi data dan snapshot data) jika partisi data dan snapshot data tidak aktif selama lebih dari 30 hari, yang berarti mereka telah digantikan oleh partisi data baru dan snapshot melalui penyegaran sumber data.
+2. Tidak semua data dan snapshot dihapus. Partisi data terbaru dan rekam jepret data menurut definisi aktif karena digunakan di Customer Insights. Untuk data terbaru, tidak masalah jika sumber data tidak disegarkan dalam 30 hari terakhir.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Aktivitas pelanggan
 description: Tentukan aktivitas pelanggan dan lihat di timeline pada profil pelanggan.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
@@ -17,51 +17,51 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755502"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188143"
 ---
 # <a name="customer-activities"></a>Aktivitas pelanggan
 
-Gabungkan aktivitas pelanggan dari [berbagai sumber data](data-sources.md) di Dynamics 365 Customer Insights. Buat garis waktu yang mencantumkan aktivitas secara kronologis. Sertakan garis waktu di aplikasi Dynamics 365 dengan [solusi add-in](customer-card-add-in.md) Kartu Pelanggan.
+Aktivitas pelanggan adalah tindakan atau peristiwa yang dilakukan oleh pelanggan. Misalnya, transaksi, durasi panggilan dukungan, ulasan situs web, pembelian, atau pengembalian. Kegiatan ini terdapat dalam satu atau beberapa sumber data. Dengan Customers Insights, gabungkan aktivitas pelanggan Anda dari sumber [data ini](data-sources.md) dan kaitkan dengan profil pelanggan. Aktivitas ini muncul secara kronologis dalam garis waktu di profil pelanggan. Sertakan garis waktu di aplikasi Dynamics 365 dengan [solusi add-in](customer-card-add-in.md) Kartu Pelanggan.
 
 ## <a name="define-an-activity"></a>Menentukan Aktivitas
 
-Sumber data Anda dapat mencakup entitas dengan data transaksional dan aktivitas dari beberapa sumber data. Identifikasi entitas tersebut dan pilih aktivitas yang ingin Anda lihat pada kronologi pelanggan. Pilih entitas yang mencakup aktivitas atau aktivitas target Anda.
+Entitas harus memiliki setidaknya satu atribut jenis **Tanggal** untuk disertakan dalam linimasa pelanggan. Kontrol **Tambah aktivitas** dinonaktifkan jika tidak ada entitas yang ditemukan.
 
-Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan dalam kronologi pelanggan dan Anda tidak dapat menambahkan entitas tanpa bidang **tanggal**. Kontrol **Tambah aktivitas** dinonaktifkan jika tidak ada entitas yang ditemukan.
+1. **Buka Aktivitas** > **Data**.
 
-1. **Buka Aktivitas Data** > **·**.
+1. Pilih **Tambahkan aktivitas** untuk memulai pengalaman terpandu.
 
-1. Pilih **Tambahkan aktivitas** untuk memulai pengalaman terpandu untuk proses penyetelan aktivitas.
+1. **Dalam langkah Data** aktivitas, masukkan informasi berikut:
 
-1. Dalam langkah **Data aktivitas**, atur nilai untuk bidang berikut ini:
-
-   - **Nama aktivitas**: Pilih nama untuk aktivitas Anda.
-   - **Entitas**: Pilih entitas yang mencakup data transaksi atau aktivitas.
-   - **Kunci utama**: Pilih bidang yang secara unik mengidentifikasi rekaman. Ini tidak boleh berisi nilai duplikat, nilai kosong, atau nilai yang tidak ada.
+   - **Nama aktivitas**: Nama untuk aktivitas Anda.
+   - **Entitas aktivitas**: Entitas yang mencakup data transaksional atau aktivitas.
+   - **Kunci** utama: Bidang yang secara unik mengidentifikasi rekaman. Ini tidak boleh berisi nilai duplikat, nilai kosong, atau nilai yang tidak ada.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Siapkan data aktivitas dengan nama, entitas, dan kunci utama.":::
 
-1. Pilih **Berikutnya** untuk masuk ke langkah berikutnya.
+1. Pilih **Selanjutnya**.
 
-1. Pada langkah **Relasi**, konfigurasikan rincian untuk menghubungkan data aktivitas Anda dengan rekaman pelanggan terkait. Langkah ini memvisualisasikan hubungan antar entitas.  
+1. **Di langkah Hubungan**, pilih **Tambahkan hubungan** untuk menyambungkan data aktivitas Anda ke catatan pelanggan yang sesuai. Langkah ini memvisualisasikan hubungan antar entitas.  
 
-   - **Pertama:** Bidang asing dalam entitas aktivitas Anda yang akan digunakan untuk menjalin hubungan dengan entitas lain.
-   - **Kedua**: Entitas pelanggan sumber yang sesuai dengan entitas aktivitas Anda akan menjalin hubungan. Anda hanya dapat berhubungan dengan entitas pelanggan sumber yang digunakan dalam proses penyatuan data.
-   - **Ketiga**: Jika hubungan antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama hubungan akan berada dalam mode baca-saja. Jika tidak ada relasi tersebut, relasi baru akan dibuat dengan nama yang Anda berikan di kotak ini.
+   - **Kunci asing dari entitas**: Bidang di entitas aktivitas Anda yang akan digunakan untuk membangun hubungan dengan entitas lain.
+   - **Untuk nama** entitas: Entitas pelanggan sumber yang sesuai dengan mana entitas aktivitas Anda akan berada dalam hubungannya. Anda hanya dapat berhubungan dengan entitas pelanggan sumber yang digunakan dalam proses penyatuan data.
+   - **Nama hubungan**: Nama yang mengidentifikasi hubungan antar entitas. Jika hubungan antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama hubungannya adalah baca-saja.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Tentukan relasi entitas.":::
 
    > [!TIP]
    > Di lingkungan B to B, Anda dapat memilih antara entitas akun dan entitas lain. Jika Anda memilih entitas akun, jalur relasi akan secara otomatis diatur. Untuk entitas lain, Anda harus menentukan jalur relasi pada satu atau beberapa entitas menengah hingga mencapai entitas akun.
 
-1. Pilih **Berikutnya** untuk masuk ke langkah berikutnya. 
+1. Pilih **Terapkan** untuk membuat hubungan.
 
-1. Dalam langkah **Penyatuan aktivitas**, pilih peristiwa aktivitas dan waktu mulai aktivitas Anda. 
+1. Pilih **Selanjutnya**.
+
+1. Dalam langkah **Penyatuan aktivitas**, pilih peristiwa aktivitas dan waktu mulai aktivitas Anda.
    - **Bidang yang diperlukan**
       - **Aktivitas peristiwa**: Bidang yang menjadi ajang aktivitas ini.
       - **Cap waktu**: Bidang yang mewakili waktu mulai aktivitas Anda.
@@ -76,61 +76,49 @@ Entitas harus memiliki minimal satu atribut jenis **tanggal** untuk disertakan d
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Tentukan data aktivitas pelanggan dalam entitas Aktivitas Terpadu.":::
 
-1. Pilih **berikutnya** untuk beralih ke langkah berikutnya. Anda dapat memilih **Selesai dan tinjau** untuk menyimpan aktivitas sekarang dengan tipe aktivitas yang diatur ke **Lainnya**. 
+1. Pilih **Berikutnya** untuk memilih jenis aktivitas, atau pilih **Selesai dan tinjau** untuk menyimpan aktivitas dengan jenis aktivitas yang diatur ke **Lainnya**.
 
-1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, *jenis* aktivitas Umpan Balik *,* Loyalitas *, SalesOrder*, *SalesOrderLine*, dan *Langganan* mendukung semantik setelah menyetujui untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
+1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, *jenis aktivitas Umpan Balik* *,* Loyalitas *, SalesOrder*, *SalesOrderLine*, dan *Langganan* mendukung semantik setelah setuju untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
 
-1. Pilih **berikutnya** untuk beralih ke langkah berikutnya. 
+1. Pilih **Selanjutnya**.
 
 1. Di langkah **Tinjau**, verifikasi pilihan Anda. Kembali ke langkah-langkah sebelumnya dan perbarui informasi jika perlu.
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Meninjau bidang yang ditentukan untuk aktivitas.":::
-   
-1. Pilih **Simpan aktivitas** untuk menerapkan perubahan Anda dan pilih **Selesai** untuk kembali ke **Data** > **Aktivitas**. Di sini Anda melihat aktivitas mana yang diatur untuk ditampilkan di timeline. 
+1. Pilih **Simpan aktivitas** untuk menerapkan perubahan Anda dan pilih **Selesai** untuk kembali ke **Data** > **Aktivitas**. Aktivitas yang dibuat ditampilkan.
 
-1. Pada halaman **Aktivitas**, pilih **Jalankan** untuk memproses aktivitas. 
+1. Setelah membuat semua aktivitas Anda, pilih **Jalankan** untuk memprosesnya.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Mengelola aktivitas yang ada
 
-Pada **Data** > **Aktivitas**, Anda dapat melihat semua aktivitas yang disimpan, dan mengelolanya. Setiap aktivitas diwakili oleh baris yang juga menyertakan detail tentang sumber, entitas, dan jenis aktivitas.
+Buka **Aktivitas** > **Data** untuk melihat aktivitas tersimpan Anda, entitas sumbernya, jenis aktivitas, dan jika aktivitas tersebut disertakan dalam linimasa pelanggan. Anda bisa mengurutkan daftar aktivitas menurut kolom mana pun atau menggunakan kotak pencarian untuk menemukan aktivitas yang ingin Anda kelola.
 
-Tindakan berikut ini tersedia saat Anda memilih aktivitas. 
+Pilih aktivitas untuk melihat tindakan yang tersedia.
 
-- **Edit**: Membuka penyiapan aktivitas pada langkah peninjauan. Anda dapat mengubah salah satu atau semua konfigurasi saat ini dari langkah ini. Setelah mengubah konfigurasi, pilih **Simpan aktivitas** lalu pilih **Jalankan** untuk memproses perubahan.
-
-- **Ganti nama**: Buka dialog yang memungkinkan Anda memasukkan nama lain untuk aktivitas yang dipilih. Pilih **Simpan** untuk menerapkan perubahan.
-
-- **Hapus**: Membuka dialog untuk mengonfirmasi penghapusan aktivitas yang dipilih. Anda juga dapat menghapus lebih dari satu aktivitas sekaligus dengan memilih aktivitas lalu memilih ikon hapus. Klik **Hapus**, untuk mengonfirmasi penghapusan tersebut.
+- **Edit** aktivitas untuk mengubah konfigurasinya. Konfigurasi terbuka pada langkah peninjauan. Setelah mengubah konfigurasi, pilih **Simpan aktivitas** lalu pilih **Jalankan** untuk memproses perubahan.
+- **Ganti nama** aktivitas. Pilih **Simpan** untuk menerapkan perubahan.
+- **Hapus** aktivitas. Untuk menghapus lebih dari satu aktivitas sekaligus, pilih aktivitas lalu **Hapus**. Konfirmasikan Penghapusan.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Melihat timeline aktivitas di profil pelanggan
 
-Setelah anda mengkonfigurasi aktivitas pelanggan, pilih **Tampilkan dalam timeline aktivitas** dalam konfigurasi aktivitas untuk menemukan semua aktivitas pelanggan pada profil pelanggan mereka.
+1. Jika Anda memilih **Tampilkan di linimasa** aktivitas dalam konfigurasi aktivitas, buka **Pelanggan** dan pilih profil pelanggan untuk melihat aktivitas pelanggan di **bagian Linimasa** aktivitas.
 
-Untuk membuka timeline pelanggan, buka **Pelanggan** dan pilih profil pelanggan yang akan dilihat.
+   :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Melihat aktivitas terkonfigurasi di Profil Pelanggan.":::
 
-Jika pelanggan telah berpartisipasi dalam aktivitas yang dikonfigurasi, Anda akan menemukannya di **bagian Garis waktu** aktivitas.
+1. Untuk memfilter aktivitas di linimasa aktivitas:
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Melihat aktivitas terkonfigurasi di Profil Pelanggan.":::
+   - Pilih satu atau beberapa ikon aktivitas untuk mempersempit hasil Anda untuk menyertakan jenis yang dipilih saja.
 
-Ada beberapa cara untuk memfilter aktivitas dalam timeline aktivitas:
+     :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Memfilter aktivitas berdasarkan jenis menggunakan ikon.":::
 
-- Anda dapat memilih satu atau beberapa ikon aktivitas untuk menyempurnakan hasil agar hanya menyertakan jenis yang dipilih.
+   - Pilih **Filter** untuk membuka panel filter untuk mengonfigurasi filter garis waktu Anda. Filter menurut *ActivityType* dan/atau *Date*. Pilih **Terapkan**.
 
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Memfilter aktivitas berdasarkan jenis menggunakan ikon.":::
+     :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Gunakan panel filter untuk mengkonfigurasi kondisi filter.":::
 
-- Anda dapat memilih **Filter** untuk membuka panel filter untuk mengkonfigurasi filter timeline.
-
-   1. Anda dapat memfilter berdasarkan *ActivityType* dan *Tanggal*
-   1. Pilih **Terapkan** untuk menggunakan filter di timeline aktivitas.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Gunakan panel filter untuk mengkonfigurasi kondisi filter.":::
-
-Untuk menghilangkan filter, pilih **x** di sebelah setiap filter yang diterapkan ke timeline atau pilih **Kosongkan filter**.
-
+1. Untuk menghapus filter, pilih **Hapus filter** atau pilih **Filter** dan kosongkan kotak centang filter.
 
 > [!NOTE]
-> Filter aktivitas akan dihapus bila Anda meninggalkan profil pelanggan. Anda harus menerapkannya setiap kali membukanya di profil pelanggan.
+> Filter aktivitas akan dihapus bila Anda meninggalkan profil pelanggan. Anda harus menerapkannya setiap kali Anda membuka profil pelanggan.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

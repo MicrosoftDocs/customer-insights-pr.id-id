@@ -1,7 +1,7 @@
 ---
 title: Ikhtisar sumber data
 description: Pelajari cara mengimpor atau menyerap data dari berbagai sumber.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051457"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207095"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
 Dynamics 365 Customer Insights menyediakan koneksi untuk membawa data dari serangkaian sumber yang luas. Menghubungkan ke sumber data sering disebut sebagai proses *penyerapan data*. Setelah menyerap data, Anda dapat [menyatukan](data-unification.md), menghasilkan wawasan, dan mengaktifkan data untuk membangun pengalaman yang dipersonalisasi.
 
-## <a name="add-data-sources"></a>Tambahkan sumber data
+## <a name="add-or-edit-data-sources"></a>Menambahkan atau mengedit sumber data
 
-Anda dapat melampirkan atau mengimpor sumber data ke Customer Insights. Tautan di bawah ini memberikan petunjuk tentang menambahkan sumber data.
+Anda dapat melampirkan atau mengimpor sumber data ke Customer Insights. Tautan di bawah ini memberikan petunjuk tentang menambahkan dan mengedit sumber data.
 
 **Melampirkan sumber data**
 
@@ -50,13 +50,18 @@ Jika lingkungan Anda dikonfigurasi untuk menggunakan penyimpanan Customer Insigh
 
 Jika lingkungan Anda tidak menggunakan Power Platform aliran data, **halaman Sumber** Data hanya berisi daftar semua sumber data. Tidak ada bagian yang ditampilkan.
 
-Buka **Sumber** > **Data Data** untuk melihat nama setiap sumber data yang diserap, statusnya, dan terakhir kali data disegarkan untuk sumber tersebut. Anda dapat mengurutkan daftar sumber data menurut setiap kolom.
+## <a name="manage-existing-data-sources"></a>Mengelola sumber data yang sudah ada
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Sumber Data ditambahkan.":::
+Buka **Sumber** > **Data Data** untuk melihat nama setiap sumber data yang diserap, statusnya, dan terakhir kali data disegarkan untuk sumber tersebut. Anda bisa mengurutkan daftar sumber data menurut kolom mana pun atau menggunakan kotak pencarian untuk menemukan sumber data yang ingin Anda kelola.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Pilih sumber data untuk melihat tindakan yang tersedia.
 
-Memuat data dapat memakan waktu. Setelah penyegaran berhasil, data yang terserap dapat ditinjau dari halaman **entitas**. Untuk informasi lebih lanjut, [Entitas](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Sumber Data ditambahkan.":::
+
+- [**Edit**](#add-or-edit-data-sources) sumber data untuk mengubah propertinya.
+- [**Refresh**](#refresh-data-sources) sumber data untuk menyertakan data terbaru.
+- [**Perkaya**](data-sources-enrichment.md) sumber data sebelum penyatuan.
+- **Hapus** sumber data. Sumber data hanya dapat dihapus jika data tidak digunakan dalam pemrosesan apa pun seperti penyatuan, wawasan, aktivasi, atau ekspor.
 
 ## <a name="refresh-data-sources"></a>Segarkan sumber data
 
@@ -64,23 +69,12 @@ Sumber data dapat disegarkan dengan jadwal otomatis atau diperbarui secara manua
 
 Buka **Jadwal** > **Sistem** > [**Admin**](system.md#schedule-tab) untuk mengonfigurasi refresh terjadwal sistem dari sumber data yang Anda konsumsi.
 
-Untuk me-refresh sumber data sesuai permintaan, ikuti langkah berikut:
+Untuk menyegarkan sumber data sesuai permintaan:
 
 1. Buka **Data** > **Sumber data**.
 
-1. Pilih elipsis vertikal (&vellip;) di samping sumber data yang ingin Anda refresh dan pilih **Refresh** dari daftar dropdown. Sumber data sekarang dipicu untuk penyegaran manual. Merefresh sumber data akan memperbarui skema entitas dan data untuk semua entitas yang ditentukan dalam sumber data.
+1. Pilih sumber data yang ingin Anda refresh dan pilih **Refresh**. Sumber data sekarang dipicu untuk penyegaran manual. Merefresh sumber data akan memperbarui skema entitas dan data untuk semua entitas yang ditentukan dalam sumber data.
 
-1. Pilih **Hentikan penyegaran** jika Anda ingin membatalkan refresh yang ada dan sumber data akan kembali ke status refresh terakhirnya.
-
-## <a name="delete-a-data-source"></a>Hapus sumber data
-
-Sumber data hanya dapat dihapus jika data tidak digunakan dalam pemrosesan apa pun seperti penyatuan, wawasan, aktivasi, atau ekspor.
-
-1. Buka **Data** > **Sumber data**.
-
-2. Pilih elipsis vertikal (&vellip;) di samping sumber data ingin Anda hapus dan pilih **Hapus** dari menu tarik-turun.
-
-3. Konfirmasikan penghapusan.
-
+1. Pilih status untuk membuka **panel Detail** kemajuan dan lihat kemajuan. Untuk membatalkan pekerjaan, pilih **Batalkan pekerjaan** di bagian bawah panel.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

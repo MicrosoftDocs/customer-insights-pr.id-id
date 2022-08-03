@@ -1,19 +1,19 @@
 ---
 title: Mengekspor segmen ke LinkedIn Ads (pratinjau)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke LinkedIn Ads.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e6ad3901f7b8dc1ae8edc54c0b09a99b01be34cd
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050860"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196812"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Mengekspor segmen ke LinkedIn Ads (pratinjau)
 
@@ -21,32 +21,33 @@ Ekspor segmen profil pelanggan terpadu ke Iklan LinkedIn untuk membuat audiens y
 
 ## <a name="prerequisites"></a>Prasyarat
 
--   Anda memiliki [akun LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) dan kredensial administrator terkait.
--   Anda telah [mengonfigurasi segmen](segments.md) di Customer Insights.
--   Profil pelanggan di segmen yang diekspor berisi bidang dengan alamat email.
+- Akun [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) dan kredensial administrator yang sesuai.
+- ID [LinkedIn Campaign Manager Akun](https://www.linkedin.com/help/lms/answer/a424270).
+- [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
+- Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Segmen Anda di Customer Insights harus berisi setidaknya 300 profil unik. 
-- Anda dapat mengekspor hingga 100K profil pelanggan per ekspor ke LinkedIn Ads.
-- Mengekspor ke LinkedIn Ads terbatas pada segmen.
-- Mengekspor hingga 100K profil pelanggan ke LinkedIn Ads dapat berlangsung selama 10 menit. 
+- Hingga 100.000 profil pelanggan per ekspor ke Iklan LinkedIn, yang dapat memakan waktu hingga 10 menit untuk diselesaikan.
+- Segmen saja. Sebuah segmen harus berisi setidaknya 300 profil unik.
 
-## <a name="set-up-the-connection-to-linkedin-ads"></a>Siapkan sambungan ke LinkedIn Ads
+## <a name="set-up-connection-to-linkedin-ads"></a>Menyiapkan koneksi ke Iklan LinkedIn
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **LinkedIn Ads** untuk mengonfigurasi koneksi.
+1. Pilih **Tambahkan koneksi** dan pilih **Iklan LinkedIn**.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
-1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Secara default hanya administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Berikan [ID Akun LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270) Anda.
+1. Berikan ID Akun Anda LinkedIn Campaign Manager.
 
-1. Pilih **saya setuju** untuk mengonfirmasi **privasi dan kepatuhan data**.
+1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
-1. Pilih **Sambungkan** untuk menginisialisasi koneksi ke Campaign Monitor.
+1. Pilih **Sambungkan** untuk menginisialisasi koneksi.
 
 1. Pilih **Autentikasi dengan LinkedIn** dan berikan kredensial admin Anda untuk LinkedIn Campaign Manager.
 
@@ -56,29 +57,26 @@ Ekspor segmen profil pelanggan terpadu ke Iklan LinkedIn untuk membuat audiens y
 
 ## <a name="configure-an-export"></a>Mengonfigurasi ekspor
 
-Anda bisa mengonfigurasi ekspor jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Buka **Data** > **Ekspor**.
 
-1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+1. Pilih **Tambahkan ekspor**.
 
-1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian LinkedIn Ads. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian LinkedIn Ads. Hubungi administrator jika tidak ada koneksi yang tersedia.
 
-1. Pilih apakah Anda ingin mengekspor data untuk melakukan [penargetan kontak](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) atau [penargetan perusahaan](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) di LinkedIn. 
+1. Masukkan nama untuk ekspor.
 
-1. Di bagian **Pencocokan data**, untuk penargetan kontak, pilih sekurangnya satu bidang yang menunjukkan alamat email pelanggan, ID Iklan Apple, ID Iklan Google, ID Pengguna Google, atau nama depan dan belakang. Jika Anda memilih penargetan perusahaan, pilih sekurangnya satu bidang yang menunjukkan nama perusahaan, domain email, URL halaman LinkedIn, simbol Stock, atau Situs Web. Bidang tambahan dapat dipilih untuk menentukan ekspor lebih lanjut. 
+1. Pilih apakah Anda ingin mengekspor data untuk melakukan [penargetan kontak](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) atau [penargetan perusahaan](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) di LinkedIn.
 
-1. Pilih segmen yang ingin diekspor. Audiens yang cocok di LinkedIn Campaign Manager akan secara otomatis dibuat dengan nama segmen yang Anda pilih untuk diekspor. Setiap segmen akan menghasilkan audiens yang cocok terpisah. 
+1. Di bagian **Pencocokan data**, untuk penargetan kontak, pilih sekurangnya satu bidang yang menunjukkan alamat email pelanggan, ID Iklan Apple, ID Iklan Google, ID Pengguna Google, atau nama depan dan belakang. Jika Anda memilih penargetan perusahaan, pilih sekurangnya satu bidang yang menunjukkan nama perusahaan, domain email, URL halaman LinkedIn, simbol Stock, atau Situs Web.
+
+1. Secara opsional, tambahkan bidang untuk menentukan ekspor Anda lebih lanjut. Pilih **Tambah atribut** untuk memetakan bidang ini.
+
+1. Pilih segmen yang ingin diekspor. Audiens yang cocok di LinkedIn Campaign Manager akan secara otomatis dibuat dengan nama segmen yang Anda pilih untuk diekspor. Setiap segmen akan menghasilkan audiens yang cocok terpisah.
 
 1. Pilih **Simpan**.
 
-Menyimpan ekspor tidak segera menjalankan ekspor.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
-
-Saat Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke LinkedIn Ads, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa LinkedIn Ads memenuhi kewajiban privasi atau keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

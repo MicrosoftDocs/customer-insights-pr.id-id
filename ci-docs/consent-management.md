@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947523"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188051"
 ---
 # <a name="use-customer-consent"></a>Menggunakan persetujuan pelanggan
 
@@ -50,13 +50,13 @@ Contoh tabel database persetujuan sederhana dengan beberapa opsi persetujuan:
 
 ## <a name="import-and-unify-consent-data"></a>Mengimpor dan menyatukan data persetujuan
 
-Anda dapat mengimpor data persetujuan dengan cara yang sama seperti menyerap sumber data lain ke Customer Insights. Untuk informasi selengkapnya tentang sumber data yang didukung dan cara mengimpornya, lihat [Gambaran umum sumber data](data-sources.md).
+Impor data persetujuan dengan cara yang sama seperti Anda menyerap sumber data lain ke Customer Insights. Untuk informasi selengkapnya tentang sumber data yang didukung dan cara mengimpornya, lihat [Gambaran umum sumber data](data-sources.md).
 
 Untuk informasi selengkapnya tentang menyatukan sumber data Anda, lihat [Gambaran umum penyatuan data](data-unification.md).
 
 ## <a name="use-consent-data"></a>Menggunakan data persetujuan
 
-Setelah data persetujuan Anda menjadi bagian dari profil pelanggan terpadu, Anda dapat menggunakannya di Customer Insights. Misalnya, buat segmen dengan aturan untuk memastikan bahwa Anda mematuhi preferensi privasi dan perlindungan data pelanggan Anda. Aturan yang mendukung preferensi persetujuan digunakan untuk mengecualikan pengguna dari segmen berdasarkan atribut profil. Menambahkan aturan ke segmen yang mengecualikan profil pelanggan yang tidak memberikan persetujuan untuk menghubungi.
+Setelah data persetujuan Anda menjadi bagian dari profil pelanggan terpadu, Anda dapat menggunakannya di Customer Insights. Misalnya, buat segmen dengan aturan untuk memastikan bahwa Anda mematuhi preferensi privasi dan perlindungan data pelanggan Anda. Aturan yang mendukung preferensi persetujuan digunakan untuk mengecualikan pengguna dari segmen berdasarkan atribut profil. Tambahkan aturan ke segmen yang mengecualikan profil pelanggan yang tidak memberikan persetujuan untuk menghubungi.
 
 Mengacu pada tabel sampel di atas, segmen dapat berisi aturan ini:`Consent option=Newsletter & Consent value=True`. Konfigurasi ini menghasilkan segmen yang menghormati preferensi kontak untuk mengirim buletin.
 
@@ -71,3 +71,5 @@ Penting untuk terus memperbarui status persetujuan untuk pelanggan Anda. Refresh
 Dengan kata lain, pastikan data sumber yang diimpor ke Customer Insights selalu memiliki informasi terbaru.
 
 Untuk informasi selengkapnya, lihat [Merefresh segmen secara manual](segments.md#refresh-segments) atau [mengonfigurasi refresh](system.md#schedule-tab) terjadwal.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

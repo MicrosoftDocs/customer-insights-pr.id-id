@@ -104,22 +104,26 @@
       href: enrichment-here.md
     - name: Impor kustom SFTP
       href: enrichment-SFTP-custom-import.md
-- name: Profil terpadu
+- name: Profil dan aktivitas pelanggan
   items:
-    - name: Tinjau profil pelanggan terpadu
+    - name: Lihat Profil pelanggan
       href: customer-profiles.md
-    - name: Filter profil pelanggan terpadu
+    - name: Mengelola indeks pencarian & filter
       href: search-filter-index.md
     - name: Tentukan aktivitas pelanggan
       href: activities.md
     - name: Menggunakan manajemen persetujuan
       href: consent-management.md
+    - name: Menggunakan data web untuk personalisasi
+      href: unknown-to-known.md
 - name: Segmen
   items:
     - name: Sekilas tentang segmen
       href: segments.md
-    - name: Buat segmen
+    - name: Berkreasi dengan pembuat segmen
       href: segment-builder.md
+    - name: Berkreasi dengan segmen cepat
+      href: segment-quick.md
     - name: Segmen yang disarankan berdasarkan ukuran
       href: suggested-segments.md
     - name: Segmen yang disarankan berdasarkan aktivitas
@@ -132,9 +136,9 @@
   items:
     - name: Gambaran umum pengukuran
       href: measures.md
-    - name: Membuat ukuran baru
+    - name: Buat dengan pembuat ukuran
       href: measure-builder.md
-    - name: Menggunakan templat pengukuran
+    - name: Buat dengan templat
       href: measure-templates.md
 - name: Prediksi
   items:
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Active Campaign
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Autopilot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Campaign Monitor
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Microsoft Advertising
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks

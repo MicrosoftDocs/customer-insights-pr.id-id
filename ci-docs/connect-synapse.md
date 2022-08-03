@@ -1,7 +1,7 @@
 ---
 title: Azure Synapse Menyambungkan sumber data (pratinjau)
 description: Gunakan database sebagai Azure Synapse sumber data di Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052703"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206911"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics Menyambungkan sumber data (pratinjau)
 
@@ -66,3 +66,9 @@ Untuk informasi selengkapnya, lihat [Azure Synapse gambaran umum](/azure/synapse
 1. Secara opsional, pilih entitas data untuk mengizinkan pembuatan profil data.
 
 1. Pilih **Simpan** untuk menerapkan pilihan Anda dan mulai penyerapan data dari sumber data yang baru Anda buat yang ditautkan ke tabel database Lake di Azure Synapse Analytics. Halaman **Sumber data** terbuka memperlihatkan sumber data baru dalam **status Refresh**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Memuat data dapat memakan waktu. Setelah refresh berhasil, data yang diserap dapat ditinjau dari [**halaman Entitas**](entities.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

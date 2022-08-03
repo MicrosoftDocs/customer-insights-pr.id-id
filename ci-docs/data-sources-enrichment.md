@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082114"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207187"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (pratinjau)
 
@@ -21,9 +21,9 @@ Gunakan data dari sumber seperti Microsoft dan mitra lain untuk memperkaya data 
 
 ## <a name="enrich-a-data-source"></a>Perkaya sumber data
 
-Anda harus memiliki izin kontributor atau Administrator untuk membuat atau mengedit pengayaan. Untuk informasi lebih lanjut, lihat [izin](permissions.md).  
+Anda harus memiliki izin [kontributor atau Administrator](permissions.md) untuk membuat atau mengedit pengayaan.  
 
-1. **Buka Data** > **Unify**. Pilih entitas yang ingin Anda perkaya dan pilih satu atribut sebagai kunci utama untuk entitas tersebut. Untuk informasi selengkapnya, lihat [Memilih kunci utama](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. **Buka Data** > **Unify**. Pilih entitas yang ingin Anda perkaya dan pilih satu atribut sebagai [kunci](map-entities.md#select-primary-key-and-semantic-type-for-attributes) utama untuk entitas tersebut.
 
 1. Buka **Data** > **Sumber data**.
 
@@ -47,8 +47,8 @@ Pengayaan berikut saat ini tersedia untuk sumber data. Tinjau langkah-langkah te
 
 ## <a name="manage-existing-data-source-enrichments"></a>Mengelola pengayaan sumber data yang ada
 
-Buka tab **Pengayaan saya** untuk melihat semua pengayaan terkonfigurasi.
+Buka **Data** > **Pengayaan**. Pada tab **Pengayaan** saya, lihat pengayaan yang dikonfigurasi, status mereka, jumlah pelanggan yang diperkaya, dan terakhir kali data disegarkan. Anda dapat mengurutkan daftar pengayaan berdasarkan kolom mana pun atau menggunakan kotak pencarian untuk menemukan pengayaan yang ingin Anda kelola.
 
-Pilih pengayaan untuk melihat opsi yang tersedia. Anda juga dapat memilih elipsis vertikal (&vellip;) pada item daftar untuk melihat opsi. Jika Anda mengonfigurasi beberapa pengayaan, Anda bisa menggunakan kotak pencarian untuk menemukannya dengan cepat.
+Pilih pengayaan untuk melihat opsi yang tersedia. Anda juga dapat memilih elipsis vertikal (&vellip;) pada item daftar untuk melihat opsi.
 
-Anda dapat melihat, mengedit, menjalankan, atau menghapus pengayaan sumber data. Untuk informasi selengkapnya, lihat [Mengelola pengayaan](enrichment-hub.md) yang ada.
+Anda dapat melihat, mengedit, menjalankan, atau menghapus pengayaan sumber data. Untuk informasi selengkapnya, lihat [Mengelola pengayaan](enrichment-hub.md#manage-existing-enrichments) yang ada.

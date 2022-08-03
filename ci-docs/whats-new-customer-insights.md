@@ -1,28 +1,56 @@
 ---
 title: Yang baru di Dynamics 365 Customer Insights
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054022"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114250"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Yang baru di Dynamics 365 Customer Insights
 
 Kami sangat senang mengumumkan pembaruan terbaru kami! Artikel ini merangkum fitur pratinjau umum, fitur pratinjau, penyempurnaan ketersediaan umum, dan pembaruan fitur. Untuk melihat paket fitur jangka panjang, lihat [Dynamics 365 dan rencana rilis Power Platform](/dynamics365/release-plans/).
 
-Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tertentu mungkin melihat fitur sebelum orang lain. Kecuali ditentukan berbeda, Anda tidak perlu melakukan tindakan apa pun dan kami akan memperbarui aplikasi secara otomatis tanpa waktu henti.
+Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tertentu mungkin melihat fitur sebelum orang lain. Kecuali ditentukan secara berbeda, Anda tidak perlu mengambil tindakan apa pun, kami akan memperbarui aplikasi secara otomatis tanpa waktu henti.
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Pembaruan Juni 2022
+
+Pembaruan pada Juni 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Pengalaman pengguna yang diperbarui untuk sumber data dan penyerapan data
+
+Mengimpor data dari berbagai sumber data adalah dasar untuk mengkonsolidasikan data pelanggan Anda di Dynamics 365 Customer Insights. Kami telah meninjau kembali pengalaman pengguna untuk impor dan koneksi sumber data. Pembaruan ini bertujuan untuk memudahkan Anda menyerap data ke Customer Insights.
+
+Untuk informasi selengkapnya, lihat [Gambaran umum sumber data](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Ekspor ke InMobi
+
+InMobi membantu merek memahami, mengidentifikasi, melibatkan, dan memperoleh konsumen. Anda dapat mengekspor segmen dan data lainnya ke layanan InMobi melalui akun Azure Blob Storage.
+
+Untuk informasi selengkapnya, lihat [Mengekspor ke InMobi (pratinjau)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Dukungan Lockbox di Customer Insights
+
+Customer Lockbox menyediakan antarmuka untuk meninjau dan menyetujui (atau menolak) permintaan akses data. Permintaan ini terjadi ketika akses data ke data pelanggan diperlukan untuk menyelesaikan kasus dukungan.
+
+Untuk informasi selengkapnya, lihat [Mengakses data pelanggan dengan aman dengan Customer Lockbox (Pratinjau)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Menyambungkan ke data Anda menggunakan Azure Private Link
+
+Azure Private Link memungkinkan Customer Insights terhubung ke akun Anda Azure Data Lake Storage melalui titik akhir privat di jaringan virtual Anda. Untuk data di akun penyimpanan, yang tidak diekspos ke internet publik, Private Link memungkinkan koneksi ke jaringan yang dibatasi tersebut.
+
+Untuk informasi selengkapnya, lihat [Menggunakan Tautan Privat di Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Pembaruan Mei 2022
 
@@ -30,7 +58,7 @@ Pembaruan pada Mei 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan 
 
 ### <a name="updated-data-unification-experience"></a>Pengalaman penyatuan data yang diperbarui
 
- Penyatuan data memungkinkan Anda menyatukan sumber data yang dulunya berbeda ke dalam satu himpunan data master yang menyediakan tampilan terpadu dari data tersebut. Data dapat disatukan pada satu entitas atau beberapa entitas. Pertama, Anda [memilih entitas dan bidang](map-entities.md) sumber, [menghapus rekaman](remove-duplicates.md) duplikat, menentukan aturan untuk [kondisi](match-entities.md) yang cocok, dan menentukan bidang mana yang [akan disertakan dalam profil pelanggan terpadu](merge-entities.md).
+ Penyatuan data memungkinkan Anda menyatukan sumber data yang dulunya berbeda ke dalam satu himpunan data master yang menyediakan tampilan terpadu dari data tersebut. Data dapat disatukan pada satu entitas atau beberapa entitas. Pertama, Anda [memilih entitas dan bidang](map-entities.md) sumber, [menghapus rekaman](remove-duplicates.md) duplikat, menentukan aturan untuk [kondisi](match-entities.md) yang cocok, dan menentukan bidang mana yang [akan disertakan dalam profil](merge-entities.md) pelanggan terpadu.
 
 Untuk informasi selengkapnya, lihat [Gambaran umum penyatuan data](data-unification.md).
 
@@ -169,7 +197,7 @@ Untuk periode transisi, peserta pratinjau yang ada masih memiliki akses ke beber
 - Melihat properti acara dan acara 
 - Tingkatkan profil terpadu dengan peristiwa yang diserap dan disempurnakan untuk mendapatkan manfaat dari nilai penuh data pelanggan mereka
   
-Selama masa transisi, peristiwa yang ditangkap masih dialirkan ke Data Lake yang terhubung. Setelah fungsi ini dinonaktifkan, berbagi data akan berhenti dan tidak ada peristiwa baru yang dikirim ke penyimpanan yang terhubung.
+Selama masa transisi, peristiwa yang ditangkap masih dialirkan ke Data Lake yang terhubung. Setelah fungsi ini dinonaktifkan, berbagi data akan berhenti, dan tidak ada peristiwa baru yang dikirim ke penyimpanan yang terhubung.
 Hubungi tim Akun Microsoft Anda secara langsung jika Anda memiliki pertanyaan tentang akhir pratinjau kemampuan. Tim Akun Anda akan terus memberi Anda informasi terbaru tentang peluncuran yang akan datang. 
 
 ## <a name="january-2022-updates"></a>Pembaruan Januari 2022

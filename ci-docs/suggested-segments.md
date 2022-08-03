@@ -1,5 +1,5 @@
 ---
-title: Segmen yang disarankan (pratinjau)
+title: Segmen yang disarankan berdasarkan pengukuran (pratinjau)
 description: Biarkan Pembelajaran Mesin anda menemukan segmen baru dan menarik berdasarkan atribut pelanggan.
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3f504827029afa12c65ec6f065a62606aaa823f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082744"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170961"
 ---
-# <a name="suggested-segments-preview"></a>Segmen yang disarankan (pratinjau)
+# <a name="suggested-segments-based-on-measures-preview"></a>Segmen yang disarankan berdasarkan pengukuran (pratinjau)
 
-Temukan segmen menarik pelanggan Anda dengan bantuan model AI. Fitur Pembelajaran Mesin ini menyarankan segmen berdasarkan tindakan atau atribut pelanggan. Ini dapat membantu meningkatkan KPI atau lebih memahami pengaruh atribut dalam konteks atribut lainnya. 
+Temukan segmen menarik pelanggan Anda dengan bantuan model AI. Fitur Pembelajaran Mesin ini menyarankan segmen berdasarkan tindakan atau atribut pelanggan. Ini dapat membantu meningkatkan Indikator Kinerja Utama (KPI) Anda atau lebih memahami pengaruh atribut dalam konteks atribut lain.
 
 > [!NOTE]
-> Fitur segmen yang disarankan menggunakan cara otomatis untuk mengevaluasi data dan membuat prediksi berdasarkan data tersebut, dan oleh karena itu, memiliki kemampuan untuk digunakan sebagai metode pembuatan profil, sebagaimana istilah tersebut ditentukan oleh Peraturan Perlindungan Data Umum ("GDPR"). Penggunaan fitur ini oleh Anda untuk memproses data mungkin diatur dalam GDPR atau hukum atau peraturan lainnya. Anda bertanggung jawab untuk memastikan bahwa penggunaan Dynamics 365 Customer Insights, termasuk fitur ini, mematuhi semua hukum dan peraturan yang berlaku, termasuk hukum yang terkait dengan privasi, data pribadi, data biometrik, perlindungan data, dan kerahasiaan komunikasi.
+> Fitur segmen yang disarankan menggunakan cara otomatis untuk mengevaluasi data dan membuat prediksi berdasarkan data tersebut. Oleh karena itu, ia memiliki kemampuan untuk digunakan sebagai metode pembuatan profil, karena istilah tersebut didefinisikan oleh Peraturan Perlindungan Data Umum ("GDPR"). Penggunaan fitur ini oleh Anda untuk memproses data mungkin diatur dalam GDPR atau hukum atau peraturan lainnya. Anda bertanggung jawab untuk memastikan bahwa penggunaan Dynamics 365 Customer Insights, termasuk fitur ini, mematuhi semua hukum dan peraturan yang berlaku, termasuk hukum yang terkait dengan privasi, data pribadi, data biometrik, perlindungan data, dan kerahasiaan komunikasi.
 
 :::image type="content" source="media/suggested-segments.png" alt-text="Halaman segmen yang disarankan yang menampilkan rincian saran di panel sisi.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segmen yang disarankan untuk meningkatkan KPI
 
-Sebagai pengguna Customer Insights, Anda mungkin memiliki serangkaian [tindakan yang dibuat](measures.md) yang membantu melacak Indikator Kinerja Utama (KPI) Anda. Penting untuk memahami pengaruh atribut tertentu terhadap KPI ini agar dapat membuat segmen dan menjalankan kampanye yang sangat ditargetkan.   
-Misalnya, Anda melacak pengukuran yang disebut *TotalSpendPerCustomer*. Sebagai bisnis, Anda ingin melihat jumlah tersebut berkembang. Memilih ukuran sebagai atribut utama, memungkinkan Anda memilih atribut yang akan dinilai untuk pengaruh. Misalnya *tingkat keanggotaan*, *periode keanggotaan*, dan *pekerjaan*. Selanjutnya, Customer insights dapat menyarankan segmen yang memberi tahu Anda tentang pengaruh terbesar dari pengukuran tersebut. Misalnya, *Akuntan* yang merupakan anggota *Emas* dan telah bersama bisnis Anda selama *minimal lima tahun* adalah pemberi pengaruh terbesar dari *TotalSpendPerCustomer*. Anda akan mendapatkan perkiraan ukuran segmen untuk setiap saran. Anda dapat menggunakan informasi ini untuk membuat kampanye untuk audiens yang ditargetkan.
+Jika Anda menggunakan [langkah-langkah yang dibuat](measures.md) untuk membantu melacak KPI Anda, buat segmen untuk melihat pengaruh pada KPI. Anda dapat menggunakan informasi ini untuk menjalankan kampanye yang sangat bertarget.
+
+Misalnya, Anda melacak pengukuran yang disebut *TotalSpendPerCustomer*. Sebagai bisnis, Anda ingin melihat jumlah tersebut berkembang. Memilih ukuran sebagai atribut utama, pilih atribut yang ingin Anda nilai untuk pengaruh. Misalnya *tingkat keanggotaan*, *periode keanggotaan*, dan *pekerjaan*. Selanjutnya, Customer insights dapat menyarankan segmen yang memberi tahu Anda tentang pengaruh terbesar dari pengukuran tersebut. Misalnya, *Akuntan* yang merupakan anggota *Emas* dan telah bersama bisnis Anda selama *minimal lima tahun* adalah pemberi pengaruh terbesar dari *TotalSpendPerCustomer*. Anda akan mendapatkan perkiraan ukuran segmen untuk setiap saran. Anda dapat menggunakan informasi ini untuk membuat kampanye untuk audiens yang ditargetkan.
 
 ## <a name="understand-what-influences-a-customer-attribute"></a>Memahami yang memengaruhi atribut pelanggan
 
-Anda dapat memilih atribut pelanggan, bukan ukuran sebagai atribut utama. Berdasarkan pilihan atribut yang mempengaruhi, model AI membuat rangkaian saran yang menunjukkan pengaruh atribut yang dipilih terhadap atribut utama.   
-Misalnya, Anda memilih *Anggota Penghargaan (Ya/Tidak)* sebagai atribut utama. *Masa*, *Pekerjaan*, dan *Jumlah Tiket Dukungan* ditetapkan sebagai atribut lainnya yang mempengaruhi. Model AI dapat menyarankan segmen yang menunjukkan kebanyakan profesional TI dengan masa jabatan lebih dari dua tahun adalah anggota penghargaan. Saran lain dapat menyorot bahwa akuntan dengan masa jabatan lebih dari satu tahun dan kurang dari tiga tiket dukungan adalah anggota penghargaan. 
+Anda dapat memilih atribut pelanggan, bukan ukuran sebagai atribut utama. Berdasarkan pilihan atribut yang mempengaruhi, model AI membuat rangkaian saran yang menunjukkan pengaruh atribut yang dipilih terhadap atribut utama.
+
+Misalnya, Anda memilih *Anggota Penghargaan (Ya/Tidak)* sebagai atribut utama. *Masa*, *Pekerjaan*, dan *Jumlah Tiket Dukungan* ditetapkan sebagai atribut lainnya yang mempengaruhi. Model AI dapat menyarankan segmen yang menunjukkan kebanyakan profesional TI dengan masa jabatan lebih dari dua tahun adalah anggota penghargaan. Saran lain dapat menyorot bahwa akuntan dengan masa jabatan lebih dari satu tahun dan kurang dari tiga tiket dukungan adalah anggota penghargaan.
 
 ## <a name="artificial-intelligence-usage"></a>Penggunaan inteligensi buatan
 
@@ -43,7 +45,7 @@ Menggunakan atribut utama dan atribut yang mempengaruhi, algoritme pohon keputus
 
 ### <a name="responsible-ai"></a>AI yang bertanggung jawab
 
-Segmen yang disarankan memungkinkan Anda memilih atribut untuk membuat segmen baru dan memproses data yang Anda pilih. Saat memilih atribut, termasuk atribut sensitif seperti ras, orientasi seksual, atau jenis kelamin, Anda harus memastikan bahwa Anda dapat dan harus memproses data tersebut. Anda bertanggung jawab untuk mematuhi hukum yang berlaku untuk organisasi Anda dan mematuhi prinsip dan kebijakan privasi organisasi Anda.
+Dengan segmen yang disarankan, Anda memilih atribut untuk membuat segmen baru dan memproses data yang Anda pilih. Saat memilih atribut, termasuk atribut sensitif seperti ras, orientasi seksual, atau jenis kelamin, Anda harus memastikan bahwa Anda dapat dan harus memproses data tersebut. Anda bertanggung jawab untuk mematuhi hukum yang berlaku untuk organisasi Anda dan mematuhi prinsip dan kebijakan privasi organisasi Anda.
 
 ### <a name="different-results-for-primary-attributes-with-categorical-and-numeric-values"></a>Hasil yang berbeda untuk atribut utama dengan nilai kategori dan angka
 
@@ -51,60 +53,43 @@ Saran segmen berbeda jika Anda memilih atribut numerik atau atribut kategoris se
 
 Dengan atribut angka seperti *penghasilan tahunan* atau *periode keanggotaan* sebagai atribut utama, sistem menyarankan segmen yang memiliki nilai rata-rata atribut numerik yang lebih tinggi atau lebih rendah bila dibandingkan dengan semua pelanggan.
 
-Atribut kategoris seperti *kepuasan pelanggan* sebagai atribut utama menghasilkan segmen yang disarankan dengan persentase pelanggan yang lebih tinggi atau lebih rendah milik kategori tertentu bila dibandingkan dengan persentase semua pelanggan yang termasuk dalam kategori yang sama. Misalnya, *kepuasan pelanggan* dipilih sebagai atribut utama dan terdiri dari tiga kategori (*Rendah*, *Sedang* dan *Tinggi*). Untuk setiap kategori, segmen akan disarankan memiliki persentase pelanggan yang lebih tinggi atau lebih rendah milik kategori tersebut dibandingkan dengan proporsi semua pelanggan dalam kategori yang sama. Jika 22% dari semua pelanggan memiliki kepuasan *Tinggi*, maka hanya segmen yang memiliki proporsi pelanggan yang lebih tinggi atau lebih rendah dengan kepuasan *Tinggi* dibandingkan dengan 22% yang akan disarankan untuk kategori tersebut. Dengan cara yang sama, segmen akan disarankan untuk masing-masing kategori lain (*Rendah* dan *Sedang*) jika secara statistik signifikan.
+Atribut kategoris seperti *kepuasan pelanggan* sebagai atribut utama menghasilkan segmen yang disarankan dengan persentase pelanggan yang lebih tinggi atau lebih rendah milik kategori tertentu bila dibandingkan dengan persentase semua pelanggan yang termasuk dalam kategori yang sama. Misalnya, *kepuasan pelanggan* dipilih sebagai atribut utama dan terdiri dari tiga kategori (*Rendah*, *Sedang* dan *Tinggi*). Untuk setiap kategori, segmen akan disarankan yang memiliki persentase pelanggan yang lebih tinggi atau lebih rendah yang termasuk dalam kategori tersebut dibandingkan dengan proporsi semua pelanggan dalam kategori yang sama. Jika 22% dari semua pelanggan memiliki kepuasan *Tinggi*, maka hanya segmen yang memiliki proporsi pelanggan yang lebih tinggi atau lebih rendah dengan kepuasan *Tinggi* dibandingkan dengan 22% yang akan disarankan untuk kategori tersebut. Dengan cara yang sama, segmen akan disarankan untuk masing-masing kategori lain (*Rendah* dan *Sedang*) jika secara statistik signifikan.
 
 > [!NOTE]
-> Saat ini, kami hanya mendukung atribut kategoris utama yang memiliki hingga 10 kategori. Jika Anda ingin melihat saran segmen berdasarkan atribut utama dengan lebih dari 10 kategori, sebaiknya kelompokkan beberapa kategori untuk mengurangi jumlah kategori menjadi 10 atau lebih sedikit. Pembatasan ini hanya berlaku untuk atribut utama. Untuk atribut kategoris yang mempengaruhi, saat ini kami mendukung maksimum 100 kategori.
+> Saat ini, kami hanya mendukung atribut kategoris utama yang memiliki hingga 10 kategori. Jika Anda ingin melihat saran segmen berdasarkan atribut utama dengan lebih dari 10 kategori, sebaiknya kelompokkan beberapa kategori untuk mengurangi jumlah kategori menjadi 10 kategori atau kurang. Pembatasan ini hanya berlaku untuk atribut utama. Untuk atribut kategoris yang mempengaruhi, saat ini kami mendukung maksimum 100 kategori.
 
 ## <a name="generate-suggested-segments"></a>Membuat segmen yang disarankan
 
-1. Buka **Segmen**.
+1. Buka **Segmen** dan pilih tab **Saran (pratinjau**).
 
-1. Pilih tab **Saran (pratinjau)**.
+1. Pilih **Temukan saran** baru dan pilih **Tingkatkan pengukuran/metrik**. Pilih **Mulai**.
 
-1. Pilih **Dapatkan saran baru** untuk memulai pengalaman terpandu.
+   :::image type="content" source="media/suggested-segments-measure.png" alt-text="Memilih meningkatkan ukuran pada segmen yang disarankan.":::
 
-1. Pilih ukuran atau atribut pelanggan sebagai atribut utama dan pilih **Selanjutnya**.
+1. Pilih atribut pelanggan atau ukur sebagai atribut utama dan pilih **Berikutnya**.
 
-   :::image type="content" source="media/suggested-segments-primary-attribute.png" alt-text="Memilih atribut utama untuk saran pada segmen yang disarankan.":::
+1. Pilih atribut yang mempengaruhi dan pilih **Jalankan**.
 
-1. Pilih atribut yang mempengaruhi, lalu pilih **Simpan**.
-   
    > [!TIP]
-   > Memilih beberapa atribut yang mempengaruhi akan meningkatkan peluang untuk mengevaluasi pengaruh atribut utama. Jangan sertakan atribut yang tidak mempengaruhi atribut utama. Contohnya, jika semua pelanggan berasal dari negara tertentu, jangan sertakan atribut *negara* karena tidak akan mempengaruhi output.
+   > Memilih beberapa atribut yang mempengaruhi akan meningkatkan peluang untuk mengevaluasi pengaruh atribut utama. Jangan sertakan atribut yang tidak memiliki pengaruh pada atribut utama. Contohnya, jika semua pelanggan berasal dari negara tertentu, jangan sertakan atribut *negara* karena tidak akan mempengaruhi output.
 
-1. Tergantung pada jumlah profil pelanggan dan atribut yang dipilih, diperlukan waktu beberapa menit untuk memproses atribut yang dipilih. 
+Tergantung pada jumlah profil pelanggan dan atribut yang dipilih, diperlukan waktu beberapa menit untuk memproses atribut yang dipilih.
 
-## <a name="view-details-of-a-suggested-segment"></a>Lihat detail segmen yang disarankan
+## <a name="manage-suggested-segments"></a>Mengelola segmen yang disarankan
 
-Setelah model AI menghasilkan saran, Anda akan menemukannya terdaftar di **Segmen** > **Saran (pratinjau)**.
- 
-Pilih segmen yang disarankan untuk meninjau rincian saran tersebut. Anda juga dapat meninjau nilai atribut atau aturan yang dipelajari model AI untuk menyarankan segmen yang dipilih.
+Buka **Segmen** dan pilih tab **Saran (pratinjau**). Di bagian **Saran segmen berbasis atribut**, pilih segmen yang disarankan untuk melihat tindakan yang tersedia.
 
-## <a name="save-a-suggestion-as-a-segment"></a>Simpan saran sebagai segmen
-
-1. Buka **Segmen** > **Saran (pratinjau)**.
-
-1. Pilih segmen yang ingin disimpan. 
-
-1. Pada panel sisi, pilih **Simpan sebagai segmen**. 
-
-1. Setelah menyimpan segmen, segmen tersebut akan ditampilkan dalam daftar segmen pada tab **Semua segmen**. Segmen tersebut sekarang dapat [di-refresh, diedit, atau dihapus seperti segmen lainnya](segments.md).
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Refresh atau edit rangkaian saran
-
-1. Buka **Segmen** > **Saran (pratinjau)**.
-
-1. Pilih **Refresh saran** untuk me-refresh saran sekaligus menyimpan atribut yang dikonfigurasi. Atau pilih **Edit atribut** untuk memodifikasi atribut yang dikonfigurasi. Sistem akan menjalankan ulang model AI, menghasilkan saran segmen berdasarkan data terbaru, dan mengganti saran saat ini.
+- **Lihat** detail segmen yang disarankan dan nilai atau aturan atribut yang dipelajari model AI.
+- **Simpan sebagai segmen** saran sebagai segmen. Ini ditampilkan pada tab **Semua segmen dan dapat** disegarkan [, diedit, atau dihapus](segments.md).
+- **Edit atribut** dan ubah atribut yang dikonfigurasi yang akan menggantikan saran saat ini.
+- **Refresh saran** untuk me-refresh saran sambil menyimpan atribut yang dikonfigurasi.
 
 ## <a name="limitations"></a>Pembatasan
 
 1. Perkiraan ketidakcocokan ukuran segmen: Jika Anda memilih atribut utama yang berisi nilai kosong, perkiraan ukuran segmen dapat mempengaruhi perkiraan ukuran segmen dalam saran segmen. Bila menyimpan segmen tersebut, ukuran segmen aktual dapat berbeda dengan perkiraan asli.
- 
+
 2. Atribut utama jenis Boolean tidak berfungsi: Saat ini, kami hanya mendukung string dan jenis data numerik sebagai atribut utama.
 
 3. Segmen yang disarankan tidak cukup berbeda: Ingat bahwa atribut yang dipilih dan distribusi nilai atribut tersebut akan mempengaruhi hasil. Anda dapat mengubah atribut yang mempengaruhi atau bahkan atribut utama Anda untuk mendapatkan hasil yang berbeda.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Sambungkan ke folder Common Data Model dengan akun Azure Data Lake Store
 description: Bekerja dengan Common Data Model menggunakan Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082261"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207003"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Menyambungkan ke data di Azure Data Lake Storage
 
@@ -82,7 +82,7 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
    :::image type="content" source="media/ADLS_required.png" alt-text="Kotak dialog memperlihatkan Diperlukan untuk kunci Utama":::
 
    > [!TIP]
-   > Untuk mengedit entitas dalam antarmuka pengeditan JSON, pilih **Tampilkan lebih banyak** > **edit file skema**. Buat perubahan dan pilih **Simpan**.
+   > Untuk mengedit entitas di antarmuka pengeditan JSON, pilih entitas lalu **Edit file skema**. Buat perubahan dan pilih **Simpan**.
 
 1. Untuk entitas yang dipilih yang memerlukan penyerapan inkremental, **Diperlukan** ditampilkan di bawah **Refresh** inkremental. Untuk setiap entitas ini, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
 
@@ -101,6 +101,10 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
    1. Pilih **Selesai**.
 
 1. Pilih **Simpan**. Halaman **Sumber data** terbuka memperlihatkan sumber data baru dalam **status Refresh**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Memuat data dapat memakan waktu. Setelah refresh berhasil, data yang diserap dapat ditinjau dari [**halaman Entitas**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Membuat file skema baru
 
@@ -148,6 +152,9 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
 
 1. Pilih **Simpan**. Halaman **Sumber data** terbuka memperlihatkan sumber data baru dalam **status Refresh**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Memuat data dapat memakan waktu. Setelah refresh berhasil, data yang diserap dapat ditinjau dari [**halaman Entitas**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage Mengedit sumber data
 
@@ -179,8 +186,16 @@ Anda dapat memperbarui *opsi Sambungkan ke akun penyimpanan menggunakan*. Untuk 
       > [!IMPORTANT]
       > Jika ada dependensi pada file model.json atau manifest.json yang ada dan rangkaian entitas, Anda akan melihat pesan kesalahan dan tidak dapat memilih file model.json atau json yang berbeda. Hilangkan dependensi tersebut sebelum mengubah file model.json atau manifest.json atau buat sumber data baru dengan file model.json atau manifest.json yang ingin Anda gunakan untuk menghindari dependensi dihapus.
    - Untuk mengubah lokasi file data atau kunci utama, pilih **Edit**.
-   - Untuk mengubah data penyerapan inkremental, lihat [Mengonfigurasi refresh inkremental untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md)
+   - Untuk mengubah data penyerapan inkremental, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+   - Hanya ubah nama entitas agar sesuai dengan nama entitas dalam file .json.
+
+     > [!NOTE]
+     > Selalu jaga agar nama entitas di Customer Insights tetap sama dengan nama entitas di dalam file model.json atau manifest.json setelah penyerapan. Customer Insights memvalidasi semua nama entitas dengan model.json atau manifest.json selama setiap refresh sistem. Jika nama entitas diubah baik di dalam Customer Insights atau di luar, kesalahan terjadi karena Customer Insights tidak dapat menemukan nama entitas baru dalam file .json. Jika nama entitas yang diserap tidak sengaja diubah, edit nama entitas di Customer Insights agar sesuai dengan nama dalam file .json.
 
 1. Pilih **Atribut** untuk menambahkan atau mengubah atribut, atau untuk mengaktifkan pembuatan profil data. Kemudian pilih **Selesai**.
 
 1. Klik **Simpan** untuk menerapkan perubahan Anda dan kembali ke **halaman Sumber** data.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

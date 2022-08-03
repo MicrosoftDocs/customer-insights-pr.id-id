@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082366"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196214"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Perkaya profil perusahaan dengan Leadspace (pratinjau)
 
@@ -54,7 +54,7 @@ Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini 
 
 1. Tinjau gambaran umum lalu pilih **Berikutnya**.
 
-1. Pilih koneksi. Hubungi administrator jika tidak tersedia.
+1. Pilih koneksi. Hubungi administrator jika tidak ada koneksi yang tersedia.
 
 1. Pilih **Selanjutnya**.
 

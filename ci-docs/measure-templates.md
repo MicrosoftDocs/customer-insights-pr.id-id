@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051687"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170777"
 ---
 # <a name="create-measures-from-templates"></a>Membuat ukuran dari templat
 
-Anda dapat menggunakan templat yang telah ditentukan sebelumnya dari langkah-langkah yang [umum digunakan](measures.md) untuk membuatnya. Deskripsi terperinci tentang templat dan pengalaman terpandu membantu Anda mengukur pembuatan yang efisien. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
+Gunakan templat yang telah ditentukan sebelumnya dari tindakan [yang umum digunakan](measures.md) untuk membuatnya. Templat dibuat berdasarkan data yang dipetakan dari entitas *Aktivitas Terpadu*. Jadi pastikan Anda telah mengonfigurasi [aktivitas pelanggan](activities.md) sebelum membuat ukuran dari templat.
 
-Untuk membuat pengukuran kustom, lihat [Menggunakan pembuat pengukuran untuk membuat pengukuran dari awal](measure-builder.md).
+Templat pengukuran hanya didukung di lingkungan untuk **pelanggan individu**. Untuk membuat pengukuran kustom atau membuat pengukuran untuk B-ke-B, lihat [Menggunakan penyusun pengukuran](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
-
-Template ukuran yang tersedia: 
+Template ukuran yang tersedia:
 - Nilai transaksi rata-rata (ATV)
 - Nilai transaksi total
 - Pendapatan rata-rata harian
+- Pendapatan rata-rata bulanan
 - Pendapatan rata-rata tahunan
 - Jumlah transaksi
 - Poin loyalitas yang diperoleh
@@ -57,21 +56,22 @@ Template ukuran yang tersedia:
 
 1. Pilih **Selesai**.
 
-1. Di bagian **Atur periode waktu**, tentukan jangka waktu data yang akan digunakan. Pilih jika Anda menginginkan ukuran baru mencakup seluruh rangkaian data dengan memilih **Sepanjang waktu**, atau jika Anda ingin agar pengukuran fokus pada **periode waktu Tertentu**.
+1. Di bagian **Atur periode** waktu, tentukan jangka waktu data. Pilih jika Anda menginginkan ukuran baru mencakup seluruh rangkaian data dengan memilih **Sepanjang waktu**, atau jika Anda ingin agar pengukuran fokus pada **periode waktu Tertentu**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Cuplikan layar memperlihatkan bagian periode waktu saat mengonfigurasi ukuran dari templat.":::
 
 1. Di bagian berikutnya, pilih **Tambahkan data** untuk memilih aktivitas dan memetakan data terkait dari entitas *Aktivitas Terpadu* Anda.
 
-    1. Langkah 1 dari 2: Di bawah **Tipe aktivitas**, pilih tipe entitas yang ingin Anda gunakan. Untuk **Aktivitas**, pilih entitas yang ingin Anda petakan.
-    1. Langkah 2 dari 2: Pilih atribut dari entitas *Aktivitas Terpadu* untuk komponen yang diperlukan oleh rumus. Misalnya, untuk nilai transaksi rata-rata, itu adalah atribut yang mewakili nilai Transaksi. Untuk **Cap waktu Aktivitas**, pilih atribut dari entitas Aktivitas Terpadu yang menunjukkan tanggal dan waktu aktivitas.
-   
-1. Setelah pemetaan data berhasil, Anda dapat melihat status sebagai **Selesai** dan nama aktivitas dan atribut yang dipetakan.
+    1. Langkah 1 dari 2: Di bawah **Tipe aktivitas**, pilih tipe entitas yang ingin Anda gunakan. Untuk **Aktivitas**, pilih entitas yang ingin Anda petakan, lalu pilih **Berikutnya**.
+    1. Langkah 2 dari 2: Pilih atribut dari entitas *Aktivitas Terpadu* untuk komponen yang diperlukan oleh rumus. Misalnya, untuk nilai transaksi rata-rata, itu adalah atribut yang mewakili nilai Transaksi. Untuk **stempel waktu Aktivitas**, pilih atribut dari *entitas Aktivitas* Terpadu yang mewakili tanggal dan waktu aktivitas.
+    1. Pilih **Simpan**.
 
-1. Sekarang Anda dapat memilih **Jalankan** untuk menghitung hasil pengukuran. Untuk memperbaikinya nanti, pilih **Simpan draf**.
+    Ketika pemetaan data berhasil, status menunjukkan **Lengkap** dan nama aktivitas dan atribut yang dipetakan ditampilkan.
 
-# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
+1. Pilih **Jalankan** untuk menghitung hasil pengukuran. Pilih **Simpan draf** jika Anda ingin mempertahankan konfigurasi saat ini dan menjalankan pengukuran nanti. Halaman **Pengukuran** ditampilkan.
 
-Fitur ini hanya tersedia untuk langkah-langkah yang dibuat di lingkungan dengan pelanggan individual sebagai target audiens.
+## <a name="next-step"></a>Langkah selanjutnya
 
----
+Gunakan langkah-langkah yang ada untuk membuat [segmen](segments.md) pelanggan.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

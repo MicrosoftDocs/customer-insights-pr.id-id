@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083122"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170824"
 ---
 # <a name="measures-overview"></a>Gambaran umum pengukuran
 
-Ukuran membantu Anda untuk lebih memahami perilaku pelanggan dan kinerja bisnis. Mereka melihat nilai-nilai yang relevan dari [profil terpadu](data-unification.md). Misalnya, bisnis ingin melihat *total pengeluaran per pelanggan* untuk memahami riwayat pembelian pelanggan individual atau mengukur *total penjualan perusahaan* untuk memahami pendapatan tingkat agregat dalam seluruh bisnis.  
+Ukuran membantu Anda untuk lebih memahami perilaku pelanggan dan kinerja bisnis. Mereka melihat nilai-nilai yang relevan dari [profil terpadu](data-unification.md). Misalnya, bisnis ingin melihat *total pengeluaran per pelanggan* untuk memahami riwayat pembelian pelanggan individual atau mengukur *total penjualan perusahaan* untuk memahami pendapatan tingkat agregat dalam seluruh bisnis.
 
-Pengukuran dibuat [menggunakan pembuat](measure-builder.md) pengukuran, platform kueri data dengan berbagai operator, dan opsi pemetaan sederhana. Alat ini memungkinkan Anda memfilter data, mengelompokkan hasil, mendeteksi [jalur relasi entitas](relationships.md), dan mempratinjau output. Anda dapat [menggunakan templat](measure-templates.md) yang telah ditentukan sebelumnya untuk mengonfigurasi tindakan yang umum digunakan secara efisien.
+Buat langkah-langkah untuk merencanakan aktivitas bisnis dengan mengkueri data pelanggan dan mengekstrak wawasan. Misalnya, buat ukuran total pembelanjaan *per pelanggan* dan *total pengembalian per pelanggan* untuk membantu mengidentifikasi sekelompok pelanggan dengan pengeluaran tinggi namun pengembalian tinggi. Kemudian, [buat segmen berdasarkan langkah-langkah](segments.md) ini untuk mendorong tindakan terbaik berikutnya.
 
-Gunakan pembuat ukuran untuk merencanakan aktivitas bisnis dengan mengkueri data pelanggan dan mengekstrak wawasan. Contohnya, membuat ukuran *total pengeluaran per pelanggan* dan *penghasilan total per pelanggan* membantu mengidentifikasi grup pelanggan dengan pengeluaran tinggi namun penghasilan yang tinggi. Anda dapat [membuat segmen berdasarkan langkah-langkah](segments.md) ini untuk mendorong tindakan terbaik berikutnya.
+## <a name="create-a-measure"></a>Membuat ukuran
 
-## <a name="manage-your-measures"></a>Kelola ukuran Anda
+Pilih cara membuat pengukuran berdasarkan audiens target Anda.
 
-Anda dapat menemukan daftar ukuran di halaman **Ukuran**.
+# <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
-Anda akan menemukan informasi tentang jenis pengukuran, pembuat, tanggal pembuatan, status, dan status. Bila Anda memilih ukuran dari daftar, Anda dapat mempratinjau output dan mengunduh file CSV.
+- Dari awal dengan pembuat ukuran: [Bangun sendiri](measure-builder.md).
+- Dari tindakan yang umum digunakan: [Gunakan templat](measure-templates.md) yang telah ditentukan sebelumnya.
+
+# <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
+
+Dari awal dengan pembuat ukuran: [Bangun sendiri](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Mengelola langkah-langkah yang ada
+
+Buka **halaman Tindakan** untuk melihat pengukuran yang Anda buat, statusnya, jenis pengukurannya, dan terakhir kali data disegarkan. Anda bisa mengurutkan daftar pengukuran menurut kolom mana pun atau menggunakan kotak pencarian untuk menemukan pengukuran yang ingin Anda kelola.
+
+Pilih di samping pengukuran untuk melihat tindakan yang tersedia. Pilih nama pengukuran untuk melihat pratinjau output dan mendownload file CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Tindakan untuk mengelola ukuran tunggal."lightbox="media/measures-actions.png":::
 
-Tindakan berikut tersedia saat Anda memilih pengukuran:
-
-- **Edit** konfigurasi ukuran.
-- **Gandakan** ukuran. Anda dapat langsung memilih untuk mengedit propertinya atau cukup menyimpan duplikat.
-- **segarkan** pengukuran berdasarkan data terbaru. Untuk menyegarkan semua tindakan Anda secara bersamaan, pilih semua tindakan, lalu **Refresh**.
+- **Edit** pengukuran untuk mengubah propertinya.
+- **Refresh** pengukuran untuk menyertakan data terbaru.
 - **Ubah nama** ukuran.
-- **Aktifkan** atau **Nonaktifkan**. Ukuran yang tidak aktif tidak akan di-refresh selama [refresh terjadwal](system.md#schedule-tab).
-- **Tag** untuk [mengelola tag](work-with-tags-columns.md#manage-tags) untuk segmen tersebut.
+- **Mengaktifkan** atau **Menonaktifkan** pengukuran. Tindakan tidak aktif tidak akan disegarkan selama [refresh](system.md#schedule-tab) terjadwal dan **statusnya** terdaftar sebagai **Dilewati**, yang menunjukkan bahwa refresh bahkan tidak dicoba.
+- **Beri** tag untuk [mengelola tag](work-with-tags-columns.md#manage-tags) untuk pengukuran tersebut.
 - **Hapus** ukuran.
+- **Kolom** untuk [mengkustomisasi kolom](work-with-tags-columns.md#customize-columns) yang ditampilkan.
+- **Filter** untuk [memfilter tag](work-with-tags-columns.md#filter-on-tags).
+- **Cari nama** untuk dicari berdasarkan nama pengukuran.
+
+## <a name="refresh-measures"></a>Langkah-langkah penyegaran
+
+Langkah-langkah dapat disegarkan pada jadwal otomatis atau disegarkan secara manual sesuai permintaan. Untuk me-refresh satu atau beberapa pengukuran secara manual, pilih pengukuran tersebut dan pilih **Refresh**. Untuk [menjadwalkan refresh](system.md#schedule-tab) otomatis, buka **Jadwal** > **Sistem** > **Admin**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Langkah selanjutnya
-
-Anda dapat menggunakan langkah-langkah yang ada untuk membuat [segmen pelanggan](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

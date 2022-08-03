@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082093"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195178"
 ---
 # <a name="connections-preview-overview"></a>Ikhtisar koneksi (pratinjau)
 
@@ -27,6 +27,12 @@ Buka **Admin** > **Koneksi** untuk membuat dan melihat koneksi.
 Tab **Koneksi** memperlihatkan semua koneksi aktif. Daftar memperlihatkan baris untuk setiap koneksi.
 
 Dapatkan gambaran umum, deskripsi, dan cari tahu apa yang bisa Anda lakukan dengan setiap opsi ekstensibilitas pada tab **Temukan**.
+
+## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
+
+Saat Anda memungkinkan Dynamics 365 Customer Insights untuk mengirimkan data ke pihak ketiga atau produk Microsoft lainnya, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa pihak ketiga tersebut memenuhi kewajiban privasi atau keamanan apa pun yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Administrator Anda Dynamics 365 Customer Insights dapat menghapus koneksi kapan saja untuk menghentikan penggunaan fungsionalitas.
 
 ## <a name="exports"></a>Ekspor
 
@@ -41,8 +47,6 @@ Hanya administrator yang dapat mengonfigurasi koneksi baru tetapi koneksi yang d
 Untuk menambahkan koneksi, Anda perlu memiliki [izin administrator](permissions.md). Jika Anda tersambung ke layanan Microsoft lainnya, kami menganggap kedua layanan berada dalam organisasi yang sama.
 
 1. Buka **Admin** > **Koneksi (pratinjau)**.
-
-1. Buka tab **Koneksi**.
 
 1. Pilih **Tambahkan Koneksi** untuk membuat koneksi baru. Pilih dari menu dropdown jenis sambungan yang akan dibuat.
 
@@ -99,3 +103,5 @@ Pengayaan dan ekspor terpisah menjadi tidak aktif. Anda mengaktifkannya kembali 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Mengkonfigurasikan sambungan dengan rahasia yang dikelola oleh Key Vault Anda sendiri
 
 Beberapa sambungan memerlukan rahasia seperti kunci API atau sandi. Beberapa sambungan mendukung rahasia yang tersimpan di Key Vault Anda sendiri. Pelajari lebih lanjut tentang koneksi yang didukung dan cara menyiapkannya di [Key Vault for Customer Insights Anda sendiri](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

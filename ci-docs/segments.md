@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050951"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170685"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -27,54 +27,68 @@ Segmen memungkinkan Anda mengelompokkan pelanggan berdasarkan atribut demografi,
 
 Profil pelanggan yang cocok dengan filter definisi segmen disebut sebagai *anggota* segmen. Beberapa [batas Layanan](/dynamics365/customer-insights/service-limits) berlaku.
 
-## <a name="create-a-new-segment"></a>Buat segmen baru
+## <a name="create-a-segment"></a>Buat segmen
 
-Tersedia beberapa cara untuk membuat segmen baru: 
+Pilih cara membuat segmen berdasarkan target anda audiens.
 
 # <a name="individual-consumers-b-to-c"></a>[Konsumen perorangan (B-ke-C)](#tab/b2c)
 
-- Segmen yang kompleks dengan pembuat segmen: [Buat milik kita sendiri](segment-builder.md#create-a-new-segment) 
-- Segmen sederhana dengan satu operator: [Segmen cepat](segment-builder.md#quick-segments) 
-- Cara yang didukung AI untuk menemukan pelanggan serupa: [Pelanggan Serupa](find-similar-customer-segments.md) 
-- Saran yang didukung AI berdasarkan tindakan atau atribut: [Segmen yang disarankan untuk meningkatkan ukuran](suggested-segments.md) 
-- Saran berdasarkan aktivitas: [Segmen yang disarankan berdasarkan aktivitas pelanggan](suggested-segments-activity.md) 
+- Segmen kompleks dengan pembuat segmen: [Bangun segmen Anda sendiri](segment-builder.md)
+- Segmen sederhana dengan satu operator: [Segmen cepat](segment-quick.md)
+- Cara yang didukung AI untuk menemukan pelanggan serupa: [Pelanggan serupa](find-similar-customer-segments.md)
+- Saran yang didukung AI berdasarkan pengukuran atau atribut: [Segmen yang disarankan berdasarkan pengukuran](suggested-segments.md)
+- Saran berdasarkan aktivitas: [Segmen yang disarankan berdasarkan aktivitas pelanggan](suggested-segments-activity.md)
 
 # <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
-- Segmen yang kompleks dengan pembuat segmen: [Buat milik kita sendiri](segment-builder.md#create-a-new-segment)
+- Segmen sederhana atau kompleks dengan pembuat segmen: [Bangun segmen Anda sendiri](segment-builder.md)
 
 ---
 
 ## <a name="manage-existing-segments"></a>Mengelola segmen yang ada
 
-Buka **halaman Segmen** untuk melihat semua segmen yang Anda simpan dan mengelolanya.
+**Buka halaman Segmen untuk melihat segmen yang Anda buat, status dan statusnya, jumlah anggota, dan terakhir kali data disegarkan**. Anda bisa mengurutkan daftar segmen menurut kolom mana pun atau menggunakan kotak pencarian untuk menemukan segmen yang ingin Anda kelola.
 
-Setiap segmen diwakili oleh baris yang berisi informasi tambahan tentang segmen.
+Pilih segmen untuk melihat tindakan yang tersedia.
 
 :::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan daftar dropdown pilihan dan pilihan yang tersedia." lightbox="media/segments-selected-segment.png":::
 
-Tindakan berikut tersedia saat Anda memilih segmen:
-
-- **Lihat** rincian segmen, termasuk tren jumlah anggota yang menampilkan pratinjau anggota segmen.
+- [**Lihat**](#view-segment-details) detail segmen, termasuk tren jumlah anggota dan pratinjau anggota segmen.
 - **Unduh** Daftar anggota sebagai File .CSV.
 - **Edit** segmen untuk mengubah properti.
 - **Membuat duplikat** segmen. Anda dapat memilih untuk segera mengedit propertinya atau menyimpan duplikatnya.
-- **Refresh** segmen untuk menyertakan data terbaru.
-- **Aktifkan** atau **Nonaktifkan** segmen. Untuk segmen yang tidak aktif, definisi segmen ada, namun tidak berisi pelanggan. Segmen aktif mencari pelanggan yang cocok dengan definisi segmen. Jika [penyegaran terjadwal](system.md#schedule-tab) dikonfigurasi, segmen yang tidak aktif memiliki **status** yang didaftarkan sebagai **dilewati**, yang menunjukkan bahwa penyegaran bahkan tidak dicoba. Bila segmen aktif diaktifkan, segmen akan diperbarui dan akan disertakan dalam penyegaran terjadwal.
-  Atau, Anda dapat menggunakan fungsi **jadwalkan nanti** dalam menu menurun **Aktifkan/Nonaktifkan** untuk menentukan tanggal dan waktu di masa mendatang untuk pengaktifan dan penonaktifan segmen tertentu.
-- **[Temukan pelanggan](find-similar-customer-segments.md)** serupa dari segmen tersebut.
+- [**Refresh**](#refresh-segments) segmen untuk menyertakan data terbaru.
+- **Aktifkan** atau **Nonaktifkan** segmen. Segmen yang tidak aktif tidak akan disegarkan selama [refresh](system.md#schedule-tab) terjadwal dan statusnya **terdaftar** sebagai **Dilewati**, menunjukkan bahwa refresh bahkan tidak dicoba. Segmen aktif disegarkan berdasarkan jenisnya: statis atau dinamis.
+- **Jadikan statis** atau **Jadikan dinamis** sebagai tipe segmen. Segmen statis harus disegarkan secara manual. Segmen dinamis secara otomatis disegarkan selama penyegaran sistem.
+- [**Temukan pelanggan**](find-similar-customer-segments.md) serupa dari segmen tersebut.
 - **Ganti nama** segmen.
 - **Tag** untuk [mengelola tag](work-with-tags-columns.md#manage-tags) untuk segmen tersebut.
-- **Unduh** Daftar anggota sebagai File .CSV.
-- **Kelola ekspor** untuk melihat segmen terkait ekspor dan mengelolanya. [Pelajari lebih lanjut tentang ekspor.](export-destinations.md)
+- [**Kelola ekspor**](#export-segments) untuk melihat segmen terkait ekspor dan mengelolanya. [Pelajari lebih lanjut tentang ekspor.](export-destinations.md)
 - **Hapus** segmen.
 - **Kolom** untuk [mengkustomisasi kolom](work-with-tags-columns.md#customize-columns) yang ditampilkan.
 - **Filter** untuk [memfilter tag](work-with-tags-columns.md#filter-on-tags).
 - **Cari nama** untuk mencari berdasarkan nama segmen.
 
+## <a name="view-segment-details"></a>Lihat detail segmen
+
+Pada halaman **Segmen**, pilih segmen untuk melihat riwayat pemrosesan dan anggota segmen.
+
+Bagian atas halaman mencakup diagram tren yang memvisualkan perubahan dalam jumlah anggota. Arahkan kursor ke poin data untuk melihat jumlah anggota pada tanggal tertentu. Ubah jangka waktu visualisasi.
+
+:::image type="content" source="media/segment-time-range.png" alt-text="Rentang Waktu segmen.":::
+
+Bagian bawah berisi daftar anggota segmen.
+
+> [!NOTE]
+> Bidang yang muncul di daftar ini didasarkan pada atribut entitas segmen.
+>
+>Daftar ini adalah pratinjau anggota segmen yang cocok dan menampilkan rekaman 100 pertama segmen Anda sehingga Anda dapat dengan cepat mengevaluasinya dan meninjau definisinya jika diperlukan. Untuk melihat semua rekaman yang cocok, [ekspor segmen](export-destinations.md).
+
 ## <a name="refresh-segments"></a>Refresh Segmen
 
-Anda dapat menyegarkan semua segmen sekaligus dengan memilih **Segarkan semua** pada halaman **segmen** atau Anda dapat menyegarkan satu atau beberapa segmen saat memilih dan memilih **Segarkan** dari pilihan. Atau, Anda dapat mengkonfigurasi refresh berulang pada **Admin** > **sistem** > **jadwal**. Saat refresh berulang dikonfigurasi, aturan berikut berlaku:
+Segmen dapat disegarkan pada jadwal otomatis atau disegarkan secara manual sesuai permintaan. Untuk me-refresh satu atau beberapa segmen secara manual, pilih segmen tersebut dan pilih **Refresh**.
+
+Untuk [menjadwalkan refresh](system.md#schedule-tab) otomatis, buka **Jadwal** > **Sistem** > **Admin**. Aturan berikut berlaku:
 
 - Semua segmen dengan tipe **Dinamis** atau **Ekspansi** akan secara otomatis disegarkan pada irama yang ditetapkan. Setelah refresh selesai, **Status** menunjukkan apakah ada masalah dalam menyegarkan segmen. Yang **Terakhir disegarkan** menunjukkan stempel waktu dari penyegaran terakhir yang berhasil. Jika terjadi kesalahan, pilih kesalahan untuk melihat detail tentang apa yang terjadi.
 - Segmen dengan tipe **Statis** *tidak* akan disegarkan secara otomatis. Yang **Terakhir disegarkan** menunjukkan stempel waktu terakhir kali segmen statis dijalankan atau disegarkan secara manual.
@@ -83,17 +97,13 @@ Anda dapat menyegarkan semua segmen sekaligus dengan memilih **Segarkan semua** 
 
 ## <a name="export-segments"></a>Ekspor segmen
 
-Anda bisa mengekspor segmen dari halaman segmen atau [halaman ekspor](export-destinations.md). 
+Ekspor segmen ke aplikasi lain untuk menggunakan data lebih lanjut. Ekspor segmen dari halaman segmen atau [halaman](export-destinations.md) ekspor.
 
-1. Buka halaman **Segmen**.
+1. Buka halaman **Segmen** dan pilih segmen yang ingin Anda ekspor.
 
-1. Pilih elipsis vertikal (&vellip;) untuk segmen yang ingin Anda ekspor.
+1. Pilih **Kelola ekspor**. Halaman **Ekspor (pratinjau) untuk segmen** terbuka. Lihat semua ekspor yang dikonfigurasi yang dikelompokkan berdasarkan apakah ekspor tersebut berisi segmen saat ini atau tidak.
 
-1. Pilih **Kelola ekspor** dari daftar menurun tindakan.
-
-1. Halaman **Ekspor (pratinjau) untuk segmen** terbuka. Anda dapat melihat semua ekspor terkonfigurasi yang dikelompokkan berdasarkan segmen saat ini atau tidak.
-
-   1. Untuk menambahkan segmen yang dipilih ke ekspor, **Edit** ekspor masing-masing untuk memilih segmen terkait, lalu simpan. Di lingkungan untuk masing-masing pelanggan, Anda dapat memilih ekspor dalam daftar dan memilih **Tambahkan segmen** untuk mencapai hasil yang sama.
+   1. Untuk menambahkan segmen yang dipilih ke ekspor, **Edit** ekspor masing-masing untuk memilih segmen terkait, lalu simpan. Di lingkungan untuk masing-masing pelanggan, pilih ekspor dalam daftar dan pilih **Tambahkan segmen** untuk mencapai hasil yang sama.
 
    1. Untuk membuat ekspor baru dengan segmen yang dipilih, pilih **Tambahkan ekspor**. Untuk informasi selengkapnya tentang membuat ekspor, lihat [Menyiapkan ekspor baru](export-destinations.md#set-up-a-new-export).
 
@@ -101,11 +111,11 @@ Anda bisa mengekspor segmen dari halaman segmen atau [halaman ekspor](export-des
 
 ## <a name="track-usage-of-a-segment"></a>Melacak penggunaan segmen
 
-Jika Anda menggunakan segmen dalam aplikasi, yang didasarkan pada organisasi yang sama Microsoft Dataverse yang terhubung dengan Customer Insights, Anda dapat melacak penggunaan segmen. Untuk [segmen Customer Insights yang digunakan dalam perjalanan pelanggan Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistem memberi tahu Anda tentang penggunaan segmen tersebut.
+Jika Anda menggunakan segmen dalam aplikasi yang didasarkan pada organisasi yang sama Microsoft Dataverse yang terhubung dengan Customer Insights, Anda dapat melacak penggunaan segmen. Untuk [segmen Customer Insights yang digunakan dalam perjalanan pelanggan Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistem memberi tahu Anda tentang penggunaan segmen tersebut.
 
-Saat mengedit segmen yang sedang digunakan dalam lingkungan Customer Insights, atau dalam perjalanan pelanggan di Pemasaran, banner di [pembuat](segment-builder.md) segmen memberi tahu Anda tentang dependensi tersebut. Anda dapat memeriksa detail dependensi langsung dari banner atau dengan **memilih Penggunaan** di pembuat segmen.
+Saat mengedit segmen yang sedang digunakan dalam lingkungan Customer Insights, atau dalam perjalanan pelanggan di Pemasaran, banner di [pembuat](segment-builder.md) segmen memberi tahu Anda tentang dependensi tersebut. Periksa detail dependensi langsung dari banner atau dengan **memilih Penggunaan** di pembuat segmen.
 
-Panel **Penggunaan** segmen menampilkan detail tentang penggunaan segmen ini di Dataverse aplikasi berbasis-berbasis. Untuk segmen yang digunakan dalam perjalanan pelanggan, Anda akan menemukan tautan untuk memeriksa perjalanan di Pemasaran tempat segmen ini digunakan. Jika anda memiliki izin untuk mengakses aplikasi Marketing, anda dapat mengakses detail selengkapnya di sana.
+Panel **Penggunaan** segmen menampilkan detail tentang penggunaan segmen ini di Dataverse aplikasi berbasis-berbasis. Untuk segmen yang digunakan dalam perjalanan pelanggan, Anda akan menemukan tautan untuk memeriksa perjalanan di Pemasaran tempat segmen ini digunakan. Jika Anda memiliki izin untuk mengakses aplikasi Pemasaran, lihat detail selengkapnya di sana.
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="Panel samping dengan detail penggunaan segmen di pembuat segmen.":::
 
@@ -118,25 +128,5 @@ Sistem memberi tahu Anda tentang penggunaan segmen yang dilacak saat Anda mencob
 Penggunaan saat ini dilacak di aplikasi berbasis berikut Dataverse:
 
 - [Perjalanan pelanggan di Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
-
-## <a name="view-processing-history-and-segment-members"></a>Melihat riwayat pemrosesan dan anggota segmen
-
-Anda dapat melihat data gabungan tentang segmen dengan meninjau detailnya.
-
-Pada halaman **segmen**, pilih segmen yang ingin Anda tinjau.
-
-Bagian atas halaman mencakup diagram tren yang memvisualkan perubahan dalam jumlah anggota. Arahkan kursor ke poin data untuk melihat jumlah anggota pada tanggal tertentu.
-
-Anda dapat memperbarui jangka waktu visualisasi.
-
-> [!div class="mx-imgBorder"]
-> ![Rentang Waktu segmen.](media/segment-time-range.png "Rentang Waktu segmen")
-
-Bagian bawah berisi daftar anggota segmen.
-
-> [!NOTE]
-> Bidang yang muncul di daftar ini didasarkan pada atribut entitas segmen.
->
->Daftar ini adalah pratinjau anggota segmen yang cocok dan menampilkan rekaman 100 pertama segmen Anda sehingga Anda dapat dengan cepat mengevaluasinya dan meninjau definisinya jika diperlukan. Untuk melihat semua rekaman yang cocok, Anda harus [mengekspor segmen](export-destinations.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

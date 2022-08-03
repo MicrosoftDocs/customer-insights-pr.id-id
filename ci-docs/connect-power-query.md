@@ -1,7 +1,7 @@
 ---
 title: Menyambungkan ke Power Query sumber data (berisi video)
 description: Menyerap data melalui Power Query konektor (berisi video).
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082177"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207049"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Menyambungkan ke Power Query sumber data
 
@@ -41,22 +41,29 @@ Menambahkan sumber data berdasarkan Power Query konektor umumnya mengikuti langk
 
 1. Masukkan rincian yang diperlukan dalam **pengaturan sambungan** untuk konektor yang dipilih dan pilih **berikutnya** untuk melihat pratinjau data.
 
-1. Pilih **Transformasi data**. Pada langkah ini, Anda akan menambahkan entitas ke sumber data. Entitas adalah dataset. Jika Anda memiliki database yang mencakup beberapa dataset, maka setiap himpunan data adalah entitas sendiri.
+1. Pilih **Transformasi data**.
 
 1. Dialog **Power Query - Edit kueri** memungkinkan Anda meninjau dan memperbaiki data. Entitas yang diidentifikasi dalam sumber data yang dipilih muncul di panel kiri.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialog Edit kueri":::
 
-1. Anda juga dapat mengubah data Anda. Pilih entitas untuk mengedit atau mengubah. Gunakan opsi di Power Query jendela untuk menerapkan transformasi. Setiap transformasi tercantum di bawah Langkah-langkah **yang** diterapkan. Power Query menyediakan banyak opsi transformasi yang dibuat sebelumnya. Untuk informasi selengkapnya, lihat [Power Query Transformasi](/power-query/power-query-what-is-power-query#transformations).
+1. Anda juga dapat mengubah data Anda. Pilih entitas untuk mengedit atau mengubah. Gunakan opsi di Power Query jendela untuk menerapkan transformasi. Setiap transformasi tercantum di bawah Langkah-langkah **yang** diterapkan. Power Query menyediakan banyak [opsi transformasi](/power-query/power-query-what-is-power-query#transformations) yang dibuat sebelumnya.
 
    Kami menyarankan Anda menggunakan transformasi berikut:
 
    - Jika Anda menyerap data dari file CSV, baris pertama sering berisi header. Buka **Transformasi dan pilih** Gunakan baris pertama sebagai **header**.
    - Pastikan jenis data diatur dengan benar. Misalnya, untuk bidang tanggal, pilih tipe tanggal.
 
-1. Untuk menambahkan entitas tambahan ke sumber data Anda dalam **dialog Edit kueri**, buka **Beranda** dan pilih **Dapatkan data**. Ulangi langkah 6-10 hingga Anda menambahkan semua entitas untuk sumber data ini.
+1. Untuk menambahkan entitas tambahan ke sumber data Anda dalam **dialog Edit kueri**, buka **Beranda** dan pilih **Dapatkan data**. Ulangi langkah 5-10 hingga Anda menambahkan semua entitas untuk sumber data ini. Jika Anda memiliki database yang mencakup beberapa dataset, maka setiap himpunan data adalah entitas sendiri.
 
 1. Pilih **Simpan**. Halaman **Sumber data** terbuka memperlihatkan sumber data baru dalam **status Refresh**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Memuat data dapat memakan waktu. Setelah refresh berhasil, data yang diserap dapat ditinjau dari [**halaman Entitas**](entities.md).
+
+> [!CAUTION]
+> Sebuah sumber data berdasarkan Power Query membuat [aliran data di Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Jangan mengubah nama aliran data di Power Platform pusat admin yang digunakan di Customer Insights. Mengganti nama aliran data menyebabkan masalah dengan referensi antara sumber data Customer Insights dan Dataverse aliran data.
 
 ### <a name="available-power-query-data-sources"></a>Sumber data yang Power Query tersedia
 
@@ -70,15 +77,17 @@ Menyerap data dari sumber data lokal didukung berdasarkan Microsoft Power Platfo
 
 Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Customer Insights menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang ada sebelum Dataverse lingkungan dikaitkan [menggunakan gateway](/data-integration/gateway/service-gateway-app) data lokal.
 
-Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan Anda dapat menggunakan kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
+Gateway data dari lingkungan yang ada atau Power BI yang ada Power Apps akan terlihat dan Anda dapat menggunakannya kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
 
 > [!IMPORTANT]
-> Pastikan gateway Anda diperbarui ke versi terbaru. Anda dapat menginstal pembaruan dan mengonfigurasi ulang gateway dari prompt yang ditampilkan di layar gateway secara langsung atau [mengunduh versi](https://powerapps.microsoft.com/downloads/) terbaru. Jika Anda tidak menggunakan versi gateway terbaru, refresh aliran data gagal dengan pesan kesalahan seperti **Kata kunci tidak didukung: properti konfigurasi. Nama parameter: kata kunci**.
+> Pastikan gateway Anda diperbarui ke versi terbaru. Anda dapat menginstal pembaruan dan mengonfigurasi ulang gateway dari prompt yang ditampilkan di layar gateway secara langsung atau [mengunduh versi terbaru](https://powerapps.microsoft.com/downloads/). Jika Anda tidak menggunakan versi gateway terbaru, refresh aliran data gagal dengan pesan kesalahan seperti **Kata kunci tidak didukung: properti konfigurasi. Nama parameter: kata kunci**.
+>
+> Kesalahan dengan gateway data lokal di Customer Insights sering disebabkan oleh masalah konfigurasi. Untuk informasi selengkapnya tentang pemecahan masalah gateway data, lihat [Memecahkan masalah gateway data lokal](/data-integration/gateway/service-gateway-tshoot).
 
 ## <a name="edit-power-query-data-sources"></a>Mengedit Power Query sumber data
 
 > [!NOTE]
-> Anda mungkin tidak dapat melakukan perubahan pada sumber data yang saat ini sedang digunakan di salah satu proses aplikasi *(segmentasi*, *kecocokan*, atau *penggabungan*, misalnya).
+> Mungkin tidak mungkin membuat perubahan pada sumber data yang saat ini sedang digunakan dalam salah satu proses aplikasi (segmentasi atau penyatuan data misalnya).
 >
 > **Di halaman Pengaturan**, Anda dapat melacak kemajuan masing-masing proses aktif. Setelah proses selesai, Anda dapat kembali ke halaman **sumber data** dan melakukan perubahan.
 
@@ -86,8 +95,10 @@ Gateway data dari lingkungan Power BI atau Power Apps yang ada akan terlihat dan
 
 1. Di samping sumber data yang ingin Anda perbarui, pilih **Edit**.
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. Terapkan perubahan dan transformasi Anda dalam **Power Query dialog - Edit kueri** seperti yang dijelaskan di [bagian Buat sumber data](#create-a-new-data-source) baru.
 
-1. Pilih **Simpan** di Power Query setelah menyelesaikan pengeditan Anda untuk menyimpan perubahan Anda.
+1. Pilih **Simpan** untuk menerapkan perubahan Anda dan kembali ke **halaman Sumber** data.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

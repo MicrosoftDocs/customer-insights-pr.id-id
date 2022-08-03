@@ -1,19 +1,19 @@
 ---
 title: Power Automate| konektor (pratinjau) Dokumen Microsoft
 description: Buat alur di Microsoft Power Automate dari Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082450"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196122"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate connector (pratinjau)
 
@@ -21,18 +21,18 @@ Picu aktivitas tertentu agar terjadi secara otomatis jika data Anda berubah dan 
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat melakukan maksimal 100 panggilan per 60 detik. Anda dapat memanggil API titik akhir beberapa kali dengan menggunakan parameter $skip. [Pelajari parameter $skip lebih lanjut](/connectors/customerinsights/#get-items-from-an-entity).
+- Maksimal 100 panggilan per 60 detik. [Gunakan parameter](/connectors/customerinsights/#get-items-from-an-entity) $skip untuk memanggil API titik akhir beberapa kali.
 
 ## <a name="power-automate-triggers"></a>Pemicu Power Automate
 
-Gunakan memicu untuk membuat alur cloud dan mengotomatisasi tugas berulang, seperti pemberitahuan atau tindakan yang lebih lanjut.
+Gunakan memicu untuk membuat alur cloud dan mengotomatisasi tugas berulang, seperti pemberitahuan atau tindakan yang lebih lanjut. Gunakan pemicu saat:
 
-- Memicu saat refresh sumber data gagal.
-- Memicu saat refresh sumber data berhasil.
-- Memicu bila ambang terlewati pada segmen. Pemicu terbatas untuk melebihi atas ambang batas.
-- Memicu bila ambang terlewati pada ukuran bisnis. Hanya ukuran bisnis tanpa dimensi yang didukung. Pemicu terbatas untuk melebihi atas ambang batas.
-- Picu saat penyegaran penuh (sumber data, segmen, ukuran, ...) selesai.
-- Pemicu ketika penyegaran proses penyatuan selesai.
+- Penyegaran sumber data gagal.
+- Penyegaran sumber data berhasil.
+- Ambang batas dilintasi pada segmen. Pemicu terbatas untuk melebihi atas ambang batas.
+- Ambang batas dilintasi pada ukuran bisnis. Hanya ukuran bisnis tanpa dimensi yang didukung. Pemicu terbatas untuk melebihi atas ambang batas.
+- Penyegaran terjadwal penuh selesai. Pemicu ini tidak berfungsi untuk refresh yang dimulai secara manual.
+- Penyegaran proses penyatuan selesai.
 
 [Konfigurasikan pemicu di Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Konektor Power Automate menyediakan tindakan lain selain pemicu yang tersedia. U
 
 ## <a name="create-a-power-automate-flow"></a>Buat Alur Power Automate
 
-1. Buka **Admin** > **Tujuan ekspor**.
+1. Buka **Admin** > **Koneksi**.
 
 1. Di petak **Power Automate**, pilih **konfigurasi**.
 
@@ -53,7 +53,5 @@ Konektor Power Automate menyediakan tindakan lain selain pemicu yang tersedia. U
 Contoh cara menggunakan alur: 
 - Posting pesan ke saluran Microsoft Teams jika penyegaran sumber data gagal. 
 - Kirim email ke pemilik data saat ambang batas pada segmen terlewati.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Prediksi nilai selama hubungan dengan pelanggan (CLV)
 description: Prediksi potensi pendapatan untuk pelanggan aktif di masa mendatang.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055218"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186444"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV)
 
 Perkipkan nilai potensial (pendapatan) yang akan diberikan pelanggan aktif individual ke bisnis Anda hingga periode waktu mendatang yang ditentukan. Fitur ini dapat membantu Anda mencapai berbagai sasaran:
+
 - Mengidentifikasi pelanggan bernilai tinggi dan memproses wawasan ini
 - Membuat segmen pelanggan yang strategis berdasarkan potensi nilainya untuk menjalankan kampanye pribadi dengan upaya penjualan, pemasaran, dan dukungan yang ditargetkan
 - Memandu pengembangan produk dengan berfokus pada fitur yang meningkatkan nilai pelanggan
 - Mengoptimalkan strategi penjualan atau pemasaran dan mengalokasikan anggaran secara lebih akurat untuk jangkauan pelanggan
-- Mengakui dan memberikan penghargaan kepada pelanggan bernilai tinggi melalui program loyalitas atau penghargaan 
+- Mengakui dan memberikan penghargaan kepada pelanggan bernilai tinggi melalui program loyalitas atau penghargaan
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -35,7 +36,7 @@ Sebelum memulai, cerminkan arti CLV untuk bisnis Anda. Saat ini, kami mendukung 
 
 Karena mengkonfigurasi dan menjalankan model CLV tidak memerlukan banyak waktu, pertimbangkan untuk membuat beberapa model dengan berbagai preferensi input dan membandingkan hasil model untuk melihat skenario model yang paling sesuai dengan kebutuhan bisnis Anda.
 
-###  <a name="data-requirements"></a>Persyaratan data
+### <a name="data-requirements"></a>Persyaratan data
 
 Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatkan performa model. Semakin banyak data yang dapat diproses oleh model, semakin akurat prediksinya. Oleh karena itu, sebaiknya Anda menggunakan data aktivitas pelanggan lebih banyak, jika tersedia.
 
@@ -52,11 +53,12 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
     - Aktivitas web: riwayat kunjungan situs web, riwayat email
     - Aktivitas loyalitas: akumulasi poin reward loyalitas dan riwayat penukaran
     - Log Layanan pelanggan, panggilan layanan, keluhan, atau riwayat retur
+    - Informasi profil pelanggan
 - Data tentang aktivitas pelanggan (opsional):
     - Pengidentifikasi aktivitas untuk membedakan aktivitas dari jenis yang sama
     - Pengidentifikasi pelanggan untuk memetakan aktivitas dengan pelanggan Anda
     - Informasi aktivitas berisi nama dan tanggal aktivitas
-    - Skema data semantis untuk aktivitas mencakup: 
+    - Skema data semantis untuk aktivitas mencakup:
         - **Kunci primer**: pengidentifikasi unik untuk aktivitas
         - **Cap waktu**: tanggal dan waktu aktivitas yang diidentifikasi oleh kunci primer
         - **Aktivitas (nama aktivitas)**: Nama aktivitas yang akan digunakan
@@ -66,7 +68,7 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
     - Data historis yang memadai: Minimal satu tahun data transaksi. Sebaiknya dua hingga tiga tahun data transaksional untuk memperkirakan CLV selama satu tahun.
     - Beberapa pembelian per pelanggan: Idealnya, minimal dua hingga tiga transaksi per ID pelanggan, sebaiknya di beberapa tanggal.
     - Jumlah pelanggan: Setidaknya 100 pelanggan unik, lebih disukai lebih dari 10.000 pelanggan. Model akan gagal dengan kurang dari 100 pelanggan dan data historis yang tidak mencukupi
-    - Kelengkapan data: Kurang dari 20% nilai hilang pada bidang yang diperlukan dalam data input   
+    - Kelengkapan data: Kurang dari 20% nilai hilang pada bidang yang diperlukan dalam data input
 
 > [!NOTE]
 > - Model ini memerlukan riwayat transaksi pelanggan Anda. Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian/transaksi, Anda dapat menyatukannya Power Query sebelum penyerapan data.
@@ -122,11 +124,11 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
 
 1. Pilih **Selanjutnya**.
 
-### <a name="add-optional-data"></a>Tambah data opsional
+### <a name="add-optional-activity-data"></a>Menambahkan data aktivitas opsional
 
-Data yang mencerminkan interaksi pelanggan utama (seperti web, layanan pelanggan, dan log aktivitas) menambahkan konteks ke rekaman transaksi. Pola lainnya yang ditemukan dalam data aktivitas pelanggan Anda dapat meningkatkan keakuratan prediksi. 
+Data yang mencerminkan interaksi pelanggan utama (seperti web, layanan pelanggan, dan log aktivitas) menambahkan konteks ke rekaman transaksi. Pola lainnya yang ditemukan dalam data aktivitas pelanggan Anda dapat meningkatkan keakuratan prediksi.
 
-1. Pada langkah **Data tambahan (opsional)**, pilih **Tambah data**. Pilih entitas aktivitas pelanggan yang menyediakan informasi aktivitas pelanggan sebagaimana dijelaskan dalam [prasyarat](#prerequisites).
+1. **Di langkah Data tambahan (opsional**), pilih **Tambahkan data** di bawah **Tingkatkan wawasan model dengan data** aktivitas tambahan. Pilih entitas aktivitas pelanggan yang menyediakan informasi aktivitas pelanggan sebagaimana dijelaskan dalam [prasyarat](#prerequisites).
 
 1. Petakan bidang semantik ke atribut dalam entitas aktivitas pelanggan Anda dan pilih **berikutnya**.
 
@@ -135,15 +137,34 @@ Data yang mencerminkan interaksi pelanggan utama (seperti web, layanan pelanggan
 1. Pilih jenis aktivitas yang sesuai dengan jenis aktivitas pelanggan yang Anda tambahkan. Pilih dari jenis aktivitas yang ada atau tambahkan jenis aktivitas baru.
 
 1. Konfigurasikan relasi dari entitas aktivitas pelanggan Anda ke entitas *Pelanggan*.
-    
+
     1. Pilih bidang yang mengidentifikasi pelanggan di tabel aktivitas pelanggan. Hal ini dapat langsung terkait dengan ID pelanggan utama entitas *pelanggan* Anda.
     1. Pilih entitas *pelanggan* yang cocok dengan entitas *pelanggan* utama Anda.
     1. Masukkan nama yang mendeskripsikan relasi.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Gambar langkah dalam alur konfigurasi untuk menambahkan data tambahan dan mengkonfigurasi aktivitas dengan contoh yang diisi.":::
 
-1. Pilih **Simpan**.    
+1. Pilih **Simpan**.
     Tambahkan data lainnya jika ada aktivitas pelanggan lain yang ingin Anda sertakan.
+
+1. Tambahkan data pelanggan opsional atau pilih **Berikutnya**.
+
+### <a name="add-optional-customer-data"></a>Menambahkan data pelanggan opsional
+
+Pilih dari 18 atribut profil pelanggan yang umum digunakan untuk disertakan sebagai input ke model. Atribut ini dapat menghasilkan hasil model yang lebih dipersonalisasi, relevan, dan dapat ditindaklanjuti untuk kasus penggunaan bisnis Anda.
+
+Misalnya: Contoso Coffee ingin memprediksi nilai seumur hidup pelanggan untuk menargetkan pelanggan bernilai tinggi dengan penawaran yang dipersonalisasi terkait dengan peluncuran mesin espresso baru mereka. Contoso menggunakan model CLV dan menambahkan semua 18 atribut profil pelanggan untuk melihat faktor mana yang memengaruhi pelanggan dengan nilai tertinggi. Mereka menemukan lokasi pelanggan adalah faktor yang paling berpengaruh bagi pelanggan ini.
+Dengan informasi ini, mereka menyelenggarakan acara lokal untuk peluncuran mesin espresso dan bermitra dengan vendor lokal untuk penawaran yang dipersonalisasi dan pengalaman khusus di acara tersebut. Tanpa informasi ini, Contoso mungkin hanya mengirim email pemasaran generik dan melewatkan kesempatan untuk mempersonalisasi segmen lokal pelanggan bernilai tinggi mereka ini.
+
+1. **Di langkah Data tambahan (opsional**), pilih **Tambahkan data** di bawah **Tingkatkan wawasan model lebih jauh dengan data** pelanggan tambahan.
+
+1. Untuk **Entitas**, pilih **Pelanggan: CustomerInsights** untuk memilih tabel profil pelanggan terpadu yang memetakan ke data atribut pelanggan. Untuk **ID** Pelanggan, pilih **System.Customer.CustomerId**.
+
+1. Petakan lebih banyak bidang jika data tersedia di profil pelanggan terpadu Anda.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Contoh bidang yang dipetakan untuk data profil pelanggan.":::
+
+1. Pilih **Simpan** setelah memetakan atribut yang harus digunakan model untuk membantu memprediksi nilai umur pelanggan.
 
 1. Pilih **Selanjutnya**.
 

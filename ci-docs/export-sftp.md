@@ -1,84 +1,89 @@
 ---
 title: Mengekspor data ke host SFTP (pratinjau) (berisi video)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke lokasi SFTP.
-ms.date: 06/09/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b12d25ecbd2e5fb31d7d5a6bb775dc3e7c1bf007
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082765"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207233"
 ---
-# <a name="export-data-to-sftp-preview"></a>Mengekspor data ke SFTP (pratinjau)
+# <a name="export-data-to-sftp-hosts-preview"></a>Mengekspor data ke host SFTP (pratinjau)
 
 Gunakan data pelanggan Anda dalam aplikasi pihak ketiga dengan mengekspornya ke lokasi Secure File Transfer Protocol (SFTP).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
-## <a name="prerequisites-for-connection"></a>Prasyarat untuk koneksi
+## <a name="prerequisites"></a>Prasyarat
 
 - Ketersediaan host SFTP dan kredensial yang sesuai.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Tujuan SFTP di belakang firewall saat ini tidak didukung. 
+- Tujuan SFTP di belakang firewall saat ini tidak didukung.
 - Runtime ekspor tergantung pada kinerja sistem Anda. Sebaiknya dua inti CPU dan memori 1 Gb sebagai konfigurasi minimal server Anda.
-- Mengekspor entitas dengan hingga 100 juta profil pelanggan dapat berlangsung selama 90 menit bila menggunakan konfigurasi minimal yang disarankan untuk dua inti CPU dan 1 Gb memori.
+- Hingga 100 juta profil pelanggan, yang dapat memakan waktu 90 menit saat menggunakan konfigurasi minimal yang disarankan dari dua inti CPU dan memori 1 Gb.
+- Jika Anda menggunakan kunci SSH untuk autentikasi, pastikan Anda [membuat kunci](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) privat sebagai pem atau format SSH.COM. Jika Anda menggunakan Putty, konversi kunci pribadi Anda dengan mengekspor adalah sebagai Open SSH. Format kunci pribadi berikut didukung:
+  - RSA dalam format OpenSSL PEM dan ssh.com
+  - DSA dalam format OpenSSL PEM dan ssh.com
+  - ECDSA 256/384/521 dalam format Pem OpenSSL
+  - ED25519 dan RSA dalam format kunci OpenSSH
 
 ## <a name="set-up-connection-to-sftp"></a>Siapkan koneksi ke SFTP
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **SFTP** untuk mengonfigurasi koneksi.
+1. Pilih **Tambahkan koneksi** dan pilih **SFTP**.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
-1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Secara default hanya administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Berikan **nama pengguna**, **sandi**, **nama host**, dan **folder Ekspor** untuk akun SFTP Anda.
+1. Pilih apakah Anda ingin mengautentikasi melalui SSH atau nama pengguna/kata sandi untuk koneksi Anda dan berikan detail yang diperlukan. Jika Anda menggunakan kunci SSH untuk autentikasi, pastikan Anda [membuat kunci](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) privat sebagai pem atau format SSH.COM. Jika Anda menggunakan Putty, konversi kunci pribadi Anda dengan mengekspor adalah sebagai Open SSH. Format kunci pribadi berikut didukung:
+   - RSA dalam format OpenSSL PEM dan ssh.com
+   - DSA dalam format OpenSSL PEM dan ssh.com
+   - ECDSA 256/384/521 dalam format Pem OpenSSL
+   - ED25519 dan RSA dalam format kunci OpenSSH
 
 1. Pilih **Verifikasi** untuk menguji koneksi.
 
-1. Pilih jika Anda ingin mengekspor data **dengan di-zip** atau **tidak di-zip** dan **pembatas bidang** untuk file yang diekspor.
-
-1. Pilih **saya setuju** untuk mengonfirmasi **privasi dan kepatuhan data**.
+1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
 1. Pilih **Simpan** untuk menyelesaikan koneksi.
 
 ## <a name="configure-an-export"></a>Mengonfigurasi ekspor
 
-Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Buka **Data** > **Ekspor**.
 
-1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
+1. Pilih **Tambahkan ekspor**.
 
-1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian SFTP. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian SFTP. Hubungi administrator jika tidak ada koneksi yang tersedia.
 
-1. Pilih entitas, misalnya segmen, yang akan diekspor.
+1. Masukkan nama untuk ekspor.
+
+1. Pilih jika Anda ingin mengekspor data **dengan di-zip** atau **tidak di-zip** dan **pembatas bidang** untuk file yang diekspor.
+
+1. Pilih entitas, misalnya segmen, yang ingin Anda ekspor.
 
    > [!NOTE]
-   > Setiap entitas yang dipilih akan dibagi menjadi hingga lima file output saat diekspor.
+   > Setiap entitas yang dipilih akan dibagi menjadi maksimal lima file output saat diekspor.
 
 1. Pilih **Simpan**.
 
-Menyimpan ekspor tidak segera menjalankan ekspor.
-
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab).
-Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!TIP]
 > Ekspor entitas yang berisi sejumlah besar data dapat menyebabkan beberapa file CSV di folder yang sama untuk setiap ekspor. Pemisahan ekspor terjadi karena alasan kinerja untuk meminimalkan waktu yang diperlukan untuk menyelesaikan ekspor.
-
-## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
-
-Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan melalui SFTP, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa tujuan ekspor memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

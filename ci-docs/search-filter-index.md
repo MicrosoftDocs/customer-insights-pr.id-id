@@ -1,7 +1,7 @@
 ---
-title: 'Profil pelanggan: Indeks Cari & Filter'
+title: Mengelola indeks pencarian &filter untuk profil pelanggan
 description: Temukan informasi tentang profil pelanggan terpadu dan filter untuk atribut tertentu dengan cepat.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050813"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187913"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Profil pelanggan: Indeks Cari & Filter
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Mengelola indeks pencarian &filter untuk profil pelanggan
 
-Hasil mempersatukan data pelanggan adalah entitas profil pelanggan yang memberikan tampilan terpadu ke basis pelanggan Total Anda. Untuk dengan cepat [mencari informasi tentang pelanggan atau grup pelanggan tertentu](customer-profiles.md), Anda dapat mengkonfigurasi kemampuan **pencarian** dan **filter** pada halaman **pelanggan**. Baca terus untuk mempelajari cara admin dapat mengedit atribut pada halaman **indeks pencarian & Filter**, yang tersedia bagi pengguna untuk mencari dan memfilter.
+Hasil dari penyatuan data pelanggan Anda adalah entitas Pelanggan *yang* memberikan pandangan terpadu ke dalam total basis pelanggan Anda. Agar pengguna dapat dengan cepat [menemukan informasi tentang pelanggan atau grup pelanggan](customer-profiles.md) tertentu, admin harus mengonfigurasi **kemampuan Pencarian** dan **Filter** untuk **halaman Pelanggan**.
 
    :::image type="content" source="media/search-filter.png" alt-text="Cari filter":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Menentukan atribut yang dapat dicari dan bidang yang diindeks
 
-## <a name="add-fields-and-specify-attributes"></a>Tambahkan bidang dan tentukan atribut
+Jika ini adalah pertama kalinya Anda menentukan atribut yang dapat dicari sebagai administrator, tentukan bidang yang diindeks terlebih dahulu. Sebaiknya Anda memilih semua atribut yang bisa digunakan pengguna untuk mencari dan memfilter pelanggan pada halaman **pelanggan**. Hanya atribut yang ada di entitas Pelanggan *yang* dibuat selama proses penyatuan data yang dapat ditentukan.
 
-Jika ini adalah pertama kali Anda menentukan atribut yang dapat dicari sebagai administrator, Anda harus menentukan bidang terindeks terlebih dulu. Sebaiknya Anda memilih semua atribut yang bisa digunakan pengguna untuk mencari dan memfilter pelanggan pada halaman **pelanggan**. Anda hanya dapat menentukan atribut yang ada di entitas profil pelanggan yang Anda buat selama proses penyatuan data.
+1. Buka **Pelanggan dan pilih** Cari &filter **indeks**.
 
-1. Buka halaman **pelanggan** dan pilih **index pencarian & filter**.
+1. Pilih **+ Tambahkan**.
 
-2. Pilih **+Tambah** untuk menentukan bidang yang diindeks.
+1. Pilih atribut dalam daftar yang ingin Anda tambahkan sebagai bidang terindeks dan klik **Terapkan**.
 
-3. Pilih atribut dalam daftar yang ingin ditambahkan sebagai bidang terindeks. Anda selalu dapat menambahkan atribut lainnya dengan memilih **Tambah**. Anda juga dapat menghapus setiap atribut yang dipilih dengan memilih simbol **Hapus**.
+1. Untuk menambahkan atribut lainnya, pilih **Tambahkan**. Untuk menghapus atribut yang dipilih, pilih atribut lalu **Hapus**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Jelajahi tabel bidang pelanggan terindeks
+   :::image type="content" source="media/search-filter-index.png" alt-text="Cari & filter halaman indeks.":::
 
-Informasi berikut disajikan dalam tabel.
+1. Pilih **Jalankan** setelah Anda siap untuk menerapkan pengaturan pencarian dan filter Anda. Setelah perubahan diproses, lihat di [kartu pelanggan di halaman](customer-profiles.md) Pelanggan.
 
-- **Nama**: Mewakili nama atribut sebagaimana ditampilkan di entitas profil pelanggan.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Menentukan opsi pemfilteran untuk atribut tertentu
+
+Siapkan bidang yang dapat digunakan untuk memfilter pelanggan di **halaman Pelanggan**.
+
+1. Buka **Pelanggan dan pilih** Cari &filter **indeks**.
+
+1. Pilih atribut dan **Tambahkan Filter**. Tentukan jumlah hasil dan urutan di mana mereka akan diatur. Bergantung pada tipe data atribut, salah satu panel berikut muncul.
+
+   - Atribut tipe string: Tentukan jumlah hasil yang diinginkan pada **panel Filter** string dan kebijakan urutan yang dengannya mereka akan diatur.
+
+   - Atribut tipe numerik: Tentukan interval yang disertakan pada **panel Filter** angka dan kebijakan urutan yang dengannya mereka akan diatur.
+
+   - Atribut tipe tanggal: Tentukan interval yang disertakan pada **panel Filter** tanggal dan kebijakan pesanan yang dengannya mereka akan diatur.
+
+1. Pilih **OK**. Ulangi untuk semua atribut yang ingin Anda filter.
+
+1. Pilih **Jalankan** setelah Anda siap untuk menerapkan pengaturan pencarian dan filter Anda. Setelah perubahan diproses, lihat di [kartu pelanggan di halaman](customer-profiles.md) Pelanggan.
+
+## <a name="view-indexed-customer-fields"></a>Melihat bidang pelanggan yang diindeks
+
+Halaman **Indeks** pencarian &filter menampilkan informasi berikut:
+
+- **Nama**: Mewakili nama atribut seperti yang muncul di *entitas Pelanggan*.
 - **Jenis data**: menentukan apakah jenis data adalah string, angka, atau tanggal.
 - **Tercakup dalam pencarian**: menentukan apakah atribut ini dapat digunakan untuk mencari pelanggan pada halaman **pelanggan** menggunakan bidang **pencarian**.
 - **Tambahkan filter**: Kontrol untuk menentukan bagaimana atribut ini dapat digunakan untuk pemfilteran pada halaman **pelanggan**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Mengedit pilihan filter untuk atribut tertentu
-
-Menu **filter** pada halaman **pelanggan** dapat mencakup berbagai tingkat atribut (misalnya, kelompok usia berbeda untuk memfilter pelanggan berdasarkannya).
-
-1. Pilih **Tambah filter** untuk atribut tertentu pada halaman **indeks pencarian & filter**. Anda dapat menentukan jumlah hasil dan urutan pengaturannya. Tergantung pada jenis data atribut, salah satu panel berikut ditampilkan.
-
-- Atribut jenis string: Tentukan jumlah hasil yang diinginkan pada panel **Opsi filter string**, serta kebijakan pesanan untuk mengaturnya.
-
-- Atribut jenis numerik: Tentukan interval yang disertakan di panel **Opsi filter Angka**, serta kebijakan pesanan untuk mengaturnya.
-
-- Atribut jenis tanggal: Tentukan interval yang disertakan di panel **Opsi filter Tanggal**, serta kebijakan pesanan untuk mengaturnya.
-
-2. Pilih **Simpan** untuk menerapkan perubahan.
-
-3. Pilih **Jalankan** setelah Anda siap menerapkan pengaturan Anda. Setelah perubahan diproses, Anda akan menemukannya di [kartu pelanggan pada halaman Pelanggan](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Langkah berikutnya
 
 Tinjau [halaman profil terpadu](customer-profiles.md) untuk mencari profil atau gunakan bidang yang diindeks untuk melihat subset semua profil terpadu.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

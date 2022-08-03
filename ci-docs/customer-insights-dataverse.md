@@ -1,7 +1,7 @@
 ---
 title: Bekerja dengan Customer Insights di Microsoft Dataverse
 description: Pelajari cara menghubungkan Customer Insights dan Microsoft Dataverse serta memahami entitas output yang diekspor ke Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011524"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153408"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan Customer Insights di Microsoft Dataverse
 
@@ -31,19 +31,31 @@ Menyambungkan ke lingkungan Anda Dataverse juga memungkinkan Anda menyerap [data
 - Tidak ada lingkungan Customer Insights lain yang sudah dikaitkan dengan lingkungan yang Dataverse ingin Anda sambungkan. Pelajari cara [menghapus koneksi yang ada ke Dataverse lingkungan](#remove-an-existing-connection-to-a-dataverse-environment).
 - Lingkungan Microsoft Dataverse hanya dapat terhubung ke satu akun penyimpanan. Ini hanya berlaku jika Anda mengonfigurasi lingkungan untuk [menggunakan Azure Data Lake Storage](own-data-lake-storage.md) file.
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse hak kapasitas penyimpanan
+
+Langganan Customer Insights memberi Anda hak atas kapasitas ekstra untuk kapasitas [Dataverse penyimpanan organisasi Anda yang ada](/power-platform/admin/capacity-storage). Kapasitas yang ditambahkan bergantung pada jumlah profil yang digunakan langganan Anda.
+
+**Contoh:**
+
+Dengan asumsi Anda mendapatkan penyimpanan database 15 GB dan penyimpanan file 20 GB per 100.000 profil pelanggan. Jika langganan Anda mencakup 300.000 profil pelanggan, total kapasitas penyimpanan Anda adalah penyimpanan database 45 GB (3 x 15 GB) dan penyimpanan file 60 GB (3 x 20 GB). Demikian pula, jika Anda memiliki langganan B2B dengan 30 ribu akun, total kapasitas penyimpanan Anda adalah penyimpanan database 45 GB (3 x 15 GB), dan penyimpanan file 60 GB (3 x 20 GB).
+
+Kapasitas log tidak bertambah bertahap dan tetap untuk organisasi Anda.
+
+Untuk informasi selengkapnya tentang hak kapasitas terperinci, lihat [Panduan](https://go.microsoft.com/fwlink/?LinkId=866544) Lisensi Dynamics 365.
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse Menghubungkan lingkungan ke Customer Insights
 
 Langkah ini **Microsoft Dataverse** memungkinkan Anda menghubungkan Customer Insights dengan lingkungan Anda Dataverse sambil [menciptakan lingkungan](create-environment.md) Customer Insights.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="berbagi data dengan Microsoft Dataverse diaktifkan secara otomatis untuk lingkungan baru bersih.":::
 
-Administrator dapat mengonfigurasi Customer Insights untuk menghubungkan lingkungan yang ada Dataverse. Dengan memberikan URL ke lingkungan, URL tersebut Dataverse dilampirkan ke lingkungan Customer Insights baru mereka.
+Administrator dapat mengonfigurasi Customer Insights untuk menghubungkan lingkungan yang ada Dataverse. Dengan menyediakan URL ke lingkungan, URL tersebut Dataverse terhubung ke lingkungan Customer Insights baru mereka. Setelah membuat hubungan antara Customer Insights dan Dataverse, jangan ubah nama organisasi untuk lingkungan.Dataverse Nama organisasi digunakan dalam Dataverse URL dan nama yang diubah memutuskan koneksi dengan Customer Insights.
 
 Jika Anda tidak ingin menggunakan lingkungan yang sudah ada Dataverse, sistem akan membuat lingkungan baru untuk data Customer Insights di penyewa Anda. [Power Platform admin dapat mengontrol siapa yang dapat membuat lingkungan](/power-platform/admin/control-environment-creation). Saat Menyiapkan lingkungan Customer Insights baru dan admin telah menonaktifkan pembuatan Dataverse lingkungan untuk semua orang kecuali admin, Anda mungkin tidak dapat membuat lingkungan baru.
 
 **Aktifkan berbagi** data dengan cara Dataverse memilih kotak centang berbagi data.
 
-Jika Anda menggunakan akun Data Lake Storage Anda sendiri, Anda juga memerlukan **Pengidentifikasi** izin. Untuk informasi selengkapnya cara mendapatkan pengidentifikasi izin, tinjau bagian berikut ini.
+Jika Anda menggunakan akun Data Lake Storage Anda sendiri, Anda juga memerlukan **Pengidentifikasi izin**. Untuk informasi selengkapnya cara mendapatkan pengidentifikasi izin, tinjau bagian berikut ini.
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Aktifkan berbagi data dengan Dataverse dari Anda sendiri Azure Data Lake Storage (Pratinjau)
 
@@ -80,11 +92,11 @@ Untuk menjalankan skrip PowerShell, Anda harus terlebih dahulu menyiapkan PowerS
        - Simpan kedua nilai ID grup keamanan yang dihasilkan oleh skrip ini karena kita akan menggunakannya dalam `ByolSetup.ps1` skrip.
 
         > [!NOTE]
-        > Pembuatan grup keamanan dapat dinonaktifkan pada penyewa Anda. Dalam hal ini, pengaturan manual akan diperlukan dan admin Anda Azure AD harus [mengaktifkan pembuatan](/azure/active-directory/enterprise-users/groups-self-service-management) grup keamanan.
+        > Pembuatan grup keamanan dapat dinonaktifkan pada penyewa Anda. Dalam hal ini, pengaturan manual akan diperlukan dan admin Anda Azure AD harus [mengaktifkan pembuatan grup keamanan](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
         - Anda memerlukan *izin Pemilik* Data Blob Penyimpanan di tingkat akun/kontainer penyimpanan untuk menjalankan skrip ini atau skrip ini akan membuatnya untuk Anda. Penetapan peran Anda dapat dihapus secara manual setelah berhasil menjalankan skrip.
-        - Skrip PowerShell ini menambahkan kontrol akses berbasis tole (RBAC) yang diperlukan untuk Microsoft Dataverse layanan dan aplikasi bisnis berbasis apa pun Dataverse. Ini juga memperbarui Daftar Kontrol Akses (ACL) pada kontainer CustomerInsights untuk grup keamanan yang dibuat dengan `CreateSecurityGroups.ps1` skrip. Grup kontributor akan memiliki *izin rwx* dan grup Pembaca hanya akan memiliki *izin r-x*.
+        - Skrip PowerShell ini menambahkan kontrol akses berbasis peran yang diperlukan untuk Microsoft Dataverse layanan dan aplikasi bisnis berbasis apa pun Dataverse. Ini juga memperbarui Daftar Kontrol Akses (ACL) pada kontainer CustomerInsights untuk grup keamanan yang dibuat dengan `CreateSecurityGroups.ps1` skrip. Grup kontributor akan memiliki *izin rwx* dan grup Pembaca hanya akan memiliki *izin r-x*.
         - Jalankan skrip PowerShell ini di Windows PowerShell dengan menyediakan ID langganan Azure yang berisi nama akun penyimpanan, nama grup sumber daya, dan nilai ID grup keamanan Pembaca dan kontributor Anda Azure Data Lake Storage. Buka skrip PowerShell di editor untuk meninjau informasi tambahan dan logika yang diterapkan.
         - Salin string output setelah berhasil menjalankan skrip. String output terlihat seperti ini: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

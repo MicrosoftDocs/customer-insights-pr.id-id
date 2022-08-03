@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643819"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171053"
 ---
 # <a name="subscription-churn-prediction"></a>Prediksi kehilangan langganan
 
@@ -61,8 +61,8 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 
 ## <a name="create-a-subscription-churn-prediction"></a>Buat prediksi kehilangan langganan
 
-1. Pergi ke **IntelligencePredictions** > **·**.
-1. Pilih petak **model** churn langganan dan pilih **Gunakan model ini**.
+1. Pergi ke **Prediksi Intelijen** > **·**.
+1. Pilih petak **peta model** churn Langganan dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
    > ![Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini.](media/subscription-churn-usethismodel.PNG "Ubin model kehilangan langganan dengan tombol Gunakan tombol model ini")
 
@@ -107,7 +107,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
 
 ### <a name="set-schedule-and-review-configuration"></a>Mengatur konfigurasi jadwal dan ulasan
 
-1. Atur frekuensi untuk melatih ulang model Anda. Pengaturan ini penting untuk memperbarui keakuratan prediksi karena data baru dicerna dalam Wawasan Pelanggan. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
+1. Atur frekuensi untuk melatih ulang model Anda. Pengaturan ini penting untuk memperbarui akurasi prediksi karena data baru diserap dalam Customer Insights. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
 1. Pilih **Selanjutnya**.
 1. Tinjau Konfigurasi. Anda dapat kembali ke bagian apa pun dari konfigurasi prediksi dengan memilih **Edit** dalam nilai yang ditampilkan. Atau Anda dapat memilih langkah konfigurasi dari indikator progres.
 1. Jika semua nilai dikonfigurasi dengan benar, pilih **Simpan dan jalankan** untuk memulai proses prediksi. Pada **tab prediksi saya**, Anda dapat melihat status prediksi Anda. Proses dapat berlangsung selama beberapa jam hingga selesai, tergantung pada jumlah data yang digunakan dalam prediksi.
@@ -121,7 +121,7 @@ Prediksi kehilangan langganan membantu memprediksi apakah pelanggan kemungkinan 
    - **Nama prediksi:** nama prediksi yang diberikan saat membuatnya.
    - **Jenis prediksi:** jenis model yang digunakan untuk prediksi
    - **Entitas output:** nama entitas untuk menyimpan output dari prediksi. Anda dapat menemukan entitas dengan nama ini pada **data** > **entitas**.    
-     Dalam entitas output, *ChurnScore* adalah probabilitas kehilangan yang diprediksi dan *IsChurn* adalah label biner berdasarkan *ChurnScore* dengan ambang batas 0,5. Ambang batas default mungkin tidak berfungsi untuk skenario Anda. [Buat segmen baru](segments.md#create-a-new-segment) dengan ambang batas pilihan Anda.
+     Dalam entitas output, *ChurnScore* adalah probabilitas kehilangan yang diprediksi dan *IsChurn* adalah label biner berdasarkan *ChurnScore* dengan ambang batas 0,5. Ambang batas default mungkin tidak berfungsi untuk skenario Anda. [Buat segmen baru](segments.md#create-a-segment) dengan ambang batas pilihan Anda.
    - **Bidang yang diprediksi:** bidang ini hanya diisi untuk beberapa jenis prediksi, dan tidak digunakan dalam prediksi kehilangan langganan.
    - **Status:** status saat ini prediksi berjalan.
         - **Mengantri:** prediksi saat ini sedang menunggu proses lainnya untuk dijalankan.

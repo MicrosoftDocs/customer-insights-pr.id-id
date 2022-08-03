@@ -1,19 +1,19 @@
 ---
 title: Mengekspor segmen ke Campaign Monitor (pratinjau)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Campaign Monitor.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ea7431d4df5143724b5ecf2a2d747ed164fe2c29
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082891"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196306"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Mengekspor segmen ke Campaign Monitor (pratinjau)
 
@@ -21,28 +21,30 @@ Ekspor segmen profil pelanggan terpadu ke Campaign Monitor dan gunakan untuk akt
 
 ## <a name="prerequisites"></a>Prasyarat
 
--   Anda memiliki [akun Campaign Monitor](https://www.campaignmonitor.com/) dan kredensial administrator terkait.
--   Anda telah [mengonfigurasi segmen](segments.md) di Customer Insights.
--   Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
+- Akun [Monitor](https://www.campaignmonitor.com/) Kampanye dan kredensial administrator yang sesuai.
+- [ID Daftar Pemantau Kampanye](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
+- Kunci API [yang](https://www.campaignmonitor.com/api/getting-started/) Dihasilkan dari **Pengaturan** Akun di Monitor Kampanye untuk mendapatkan ID daftar API.
+- [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
+- Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Anda dapat mengekspor hingga 1 juta profil pelanggan per ekspor ke Campaign Monitor.
-- Mengekspor ke Campaign Monitor terbatas pada segmen.
-- Mengekspor hingga 1 juta profil pelanggan ke Campaign Monitor dapat berlangsung selama 20 menit. 
-- Jumlah profil pelanggan yang dapat Anda ekspor ke Campaign Monitor tergantung dan dibatasi oleh kontrak Anda dengan Campaign Monitor.
+- Hingga 1 juta profil pelanggan per ekspor ke Campaign Monitor, yang dapat memakan waktu hingga 20 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Monitor Kampanye bergantung pada kontrak Anda dengan Campaign Monitor.
+- Segmen saja.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Konfigurasikan koneksi ke Campaign Monitor
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **Campaign Monitor** untuk mengonfigurasi koneksi.
+1. Pilih **Tambahkan koneksi** dan pilih **Pemantau** Kampanye.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
-1. Pilih siapa saja yang dapat menggunakan sambungan ini. Jika Anda tidak mengambil tindakan, defaultnya adalah Administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pilih siapa saja yang dapat menggunakan sambungan ini. Secara default hanya administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pilih **saya setuju** untuk mengonfirmasi **privasi dan kepatuhan data**.
+1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
 1. Pilih **Sambungkan** untuk menginisialisasi koneksi ke Campaign Monitor.
 
@@ -54,28 +56,24 @@ Ekspor segmen profil pelanggan terpadu ke Campaign Monitor dan gunakan untuk akt
 
 ## <a name="configure-an-export"></a>Mengonfigurasi ekspor
 
-Anda bisa mengonfigurasi ekspor ini jika Anda memiliki akses ke sambungan tipe ini. Untuk informasi selengkapnya, lihat [Izin yang diperlukan untuk mengonfigurasi ekspor](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Buka **Data** > **Ekspor**.
 
 1. Pilih **Tambahkan ekspor** untuk membuat ekspor baru.
 
-1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Campaign Monitor. Jika Anda tidak melihat nama bagian ini, tidak ada koneksi tipe ini yang tersedia untuk Anda.
+1. Pada bidang **Koneksi untuk ekspor**, pilih koneksi dari bagian Campaign Monitor. Hubungi administrator jika tidak ada koneksi yang tersedia.
 
-1. Masukkan [**ID daftar Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
-   [Buat kunci API](https://www.campaignmonitor.com/api/getting-started/) dari **Pengaturan Akun** di Campaign Monitor terlebih dahulu untuk melihat ID daftar API.  
+1. Masukkan nama untuk ekspor.
+
+1. Masukkan ID **Daftar Monitor Kampanye Anda**.
 
 1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Segmen harus diekspor ke Campaign Monitor.
 
+1. Pilih segmen yang ingin diekspor.
+
 1. Pilih **Simpan**.
 
-Menyimpan ekspor tidak segera menjalankan ekspor.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Ekspor berjalan dengan setiap [refresh terjadwal](system.md#schedule-tab). Anda juga dapat [mengekspor data sesuai permintaan](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
-
-Saat Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Campaign Monitor, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa Campaign Monitor memenuhi kewajiban privasi atau keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Administrator Dynamics 365 Customer Insights Anda dapat menghapus destinasi ekspor ini kapan saja untuk menghentikan penggunaan fungsi ini.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

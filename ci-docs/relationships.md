@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082576"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183566"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Hubungan antara entitas dan jalur entitas
 
 Relasi menghubungkan entitas dan menentukan grafik data Anda saat entitas berbagi pengidentifikasi umum, kunci asing. Kunci asing ini dapat dirujuk dari satu entitas ke entitas lain. Entitas tersambung memungkinkan definisi segmen dan ukuran berdasarkan beberapa sumber data.
 
 Ada tiga jenis dasbor di relasi: 
-- Sistem Relasi yang tidak dapat dapat diedit, yang dibuat oleh sistem sebagai bagian dari proses penyatuan data
-- Konten Relasi warisan yang tidak dapat diedit, yang dibuat secara otomatis dari menyerap sumber data 
-- Relasi kustom yang dapat diedit, yang dibuat dan dikonfigurasi oleh pengguna
+- Sistem yang tidak dapat diedit Relasi dibuat oleh sistem sebagai bagian dari proses penyatuan data
+- Relasi warisan yang tidak dapat diedit dibuat secara otomatis dari penyerapan sumber data
+- Relasi kustom yang dapat diedit dibuat dan dikonfigurasi oleh pengguna
 
 ## <a name="non-editable-system-relationships"></a>Relasi sistem yang tidak dapat diedit
 
@@ -67,69 +67,66 @@ Hubungan terdiri dari *entitas sumber* yang berisi kunci asing dan *entitas targ
    - **Deskripsi** deskripsi relasi.
    - **Entitas sumber**: Entitas yang digunakan sebagai sumber dalam relasi tersebut. Contoh: SupportCase.
    - **Entitas target**: Entitas yang digunakan sebagai target dalam relasi tersebut. Contoh: Pelanggan.
-   - **Kardinalitas sumber**: Menentukan Kardinalitas entitas sumber. Kardinalitas menjelaskan jumlah elemen yang mungkin dalam satu set. Ini selalu berkaitan dengan kardinalitas target. Anda dapat memilih antara **Satu** dan **Banyak**. Hanya Relasi banyak ke satu dan satu-ke-satu yang didukung.  
+   - **Sumber kardinalitas**: Kardinalitas entitas sumber. Kardinalitas menjelaskan jumlah elemen yang mungkin dalam satu set. Ini selalu berkaitan dengan kardinalitas target. Anda dapat memilih antara **Satu** dan **Banyak**. Hanya Relasi banyak ke satu dan satu-ke-satu yang didukung.  
      - Banyak ke satu: Beberapa rekaman sumber dapat berhubungan dengan satu rekaman target. Contoh: Beberapa kasus dukungan dari satu pelanggan.
      - Satu-ke-satu: Rekaman sumber tunggal berkaitan dengan satu rekaman target. Contoh: Satu ID loyalitas untuk satu pelanggan.
 
      > [!NOTE]
      > Relasi banyak ke banyak dapat dibuat menggunakan dua Relasi banyak ke satu dan penautan entitas, yang menghubungkan entitas sumber dan entitas target.
 
-   - **Kardinalitas target**: pilih menunjukkan Kardinalitas rekaman entitas target. 
-   - **Bidang kunci sumber**: Bidang kunci asing di entitas sumber. Contoh: SupportCase dapat menggunakan CaseID sebagai bidang kunci asing.
-   - **Bidang kunci target**: bidang kunci dari entitas target. Contoh Pelanggan dapat menggunakan bidang kunci **CustomerID**.
+   - **Kardinalitas target**: Kardinalitas catatan entitas target.
+   - **Bidang kunci sumber**: Bidang kunci asing di entitas sumber. Contoh: SupportCase menggunakan **CaseID** sebagai bidang kunci asing.
+   - **Bidang kunci target**: Bidang kunci entitas target. Contoh: Pelanggan menggunakan **CustomerID** sebagai bidang kunci.
 
 4. Pilih **Simpan** untuk membuat relasi kustom.
 
 ## <a name="set-up-account-hierarchies"></a>Konfigurasi hierarki akun
 
-Lingkungan yang dikonfigurasi untuk menggunakan akun bisnis sebagai audiens target utama dapat mengkonfigurasi hierarki akun untuk akun bisnis terkait. Misalnya, perusahaan yang memiliki unit bisnis terpisah. 
+Lingkungan yang dikonfigurasi untuk menggunakan akun bisnis sebagai target utama audiens dapat mengonfigurasi hierarki akun untuk akun bisnis terkait. Misalnya, perusahaan yang memiliki unit bisnis terpisah.
 
 Organisasi membuat hierarki akun untuk lebih baik mengelola akun dan Relasi satu sama lain. Customer Insights mendukung hierarki akun orang tua-turunan yang sudah ada dalam data pelanggan yang diserap. Contohnya, akun dari Dynamics 365 Sales. Hierarki ini dapat dikonfigurasi pada **halaman Relasi**.
 
 1. Buka **data** > **Relasi**.
 1. Pilih tab **hierarki akun**.
-1. Pilih **hierarki akun baru**. 
-1. Pada panel **hierarki Akun**, berikan nama untuk hierarki. Sistem membuat nama untuk entitas output. Anda dapat mengubah nama entitas nama output.
+1. Pilih **hierarki akun baru**.
+1. Pada panel **hierarki Akun**, berikan nama untuk hierarki. Sistem membuat nama untuk entitas output, tetapi Anda dapat mengubahnya.
 1. Pilih entitas yang berisi hierarki akun Anda. Akun biasanya ada dalam entitas yang sama yang berisi akun.
-1. Pilih **ID Akun** dan **ID Induk Akun** dari entitas yang dipilih 
-1. Pilih **Simpan** untuk menerapkan pengaturan dan menyelesaikan hierarki akun.
+1. **Pilih UID** Akun dan **UID** Induk dari entitas yang dipilih.
+1. Pilih **Simpan** untuk menyelesaikan hierarki akun.
 
-## <a name="view-relationships"></a>Lihat relasi
+## <a name="manage-existing-relationships"></a>Kelola relasi yang ada
 
-Halaman Relasi mencantumkan semua Relasi yang telah dibuat. Setiap baris mewakili relasi, yang juga mencakup detail tentang entitas sumber, entitas target, dan kardinalitas. 
+**Buka halaman Relasi** untuk melihat semua Relasi yang telah dibuat, entitas sumbernya, entitas target, dan kardinalitas.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Daftar Relasi dan opsi di bilah tindakan halaman Relasi.":::
 
-Halaman ini menawarkan sekumpulan opsi untuk relasi yang lama dan baru: 
-- **Relasi baru**: Pilih [Buat Relasi kustom](#create-a-custom-relationship).
-- **Visualisator**: [Jelajahi visualisator relasi](#explore-the-relationship-visualizer) untuk melihat diagram jaringan dari Relasi yang ada dan kardinalitas mereka.
-- **Filter menurut**: Pilih tipe Relasi untuk ditampilkan dalam daftar.
-- **Cari Relasi**: Gunakan pencarian berbasis teks pada properti Relasi.
+**Gunakan opsi Filter menurut** atau **Cari Relasi** untuk menemukan hubungan tertentu. Untuk melihat diagram jaringan dari Relasi yang ada dan kardinalitasnya, pilih [**Visualizer**](#explore-the-relationship-visualizer).
+
+Pilih hubungan untuk melihat tindakan yang tersedia:
+- **Edit**: Perbarui properti Relasi kustom di panel edit dan simpan perubahan.
+- **Hapus**: Hapus Relasi kustom.
+- **Lihat**: Melihat relasi warisan dan yang dibuat sistem.
 
 ### <a name="explore-the-relationship-visualizer"></a>Jelajahi visualisator relasi
 
 Visualisator relasi menampilkan diagram jaringan dari Relasi yang ada antara entitas yang dihubungkan dan kardinalitas mereka. Ia juga memvisualisasikan jalur relasi.
 
-Untuk mengkustomisasi tampilan, Anda bisa mengubah posisi kotak dengan menyeretnya ke kanvas.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Tangkapan layar diagram jaringan visualisator relasi dengan sambungan di antara entitas terkait.":::
 
-Pilihan yang Tersedia: 
+Untuk mengkustomisasi tampilan, Anda bisa mengubah posisi kotak dengan menyeretnya ke kanvas. Opsi lain termasuk: 
 - **Ekspor sebagai gambar**: Simpan tampilan saat ini sebagai file gambar.
 - **Mengubah ke tata letak horizontal/vertikal**: Mengubah perataan entitas dan Relasi.
 - **Edit**: Perbarui properti Relasi kustom di panel edit dan simpan perubahan.
 
 ## <a name="relationship-paths"></a>Jalur relasi
 
-Jalur relasi menjelaskan entitas yang tersambung dengan Relasi antara entitas sumber dan entitas target. Ini digunakan saat membuat segmen atau pengukuran yang mencakup entitas lain selain entitas profil terpadu dan ada beberapa pilihan untuk mencapai entitas profil terpadu. 
-
-Jalur relasi akan menginformasikan sistem tempat Relasi dapat mengakses entitas profil terpadu. Jalur relasi yang berbeda dapat menghasilkan hasil yang berbeda.
+Jalur relasi menjelaskan entitas yang tersambung dengan Relasi antara entitas sumber dan entitas target. Ini digunakan saat membuat segmen atau ukuran yang mencakup entitas selain entitas profil terpadu dan ada beberapa opsi untuk mencapai entitas profil terpadu. Jalur relasi yang berbeda dapat menghasilkan hasil yang berbeda.
 
 Contohnya, entitas *eCommerce_eCommercePurchases* memiliki daftar Relasi ke entitas *Pelanggan* profil terpadu:
 
 - eCommerce_eCommercePurchases > Pelanggan
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Pelanggan
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan
 
 Jalur relasi menentukan entitas yang dapat Anda gunakan saat membuat aturan untuk langkah-langkah atau segmen. Memilih pilihan dengan jalur relasi terpanjang kemungkinan akan menghasilkan hasil yang lebih sedikit karena rekaman yang cocok harus menjadi bagian dari semua entitas. Dalam contoh ini, pelanggan harus membeli barang melalui e-commerce (eCommerce_eCommercePurchases), pada titik penjualan (POS_posPurchases), dan berpartisipasi dalam program loyalitas kita (loyaltyScheme_loyCustomers). Saat memilih pilihan pertama, Kemungkinan Anda mendapatkan hasil lebih banyak karena pelanggan hanya perlu ada dalam satu entitas tambahan.
 
@@ -155,7 +152,7 @@ Relasi diklasifikasi sebagai **relasi tidak langsung** bila entitas sumber terka
 
 #### <a name="multi-hop-relationship"></a>Relasi multi-lompatan
 
-Relasi *multi-lompatan* adalah *relasi tidak langsung* yang memungkinkan Anda menghubungkan entitas sumber ke entitas target melalui satu atau beberapa entitas perantara lainnya.
+Relasi **multi-lompatan** adalah *relasi tidak langsung* yang memungkinkan Anda menghubungkan entitas sumber ke entitas target melalui satu atau beberapa entitas perantara lainnya.
 
 Contohnya, jika entitas aktivitas yang disebut *eCommerce_eCommercePurchasesWest* terhubung ke entitas tingkat lanjut yang disebut *eCommerce_eCommercePurchasesEast*, kemudian terhubung ke entitas target yang disebut *eCommerce_eCommerceContacts*, maka ini adalah relasi multi-lompatan.
 
@@ -168,16 +165,6 @@ Relasi multi-jalur dan multi-lompatan dapat digunakan bersama-sama untuk membuat
 Contohnya, jika entitas aktivitas yang disebut *eCommerce_eCommercePurchasesWest* terhubung ke entitas tingkat lanjut yang disebut *eCommerce_eCommercePurchasesEast*, kemudian terhubung ke dua entitas target, baik *eCommerce_eCommerceContacts* maupun *loyaltyScheme_loyCustomers*, maka ini adalah relasi multi-jalur.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Entitas sumber terhubung secara langsung ke satu entitas target dan terhubung ke entitas target lain melalui entitas menengah.":::
-
-## <a name="manage-existing-relationships"></a>Kelola relasi yang ada 
-
-Di halaman Relasi, setiap relasi ditunjukkan dengan baris. 
-
-Pilih relasi, lalu tentukan salah satu pilihan berikut: 
- 
-- **Edit**: Perbarui properti Relasi kustom di panel edit dan simpan perubahan.
-- **Hapus**: Hapus Relasi kustom.
-- **Lihat**: Melihat relasi warisan dan yang dibuat sistem. 
 
 ## <a name="next-step"></a>Langkah selanjutnya
 

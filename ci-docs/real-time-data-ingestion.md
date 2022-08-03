@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083185"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195662"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Konsumsi data real-time (pratinjau)
 
@@ -28,7 +28,7 @@ Fungsi real-time menyediakan data segera untuk dikonsumsi, hingga penyegaran ter
 
 Pembaruan Real-time memiliki waktu kedaluwarsa yang setelahnya tidak lagi mengesampingkan nilai dari sumber data:
 
-- Pembaruan profil akan disimpan selama 4 jam
+- Pembaruan profil akan disimpan selama empat jam
 - Aktivitas akan disimpan selama 30 hari
 
 Nilai ini adalah parameter panggilan API yang dapat Anda ubah. Mereka bertujuan untuk memastikan bahwa data sumber Anda tetap menjadi sumber kebenaran. Jika anda ingin pembaruan real-time dimasukkan lebih lama, anda harus menambahkannya ke sumber data sehingga ditarik selama refresh terjadwal berikutnya.

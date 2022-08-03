@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643979"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171099"
 ---
 # <a name="transaction-churn-prediction"></a>prediksi kehilangan transaksi
 
@@ -24,7 +24,7 @@ Prediksi kehilangan pelanggan transaksional membantu memprediksi apakah pelangga
 Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transaksional untuk akun, dan juga kombinasi akun, dan tingkat informasi lain seperti kategori produk. Menambahkan dimensi dapat membantu mengetahui seberapa mungkin akun "Contoso" akan berhenti membeli kategori produk "alat tulis kantor". Selain itu, untuk akun bisnis, kita juga dapat menggunakan AI untuk menghasilkan daftar kemungkinan alasan mengapa akun kemungkinan bergolak untuk kategori informasi tingkat kedua.
 
 > [!TIP]
-> Coba tutorial untuk churn transaksi prediksi menggunakan data sampel: [Churn transaksi prediksi panduan sampel](sample-guide-predict-transactional-churn.md).
+> Coba tutorial untuk churn transaksi prediksi menggunakan data sampel: [Panduan sampel churn prediksi transaksi](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -100,7 +100,7 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
 
 1. Di Customer Insights, buka **Intelijen** > **Prediksi**.
 
-1. Pilih petak **model** churn Pelanggan dan pilih **Gunakan model ini**.
+1. Pilih ubin **Model** churn pelanggan dan pilih **Gunakan model ini**.
 
 1. Pada panel **Model kehilangan pelanggan**, pilih **Transaksi**, lalu pilih **Mulai**.
 
@@ -128,7 +128,7 @@ Untuk lingkungan berdasarkan akun bisnis, kita dapat memperkirakan volume transa
 
 1. Pilih **Tambah data** dan pilih jenis aktivitas pada panel sisi yang berisi informasi transaksi atau riwayat pembelian yang diperlukan.
 
-1. Di bawah **Pilih aktivitas**, pilih aktivitas tertentu dari jenis aktivitas yang dipilih yang ingin Anda fokuskan pada perhitungan.
+1. Di bawah **Pilih aktivitas**, pilih aktivitas tertentu dari jenis aktivitas yang dipilih yang ingin Anda fokuskan untuk difokuskan oleh perhitungan.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Panel sisi yang menunjukkan pemilihan aktivitas tertentu dalam jenis semantik.":::
 
@@ -240,7 +240,7 @@ Tambahkan daftar pelanggan bisnis dan akun yang akan digunakan sebagai tolok uku
    - **Nama prediksi**: nama prediksi yang diberika saat membuatnya.
    - **jenis prediksi**: jenis model yang digunakan untuk prediksi
    - **Entitas output**: nama entitas untuk menyimpan output dari prediksi. Anda dapat menemukan entitas dengan nama ini pada **data** > **entitas**.
-     Dalam entitas output, *ChurnScore* adalah probabilitas kehilangan yang diprediksi dan *IsChurn* adalah label biner berdasarkan *ChurnScore* dengan ambang batas 0,5. Ambang batas default mungkin tidak berfungsi untuk skenario Anda. [Buat segmen baru](segments.md#create-a-new-segment) dengan ambang batas pilihan Anda.
+     Dalam entitas output, *ChurnScore* adalah probabilitas kehilangan yang diprediksi dan *IsChurn* adalah label biner berdasarkan *ChurnScore* dengan ambang batas 0,5. Ambang batas default mungkin tidak berfungsi untuk skenario Anda. [Buat segmen baru](segments.md#create-a-segment) dengan ambang batas pilihan Anda.
      Tidak semua pelanggan harus merupakan pelanggan aktif. Beberapa dari mereka mungkin tidak memiliki aktivitas untuk waktu yang lama dan dianggap sudah pergi, berdasarkan definisi kehilangan Anda. Memperkirakan risiko kehilangan bagi pelanggan yang telah pergi tidak berguna karena bukan audiens yang menarik minat.
    - **Bidang terprediksi**: bidang ini hanya diisi untuk beberapa jenis prediksi, dan tidak digunakan dalam prediksi kehilangan pelanggan.
    - **Status**: Status prediksi dijalankan.

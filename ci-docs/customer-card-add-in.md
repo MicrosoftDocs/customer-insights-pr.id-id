@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082135"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194927"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Add-in Kartu Pelanggan untuk aplikasi Dynamics 365 (pratinjau)
 
@@ -28,21 +28,25 @@ Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamic
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Add-in hanya berfungsi dengan aplikasi yang diarahkan model Dynamics 365, seperti Sales, atau Customer Service, versi 9.0 dan versi yang lebih baru.
-- Agar data Dynamics 365 Anda dapat [dipetakan ke profil pelanggan Customer Insights, kami sarankan data tersebut diserap dari aplikasi Dynamics 365 menggunakan Microsoft Dataverse konektor](connect-power-query.md). Jika Anda menggunakan metode yang berbeda untuk menyerap kontak (atau akun) Dynamics 365, Anda perlu memastikan `contactid` bidang (atau`accountid`) ditetapkan sebagai [kunci utama untuk sumber data tersebut dalam langkah peta dari proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Aplikasi berbasis model Dynamics 365, seperti Sales atau layanan pelanggan, versi 9.0, dan yang lebih baru.
+- Agar data Dynamics 365 Anda dapat [dipetakan ke profil pelanggan Customer Insights, kami sarankan data tersebut diserap dari aplikasi Dynamics 365 menggunakan Microsoft Dataverse konektor](connect-power-query.md). Jika Anda menggunakan metode yang berbeda untuk menyerap kontak (atau akun) Dynamics 365, pastikan `contactid` bidang (atau `accountid`) ditetapkan sebagai [kunci utama untuk sumber data tersebut selama proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Semua pengguna Dynamics 365 dari Customer Card Add-in harus [ditambahkan sebagai pengguna](permissions.md) di Customer Insights untuk melihat data.
-- [Kemampuan pencarian dan filter yang](search-filter-index.md) dikonfigurasi di Customer Insights diperlukan agar pencarian data berfungsi.
+- [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md) di Customer Insights.
 - Setiap kontrol add-in bergantung pada data tertentu di Customer Insights. Beberapa data dan kontrol hanya tersedia di lingkungan dengan jenis tertentu. Konfigurasi add-in akan memberi tahu Anda jika kontrol tidak tersedia karena jenis lingkungan yang dipilih. Selengkapnya tentang [kasus penggunaan lingkungan](work-with-business-accounts.md).
-  - **Kontrol ukuran**: Memerlukan [ukuran terkonfigurasi](measures.md) jenis atribut pelanggan.
-  - **Kontrol kecerdasan**: Memerlukan data yang dihasilkan menggunakan [prediksi atau model](predictions-overview.md) kustom.
-  - **Kontrol rincian pelanggan**: Semua bidang dari profil tersedia di profil pelanggan terpadu.
-  - **Kontrol pengayaan**: memerlukan [pengayaan](enrichment-hub.md) aktif yang diterapkan ke profil pelanggan. Add-in kartu mendukung pengayaan ini: [Merek](enrichment-microsoft.md) yang disediakan oleh Microsoft, [Minat](enrichment-microsoft.md) yang disediakan oleh Microsoft, dan [data](enrichment-office.md) keterlibatan Office yang disediakan oleh Microsoft.
-  - **Kontrol kontak**: Memerlukan definisi entitas semantis dari kontak jenis.
-  - **Kontrol Timeline**: memerlukan [aktivitas yang dikonfigurasi](activities.md).
+  - **Kontrol pengukuran** memerlukan pengukuran [atribut pelanggan yang](measures.md) dikonfigurasi.
+  - **Kontrol kecerdasan** memerlukan data yang dihasilkan menggunakan [prediksi atau model](predictions-overview.md) kustom.
+  - **Kontrol** detail pelanggan menunjukkan semua bidang dari profil yang tersedia di profil pelanggan terpadu.
+  - **Kontrol** pengayaan membutuhkan pengayaan aktif [yang](enrichment-hub.md) diterapkan pada profil pelanggan. Add-in kartu mendukung pengayaan ini: [Merek](enrichment-microsoft.md) yang disediakan oleh Microsoft, [Minat](enrichment-microsoft.md) yang disediakan oleh Microsoft, dan [data](enrichment-office.md) keterlibatan Office yang disediakan oleh Microsoft.
+  - **Kontrol kontak** memerlukan jenis entitas semantik kontak.
+  - **Kontrol** linimasa memerlukan aktivitas [yang](activities.md) dikonfigurasi.
 
 ## <a name="install-the-customer-card-add-in"></a>Instal Add-in Kartu Pelanggan
 
-Add-in kartu pelanggan adalah solusi untuk aplikasi Customer Engagement di Dynamics 365. Untuk menginstal solusi, buka AppSource dan Cari **kartu pelanggan Dynamics**. Pilih [Add-in kartu pelanggan di AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) dan pilih **Dapatkan sekarang**.
+Add-in kartu pelanggan adalah solusi untuk aplikasi Customer Engagement di Dynamics 365. Untuk menginstal solusi:
+
+1. AppSource Buka dan cari **Dynamics Customer Card**.
+
+1. Pilih [Add-in kartu pelanggan di AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) dan pilih **Dapatkan sekarang**.
 
 Anda mungkin harus masuk dengan kredensial admin Anda agar aplikasi Dynamics 365 menginstal solusi. Bisa diperlukan beberapa waktu agar solusi dapat diinstal ke lingkungan Anda.
 
