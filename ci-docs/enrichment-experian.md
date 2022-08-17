@@ -1,19 +1,19 @@
 ---
 title: Perkaya profil pelanggan dengan demografi dari Experian (pratinjau)
 description: Informasi umum tentang pengayaan pihak ketiga Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195940"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238000"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Perkaya profil pelanggan dengan demografi dari Experian (pratinjau)
 
@@ -41,13 +41,9 @@ Anda harus menjadi [administrator](permissions.md#admin) di Customer Insights da
 
 1. Masukkan nama untuk koneksi dan ID Pengguna, ID Pihak, dan Nomor Model yang valid untuk akun Transportasi Aman Anda Experian.
 
-1. Baca dan berikan persetujuan Anda untuk [privasi dan kesesuaian Data](#data-privacy-and-compliance) dengan memilih **Saya setuju**.
+1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
 1. Pilih **Verifikasi** untuk memvalidasi konfigurasi lalu pilih **Simpan**.
-
-### <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
-
-Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mentransmisikan data ke Experian, Anda mengizinkan transfer data di luar batas kesesuaian untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mengalihkan data tersebut berdasarkan instruksi Anda, namun Anda bertanggung jawab untuk memastikan bahwa Experian memenuhi privasi atau jaminan keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 

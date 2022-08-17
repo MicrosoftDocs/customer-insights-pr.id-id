@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142823"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245561"
 ---
 # <a name="how-to-create-a-new-environment"></a>Cara: Membuat lingkungan baru
 
@@ -48,7 +48,7 @@ Pada langkah **informasi Dasar**, pilih apakah Anda ingin membuat lingkungan dar
 
 Sediakan rincian berikut:
 
-- **Nama**: Ketik nama untuk lingkungan ini. Bidang ini telah diisi jika Anda telah menyalin dari lingkungan yang ada, namun Anda dapat mengubahnya.
+- **Nama**: Ketik nama untuk lingkungan ini. Bidang ini telah diisi jika Anda telah menyalin dari lingkungan yang ada, namun Anda dapat mengubahnya. Jika Anda memiliki lebih dari satu lingkungan kerja, berikan masing-masing nama yang mudah diidentifikasi.
 - **Pilih bisnis Anda**: Pilih audiens primer untuk lingkungan baru. Anda dapat bekerja dengan konsumen individual (B-to-C) atau [akun bisnis](work-with-business-accounts.md) (B-to-B). Jika organisasi Anda terutama melakukan bisnis dengan individu, seperti pengecer atau kedai kopi, pilih konsumen individu. Jika audiens utama Anda adalah perusahaan lain, seperti produsen mobil atau perusahaan kertas, pilih akun bisnis.
 - **Jenis**: Pilih Apakah Anda ingin membuat lingkungan produksi atau Sandbox. Lingkungan sandbox tidak mengizinkan pembaruan data terjadwal dan ditujukan untuk penerapan dan pengujian sebelumnya. Lingkungan sandbox menggunakan audiens utama yang sama seperti lingkungan produksi yang saat ini dipilih.
 - **Kawasan**: kawasan tempat layanan disebarkan dan dihosting. Untuk [menggunakan akun Azure Data Lake Storage Anda sendiri](own-data-lake-storage.md) atau [terhubung ke organisasi Microsoft Dataverse yang sudah ada](customer-insights-dataverse.md), lingkungan Customer Insights harus berada di wilayah yang sama.
@@ -108,7 +108,7 @@ Pengaturan konfigurasi berikut disalin:
 - Aktivitas
 - Indeks pencarian & filter
 - Ekspor
-- Jadwal refresh
+- Refresh jadwal
 - Pengayaan
 - Model prediksi
 - Penetapan peran

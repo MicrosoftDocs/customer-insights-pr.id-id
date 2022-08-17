@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139661"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213586"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Menyatukan bidang pelanggan untuk penyatuan data
 
@@ -58,6 +58,9 @@ Dalam langkah proses penyatuan ini, pilih dan kecualikan atribut untuk digabungk
 
 1. Tentukan cara mengombinasikan atau menggabungkan bidang dari salah satu dari tiga pilihan:
     - **Kepentingan**: Mengidentifikasi nilai pemenang berdasarkan peringkat kepentingan yang ditentukan untuk bidang yang berpartisipasi. Ini adalah pilihan penggabungan default. Pilih **Pindahkan ke atas/bawah** untuk menetapkan peringkat nilai penting.
+
+      > [!NOTE]
+      > Customer Insights menggunakan nilai non-null pertama. Misalnya, entitas tertentu A, B, dan C diberi peringkat dalam urutan itu, jika A.Name dan B.Name adalah nol, maka nilai dari C.Name digunakan.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Pilihan nilai penting dalam dialog bidang gabungan.":::
 

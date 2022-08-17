@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139615"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245598"
 ---
 # <a name="update-the-unification-settings"></a>Memperbarui pengaturan penyatuan
 
@@ -42,7 +42,7 @@ Untuk meninjau atau mengubah pengaturan penyatuan apa pun setelah profil terpadu
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Cuplikan layar halaman Penyatuan Data dengan opsi Satukan yang disorot.":::
 
    - [Jalankan kondisi](#run-matching-conditions) pencocokan untuk mengevaluasi kualitas kondisi pencocokan Anda dengan cepat (deduplikasi dan aturan pertandingan) tanpa memperbarui profil terpadu. Opsi **Jalankan kondisi yang cocok saja** tidak ditampilkan untuk satu entitas.
-   - [Satukan profil](#run-updates-to-the-unified-customer-profile) pelanggan untuk menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu tanpa memengaruhi dependensi (seperti pengayaan, segmen, atau tindakan). Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](system.md#schedule-tab) refresh.
+   - [Satukan profil](#run-updates-to-the-unified-customer-profile) pelanggan untuk menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu tanpa memengaruhi dependensi (seperti pengayaan, segmen, atau tindakan). Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](schedule-refresh.md) refresh.
    - [Satukan profil dan dependensi](#run-updates-to-the-unified-customer-profile) pelanggan untuk menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu dan semua dependensi (seperti pengayaan, segmen, atau tindakan). Semua proses dijalankan kembali secara otomatis.
 
 ## <a name="edit-source-fields"></a>Mengedit bidang sumber
@@ -69,7 +69,7 @@ Anda tidak dapat menghapus atribut atau entitas jika sudah disatukan.
 
    Jumlah rekaman duplikat yang ditemukan ditampilkan di bawah **Duplikat**. Kolom **Rekaman dideduplicated** memperlihatkan entitas mana yang memiliki rekaman duplikat dan persentase rekaman duplikat.
 
-1. Jika Anda menambahkan entitas yang diperkaya, pilih **Gunakan entitas** yang diperkaya. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber data](data-sources-enrichment.md).
+1. Jika Anda menambahkan entitas yang diperkaya, pilih **Gunakan entitas** yang diperkaya. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
 
 1. Untuk mengelola aturan deduplikasi, pilih salah satu opsi berikut:
    - **Membuat aturan** baru: Pilih **Tambahkan aturan** di bawah entitas yang sesuai. Untuk informasi selengkapnya, lihat [Menentukan aturan](remove-duplicates.md#define-deduplication-rules) deduplikasi.
@@ -110,7 +110,7 @@ Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kec
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Representasi grafis dari rekaman yang tidak cocok dan cocok termasuk daftar data.":::
 
-1. Jika Anda menambahkan entitas yang diperkaya, pilih **Gunakan entitas** yang diperkaya. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber data](data-sources-enrichment.md).
+1. Jika Anda menambahkan entitas yang diperkaya, pilih **Gunakan entitas** yang diperkaya. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
 
 1. Untuk mengelola aturan, pilih salah satu opsi berikut:
    - **Membuat aturan** baru: Pilih **Tambahkan aturan** di bawah entitas yang sesuai. Untuk informasi selengkapnya, lihat [Menentukan aturan untuk pasangan kecocokan](match-entities.md#define-rules-for-match-pairs).
@@ -154,7 +154,7 @@ Jalankan kondisi pencocokan hanya menjalankan aturan deduplikasi dan kecocokan d
 
 1. Dari halaman **Penyatuan** > **Data**, pilih:
 
-   - **Satukan profil** pelanggan: Menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu tanpa memengaruhi dependensi (seperti pengayaan, segmen, atau pengukuran). Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](system.md#schedule-tab) refresh.
+   - **Satukan profil** pelanggan: Menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu tanpa memengaruhi dependensi (seperti pengayaan, segmen, atau pengukuran). Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](schedule-refresh.md) refresh.
 
    - **Satukan profil dan dependensi** pelanggan: Menjalankan kondisi yang cocok dan memperbarui profil terpadu dan semua dependensi. Semua proses dijalankan kembali secara otomatis. Setelah semua proses hilir selesai, profil pelanggan mencerminkan data yang diperbarui.
 

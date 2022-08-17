@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196398"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259848"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Mengekspor data ke Azure Synapse Analytics (pratinjau)
 
@@ -24,7 +24,7 @@ Azure Synapse adalah layanan analitik yang mempercepat waktu untuk wawasan di se
 > [!NOTE]
 > Pastikan untuk menetapkan semua **penugasan peran** seperti dijelaskan.
 
-- Di Customer Insights, akun pengguna (AD) Anda Azure Active Directory harus memiliki [peran Administrator](permissions.md#assign-roles-and-permissions).
+- Di Customer Insights, akun pengguna (AD) Anda Azure Active Directory harus memiliki [peran Administrator](permissions.md#add-users).
 
 Di Azure:
 
@@ -39,6 +39,8 @@ Di Azure:
 - Identitas *[Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* terkelola ruang kerja memiliki **izin kontributor** Data Blob Penyimpanan pada Azure Data Lake Storage akun Gen2 tempat data berada dan ditautkan ke Azure Synapse ruang kerja. Pelajari lebih lanjut tentang [menggunakan portal Azure untuk menetapkan peran Azure untuk akses ke data blob dan antrean](/azure/storage/common/storage-auth-aad-rbac-portal) serta [izin kontributor Data Blob Penyimpanan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Di ruang Azure Synapse kerja, *perwakilan layanan untuk Customer Insights* memiliki **peran Administrator**[Synapse yang](/azure/synapse-analytics/security/how-to-set-up-access-control) ditetapkan.
+
+- Jika lingkungan Customer Insights Anda menyimpan data di lingkungan Anda [sendiri Azure Data Lake Storage](own-data-lake-storage.md), pengguna yang menyiapkan koneksi untuk Azure Synapse Analytics membutuhkan setidaknya peran Pembaca **bawaan** di akun Data Lake Storage. Untuk informasi lebih lanjut, lihat [Menetapkan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Menyiapkan koneksi ke Azure Synapse
 

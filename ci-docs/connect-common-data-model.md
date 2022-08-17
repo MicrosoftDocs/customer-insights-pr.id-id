@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207003"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245837"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Menyambungkan ke data di Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
 
 1. Pilih salah satu opsi berikut untuk **Menyambungkan penyimpanan Anda menggunakan**. Untuk informasi selengkapnya, lihat [Menyambungkan Customer Insights ke Azure Data Lake Storage akun Gen2 dengan perwakilan](connect-service-principal.md) layanan Azure.
 
-   - **Sumber daya** Azure: Masukkan **Id** Sumber Daya. Secara opsional, jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link, pilih **Aktifkan Private Link**. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#private-links-tab) Pribadi.
-   - **Langganan** Azure: Pilih **Langganan** lalu **Grup** sumber daya dan **akun** Penyimpanan. Secara opsional, jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link, pilih **Aktifkan Private Link**. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#private-links-tab) Pribadi.
+   - **Sumber daya** Azure: Masukkan **Id** Sumber Daya. Secara opsional, jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link, pilih **Aktifkan Private Link**. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#set-up-an-azure-private-link) Pribadi.
+   - **Langganan** Azure: Pilih **Langganan** lalu **Grup** sumber daya dan **akun** Penyimpanan. Secara opsional, jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link, pilih **Aktifkan Private Link**. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#set-up-an-azure-private-link) Pribadi.
   
    > [!NOTE]
    > Anda memerlukan salah satu peran berikut baik ke kontainer atau akun penyimpanan untuk membuat sumber data:
@@ -176,7 +176,7 @@ Anda dapat memperbarui *opsi Sambungkan ke akun penyimpanan menggunakan*. Untuk 
         > - pemilik Data Blob Penyimpanan
         > - Kontributor data Blob penyimpanan
 
-   - **Aktifkan Private Link** jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#private-links-tab) Pribadi.
+   - **Aktifkan Private Link** jika Anda ingin menyerap data dari akun penyimpanan melalui Azure Private Link. Untuk informasi selengkapnya, lihat [Tautan](security-overview.md#set-up-an-azure-private-link) Pribadi.
 
 1. Pilih **Selanjutnya**.
 1. Ubah salah satu hal berikut ini:
@@ -186,7 +186,7 @@ Anda dapat memperbarui *opsi Sambungkan ke akun penyimpanan menggunakan*. Untuk 
       > [!IMPORTANT]
       > Jika ada dependensi pada file model.json atau manifest.json yang ada dan rangkaian entitas, Anda akan melihat pesan kesalahan dan tidak dapat memilih file model.json atau json yang berbeda. Hilangkan dependensi tersebut sebelum mengubah file model.json atau manifest.json atau buat sumber data baru dengan file model.json atau manifest.json yang ingin Anda gunakan untuk menghindari dependensi dihapus.
    - Untuk mengubah lokasi file data atau kunci utama, pilih **Edit**.
-   - Untuk mengubah data penyerapan inkremental, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+   - Untuk mengubah data penyerapan inkremental, lihat [Mengonfigurasi refresh inkremental untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md).
    - Hanya ubah nama entitas agar sesuai dengan nama entitas dalam file .json.
 
      > [!NOTE]

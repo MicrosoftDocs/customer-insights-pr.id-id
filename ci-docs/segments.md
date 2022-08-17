@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170685"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246297"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
@@ -58,7 +58,7 @@ Pilih segmen untuk melihat tindakan yang tersedia.
 - **Edit** segmen untuk mengubah properti.
 - **Membuat duplikat** segmen. Anda dapat memilih untuk segera mengedit propertinya atau menyimpan duplikatnya.
 - [**Refresh**](#refresh-segments) segmen untuk menyertakan data terbaru.
-- **Aktifkan** atau **Nonaktifkan** segmen. Segmen yang tidak aktif tidak akan disegarkan selama [refresh](system.md#schedule-tab) terjadwal dan statusnya **terdaftar** sebagai **Dilewati**, menunjukkan bahwa refresh bahkan tidak dicoba. Segmen aktif disegarkan berdasarkan jenisnya: statis atau dinamis.
+- **Aktifkan** atau **Nonaktifkan** segmen. Segmen yang tidak aktif tidak akan disegarkan selama [refresh](schedule-refresh.md) terjadwal dan statusnya **terdaftar** sebagai **Dilewati**, menunjukkan bahwa refresh bahkan tidak dicoba. Segmen aktif disegarkan berdasarkan jenisnya: statis atau dinamis.
 - **Jadikan statis** atau **Jadikan dinamis** sebagai tipe segmen. Segmen statis harus disegarkan secara manual. Segmen dinamis secara otomatis disegarkan selama penyegaran sistem.
 - [**Temukan pelanggan**](find-similar-customer-segments.md) serupa dari segmen tersebut.
 - **Ganti nama** segmen.
@@ -88,7 +88,7 @@ Bagian bawah berisi daftar anggota segmen.
 
 Segmen dapat disegarkan pada jadwal otomatis atau disegarkan secara manual sesuai permintaan. Untuk me-refresh satu atau beberapa segmen secara manual, pilih segmen tersebut dan pilih **Refresh**.
 
-Untuk [menjadwalkan refresh](system.md#schedule-tab) otomatis, buka **Jadwal** > **Sistem** > **Admin**. Aturan berikut berlaku:
+Untuk [menjadwalkan refresh](schedule-refresh.md) otomatis, buka **Jadwal** > **Sistem** > **Admin**. Aturan berikut berlaku:
 
 - Semua segmen dengan tipe **Dinamis** atau **Ekspansi** akan secara otomatis disegarkan pada irama yang ditetapkan. Setelah refresh selesai, **Status** menunjukkan apakah ada masalah dalam menyegarkan segmen. Yang **Terakhir disegarkan** menunjukkan stempel waktu dari penyegaran terakhir yang berhasil. Jika terjadi kesalahan, pilih kesalahan untuk melihat detail tentang apa yang terjadi.
 - Segmen dengan tipe **Statis** *tidak* akan disegarkan secara otomatis. Yang **Terakhir disegarkan** menunjukkan stempel waktu terakhir kali segmen statis dijalankan atau disegarkan secara manual.

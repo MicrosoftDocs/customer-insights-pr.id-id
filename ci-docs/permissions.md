@@ -1,7 +1,7 @@
 ---
-title: Kelola izin pengguna
+title: Menetapkan izin pengguna
 description: Pelajari tentang izin dan peran pengguna.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054873"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245423"
 ---
-# <a name="manage-user-permissions"></a>Kelola izin pengguna
+# <a name="assign-user-permissions"></a>Menetapkan izin pengguna
 
-Halaman **Izin** adalah tempat Anda akan menyiapkan peran dan izin untuk menggunakan Customer Insights.
-
-Anda harus memiliki izin administrator untuk melihat halaman. Untuk mengakses halaman izin, buka **Pengguna Keamanan** > **Admin** > **·**.
-
-Ada tiga jenis peran:
+Akses ke Customer Insights dibatasi untuk pengguna di organisasi Anda yang ditambahkan ke aplikasi oleh admin. Admin dapat menambahkan, mengedit, atau menghapus pengguna. Pengguna dapat berupa satu pengguna, grup, atau aplikasi. Ada tiga jenis peran yang dapat dimiliki pengguna:
 
 ## <a name="viewer"></a>Penampil
 
@@ -41,18 +37,18 @@ Ada tiga jenis peran:
 
 - Semua izin yang tersedia untuk pemirsa.
 - Muat dan Ubah data menggunakan halaman **sumber data**.
-- Lengkap ***Penyatuan** Data yang menghasilkan entitas profil pelanggan terpadu.
+- Penyatuan **Data Lengkap** yang menghasilkan entitas profil pelanggan terpadu.
 - Tentukan **Relasi** dan **aktivitas**.
 - Buat segmen menggunakan halaman **segmen**.
 - Buat ukuran menggunakan halaman **ukuran**.
 - Kelola konfigurasi dan Perkaya profil pelanggan dari halaman **pengayaan** (hanya untuk pengayaan pihak pertama).
-- Kelola dan buat ekspor berdasarkan koneksi yang dibagikan dengan kontributor. [Selengkapnya tentang cara administrator mengizinkan kontributor menggunakan sambungan untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Kelola dan buat ekspor berdasarkan [koneksi yang dibagikan dengan kontributor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Admin
 
 - Semua izin yang tersedia untuk Kontributor.
-- Ubah pengaturan pada halaman **sistem**, termasuk bahasa kerja dan refresh jadwal untuk proses sistem Anda.
-- Lihat dan tambahkan izin menggunakan halaman **izin**.
+- Ubah pengaturan pada **halaman Sistem**, termasuk bahasa kerja, refresh jadwal untuk proses sistem Anda, dan ekspor log diagnostik.
+- Ubah pengaturan di **halaman Keamanan**, termasuk pengguna, kunci API, tautan privat, dan brankas kunci.
 - Atur definisi pencarian dan filter untuk halaman pelanggan menggunakan halaman **indeks pencarian & Filter** (dapat diakses melalui halaman **pelanggan**).
 - Kelola koneksi dan izinkan mereka untuk peran pengguna lain di halaman **Koneksi**.
 - Kelola konfigurasi dan Perkaya profil pelanggan dari halaman **pengayaan** (untuk semua pengayaan).
@@ -67,24 +63,27 @@ Ada tiga jenis peran:
 - Semua izin tersedia untuk Admin.
 - [Atur ulang dan hapus](manage-environments.md#reset-an-existing-environment-preview) lingkungan.
 
-## <a name="assign-roles-and-permissions"></a>Menetapkan izin dan peran
+## <a name="add-users"></a>Tambah pengguna
 
-1. Buka **> Keamanan** > **Admin****Pengguna***.
+1. Buka **Keamanan** > **Admin** dan pilih tab **Pengguna**.
 
 1. Pilih **Tambah Pengguna** untuk membuka panel **Tambah/Edit izin**.
 
-1. Gunakan bidang **pencarian** untuk menemukan pengguna Azure Active Directory atau grup yang izinnya ingin Anda Sesuaikan. Pilih **peran** yang akan ditetapkan ke pengguna atau grup tersebut.
+1. Gunakan bidang **Pencarian** untuk menemukan pengguna atau grup yang Azure Active Directory ingin Anda tambahkan. Pilih **peran** yang akan ditetapkan ke pengguna atau grup tersebut.
 
-1. Pilih **Simpan**. Lingkungan saat ini akan secara otomatis dibagikan dengan pengguna atau anggota grup yang izinnya telah Anda ubah. Pengguna dapat mengakses aplikasi customer Insights dan bekerja sesuai dengan peran mereka.
+1. Pilih **Simpan**. Lingkungan saat ini secara otomatis dibagikan dengan pengguna atau anggota grup. Pengguna dapat mengakses aplikasi customer Insights dan bekerja sesuai dengan peran mereka.
 
 ## <a name="view-current-permissions"></a>Lihat izin saat ini
 
-Buka **Pengguna** > **Keamanan** > **Admin** untuk melihat penetapan peran apa yang saat ini aktif.
+Buka **Keamanan** > **Admin** dan pilih tab **Pengguna** untuk melihat daftar pengguna aktif dan penetapan peran mereka. Anda dapat mengurutkan daftar pengguna berdasarkan kolom mana pun atau menggunakan kotak pencarian untuk menemukan pengguna tertentu.
 
-- Kolom **jenis** menentukan pengguna, grup, atau aplikasi tunggal. Sistem ini mendukung setiap pengguna dan grup.
-- Peran ditentukan dalam kolom **peran**.
-- Pilih judul kolom untuk mengurutkan hasil berdasarkan nilai kolom tersebut.
-- Gunakan bidang **pencarian** di bagian atas halaman untuk mencari pengguna tertentu.
+## <a name="manage-current-users"></a>Mengelola pengguna saat ini
 
+Buka **Keamanan** > **Admin** dan pilih tab **Pengguna**. Anda dapat mengurutkan daftar pengguna berdasarkan kolom mana pun atau menggunakan kotak pencarian untuk menemukan pengguna yang ingin Anda kelola.
+
+Pilih pengguna untuk melihat tindakan yang tersedia.
+
+- **Edit** untuk mengedit peran pengguna di Customer Insights. Pilih **Simpan** untuk mengonfirmasi perubahan.
+- **Hapus** untuk menghapus pengguna agar tidak memiliki akses ke Customer Insights. Klik **Hapus**, untuk mengonfirmasi penghapusan tersebut.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

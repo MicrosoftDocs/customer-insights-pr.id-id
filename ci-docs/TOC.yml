@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Administrasi
   items:
-    - name: Atur konfigurasi sistem
-      href: system.md
-    - name: Mengonfigurasi pengaturan keamanan
-      href: security-overview.md
     - name: Menetapkan izin pengguna
       href: permissions.md
     - name: Bawa Key Vault Anda sendiri
       href: use-azure-key-vault.md
+    - name: Mengonfigurasi pengaturan keamanan
+      href: security-overview.md
     - name: Mengekspor log diagnostik
       href: diagnostics.md
-    - name: Ikhtisar sambungan
+    - name: Kelola koneksi
       href: connections.md
+    - name: Jadwalkan penyegaran sistem
+      href: schedule-refresh.md
+    - name: Lihat konfigurasi sistem
+      href: system.md
 - name: API
   items:
     - name: Bekerja dengan API

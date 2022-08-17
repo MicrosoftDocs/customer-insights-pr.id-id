@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173818"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224299"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Personalisasi pengalaman Anda dengan data tentang pengguna yang dikenal dan tidak dikenal
 
-Mengelola data pelanggan bukanlah tantangan baru, tetapi semakin sulit karena pengguna menavigasi berbagai saluran digital yang ditawarkan merek. Pengguna yang dikenal (diautentikasi) di satu saluran menjadi tidak dikenal (tidak diautentikasi) di saluran lain jika tidak masuk. Masalahnya sering kali adalah bahwa pengguna yang tidak diautentikasi (tidak dikenal) tidak memiliki ID umum. Ini dapat digunakan untuk mengaitkan atribut profil yang bermakna dan menghasilkan profil pelanggan terpadu. Customer Insights membantu memecahkan masalah ini dengan menyerap data dari metode pelacakan pada sistem sumber Anda. Profil terkonsolidasi yang tidak diketahui dan diketahui memberi organisasi tampilan lengkap tentang profil terbaru dan transaksi historis, perilaku, dan demografi mereka. Bahkan melangkah lebih jauh dengan memberikan resolusi identitas yang memungkinkan Anda untuk menyatukan aktivitas pelanggan di berbagai saluran, termasuk situs web Anda, pembelian di dalam toko, program loyalitas, dan sebagainya.
+Mengelola data pelanggan bukanlah tantangan baru, tetapi semakin sulit karena pengguna menavigasi berbagai saluran digital yang ditawarkan merek. Pengguna yang dikenal (diautentikasi) di satu saluran menjadi tidak dikenal (tidak diautentikasi) di saluran lain jika tidak masuk. Masalahnya sering kali adalah bahwa pengguna yang tidak diautentikasi (tidak dikenal) tidak memiliki ID umum. Ini dapat digunakan untuk mengaitkan atribut profil yang bermakna dan menghasilkan profil pelanggan terpadu. Customer Insights membantu memecahkan masalah ini dengan menyerap data dari metode pelacakan pada sistem sumber Anda. Mengkonsolidasikan profil yang tidak dikenal dan diketahui memberi organisasi tampilan lengkap tentang profil terbaru dan transaksi, perilaku, dan demografi historis mereka. Bahkan melangkah lebih jauh dengan memberikan resolusi identitas yang memungkinkan Anda untuk menyatukan aktivitas pelanggan di berbagai saluran, termasuk situs web Anda, pembelian di dalam toko, program loyalitas, dan sebagainya.
 
 ## <a name="sample-scenario"></a>Contoh Skenario
 

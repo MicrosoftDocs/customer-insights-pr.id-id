@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207095"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245653"
 ---
 # <a name="data-sources-overview"></a>Ikhtisar sumber data
 
@@ -67,7 +67,7 @@ Pilih sumber data untuk melihat tindakan yang tersedia.
 
 Sumber data dapat disegarkan dengan jadwal otomatis atau diperbarui secara manual sesuai permintaan. [Sumber](connect-power-query.md#add-data-from-on-premises-data-sources) data lokal disegarkan pada jadwal mereka sendiri yang disiapkan selama penyerapan data. Untuk sumber data terlampir, penyerapan data menghabiskan data terbaru yang tersedia dari sumber data tersebut.
 
-Buka **Jadwal** > **Sistem** > [**Admin**](system.md#schedule-tab) untuk mengonfigurasi refresh terjadwal sistem dari sumber data yang Anda konsumsi.
+Buka **Jadwal** > **Sistem** > [**Admin**](schedule-refresh.md) untuk mengonfigurasi refresh terjadwal sistem dari sumber data yang Anda konsumsi.
 
 Untuk menyegarkan sumber data sesuai permintaan:
 

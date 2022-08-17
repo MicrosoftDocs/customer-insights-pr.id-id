@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195662"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246112"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Konsumsi data real-time (pratinjau)
 
 Fungsi nyaris real-time memungkinkan Anda melihat, dalam hitungan detik, interaksi terbaru yang telah dibuat pelanggan dengan produk atau layanan Anda.
 
-[Penyegaran terjadwal](system.md#schedule-tab) mencakup sejumlah besar rekaman dan beberapa operasi kompleks. Pertama, data ditarik dari sumber data. Selanjutnya, data disatukan, lalu diperkaya dengan informasi tambahan. Setiap proses ini dapat berlangsung selama beberapa menit.
+[Penyegaran terjadwal](schedule-refresh.md) mencakup sejumlah besar rekaman dan beberapa operasi kompleks. Pertama, data ditarik dari sumber data. Selanjutnya, data disatukan, lalu diperkaya dengan informasi tambahan. Setiap proses ini dapat berlangsung selama beberapa menit.
 
 Fungsi real-time menyediakan data segera untuk dikonsumsi, hingga penyegaran terjadwal berikutnya menarik data ini dari sumber data.
 
@@ -85,7 +85,7 @@ Rincian API ini, termasuk parameter dan respons, dapat ditemukan di bagian **Ent
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami penggunaan real-time Anda dengan telemetri
 
-Dapatkan ikhtisar tentang volume permintaan ke API real-time dan informasi tentang masalah yang mungkin dihadapi sistem. Anda dapat [mengakses telemetri real-time](system.md#api-usage-tab). 
+Dapatkan ikhtisar tentang volume permintaan ke API real-time dan informasi tentang masalah yang mungkin dihadapi sistem. Anda dapat [mengakses telemetri real-time](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206911"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259802"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics Menyambungkan sumber data (pratinjau)
 
@@ -24,26 +24,30 @@ Untuk informasi selengkapnya, lihat [Azure Synapse gambaran umum](/azure/synapse
 
 ## <a name="prerequisites"></a>Prasyarat
 
+> [!NOTE]
+> Ruang Kerja Synapse yang mengaktifkan [firewall](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) saat ini tidak didukung.
 > [!IMPORTANT]
 > Pastikan untuk menetapkan semua **penugasan peran** seperti dijelaskan.  
 
 **Dalam Wawasan** Pelanggan:
 
-* Anda memiliki **peran Administrator** di Customer Insights. Pelajari selengkapnya tentang [izin pengguna di Customer Insights](permissions.md#assign-roles-and-permissions).
+* Anda memiliki **peran Administrator** di Customer Insights. Pelajari selengkapnya tentang [izin pengguna di Customer Insights](permissions.md#add-users).
 
 **Di Azure**:
 
 - Langganan Azure aktif.
 
-- Jika menggunakan akun Gen2 baru Azure Data Lake Storage, *perwakilan layanan untuk Customer Insights* memerlukan **data Blob Penyimpanan kontributor** izin. Pelajari selengkapnya tentang [terhubung ke perwakilan Azure Data Lake Storage layanan dengan perwakilan layanan untuk Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **harus mengaktifkan** [ruang nama hierarkis](/azure/storage/blobs/data-lake-storage-namespace).
+- Jika menggunakan akun Gen2 baru Azure Data Lake Storage, *perwakilan layanan untuk Customer Insights* yaitu "Dynamics 365 AI for Customer Insights" memerlukan **izin kontributor** Storage Blob Data. Pelajari selengkapnya tentang [terhubung ke perwakilan Azure Data Lake Storage layanan dengan perwakilan layanan untuk Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **harus mengaktifkan** [ruang nama hierarkis](/azure/storage/blobs/data-lake-storage-namespace).
 
-- Pada grup sumber daya tempat Azure Synapse ruang kerja berada, *perwakilan* layanan dan *pengguna untuk Customer Insights* harus ditetapkan setidaknya **Pembaca** izin. Untuk informasi lebih lanjut, lihat [Menetapkan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
+- Pada grup sumber daya ruang Azure Synapse kerja berada, *perwakilan* layanan yaitu "Dynamics 365 AI for Customer Insights" dan *pengguna untuk Customer Insights* perlu diberi setidaknya **izin Pembaca**. Untuk informasi lebih lanjut, lihat [Menetapkan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 
 - *Pengguna* memerlukan izin **kontributor Data Blob Penyimpanan** di akun Azure Data Lake Storage Gen2 dengan data berada dan ditautkan ke ruang kerja Azure Synapse. Pelajari lebih lanjut tentang [menggunakan portal Azure untuk menetapkan peran Azure untuk akses ke data blob dan antrean](/azure/storage/common/storage-auth-aad-rbac-portal) serta [izin kontributor Data Blob Penyimpanan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Identitas yang dikelola Ruang kerja Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* memerlukan memerlukan izin **kontributor Data Blob Penyimpanan** di akun Azure Data Lake Storage Gen2 dengan data berada dan ditautkan ke ruang kerja Azure Synapse. Pelajari lebih lanjut tentang [menggunakan portal Azure untuk menetapkan peran Azure untuk akses ke data blob dan antrean](/azure/storage/common/storage-auth-aad-rbac-portal) serta [izin kontributor Data Blob Penyimpanan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Di ruang Azure Synapse kerja, *perwakilan layanan untuk Customer Insights* memerlukan **peran Synapse Administrator** yang ditetapkan. Untuk informasi lebih lanjut, lihat [Cara mengkonfigurasi kontrol akses untuk ruang kerja Synapse Anda](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Di ruang Azure Synapse kerja, *perwakilan layanan untuk Customer Insights* yaitu "Dynamics 365 AI for Customer Insights" memerlukan **peran Synapse Administrator** yang ditetapkan. Untuk informasi lebih lanjut, lihat [Cara mengkonfigurasi kontrol akses untuk ruang kerja Synapse Anda](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Jika lingkungan Customer Insights Anda menyimpan data di lingkungan Anda [sendiri Azure Data Lake Storage](own-data-lake-storage.md), pengguna yang menyiapkan koneksi untuk Azure Synapse Analytics membutuhkan setidaknya peran Pembaca **bawaan** di akun Data Lake Storage. Untuk informasi lebih lanjut, lihat [Menetapkan peran Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Menyambungkan ke database data lake di Azure Synapse Analytics
 
@@ -57,7 +61,7 @@ Untuk informasi selengkapnya, lihat [Azure Synapse gambaran umum](/azure/synapse
   
 1. **Masukkan Nama** untuk sumber data dan Deskripsi **opsional**.
 
-1. Pilih koneksi [yang](connections.md) tersedia ke Azure Synapse Analytics atau buat yang baru.
+1. Pilih koneksi [yang](connections.md) tersedia ke Azure Synapse Analytics atau [buat yang](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse) baru.
 
 1. **Pilih Database** dari ruang kerja yang tersambung dalam koneksi yang Azure Synapse Analytics dipilih dan pilih **Berikutnya**. Saat ini, kami hanya mendukung database jenis *database* Lake.
 

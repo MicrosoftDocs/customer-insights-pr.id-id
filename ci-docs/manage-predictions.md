@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082849"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245469"
 ---
 # <a name="manage-predictions"></a>Kelola prediksi
 
@@ -58,7 +58,7 @@ Kolom berikut dalam laporan berisi informasi bermanfaat untuk meningkatkan data 
 
 ## <a name="refresh-a-prediction"></a>Segarkan prediksi
 
-Prediksi akan secara otomatis diperbarui pada jadwal yang sama [dengan penyegaran data Anda](system.md#schedule-tab) seperti dikonfigurasi dalam pengaturan. Anda juga dapat me-refresh secara manual.
+Prediksi akan secara otomatis diperbarui pada jadwal yang sama [dengan penyegaran data Anda](schedule-refresh.md) seperti dikonfigurasi dalam pengaturan. Anda juga dapat me-refresh secara manual.
 
 1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
 

@@ -1,19 +1,19 @@
 ---
 title: Yang baru di Dynamics 365 Customer Insights
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114250"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246015"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Yang baru di Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Pembaruan Juli 2022
+
+Pembaruan pada Juli 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="export-to-moengage"></a>Ekspor ke MoEngage
+
+Ekspor segmen profil pelanggan terpadu ke MoEngage dan gunakan untuk pemasaran email di MoEngage.
+
+Untuk informasi selengkapnya, lihat [Mengekspor segmen ke MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Dukungan SSH untuk ekspor berbasis SFTP
+
+Pilih apakah Anda ingin mengautentikasi melalui SSH atau nama pengguna/kata sandi untuk koneksi ke tujuan ekspor SFTP.
+
+Untuk informasi selengkapnya, lihat [Mengekspor data ke host SFTP](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalisasi pengalaman dengan data tentang pengguna yang dikenal dan tidak dikenal
+
+Mengelola data pelanggan bukanlah tantangan baru, tetapi semakin sulit karena pengguna menavigasi berbagai saluran digital yang ditawarkan merek. Pengguna yang dikenal (diautentikasi) di satu saluran menjadi tidak dikenal (tidak diautentikasi) di saluran lain jika tidak masuk. Masalahnya sering kali adalah bahwa pengguna yang tidak diautentikasi (tidak dikenal) tidak memiliki ID umum. Ini dapat digunakan untuk mengaitkan atribut profil yang bermakna dan menghasilkan profil pelanggan terpadu. Customer Insights membantu memecahkan masalah ini dengan menyerap data dari metode pelacakan pada sistem sumber Anda.
+
+Untuk informasi selengkapnya, lihat [Mempersonalisasi pengalaman Anda dengan data tentang pengguna yang dikenal dan tidak dikenal](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Pembaruan Juni 2022
 
@@ -50,7 +72,7 @@ Untuk informasi selengkapnya, lihat [Mengakses data pelanggan dengan aman dengan
 
 Azure Private Link memungkinkan Customer Insights terhubung ke akun Anda Azure Data Lake Storage melalui titik akhir privat di jaringan virtual Anda. Untuk data di akun penyimpanan, yang tidak diekspos ke internet publik, Private Link memungkinkan koneksi ke jaringan yang dibatasi tersebut.
 
-Untuk informasi selengkapnya, lihat [Menggunakan Tautan Privat di Customer Insights](security-overview.md#private-links-tab).
+Untuk informasi selengkapnya, lihat [Menggunakan Tautan Privat di Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Pembaruan Mei 2022
 
@@ -104,7 +126,7 @@ Untuk informasi selengkapnya, lihat [Menggunakan pembuat pengukuran untuk membua
 
 Kami telah meninjau kembali artikel dokumentasi kami dan menghapus penyebutan wawasan keterlibatan dan kemampuan wawasan audiens. Ke depannya, kami akan merujuk secara konsisten ke nama produk Customer Insights ketika kami menulis tentang fitur inti aplikasi. Perubahan ini juga mengarah pada restrukturisasi yang signifikan dari daftar isi, struktur URL, dan jalur file dalam repositori dokumentasi yang mendasarinya. Semua bookmark atau tautan yang ada terus berfungsi dan dialihkan ke URL yang diperbarui.
 
-Jika Anda ingin memberi tahu kami bagaimana Anda memandang perubahan itu atau menemukan sesuatu yang tidak berfungsi seperti yang diharapkan, beri tahu kami [dengan mengirimkan umpan balik untuk halaman](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) ini.
+Jika Anda ingin memberi tahu kami bagaimana Anda memandang perubahan itu atau menemukan sesuatu yang tidak berfungsi seperti yang diharapkan, beri tahu kami [dengan mengirimkan umpan balik untuk halaman ini](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Pembaruan Maret 2022
 

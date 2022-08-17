@@ -1,19 +1,19 @@
 ---
 title: Perkaya profil perusahaan dengan Leadspace (pratinjau)
 description: Informasi umum tentang pengayaan pihak ketiga Leadspace.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196214"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237954"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Perkaya profil perusahaan dengan Leadspace (pratinjau)
 
@@ -35,14 +35,9 @@ Anda harus menjadi [administrator](permissions.md#admin) di Customer Insights da
 
 1. Masukkan nama untuk koneksi dan token Leadspace yang valid.
 
-1. Baca dan berikan persetujuan Anda untuk [privasi dan kesesuaian Data](#data-privacy-and-compliance) dengan memilih **Saya setuju**.
+1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
 1. Pilih **Verifikasi** untuk memvalidasi konfigurasi lalu pilih **Simpan**.
-
-### <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
-
-Bila Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke Leadspace, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang mungkin sensitif seperti data pribadi. Microsoft akan mentransfer data tersebut sesuai petunjuk Anda, namun Anda bertanggung jawab untuk memastikan bahwa Leadspace memenuhi setiap privasi atau kewajiban keamanan yang mungkin Anda miliki. Untuk informasi lebih lanjut, lihat [Pernyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 

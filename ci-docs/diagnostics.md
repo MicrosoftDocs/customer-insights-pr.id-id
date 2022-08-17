@@ -1,7 +1,7 @@
 ---
-title: Penerusan log dengan Dynamics 365 Customer Insights Azure Monitor (pratinjau)
+title: Mengekspor log diagnostik (pratinjau)
 description: Pelajari cara mengirim log ke Microsoft Azure Monitor.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,87 +11,56 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052657"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245929"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Penerusan log dengan Dynamics 365 Customer Insights Azure Monitor (pratinjau)
+# <a name="export-diagnostic-logs-preview"></a>Mengekspor log diagnostik (pratinjau)
 
-Dynamics 365 Customer Insights menyediakan integrasi langsung dengan Azure Monitor. Log sumber daya Azure Monitor memungkinkan Anda memantau dan mengirim log ke [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), atau mengalirkannya ke [Azure Pusat Aktivitas](https://azure.microsoft.com/services/event-hubs/).
+Meneruskan log dari Customer Insights menggunakan Azure Monitor. Log sumber daya Azure Monitor memungkinkan Anda memantau dan mengirim log ke [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), atau mengalirkannya ke [Azure Pusat Aktivitas](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights mengirimkan log peristiwa berikut:
 
 - **Peristiwa Audit**
-  - **APIEvent** - memungkinkan pelacakan perubahan yang dilakukan melalui Dynamics 365 Customer Insights UI.
+  - **APIEvent** - memungkinkan pelacakan perubahan melalui Dynamics 365 Customer Insights UI.
 - **Acara Operasional**
-  - **WorkflowEvent** - Alur kerja memungkinkan Anda menyiapkan [Sumber](data-sources.md) Data, [menyatukan](data-unification.md), [memperkaya](enrichment-hub.md), dan akhirnya [mengekspor](export-destinations.md) data ke sistem lain. Semua langkah tersebut dapat dilakukan secara individual (misalnya, memicu satu ekspor). Dapat juga berjalan diatur (misalnya, penyegaran data dari sumber data yang memicu proses penyatuan, yang akan menarik pengayaan dan setelah selesai mengekspor data ke sistem lain). Untuk informasi selengkapnya, lihat [Skema](#workflow-event-schema) WorkflowEvent.
-  - **APIEvent** - semua panggilan API ke instans pelanggan ke Dynamics 365 Customer Insights. Untuk informasi selengkapnya, lihat [Skema](#api-event-schema) APIEvent.
+  - **WorkflowEvent** - memungkinkan Anda menyiapkan [sumber](data-sources.md) data, menyatukan [,](data-unification.md)[memperkaya](enrichment-hub.md), dan [mengekspor](export-destinations.md) data ke sistem lain. Langkah-langkah ini dapat dilakukan secara individual (misalnya, memicu satu ekspor). Mereka juga dapat menjalankan orkestrasi (misalnya, penyegaran data dari sumber data yang memicu proses penyatuan, yang akan menarik pengayaan dan mengekspor data ke sistem lain). Untuk informasi selengkapnya, lihat [Skema](#workflow-event-schema) WorkflowEvent.
+  - **APIEvent** - mengirimkan semua panggilan API instans pelanggan ke Dynamics 365 Customer Insights. Untuk informasi selengkapnya, lihat [Skema](#api-event-schema) APIEvent.
 
 ## <a name="set-up-the-diagnostic-settings"></a>Menyiapkan pengaturan diagnostik
 
 ### <a name="prerequisites"></a>Prasyarat
 
-Untuk mengonfigurasi diagnostik di Customer Insights, prasyarat berikut harus dipenuhi:
-
-- Anda memiliki Langganan [Azure aktif](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Anda memiliki [izin Administrator](permissions.md#admin) di Customer Insights.
-- Anda memiliki **peran administrator** kontributor **dan** Akses Pengguna pada sumber daya tujuan di Azure. Sumber daya dapat berupa Azure Data Lake Storage akun, Azure Event Hub, atau ruang kerja Azure Log Analytics. Untuk informasi selengkapnya, lihat [Menambahkan atau menghapus penetapan peran Azure menggunakan portal](/azure/role-based-access-control/role-assignments-portal) Microsoft Azure. Izin ini diperlukan saat mengonfigurasi pengaturan diagnostik di Customer Insights, izin ini dapat diubah setelah penyiapan berhasil.
+- Langganan [Azure aktif](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- [Izin](permissions.md#admin) administrator di Customer Insights.
+- [kontributor dan Administrator](/azure/role-based-access-control/role-assignments-portal) Akses Pengguna pada sumber daya tujuan di Azure. Sumber daya dapat berupa Azure Data Lake Storage akun, Azure Event Hub, atau ruang kerja Azure Log Analytics. Izin ini diperlukan saat mengonfigurasi pengaturan diagnostik di Customer Insights, tetapi dapat diubah setelah penyiapan berhasil.
 - [Persyaratan tujuan](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) untuk Azure Storage, Azure Event Hub, atau Azure Log Analytics terpenuhi.
-- Anda memiliki setidaknya **peran Pembaca** pada grup sumber daya tempat sumber daya berada.
+- Setidaknya **peran Pembaca** pada grup sumber daya tempat sumber daya berada.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Menyiapkan diagnostik dengan Azure Monitor
 
-1. Di Customer Insights, pilih **Diagnostik** > **Sistem** untuk melihat tujuan diagnostik yang dikonfigurasi instans ini.
+1. Di Customer Insights, buka **Sistem** > **Admin** dan pilih tab **Diagnostik**.
 
 1. Pilih **Tambahkan tujuan**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Koneksi diagnostik](media/diagnostics-pane.png "Koneksi diagnostik")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Koneksi diagnostik.":::
 
 1. Berikan nama di **bidang Nama untuk tujuan** diagnostik.
 
-1. Pilih **Penyewa** langganan Azure dengan sumber daya tujuan dan pilih **masuk**.
+1. **Pilih Jenis** sumber daya (Akun Penyimpanan, Pusat Aktivitas, atau Analitik Log).
 
-1. **Pilih Jenis** sumber daya (Akun penyimpanan, pusat aktivitas, atau analitik log).
+1. **Pilih Langganan**, **Grup** sumber daya, dan **Sumber Daya** untuk sumber daya tujuan. Lihat [Konfigurasi pada sumber daya](#configuration-on-the-destination-resource) tujuan untuk informasi izin dan log.
 
-1. Pilih **Langganan** untuk sumber daya tujuan.
-
-1. **Pilih Grup** sumber daya untuk sumber daya tujuan.
-
-1. Pilih **Sumber Daya**.
-
-1. Konfirmasikan **pernyataan privasi dan kepatuhan** Data.
+1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
 1. Pilih **Sambungkan ke sistem** untuk terhubung ke sumber daya tujuan. Log mulai muncul di tujuan setelah 15 menit, jika API sedang digunakan dan menghasilkan peristiwa.
 
-### <a name="remove-a-destination"></a>Menghapus tujuan
-
-1. Buka **Diagnostik** > **Sistem**.
-
-1. Pilih tujuan diagnostik dalam daftar.
-
-1. Di kolom **Tindakan**, pilih ikon **Hapus**.
-
-1. Konfirmasikan penghapusan untuk menghentikan penerusan log. Sumber daya pada langganan Azure tidak akan dihapus. Anda dapat memilih tautan di **kolom Tindakan** untuk membuka portal Microsoft Azure untuk sumber daya yang dipilih dan menghapusnya di sana.
-
-## <a name="log-categories-and-event-schemas"></a>Kategori log dan skema peristiwa
-
-Saat ini [peristiwa](apis.md) API dan peristiwa alur kerja didukung dan kategori serta skema berikut berlaku.
-Skema log mengikuti [skema umum Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
-
-### <a name="categories"></a>Kategori
-
-Customer Insights menyediakan dua kategori:
-
-- **Peristiwa audit**: [Peristiwa](#api-event-schema) API untuk melacak perubahan konfigurasi pada layanan. `POST|PUT|DELETE|PATCH` operasi masuk ke dalam kategori ini.
-- **Peristiwa** operasional: [Peristiwa](#api-event-schema) API atau [peristiwa](#workflow-event-schema) alur kerja yang dihasilkan saat menggunakan layanan.  Misalnya, `GET` permintaan atau peristiwa eksekusi alur kerja.
-
 ## <a name="configuration-on-the-destination-resource"></a>Konfigurasi pada sumber daya tujuan
 
-Berdasarkan pilihan Anda pada jenis sumber daya, langkah-langkah berikut akan secara otomatis berlaku:
+Berdasarkan jenis sumber daya pilihan Anda, perubahan berikut secara otomatis terjadi:
 
 ### <a name="storage-account"></a>Akun Penyimpanan
 
@@ -102,23 +71,48 @@ Perwakilan layanan Customer Insights mendapatkan **izin kontributor** Akun Penyi
 
 ### <a name="event-hub"></a>Pusat Aktivitas
 
-Perwakilan layanan Customer Insights mendapatkan **izin Pemilik** Data Azure Pusat Aktivitas pada sumber daya dan akan membuat dua Pusat Aktivitas di bawah namespace layanan yang dipilih:
+Perwakilan layanan Customer Insights mendapatkan **izin Pemilik** Data Azure Pusat Aktivitas pada sumber daya dan membuat dua Pusat Aktivitas di bawah namespace layanan yang dipilih:
 
 - `insight-logs-audit` berisi **peristiwa audit**
 - `insight-logs-operational` berisi **acara operasional**
 
 ### <a name="log-analytics"></a>Analisis Log
 
-Perwakilan layanan Customer Insights mendapatkan **izin kontributor** Log Analytics pada sumber daya. Log akan tersedia di **bawah** > **Manajemen** > **Log Tabel** Log di ruang kerja Log Analytics yang dipilih. **Perluas solusi Manajemen** Log dan temukan `CIEventsAudit` tabel dan `CIEventsOperational`.
+Perwakilan layanan Customer Insights mendapatkan **izin kontributor** Log Analytics pada sumber daya. Log tersedia di bawah **Manajemen** > **Log Tabel** > **Log** pada ruang kerja Log Analytics yang dipilih. **Perluas solusi Manajemen** Log dan temukan `CIEventsAudit` tabel dan `CIEventsOperational`.
 
 - `CIEventsAudit` berisi **peristiwa audit**
 - `CIEventsOperational` berisi **acara operasional**
 
 Di bawah jendela **Kueri, perluas** solusi Audit **dan temukan contoh kueri yang disediakan dengan mencari**`CIEvents`.
 
+## <a name="remove-a-diagnostics-destination"></a>Menghapus tujuan diagnostik
+
+1. Buka **Sistem** > **Admin** dan pilih tab **Diagnostik**.
+
+1. Pilih tujuan diagnostik dalam daftar.
+
+   > [!TIP]
+   > Menghapus tujuan akan menghentikan penerusan log, tetapi tidak menghapus sumber daya pada langganan Azure. Untuk menghapus sumber daya di Azure, pilih tautan di **kolom Tindakan** untuk membuka portal Microsoft Azure untuk sumber daya yang dipilih dan menghapusnya di sana. Kemudian hapus tujuan diagnostik.
+
+1. Di kolom **Tindakan**, pilih ikon **Hapus**.
+
+1. Konfirmasikan penghapusan untuk menghapus tujuan dan hentikan penerusan log.
+
+## <a name="log-categories-and-event-schemas"></a>Kategori log dan skema peristiwa
+
+Saat ini [peristiwa](apis.md) API dan peristiwa alur kerja didukung dan kategori serta skema berikut berlaku.
+Skema log mengikuti [skema](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema) umum Azure Monitor.
+
+### <a name="categories"></a>Kategori
+
+Customer Insights menyediakan dua kategori:
+
+- **Peristiwa audit**: [Peristiwa](#api-event-schema) API untuk melacak perubahan konfigurasi pada layanan. `POST|PUT|DELETE|PATCH` operasi masuk ke dalam kategori ini.
+- **Peristiwa** operasional: [Peristiwa](#api-event-schema) API atau [peristiwa](#workflow-event-schema) alur kerja yang dihasilkan saat menggunakan layanan.  Misalnya, `GET` permintaan atau peristiwa eksekusi alur kerja.
+
 ## <a name="event-schemas"></a>Skema peristiwa
 
-Peristiwa API dan peristiwa alur kerja memiliki struktur dan detail umum di mana mereka berbeda, lihat [Skema peristiwa API atau](#api-event-schema) skema [peristiwa](#workflow-event-schema) alur kerja.
+Peristiwa API dan peristiwa alur kerja memiliki struktur yang sama, tetapi dengan beberapa perbedaan. Untuk informasi selengkapnya, lihat [Skema peristiwa API atau](#api-event-schema) skema [peristiwa](#workflow-event-schema) alur kerja.
 
 ### <a name="api-event-schema"></a>Skema peristiwa API
 
@@ -220,7 +214,6 @@ Alur kerja berisi beberapa langkah. [Menyerap sumber](data-sources.md) data, men
 | `durationMs`    | Panjang      | Opsional          | Durasi operasi dalam milidetik.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Opsional          | Objek JSON dengan lebih banyak properti ke kategori peristiwa tertentu.                                                                                        | Lihat sub bagian [Properti Alur Kerja](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Wajib          | Tingkat keparahan acara.                                                                                                                                  | `Informational`, `Warning`, atau `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Skema properti alur kerja
 
@@ -247,3 +240,5 @@ Peristiwa alur kerja memiliki properti berikut.
 | `properties.additionalInfo.AffectedEntities` | No       | Ya  | Opsional. Hanya untuk OperationType `Export`. Berisi daftar entitas yang dikonfigurasi dalam ekspor.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Ya  | Opsional. Hanya untuk OperationType `Export`. Pesan terperinci untuk ekspor.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Ya  | Opsional. Hanya untuk OperationType `Segmentation`. Menunjukkan jumlah total anggota yang dimiliki segmen tersebut.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

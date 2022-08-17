@@ -1,19 +1,19 @@
 ---
 title: Perkaya profil pelanggan dengan data identitas dari LiveRamp (pratinjau)
 description: Perkaya profil pelanggan dengan data LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196352"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237816"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Perkaya profil pelanggan dengan data identitas dari LiveRamp (pratinjau)
 
@@ -41,13 +41,9 @@ Anda harus menjadi [administrator](permissions.md#admin) di Customer Insights da
 
 1. Masukkan nama untuk koneksi dan ID klien LiveRamp yang valid serta rahasia.
 
-1. Baca dan berikan persetujuan Anda untuk [privasi dan kesesuaian Data](#data-privacy-and-compliance) dengan memilih **Saya setuju**.
+1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
 1. Pilih **Verifikasi** untuk memvalidasi konfigurasi lalu pilih **Simpan**.
-
-### <a name="data-privacy-and-compliance"></a>Privasi dan kepatuhan data
-
-Saat Anda mengaktifkan Dynamics 365 Customer Insights untuk mengirimkan data ke LiveRamp, Anda mengizinkan transfer data di luar batas kepatuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Pribadi. Microsoft akan mentransfer data tersebut atas instruksi Anda, tetapi Anda bertanggung jawab untuk memastikan bahwa LiveRamp memenuhi kewajiban privasi atau keamanan apa pun yang mungkin Anda miliki. Untuk informasi selengkapnya, tinjau [Pernyataan](https://go.microsoft.com/fwlink/?linkid=396732) Privasi Microsoft. Administrator Dynamics 365 Customer Insights Anda dapat menghapus pengayaan ini kapan saja untuk menghentikan penggunaan fungsi ini.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasi pengayaan
 

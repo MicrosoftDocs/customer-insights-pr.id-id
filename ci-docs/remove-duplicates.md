@@ -2,7 +2,7 @@
 title: Menghapus duplikat sebelum menyatukan data
 description: Langkah kedua dalam proses penyatuan adalah memilih catatan mana yang akan disimpan ketika duplikat ditemukan.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,20 +13,29 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139433"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213631"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Menghapus duplikat sebelum menyatukan data
 
-Langkah penyatuan ini secara opsional memungkinkan Anda menyiapkan aturan untuk menangani rekaman duplikat dalam entitas. *Deduplikasi* mengidentifikasi rekaman duplikat dan menggabungkannya menjadi satu rekaman. Rekaman sumber ditautkan ke rekaman gabungan dengan ID alternatif. Jika aturan tidak dikonfigurasi, aturan yang ditentukan sistem akan diterapkan.
+Langkah opsional dalam penyatuan ini memungkinkan Anda menyiapkan aturan untuk menghilangkan rekaman **duplikat dalam** entitas. Deduplikasi mengidentifikasi beberapa rekaman untuk pelanggan dan memilih catatan terbaik untuk disimpan (berdasarkan preferensi penggabungan dasar) atau menggabungkan rekaman menjadi satu (berdasarkan preferensi gabungan tingkat lanjut). Rekaman sumber ditautkan ke rekaman gabungan dengan ID alternatif. Jika aturan tidak dikonfigurasi, aturan yang ditentukan sistem akan diterapkan.
+
+## <a name="default-deduplication"></a>Deduplikasi default
+
+Aturan yang ditentukan sistem berlaku jika tidak ada aturan deduplikasi yang ditambahkan.
+
+- Kunci utama dideduplikasi.
+  Untuk setiap catatan dengan kunci utama yang sama, **catatan Yang paling banyak diisi** (yang memiliki nilai nol paling sedikit) adalah pemenangnya.
+- Setiap aturan pencocokan lintas entitas diterapkan ke entitas.
+  Misalnya: Pada langkah pencocokan, jika entitas A dicocokkan dengan entitas B di *FullName* dan *DateofBirth*, maka entitas A juga dideduplicated oleh *FullName* dan *DateofBirth*. Karena *FullName* dan *DateofBirth* adalah kunci yang valid untuk mengidentifikasi pelanggan di entitas A, kunci ini juga valid untuk mengidentifikasi pelanggan duplikat di entitas A.
 
 ## <a name="include-enriched-entities-preview"></a>Sertakan entitas yang diperkaya (pratinjau)
 
-Jika Anda memperkaya entitas di tingkat sumber data untuk membantu meningkatkan hasil penyatuan Anda, pilih entitas tersebut. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber data](data-sources-enrichment.md).
+Jika Anda memperkaya entitas di tingkat sumber data untuk membantu meningkatkan hasil penyatuan Anda, pilih entitas tersebut. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
 
 1. Pada halaman **Rekaman** duplikat, pilih **Gunakan entitas** yang diperkaya di bagian atas halaman.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
-ms.translationtype: MT
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011937"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246205"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Gunakan akun Gen2 Anda sendiri Azure Data Lake Storage
 
@@ -37,7 +37,7 @@ Saat Anda membuat lingkungan baru, pastikan akun Data Lake Storage ada dan semua
 1. Pilih cara **Menyambungkan penyimpanan** Anda. Anda dapat memilih antara opsi berbasis sumber daya dan opsi berbasis langganan untuk autentikasi. Untuk informasi selengkapnya, lihat [Menyambungkan ke akun dengan Azure Data Lake Storage menggunakan Azure Service Principal](connect-service-principal.md).
    - Untuk **langganan** Azure, pilih **langganan**, **Grup** sumber daya, dan **akun** Penyimpanan yang berisi `customerinsights` kontainer.
    - Untuk **Kunci akun**, berikan **nama** Akun dan **kunci** Akun untuk akun Data Lake Storage. Menggunakan metode autentikasi ini menyiratkan bahwa Anda diberi tahu jika organisasi Anda memutar kunci. Anda harus [memperbarui konfigurasi](manage-environments.md#edit-an-existing-environment) lingkungan dengan kunci baru saat diputar.
-1. Pilih apakah Anda ingin menggunakan Azure Private Link untuk menyambungkan ke akun penyimpanan dan [membuat koneksi ke Private Link](security-overview.md#private-links-tab) dengan proses dua langkah.
+1. Pilih apakah Anda ingin menggunakan Azure Private Link untuk menyambungkan ke akun penyimpanan dan [membuat koneksi ke Private Link](security-overview.md#set-up-an-azure-private-link) dengan proses dua langkah.
 
 Ketika proses sistem seperti penyerapan data selesai, sistem membuat folder yang sesuai di akun penyimpanan. File data dan file *model.json* dibuat dan ditambahkan ke folder berdasarkan nama proses.
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170824"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245377"
 ---
 # <a name="measures-overview"></a>Gambaran umum pengukuran
 
@@ -53,7 +53,7 @@ Pilih di samping pengukuran untuk melihat tindakan yang tersedia. Pilih nama pen
 - **Edit** pengukuran untuk mengubah propertinya.
 - **Refresh** pengukuran untuk menyertakan data terbaru.
 - **Ubah nama** ukuran.
-- **Mengaktifkan** atau **Menonaktifkan** pengukuran. Tindakan tidak aktif tidak akan disegarkan selama [refresh](system.md#schedule-tab) terjadwal dan **statusnya** terdaftar sebagai **Dilewati**, yang menunjukkan bahwa refresh bahkan tidak dicoba.
+- **Mengaktifkan** atau **Menonaktifkan** pengukuran. Tindakan tidak aktif tidak akan disegarkan selama [refresh](schedule-refresh.md) terjadwal dan **statusnya** terdaftar sebagai **Dilewati**, yang menunjukkan bahwa refresh bahkan tidak dicoba.
 - **Beri** tag untuk [mengelola tag](work-with-tags-columns.md#manage-tags) untuk pengukuran tersebut.
 - **Hapus** ukuran.
 - **Kolom** untuk [mengkustomisasi kolom](work-with-tags-columns.md#customize-columns) yang ditampilkan.
@@ -62,7 +62,7 @@ Pilih di samping pengukuran untuk melihat tindakan yang tersedia. Pilih nama pen
 
 ## <a name="refresh-measures"></a>Langkah-langkah penyegaran
 
-Langkah-langkah dapat disegarkan pada jadwal otomatis atau disegarkan secara manual sesuai permintaan. Untuk me-refresh satu atau beberapa pengukuran secara manual, pilih pengukuran tersebut dan pilih **Refresh**. Untuk [menjadwalkan refresh](system.md#schedule-tab) otomatis, buka **Jadwal** > **Sistem** > **Admin**.
+Langkah-langkah dapat disegarkan pada jadwal otomatis atau disegarkan secara manual sesuai permintaan. Untuk me-refresh satu atau beberapa pengukuran secara manual, pilih pengukuran tersebut dan pilih **Refresh**. Untuk [menjadwalkan refresh](schedule-refresh.md) otomatis, buka **Jadwal** > **Sistem** > **Admin**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
