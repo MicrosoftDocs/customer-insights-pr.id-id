@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188097"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303787"
 ---
 # <a name="view-customer-profiles"></a>Lihat Profil pelanggan
 
@@ -78,7 +78,7 @@ Rincian pelanggan mencakup:
 **Petak** profil pelanggan memperlihatkan nilai yang berbeda dari entitas Klien *terpadu*. Jika bidang tidak memiliki nilai untuk profil pelanggan yang dipilih, bidang tersebut tidak akan ditampilkan kecuali untuk bidang alamat. petak terstruktur ke dalam bagian:
 
 - Bagian pertama menampilkan rangkaian bidang yang ditetapkan sebelumnya diikuti oleh semua bidang yang merupakan bagian dari indeks pencarian &filter. Semua bidang terkait alamat digabungkan menjadi satu baris, yang menunjukkan meskipun profil tidak berisi informasi alamat.
-- **Kontak untuk pelanggan** ini ditampilkan di lingkungan untuk akun bisnis. Setiap kontak ditampilkan dengan bidangnya. Bidang kosong disembunyikan.
+- **Kontak untuk pelanggan** ini ditampilkan di lingkungan untuk akun bisnis (B-to-B). Setiap kontak ditampilkan dengan bidangnya. Bidang kosong disembunyikan.
 - **Bidang** tambahan menunjukkan bidang yang tersisa dari pelanggan yang dipilih, kecuali ID.
 - **ID mencantumkan** semua ID di bawah nama entitas yang sesuai. Bidang diidentifikasi sebagai ID oleh semantiknya.
 

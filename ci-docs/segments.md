@@ -1,7 +1,7 @@
 ---
 title: Sekilas tentang segmen
 description: Ikhtisar tentang segmen dan cara membuat dan mengelolanya.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246297"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304799"
 ---
 # <a name="segments-overview"></a>Sekilas tentang segmen
 
 Segmen memungkinkan Anda mengelompokkan pelanggan berdasarkan atribut demografi, transaksional, atau perilaku. Anda dapat menggunakan segmen untuk menargetkan kampanye promosi, aktivitas penjualan, dan tindakan dukungan pelanggan untuk mencapai sasaran bisnis Anda.
 
-Profil pelanggan yang cocok dengan filter definisi segmen disebut sebagai *anggota* segmen. Beberapa [batas Layanan](/dynamics365/customer-insights/service-limits) berlaku.
+Profil pelanggan atau kontak yang cocok dengan filter definisi segmen disebut sebagai *anggota* segmen. Beberapa [batas Layanan](/dynamics365/customer-insights/service-limits) berlaku.
 
 ## <a name="create-a-segment"></a>Buat segmen
 
@@ -41,13 +41,19 @@ Pilih cara membuat segmen berdasarkan target anda audiens.
 
 # <a name="business-accounts-b-to-b"></a>[Akun bisnis (B-ke-B)](#tab/b2b)
 
-- Segmen sederhana atau kompleks dengan pembuat segmen: [Bangun segmen Anda sendiri](segment-builder.md)
+Segmen akun atau segmen kontak (pratinjau) dengan pembuat segmen: [Buat akun Anda sendiri](segment-builder.md)
+
+> [!NOTE]
+> Sebagian besar tujuan ekspor memerlukan informasi kontak untuk tujuan Pemasaran. Oleh karena itu, buat segmen kontak untuk digunakan untuk ekspor tersebut.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Mengelola segmen yang ada
 
-**Buka halaman Segmen untuk melihat segmen yang Anda buat, status dan statusnya, jumlah anggota, dan terakhir kali data disegarkan**. Anda bisa mengurutkan daftar segmen menurut kolom mana pun atau menggunakan kotak pencarian untuk menemukan segmen yang ingin Anda kelola.
+Buka **halaman Segmen** untuk melihat segmen yang Anda buat, status dan statusnya, dan terakhir kali data di-refresh. Anda bisa mengurutkan daftar segmen menurut kolom mana pun atau menggunakan kotak pencarian untuk menemukan segmen yang ingin Anda kelola.
+
+> [!TIP]
+> Di lingkungan B-ke-B, **kolom Tipe** audiens mengidentifikasi apakah segmen didasarkan pada akun atau kontak.
 
 Pilih segmen untuk melihat tindakan yang tersedia.
 
@@ -82,7 +88,7 @@ Bagian bawah berisi daftar anggota segmen.
 > [!NOTE]
 > Bidang yang muncul di daftar ini didasarkan pada atribut entitas segmen.
 >
->Daftar ini adalah pratinjau anggota segmen yang cocok dan menampilkan rekaman 100 pertama segmen Anda sehingga Anda dapat dengan cepat mengevaluasinya dan meninjau definisinya jika diperlukan. Untuk melihat semua rekaman yang cocok, [ekspor segmen](export-destinations.md).
+> Daftar ini adalah pratinjau anggota segmen yang cocok dan menampilkan rekaman 100 pertama segmen Anda sehingga Anda dapat dengan cepat mengevaluasinya dan meninjau definisinya jika diperlukan. Untuk melihat semua rekaman yang cocok, pilih **Lihat lainnya** yang membuka [**halaman Entitas**](entities.md) atau [mengekspor segmen](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Refresh Segmen
 

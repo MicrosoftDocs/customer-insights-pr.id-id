@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: Meninjau penyatuan data
       href: review-unification.md
+    - name: Membuat profil kontak terpadu
+      href: data-unification-contacts.md
     - name: Memperbarui pengaturan penyatuan
       href: data-unification-update.md
 - name: Pengayaan data

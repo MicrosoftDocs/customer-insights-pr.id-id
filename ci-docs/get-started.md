@@ -1,25 +1,25 @@
 ---
-title: Persiapan Dynamics 365 Customer Insights
+title: Memulai Dynamics 365 Customer Insights
 description: Gambaran umum Customer Insights membantu sumber daya untuk memulai dengan cepat.
-ms.reviewer: v-wendysmith
+ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
-ms.date: 04/12/2022
-ms.subservice: engagement-insights
+ms.date: 08/31/2021
+ms.subservice: audience-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: ce0336c4bf853bc81ec01c45410169a63b69eb03
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011983"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304615"
 ---
-# <a name="get-started-with-dynamics-365-customer-insights"></a>Persiapan Dynamics 365 Customer Insights
+# <a name="get-started-with-dynamics-365-customer-insights"></a>Memulai Dynamics 365 Customer Insights
 
 Customer Insights dapat membantu Anda membangun pemahaman yang lebih dalam tentang pelanggan Anda. Sambungkan data dari berbagai sumber transaksional, perilaku, dan observasional untuk membuat tampilan pelanggan 360 derajat. Gunakan wawasan ini untuk mendorong pengalaman dan proses yang berpusat pada pelanggan. Satukan data pelanggan dan manfaatkan untuk wawasan dan tindakan cerdas.
 

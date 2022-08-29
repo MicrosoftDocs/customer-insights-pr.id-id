@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245883"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304523"
 ---
 # <a name="data-enrichment-preview-overview"></a>Gambaran umum pengayaan data (pratinjau)
 
@@ -95,7 +95,7 @@ Setelah dijalankan, pengayaan dapat disegarkan pada jadwal otomatis atau disegar
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
 
-Anda dapat menemukan rincian tentang pemrosesan pengayaan, termasuk statusnya dan kemungkinan masalah saat sedang menyegarkan atau setelah penyegaran selesai. Pahami proses yang terlibat untuk me-refresh pengayaan dan berapa lama waktu yang digunakan untuk menjalankan proses. Status pengayaan didukung untuk Experian, Leadspace, HERE Technologies, Impor SFTP, dan Azure Maps.
+Anda dapat menemukan detail tentang pemrosesan pengayaan, termasuk status dan potensi masalahnya saat menyegarkan atau setelah penyegaran selesai. Pahami proses yang terlibat untuk me-refresh pengayaan dan berapa lama waktu yang digunakan untuk menjalankan proses. Status pengayaan didukung untuk Experian, Leadspace, HERE Technologies, Impor SFTP, dan Azure Maps.
 
 1. Buka **Data** > **Pengayaan**.
 1. Di tab **Pengayaan** saya, pilih status pengayaan untuk membuka panel samping.

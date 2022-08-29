@@ -1,7 +1,7 @@
 ---
-title: 'Cara: Mengelola lingkungan'
+title: Kelola lingkungan
 description: Pelajari cara mengelola lingkungan Customer Insights yang ada sebagai admin."
-ms.date: 05/31/2022
+ms.date: 08/15/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,20 +11,20 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b4a88bdb75c6e638a76c39d18647681ad4556d7
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083059"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304284"
 ---
-# <a name="how-to-manage-environments"></a>Cara: Mengelola lingkungan
+# <a name="manage-environments"></a>Kelola lingkungan
 
-[Administrator membuat](create-environment.md) dan mengelola lingkungan. Mereka dapat mengubah beberapa pengaturan di lingkungan yang ada. Bisnis, jenis, wilayah, opsi penyimpanan, dan Dataverse pengaturan diperbaiki setelah membuat lingkungan. Jika Anda ingin mengubah pengaturan ini, atur ulang lingkungan atau buat lingkungan baru.
+[Administrator membuat](create-environment.md) dan mengelola lingkungan. Mereka dapat mengubah beberapa pengaturan di lingkungan yang ada. Bisnis, jenis, wilayah, opsi penyimpanan, dan Dataverse pengaturan diperbaiki setelah membuat lingkungan. Jika Anda ingin mengubah pengaturan ini, [atur ulang lingkungan](#reset-an-existing-environment-preview) atau [buat lingkungan baru](create-environment.md).
 
 ## <a name="edit-an-existing-environment"></a>Edit lingkungan yang ada
 
-Anda dapat mengedit beberapa rincian lingkungan yang ada.
+Edit detail lingkungan yang ada seperti nama atau pengaturan lingkungan default.
 
 1. Pilih pemilih **Lingkungan** di header aplikasi.
 
@@ -32,9 +32,9 @@ Anda dapat mengedit beberapa rincian lingkungan yang ada.
 
    :::image type="content" source="media/edit-environment.png" alt-text="Ikon untuk mengedit pengaturan lingkungan.":::
 
-1. Di kotak **Edit lingkungan**, Anda dapat memperbarui pengaturan lingkungan.
+1. Di **panel Edit lingkungan**, perbarui pengaturan lingkungan.
 
-Untuk memulai dengan lingkungan baru, lihat [Membuat lingkungan baru](create-environment.md).
+1. Pilih **Tinjau dan selesaikan**, lalu **Perbarui** untuk menerapkan perubahan.
 
 ## <a name="change-the-owner-of-an-environment"></a>Mengubah pemilik lingkungan
 
@@ -44,7 +44,7 @@ Beberapa pengguna dapat memiliki izin admin tetapi hanya satu pengguna yang meru
 
 1. Pilih ikon **Edit**.
 
-1. Dalam kotak **Edit lingkungan**, buka **langkah Informasi** dasar.
+1. Di **panel Edit lingkungan**, buka **langkah Informasi** dasar.
 
 1. Di **bidang Ubah pemilik lingkungan**, pilih pemilik baru lingkungan.  
 
@@ -52,19 +52,19 @@ Beberapa pengguna dapat memiliki izin admin tetapi hanya satu pengguna yang meru
 
 ## <a name="claim-ownership-of-an-environment"></a>Mengklaim kepemilikan lingkungan
 
-Jika akun pengguna pemilik dihapus atau ditangguhkan, lingkungan tidak akan memiliki pemilik. Setiap pengguna admin dapat mengklaim kepemilikan dan menjadi pemilik baru. Mereka dapat terus memiliki lingkungan atau [mengubah kepemilikan ke admin](#change-the-owner-of-an-environment) lain.
+Jika akun pengguna pemilik dihapus atau ditangguhkan, lingkungan tidak akan memiliki pemilik. Setiap pengguna admin dapat mengklaim kepemilikan dan menjadi pemilik baru. Admin pemilik dapat terus memiliki lingkungan atau [mengubah kepemilikan ke admin](#change-the-owner-of-an-environment) lain.
 
 Untuk mengklaim kepemilikan, pilih tombol **Ambil kepemilikan** yang ditampilkan di bagian atas setiap halaman di Customer Insights saat pemilik asli meninggalkan organisasi.
 
-## <a name="reset-an-existing-environment-preview"></a>Mereset lingkungan yang ada (Pratinjau)
+## <a name="reset-an-existing-environment-preview"></a>Mengatur ulang lingkungan yang ada (pratinjau)
 
-Sebagai pemilik lingkungan, Anda dapat mengatur ulang lingkungan ke status kosong jika Anda ingin menghapus semua konfigurasi dan menghapus data yang diserap.
+Sebagai pemilik lingkungan, atur ulang lingkungan ke status kosong jika Anda ingin menghapus semua konfigurasi dan menghapus data yang diserap.
 
 1. Pilih pemilih **Lingkungan** di header aplikasi.
 
 1. Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis vertikal (&vellip;).
 
-1. Pilih opsi **Atur ulang**.
+1. Pilih **Atur Ulang (pratinjau)**.
 
    :::image type="content" source="media/reset-environment.png" alt-text="Kontrol untuk mengatur ulang lingkungan.":::
 
@@ -74,19 +74,19 @@ Sebagai pemilik lingkungan, Anda dapat mengatur ulang lingkungan ke status koson
 
 ## <a name="delete-an-existing-environment"></a>Menghapus lingkungan yang ada
 
-Sebagai pemilik lingkungan, Anda dapat menghapus lingkungan yang Anda kelola.
+Sebagai pemilik lingkungan, Anda dapat menghapusnya.
+
+> [!IMPORTANT]
+> Menghapus lingkungan tidak menghapus koneksi ke Dataverse lingkungan. Jika Anda berencana untuk menghubungkan lingkungan yang sama Dataverse ke lingkungan Customer Insights baru di masa mendatang, Anda harus [menghapus koneksi tersebut ke lingkungan Dataverse tersebut](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 1. Pilih pemilih **Lingkungan** di header aplikasi.
 
-1. Pilih lingkungan yang ingin Anda atur ulang dan pilih elipsis vertikal (&vellip;). 
+1. Pilih lingkungan yang ingin Anda hapus dan pilih elipsis vertikal (&vellip;). 
 
-1. Pilih opsi **Hapus**.
+1. Pilih **Hapus**.
 
    :::image type="content" source="media/delete-environment.png" alt-text="Kontrol untuk menghapus lingkungan.":::
 
 1. Untuk mengonfirmasikan penghapusan, masukkan nama lingkungan dan pilih **Hapus**.
-
-> [!IMPORTANT]
-> Menghapus lingkungan tidak menghapus koneksi ke Dataverse lingkungan. Jika Anda berencana untuk menghubungkan lingkungan yang sama Dataverse ke lingkungan Customer Insights baru di masa mendatang, Anda harus menghapus koneksi tersebut Pelajari cara [menghapus koneksi yang ada ke Dataverse lingkungan](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

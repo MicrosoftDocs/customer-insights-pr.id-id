@@ -1,9 +1,9 @@
 ---
 title: Pemetaan semantik (pratinjau)
 description: Ikhtisar pemetaan semantis dan cara menggunakannya.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183635"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303880"
 ---
 # <a name="semantic-mappings-preview"></a>Pemetaan semantik (pratinjau)
 
-Pemetaan semantis memungkinkan Anda memetakan data non-aktivitas ke skema yang telah ditentukan sebelumnya. Skema ini membantu Customer Insights lebih memahami atribut data Anda. Pemetaan semantik dan data yang disediakan memungkinkan wawasan dan fitur baru di Customer Insights. Untuk memetakan data aktivitas Anda ke skema, tinjau dokumentasi [aktivitas](activities.md).
+> [!NOTE]
+> Halaman **pemetaan** Semantik hanya tersedia untuk lingkungan bisnis (B-ke-B) di mana profil kontak telah dibuat menggunakan halaman ini. Anda dapat terus membuat dan mengelola profil kontak individu menggunakan **halaman Pemetaan semantik**. Atau, [satukan data](data-unification-contacts.md) kontak Anda untuk menghapus duplikat, mengidentifikasi kecocokan di seluruh entitas, dan membuat satu profil kontak terpadu. Anda kemudian dapat menggunakan profil kontak terpadu untuk membuat aktivitas tingkat kontak.
 
-**Pemetaan semantis saat ini diaktifkan untuk lingkungan berdasarkan akun bisnis**. *ContactProfile* adalah satu-satunya jenis pemetaan semantik yang saat ini tersedia di Customer Insights.
+Pemetaan semantis memungkinkan Anda memetakan data non-aktivitas ke skema yang telah ditentukan sebelumnya. Skema ini membantu Customer Insights untuk lebih memahami atribut data Anda. Pemetaan semantik dan data yang disediakan memungkinkan wawasan dan fitur baru di Customer Insights. Untuk memetakan data aktivitas Anda ke skema, tinjau dokumentasi [aktivitas](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Mendefinisikan pemetaan entitas semantis ContactProfile
 
@@ -87,41 +88,5 @@ Pilih pemetaan semantik untuk melihat tindakan yang tersedia.
 - **Refresh** pemetaan semantik untuk menyertakan data terbaru. Menyegarkan pemetaan semantis tertentu akan me-refresh semua pemetaan semantis dari jenis yang sama.
 - **Ganti nama** pemetaan semantik. Pilih **Simpan**.
 - **Hapus** pemetaan semantik. Untuk menghapus lebih dari satu pemetaan semantik sekaligus, pilih pemetaan semantik dan ikon hapus. Klik **Hapus**, untuk mengonfirmasi penghapusan tersebut.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Menggunakan pemetaan entitas semantik ContactProfile untuk membuat aktivitas tingkat kontak
-
-Setelah membuat *pemetaan entitas semantik ContactProfile*, Anda dapat menangkap aktivitas kontak. Ini memungkinkan Anda untuk melihat di linimasa aktivitas untuk akun kontak mana yang bertanggung jawab atas setiap aktivitas. Sebagian besar langkah mengikuti konfigurasi pemetaan aktivitas yang khas.
-
-   > [!NOTE]
-   > Agar aktivitas tingkat kontak berfungsi, Anda harus memiliki **atribut AccountID** dan **ContactID** untuk setiap rekaman dalam data aktivitas Anda.
-
-1. [*Tentukan pemetaan* entitas semantik ContactProfile](#define-a-contactprofile-semantic-entity-mapping) dan jalankan pemetaan semantik.
-
-1. **Buka Aktivitas** > **Data**.
-
-1. Pilih **Tambahkan Aktivitas** untuk membuat aktivitas baru.
-
-1. Beri nama aktivitas, pilih entitas aktivitas sumber, dan pilih kunci utama entitas aktivitas.
-
-1. **Pada langkah Relasi**, buat hubungan tidak langsung antara data sumber aktivitas Anda ke akun, menggunakan data kontak Anda sebagai entitas perantara. Untuk informasi selengkapnya, lihat [jalur](relationships.md#relationship-paths) hubungan langsung dan tidak langsung.
-   - Contoh hubungan untuk aktivitas yang disebut *Pembelian*:
-      - **Membeli Data** > **Kontak Data** Aktivitas Sumber pada atribut **ContactID**
-      - **Data** > **Akun Data** Kontak pada atribut **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh pengaturan hubungan.":::
-
-1. Setelah menyiapkan Relasi, pilih **Berikutnya** dan selesaikan konfigurasi pemetaan aktivitas Anda. Untuk langkah-langkah terperinci tentang pembuatan aktivitas, lihat [menentukan aktivitas](activities.md).
-
-1. Jalankan pemetaan aktivitas Anda.
-
-1. Setelah pemetaan aktivitas tingkat kontak berjalan, pilih **Pelanggan**. Aktivitas tingkat kontak ditampilkan di linimasa pelanggan Anda.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Hasil akhir setelah mengonfigurasi aktivitas kontak":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Pemfilteran garis waktu aktivitas tingkat kontak
-
-Linimasa aktivitas untuk pelanggan Anda mencakup ID atau nama mereka, tergantung pada konfigurasi ContactProfile *Anda*, untuk aktivitas yang mereka tindak lanjuti. Filter aktivitas menurut kontak di garis waktu untuk melihat kontak tertentu yang Anda minati. Untuk menampilkan semua aktivitas yang tidak ditetapkan ke kontak tertentu, pilih **Aktivitas yang tidak dipetakan ke Kontak**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Opsi pemfilteran tersedia untuk aktivitas tingkat Kontak.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

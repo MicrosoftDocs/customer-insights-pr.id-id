@@ -1,7 +1,7 @@
 ---
 title: Gambaran umum Ekspor (pratinjau)
 description: Kelola ekspor untuk berbagi data.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245331"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304063"
 ---
 # <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245331"
 
 Ada dua jenis utama ekspor:  
 
-- **Ekspor data keluar**: ekspor semua jenis entitas yang tersedia di Customer Insights. Entitas yang Anda pilih untuk ekspor akan diekspor dengan semua bidang data, metadata, skema, dan rincian pemetaan.
-- **Ekspor segmen**: mengekspor entitas segmen dari Customer Insights. Segmen mewakili daftar profil pelanggan. Saat mengonfigurasi ekspor, Anda memilih bidang data yang disertakan, bergantung pada sistem target tempat Anda mengekspor data.
+- **Ekspor data keluar memungkinkan** Anda mengekspor semua jenis entitas yang tersedia di Customer Insights. Entitas yang Anda pilih untuk ekspor akan diekspor dengan semua bidang data, metadata, skema, dan rincian pemetaan.
+- **Ekspor segmen memungkinkan** Anda mengekspor entitas segmen dari Customer Insights. Untuk konsumen individu (B-to-C), segmen mewakili daftar profil pelanggan. Untuk bisnis (B-to-B), [segmen dapat mewakili daftar akun atau kontak](segment-builder.md#create-a-new-segment-with-segment-builder). Saat mengonfigurasi ekspor, Anda memilih bidang data yang disertakan, bergantung pada sistem target tempat Anda mengekspor data.
 
 ### <a name="export-segments"></a>Ekspor segmen
 
@@ -38,14 +38,15 @@ Sebagian besar opsi ekspor mendukung kedua jenis lingkungan tersebut. Mengekspor
 **Segmentasi ekspor di lingkungan untuk konsumen perorangan (B to C)**  
 - Segmen dalam konteks lingkungan untuk pelanggan individual dibangun pada entitas *profil pelanggan terpadu*. Setiap segmen yang memenuhi persyaratan sistem target (contoh: alamat email) dapat diekspor.
 
-**lingkungan ekspor Segmentasi untuk akun bisnis (B to B)**  
-- Segmen dalam konteks lingkungan untuk akun bisnis dibangun pada entitas *akun*. Untuk mengekspor segmen akun sebagaimana adanya, sistem target harus mendukung segmen akun murni. Hal ini terjadi untuk [LinkedIn](export-linkedin-ads.md) bila Anda memilih pilihan **perusahaan** saat menentukan ekspor.
-- Semua sistem target lainnya memerlukan bidang dari entitas kontak. Untuk memastikan segmen akun dapat mengambil data dari kontak terkait, definisi segmen Anda harus memproyeksikan atribut entitas kontak. Pelajari lebih lanjut tentang cara [mengkonfigurasi segmen dan atribut proyek](segment-builder.md).
+**Ekspor segmen di lingkungan untuk akun bisnis (B-ke-B)**  
+- Segmen dalam konteks lingkungan untuk akun bisnis dibangun di atas *entitas akun* atau *entitas kontak*. Untuk mengekspor segmen akun sebagaimana adanya, sistem target harus mendukung segmen akun murni. Hal ini terjadi untuk [LinkedIn](export-linkedin-ads.md) bila Anda memilih pilihan **perusahaan** saat menentukan ekspor.
+- Semua sistem target lainnya memerlukan bidang dari entitas kontak.
+- Dengan dua jenis segmen (kontak dan akun), Customer Insights secara otomatis mengidentifikasi jenis segmen mana yang memenuhi syarat untuk diekspor berdasarkan sistem target. Misalnya, untuk sistem target yang berfokus pada kontak seperti Mailchimp, Customer Insights hanya memungkinkan Anda memilih segmen kontak untuk diekspor.
 
 **Batas pada ekspor segmen**  
 - Sistem target pihak ketiga dapat membatasi jumlah profil pelanggan yang dapat Anda ekspor. 
-- Untuk pelanggan individual, Anda akan melihat jumlah aktual anggota segmen saat memilih segmen untuk ekspor. Anda akan mendapatkan peringatan jika segmen terlalu besar. 
-- Untuk akun bisnis, Anda akan melihat jumlah akun dalam satu segmen; namun, jumlah kontak yang mungkin di diproyeksikan tidak ditampilkan. Dalam kasus tertentu, hal ini dapat mengakibatkan segmen yang diekspor benar-benar berisi profil pelanggan yang lebih banyak daripada yang dapat diterima sistem target. Jika batas sistem target terlampaui, ekspor dilewati.
+- Untuk pelanggan individual, Anda akan melihat jumlah aktual anggota segmen saat memilih segmen untuk ekspor. Anda akan mendapatkan peringatan jika suatu segmen terlalu besar. 
+- Untuk akun bisnis, Anda akan melihat jumlah akun atau kontak tergantung pada segmennya. Anda akan mendapatkan peringatan jika segmennya terlalu besar. Melebihi batas hasil sistem target akan melewatkan ekspor.
 
 ## <a name="set-up-a-new-export"></a>Konfigurasikan ekspor baru
 
@@ -110,6 +111,20 @@ Untuk mengekspor data tanpa menunggu refresh terjadwal, buka **Data** > **Ekspor
 
 - Untuk menjalankan semua ekspor, pilih **Jalankan semua** di bilah perintah. Hanya ekspor yang memiliki jadwal aktif yang dijalankan. Untuk menjalankan ekspor yang tidak aktif, jalankan satu ekspor.
 - Untuk menjalankan satu ekspor, pilih ekspor dalam daftar, lalu pilih **Jalankan** di bilah perintah.
+
+## <a name="troubleshooting"></a>Mengatasi Masalah
+
+### <a name="segment-not-eligible-for-export"></a>Segmen yang tidak memenuhi syarat untuk diekspor
+
+**Masalah** Dalam lingkungan akun bisnis, ekspor Anda gagal dengan pesan kesalahan: "Segmen berikut tidak memenuhi syarat untuk tujuan ekspor ini: '{nama segmen}'. Silakan pilih hanya segmen jenis ContactProfile dan coba lagi."
+
+**Lingkungan Resolution** Customer Insights untuk akun bisnis diperbarui untuk mendukung segmen kontak selain segmen akun. Karena perubahan itu, ekspor yang membutuhkan detail kontak hanya berfungsi dengan segmen berdasarkan kontak.
+
+1. [Buat segmen berdasarkan kontak](segment-builder.md) yang cocok dengan segmen yang Anda gunakan sebelumnya.
+
+1. Setelah segmen kontak itu dijalankan, edit ekspor masing-masing dan pilih segmen baru.
+
+1. Pilih **Simpan** untuk menyimpan konfigurasi atau **Simpan dan jalankan** untuk menguji ekspor ini segera.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

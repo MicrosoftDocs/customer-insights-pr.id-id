@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213631"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304477"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Menghapus duplikat sebelum menyatukan data
 
@@ -47,7 +47,7 @@ Jika Anda memperkaya entitas di tingkat sumber data untuk membantu meningkatkan 
 
 1. **Pada halaman Rekaman duplikat**, pilih entitas dan pilih **Tambahkan aturan** untuk menentukan aturan deduplikasi.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Cuplikan layar halaman Catatan duplikat dengan Perlihatkan lebih disorot":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Cuplikan layar halaman Rekaman duplikat dengan entitas disorot dan Tambahkan aturan ditampilkan"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. Di **panel Tambahkan aturan**, masukkan informasi berikut ini:
       - **Pilih bidang**: Pilih dari daftar bidang yang tersedia dari entitas yang ingin Anda periksa duplikatnya. Pilih bidang yang mungkin unik untuk setiap pelanggan. Contohnya, alamat email, atau kombinasi nama, kota, dan nomor telepon.
@@ -80,9 +80,9 @@ Jika Anda memperkaya entitas di tingkat sumber data untuk membantu meningkatkan 
       - **Paling terisi**: mengidentifikasi rekaman dengan bidang atribut yang paling banyak diisi sebagai rekaman pemenang. Ini adalah pilihan penggabungan default.
       - **Terbaru** : mengidentifikasi rekaman pemenang berdasarkan keterkinian. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
       - **Paling lama** : mengidentifikasi rekaman pemenang berdasarkan keterkinian terlama. Memerlukan tanggal atau bidang numerik untuk menentukan keterkinian.
-      
+
       Jika seri, rekor pemenang adalah yang memiliki MAX(PK) atau nilai kunci utama yang lebih besar.
-      
+
    1. Secara opsional, untuk menentukan preferensi gabungan pada atribut individual entitas, pilih **Tingkat Lanjut** di bagian bawah panel. Misalnya, Anda dapat memilih untuk menyimpan email terbaru DAN alamat terlengkap dari catatan yang berbeda. Perluas entitas untuk melihat semua atributnya dan tentukan opsi mana yang akan digunakan untuk atribut individual. Jika Anda memilih opsi berbasis kebaruan, Anda juga perlu menentukan bidang tanggal/waktu yang menentukan kebaruan.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Panel preferensi gabungan tingkat lanjut memperlihatkan email terbaru dan alamat lengkap":::
@@ -96,18 +96,5 @@ Jika Anda memperkaya entitas di tingkat sumber data untuk membantu meningkatkan 
 
 > [!div class="nextstepaction"]
 > [Langkah berikutnya untuk beberapa entitas: Kondisi yang cocok](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Output deduplikasi sebagai entitas
-
-Proses deduplikasi menciptakan entitas deduplikasi baru untuk masing-masing entitas sumber. Entitas ini dapat ditemukan bersama dengan **ConflationMatchPairs:CustomerInsights** di bagian **Sistem** di halaman **Entitas**, dengan nama **Deduplication_DataSource_Entity**.
-
-Entitas output deduplikasi berisi informasi berikut:
-
-- ID/Kunci
-  - Bidang Kunci utama dan ID Alternatif. Bidang ID alternatif terdiri dari semua ID alternatif yang diidentifikasi untuk rekaman.
-  - Bidang Deduplication_GroupId menunjukkan grup atau kluster yang diidentifikasi dalam entitas yang mengelompokkan semua rekaman serupa berdasarkan bidang deduplikasi yang ditentukan. Ini digunakan untuk tujuan pemrosesan sistem. Jika tidak ada aturan deduplikasi manual yang ditentukan dan aturan deduplikasi yang didefinisikan sistem berlaku, Anda tidak dapat menemukan bidang ini dalam entitas output deduplikasi.
-  - Deduplication_WinnerId: Bidang ini berisi ID pemenang dari grup atau kluster yang teridentifikasi. Jika Deduplication_WinnerId sama dengan nilai kunci Utama untuk rekaman, berarti rekaman adalah rekaman pemenang.
-- Bidang yang digunakan untuk mendefinisikan aturan deduplikasi.
-- Bidang Aturan dan Skor untuk menunjukkan aturan deduplikasi mana yang diterapkan dan skor yang dihasilkan oleh algoritme yang cocok.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

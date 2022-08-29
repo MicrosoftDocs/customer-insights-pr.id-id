@@ -1,11 +1,11 @@
 ---
-title: Memperbarui pengaturan penyatuan
-description: Perbarui aturan duplikat, aturan pencocokan, atau bidang terpadu dalam pengaturan penyatuan.
-ms.date: 06/01/2022
+title: Memperbarui pengaturan penyatuan pelanggan, akun, atau kontak
+description: Perbarui aturan duplikat, aturan kecocokan, atau bidang terpadu di pengaturan penyatuan pelanggan atau akun.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245598"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304339"
 ---
-# <a name="update-the-unification-settings"></a>Memperbarui pengaturan penyatuan
+# <a name="update-unification-settings"></a>Memperbarui pengaturan penyatuan
 
 Untuk meninjau atau mengubah pengaturan penyatuan apa pun setelah profil terpadu dibuat, lakukan langkah-langkah berikut.
 
 1. **Buka Data** > **Unify**.
 
-   :::image type="content" source="media/m3_unified.png" alt-text="Cuplikan layar halaman Penyatuan Data setelah data disatukan.":::
+   Untuk pelanggan individu (B-to-C), **halaman Satukan menampilkan** jumlah profil dan ubin pelanggan terpadu untuk setiap langkah penyatuan.
+
+   :::image type="content" source="media/m3_unified.png" alt-text="Cuplikan layar halaman Penyatuan Data setelah data disatukan." lightbox="media/m3_unified.png":::
+
+   Untuk akun bisnis (B-to-B), **halaman Satukan menampilkan** jumlah profil dan ubin akun terpadu untuk setiap langkah penyatuan akun. Jika kontak disatukan, jumlah profil kontak dan ubin terpadu untuk setiap langkah penyatuan kontak ditampilkan. Pilih petak yang sesuai di bawah **Satukan Akun** atau **Satukan Kontak (pratinjau)** bergantung pada apa yang ingin Anda perbarui.
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="Cuplikan layar halaman Penyatuan Data setelah data akun dan kontak disatukan." lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > Petak **peta Kondisi** yang cocok hanya ditampilkan jika beberapa entitas dipilih.
@@ -36,14 +42,14 @@ Untuk meninjau atau mengubah pengaturan penyatuan apa pun setelah profil terpadu
    - [Duplikat rekaman](#manage-deduplication-rules) untuk mengelola aturan deduplikasi atau menggabungkan preferensi.
    - [Kondisi yang cocok](#manage-match-rules) untuk memperbarui aturan yang cocok di dua entitas atau lebih.
    - [Bidang](#manage-unified-fields) pelanggan terpadu untuk menggabungkan atau mengecualikan bidang. Anda juga dapat mengelompokkan profil terkait ke dalam kluster.
+   - [Bidang semantik](#manage-semantic-fields-for-unified-contacts) untuk mengelola jenis semantik untuk bidang kontak terpadu.
+   - [Relasi](#manage-contact-and-account-relationships) untuk mengelola hubungan kontak ke akun.
 
 1. Setelah membuat perubahan, pilih opsi berikutnya:
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="Cuplikan layar halaman Penyatuan Data dengan opsi Satukan yang disorot.":::
-
    - [Jalankan kondisi](#run-matching-conditions) pencocokan untuk mengevaluasi kualitas kondisi pencocokan Anda dengan cepat (deduplikasi dan aturan pertandingan) tanpa memperbarui profil terpadu. Opsi **Jalankan kondisi yang cocok saja** tidak ditampilkan untuk satu entitas.
-   - [Satukan profil](#run-updates-to-the-unified-customer-profile) pelanggan untuk menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu tanpa memengaruhi dependensi (seperti pengayaan, segmen, atau tindakan). Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](schedule-refresh.md) refresh.
-   - [Satukan profil dan dependensi](#run-updates-to-the-unified-customer-profile) pelanggan untuk menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu dan semua dependensi (seperti pengayaan, segmen, atau tindakan). Semua proses dijalankan kembali secara otomatis.
+   - [Satukan profil](#run-updates-to-the-unified-profile) untuk menjalankan kondisi yang cocok dan memperbarui entitas profil terpadu tanpa memengaruhi dependensi (seperti pengayaan, segmen, atau pengukuran). Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](schedule-refresh.md) refresh.
+   - [Satukan profil dan dependensi](#run-updates-to-the-unified-profile) untuk menjalankan kondisi yang cocok, memperbarui entitas profil terpadu, dan memperbarui semua dependensi (seperti pengayaan, segmen, atau pengukuran). Semua proses dijalankan kembali secara otomatis. Di B-to-B, penyatuan dijalankan pada akun dan entitas kontak yang memperbarui profil terpadu.
 
 ## <a name="edit-source-fields"></a>Mengedit bidang sumber
 
@@ -55,11 +61,11 @@ Anda tidak dapat menghapus atribut atau entitas jika sudah disatukan.
 
    Jumlah bidang yang dipetakan dan tidak dipetakan ditampilkan.
 
-1. Pilih **Pilih entitas dan bidang** untuk menambahkan atribut atau entitas lain. Gunakan pencarian atau gulir untuk mencari dan memilih atribut dan entitas yang diinginkan. Pilih **Terapkan**.
+1. Untuk menambahkan atribut atau entitas lain, pilih **Pilih entitas dan bidang**.
 
-1. Secara opsional, Anda dapat mengubah kunci utama untuk entitas, jenis atribut, dan mengaktifkan atau menonaktifkan **Pemetaan** cerdas. Untuk informasi selengkapnya, lihat [Memilih kunci utama dan tipe semantik untuk atribut](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Secara opsional, Anda dapat mengubah kunci utama untuk entitas, jenis atribut, dan mengaktifkan atau menonaktifkan **Pemetaan** cerdas. Untuk informasi selengkapnya, lihat [Memilih bidang](map-entities.md) sumber.
 
-1. Pilih **Berikutnya** untuk membuat perubahan pada aturan deduplikasi, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-the-unification-settings) penyatuan.
+1. Pilih **Berikutnya** untuk membuat perubahan pada aturan deduplikasi, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan.
 
 ## <a name="manage-deduplication-rules"></a>Mengelola aturan deduplikasi
 
@@ -69,7 +75,7 @@ Anda tidak dapat menghapus atribut atau entitas jika sudah disatukan.
 
    Jumlah rekaman duplikat yang ditemukan ditampilkan di bawah **Duplikat**. Kolom **Rekaman dideduplicated** memperlihatkan entitas mana yang memiliki rekaman duplikat dan persentase rekaman duplikat.
 
-1. Jika Anda menambahkan entitas yang diperkaya, pilih **Gunakan entitas** yang diperkaya. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
+1. Untuk menggunakan entitas yang diperkaya, pilih **Gunakan entitas** yang diperkaya. Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
 
 1. Untuk mengelola aturan deduplikasi, pilih salah satu opsi berikut:
    - **Membuat aturan** baru: Pilih **Tambahkan aturan** di bawah entitas yang sesuai. Untuk informasi selengkapnya, lihat [Menentukan aturan](remove-duplicates.md#define-deduplication-rules) deduplikasi.
@@ -83,11 +89,9 @@ Anda tidak dapat menghapus atribut atau entitas jika sudah disatukan.
    1. Pilih **Edit preferensi** gabungan dan ubah **opsi Rekam untuk disimpan**.
    1. Untuk mengubah preferensi gabungan pada atribut individual entitas, pilih **Tingkat Lanjut** dan buat perubahan yang diperlukan.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Cuplikan layar preferensi gabungan tingkat lanjut memperlihatkan email terbaru dan alamat terlengkap":::
-
    1. Pilih **Selesai**.
 
-1. Pilih **Berikutnya** untuk membuat perubahan pada kondisi yang cocok, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-the-unification-settings) penyatuan.
+1. Pilih **Berikutnya** untuk membuat perubahan pada kondisi yang cocok, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan.
 
 ## <a name="manage-match-rules"></a>Kelola aturan kecocokan
 
@@ -98,13 +102,13 @@ Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kec
    :::image type="content" source="media/m3_match_edit.png" alt-text="Cuplikan layar halaman Cocokkan aturan dan ketentuan dengan statistik." lightbox="media/m3_match_edit.png":::
 
    Halaman ini menampilkan urutan kecocokan dan aturan yang ditentukan serta statistik berikut:
-   - **Rekaman sumber unik** menampilkan jumlah rekaman sumber individual yang diproses dalam penjalanan kecocokan terakhir.
-   - **Rekaman yang cocok dan tidak cocok** akan menyorot jumlah rekaman unik yang tersisa setelah memproses aturan kecocokan.
-   - **Hanya Rekaman yang cocok** menampilkan jumlah kecocokan di semua pasangan kecocokan.
+   - **Catatan** sumber unik menunjukkan jumlah rekaman sumber individual yang diproses dalam eksekusi pertandingan terakhir.
+   - **Catatan yang cocok dan tidak** cocok menyoroti berapa banyak catatan unik yang tersisa setelah memproses aturan pencocokan.
+   - **Catatan yang cocok hanya** menampilkan jumlah pertandingan di semua pasangan pertandingan Anda.
 
-1. Untuk melihat hasil semua aturan dan skornya, pilih **Tampilkan eksekusi** terakhir. Hasilnya ditampilkan, termasuk ID kontak alternatif. Anda dapat mengunduh hasilnya.
+1. Untuk melihat hasil semua aturan dan skornya, pilih **Tampilkan eksekusi** terakhir. Hasil ditampilkan, termasuk ID kontak alternatif. Anda dapat mengunduh hasilnya.
 
-1. Untuk melihat hasil dan skor aturan tertentu, pilih aturan lalu **Pratinjau**. Hasilnya ditampilkan. Anda dapat mengunduh hasilnya.
+1. Untuk melihat hasil dan skor aturan tertentu, pilih aturan lalu **Pratinjau**. Hasil ditampilkan. Anda dapat mengunduh hasilnya.
 
 1. Untuk melihat hasil kondisi tertentu pada aturan, pilih aturan lalu **Edit**. Pada panel Edit, pilih **Pratinjau** di bawah kondisi. Anda dapat mengunduh hasilnya.
 
@@ -120,7 +124,7 @@ Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kec
    - **Menduplikasi aturan**: Pilih aturan lalu **Duplikat** untuk membuat aturan serupa dengan modifikasi.
    - **Menghapus aturan**: Pilih aturan lalu **Hapus**.
 
-1. Pilih **Berikutnya** untuk membuat perubahan pada bidang terpadu, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-the-unification-settings) penyatuan.
+1. Pilih **Berikutnya** untuk membuat perubahan pada bidang terpadu, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan.
 
 ## <a name="manage-unified-fields"></a>Mengelola bidang terpadu
 
@@ -130,7 +134,28 @@ Anda dapat mengkonfigurasi ulang dan menyempurnakan sebagian besar parameter kec
 
 1. Tinjau bidang gabungan dan dikecualikan, dan buat perubahan apa pun sesuai kebutuhan. Tambahkan atau edit kunci CustomerID atau profil grup ke dalam kluster. Untuk informasi selengkapnya, lihat [Menyatukan bidang](merge-entities.md) pelanggan.
 
-1. Pilih **Berikutnya** untuk meninjau pengaturan penyatuan dan [memperbarui profil dan dependensi](#run-updates-to-the-unified-customer-profile) terpadu, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-the-unification-settings) penyatuan untuk membuat lebih banyak perubahan.
+1. Untuk pelanggan atau akun, pilih **Berikutnya** untuk meninjau dan [memperbarui profil dan dependensi](#run-updates-to-the-unified-profile) terpadu. Atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan untuk membuat lebih banyak perubahan.
+
+   Untuk kontak, pilih **Berikutnya** untuk mengelola bidang semantik. Atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan untuk membuat lebih banyak perubahan.
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>Mengelola bidang semantik untuk kontak terpadu
+
+1. Pilih **Edit** pada petak **bidang** Semantik.
+
+1. Untuk mengubah tipe semantik untuk bidang terpadu, pilih tipe baru. Untuk informasi selengkapnya, lihat [Menentukan bidang semantik untuk kontak](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts) terpadu.
+
+1. Pilih **Berikutnya** untuk mengelola akun dan hubungan kontak, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan untuk membuat lebih banyak perubahan.
+
+## <a name="manage-contact-and-account-relationships"></a>Mengelola kontak dan Relasi akun
+
+1. Pilih **Edit** pada petak **Relasi**.
+
+1. Untuk mengubah hubungan kontak dan akun, ubah salah satu informasi berikut:
+
+   - **Kunci asing dari entitas** kontak: Pilih atribut yang menghubungkan entitas kontak Anda ke akun.
+   - **Untuk entitas** akun: Pilih entitas akun yang terkait dengan kontak.
+
+1. Pilih **Berikutnya** untuk meninjau pengaturan penyatuan dan [memperbarui profil dan dependensi](#run-updates-to-the-unified-profile) terpadu, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan untuk membuat lebih banyak perubahan.
 
 ## <a name="run-matching-conditions"></a>Menjalankan kondisi yang cocok
 
@@ -148,18 +173,15 @@ Jalankan kondisi pencocokan hanya menjalankan aturan deduplikasi dan kecocokan d
 
 1. Untuk membuat perubahan, lihat [Mengelola aturan](#manage-deduplication-rules) deduplikasi atau [Mengelola aturan](#manage-match-rules) kecocokan.
 
-1. Jalankan proses pencocokan lagi atau [jalankan pembaruan ke profil](#run-updates-to-the-unified-customer-profile) pelanggan.
+1. Jalankan proses pencocokan lagi atau [jalankan pembaruan ke profil](#run-updates-to-the-unified-profile).
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>Menjalankan pembaruan ke profil pelanggan terpadu
+## <a name="run-updates-to-the-unified-profile"></a>Menjalankan pembaruan ke profil terpadu
 
-1. Dari halaman **Penyatuan** > **Data**, pilih:
+- Untuk menjalankan kondisi yang cocok dan memperbarui entitas *profil terpadu tanpa* memengaruhi dependensi (seperti kartu pelanggan, pengayaan, segmen, atau pengukuran), pilih **Satukan profil** pelanggan. Untuk akun, pilih **Satukan akun** > **Satukan akun Satukan profil**. Untuk kontak, pilih **Satukan kontak (pratinjau)** > **Satukan profil**. Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](schedule-refresh.md) refresh.
+- Untuk menjalankan kondisi yang cocok, perbarui profil terpadu, dan jalankan semua dependensi, pilih **Satukan profil dan dependensi** pelanggan. Semua proses dijalankan kembali secara otomatis. Untuk akun dan kontak, pilih **Satukan akun** > **Satukan akun Satukan profil dan dependensi**. Kondisi yang cocok dijalankan untuk akun dan kontak yang memperbarui profil terpadu dan semua dependensi lainnya dijalankan.
 
-   - **Satukan profil** pelanggan: Menjalankan kondisi yang cocok dan memperbarui entitas profil pelanggan terpadu tanpa memengaruhi dependensi (seperti pengayaan, segmen, atau pengukuran). Proses dependen tidak dijalankan, tetapi akan disegarkan seperti [yang ditentukan dalam jadwal](schedule-refresh.md) refresh.
+Semua petak kecuali **bidang** Sumber memperlihatkan **Antrean** atau **Refresh**.
 
-   - **Satukan profil dan dependensi** pelanggan: Menjalankan kondisi yang cocok dan memperbarui profil terpadu dan semua dependensi. Semua proses dijalankan kembali secara otomatis. Setelah semua proses hilir selesai, profil pelanggan mencerminkan data yang diperbarui.
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   Petak **bidang Rekaman** duplikat, **Kondisi** pencocokan, dan **Bidang** pelanggan terpadu memperlihatkan **status Antri** atau **Refresh**.
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-Hasil tampilan eksekusi yang berhasil dijalankan pada **halaman Satukan Satukan** yang menunjukkan jumlah profil pelanggan terpadu.
+Hasil tampilan eksekusi yang berhasil dijalankan pada **halaman Satukan Satukan** yang menunjukkan jumlah profil terpadu.

@@ -1,19 +1,19 @@
 ---
 title: Mengekspor segmen ke LinkedIn Ads (pratinjau)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196812"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304707"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Mengekspor segmen ke LinkedIn Ads (pratinjau)
 
@@ -24,7 +24,7 @@ Ekspor segmen profil pelanggan terpadu ke Iklan LinkedIn untuk membuat audiens y
 - Akun [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) dan kredensial administrator yang sesuai.
 - ID [LinkedIn Campaign Manager Akun](https://www.linkedin.com/help/lms/answer/a424270).
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
-- Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
+- Segmen yang diekspor memerlukan setidaknya satu bidang tertentu tergantung apakah Anda memilih [penargetan kontak atau](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) penargetan [perusahaan](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) di LinkedIn. Bidang yang mungkin tercantum dalam **langkah Pencocokan** data saat [mengonfigurasi ekspor](#configure-an-export).
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
@@ -37,7 +37,7 @@ Ekspor segmen profil pelanggan terpadu ke Iklan LinkedIn untuk membuat audiens y
 
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **Iklan LinkedIn**.
+1. Pilih **Tambahkan koneksi** dan pilih **Iklan** LinkedIn.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 

@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
+ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082492"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "9305608"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Daftar untuk uji Dynamics 365 Customer Insights coba gratis
 
@@ -40,6 +40,6 @@ Lingkungan uji coba mencakup fitur yang sama seperti versi berbayar. Tautan di b
 
 ## <a name="additional-resources"></a>Sumber daya tambahan
 
-- [Jelajahi pelatihan di Microsoft Learn](/learn/browse/?filter-products=dynamics-dynamics-cust-insights)
+- [Jelajahi jalur dan modul pembelajaran untuk Customer Insights](/learn/browse/?products=dynamics-cust-insights)
 - [Tanya Jawab Uji Coba](trial-faq.md)
 - [Rincian produk Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)
