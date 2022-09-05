@@ -1,27 +1,27 @@
 ---
 title: Contoh kueri OData untuk API Customer Insights
 description: Contoh yang umum digunakan untuk Open Data Protocol (OData) untuk mengkueri API Customer Insights untuk meninjau data.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121566"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387206"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Contoh kueri OData untuk API Customer Insights
 
 Open Data Protocol (OData) adalah protokol akses data yang dibangun di atas protokol inti seperti HTTP. Ini menggunakan metodologi yang diterima secara umum seperti REST untuk web. Ada berbagai macam library dan tools yang bisa digunakan untuk mengkonsumsi jasa OData.
 
-Artikel ini mencantumkan beberapa contoh kueri yang sering diminta untuk membantu Anda membangun implementasi Anda sendiri berdasarkan [API Customer Insights](apis.md).
+Untuk membantu Anda membangun implementasi Anda sendiri berdasarkan [API](apis.md) Customer Insights, tinjau beberapa contoh kueri yang sering diminta.
 
-Anda harus memodifikasi sampel kueri untuk membuatnya berfungsi pada lingkungan target: 
+Ubah sampel kueri untuk membuatnya berfungsi di lingkungan target:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` di mana {instanceId} GUID lingkungan Customer Insights yang ingin Anda tanyakan. Operasi [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) memungkinkan Anda menemukan akses yang {InstanceId} Anda miliki.
 - {CID}: GUID dari catatan pelanggan terpadu. Contoh:`ce759201f786d590bf2134bff576c369`.
@@ -31,27 +31,27 @@ Anda harus memodifikasi sampel kueri untuk membuatnya berfungsi pada lingkungan 
 
 ## <a name="customer"></a>yang terhormat
 
-Tabel berikut berisi sekumpulan kueri sampel untuk *entitas Pelanggan*.
+Contoh kueri untuk *entitas Pelanggan* .
 
 |Jenis kueri |Contoh  | Catatan  |
 |---------|---------|---------|
 |ID pelanggan tunggal     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Kunci alternatif    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Kunci alternatif tetap ada di entitas pelanggan terpadu       |
+|kunci alternatif    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Kunci alternatif tetap ada di entitas pelanggan terpadu       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Pada    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Kunci alternatif + Dalam   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|kunci alternatif + Dalam   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Pencarian  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Mengembalikan 10 hasil teratas untuk string pencarian      |
 |Keanggotaan segmen  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Mengembalikan jumlah baris yang telah ditetapkan sebelumnya dari entitas segmentasi.      |
 |Keanggotaan segmen untuk pelanggan | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Mengembalikan profil pelanggan jika mereka adalah anggota segmen tertentu     |
 
 ## <a name="unified-activity"></a>Aktivitas terpadu
 
-Tabel berikut ini berisi sekumpulan kueri sampel untuk *entitas UnifiedActivity*.
+Contoh kueri untuk *entitas UnifiedActivity* .
 
 |Jenis kueri |Contoh  | Catatan  |
 |---------|---------|---------|
 |Aktivitas CID     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Mencantumkan aktivitas profil pelanggan tertentu |
-|Jangka waktu Aktivitas    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Aktivitas profil pelanggan dalam jangka waktu       |
+|jangka waktu Aktivitas    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Aktivitas profil pelanggan dalam jangka waktu       |
 |Jenis aktivitas    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
 |Aktivitas oleh nama tampilan     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Penyortiran aktivitas    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Mengurutkan aktivitas naik atau turun       |
@@ -59,7 +59,7 @@ Tabel berikut ini berisi sekumpulan kueri sampel untuk *entitas UnifiedActivity*
 
 ## <a name="other-examples"></a>Contoh lainnya
 
-Tabel berikut berisi sekumpulan kueri sampel untuk entitas lain.
+Contoh kueri untuk entitas lain.
 
 |Jenis kueri |Contoh  | Catatan  |
 |---------|---------|---------|

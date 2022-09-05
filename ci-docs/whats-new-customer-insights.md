@@ -1,19 +1,19 @@
 ---
 title: Yang baru di Dynamics 365 Customer Insights
 description: Informasi tentang fitur, peningkatan, dan perbaikan bug baru.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246015"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387298"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Yang baru di Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Kami meluncurkan pembaruan pada basis kawasan per kawasan. Sehingga wilayah tert
 
 > [!TIP]
 > Untuk mengirimkan dan memilih permintaan fitur dan saran produk, buka [portal ide aplikasi Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Pembaruan Agustus 2022
+
+Pembaruan pada Agustus 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Penyatuan kontak di lingkungan B-to-B
+
+Lingkungan B-to-B di Customer Insights kini mendukung pengalaman penyatuan data yang disempurnakan.
+
+Anda sekarang dapat menyatukan kontak selain akun untuk mendapatkan tampilan penuh kontak bisnis Anda. Kontak terpadu dikaitkan dengan akun terpadu dan sekarang terdaftar di kartu pelanggan. 
+
+Untuk informasi selengkapnya, lihat [Membuat profil kontak terpadu](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Membuat dan mengekspor segmen berdasarkan kontak terpadu
+
+Berkat penyatuan kontak baru, Anda dapat membuat segmen kontak menggunakan kriteria dari kontak, akun, atau keduanya. Segmen ini dapat diekspor untuk aktivasi di layanan lain.
+
+Untuk informasi selengkapnya, lihat [Gambaran umum ekspor](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Pembaruan Juli 2022
 
@@ -44,7 +62,7 @@ Untuk informasi selengkapnya, lihat [Mengekspor data ke host SFTP](export-sftp.m
 
 Mengelola data pelanggan bukanlah tantangan baru, tetapi semakin sulit karena pengguna menavigasi berbagai saluran digital yang ditawarkan merek. Pengguna yang dikenal (diautentikasi) di satu saluran menjadi tidak dikenal (tidak diautentikasi) di saluran lain jika tidak masuk. Masalahnya sering kali adalah bahwa pengguna yang tidak diautentikasi (tidak dikenal) tidak memiliki ID umum. Ini dapat digunakan untuk mengaitkan atribut profil yang bermakna dan menghasilkan profil pelanggan terpadu. Customer Insights membantu memecahkan masalah ini dengan menyerap data dari metode pelacakan pada sistem sumber Anda.
 
-Untuk informasi selengkapnya, lihat [Mempersonalisasi pengalaman Anda dengan data tentang pengguna yang dikenal dan tidak dikenal](unknown-to-known.md).
+Untuk informasi selengkapnya, lihat [Mempersonalisasi pengalaman Anda dengan data tentang pengguna](unknown-to-known.md) yang dikenal dan tidak dikenal.
 
 ## <a name="june-2022-updates"></a>Pembaruan Juni 2022
 
@@ -174,7 +192,7 @@ Model prediksi out-of-the-box, termasuk **churn** langganan, **churn** transaksi
 
 Untuk informasi selengkapnya, lihat [Gambaran umum prediksi](predictions-overview.md).
 
-### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Sumber data Baru: Integrasi dengan Azure Synapse Analytics (Pratinjau)
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>sumber data Baru: Integrasi dengan Azure Synapse Analytics (Pratinjau)
 
 Azure Synapse Analytics adalah layanan analitik perusahaan yang mempercepat waktu untuk wawasan di seluruh gudang data dan sistem big data.
 
@@ -190,7 +208,7 @@ Untuk informasi selengkapnya, lihat [Memperkaya profil pelanggan dengan data ide
 
 ### <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (Pratinjau)
 
-Gunakan data dari sumber seperti Microsoft dan mitra lain untuk memperkaya data pelanggan Anda sebelum penyatuan data. Sumber data pengayaan membantu menghasilkan kelengkapan dan kualitas data yang lebih tinggi yang dapat membantu mencapai hasil yang lebih baik setelah Anda menyatukan data Anda.
+Gunakan data dari sumber seperti Microsoft dan mitra lain untuk memperkaya data pelanggan Anda sebelum penyatuan data. sumber data pengayaan membantu menghasilkan kelengkapan dan kualitas data yang lebih tinggi yang dapat membantu mencapai hasil yang lebih baik setelah Anda menyatukan data Anda.
 
 Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber data (Pratinjau)](data-sources-enrichment.md).
 

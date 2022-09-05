@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245929"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352805"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Mengekspor log diagnostik (pratinjau)
 
@@ -36,8 +36,8 @@ Customer Insights mengirimkan log peristiwa berikut:
 
 - Langganan [Azure aktif](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - [Izin](permissions.md#admin) administrator di Customer Insights.
+- Sumber daya yang valid di Azure yang mengikuti [persyaratan](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) tujuan untuk Azure Storage, Azure Event Hub, atau Azure Log Analytics.
 - [kontributor dan Administrator](/azure/role-based-access-control/role-assignments-portal) Akses Pengguna pada sumber daya tujuan di Azure. Sumber daya dapat berupa Azure Data Lake Storage akun, Azure Event Hub, atau ruang kerja Azure Log Analytics. Izin ini diperlukan saat mengonfigurasi pengaturan diagnostik di Customer Insights, tetapi dapat diubah setelah penyiapan berhasil.
-- [Persyaratan tujuan](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) untuk Azure Storage, Azure Event Hub, atau Azure Log Analytics terpenuhi.
 - Setidaknya **peran Pembaca** pada grup sumber daya tempat sumber daya berada.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Menyiapkan diagnostik dengan Azure Monitor
