@@ -1,7 +1,7 @@
 ---
 title: Memperbarui pengaturan penyatuan pelanggan, akun, atau kontak
 description: Perbarui aturan duplikat, aturan kecocokan, atau bidang terpadu di pengaturan penyatuan pelanggan atau akun.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304339"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392475"
 ---
 # <a name="update-unification-settings"></a>Memperbarui pengaturan penyatuan
 
@@ -38,7 +38,7 @@ Untuk meninjau atau mengubah pengaturan penyatuan apa pun setelah profil terpadu
    > Petak **peta Kondisi** yang cocok hanya ditampilkan jika beberapa entitas dipilih.
 
 1. Pilih apa yang ingin Anda perbarui:
-   - [Bidang sumber](#edit-source-fields) untuk menambahkan entitas atau atribut atau mengubah jenis atribut.
+   - [Bidang sumber](#edit-source-fields) untuk menambahkan atribut atau entitas atau mengubah jenis atribut. Untuk menghapus atribut, lihat [Menghapus bidang](#remove-a-unified-field) terpadu. Untuk menghapus entitas, lihat [Menghapus entitas](#remove-a-unified-entity) terpadu.
    - [Duplikat rekaman](#manage-deduplication-rules) untuk mengelola aturan deduplikasi atau menggabungkan preferensi.
    - [Kondisi yang cocok](#manage-match-rules) untuk memperbarui aturan yang cocok di dua entitas atau lebih.
    - [Bidang](#manage-unified-fields) pelanggan terpadu untuk menggabungkan atau mengecualikan bidang. Anda juga dapat mengelompokkan profil terkait ke dalam kluster.
@@ -53,8 +53,6 @@ Untuk meninjau atau mengubah pengaturan penyatuan apa pun setelah profil terpadu
 
 ## <a name="edit-source-fields"></a>Mengedit bidang sumber
 
-Anda tidak dapat menghapus atribut atau entitas jika sudah disatukan.
-
 1. Pilih **Edit** pada petak **bidang** Sumber.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Cuplikan layar halaman Bidang sumber memperlihatkan jumlah kunci utama, bidang yang dipetakan dan tidak dipetakan":::
@@ -66,6 +64,80 @@ Anda tidak dapat menghapus atribut atau entitas jika sudah disatukan.
 1. Secara opsional, Anda dapat mengubah kunci utama untuk entitas, jenis atribut, dan mengaktifkan atau menonaktifkan **Pemetaan** cerdas. Untuk informasi selengkapnya, lihat [Memilih bidang](map-entities.md) sumber.
 
 1. Pilih **Berikutnya** untuk membuat perubahan pada aturan deduplikasi, atau pilih **Simpan dan tutup** dan kembali ke [Perbarui pengaturan](#update-unification-settings) penyatuan.
+
+### <a name="remove-a-unified-field"></a>Menghapus bidang terpadu
+
+Untuk menghapus bidang yang telah disatukan, bidang harus dihapus dari dependensi apa pun seperti segmen, pengukuran, pengayaan, atau Relasi.
+
+1. Setelah semua dependensi untuk bidang dihapus, buka **Data** > **Unify**.
+
+1. Pilih **Edit** pada petak **peta bidang** Pelanggan terpadu.
+
+1. Pilih semua kemunculan bidang lalu pilih **Kecualikan**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Cuplikan layar halaman Bidang Terpadu memperlihatkan bidang yang dipilih dan tombol Kecualikan":::
+
+1. Pilih **Selesai** untuk mengonfirmasi lalu pilih **Simpan dan tutup**.
+
+   > [!TIP]
+   > Jika Anda melihat pesan "Tidak dapat menyimpan unify. Sumber daya yang ditentukan tidak dapat dimodifikasi atau dihapus karena dependensi hilir", maka bidang tersebut masih digunakan dalam dependensi hilir.
+
+1. Jika bidang digunakan dalam aturan untuk rekaman duplikat atau kondisi yang cocok, lakukan langkah-langkah berikut ini. Jika tidak, lanjutkan ke langkah berikutnya.
+   1. Pilih **Edit** pada petak **Rekaman** duplikat.
+   1. Hapus bidang dari semua aturan yang digunakan, jika ada, lalu pilih **Berikutnya**.
+   1. **Pada halaman Kondisi** yang cocok, hapus bidang dari semua aturan yang digunakan, jika ada, lalu pilih **Simpan dan tutup**.
+   1. Pilih **Satukan** > **Satukan profil dan dependensi** pelanggan. Tunggu hingga penyatuan selesai sebelum melanjutkan ke langkah berikutnya.
+
+1. Pilih **Edit** pada petak **bidang** Sumber.
+
+1. Pilih **Pilih entitas dan bidang** dan kosongkan kotak centang di samping setiap kemunculan bidang.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Cuplikan layar kotak dialog Pilih entitas dan bidang memperlihatkan kotak centang yang dicentang":::
+
+1. Pilih **Terapkan**.
+
+1. Pilih **Simpan dan Tutup**.
+
+1. Pilih **Satukan** > **Satukan profil dan dependensi** pelanggan Untuk memperbarui profil terpadu.
+
+### <a name="remove-a-unified-entity"></a>Menghapus entitas terpadu
+
+Untuk menghapus entitas yang telah disatukan, entitas harus dihapus dari dependensi apa pun seperti segmen, tindakan, pengayaan, atau Relasi.
+
+1. Setelah semua dependensi untuk entitas dihapus, buka **Data** > **Unify**.
+
+1. Pilih **Edit** pada petak **peta bidang** Pelanggan terpadu.
+
+1. Pilih semua bidang untuk entitas lalu pilih **Kecualikan**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Cuplikan layar bidang Terpadu dengan semua bidang untuk entitas yang dipilih dan tombol Kecualikan":::
+
+1. Pilih **Selesai** untuk mengonfirmasi lalu pilih **Simpan dan tutup**.
+
+   > [!TIP]
+   > Jika Anda melihat pesan "Tidak dapat menyimpan unify. Sumber daya yang ditentukan tidak dapat dimodifikasi atau dihapus karena dependensi hilir", maka entitas masih digunakan dalam dependensi hilir.
+
+1. Pilih **Edit** pada petak **Rekaman** duplikat.
+
+1. Hapus semua aturan dari entitas, jika ada, lalu pilih **Berikutnya**.
+
+1. **Pada halaman Kondisi yang** cocok, pilih entitas lalu pilih **Hapus**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Cuplikan layar Kondisi yang cocok dengan entitas yang dipilih dan tombol Hapus":::
+
+1. Pilih **Simpan dan Tutup**.
+
+1. Pilih **Edit** pada petak **bidang** Sumber.
+
+1. Pilih **Pilih entitas dan bidang** dan kosongkan kotak centang di samping entitas.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Cuplikan layar kotak dialog Pilih entitas dan bidang dengan kotak centang entitas dikosongkan":::
+
+1. Pilih **Terapkan**.
+
+1. Pilih **Simpan dan Tutup**.
+
+1. Pilih **Satukan** > **Satukan profil dan dependensi** pelanggan Untuk memperbarui profil terpadu.
 
 ## <a name="manage-deduplication-rules"></a>Mengelola aturan deduplikasi
 

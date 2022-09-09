@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083101"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411835"
 ---
 # <a name="predictions-overview"></a>Ikhtisar prediksi
 
@@ -39,14 +39,11 @@ Cara termudah untuk memulai dengan memprediksi data adalah model yang sudah dite
 
 > [!TIP]
 > Sebaiknya refresh model out-of-the-box secara teratur dengan data yang diperbarui untuk memastikan model tersebut menginformasikan kasus penggunaan bisnis Anda secara akurat. Data disegarkan secara ad-hoc saat sistem menyerap sumber data baru atau yang diperbarui. Namun, model hanya akan menggarisbawahi ulang dalam kasus ini dan terus menggunakan data pelatihan yang ada.
-> 
+>
 > Anda dapat mengonfigurasi **jadwal** Pembaruan dengan mengatur jadwal pelatihan ulang model dalam pengalaman konfigurasi. Model akan melatih kembali dan menggarisbawahi ulang pada jadwal ini, yang dapat Anda ubah kapan saja.
-
 
 ## <a name="azure-machine-learning-integration"></a>Integasi Pembelajaran Mesin Azure
 
 Jika organisasi sudah menggunakan Pembelajaran Mesin berdasarkan eksperimen Azure Pembelajaran Mesin, fitur model kustom di Customer Insights membantu menghubungkan titik-titik. Buat alur kerja yang membantu Anda memilih data yang ingin Anda hasilkan wawasannya dan petakan hasilnya ke profil pelanggan terpadu Anda. Untuk informasi lebih lanjut, lihat [model Pembelajaran Mesin kustom](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder prediksi
-
-Terkadang, himpunan data tidak lengkap dan beberapa nilai hilang. Customer Insights dapat membantu memprediksi nilai yang hilang untuk entitas dan segmen Pelanggan. Untuk informasi selengkapnya, lihat [Melengkapi data parsial Anda dengan prediksi](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

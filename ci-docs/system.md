@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246251"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396005"
 ---
 # <a name="view-system-configuration"></a>Lihat konfigurasi sistem
 
@@ -38,12 +38,6 @@ Lihat detail tentang penggunaan API real-time dan lihat peristiwa mana yang terj
    - **Panggilan API** - diagram yang memvisualisasikan jumlah panggilan agregat ke API dalam jangka waktu yang dipilih.
    - **Transfer data** - diagram yang menunjukkan jumlah data yang ditransfer melalui API dalam jangka waktu yang dipilih.
    - **Operasi** - tabel dengan baris untuk setiap operasi API yang tersedia dan rincian tentang penggunaan operasi. Pilih nama operasi untuk masuk ke [referensi](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) API.
-
-   Operasi yang menggunakan [penyerapan](real-time-data-ingestion.md) data real-time berisi simbol teropong untuk melihat penggunaan API real-time.
-
-   1. Pilih teropong untuk membuka **panel penggunaan** API Real-time yang berisi detail penggunaan untuk operasi.
-   1. **Pilih jangka waktu** untuk dilihat.
-   1. Gunakan kotak Kelompokkan **menurut** untuk memilih cara terbaik menyajikan interaksi real-time Anda. Kelompokkan data berdasarkan Metode API, Nama yang memenuhi syarat entitas (entitas yang diserap), **Dibuat oleh** (sumber peristiwa), **Hasil** (keberhasilan atau kegagalan) atau **kode Kesalahan**.**·** **·** Data tersedia dalam bentuk grafik riwayat dan sebagai tabel.
 
 ## <a name="view-system-information"></a>Lihat informasi sistem
 

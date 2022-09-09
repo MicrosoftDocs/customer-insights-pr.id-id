@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245837"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396085"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Menyambungkan ke data di Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
   - Pembaca Data Blob Penyimpanan
   - pemilik Data Blob Penyimpanan
   - Kontributor data Blob penyimpanan
+
+- Pengguna yang menyiapkan koneksi sumber data memerlukan izin kontributor Data Blob Penyimpanan paling sedikit pada akun penyimpanan.
 
 - Data di Data Lake Storage Anda harus mengikuti standar Common Data Model untuk penyimpanan data Anda dan memiliki manifes model data umum untuk mewakili skema file data (*.csv atau *.parquet). Manifes harus memberikan detail entitas seperti kolom entitas dan tipe data, serta lokasi file data dan jenis file. Untuk informasi selengkapnya, lihat [Manifes](/common-data-model/sdk/manifest) Common Data Model. Jika manifes tidak ada, pengguna Admin dengan Pemilik Data Blob Penyimpanan atau akses kontributor Data Blob Penyimpanan dapat menentukan skema saat menyerap data.
 
@@ -62,7 +64,7 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
    > [!NOTE]
    > Anda memerlukan salah satu peran berikut baik ke kontainer atau akun penyimpanan untuk membuat sumber data:
    >
-   >  - Pembaca Data Blob Penyimpanan cukup untuk dibaca dari akun penyimpanan dan menyerap data ke Customer Insights. 
+   >  - Pembaca Data Blob Penyimpanan cukup untuk dibaca dari akun penyimpanan dan menyerap data ke Customer Insights.
    >  - Data Blob Penyimpanan kontributor atau Pemilik diperlukan jika Anda ingin mengedit file manifes secara langsung di Customer Insights.  
   
 1. Pilih nama **Kontainer** yang berisi data dan skema (file model.json atau manifest.json) untuk mengimpor data, dan pilih **Berikutnya**.

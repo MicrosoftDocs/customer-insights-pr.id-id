@@ -1,7 +1,7 @@
 ---
 title: Bekerja dengan Customer Insights di Microsoft Dataverse
 description: Pelajari cara menghubungkan Customer Insights dan Microsoft Dataverse serta memahami entitas output yang diekspor ke Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303833"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424313"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan Customer Insights di Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Jika penghapusan koneksi gagal karena dependensi, Anda juga harus menghapus depe
 Beberapa entitas output dari Customer Insights tersedia sebagai tabel di Dataverse. Bagian di bawah ini menjelaskan skema yang diharapkan dari tabel ini.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Beberapa entitas output dari Customer Insights tersedia sebagai tabel di Dataver
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Tabel ini berisi profil pelanggan terpadu dari Customer Insights. Skema untuk profil pelanggan terpadu bergantung pada entitas dan atribut yang digunakan dalam proses penyatuan data. Skema profil pelanggan biasanya berisi subset atribut dari definisi [Common Data Model dari CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Tabel ini berisi profil pelanggan terpadu dari Customer Insights. Skema untuk profil pelanggan terpadu bergantung pada entitas dan atribut yang digunakan dalam proses penyatuan data. Skema profil pelanggan biasanya berisi subset atribut dari definisi [Common Data Model dari CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Untuk skenario B-to-B, profil pelanggan berisi akun terpadu, dan skema biasanya berisi subset atribut dari [definisi Common Data Model of Account](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile berisi informasi terpadu tentang kontak. Kontak adalah [individu yang dipetakan ke akun](data-unification-contacts.md) dalam skenario B-ke-B.
+
+| Column                       | Tipe                | Deskripsi     |
+| ---------------------------- | ------------------- | --------------- |
+|  Tanggal lahir            | WaktuTanggal       |  Tanggal lahir kontak               |
+|  Kota                 | SMS |  Kota alamat kontak               |
+|  KontakId            | SMS |  ID profil kontak               |
+|  KontakProfileId     | Pengidentifikasi unik   |  GUID untuk kontak               |
+|  CountryOrRegion      | SMS |  Negara/Wilayah alamat kontak               |
+|  ID Pelanggan           | SMS |  ID akun tempat kontak dipetakan               |
+|  EntityName           | SMS |  Entitas dari mana data berasal                |
+|  FirstName            | SMS |  Nama depan kontak               |
+|  Jenis kelamin               | SMS |  Jenis kelamin kontak               |
+|  Id                   | SMS |  GUID deterministik berdasarkan`Identifier`               |
+|  pengidentifikasi           | SMS |  ID internal profil kontak: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | SMS |  Jabatan kontak               |
+|  LastName             | SMS |  Nama belakang kontak               |
+|  PostalCode           | SMS |  Kode pos alamat kontak               |
+|  PrimaryEmail         | SMS |  Alamat email kontak               |
+|  Telepon Utama         | SMS |  Nomor telepon kontak               |
+|  StateOrProvince      | SMS |  Negara bagian atau provinsi dari alamat kontak               |
+|  JalanAddress        | SMS |  Jalan alamat kontak               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 Tabel AlternateKey berisi kunci entitas, yang berpartisipasi dalam proses penyatuan.
 
-|Column  |Jenis  |KETERANGAN  |
+|Column  |Tipe  |Deskripsi  |
 |---------|---------|---------|
-|DataSourceName    |String         | Nama sumber data. Contoh: `datasource5`        |
-|EntityName        | String        | Nama entitas di Customer Insights. Contoh: `contact1`        |
-|AlternateValue    |String         |ID alternatif yang dipetakan ke ID pelanggan. Contoh: `cntid_1078`         |
-|KeyRing           | Teks multibaris        | Nilai JSON  </br> Sampel: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|ID Pelanggan         | String        | ID profil pelanggan terpadu.         |
-|AlternateKeyId     | GUID         |  GUID deterministik AlternateKey berdasarkan msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Sampel: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |SMS         | Nama sumber data. Contoh: `datasource5`        |
+|EntityName        | SMS        | Nama entitas di Customer Insights. Contoh: `contact1`        |
+|AlternateValue    |SMS         |ID alternatif yang dipetakan ke ID pelanggan. Contoh: `cntid_1078`         |
+|KeyRing           | SMS        | Nilai JSON  </br> Sampel: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|ID Pelanggan         | SMS        | ID profil pelanggan terpadu.         |
+|AlternateKeyId     | Pengidentifikasi unik        |  GUID deterministik AlternateKey berdasarkan`Identifier`      |
+|pengidentifikasi |   SMS      |   `DataSourceName|EntityName|AlternateValue`  </br> Sampel: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Tabel ini berisi aktivitas oleh pengguna yang tersedia dalam Customer Insights.
 
 | Column            | Tipe        | Deskripsi                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| ID Pelanggan        | String      | ID Profil pelanggan                                                                      |
-| ActivityId        | String      | ID internal aktivitas pelanggan (kunci utama)                                       |
-| SourceEntityName  | String      | Nama entitas sumber                                                                |
-| SourceActivityId  | String      | Kunci utama dari entitas sumber                                                       |
-| ActivityType      | String      | Jenis aktivitas semantik atau nama aktivitas kustom                                        |
-| ActivityTimeStamp | DATETIME    | Stempel waktu aktivitas                                                                      |
-| Titel             | String      | Judul atau nama aktivitas                                                               |
-| Deskripsi       | String      | Deskripsi Aktivitas                                                                     |
-| URL               | String      | Tautan ke URL eksternal yang spesifik untuk aktivitas                                         |
-| SemanticData      | String JSON | Mencakup daftar pasangan nilai utama untuk bidang pemetaan semantis yang spesifik untuk jenis aktivitas |
-| RangeIndex        | String      | Cap waktu unik yang digunakan untuk mengurutkan timeline aktivitas dan kueri rentang yang efektif |
-| mydynci_unifiedactivityid   | GUID | ID internal aktivitas pelanggan (ActivityId) |
+| ID Pelanggan        | SMS      | ID Profil pelanggan                                                                      |
+| ActivityId        | SMS      | ID internal aktivitas pelanggan (kunci utama)                                       |
+| SourceEntityName  | SMS      | Nama entitas sumber                                                                |
+| SourceActivityId  | SMS      | Kunci utama dari entitas sumber                                                       |
+| ActivityType      | SMS      | Jenis aktivitas semantik atau nama aktivitas kustom                                        |
+| ActivityTimeStamp | WaktuTanggal    | Stempel waktu aktivitas                                                                      |
+| Titel             | SMS      | Judul atau nama aktivitas                                                               |
+| Deskripsi       | SMS      | Deskripsi Aktivitas                                                                     |
+| URL               | SMS      | Tautan ke URL eksternal yang spesifik untuk aktivitas                                         |
+| SemanticData      | SMS | Mencakup daftar pasangan nilai utama untuk bidang pemetaan semantis yang spesifik untuk jenis aktivitas |
+| RangeIndex        | SMS      | Cap waktu unik yang digunakan untuk mengurutkan timeline aktivitas dan kueri rentang yang efektif |
+| UnifiedActivityId   | Pengidentifikasi unik | ID internal aktivitas pelanggan (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Tabel ini berisi data output tindakan berbasis atribut pelanggan.
 
-| Column             | Jenis             | KETERANGAN                 |
+| Column             | Tipe             | Deskripsi                 |
 |--------------------|------------------|-----------------------------|
-| ID Pelanggan         | String           | ID Profil pelanggan        |
-| Pengukuran           | String JSON      | Mencakup daftar pasangan nilai utama untuk mengukur nama dan nilai untuk pelanggan tertentu | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID Profil pelanggan |
-
+| ID Pelanggan         | SMS           | ID Profil pelanggan        |
+| Tindakan           | SMS      | Mencakup daftar pasangan nilai utama untuk mengukur nama dan nilai untuk pelanggan tertentu |
+| pengidentifikasi | SMS           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Pengidentifikasi unik     | ID Profil pelanggan |
 
 ### <a name="enrichment"></a>Pengayaan
 
 Tabel ini berisi output proses pengayaan.
 
-| Column               | Jenis             |  KETERANGAN                                          |
+| Column               | Tipe             |  Deskripsi                                          |
 |----------------------|------------------|------------------------------------------------------|
-| ID Pelanggan           | String           | ID Profil pelanggan                                 |
-| EnrichmentProvider   | String           | Nama penyedia pengayaan                                  |
-| EnrichmentType       | String           | Jenis pengayaan                                      |
-| Nilai               | String JSON      | Daftar atribut yang dihasilkan oleh proses pengayaan |
-| msdynci_enrichmentid | GUID             | GUID deterministis yang dihasilkan dari msdynci_identifier |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| ID Pelanggan           | SMS           | ID Profil pelanggan                                 |
+| EnrichmentProvider   | SMS           | Nama penyedia pengayaan                                  |
+| EnrichmentType       | SMS           | Jenis pengayaan                                      |
+| Values               | SMS      | Daftar atribut yang dihasilkan oleh proses pengayaan |
+| EnrichmentId | Pengidentifikasi unik            | GUID deterministik yang dihasilkan dari`Identifier` |
+| pengidentifikasi   | SMS           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Prediksi
 
@@ -211,12 +236,12 @@ Tabel ini berisi output prediksi model.
 
 | Column               | Tipe        | Deskripsi                                          |
 |----------------------|-------------|------------------------------------------------------|
-| ID Pelanggan           | String      | ID Profil pelanggan                                  |
-| ModelProvider        | String      | Nama penyedia model                                      |
-| Model                | String      | Nama model                                                |
-| Nilai               | String JSON | Daftar atribut yang dihasilkan oleh model |
-| msdynci_predictionid | GUID        | GUID deterministis yang dihasilkan dari msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| ID Pelanggan           | SMS      | ID Profil pelanggan                                  |
+| ModelProvider        | SMS      | Nama penyedia model                                      |
+| Model                | SMS      | Nama model                                                |
+| Values               | SMS | Daftar atribut yang dihasilkan oleh model |
+| PredictionId | Pengidentifikasi unik       | GUID deterministik yang dihasilkan dari`Identifier` |
+| pengidentifikasi   | SMS      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Keanggotaan segmen
 
@@ -224,12 +249,11 @@ Tabel ini berisi informasi keanggotaan segmen profil pelanggan.
 
 | Column        | Tipe | Deskripsi                        |
 |--------------------|--------------|-----------------------------|
-| ID Pelanggan        | String       | ID Profil pelanggan        |
-| SegmenProvider      | String       | Aplikasi yang memublikasikan segmen.      |
-| SegmentMembershipType | String       | Jenis pelanggan untuk catatan keanggotaan segmen ini. Mendukung beberapa jenis seperti Pelanggan, Kontak, atau Akun. Default: Pelanggan  |
-| Segmen       | String JSON  | Daftar segmen unik yang menjadi anggota profil pelanggan      |
-| msdynci_identifier  | String   | Pengidentifikasi unik dari catatan keanggotaan segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID deterministik yang dihasilkan dari`msdynci_identifier`          |
-
+| ID Pelanggan        | SMS       | ID Profil pelanggan        |
+| SegmenProvider      | SMS       | Aplikasi yang memublikasikan segmen.      |
+| SegmentMembershipType | SMS       | Jenis pelanggan untuk catatan keanggotaan segmen ini. Mendukung beberapa jenis seperti Pelanggan, Kontak, atau Akun. Default: Pelanggan  |
+| Segmen       | SMS  | Daftar segmen unik yang menjadi anggota profil pelanggan      |
+| pengidentifikasi  | SMS   | Pengidentifikasi unik dari catatan keanggotaan segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Pengidentifikasi unik      | GUID deterministik yang dihasilkan dari`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

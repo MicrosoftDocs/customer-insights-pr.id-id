@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246430"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395960"
 ---
 # <a name="schedule-system-refresh"></a>Jadwalkan penyegaran sistem
 
@@ -36,7 +36,7 @@ Jadwalkan refresh otomatis dari semua sumber data yang Anda [konsumsi](data-sour
 
 1. Pilih antara penyegaran **mingguan** (default) dan **harian**. Jika Anda ingin menjadwalkan penyegaran mingguan, pilih satu atau beberapa hari untuk menjalankan refresh.
 
-1. Atur **zona waktu**, lalu gunakan dropdown **waktu** untuk mengatur waktu penyegaran. Jika Anda ingin menjadwalkan beberapa penyegaran dalam satu hari, pilih **Tambah waktu lain**.
+1. Atur **zona waktu**, lalu gunakan dropdown **waktu** untuk mengatur waktu penyegaran. Jika Anda ingin menjadwalkan beberapa penyegaran dalam satu hari, pilih **Tambah waktu lain**. Anda dapat menambahkan hingga empat penyegaran.
 
 1. Pilih **Simpan** untuk menerapkan perubahan.
 

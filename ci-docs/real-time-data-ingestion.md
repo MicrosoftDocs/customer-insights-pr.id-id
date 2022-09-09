@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246112"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396065"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Konsumsi data real-time (pratinjau)
 
@@ -82,10 +82,5 @@ Anda dapat menggunakan kemampuan real-time dengan membuat alur sendiri dan terhu
 Anda dapat memposting aktivitas dalam format sistem sumber atau dalam format UnifiedActivity. Dapatkan format dengan membuat panggilan API ke /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Rincian API ini, termasuk parameter dan respons, dapat ditemukan di bagian **EntityData** di [referensi API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Untuk informasi lebih lanjut, lihat [bekerja dengan api Customer Insights](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami penggunaan real-time Anda dengan telemetri
-
-Dapatkan ikhtisar tentang volume permintaan ke API real-time dan informasi tentang masalah yang mungkin dihadapi sistem. Anda dapat [mengakses telemetri real-time](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

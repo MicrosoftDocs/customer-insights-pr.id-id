@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
           href: custom-models.md
-        - name: Lengkapi data yang hilang sebagian
-          href: predictions.md
     - name: Panduan sampel
       items:
         - name: Panduan sampel untuk prediksi CLV

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387298"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409361"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Yang baru di Dynamics 365 Customer Insights
 
@@ -42,6 +42,14 @@ Berkat penyatuan kontak baru, Anda dapat membuat segmen kontak menggunakan krite
 
 Untuk informasi selengkapnya, lihat [Gambaran umum ekspor](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Wilayah penyebaran yang selaras dengan Microsoft Dataverse
+
+Saat membuat lingkungan Customer Insights baru, Anda dapat memilih wilayah tempat Anda ingin layanan disebarkan dan dihosting. Kami telah memperbarui pemilihan wilayah untuk menyelaraskan dengan Microsoft Dataverse dan Power Platform.
+
+Anda sekarang dapat dengan mudah memilih wilayah yang sama dengan lingkungan yang ada Microsoft Dataverse atau akun penyimpanan Azure Data Lake Anda (jika Anda memilih opsi itu), tergantung pada ketersediaan Customer Insights di wilayah tersebut.
+
+Untuk informasi selengkapnya, lihat [Membuat lingkungan](create-environment.md) baru dan [Ketersediaan produk menurut geografi](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>Pembaruan Juli 2022
 
 Pembaruan pada Juli 2022 mencakup fitur baru, peningkatan kinerja, dan perbaikan bug.
@@ -56,7 +64,7 @@ Untuk informasi selengkapnya, lihat [Mengekspor segmen ke MoEngage](export-moeng
 
 Pilih apakah Anda ingin mengautentikasi melalui SSH atau nama pengguna/kata sandi untuk koneksi ke tujuan ekspor SFTP.
 
-Untuk informasi selengkapnya, lihat [Mengekspor data ke host SFTP](export-sftp.md).
+Untuk informasi selengkapnya, lihat [Mengekspor data ke host](export-sftp.md) SFTP.
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalisasi pengalaman dengan data tentang pengguna yang dikenal dan tidak dikenal
 
@@ -122,7 +130,7 @@ Untuk informasi selengkapnya, lihat [Mengekspor segmen ke Criteo (pratinjau)](ex
 
 Kami telah meninjau kembali dokumen bantuan yang terkait dengan pembuatan dan pengelolaan lingkungan di Customer Insights. Artikel sekarang dikelompokkan di bawah node Lingkungan dalam daftar isi. Artikel yang direstrukturisasi memberikan lebih banyak panduan untuk berbagai cara untuk mengatur lingkungan dan memiliki struktur yang lebih jelas. Jika Anda memiliki umpan balik untuk dibagikan, beri tahu kami melalui kontrol menjelang akhir artikel bantuan.
 
-Untuk informasi selengkapnya, lihat [Cara: Membuat lingkungan](create-environment.md) baru.
+Untuk informasi selengkapnya, lihat [Cara: Membuat lingkungan baru](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Pembaruan April 2022
 
@@ -144,7 +152,7 @@ Untuk informasi selengkapnya, lihat [Menggunakan pembuat pengukuran untuk membua
 
 Kami telah meninjau kembali artikel dokumentasi kami dan menghapus penyebutan wawasan keterlibatan dan kemampuan wawasan audiens. Ke depannya, kami akan merujuk secara konsisten ke nama produk Customer Insights ketika kami menulis tentang fitur inti aplikasi. Perubahan ini juga mengarah pada restrukturisasi yang signifikan dari daftar isi, struktur URL, dan jalur file dalam repositori dokumentasi yang mendasarinya. Semua bookmark atau tautan yang ada terus berfungsi dan dialihkan ke URL yang diperbarui.
 
-Jika Anda ingin memberi tahu kami bagaimana Anda memandang perubahan itu atau menemukan sesuatu yang tidak berfungsi seperti yang diharapkan, beri tahu kami [dengan mengirimkan umpan balik untuk halaman ini](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Jika Anda ingin memberi tahu kami bagaimana Anda memandang perubahan itu atau menemukan sesuatu yang tidak berfungsi seperti yang diharapkan, beri tahu kami [dengan mengirimkan umpan balik untuk halaman](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) ini.
 
 ## <a name="march-2022-updates"></a>Pembaruan Maret 2022
 
@@ -192,7 +200,7 @@ Model prediksi out-of-the-box, termasuk **churn** langganan, **churn** transaksi
 
 Untuk informasi selengkapnya, lihat [Gambaran umum prediksi](predictions-overview.md).
 
-### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>sumber data Baru: Integrasi dengan Azure Synapse Analytics (Pratinjau)
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Sumber data Baru: Integrasi dengan Azure Synapse Analytics (Pratinjau)
 
 Azure Synapse Analytics adalah layanan analitik perusahaan yang mempercepat waktu untuk wawasan di seluruh gudang data dan sistem big data.
 
@@ -208,7 +216,7 @@ Untuk informasi selengkapnya, lihat [Memperkaya profil pelanggan dengan data ide
 
 ### <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (Pratinjau)
 
-Gunakan data dari sumber seperti Microsoft dan mitra lain untuk memperkaya data pelanggan Anda sebelum penyatuan data. sumber data pengayaan membantu menghasilkan kelengkapan dan kualitas data yang lebih tinggi yang dapat membantu mencapai hasil yang lebih baik setelah Anda menyatukan data Anda.
+Gunakan data dari sumber seperti Microsoft dan mitra lain untuk memperkaya data pelanggan Anda sebelum penyatuan data. Sumber data pengayaan membantu menghasilkan kelengkapan dan kualitas data yang lebih tinggi yang dapat membantu mencapai hasil yang lebih baik setelah Anda menyatukan data Anda.
 
 Untuk informasi selengkapnya, lihat [Pengayaan untuk sumber data (Pratinjau)](data-sources-enrichment.md).
 
@@ -222,7 +230,7 @@ Untuk informasi selengkapnya, lihat [Mengubah pemilik lingkungan](manage-environ
 
 Persiapan data sekarang menunjukkan alasan korupsi untuk semua bidang dengan data yang rusak. Informasi ini disediakan pada tingkat catatan individu untuk memudahkan identifikasi. 
 
-Untuk informasi selengkapnya, lihat [Sumber](entities.md#corrupted-data-sources) data yang rusak.
+Untuk informasi selengkapnya, lihat [Sumber data yang rusak](entities.md#corrupted-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Akhir pratinjau untuk melaporkan fitur dalam kemampuan wawasan keterlibatan
 

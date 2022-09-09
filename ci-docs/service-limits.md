@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387160"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411744"
 ---
 # <a name="service-limits-in-customer-insights"></a>Batas layanan di Customer Insights
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387160"
 
 | Luas  | Batas  | Catatan |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmen, ukuran, dan prediksi | 300  | Jumlah [total segmen](segments.md), ukuran [,](measures.md) dan [prediksi yang](predictions.md) digabungkan tidak boleh melebihi 300.  |
+| Segmen, ukuran, dan prediksi | 300  | Jumlah [total segmen](segments.md), ukuran [,](measures.md) dan [prediksi yang](predictions-overview.md) digabungkan tidak boleh melebihi 300.  |
 | Hubungan | 20 tingkat kedalaman pada Relasi dalam jalur entitas. | Saat membuat [segmen](segments.md) atau [ukuran](measures.md) menggunakan antarmuka pembuat, jalur entitas dapat memiliki hingga 20 lompatan relasi antara entitas awal dan entitas target.  |
 
 ## <a name="fair-scheduling-of-jobs"></a>Penjadwalan pekerjaan yang adil
