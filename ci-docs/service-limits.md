@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411744"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463223"
 ---
 # <a name="service-limits-in-customer-insights"></a>Batas layanan di Customer Insights
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411744"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmen, ukuran, dan prediksi | 300  | Jumlah [total segmen](segments.md), ukuran [,](measures.md) dan [prediksi yang](predictions-overview.md) digabungkan tidak boleh melebihi 300.  |
 | Hubungan | 20 tingkat kedalaman pada Relasi dalam jalur entitas. | Saat membuat [segmen](segments.md) atau [ukuran](measures.md) menggunakan antarmuka pembuat, jalur entitas dapat memiliki hingga 20 lompatan relasi antara entitas awal dan entitas target.  |
+|Penyerapan data| Evaluasi bersamaan untuk Power Query sumber data terbatas. | Customer Insights memiliki batas refresh yang sama [seperti Aliran Data di PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Penjadwalan pekerjaan yang adil
 

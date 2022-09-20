@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207049"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463269"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Menyambungkan ke Power Query sumber data
 
@@ -63,7 +63,9 @@ Menambahkan sumber data berdasarkan Power Query konektor umumnya mengikuti langk
 Memuat data dapat memakan waktu. Setelah refresh berhasil, data yang diserap dapat ditinjau dari [**halaman Entitas**](entities.md).
 
 > [!CAUTION]
-> Sebuah sumber data berdasarkan Power Query membuat [aliran data di Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Jangan mengubah nama aliran data di Power Platform pusat admin yang digunakan di Customer Insights. Mengganti nama aliran data menyebabkan masalah dengan referensi antara sumber data Customer Insights dan Dataverse aliran data.
+>
+> - Sebuah sumber data berdasarkan Power Query membuat [aliran data di Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Jangan mengubah nama aliran data di Power Platform pusat admin yang digunakan di Customer Insights. Mengganti nama aliran data menyebabkan masalah dengan referensi antara sumber data Customer Insights dan Dataverse aliran data.
+> - Evaluasi bersamaan untuk Power Query sumber data di Customer Insights memiliki batas refresh yang sama [seperti Aliran data di PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Jika refresh data gagal karena mencapai batas evaluasi, sebaiknya sesuaikan jadwal refresh untuk setiap aliran data untuk memastikan sumber data tidak diproses secara bersamaan.
 
 ### <a name="available-power-query-data-sources"></a>Sumber data yang Power Query tersedia
 
@@ -75,14 +77,14 @@ Konektor dengan tanda centang di **kolom Customer Insights (Aliran Data)** terse
 
 Menyerap data dari sumber data lokal didukung berdasarkan Microsoft Power Platform aliran data (PPDF). Anda dapat mengaktifkan aliran data di Customer Insights [dengan Microsoft Dataverse memberikan URL](create-environment.md) lingkungan saat menyiapkan lingkungan.
 
-Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Customer Insights menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang ada sebelum Dataverse lingkungan dikaitkan [menggunakan gateway](/data-integration/gateway/service-gateway-app) data lokal.
+Sumber data yang dibuat setelah mengaitkan Dataverse lingkungan dengan Customer Insights menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara default. Aliran data mendukung konektivitas lokal menggunakan gateway data. Anda dapat menghapus dan membuat ulang sumber data yang ada sebelum Dataverse lingkungan dikaitkan [menggunakan gateway data lokal](/data-integration/gateway/service-gateway-app).
 
-Gateway data dari lingkungan yang ada atau Power BI yang ada Power Apps akan terlihat dan Anda dapat menggunakannya kembali di Customer Insights. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
+Gateway data dari lingkungan yang ada atau Power BI yang sudah ada Power Apps akan terlihat dan Anda dapat menggunakannya kembali di Customer Insights jika gateway data dan lingkungan Customer Insights berada di Wilayah Azure yang sama. Halaman sumber data menampilkan tautan untuk membuka lingkungan Microsoft Power Platform tempat Anda dapat melihat dan mengkonfigurasi gateway data lokal.
 
 > [!IMPORTANT]
-> Pastikan gateway Anda diperbarui ke versi terbaru. Anda dapat menginstal pembaruan dan mengonfigurasi ulang gateway dari prompt yang ditampilkan di layar gateway secara langsung atau [mengunduh versi terbaru](https://powerapps.microsoft.com/downloads/). Jika Anda tidak menggunakan versi gateway terbaru, refresh aliran data gagal dengan pesan kesalahan seperti **Kata kunci tidak didukung: properti konfigurasi. Nama parameter: kata kunci**.
+> Pastikan gateway Anda diperbarui ke versi terbaru. Anda dapat menginstal pembaruan dan mengonfigurasi ulang gateway dari prompt yang ditampilkan di layar gateway secara langsung atau [mengunduh versi](https://powerapps.microsoft.com/downloads/) terbaru. Jika Anda tidak menggunakan versi gateway terbaru, refresh aliran data gagal dengan pesan kesalahan seperti **Kata kunci tidak didukung: properti konfigurasi. Nama parameter: kata kunci**.
 >
-> Kesalahan dengan gateway data lokal di Customer Insights sering disebabkan oleh masalah konfigurasi. Untuk informasi selengkapnya tentang pemecahan masalah gateway data, lihat [Memecahkan masalah gateway data lokal](/data-integration/gateway/service-gateway-tshoot).
+> Kesalahan dengan gateway data lokal di Customer Insights sering disebabkan oleh masalah konfigurasi. Untuk informasi selengkapnya tentang pemecahan masalah gateway data, lihat [Memecahkan masalah gateway](/data-integration/gateway/service-gateway-tshoot) data lokal.
 
 ## <a name="edit-power-query-data-sources"></a>Mengedit Power Query sumber data
 

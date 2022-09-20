@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304063"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460194"
 ---
 # <a name="exports-preview-overview"></a>Gambaran umum Ekspor (pratinjau)
 
@@ -81,6 +81,11 @@ Pilih ekspor untuk melihat tindakan yang tersedia.
 ## <a name="schedule-and-run-exports"></a>Jadwalkan dan jalankan ekspor
 
 Setiap ekspor yang Anda konfigurasikan memiliki jadwal refresh. Selama pembaruan, sistem mencari data baru atau yang diperbarui untuk disertakan dalam ekspor. Secara default, ekspor dijalankan sebagai bagian dari setiap [pembaruan sistem terjadwal](schedule-refresh.md). Anda dapat menyesuaikan jadwal refresh atau menonaktifkannya untuk menjalankan ekspor secara manual.
+
+> [!TIP]
+> Minimalkan waktu pemrosesan ekspor segmen dengan praktik terbaik berikut:
+> - Distribusikan entitas segmen di seluruh ekspor mutiple.
+> - Hindari menjadwalkan semua ekspor secara bersamaan. Sisakan 30 menit atau satu jam di antara waktu yang dijadwalkan untuk setiap ekspor.
 
 Jadwal ekspor tergantung pada status lingkungan Anda. Jika ada pembaruan yang sedang berlangsung pada [dependensi](system.md#refresh-processes) ketika ekspor terjadwal harus dimulai, sistem akan terlebih dulu menyelesaikan pembaruan dan kemudian menjalankan ekspor. Kolom **Refresh menunjukkan** kapan ekspor terakhir disegarkan.
 

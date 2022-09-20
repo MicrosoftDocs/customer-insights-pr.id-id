@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194927"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473646"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Add-in Kartu Pelanggan untuk aplikasi Dynamics 365 (pratinjau)
 
@@ -32,7 +32,8 @@ Dapatkan tampilan 360 derajat pelanggan Anda secara langsung di aplikasi Dynamic
 - Agar data Dynamics 365 Anda dapat [dipetakan ke profil pelanggan Customer Insights, kami sarankan data tersebut diserap dari aplikasi Dynamics 365 menggunakan Microsoft Dataverse konektor](connect-power-query.md). Jika Anda menggunakan metode yang berbeda untuk menyerap kontak (atau akun) Dynamics 365, pastikan `contactid` bidang (atau `accountid`) ditetapkan sebagai [kunci utama untuk sumber data tersebut selama proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Semua pengguna Dynamics 365 dari Customer Card Add-in harus [ditambahkan sebagai pengguna](permissions.md) di Customer Insights untuk melihat data.
 - [Kemampuan pencarian dan filter yang dikonfigurasi](search-filter-index.md) di Customer Insights.
-- Setiap kontrol add-in bergantung pada data tertentu di Customer Insights. Beberapa data dan kontrol hanya tersedia di lingkungan dengan jenis tertentu. Konfigurasi add-in akan memberi tahu Anda jika kontrol tidak tersedia karena jenis lingkungan yang dipilih. Selengkapnya tentang [kasus penggunaan lingkungan](work-with-business-accounts.md).
+- Beberapa data dan kontrol hanya tersedia di lingkungan dengan jenis tertentu. Konfigurasi add-in akan memberi tahu Anda jika kontrol tidak tersedia karena jenis lingkungan yang dipilih. Kesalahan ini akan ditampilkan dalam kontrol saat merendernya. Selengkapnya tentang [kasus penggunaan lingkungan](work-with-business-accounts.md).
+- Setiap kontrol add-in bergantung pada data tertentu di Customer Insights.
   - **Kontrol pengukuran** memerlukan pengukuran [atribut pelanggan yang](measures.md) dikonfigurasi.
   - **Kontrol kecerdasan** memerlukan data yang dihasilkan menggunakan [prediksi atau model](predictions-overview.md) kustom.
   - **Kontrol** detail pelanggan menunjukkan semua bidang dari profil yang tersedia di profil pelanggan terpadu.
