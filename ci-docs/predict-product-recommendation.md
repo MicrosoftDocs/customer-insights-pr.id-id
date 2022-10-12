@@ -1,212 +1,173 @@
 ---
-title: prediksi Rekomendasi produk
+title: Prediksikan Rekomendasi produk
 description: Memperkirakan produk yang mungkin dibeli atau berinteraksi dengan pelanggan.
-ms.date: 05/09/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
-ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
+ms.openlocfilehash: 0057d6796bb60db44d08b58d9e0daaf6e7c90fde
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 05/16/2022
-ms.locfileid: "8762736"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610286"
 ---
-# <a name="product-recommendation-prediction"></a>prediksi Rekomendasi produk
+# <a name="predict-product-recommendations"></a>Prediksikan Rekomendasi produk
 
-Model rekomendasi produk membuat rangkaian rekomendasi produk prediktif. Rekomendasi didasarkan pada perilaku pembelian sebelumnya dan pelanggan dengan pola pembelian yang serupa. Anda dapat membuat prediksi rekomendasi produk baru pada halaman **Intelijen** > **Prediksi**. Pilih **prediksi saya** untuk melihat prediksi lain yang Anda buat.
+Model rekomendasi produk membuat rangkaian rekomendasi produk prediktif. Rekomendasi didasarkan pada perilaku pembelian sebelumnya dan pelanggan dengan pola pembelian yang serupa. Model ini untuk konsumen individu (B-to-C).
 
-Rekomendasi produk dapat dipengaruhi oleh hukum dan peraturan setempat dan harapan pelanggan, yang modelnya tidak dibangun untuk memperhitungkan secara khusus.  Sebagai pengguna kemampuan prediktif ini, **Anda harus meninjau rekomendasi sebelum mengirimkannya kepada pelanggan Anda** untuk memastikan bahwa Anda mematuhi hukum atau peraturan yang berlaku, dan harapan pelanggan atas apa yang mungkin Anda rekomendasikan.
+Anda harus memiliki pengetahuan bisnis tentang berbagai jenis produk untuk bisnis Anda dan bagaimana pelanggan Anda berinteraksi dengan mereka. Kami mendukung rekomendasi produk yang telah dibeli sebelumnya oleh pelanggan atau rekomendasi untuk produk baru.
 
-Selain itu, output model ini akan memberikan rekomendasi berdasarkan ID produk. Mekanisme pengiriman Anda perlu memetakan ID produk yang diprediksi ke konten yang sesuai untuk pelanggan Anda untuk memperhitungkan pelokalan, konten gambar, dan konten atau perilaku khusus bisnis lainnya.
+Rekomendasi produk dapat dipengaruhi oleh hukum dan peraturan setempat dan harapan pelanggan, yang modelnya tidak dibangun untuk memperhitungkan secara khusus. Oleh karena itu, **Anda harus meninjau rekomendasi sebelum mengirimkannya kepada pelanggan** Anda untuk memastikan bahwa Anda mematuhi hukum atau peraturan yang berlaku, dan harapan pelanggan atas apa yang mungkin Anda rekomendasikan.
 
-## <a name="sample-guide"></a>Panduan Sampel
+Output dari model ini memberikan rekomendasi berdasarkan ID produk. Mekanisme pengiriman Anda harus memetakan ID produk yang diprediksi ke konten yang sesuai bagi pelanggan Anda untuk memperhitungkan pelokalan, konten gambar, dan konten atau perilaku khusus bisnis lainnya.
 
-Jika Anda ingin mencoba fitur ini tetapi tidak memiliki data untuk melengkapi persyaratan di bawah, Anda dapat [membuat implementasi sampel](sample-guide-predict-product-recommendation.md).
+> [!TIP]
+> Coba rekomendasi produk prediksi menggunakan data sampel: [Rekomendasi produk prediksi panduan sampel](sample-guide-predict-product-recommendation.md).
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Sekurangnya [izin kontributor](permissions.md) di Customer Insights.
-
-- Pengetahuan bisnis untuk memahami berbagai jenis produk untuk bisnis Anda dan cara pelanggan Berinteraksi dengan mereka. Kami mendukung rekomendasi produk yang telah dibeli sebelumnya oleh pelanggan atau rekomendasi untuk produk baru.
-
-- Lingkungan Anda harus dikonfigurasi untuk **target utama konsumen** individu audiens.
-
-- Data tentang transaksi, pembelian dan Riwayat mereka:
-  - Pengidentifikasi transaksi untuk membedakan pembelian atau transaksi.
-  - Pengidentifikasi pelanggan untuk memetakan transaksi dengan pelanggan Anda.
-  - Tanggal aktivitas transaksi, yang menentukan tanggal terjadinya transaksi.
-  - Informasi ID produk untuk transaksi.
-  - (Opsional) Entitas data katalog produk untuk menggunakan filter produk.
-  - (Opsional) Jika transaksi adalah retur atau tidak.
-  - Skema data semantik memerlukan informasi berikut:
-    - **ID transaksi:** pengidentifikasi unik pembelian atau transaksi.
-    - **Tanggal transaksi:** tanggal pembelian atau transaksi.
-    - **Nilai transaksi:** nilai numerik dari pembelian atau transaksi.
-    - **ID Produk unik:** id produk atau layanan yang dibeli jika data Anda berada pada tingkat item baris.
-    - (Opsional) **Pembelian atau retur:** Bidang boolean di mana nilai yang *benar* mengidentifikasi bahwa transaksi adalah retur. Jika data Pembelian atau Retur tidak disediakan model dan **Nilai transaksi** negatif, kita juga akan menggunakan informasi ini untuk menyimpulkan retur.
-- Karakteristik Data yang Disarankan:
-  - Data historis yang cukup: Setidaknya satu tahun data transaksional, sebaiknya dua hingga tiga tahun untuk memasukkan beberapa musiman.
-  - Beberapa pembelian per pelanggan: Tiga atau lebih transaksi per ID Pelanggan
-  - Jumlah pelanggan: Setidaknya 100 pelanggan, lebih disukai lebih dari 10.000 pelanggan. Model akan gagal dengan kurang dari 100 pelanggan.
+- Setidaknya [izin kontributor](permissions.md)
+- Setidaknya 100 pelanggan, lebih disukai lebih dari 10.000 pelanggan.
+- Pengidentifikasi Pelanggan, pengidentifikasi unik untuk mencocokkan transaksi dengan pelanggan individu
+- Setidaknya satu tahun data transaksional, lebih disukai dua hingga tiga tahun untuk memasukkan beberapa musiman. Idealnya, setidaknya tiga transaksi atau lebih per ID Pelanggan. Riwayat transaksi harus mencakup:
+  - **ID** Transaksi: Pengidentifikasi unik pembelian atau transaksi.
+  - **Tanggal transaksi**: Tanggal pembelian atau transaksi.
+  - **Nilai transaksi**: Nilai numerik pembelian atau transaksi.
+  - **ID** produk unik: ID produk atau layanan yang dibeli jika data Anda berada pada tingkat item baris.
+  - **Pembelian atau pengembalian**: Nilai benar/salah boolean di mana *true* mengidentifikasi bahwa transaksi adalah pengembalian. Jika data Pembelian atau Pengembalian tidak disediakan dalam model dan **Nilai transaksi** negatif, kami menyimpulkan pengembalian.
+- Entitas data katalog produk untuk digunakan sebagai filter produk.
 
 > [!NOTE]
->
-> - Model ini memerlukan riwayat transaksi pelanggan Anda. Definisi transaksi cukup fleksibel. Data apa pun yang menjelaskan interaksi produk pengguna dapat berfungsi sebagai input. Misalnya, membeli produk, mengikuti kelas, atau menghadiri acara.
-> - Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian, pisahkan sebelum Power Query penyerapan data.
+> - Model ini memerlukan riwayat transaksi pelanggan Anda di mana transaksi adalah data apa pun yang menggambarkan interaksi pengguna-produk. Misalnya, membeli produk, mengikuti kelas, atau menghadiri acara.
+> - Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi. Jika ada beberapa entitas pembelian, gabungkan sebelum Power Query penyerapan data.
 > - Jika detail pesanan dan pesanan adalah entitas yang berbeda, gabunglah mereka sebelum digunakan dalam model. Model tidak hanya berfungsi dengan ID pesanan atau ID tanda terima dalam entitas.
 
 ## <a name="create-a-product-recommendation-prediction"></a>buat prediksi Rekomendasi produk
 
-1. Di Customer Insights, buka **Intelijen** > **Prediksi**.
+Pilih **Simpan draf** kapan saja untuk menyimpan prediksi sebagai draf. Draf prediksi ditampilkan di tab **Prediksi** saya.
 
-1. Pilih petak **model** rekomendasi produk dan pilih **Gunakan model ini**.
-   > [!div class="mx-imgBorder"]
-   > ![petak model Rekomendasi Produk dengan Tombol Gunakan model ini.](media/product-recommendation-usethismodel.PNG "petak model Rekomendasi Produk dengan Tombol Gunakan model ini")
+1. Pergi ke **Prediksi** > **Intelijen**.
 
-1. Tinjau informasi tentang persyaratan model. Jika Anda memiliki data yang diperlukan, pilih **Mulai**.
+1. Pada tab **Buat**, pilih **Gunakan model** pada petak **Peta rekomendasi produk (pratinjau**).
 
-### <a name="name-model"></a>Beri nama model
+1. Pilih **Mulai**.
 
-1. Berikan nama model untuk membedakannya dari model lain.
+1. **Namai model ini** dan **nama entitas Output** untuk membedakannya dari model atau entitas lain.
 
-1. Masukkan nama untuk entitas output hanya menggunakan huruf dan angka, tanpa spasi apa pun. Itulah nama yang akan digunakan oleh entitas model. Kemudian pilih **Berikutnya**.
+1. Pilih **Selanjutnya**.
 
-### <a name="define-product-recommendation-configuration"></a>Tentukan konfigurasi rekomendasi produk
+### <a name="define-product-recommendation-preferences"></a>Tentukan preferensi rekomendasi produk
 
-1. Atur **Jumlah produk** yang akan direkomendasikan ke pelanggan. Nilai ini tergantung pada cara metode pengiriman Anda mengisi data. Jika Anda dapat merekomendasikan tiga produk, atur nilai ini dengan sesuai.
+1. **Atur Jumlah produk** yang akan direkomendasikan kepada pelanggan. Nilai ini tergantung pada cara metode pengiriman Anda mengisi data.
 
-   >[!TIP]
-   > Anda dapat memilih **Simpan draf** kapan saja untuk menyimpan prediksi sebagai draf. Anda akan menemukan draf prediksi di tab **prediksi saya**.
+1. Pilih apakah Anda ingin menyertakan produk yang sebelumnya telah dibeli pelanggan di **bidang Pembelian berulang yang diharapkan**.
 
-1. Pilih apakah Anda ingin menyertakan produk yang baru saja dibeli pelanggan di **bidang Pembelian berulang yang diharapkan**.
-
-1. Atur jendela **Lihat ke** belakang. Pengaturan ini menentukan jangka waktu yang dipertimbangkan model sebelum merekomendasikan produk kepada pengguna lagi. Misalnya, tunjukkan pelanggan membeli laptop setiap dua tahun. Jendela ini akan melihat riwayat pembelian selama dua tahun terakhir, dan jika mereka menemukan item, item akan difilter dari rekomendasi.
+1. Atur jendela **Lihat ke** belakang dengan jangka waktu yang dipertimbangkan model sebelum merekomendasikan produk kepada pengguna lagi. Misalnya, tunjukkan pelanggan membeli laptop setiap dua tahun. Model melihat riwayat pembelian selama dua tahun terakhir, dan jika menemukan item, item tersebut difilter dari rekomendasi.
 
 1. Pilih **berikutnya**
 
-### <a name="add-required-data"></a>Tambahkan data wajib
+### <a name="add-purchase-history"></a>Tambah riwayat pembelian
 
-1. Pilih **Tambah data** dan pilih jenis aktivitas pada panel sisi yang berisi informasi transaksi atau riwayat pembelian yang diperlukan.
+1. Pilih **Tambahkan data** untuk **riwayat transaksi** Pelanggan.
 
-1. Dalam **Pilih aktivitas**, pilih aktivitas tertentu dari aktivitas yang dipilih yang akan difokuskan perhitungannya.
+1. Pilih jenis **aktivitas semantik SalesOrderLine** yang berisi informasi riwayat transaksi atau pembelian yang diperlukan. Jika aktivitas belum disiapkan, pilih **di sini** dan buat.
+
+1. Di bawah **Aktivitas**, jika atribut aktivitas dipetakan secara semantik saat aktivitas dibuat, pilih atribut atau entitas tertentu yang ingin Anda fokuskan pada perhitungan. Jika pemetaan semantik tidak terjadi, pilih **Edit dan petakan** data Anda.
 
    :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panel sisi yang menunjukkan pemilihan aktivitas tertentu dalam jenis semantik.":::
 
-1. Jika Anda belum memetakan aktivitas ke jenis semantis, pilih **Edit** untuk melakukannya. Pengalaman terpandu untuk memetakan aktivitas semantis akan terbuka. Petakan data Anda ke bidang terkait di jenis aktivitas yang dipilih.
-
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Jenis aktivitas pengaturan halaman.":::
-
-1. Setelah memetakan aktivitas ke jenis semantik yang sesuai, pilih **Berikutnya** untuk melanjutkan.
-
-1. Petakan atribut semantis ke bidang yang diperlukan untuk menjalankan model.
+1. Pilih **Berikutnya** dan tinjau atribut yang diperlukan untuk model ini.
 
 1. Pilih **Simpan**.
 
 1. Pilih **Selanjutnya**.
 
-### <a name="configure-product-filters"></a>Konfigurasikan filter produk
+### <a name="add-product-information-and-filters"></a>Menambahkan informasi dan filter produk
 
-Terkadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis prediksi yang Anda bangun. Filter produk memungkinkan Anda mengidentifikasi subkumpulan produk dengan karakteristik khusus untuk direkomendasikan kepada pelanggan Anda. Model ini akan menggunakan semua produk yang tersedia untuk mempelajari pola tetapi hanya menggunakan produk yang cocok dengan filter produk dalam outputnya.
+Terkadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis prediksi yang Anda bangun. Gunakan filter produk untuk mengidentifikasi subset produk dengan karakteristik tertentu untuk direkomendasikan kepada pelanggan Anda. Model ini akan menggunakan semua produk yang tersedia untuk mempelajari pola tetapi hanya menggunakan produk yang cocok dengan filter produk dalam outputnya.
 
-1. Dalam langkah **Tambahkan informasi produk**, tambahkan katalog produk Anda dengan informasi untuk setiap produk. Petakan informasi yang diperlukan dan pilih **Berikutnya**.
-
-1. Di langkah **Filter produk**, pilih di antara opsi berikut.
-
-   - **Tidak ada filter**: Gunakan semua produk dalam prediksi rekomendasi produk.
-
-   - **Tentukan filter produktertentu**: Gunakan produk tertentu dalam prediksi rekomendasi produk.
+1. Tambahkan entitas katalog produk Anda yang berisi informasi untuk setiap produk. Petakan informasi yang diperlukan dan pilih **Simpan**.
 
 1. Pilih **Selanjutnya**.
 
-1. Jika Anda memilih untuk menentukan filter produk, Anda perlu mendefinisikannya sekarang. Di panel **atribut katalog Produk**, pilih atribut dari *entitas Katalog Produk* yang ingin Anda sertakan dalam filter.
+1. Pilih **Filter produk**:
 
-   :::image type="content" source="media/product-filters-sidepane.png" alt-text="Panel samping ditampilkan diatribusikan dalam entitas katalog produk untuk memilih filter produk.":::
+   - **Tidak ada filter**: Gunakan semua produk dalam prediksi rekomendasi produk.
 
-1. Pilih apakah Anda ingin filter produk menggunakan konektor **and** atau **or** untuk secara logis menggabungkan pilihan atribut Anda dari katalog produk.
+   - **Tentukan filter produktertentu**: Gunakan produk tertentu dalam prediksi rekomendasi produk. Di **panel Atribut** katalog produk, pilih atribut dari entitas katalog produk yang ingin Anda sertakan dalam filter.
+
+     :::image type="content" source="media/product-filters-sidepane.png" alt-text="Panel samping ditampilkan diatribusikan dalam entitas katalog produk untuk memilih filter produk.":::
+
+1. Pilih apakah Anda ingin filter produk digunakan **dan** atau **atau** secara logis menggabungkan pilihan atribut Anda dari katalog produk.
 
    :::image type="content" source="media/product-filters-sample.png" alt-text="Contoh konfigurasi filter produk dikombinasikan dengan konektor AND logis.":::
 
 1. Pilih **Selanjutnya**.
 
-### <a name="set-update-schedule-and-review-configuration"></a>Mengatur jadwal pembaruan dan meninjau konfigurasi
+### <a name="set-update-schedule"></a>Atur Jadwal pembaruan
 
-1. Atur frekuensi untuk melatih ulang model Anda. Pengaturan ini penting untuk memperbarui keakuratan prediksi karena data baru diimpor ke Customer Insights. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
+1. Pilih frekuensi untuk melatih kembali model Anda. Pengaturan ini penting untuk memperbarui keakuratan prediksi karena data baru diserap ke dalam Customer Insights. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
 
 1. Pilih **Selanjutnya**.
 
-1. Tinjau Konfigurasi. Anda dapat kembali ke bagian apa pun dari konfigurasi prediksi dengan memilih **Edit** dalam nilai yang ditampilkan. Atau Anda dapat memilih langkah konfigurasi dari indikator progres.
+### <a name="review-and-run-the-model-configuration"></a>Memeriksa dan menjalankan konfigurasi model
 
-1. Jika semua nilai dikonfigurasi dengan benar, pilih **Simpan dan jalankan** untuk memulai proses prediksi. Pada **tab prediksi saya**, Anda dapat melihat status prediksi Anda. Proses dapat berlangsung selama beberapa jam hingga selesai, tergantung pada jumlah data yang digunakan dalam prediksi.
+Langkah **Tinjau dan jalankan** menunjukkan ringkasan konfigurasi dan memberikan kesempatan untuk membuat perubahan sebelum Anda membuat prediksi.
 
-## <a name="review-a-prediction-status-and-results"></a>Meninjau status dan hasil prediksi
+1. Pilih **Edit** pada salah satu langkah untuk meninjau dan membuat perubahan apa pun.
 
-1. Buka tab **prediksi saya** pada **intelijen** > **prediksi**.
-   > [!div class="mx-imgBorder"]
-   > ![Tampilan halaman prediksi saya.](media/product-recommendation-mypredictions.PNG "Tampilan halaman prediksi saya")
+1. Jika Anda puas dengan pilihan Anda, pilih **Simpan dan jalankan** untuk mulai menjalankan model. Pilih **Selesai**. Tab **Prediksi** saya ditampilkan saat prediksi sedang dibuat. Proses dapat berlangsung selama beberapa jam hingga selesai, tergantung pada jumlah data yang digunakan dalam prediksi.
 
-1. Pilih prediksi yang ingin Anda tinjau.
-   - **Nama prediksi:** nama prediksi yang diberikan saat membuatnya.
-   - **Jenis prediksi:** jenis model yang digunakan untuk prediksi
-   - **Entitas output:** nama entitas untuk menyimpan output dari prediksi. Anda dapat menemukan entitas dengan nama ini pada **data** > **entitas**.
-      *Skor* dalam entitas output adalah ukuran kuantitatif dari rekomendasi. Model ini merekomendasikan produk dengan skor yang lebih tinggi atas produk dengan skor yang lebih rendah.
-   - **Bidang yang diprediksi**: Bidang ini hanya diisi untuk beberapa jenis prediksi, dan tidak digunakan dalam prediksi Rekomendasi Produk.
-   - **Status:** status saat ini prediksi berjalan.
-        - **Mengantri:** prediksi saat ini sedang menunggu proses lainnya untuk dijalankan.
-        - **Menyegarkan:** prediksi saat ini menjalankan tahapan pemrosesan "Skor" untuk menghasilkan hasil yang akan mengalir ke entitas output.
-        - **Gagal:** prediksi gagal. Pilih **Log** untuk rincian lebih lanjut.
-        - **Berhasil:** prediksi telah berhasil. Pilih **Lihat** di bawah elips vertikal untuk meninjau prediksi
-   - **Diedit:** tanggal konfigurasi untuk prediksi telah diubah.
-   - **Terakhir Diperbarui:** tanggal prediksi yang disegarkan dihasilkan dalam entitas output.
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1. Pilih elips vertikal di samping prediksi yang ingin Anda tinjau hasilnya dan pilih **Lihat**.
-   > [!div class="mx-imgBorder"]
-   > ![Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus.](media/product-recommendation-verticalellipses.PNG "Lihat pilihan dalam menu elipsis vertikal untuk prediksi termasuk Edit, segarkan, tampilan, log, dan Hapus")
+## <a name="view-prediction-results"></a>Lihat hasil prediksi
 
-1. Ada lima bagian utama data dalam halaman hasil:
-    1. **Performa model pelatihan:** A, B, atau C adalah Skor yang mungkin. Skor ini menunjukkan performa prediksi, dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang tersimpan di entitas output.
-        - Skor ditentukan berdasarkan aturan berikut:
-            - **A** Model akan dianggap sebagai Kualitas **A** jika metrik "Berhasil @ K" sekurangnya 10% lebih dari dasar. 
-            - **B** Model akan dianggap sebagai Kualitas **B** jika metrik "Berhasil @ K" adalah 0% hingga 10% dari dasar.
-            - **C** Model akan dianggap sebagai Kualitas **C** jika metrik "Berhasil @ K" adalah kurang dari dasar.
+1. Pergi ke **Prediksi** > **Intelijen**.
 
-               > [!div class="mx-imgBorder"]
-               > ![Tampilan hasil kinerja model.](media/product-recommendation-modelperformance.PNG "Tampilan hasil kinerja model")
-            - **Dasar**: Model mengambil produk yang paling direkomendasikan teratas menurut jumlah pembelian di seluruh pelanggan, dan menggunakan aturan yang diidentifikasi berdasarkan model untuk membuat rangkaian rekomendasi untuk pelanggan. Selanjutnya, prediksi akan dibandingkan dengan produk teratas, sebagaimana dihitung menurut jumlah pelanggan yang membeli produk tersebut. Jika pelanggan memiliki minimal satu produk dalam produk rekomendasinya yang juga terlihat di produk pembelian teratas, maka produk tersebut dianggap sebagai bagian dari dasar. Jika ada 10 pelanggan tersebut yang memiliki rekomendasi pembelian produk dari 100 total pelanggan, maka dasar akan menjadi 10%.
-            - **Berhasil @ K**: Menggunakan rangkaian validasi periode waktu transaksi, rekomendasi dibuat untuk semua pelanggan dan dibandingkan dengan rangkaian validasi transaksi. Contohnya, dalam periode 12 bulan, bulan 12 dapat disisihkan sebagai rangkaian validasi data. Jika model memperkirakan sekurangnya satu hal yang akan Anda beli dalam bulan 12 berdasarkan apa yang ia pelajari dari 11 bulan sebelumnya, pelanggan akan meningkatkan metrik "Berhasil @ K".
+1. Di tab **Prediksi** saya, pilih prediksi yang ingin Anda lihat.
 
-    1. **Sebagian besar produk yang disarankan (dengan tally):** Lima produk teratas yang diprediksi untuk pelanggan Anda.
-       > [!div class="mx-imgBorder"]
-       > ![Grafik yang menampilkan 5 produk rekomendasi teratas.](media/product-recommendation-topproducts.PNG "Grafik yang menampilkan 5 produk rekomendasi teratas")
+Ada lima bagian utama data dalam halaman hasil.
 
-    1. **Faktor rekomendasi utama**: Model menggunakan riwayat transaksi pelanggan untuk membuat rekomendasi produk. Ini mempelajari pola berdasarkan pembelian sebelumnya dan menemukan kesamaan antara pelanggan dan produk. Kesamaan ini kemudian digunakan untuk menghasilkan rekomendasi produk.
-    Berikut ini adalah faktor-faktor yang dapat mempengaruhi rekomendasi produk yang dihasilkan oleh model.
-        - **Transaksi sebelumnya**: Pola pembelian di masa lalu dimanfaatkan oleh model untuk menghasilkan rekomendasi produk. Misalnya, model dapat merekomendasikan *Surface Arc Mouse* jika seseorang baru saja membeli *Surface Book 3* dan *Surface Pen*. Model ini mengetahui bahwa secara historis, banyak pelanggan telah membeli *Surface Arc Mouse* setelah membeli *Surface Book 3* dan *Surface Pen*.
-        - **Kesamaan pelanggan**: Produk yang direkomendasikan secara historis dibeli oleh pelanggan lain yang menunjukkan pola pembelian serupa. Misalnya, John direkomendasikan *Surface Headphones 2* karena Jennifer dan Brad baru-baru ini membeli *Surface Headphones 2*. Model ini percaya John mirip dengan Jennifer dan Brad karena mereka secara historis memiliki pola pembelian yang sama.
-        - **Kesamaan produk**: Produk yang direkomendasikan mirip dengan produk lain yang dibeli pelanggan sebelumnya. Model ini menganggap dua produk mirip jika dibeli bersama atau oleh pelanggan serupa. Misalnya, seseorang mendapatkan rekomendasi untuk *Drive Penyimpanan USB* karena mereka sebelumnya membeli *Adaptor USB-C ke USB* dan model percaya bahwa *Drive Penyimpanan USB* mirip dengan *Adaptor USB-C ke USB* berdasarkan pola pembelian historis.
+- **Performa model:** Nilai A, B, atau C menunjukkan performa prediksi dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang disimpan dalam entitas output.
+  
+  :::image type="content" source="media/product-recommendation-modelperformance.PNG" alt-text="Gambar hasil kinerja model dengan grade A.":::
 
-        Setiap rekomendasi produk dipengaruhi oleh satu atau lebih faktor-faktor ini. Persentase rekomendasi di mana setiap faktor yang mempengaruhi memainkan peran divisualisasikan dalam bagan. Dalam contoh berikut, 100% dari rekomendasi dipengaruhi oleh transaksi sebelumnya, 60% oleh kesamaan pelanggan dan 22% berdasarkan kesamaan produk. Arahkan kursor ke bilah di bagan untuk melihat persentase yang tepat di mana faktor yang memengaruhi berkontribusi.
+  Peringkat ditentukan berdasarkan aturan berikut:
+  - **A** ketika metrik "Success @ K" setidaknya 10% lebih banyak dari baseline.
+  - **B** ketika metrik "Success @ K" adalah 0% hingga 10% lebih tinggi dari baseline.
+  - **C** ketika metrik "Sukses @ K" kurang dari garis dasar.
+  - **Baseline**: Produk teratas yang paling direkomendasikan berdasarkan jumlah pembelian di semua pelanggan + aturan yang dipelajari yang diidentifikasi oleh model = serangkaian rekomendasi untuk pelanggan. Selanjutnya, prediksi akan dibandingkan dengan produk teratas, sebagaimana dihitung menurut jumlah pelanggan yang membeli produk tersebut. Jika pelanggan memiliki minimal satu produk dalam produk rekomendasinya yang juga terlihat di produk pembelian teratas, maka produk tersebut dianggap sebagai bagian dari dasar. Misalnya, jika 10 dari pelanggan ini memiliki produk yang direkomendasikan yang dibeli dari 100 total pelanggan, baseline-nya adalah 10%.
+  - **Berhasil @ K**: Rekomendasi dibuat untuk semua pelanggan dan dibandingkan dengan serangkaian validasi periode waktu transaksi. Misalnya, dalam periode 12 bulan, bulan 12 disisihkan sebagai kumpulan data validasi. Jika model memperkirakan sekurangnya satu hal yang akan Anda beli dalam bulan 12 berdasarkan apa yang ia pelajari dari 11 bulan sebelumnya, pelanggan akan meningkatkan metrik "Berhasil @ K".
 
-        > [!div class="mx-imgBorder"]
-        > ![Faktor rekomendasi utama.](media/product-recommendation-keyrecommendationfactors.png "Faktor rekomendasi utama yang dipelajari oleh model untuk menghasilkan rekomendasi produk")
+- **Sebagian besar produk yang disarankan (dengan tally):** Lima produk teratas yang diprediksi untuk pelanggan Anda.
+  
+  :::image type="content" source="media/product-recommendation-topproducts.PNG" alt-text="Grafik yang menampilkan 5 produk rekomendasi teratas.":::
 
-   1. **Statistik data**: Memberikan gambaran jumlah transaksi, pelanggan, dan produk yang dipertimbangkan model. Hal ini didasarkan pada data input yang digunakan untuk mempelajari pola dan menghasilkan rekomendasi produk.
+- **Faktor rekomendasi utama**: Model menggunakan riwayat transaksi pelanggan untuk membuat rekomendasi produk. Ini mempelajari pola berdasarkan pembelian sebelumnya dan menemukan kesamaan antara pelanggan dan produk. Kesamaan ini kemudian digunakan untuk menghasilkan rekomendasi produk.
+  Faktor-faktor berikut dapat mempengaruhi rekomendasi produk yang dihasilkan oleh model.
+  - **Transaksi** sebelumnya: Produk yang direkomendasikan didasarkan pada pola pembelian sebelumnya. Misalnya, model dapat merekomendasikan *Surface Arc Mouse* jika seseorang baru saja membeli *Surface Book 3* dan *Surface Pen*. Model ini mengetahui bahwa secara historis, banyak pelanggan telah membeli *Surface Arc Mouse* setelah membeli *Surface Book 3* dan *Surface Pen*.
+  - **Kesamaan pelanggan**: Produk yang direkomendasikan secara historis dibeli oleh pelanggan lain yang menunjukkan pola pembelian serupa. Misalnya, John direkomendasikan *Surface Headphones 2* karena Jennifer dan Brad baru-baru ini membeli *Surface Headphones 2*. Model ini percaya John mirip dengan Jennifer dan Brad karena mereka secara historis memiliki pola pembelian yang sama.
+  - **Kesamaan produk**: Produk yang direkomendasikan mirip dengan produk lain yang dibeli pelanggan sebelumnya. Model ini menganggap dua produk mirip jika dibeli bersama atau oleh pelanggan serupa. Misalnya, seseorang mendapatkan rekomendasi untuk *Drive Penyimpanan USB* karena mereka sebelumnya membeli *Adaptor USB-C ke USB* dan model percaya bahwa *Drive Penyimpanan USB* mirip dengan *Adaptor USB-C ke USB* berdasarkan pola pembelian historis.
 
-      > [!div class="mx-imgBorder"]
-      > ![Statistik data.](media/product-recommendation-datastatistics.png "Statistik data di sekitar data input yang digunakan oleh model untuk mempelajari pola")
+  Setiap rekomendasi produk dipengaruhi oleh satu atau lebih faktor-faktor ini. Persentase rekomendasi di mana setiap faktor yang mempengaruhi memainkan peran divisualisasikan dalam bagan. Dalam contoh berikut, 100% dari rekomendasi dipengaruhi oleh transaksi sebelumnya, 60% oleh kesamaan pelanggan dan 22% berdasarkan kesamaan produk. Arahkan kursor ke bilah di bagan untuk melihat persentase yang tepat di mana faktor yang memengaruhi berkontribusi.
+  
+  :::image type="content" source="media/product-recommendation-keyrecommendationfactors.png" alt-text="Faktor rekomendasi utama yang dipelajari oleh model untuk menghasilkan rekomendasi produk.":::
 
-      Bagian ini menunjukkan statistik di sekitar titik data yang digunakan oleh model untuk mempelajari pola dan menghasilkan rekomendasi produk. Pemfilteran, seperti yang dikonfigurasi dalam konfigurasi model, akan berlaku pada output yang dihasilkan oleh model. Namun, model ini menggunakan semua data yang tersedia untuk mempelajari pola. Oleh karena itu, jika Anda menggunakan pemfilteran produk dalam konfigurasi model, bagian ini akan menunjukkan jumlah total produk yang dianalisis model untuk mempelajari pola, yang mungkin berbeda dari jumlah produk yang sesuai dengan kriteria pemfilteran yang ditentukan.
+- **Statistik data**: Gambaran umum jumlah transaksi, pelanggan, dan produk yang dipertimbangkan model. Hal ini didasarkan pada data input yang digunakan untuk mempelajari pola dan menghasilkan rekomendasi produk.
 
-   1. **Rekomendasi produk dengan tingkat keyakinan tinggi:** Sampel rekomendasi yang diberikan kepada pelanggan yang diyakini oleh model kemungkinan dibeli oleh pelanggan.    
-      Jika katalog produk ditambahkan, ID produk diganti dengan nama produk. Nama produk memberikan informasi yang lebih dapat ditindaklanjuti dan intuitif tentang prediksi.
-       > [!div class="mx-imgBorder"]
-       > ![Daftar yang menampilkan saran dengan keyakinan tinggi untuk rangkaian pelanggan individual tertentu.](media/product-recommendation-highconfidence.PNG "Daftar yang menampilkan saran dengan keyakinan tinggi untuk rangkaian pelanggan individual tertentu")
+  :::image type="content" source="media/product-recommendation-datastatistics.png" alt-text="Statistik data seputar data input yang digunakan oleh model untuk mempelajari pola.":::
+  
+  Model ini menggunakan semua data yang tersedia untuk mempelajari pola. Oleh karena itu, jika Anda menggunakan pemfilteran produk dalam konfigurasi model, bagian ini menunjukkan jumlah total produk yang dianalisis model untuk mempelajari pola, yang mungkin berbeda dari jumlah produk yang cocok dengan kriteria pemfilteran yang ditentukan. Pemfilteran berlaku pada output yang dihasilkan oleh model.
 
-## <a name="manage-predictions"></a>Kelola prediksi
+- **Contoh rekomendasi produk:** Sampel rekomendasi yang diyakini model kemungkinan akan dibeli oleh pelanggan. Jika katalog produk ditambahkan, ID produk akan diganti dengan nama produk.
 
-Anda dapat mengoptimalkan, memecahkan masalah, menyegarkan, atau menghapus prediksi. Tinjau laporan kegunaan data input untuk mengetahui cara membuat prediksi lebih cepat dan lebih dapat diandalkan. Untuk informasi lebih lanjut, lihat [Kelola prediksi](manage-predictions.md).
+  :::image type="content" source="media/product-recommendation-highconfidence.PNG" alt-text="Daftar yang menampilkan saran dengan keyakinan tinggi untuk rangkaian pelanggan individual tertentu.":::
+
+> [!NOTE]
+> Dalam entitas output untuk model ini, *Skor* menunjukkan ukuran kuantitatif rekomendasi. Model ini merekomendasikan produk dengan skor yang lebih tinggi atas produk dengan skor yang lebih rendah. Untuk melihat skor, buka **Entitas** > **Data** dan lihat tab data untuk entitas output yang Anda tentukan untuk model ini.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

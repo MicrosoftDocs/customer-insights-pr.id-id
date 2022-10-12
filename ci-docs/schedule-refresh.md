@@ -1,7 +1,7 @@
 ---
 title: Jadwalkan penyegaran sistem
 description: Jadwalkan waktu ketika sistem harus disegarkan
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395960"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610332"
 ---
 # <a name="schedule-system-refresh"></a>Jadwalkan penyegaran sistem
 
 Jadwalkan refresh otomatis dari semua sumber data yang Anda [konsumsi](data-sources.md). Penyegaran otomatis membantu memastikan bahwa pembaruan dari sumber data Anda tercermin dalam profil pelanggan terpadu Anda.
 
 > [!NOTE]
-> Power Query sumber data yang dikelola oleh Anda refresh pada jadwal mereka sendiri. Untuk menjadwalkan refresh sumber data ini Power Query, konfigurasikan pengaturan refresh pada sumber data tertentu dari **halaman Sumber** data.
+> Power Query sumber data yang dikelola oleh Anda refresh pada jadwal mereka sendiri. Untuk menjadwalkan refresh sumber data ini Power Query, konfigurasikan pengaturan refresh pada sumber data tertentu dari **halaman Sumber** data. Sejajarkan waktu dengan jadwal refresh data hulu sehingga refresh tidak semuanya terjadi sekaligus.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Pengaturan refresh aliran data.":::
 
 ## <a name="set-system-refresh-schedule"></a>Mengatur jadwal penyegaran sistem

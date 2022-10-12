@@ -1,7 +1,7 @@
 ---
-title: Prediksi nilai selama hubungan dengan pelanggan (CLV)
+title: Prediksikan nilai selama hubungan dengan pelanggan (CLV)
 description: Prediksi potensi pendapatan untuk pelanggan aktif di masa mendatang.
-ms.date: 07/21/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,74 +13,63 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
-ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
+ms.openlocfilehash: f27462ac327027e50e23387ac9f75a671db9a86d
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9186444"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610378"
 ---
-# <a name="customer-lifetime-value-clv-prediction"></a>Prediksi nilai selama hubungan dengan pelanggan (CLV)
+# <a name="predict-customer-lifetime-value-clv"></a>Prediksikan nilai selama hubungan dengan pelanggan (CLV)
 
-Perkipkan nilai potensial (pendapatan) yang akan diberikan pelanggan aktif individual ke bisnis Anda hingga periode waktu mendatang yang ditentukan. Fitur ini dapat membantu Anda mencapai berbagai sasaran:
+Perkipkan nilai potensial (pendapatan) yang akan diberikan pelanggan aktif individual ke bisnis Anda hingga periode waktu mendatang yang ditentukan. Ini prediksi membantu Anda:
 
-- Mengidentifikasi pelanggan bernilai tinggi dan memproses wawasan ini
-- Membuat segmen pelanggan yang strategis berdasarkan potensi nilainya untuk menjalankan kampanye pribadi dengan upaya penjualan, pemasaran, dan dukungan yang ditargetkan
-- Memandu pengembangan produk dengan berfokus pada fitur yang meningkatkan nilai pelanggan
-- Mengoptimalkan strategi penjualan atau pemasaran dan mengalokasikan anggaran secara lebih akurat untuk jangkauan pelanggan
-- Mengakui dan memberikan penghargaan kepada pelanggan bernilai tinggi melalui program loyalitas atau penghargaan
+- Identifikasi pelanggan bernilai tinggi dan proses wawasan ini.
+- Buat segmen pelanggan yang strategis berdasarkan nilai potensial mereka untuk menjalankan kampanye yang dipersonalisasi dengan upaya penjualan, pemasaran, dan dukungan yang ditargetkan.
+- Pandu pengembangan produk dengan berfokus pada fitur yang meningkatkan nilai pelanggan.
+- Optimalkan strategi penjualan atau pemasaran dan alokasikan anggaran secara lebih akurat untuk penjangkauan pelanggan.
+- Kenali dan beri penghargaan kepada pelanggan bernilai tinggi melalui program loyalitas atau penghargaan.
+
+Tentukan apa arti CLV bagi bisnis Anda. Kami mendukung prediksi CLV berbasis transaksi. Nilai yang diprediksi dari pelanggan didasarkan pada sejarah transaksi bisnis. Pertimbangkan untuk membuat beberapa model dengan preferensi input yang bervariasi dan bandingkan hasil model untuk melihat skenario model mana yang paling sesuai dengan kebutuhan bisnis Anda.
+
+> [!TIP]
+> Coba clv prediksi menggunakan data sampel: [Panduan sampel prediksi nilai umur pelanggan (CLV)](sample-guide-predict-clv.md).
 
 ## <a name="prerequisites"></a>Prasyarat
 
-Sebelum memulai, cerminkan arti CLV untuk bisnis Anda. Saat ini, kami mendukung prediksi CLV berbasis transaksi. Nilai prediksi pelanggan didasarkan pada riwayat transaksi bisnis. Untuk membuat prediksi, Anda memerlukan minimal izin [kontributor](permissions.md).
-
-Karena mengkonfigurasi dan menjalankan model CLV tidak memerlukan banyak waktu, pertimbangkan untuk membuat beberapa model dengan berbagai preferensi input dan membandingkan hasil model untuk melihat skenario model yang paling sesuai dengan kebutuhan bisnis Anda.
-
-### <a name="data-requirements"></a>Persyaratan data
-
-Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatkan performa model. Semakin banyak data yang dapat diproses oleh model, semakin akurat prediksinya. Oleh karena itu, sebaiknya Anda menggunakan data aktivitas pelanggan lebih banyak, jika tersedia.
-
-- Pengidentifikasi Pelanggan: Pengidentifikasi unik untuk transaksi yang sesuai dengan pelanggan individual
-
-- Riwayat Transaksi: Log transaksi historis dengan skema data semantis di bawah
-    - **ID transaksi**: pengidentifikasi unik setiap transaksi
-    - **Tanggal transaksi**: Tanggal, sebaiknya cap waktu untuk setiap transaksi
-    - **Jumlah transaksi**: Nilai moneter (contoh: pendapatan atau margin laba) dari setiap transaksi
-    - **Label yang ditetapkan untuk hasil** (opsional): Nilai Boolean yang menandakan apakah transaksi adalah hasil 
-    - **ID Produk** (opsional): ID Produk dari produk yang terlibat dalam transaksi
-
-- Data tambahan (opsional), misalnya
-    - Aktivitas web: riwayat kunjungan situs web, riwayat email
-    - Aktivitas loyalitas: akumulasi poin reward loyalitas dan riwayat penukaran
-    - Log Layanan pelanggan, panggilan layanan, keluhan, atau riwayat retur
-    - Informasi profil pelanggan
-- Data tentang aktivitas pelanggan (opsional):
-    - Pengidentifikasi aktivitas untuk membedakan aktivitas dari jenis yang sama
-    - Pengidentifikasi pelanggan untuk memetakan aktivitas dengan pelanggan Anda
-    - Informasi aktivitas berisi nama dan tanggal aktivitas
-    - Skema data semantis untuk aktivitas mencakup:
-        - **Kunci primer**: pengidentifikasi unik untuk aktivitas
-        - **Cap waktu**: tanggal dan waktu aktivitas yang diidentifikasi oleh kunci primer
-        - **Aktivitas (nama aktivitas)**: Nama aktivitas yang akan digunakan
-        - **Rincian (jumlah atau nilai)**: Rincian tentang aktivitas pelanggan
-
-- Karakteristik Data yang Disarankan:
-    - Data historis yang memadai: Minimal satu tahun data transaksi. Sebaiknya dua hingga tiga tahun data transaksional untuk memperkirakan CLV selama satu tahun.
-    - Beberapa pembelian per pelanggan: Idealnya, minimal dua hingga tiga transaksi per ID pelanggan, sebaiknya di beberapa tanggal.
-    - Jumlah pelanggan: Setidaknya 100 pelanggan unik, lebih disukai lebih dari 10.000 pelanggan. Model akan gagal dengan kurang dari 100 pelanggan dan data historis yang tidak mencukupi
-    - Kelengkapan data: Kurang dari 20% nilai hilang pada bidang yang diperlukan dalam data input
+- Setidaknya [izin kontributor](permissions.md)
+- Setidaknya 100 pelanggan unik, lebih disukai lebih dari 10.000 pelanggan
+- Pengidentifikasi Pelanggan, pengidentifikasi unik untuk mencocokkan transaksi dengan pelanggan individu
+- Setidaknya satu tahun riwayat transaksi, lebih disukai dua hingga tiga tahun. Idealnya, setidaknya dua hingga tiga transaksi per ID pelanggan, lebih disukai di beberapa tanggal. Riwayat transaksi harus mencakup:
+  - **ID transaksi**: pengidentifikasi unik setiap transaksi
+  - **Tanggal transaksi**: Tanggal atau stempel waktu setiap transaksi
+  - **Jumlah transaksi**: Nilai moneter (contoh: pendapatan atau margin laba) dari setiap transaksi
+  - **Label yang ditetapkan untuk pengembalian**: Nilai true/false Boolean yang menandakan apakah transaksi tersebut adalah pengembalian
+  - **ID** Produk: ID Produk produk yang terlibat dalam transaksi
+- Data tentang aktivitas pelanggan:
+  - **Kunci** utama: Pengidentifikasi unik untuk suatu aktivitas
+  - **Stempel** waktu: Tanggal dan waktu peristiwa yang diidentifikasi oleh kunci utama
+  - **Acara (nama aktivitas)**: Nama acara yang ingin Anda gunakan
+  - **Rincian (jumlah atau nilai)**: Rincian tentang aktivitas pelanggan
+- Data tambahan seperti:
+  - Aktivitas web: Riwayat kunjungan situs web atau riwayat email
+  - Aktivitas loyalitas: Akrual poin reward loyalitas dan riwayat penukaran
+  - Layanan pelanggan log: Panggilan layanan, keluhan, atau riwayat pengembalian
+  - Informasi profil pelanggan
+- Kurang dari 20% nilai yang hilang di bidang wajib diisi
 
 > [!NOTE]
-> - Model ini memerlukan riwayat transaksi pelanggan Anda. Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi saat ini. Jika ada beberapa entitas pembelian/transaksi, Anda dapat menyatukannya Power Query sebelum penyerapan data.
-> - Namun untuk data aktivitas pelanggan tambahan (opsional), Anda dapat menambahkan entitas aktivitas pelanggan sebanyak yang ingin Anda pertimbangkan berdasarkan model.
+> Hanya satu entitas riwayat transaksi yang dapat dikonfigurasi. Jika ada beberapa entitas pembelian atau transaksi, gabungkan entitas tersebut Power Query sebelum penyerapan data.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Buat Prediksi nilai selama hubungan dengan pelanggan
 
-1. Pergi ke **Prediksi Intelijen** > **·**.
+Pilih **Simpan draf** kapan saja untuk menyimpan prediksi sebagai draf. Draf prediksi ditampilkan di tab **Prediksi** saya.
 
-1. Pilih petak **nilai selama hubungan dengan pelanggan** dan pilih **Gunakan model**. 
+1. Pergi ke **Prediksi** > **Intelijen**.
 
-1. Di **panel Nilai** seumur hidup pelanggan, pilih **Mulai**.
+1. Pada tab **Buat**, pilih **Gunakan model** pada petak **nilai** seumur hidup Pelanggan.
+
+1. Pilih **Mulai**.
 
 1. **Namai model ini** dan **nama entitas Output** untuk membedakannya dari model atau entitas lain.
 
@@ -88,66 +77,56 @@ Data berikut diperlukan dan jika ditandai opsional, disarankan untuk meningkatka
 
 ### <a name="define-model-preferences"></a>Definisikan Preferensi model
 
-1. Atur **periode waktu prediksi** untuk menentukan seberapa jauh ke masa mendatang yang akan Anda prediksikan CLV-nya.    
-   Secara default, unit diatur sebagai bulan. Anda dapat mengubahnya ke tahun untuk melihat lebih lanjut di masa mendatang.
+1. Atur **periode waktu prediksi** untuk menentukan seberapa jauh ke masa mendatang yang akan Anda prediksikan CLV-nya. Secara default, unit diatur sebagai bulan.
 
    > [!TIP]
-   > Untuk secara akurat memperkirakan CLV selama periode waktu yang Anda tentukan, Anda memerlukan periode data historis yang dapat dibandingkan. Misalnya, jika Anda ingin memperkirakan CLV selama 12 bulan ke depan, sebaiknya Anda memiliki data historis minimal 18 - 24 bulan.
+   > Untuk memprediksi CLV secara akurat untuk periode waktu yang ditetapkan, diperlukan periode data historis yang sebanding. Misalnya, jika Anda ingin memprediksi CLV selama 12 bulan ke depan, miliki setidaknya 18 – 24 bulan data historis.
 
-1. Tentukan makna **pelanggan Aktif** untuk bisnis Anda. Atur jangka waktu pelanggan harus memiliki minimal satu transaksi untuk dianggap aktif. Model tersebut hanya akan memperkirakan CLV untuk pelanggan aktif. 
-   - **Biarkan model menghitung interval pembelian (disarankan)**: Model akan menganalisis data Anda dan menentukan periode waktu berdasarkan pembelian historis.
-   - **Atur interval secara manual**: Jika Anda memiliki definisi bisnis khusus pelanggan aktif, pilih pilihan ini dan atur periode waktu sesuai.
+1. Atur jangka waktu pelanggan harus memiliki minimal satu transaksi untuk dianggap aktif. Model ini hanya memprediksi CLV untuk **pelanggan** Aktif.
+   - **Biarkan model menghitung interval pembelian (disarankan)**: Model menganalisis data Anda dan menentukan periode waktu berdasarkan pembelian historis.
+   - **Atur interval secara manual**: Periode waktu untuk definisi Anda tentang pelanggan aktif.
 
-1. Definisikan persentil **pelanggan bernilai tinggi** agar model dapat memberikan hasil yang sesuai dengan definisi bisnis Anda.
-    - **Penghitungan model (disarankan)**: Model akan menganalisis data Anda dan menentukan jenis pelanggan bernilai tinggi untuk bisnis Anda berdasarkan riwayat transaksi pelanggan. Model tersebut menggunakan aturan heuristik (yang diilhami oleh aturan 80/20 atau prinsip pareto) untuk menemukan proporsi pelanggan bernilai tinggi. Persentase pelanggan yang berkontribusi pada pendapatan kumulatif 80% untuk bisnis Anda dalam periode historis dianggap pelanggan bernilai tinggi. Biasanya, kurang dari 30-40% pelanggan berkontribusi pada pendapatan kumulatif 80%. Namun, jumlah ini dapat berbeda, tergantung pada bisnis dan industri Anda.    
-    - **Persen dari pelanggan aktif teratas**: Menentukan pelanggan bernilai tinggi untuk bisnis Anda sebagai persentil dari pelanggan berbayar aktif teratas. Misalnya, Anda dapat menggunakan pilihan ini untuk menentukan pelanggan bernilai tinggi sebagai 20% pelanggan berbayar teratas di masa mendatang.
+1. Tentukan persentil **pelanggan** bernilai tinggi.
+    - **Perhitungan model (disarankan)**: Model menggunakan aturan 80/20. Persentase pelanggan yang berkontribusi pada pendapatan kumulatif 80% untuk bisnis Anda dalam periode historis dianggap pelanggan bernilai tinggi. Biasanya, kurang dari 30-40% pelanggan berkontribusi pada pendapatan kumulatif 80%. Namun, jumlah ini dapat berbeda, tergantung pada bisnis dan industri Anda.
+    - **Persentase pelanggan** aktif teratas: Persentil spesifik untuk pelanggan bernilai tinggi. Misalnya, masukkan **25** untuk menentukan pelanggan bernilai tinggi sebagai 25% teratas dari pelanggan yang membayar di masa mendatang.
 
     Jika bisnis Anda menentukan pelanggan dengan nilai tinggi dengan cara yang berbeda, [beri tahu kami karena kami ingin mengetahuinya](https://go.microsoft.com/fwlink/?linkid=2074172).
 
-1. Pilih **selanjutnya** untuk lanjut ke langkah berikutnya.
+1. Pilih **Selanjutnya**.
 
 ### <a name="add-required-data"></a>Tambahkan data wajib
 
-1. Di langkah **data yang diperlukan**, pilih **Tambah data** untuk **Riwayat transaksi pelanggan** dan pilih entitas yang menyediakan informasi riwayat transaksi/pembelian sebagaimana dijelaskan dalam [prasyarat](#prerequisites).
+1. Pilih **Tambahkan data** untuk **riwayat transaksi** Pelanggan.
 
-1. Petakan bidang semantik ke atribut dalam entitas Riwayat Pembelian Anda dan pilih **berikutnya**.
+1. Pilih jenis aktivitas semantik, **SalesOrder** atau **SalesOrderLine**, yang berisi riwayat transaksi. Jika aktivitas belum disiapkan, pilih **di sini** dan buat.
 
-   :::image type="content" source="media/clv-add-customer-data-mapping.png" alt-text="Gambar langkah konfigurasi untuk memetakan atribut data untuk data yang diperlukan.":::
- 
-1. Jika bidang di bawah ini tidak terisi, konfigurasikan relasi dari entitas Riwayat Pembelian Anda ke entitas *pelanggan* dan pilih **simpan**.
-    1. Pilih Entitas riwayat transaksi.
-    1. Pilih bidang yang mengidentifikasi pelanggan di entitas riwayat pembelian. Ini perlu dikaitkan dengan ID pelanggan utama entitas pelanggan Anda.
-    1. Pilih entitas alur kerja yang sesuai dengan entitas pelanggan utama Anda.
-    1. Masukkan nama yang mendeskripsikan relasi.
+1. Di bawah **Aktivitas**, jika atribut aktivitas dipetakan secara semantik saat aktivitas dibuat, pilih atribut atau entitas tertentu yang ingin Anda fokuskan pada perhitungan. Jika pemetaan semantik tidak terjadi, pilih **Edit dan petakan** data Anda.
+  
+   :::image type="content" source="media/CLV-add-required.PNG" alt-text="Menambahkan data yang diperlukan untuk model CLV":::
 
-      :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Gambar langkah konfigurasi untuk menentukan relasi dengan entitas pelanggan.":::
+1. Pilih **Berikutnya** dan tinjau atribut yang diperlukan untuk model ini.
 
-1. Pilih **Selanjutnya**.
+1. Pilih **Simpan**.
+
+1. Tambahkan lebih banyak aktivitas atau pilih **Berikutnya**.
 
 ### <a name="add-optional-activity-data"></a>Menambahkan data aktivitas opsional
 
 Data yang mencerminkan interaksi pelanggan utama (seperti web, layanan pelanggan, dan log aktivitas) menambahkan konteks ke rekaman transaksi. Pola lainnya yang ditemukan dalam data aktivitas pelanggan Anda dapat meningkatkan keakuratan prediksi.
 
-1. **Di langkah Data tambahan (opsional**), pilih **Tambahkan data** di bawah **Tingkatkan wawasan model dengan data** aktivitas tambahan. Pilih entitas aktivitas pelanggan yang menyediakan informasi aktivitas pelanggan sebagaimana dijelaskan dalam [prasyarat](#prerequisites).
+1. Pilih **Tambahkan data** di bawah **Tingkatkan wawasan model dengan data** aktivitas tambahan.
 
-1. Petakan bidang semantik ke atribut dalam entitas aktivitas pelanggan Anda dan pilih **berikutnya**.
+1. Pilih jenis aktivitas yang sesuai dengan jenis aktivitas pelanggan yang Anda tambahkan. Jika aktivitas belum disiapkan, pilih **di sini** dan buat.
 
-   :::image type="content" source="media/clv-additional-data-mapping.png" alt-text="Gambar langkah konfigurasi untuk memetakan bidang untuk data tambahan.":::
+1. Di bawah **Aktivitas**, jika atribut aktivitas dipetakan saat aktivitas dibuat, pilih atribut atau entitas tertentu yang ingin Anda fokuskan pada perhitungan. Jika pemetaan tidak terjadi, pilih **Edit** dan petakan data Anda.
 
-1. Pilih jenis aktivitas yang sesuai dengan jenis aktivitas pelanggan yang Anda tambahkan. Pilih dari jenis aktivitas yang ada atau tambahkan jenis aktivitas baru.
-
-1. Konfigurasikan relasi dari entitas aktivitas pelanggan Anda ke entitas *Pelanggan*.
-
-    1. Pilih bidang yang mengidentifikasi pelanggan di tabel aktivitas pelanggan. Hal ini dapat langsung terkait dengan ID pelanggan utama entitas *pelanggan* Anda.
-    1. Pilih entitas *pelanggan* yang cocok dengan entitas *pelanggan* utama Anda.
-    1. Masukkan nama yang mendeskripsikan relasi.
-
-   :::image type="content" source="media/clv-additional-data.png" alt-text="Gambar langkah dalam alur konfigurasi untuk menambahkan data tambahan dan mengkonfigurasi aktivitas dengan contoh yang diisi.":::
+1. Pilih **Berikutnya** dan tinjau atribut yang diperlukan untuk model ini.
 
 1. Pilih **Simpan**.
-    Tambahkan data lainnya jika ada aktivitas pelanggan lain yang ingin Anda sertakan.
 
-1. Tambahkan data pelanggan opsional atau pilih **Berikutnya**.
+1. Pilih **Selanjutnya**.
+
+1. [Tambahkan data](#add-optional-customer-data) pelanggan opsional atau pilih **Berikutnya** dan buka [Atur jadwal](#set-update-schedule) pembaruan.
 
 ### <a name="add-optional-customer-data"></a>Menambahkan data pelanggan opsional
 
@@ -156,91 +135,79 @@ Pilih dari 18 atribut profil pelanggan yang umum digunakan untuk disertakan seba
 Misalnya: Contoso Coffee ingin memprediksi nilai seumur hidup pelanggan untuk menargetkan pelanggan bernilai tinggi dengan penawaran yang dipersonalisasi terkait dengan peluncuran mesin espresso baru mereka. Contoso menggunakan model CLV dan menambahkan semua 18 atribut profil pelanggan untuk melihat faktor mana yang memengaruhi pelanggan dengan nilai tertinggi. Mereka menemukan lokasi pelanggan adalah faktor yang paling berpengaruh bagi pelanggan ini.
 Dengan informasi ini, mereka menyelenggarakan acara lokal untuk peluncuran mesin espresso dan bermitra dengan vendor lokal untuk penawaran yang dipersonalisasi dan pengalaman khusus di acara tersebut. Tanpa informasi ini, Contoso mungkin hanya mengirim email pemasaran generik dan melewatkan kesempatan untuk mempersonalisasi segmen lokal pelanggan bernilai tinggi mereka ini.
 
-1. **Di langkah Data tambahan (opsional**), pilih **Tambahkan data** di bawah **Tingkatkan wawasan model lebih jauh dengan data** pelanggan tambahan.
+1. Pilih **Tambahkan data** di bawah **Tingkatkan wawasan model lebih jauh lagi dengan data** pelanggan tambahan.
 
-1. Untuk **Entitas**, pilih **Pelanggan: CustomerInsights** untuk memilih tabel profil pelanggan terpadu yang memetakan ke data atribut pelanggan. Untuk **ID** Pelanggan, pilih **System.Customer.CustomerId**.
+1. Untuk **Entitas**, pilih **Pelanggan: CustomerInsights** untuk memilih profil pelanggan terpadu yang memetakan ke data atribut pelanggan. Untuk **ID** Pelanggan, pilih **System.Customer.CustomerId**.
 
 1. Petakan lebih banyak bidang jika data tersedia di profil pelanggan terpadu Anda.
 
    :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Contoh bidang yang dipetakan untuk data profil pelanggan.":::
 
-1. Pilih **Simpan** setelah memetakan atribut yang harus digunakan model untuk membantu memprediksi nilai umur pelanggan.
+1. Pilih **Simpan**.
 
 1. Pilih **Selanjutnya**.
 
 ### <a name="set-update-schedule"></a>Atur Jadwal pembaruan
 
-1. Pada langkah **jadwal pembaruan Data**, pilih frekuensi untuk melatih ulang model Anda berdasarkan data terakhir. Pengaturan ini penting untuk memperbarui akurasi prediksi karena data baru diserap dalam Customer Insights. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
+1. Pilih frekuensi untuk melatih kembali model Anda berdasarkan data terbaru. Pengaturan ini penting untuk memperbarui keakuratan prediksi karena data baru diserap ke dalam Customer Insights. Sebagian besar bisnis dapat melatih sekali per bulan dan mendapatkan akurasi yang baik untuk prediksi mereka.
 
 1. Pilih **Selanjutnya**.
 
 ### <a name="review-and-run-the-model-configuration"></a>Memeriksa dan menjalankan konfigurasi model
 
-1. Di langkah **Tinjau rincian model Anda**, validasikan konfigurasi prediksi. Anda dapat kembali ke bagian apa pun dari konfigurasi prediksi dengan memilih **Edit** dalam nilai yang ditampilkan. Anda juga dapat memilih langkah konfigurasi dari indikator progres.
+Langkah **Tinjau dan jalankan** menunjukkan ringkasan konfigurasi dan memberikan kesempatan untuk membuat perubahan sebelum Anda membuat prediksi.
 
-1. Jika semua nilai dikonfigurasi dengan benar, pilih **Simpan dan jalankan** untuk mulai menjalankan model. Pada tab **prediksi saya**, Anda dapat melihat status proses prediksi. Proses dapat berlangsung selama beberapa jam hingga selesai, tergantung pada jumlah data yang digunakan dalam prediksi.
+1. Pilih **Edit** pada salah satu langkah untuk meninjau dan membuat perubahan apa pun.
 
-## <a name="review-prediction-status-and-results"></a>Memeriksa status prediksi dan hasil
+1. Jika Anda puas dengan pilihan Anda, pilih **Simpan dan jalankan** untuk mulai menjalankan model. Pilih **Selesai**. Tab **Prediksi** saya ditampilkan saat prediksi sedang dibuat. Proses dapat berlangsung selama beberapa jam hingga selesai, tergantung pada jumlah data yang digunakan dalam prediksi.
 
-### <a name="review-prediction-status"></a>Memeriksa status prediksi
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1.  Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-2.  Pilih prediksi yang ingin Anda tinjau.
+## <a name="view-prediction-results"></a>Lihat hasil prediksi
 
-- **Nama prediksi**: nama prediksi yang diberika saat membuatnya.
-- **jenis prediksi**: jenis model yang digunakan untuk prediksi
-- **Entitas output**: nama entitas untuk menyimpan output dari prediksi. Buka **Data** > **Entitas** untuk menemukan entitas dengan nama ini.
-- **bidang terprediksi**: bidang ini hanya diisi untuk beberapa jenis prediksi, dan tidak digunakan dalam prediksi nilai selama hubungan dengan pelanggan.
-- **Status**: Status prediksi dijalankan.
-    - **mengantri**: prediksi sedang menunggu proses lain untuk diselesaikan.
-    - **Menyegarkan**: prediksi saat ini berjalan untuk membuat hasil yang akan mengalir ke entitas output.
-    - **gagal**: prediksi yang jalankan gagal. [Tinjau log](manage-predictions.md#troubleshoot-a-failed-prediction) untuk rincian selengkapnya.
-    - **berhasil**: prediksi telah berhasil. Pilih **Lihat** di dalam elips vertikal untuk meninjau hasil prediksi.
-- **Diedit**: tanggal konfigurasi untuk prediksi telah diubah.
-- **Terakhir disegarkan**: tanggal prediksi yang disegarkan dihasilkan dalam entitas output.
+1. Pergi ke **Prediksi** > **Intelijen**.
 
-### <a name="review-prediction-results"></a>Memeriksa hasil prediksi
-
-1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
-
-1. Pilih prediksi yang hasilnya ingin Anda tinjau.
+1. Di tab **Prediksi** saya, pilih prediksi yang ingin Anda lihat.
 
 Terdapat tiga bagian utama data dalam halaman hasil.
 
-- **Performa model pelatihan**: A, B, atau C merupakan kemungkinan peringkat. peringkat ini menunjukkan kinerja prediksi dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang tersimpan dalam entitas output. Pilih **Pelajari tentang skor ini** untuk lebih memahami metrik performa model dasar dan turunan peringkat performa model final.
+- **Performa model pelatihan**: Nilai A, B, atau C menunjukkan kinerja prediksi dan dapat membantu Anda membuat keputusan untuk menggunakan hasil yang disimpan dalam entitas output.
   
   :::image type="content" source="media/clv-model-score.png" alt-text="Gambar kotak informasi skor model dengan peringkat A.":::
 
-  Dengan menggunakan definisi pelanggan bernilai tinggi yang disediakan saat mengonfigurasikan prediksi, sistem akan menilai performa model AI dalam memperkirakan pelanggan bernilai tinggi dibandingkan model dasar.    
+  Customer Insights menilai bagaimana kinerja model AI dalam memprediksi pelanggan bernilai tinggi dibandingkan dengan model dasar.
 
   Peringkat ditentukan berdasarkan aturan berikut:
   - **A** bila model memperkirakan secara akurat setidaknya 5% lebih banyak pelanggan bernilai tinggi dibandingkan dengan model dasar.
   - **B** bila model memperkirakan secara akurat antara 0-5% lebih banyak pelanggan bernilai tinggi dibandingkan dengan model dasar.
   - **C** bila model memperkirakan secara akurat lebih sedikit pelanggan bernilai tinggi dibandingkan dengan model dasar.
-
-  Panel **peringkat Model** menampilkan rincian lebih lanjut tentang kinerja model AI dan model dasar. Model dasar menggunakan pendekatan berbasis non-AI untuk menghitung nilai selama hubungan dengan pelanggan terutama berdasarkan pembelian historis yang dilakukan pelanggan.     
-  Rumus standar yang digunakan untuk menghitung CLV berdasarkan model dasar:    
-
-  _**CLV untuk tiap pelanggan** = Pembelian bulanan rata-rata yang dilakukan oleh pelanggan dalam jendela pelanggan aktif * Jumlah bulan dalam periode prediksi CLV * Tingkat retensi keseluruhan semua pelanggan*_
-
-  Model AI dibandingkan dengan model dasar berdasarkan dua metrik performa model.
   
-  - **Tingkat keberhasilan dalam memperkirakan pelanggan bernilai tinggi**
+  Pilih [**Pelajari tentang skor**](#learn-about-the-score) ini untuk membuka **panel Peringkat** model yang memperlihatkan detail lebih lanjut tentang performa model AI dan model dasar. Ini akan membantu Anda lebih memahami metrik kinerja model yang mendasarinya dan bagaimana tingkat kinerja model akhir diturunkan. Model dasar menggunakan pendekatan berbasis non-AI untuk menghitung nilai selama hubungan dengan pelanggan terutama berdasarkan pembelian historis yang dilakukan pelanggan.
 
-    Lihat perbedaan dalam memperkirakan pelanggan bernilai tinggi menggunakan model AI dibandingkan model dasar. Contohnya, tingkat keberhasilan 84% berarti dari semua pelanggan bernilai tinggi dalam data pelatihan, model AI mampu menangkap secara akurat 84%. Selanjutnya kita akan membandingkan tingkat keberhasilan ini dengan tingkat keberhasilan model dasar untuk melaporkan perubahan relatif. Nilai ini digunakan untuk menetapkan peringkat ke model.
+- **Nilai pelanggan berdasarkan persentil**: Pelanggan bernilai rendah dan bernilai tinggi ditampilkan dalam bagan. Arahkan kursor ke bilah di histogram untuk melihat jumlah pelanggan di setiap grup dan CLV rata-rata grup tersebut. Secara opsional, [buat segmen pelanggan](prediction-based-segment.md) berdasarkan prediksi CLV mereka.
+  
+   :::image type="content" source="media/CLV-value-percent.png" alt-text="Nilai pelanggan berdasarkan persentil untuk model CLV":::
 
-  - **Metrik kesalahan**
-    
-    Metrik lainnya memungkinkan Anda meninjau kinerja model secara keseluruhan dalam hal kesalahan dalam memperkirakan nilai yang akan datang. Kita menggunakan metrik RMSE (Root Mean Squared Error) secara keseluruhan untuk menilai kesalahan ini. RMSE adalah cara standar untuk mengukur kesalahan model dalam memperkirakan data kuantitatif. RMSE model AI dibandingkan RMSE dari model dasar dan perbedaan relatifnya dilaporkan.
+- **Faktor paling berpengaruh**: Berbagai faktor dipertimbangkan saat membuat prediksi CLV berdasarkan data input yang diberikan ke model AI. Masing-masing faktor memiliki kepentingan yang diperhitungkan untuk prediksi gabungan yang dibuat model. Gunakan faktor-faktor ini untuk membantu memvalidasi hasil prediksi Anda. Faktor-faktor ini juga memberikan wawasan lebih lanjut tentang faktor paling berpengaruh yang berkontribusi terhadap perkiraan CLV di seluruh pelanggan.
+  
+   :::image type="content" source="media/CLV-influence-factors.png" alt-text="Faktor paling berpengaruh untuk model CLV":::
 
-  Model AI memprioritaskan peringkat pelanggan yang akurat sesuai dengan nilai yang mereka bawa untuk bisnis Anda. Jadi hanya tingkat keberhasilan yang memperkirakan pelanggan bernilai tinggi yang digunakan untuk memperoleh peringkat model final. Metrik RMSE peka terhadap nilai luar. Dalam skenario bila Anda memiliki persentase kecil pelanggan dengan nilai pembelian yang luar biasa tinggi, metrik RMSE secara keseluruhan mungkin tidak memberikan gambaran lengkap performa model.   
+### <a name="learn-about-the-score"></a>Pelajari tentang skor
 
-- **Nilai pelanggan berdasarkan persentil**: Menggunakan definisi pelanggan ber nilai tinggi, pelanggan dikelompokkan ke dalam nilai rendah dan bernilai tinggi, berdasarkan prediksi CLV mereka, dan ditampilkan dalam diagram. Dengan mengarahkan kursor ke bilah di histogram, Anda dapat melihat jumlah pelanggan di setiap grup dan CLV rata-rata grup tersebut. Data ini dapat membantu jika Anda ingin [membuat segmen pelanggan](segments.md) berdasarkan prediksi CLV mereka.
+Rumus standar yang digunakan untuk menghitung CLV berdasarkan model dasar:
 
-- **Faktor paling berpengaruh**: Berbagai faktor dipertimbangkan saat membuat prediksi CLV berdasarkan data input yang diberikan ke model AI. Masing-masing faktor memiliki kepentingan yang diperhitungkan untuk prediksi gabungan yang dibuat model. Anda dapat menggunakan faktor ini untuk membantu memvalidasi hasil prediksi. Faktor-faktor ini juga memberikan wawasan lebih lanjut tentang faktor paling berpengaruh yang berkontribusi terhadap perkiraan CLV di seluruh pelanggan.
+ _**CLV untuk setiap pelanggan** = Rata-rata pembelian bulanan yang dilakukan oleh pelanggan di jendela pelanggan aktif * Jumlah bulan dalam periode prediksi CLV * Tingkat retensi keseluruhan semua pelanggan_
 
-## <a name="manage-predictions"></a>Kelola prediksi
+Model AI dibandingkan dengan model dasar berdasarkan dua metrik performa model.
+  
+- **Tingkat keberhasilan dalam memperkirakan pelanggan bernilai tinggi**
 
-Anda dapat mengoptimalkan, memecahkan masalah, menyegarkan, atau menghapus prediksi. Tinjau laporan kegunaan data input untuk mengetahui cara membuat prediksi lebih cepat dan lebih dapat diandalkan. Untuk informasi lebih lanjut, lihat [Kelola prediksi](manage-predictions.md).
+  Lihat perbedaan dalam memperkirakan pelanggan bernilai tinggi menggunakan model AI dibandingkan model dasar. Contohnya, tingkat keberhasilan 84% berarti dari semua pelanggan bernilai tinggi dalam data pelatihan, model AI mampu menangkap secara akurat 84%. Selanjutnya kita akan membandingkan tingkat keberhasilan ini dengan tingkat keberhasilan model dasar untuk melaporkan perubahan relatif. Nilai ini digunakan untuk menetapkan peringkat ke model.
+
+- **Metrik kesalahan**
+
+  Lihat kinerja keseluruhan model dalam hal kesalahan dalam memprediksi nilai masa depan. Kita menggunakan metrik RMSE (Root Mean Squared Error) secara keseluruhan untuk menilai kesalahan ini. RMSE adalah cara standar untuk mengukur kesalahan model dalam memperkirakan data kuantitatif. RMSE model AI dibandingkan RMSE dari model dasar dan perbedaan relatifnya dilaporkan.
+
+Model AI memprioritaskan peringkat pelanggan yang akurat sesuai dengan nilai yang mereka bawa untuk bisnis Anda. Jadi hanya tingkat keberhasilan yang memperkirakan pelanggan bernilai tinggi yang digunakan untuk memperoleh peringkat model final. Metrik RMSE peka terhadap nilai luar. Dalam skenario bila Anda memiliki persentase kecil pelanggan dengan nilai pembelian yang luar biasa tinggi, metrik RMSE secara keseluruhan mungkin tidak memberikan gambaran lengkap performa model.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Entitas di Customer Insights
 description: Lihat data pada halaman entitas.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183562"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610102"
 ---
 # <a name="entities-in-customer-insights"></a>Entitas di Customer Insights
 
@@ -61,27 +61,5 @@ Buka **Entitas** > **Data** untuk melihat daftar entitas. Informasi berikut dita
   - **Dibuat**: Tanggal dan waktu pembuatan entitas.
   - **Diedit oleh**: Nama orang yang memodifikasi entitas.
   - **Diedit**: Tanggal dan waktu modifikasi entitas.
-
-## <a name="entity-specific-information"></a>Informasi spesifik Entitas
-
-Bagian berikut ini menyediakan informasi tentang beberapa entitas yang dibuat sistem.
-
-### <a name="corrupted-data-sources"></a>Sumber data yang rusak
-
-Bidang dari sumber data yang diserap dapat berisi data yang rusak. Rekaman dengan bidang yang rusak diekspos dalam entitas yang dibuat sistem. Mengetahui tentang rekaman yang rusak membantu Anda mengidentifikasi data mana yang akan ditinjau dan diperbarui pada sistem sumber. Setelah penyegaran berikutnya dari sumber data, rekaman yang dikoreksi diserap ke Customer Insights dan diteruskan ke proses hilir. 
-
-Misalnya, kolom 'ulang tahun' memiliki himpunan tipe data sebagai 'tanggal'. Rekaman pelanggan memasukkan ulang tahun mereka sebagai '01/01/19777'. Sistem akan menandai rekaman ini sebagai rusak. Seseorang sekarang dapat mengubah ulang tahun dalam sistem sumber menjadi '1977'. Setelah refresh otomatis sumber data, bidang sekarang memiliki format yang valid dan rekaman akan dihapus dari entitas yang rusak.
-
-Buka **Data** > **Entitas** dan cari entitas yang rusak di bagian **Sistem**. Penamaan skema entitas yang rusak: 'DataSourceName_EntityName_corrupt'. Pilih entitas yang rusak untuk mengidentifikasi bidang yang rusak dan alasannya di tingkat rekaman individu.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Alasan korupsi.":::
-
-Customer Insights masih memproses rekaman yang rusak. Namun, mereka dapat menyebabkan masalah saat bekerja dengan data terpadu.
-
-Pemeriksaan berikut ini berjalan pada data yang diserap untuk mengekspos rekaman yang rusak:
-
-- Nilai bidang tidak cocok dengan tipe data kolomnya.
-- Bidang berisi karakter yang menyebabkan kolom tidak cocok dengan skema yang diharapkan. Misalnya: kutipan yang salah diformat, tanda kutip yang tidak di-escape, atau karakter baris baru.
-- Jika ada kolom datetime/date/datetimeoffset, formatnya perlu ditentukan dalam model jika tidak mengikuti format ISO standar.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

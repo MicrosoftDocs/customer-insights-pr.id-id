@@ -1,7 +1,7 @@
 ---
 title: Menyambungkan ke Power Query sumber data (berisi video)
 description: Menyerap data melalui Power Query konektor (berisi video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463269"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609894"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Menyambungkan ke Power Query sumber data
 
@@ -43,16 +43,17 @@ Menambahkan sumber data berdasarkan Power Query konektor umumnya mengikuti langk
 
 1. Pilih **Transformasi data**.
 
-1. Dialog **Power Query - Edit kueri** memungkinkan Anda meninjau dan memperbaiki data. Entitas yang diidentifikasi dalam sumber data yang dipilih muncul di panel kiri.
+1. Tinjau dan perbaiki data Anda di **Power Query halaman - Edit kueri**. Entitas yang diidentifikasi dalam sumber data yang dipilih muncul di panel kiri.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialog Edit kueri":::
 
-1. Anda juga dapat mengubah data Anda. Pilih entitas untuk mengedit atau mengubah. Gunakan opsi di Power Query jendela untuk menerapkan transformasi. Setiap transformasi tercantum di bawah Langkah-langkah **yang** diterapkan. Power Query menyediakan banyak [opsi transformasi](/power-query/power-query-what-is-power-query#transformations) yang dibuat sebelumnya.
+1. Ubah data Anda. Pilih entitas untuk mengedit atau mengubah. Gunakan opsi di Power Query jendela untuk menerapkan transformasi. Setiap transformasi tercantum di bawah Langkah-langkah **yang** diterapkan. Power Query menyediakan banyak [opsi transformasi](/power-query/power-query-what-is-power-query#transformations) yang dibuat sebelumnya.
 
-   Kami menyarankan Anda menggunakan transformasi berikut:
-
-   - Jika Anda menyerap data dari file CSV, baris pertama sering berisi header. Buka **Transformasi dan pilih** Gunakan baris pertama sebagai **header**.
-   - Pastikan jenis data diatur dengan benar. Misalnya, untuk bidang tanggal, pilih tipe tanggal.
+   > [!IMPORTANT]
+   > Kami menyarankan Anda menggunakan transformasi berikut:
+   >
+   > - Jika Anda menyerap data dari file CSV, baris pertama sering berisi header. Buka **Transformasi dan pilih** Gunakan baris pertama sebagai **header**.
+   > - Pastikan tipe data diatur dengan tepat dan cocok dengan data. Misalnya, untuk bidang tanggal, pilih tipe tanggal.
 
 1. Untuk menambahkan entitas tambahan ke sumber data Anda dalam **dialog Edit kueri**, buka **Beranda** dan pilih **Dapatkan data**. Ulangi langkah 5-10 hingga Anda menambahkan semua entitas untuk sumber data ini. Jika Anda memiliki database yang mencakup beberapa dataset, maka setiap himpunan data adalah entitas sendiri.
 
@@ -102,5 +103,51 @@ Gateway data dari lingkungan yang ada atau Power BI yang sudah ada Power Apps ak
 1. Pilih **Simpan** untuk menerapkan perubahan Anda dan kembali ke **halaman Sumber** data.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Alasan umum untuk kesalahan penyerapan atau data yang rusak
+
+### <a name="data-type-does-not-match-data"></a>Tipe data tidak cocok dengan data
+
+Ketidakcocokan tipe data yang paling umum terjadi ketika bidang tanggal tidak diatur ke format tanggal yang benar.
+
+Data dapat diperbaiki di sumbernya dan diserap kembali. Atau perbaiki transformasi dalam Customer Insights. Untuk memperbaiki transformasi:
+
+1. Buka **Data** > **Sumber data**.
+
+1. Di samping sumber data dengan data yang rusak, pilih **Edit**.
+
+1. Pilih **Selanjutnya**.
+
+1. Pilih setiap kueri dan cari transformasi yang diterapkan di dalam "Langkah Yang Diterapkan" yang salah, atau kolom tanggal yang belum diubah dengan format tanggal.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Edit menunjukkan format tanggal yang salah":::
+
+1. Ubah tipe data agar cocok dengan data dengan benar.
+
+1. Pilih **Simpan**. Itu sumber data disegarkan.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Memecahkan masalah refresh sumber data berbasis PPDF Power Query
+
+Jika data kedaluwarsa atau Anda menerima kesalahan setelah refresh sumber data, lakukan langkah-langkah berikut:
+
+1. Navigasikan ke [Power Platform](https://make.powerapps.com).
+
+1. **Pilih instans Environment** for your Customer Insights.
+
+1. Navigasikan ke **Aliran** Data.
+
+1. Untuk aliran data yang sesuai dengan sumber data di Customer Insights, pilih elipsis vertikal (&vellip;) lalu pilih **Tampilkan riwayat** refresh.
+
+1. **Jika Status** aliran data adalah **Sukses**, kepemilikan Power Query sumber data berbasis -mungkin telah berubah:
+
+   1. Tinjau jadwal refresh dari riwayat refresh.
+   1. Atur jadwal pemilik baru dan simpan pengaturan.
+
+1. **Jika Status** aliran **data Gagal**:
+
+   1. Unduh file riwayat refresh.
+   1. Tinjau file yang diunduh untuk alasan kegagalan.
+   1. Jika kesalahan tidak dapat diatasi, pilih **?** Untuk membuka tiket dukungan. Sertakan file riwayat refresh yang diunduh.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

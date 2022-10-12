@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Menggunakan model kustom dari Pembelajaran Mesin Azure
           href: custom-models.md
+        - name: Membuat segmen berdasarkan prediksi
+          href: prediction-based-segment.md
     - name: Panduan sampel
       items:
         - name: Panduan sampel untuk prediksi CLV
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Eksperimen dengan Pembelajaran Mesin Azure
           href: azure-machine-learning-experiments.md
-    - name: Kelola prediksi
-      href: manage-predictions.md
-    - name: Membuat segmen berdasarkan prediksi
-      href: prediction-based-segment.md
 - name: Opsi ekspor
   items:
     - name: Ekspor

@@ -1,23 +1,23 @@
 ---
 title: Membuat segmen berdasarkan model prediksi
 description: Buat segmen berdasarkan entitas output model prediksi.
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082429"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610424"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Membuat segmen berdasarkan model prediksi (pratinjau)
 
-Hasil prediksi terkadang hanya berlaku untuk subkumpulan pelanggan Anda. Tingkatkan personalisasi rekomendasi dengan membuat segmen dari hasil model prediksi. Misalnya, Anda mungkin ingin memberikan rekomendasi khusus kepada pelanggan yang lebih suka jenis layanan tertentu. 
+Hasil prediksi terkadang hanya berlaku untuk subkumpulan pelanggan Anda. Tingkatkan personalisasi rekomendasi dengan membuat segmen dari hasil model prediksi. Misalnya, Anda mungkin ingin memberikan rekomendasi khusus kepada pelanggan yang lebih suka jenis layanan tertentu.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -34,10 +34,15 @@ Hasil prediksi terkadang hanya berlaku untuk subkumpulan pelanggan Anda. Tingkat
 
 1. Buka **intelijen** > **prediksi** dan pilih tab **prediksi saya**.
 
-1. Pilih elipsis vertikal di samping model yang ingin Anda tinjau dan pilih **Tampilkan**.
+1. Pilih model yang ingin Anda tinjau dan pilih **Lihat**.
 
 1. Pada halaman hasil, pilih **Buat segmen**. Untuk informasi selengkapnya tentang halaman hasil, tinjau artikel tentang model tersebut.
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="Cuplikan layar halaman hasil prediksi dengan sorotan pada tindakan Buat segmen.":::
 
-1. Buat segmen baru berdasarkan entitas output model yang dipilih. Untuk informasi lebih lanjut, lihat [Membuat dan mengelola segmen](segments.md).
+1. Buat segmen baru menggunakan atribut dari entitas output dari model yang dipilih. Untuk informasi lebih lanjut, lihat [Membuat dan mengelola segmen](segments.md).
+
+> [!TIP]
+> Anda juga dapat membuat segmen untuk model prediksi dari **halaman Segmen** dengan **memilih Baru** dan memilih **Buat dari** > **Kecerdasan**. Untuk informasi selengkapnya, lihat [Membuat segmen baru dengan segmen](segment-quick.md) cepat.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

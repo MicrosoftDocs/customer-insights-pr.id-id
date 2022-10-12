@@ -1,7 +1,7 @@
 ---
 title: Sambungkan ke folder Common Data Model dengan akun Azure Data Lake Store
 description: Bekerja dengan Common Data Model menggunakan Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396085"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609946"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Menyambungkan ke data di Azure Data Lake Storage
 
@@ -33,7 +33,7 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
 
 - Anda Azure Data Lake Storage ingin menyambungkan dan menyerap data dari harus berada di wilayah Azure yang sama dengan Dynamics 365 Customer Insights lingkungan. Koneksi ke folder Common Data Model dari Data Lake di kawasan Azure berbeda tidak didukung. Untuk mengetahui wilayah lingkungan Azure, buka **Sistem** > **Admin** > **Tentang** di Customer Insights.
 
-- Data yang disimpan dalam layanan online dapat disimpan di lokasi yang berbeda dari tempat data diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari selengkapnya di Pusat](https://www.microsoft.com/trust-center) Kepercayaan Microsoft.
+- Data yang disimpan dalam layanan online dapat disimpan di lokasi yang berbeda dari tempat data diproses atau disimpan di Dynamics 365 Customer Insights.Dengan mengimpor atau menghubungkan ke data yang disimpan dalam layanan online, Anda setuju bahwa data dapat ditransfer ke dan disimpan dengan Dynamics 365 Customer Insights. [Pelajari selengkapnya di Pusat Kepercayaan Microsoft](https://www.microsoft.com/trust-center).
 
 - Perwakilan layanan Customer Insights harus berada di salah satu peran berikut untuk mengakses akun penyimpanan. Untuk informasi selengkapnya, lihat [Memberikan izin kepada perwakilan layanan untuk mengakses akun](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account) penyimpanan.
   - Pembaca Data Blob Penyimpanan
@@ -43,6 +43,10 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
 - Pengguna yang menyiapkan koneksi sumber data memerlukan izin kontributor Data Blob Penyimpanan paling sedikit pada akun penyimpanan.
 
 - Data di Data Lake Storage Anda harus mengikuti standar Common Data Model untuk penyimpanan data Anda dan memiliki manifes model data umum untuk mewakili skema file data (*.csv atau *.parquet). Manifes harus memberikan detail entitas seperti kolom entitas dan tipe data, serta lokasi file data dan jenis file. Untuk informasi selengkapnya, lihat [Manifes](/common-data-model/sdk/manifest) Common Data Model. Jika manifes tidak ada, pengguna Admin dengan Pemilik Data Blob Penyimpanan atau akses kontributor Data Blob Penyimpanan dapat menentukan skema saat menyerap data.
+
+## <a name="recommendations"></a>Rekomendasi
+
+Untuk kinerja optimal, Customer Insights merekomendasikan ukuran partisi menjadi 1 GB atau kurang dan jumlah file partisi dalam folder tidak boleh melebihi 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Menyambungkan ke Azure Data Lake Storage
 
@@ -86,7 +90,7 @@ Serap data agar Dynamics 365 Customer Insights menggunakan akun Gen2 Anda Azure 
    > [!TIP]
    > Untuk mengedit entitas di antarmuka pengeditan JSON, pilih entitas lalu **Edit file skema**. Buat perubahan dan pilih **Simpan**.
 
-1. Untuk entitas yang dipilih yang memerlukan penyerapan inkremental, **Diperlukan** ditampilkan di bawah **Refresh** inkremental. Untuk setiap entitas ini, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+1. Untuk entitas yang dipilih yang memerlukan penyerapan inkremental, **Diperlukan** ditampilkan di bawah **Refresh inkremental**. Untuk setiap entitas ini, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
 
 1. Untuk entitas yang dipilih di mana kunci utama belum ditentukan, **Diperlukan** ditampilkan di bawah **Kunci utama**. Untuk masing-masing entitas ini:
    1. Pilih **Diperlukan**. Panel **Edit entitas** ditampilkan.
@@ -144,7 +148,7 @@ Memuat data dapat memakan waktu. Setelah refresh berhasil, data yang diserap dap
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Kotak dialog memperlihatkan Diperlukan untuk kunci Utama":::
 
-1. Untuk entitas yang dipilih yang memerlukan penyerapan inkremental, **Diperlukan** ditampilkan di bawah **Refresh** inkremental. Untuk setiap entitas ini, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+1. Untuk entitas yang dipilih yang memerlukan penyerapan inkremental, **Diperlukan** ditampilkan di bawah **Refresh inkremental**. Untuk setiap entitas ini, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
 
 1. Untuk entitas yang dipilih di mana kunci utama belum ditentukan, **Diperlukan** ditampilkan di bawah **Kunci utama**. Untuk masing-masing entitas ini:
    1. Pilih **Diperlukan**. Panel **Edit entitas** ditampilkan.
@@ -188,7 +192,7 @@ Anda dapat memperbarui *opsi Sambungkan ke akun penyimpanan menggunakan*. Untuk 
       > [!IMPORTANT]
       > Jika ada dependensi pada file model.json atau manifest.json yang ada dan rangkaian entitas, Anda akan melihat pesan kesalahan dan tidak dapat memilih file model.json atau json yang berbeda. Hilangkan dependensi tersebut sebelum mengubah file model.json atau manifest.json atau buat sumber data baru dengan file model.json atau manifest.json yang ingin Anda gunakan untuk menghindari dependensi dihapus.
    - Untuk mengubah lokasi file data atau kunci utama, pilih **Edit**.
-   - Untuk mengubah data penyerapan inkremental, lihat [Mengonfigurasi refresh inkremental untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md).
+   - Untuk mengubah data penyerapan inkremental, lihat [Mengonfigurasi refresh inkremental untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
    - Hanya ubah nama entitas agar sesuai dengan nama entitas dalam file .json.
 
      > [!NOTE]
@@ -199,5 +203,101 @@ Anda dapat memperbarui *opsi Sambungkan ke akun penyimpanan menggunakan*. Untuk 
 1. Klik **Simpan** untuk menerapkan perubahan Anda dan kembali ke **halaman Sumber** data.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Alasan umum untuk kesalahan penyerapan atau data yang rusak
+
+Selama penyerapan data, beberapa alasan paling umum mengapa rekaman mungkin dianggap rusak meliputi:
+
+- Tipe data dan nilai bidang tidak cocok antara file sumber dan skema
+- Jumlah kolom dalam file sumber tidak cocok dengan skema
+- Bidang berisi karakter yang menyebabkan kolom miring dibandingkan dengan skema yang diharapkan. Misalnya: kutipan yang salah format, kutipan yang tidak dirangkum, karakter baris baru, atau karakter tab.
+- File partisi hilang
+- Jika ada kolom datetime/date/datetimeoffset, formatnya harus ditentukan dalam skema jika tidak mengikuti format standar.
+
+### <a name="schema-or-data-type-mismatch"></a>Ketidakcocokan skema atau tipe data
+
+Jika data tidak sesuai dengan skema, proses penyerapan selesai dengan kesalahan. Perbaiki data sumber atau skema dan serap kembali data tersebut.
+
+### <a name="partition-files-are-missing"></a>File partisi hilang
+
+- Jika penyerapan berhasil tanpa catatan yang rusak, tetapi Anda tidak dapat melihat data apa pun, edit file model.json atau manifest.json Anda untuk memastikan partisi ditentukan. Kemudian, [segarkan sumber data](data-sources.md#refresh-data-sources).
+
+- Jika penyerapan data terjadi pada saat yang sama ketika sumber data sedang disegarkan selama refresh jadwal otomatis, file partisi mungkin kosong atau tidak tersedia untuk diproses oleh Customer Insights. Agar selaras dengan jadwal refresh hulu, ubah [jadwal refresh sistem atau jadwal](schedule-refresh.md) refresh untuk sumber data. Sejajarkan waktu sehingga penyegaran tidak semuanya terjadi sekaligus dan berikan data terbaru yang akan diproses di Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Bidang Datetime dalam format yang salah
+
+Bidang datetime dalam entitas tidak dalam format ISO 8601 atau en-US. Format datetime default di Customer Insights adalah format en-US. Semua bidang datetime dalam entitas harus dalam format yang sama. Customer Insights mendukung format lain asalkan anotasi atau sifat dibuat pada tingkat sumber atau entitas dalam model atau manifest.json. Contoh: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Dalam manifest.json, format datetime dapat ditentukan di tingkat entitas atau di tingkat atribut. Di tingkat entitas, gunakan "exhibitsTraits" dalam entitas di *.manifest.cdm.json untuk menentukan format datetime. Pada tingkat atribut, gunakan "appliedTraits" dalam atribut di entityname.cdm.json.
+
+**Manifest.json di tingkat entitas**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json di tingkat atribut**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
