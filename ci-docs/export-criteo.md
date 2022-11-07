@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195340"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724793"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Mengekspor segmen ke Criteo (pratinjau)
 
@@ -27,7 +27,8 @@ Ekspor segmen profil pelanggan terpadu untuk menghasilkan kampanye, menyediakan 
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Hingga 1 juta profil pelanggan per ekspor ke Criteo, yang dapat memakan waktu hingga 30 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Criteo tergantung pada kontrak Anda dengan Criteo.
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
+- Hingga 1 juta profil pelanggan per ekspor ke Criteo, yang dapat memakan waktu hingga 30 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Criteo bergantung pada kontrak Anda dengan Criteo.
 - Segmen saja.
 
 ## <a name="set-up-connection-to-criteo"></a>Menyiapkan koneksi ke Criteo
@@ -46,7 +47,7 @@ Ekspor segmen profil pelanggan terpadu untuk menghasilkan kampanye, menyediakan 
 
 1. Pilih **Sambungkan** untuk menginisialisasi koneksi.
 
-1. Pilih **Autentikasi dengan Criteo** dan berikan nama pengguna dan kredensial Admin Anda untuk Criteo.
+1. Pilih **Autentikasi dengan Criteo dan berikan nama pengguna dan kredensial Admin Anda untuk Criteo**.
 
 1. Pilih **Tambah diri Anda sebagai pengguna ekspor** dan berikan kredensial Customer Insights Anda.
 
@@ -65,8 +66,6 @@ Ekspor segmen profil pelanggan terpadu untuk menghasilkan kampanye, menyediakan 
 1. Masukkan nama untuk ekspor.
 
 1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan.
-
-1. Secara opsional, ekspor **ID** pengiklan dan **Nama**.
 
 1. Pilih segmen yang ingin diekspor.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: cba40b74b86a40fc41db856760c9361b755a8864
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195248"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724944"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Mengekspor segmen ke Marketo (pratinjau)
 
@@ -22,13 +22,14 @@ Ekspor segmen profil pelanggan terpadu untuk membuat kampanye, menyediakan pemas
 ## <a name="prerequisites"></a>Prasyarat
 
 - Akun [Marketo](https://login.marketo.com/) dan kredensial administrator yang sesuai.
-- [ID klien Marketo, rahasia Klien, dan NAMA Host rest titik akhir](https://developers.marketo.com/rest-api/authentication/).
+- ID [klien Marketo, rahasia Klien, dan REST titik akhir Nama Host](https://developers.marketo.com/rest-api/authentication/).
 - [Daftar yang ada di Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) dan ID yang sesuai.
 - [Segmen yang dikonfigurasi](segments.md).
 - Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan per ekspor ke Marketo, yang dapat memakan waktu hingga 3 jam. Jumlah profil pelanggan yang dapat Anda ekspor ke Marketo tergantung pada kontrak Anda dengan Marketo.
 - Segmen saja.
 
@@ -44,7 +45,7 @@ Ekspor segmen profil pelanggan terpadu untuk membuat kampanye, menyediakan pemas
 
 1. Pilih siapa saja yang dapat menggunakan sambungan ini. Secara default hanya administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Masukkan ID klien Marketo Anda **, rahasia Klien, dan NAMA Host** REST titik akhir. Hostname titik akhir REST adalah hanya hostname, tanpa https://. Contoh: xyz-abc-123.mktorest.com.
+1. Masukkan ID klien Marketo, rahasia Klien, dan REST titik akhir Nama **Host Anda**. Hostname titik akhir REST adalah hanya hostname, tanpa https://. Contoh: xyz-abc-123.mktorest.com.
 
 1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
@@ -68,9 +69,9 @@ Ekspor segmen profil pelanggan terpadu untuk membuat kampanye, menyediakan pemas
 
 1. Masukkan ID **daftar Marketo Anda**. ID daftar adalah nilai yang semata-mata numerik. Misalnya, jika ID daftar Marketo Anda adalah ST12345A7, hapus karakter sebelum dan sesudah angka dan masukkan *12345*.
 
-1. Di bagian **Pencocokan** data, pilih setidaknya satu bidang yang mewakili alamat email pelanggan atau ID Marketo pelanggan.
+1. **Di bagian Pencocokan** data, pilih setidaknya satu bidang yang mewakili alamat email pelanggan atau ID Marketo pelanggan.
 
-1. Secara opsional, ekspor **nama depan**, **nama belakang**, Kota **,** **Negara Bagian**, dan **Negara/Wilayah** untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
+1. Secara opsional, ekspor **nama depan, nama belakang**, Kota **, Negara Bagian,** **dan** **Negara**/Wilayah **untuk membuat email** yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
 
 1. Pilih segmen yang ingin diekspor.
 

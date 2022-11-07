@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196076"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724990"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Mengekspor segmen ke DotDigital (pratinjau)
 
@@ -22,12 +22,13 @@ Ekspor segmen profil pelanggan terpadu ke buku alamat DotDigital dan gunakan unt
 ## <a name="prerequisites"></a>Prasyarat
 
 - Akun [DotDigital](https://dotdigital.com/) dan [pengguna API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user).
-- ID DotDigital dari buku alamat baru [atau yang](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) sudah ada di DotDigital. ID dapat ditemukan di URL saat Anda memilih dan membuka buku alamat.
+- ID DotDigital dari [buku alamat baru](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) atau yang sudah ada di DotDigital. ID dapat ditemukan di URL saat Anda memilih dan membuka buku alamat.
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 - Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan per ekspor ke DotDigital, yang dapat memakan waktu hingga tiga jam untuk diselesaikan karena keterbatasan di sisi penyedia. Jumlah profil pelanggan yang dapat Anda ekspor ke DotDigital tergantung pada kontrak Anda dengan DotDigital.
 - Segmen saja.
 
@@ -69,7 +70,7 @@ Ekspor segmen profil pelanggan terpadu ke buku alamat DotDigital dan gunakan unt
 
 1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan.
 
-1. Secara opsional, ekspor **nama depan**, **nama belakang**, **Nama** lengkap, **Jenis Kelamin**, dan **Kode pos**.
+1. Secara opsional, ekspor **nama depan, nama belakang**, Nama **lengkap, Jenis Kelamin**, **·** **dan** Kode **pos.**
 
 1. Pilih segmen yang ingin diekspor.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304707"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725312"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Mengekspor segmen ke LinkedIn Ads (pratinjau)
 
@@ -28,8 +28,9 @@ Ekspor segmen profil pelanggan terpadu ke Iklan LinkedIn untuk membuat audiens y
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 100.000 profil pelanggan per ekspor ke Iklan LinkedIn, yang dapat memakan waktu hingga 10 menit untuk diselesaikan.
-- Segmen saja. Sebuah segmen harus berisi setidaknya 300 profil unik.
+- Segmen saja. Segmen harus berisi setidaknya 300 profil unik.
 
 ## <a name="set-up-connection-to-linkedin-ads"></a>Menyiapkan koneksi ke Iklan LinkedIn
 

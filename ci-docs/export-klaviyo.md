@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 075e6758f2c6992a1185756f9beecf852fdd0a96
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196766"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724596"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Ekspor segmen ke Klaviyo (pratinjau)
 
@@ -29,6 +29,7 @@ Mengekspor segmen profil pelanggan terpadu ke Klaviyo dan menggunakannya untuk a
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan per ekspor ke Klaviyo, yang dapat memakan waktu hingga 20 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Klaviyo tergantung pada kontrak Anda dengan Klaviyo.
 - Segmen saja.
 
@@ -68,7 +69,7 @@ Mengekspor segmen profil pelanggan terpadu ke Klaviyo dan menggunakannya untuk a
 
 1. Masukkan nama untuk ekspor.
 
-1. Masukkan ID Daftar Klaviyo **Anda**.
+1. Masukkan ID **Daftar Klaviyo Anda**.
 
 1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan.
 

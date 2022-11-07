@@ -1,5 +1,5 @@
 ---
-title: Ekspor segmen ke Iterable (pratinjau)
+title: Mengekspor segmen ke Iterable (pratinjau)
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke Iterable.
 ms.date: 07/25/2022
 ms.reviewer: mhart
@@ -8,26 +8,27 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195433"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724550"
 ---
-# <a name="export-segments-to-iterable-preview"></a>Ekspor segmen ke Iterable (pratinjau)
+# <a name="export-segments-to-iterable-preview"></a>Mengekspor segmen ke Iterable (pratinjau)
 
 Ekspor segmen profil pelanggan terpadu ke Iterable dan gunakan untuk kegiatan pemasaran.
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akun [iterable](https://iterable.com/) dan kredensial administrator yang sesuai.
-- Kunci [API yang Dapat Diulang](https://support.iterable.com/hc/en-us/articles/360043464871)
+- Akun yang dapat [diulang dan kredensial administrator yang](https://iterable.com/) sesuai.
+- Kunci API yang [Dapat Diulang](https://support.iterable.com/hc/en-us/articles/360043464871)
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 - Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan ke Iterable, yang dapat memakan waktu hingga 30 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Iterable tergantung pada kontrak Anda dengan Iterable.
 - Segmen saja.
 
@@ -43,7 +44,7 @@ Ekspor segmen profil pelanggan terpadu ke Iterable dan gunakan untuk kegiatan pe
 
 1. Pilih siapa saja yang dapat menggunakan sambungan ini. Secara default hanya administrator. Untuk informasi selengkapnya, lihat [Mengizinkan kontributor menggunakan koneksi untuk ekspor](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Berikan kunci API Iterable Anda untuk terus masuk.
+1. Berikan kunci API yang Dapat Diulang untuk terus masuk.
 
 1. [Tinjau privasi dan kepatuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya setuju**.
 
@@ -61,7 +62,7 @@ Ekspor segmen profil pelanggan terpadu ke Iterable dan gunakan untuk kegiatan pe
 
 1. Pilih **Tambahkan ekspor**.
 
-1. Di **bidang Koneksi untuk ekspor**, pilih koneksi dari bagian Iterable. Hubungi administrator jika tidak ada koneksi yang tersedia.
+1. Di **bidang Koneksi untuk ekspor**, pilih koneksi dari bagian Dapat Diulang. Hubungi administrator jika tidak ada koneksi yang tersedia.
 
 1. Masukkan nama untuk ekspor.
 

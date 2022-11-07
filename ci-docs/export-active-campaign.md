@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e62888a6d618fb1154890e607d8c23d3767d35f7
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195570"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725404"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Mengekspor segmen ke ActiveCampaign (pratinjau)
 
@@ -23,12 +23,13 @@ Mengekspor segmen profil pelanggan terpadu ke ActiveCampaign dan menggunakannya 
 
 - Akun [ActiveCampaign](https://www.activecampaign.com/) dan kredensial administrator yang sesuai.
 - [ID Daftar ActiveCampaign](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).
-- [Kunci](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key) API ActiveCampaign dan Nama Host titik akhir REST.
+- [Kunci](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key) API ActiveCampaign dan Nama Host REST titik akhir.
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 - Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan per ekspor ke ActiveCampaign, yang dapat memakan waktu hingga 90 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke ActiveCampaign tergantung pada kontrak Anda dengan ActiveCampaign.
 - Segmen saja.
 
@@ -70,7 +71,7 @@ Mengekspor segmen profil pelanggan terpadu ke ActiveCampaign dan menggunakannya 
 
 1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan.
 
-1. Secara opsional, ekspor **nama depan**, **nama belakang**, dan **Telepon** untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
+1. Secara opsional, ekspor **nama depan**, nama belakang **,** dan **Telepon** untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
 
 1. Pilih segmen yang ingin diekspor.
 

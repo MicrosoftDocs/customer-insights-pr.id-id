@@ -1,5 +1,5 @@
 ---
-title: Mengekspor segmen ke MoEngage
+title: Ekspor segmen ke MoEngage
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke MoEngage.
 ms.date: 07/26/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199219"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725270"
 ---
 # <a name="export-segments-to-moengage-preview"></a>Mengekspor segmen ke MoEngage (pratinjau)
 
@@ -21,13 +21,14 @@ Ekspor segmen profil pelanggan terpadu ke MoEngage dan gunakan untuk pemasaran e
 
 ## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk koneksi
 
-- [Akun MoEngage](https://www.moengage.com/) dan kredensial administrator yang sesuai.
+- [Akun](https://www.moengage.com/) MoEngage dan kredensial administrator yang sesuai.
 - Kunci API MoEngage dari Pengaturan > API di MoEngage.
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Hingga 100.000 profil pelanggan per ekspor ke MoEngage, yang dapat memakan waktu hingga 15 menit. Jumlah profil pelanggan yang dapat Anda ekspor ke MoEngage tergantung pada kontrak Anda dengan MoEngage.
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
+- Hingga 100.000 profil pelanggan per ekspor ke MoEngage, yang dapat memakan waktu hingga 15 menit. Jumlah profil pelanggan yang dapat Anda ekspor ke MoEngage bergantung pada kontrak Anda dengan MoEngage.
 - Segmen saja.
 
 ## <a name="set-up-connection-to-moengage"></a>Menyiapkan koneksi ke MoEngage
@@ -36,7 +37,7 @@ Ekspor segmen profil pelanggan terpadu ke MoEngage dan gunakan untuk pemasaran e
 
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **MoEngage** untuk mengonfigurasi koneksi.
+1. Pilih **Tambahkan koneksi dan pilih** MoEngage **untuk mengonfigurasi koneksi**.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
@@ -64,7 +65,7 @@ Ekspor segmen profil pelanggan terpadu ke MoEngage dan gunakan untuk pemasaran e
 
 1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan. Ulangi langkah yang sama untuk bidang opsional lainnya.
 
-1. Pilih segmen yang ingin diekspor. Kami akan membuat satu atau beberapa segmen dengan nama yang sama dengan segmen yang dipilih di MoEngage di bawah **Segmen Kustom Segmen** > **·**.
+1. Pilih segmen yang ingin diekspor. Kami akan membuat satu atau beberapa segmen dengan nama yang sama dengan segmen yang dipilih di MoEngage di bawah **Segmen** > **Kustom Segmen**.
 
 1. Pilih **Simpan**.
 

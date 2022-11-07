@@ -1,12 +1,12 @@
 ---
 title: Aktivitas kontak pelanggan atau bisnis
 description: Tentukan aktivitas kontak pelanggan atau bisnis dan lihat dalam garis waktu di profil pelanggan.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304109"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723785"
 ---
 # <a name="customer-or-business-contact-activities"></a>Aktivitas kontak pelanggan atau bisnis
 
-Aktivitas pelanggan adalah tindakan atau peristiwa yang dilakukan oleh pelanggan atau kontak bisnis. Misalnya, transaksi, durasi panggilan dukungan, ulasan situs web, pembelian, atau pengembalian. Kegiatan ini terdapat dalam satu atau beberapa sumber data. Dengan Customers Insights, gabungkan aktivitas pelanggan Anda dari sumber [data ini](data-sources.md) dan kaitkan dengan profil pelanggan. Aktivitas ini muncul secara kronologis dalam garis waktu di profil pelanggan. Sertakan garis waktu di aplikasi Dynamics 365 dengan [solusi add-in](customer-card-add-in.md) Kartu Pelanggan.
+Aktivitas pelanggan adalah tindakan atau peristiwa yang dilakukan oleh pelanggan atau kontak bisnis. Misalnya, transaksi, durasi panggilan dukungan, ulasan situs web, pembelian, atau pengembalian. Aktivitas ini terkandung dalam satu atau beberapa sumber data. Dengan Customer Insights, gabungkan aktivitas pelanggan Anda dari sumber [data ini](data-sources.md) dan kaitkan dengan profil pelanggan. Aktivitas ini muncul secara kronologis dalam garis waktu di profil pelanggan. Sertakan garis waktu di aplikasi Dynamics 365 dengan [solusi add-in](customer-card-add-in.md) Kartu Pelanggan.
 
 ## <a name="define-a-customer-activity"></a>Menentukan aktivitas pelanggan
 
@@ -36,21 +36,24 @@ Entitas harus memiliki setidaknya satu atribut jenis **Tanggal** untuk disertaka
 
 1. Pilih **Tambahkan aktivitas** untuk memulai pengalaman terpandu.
 
-1. **Dalam langkah Data** aktivitas, masukkan informasi berikut:
+1. **Di langkah Data** aktivitas, masukkan informasi berikut:
 
    - **Nama aktivitas**: Pilih nama untuk aktivitas Anda.
-   - **Entitas aktivitas**: Pilih entitas yang menyertakan data transaksional atau aktivitas.
+   - **Entitas** aktivitas: Pilih entitas yang menyertakan data transaksional atau aktivitas.
    - **Kunci utama**: Pilih bidang yang secara unik mengidentifikasi rekaman. Ini tidak boleh berisi nilai duplikat, nilai kosong, atau nilai yang tidak ada.
+
+     > [!NOTE]
+     > Kunci Utama untuk setiap baris harus tetap konsisten di seluruh refresh sumber data. Jika kunci Utama untuk baris diperbarui dalam refresh sumber data, kunci tersebut akan membuat duplikat di entitas Aktivitas output. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Siapkan data aktivitas dengan nama, entitas, dan kunci utama.":::
 
 1. Pilih **Selanjutnya**.
 
-1. **Di langkah Hubungan**, pilih **Tambahkan hubungan** untuk menyambungkan data aktivitas Anda ke catatan pelanggan yang sesuai. Langkah ini memvisualisasikan hubungan antar entitas.  
+1. **Di langkah Hubungan**, pilih **Tambahkan hubungan** untuk menyambungkan data aktivitas Anda ke rekaman pelanggan terkait. Langkah ini memvisualisasikan hubungan antar entitas.  
 
    - **Kunci** asing: Bidang asing di entitas aktivitas Anda yang akan digunakan untuk menjalin hubungan dengan entitas lain.
-   - **Untuk nama** entitas: Entitas pelanggan sumber yang sesuai dengan mana entitas aktivitas Anda akan berada dalam hubungannya. Anda hanya dapat berhubungan dengan entitas pelanggan sumber yang digunakan dalam proses penyatuan data.
-   - **Nama hubungan**: Jika hubungan antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama hubungan akan berada dalam mode baca-saja. Jika tidak ada relasi tersebut, relasi baru akan dibuat dengan nama yang Anda berikan di kotak ini.
+   - **Untuk nama entitas**: Entitas pelanggan sumber yang sesuai dengan mana entitas aktivitas Anda akan berhubungan. Anda hanya dapat berhubungan dengan entitas pelanggan sumber yang digunakan dalam proses penyatuan data.
+   - **Nama** hubungan: Jika hubungan antara entitas aktivitas ini dan entitas pelanggan sumber yang dipilih sudah ada, nama hubungan akan berada dalam mode baca-saja. Jika tidak ada relasi tersebut, relasi baru akan dibuat dengan nama yang Anda berikan di kotak ini.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Tentukan relasi entitas.":::
 
@@ -76,9 +79,9 @@ Entitas harus memiliki setidaknya satu atribut jenis **Tanggal** untuk disertaka
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Tentukan data aktivitas pelanggan dalam entitas Aktivitas Terpadu.":::
 
-1. Pilih **Berikutnya** untuk memilih jenis aktivitas, atau pilih **Selesai dan tinjau** untuk menyimpan aktivitas dengan jenis aktivitas yang diatur ke **Lainnya**.
+1. Pilih **Berikutnya** untuk memilih jenis aktivitas, atau pilih **Selesaikan dan tinjau** untuk menyimpan aktivitas dengan jenis aktivitas diatur ke **Lainnya**.
 
-1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, *jenis aktivitas Umpan Balik* *,* Loyalitas *, SalesOrder*, *SalesOrderLine*, dan *Langganan* mendukung semantik setelah setuju untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
+1. Dalam langkah **Jenis Aktivitas**, pilih jenis aktivitas dan pilih secara opsional jika Anda ingin memetakan beberapa jenis aktivitas untuk digunakan di area lain dari Customer Insights. Saat ini, jenis aktivitas Umpan Balik *, Loyalitas*, SalesOrder, SalesOrderLine *·*, *·* *dan* *Langganan* mendukung semantik setelah menyetujui untuk memetakan bidang. Jika jenis aktivitas tidak relevan untuk aktivitas baru, Anda dapat memilih *Lainnya* atau *buat yang baru* untuk jenis aktivitas kustom.
 
 1. Pilih **Selanjutnya**.
 
@@ -90,9 +93,9 @@ Entitas harus memiliki setidaknya satu atribut jenis **Tanggal** untuk disertaka
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-customer-activities"></a>Mengelola aktivitas pelanggan yang sudah ada
+## <a name="manage-existing-customer-activities"></a>Mengelola aktivitas pelanggan yang ada
 
-Buka **Aktivitas** > **Data** untuk melihat aktivitas tersimpan Anda, entitas sumbernya, jenis aktivitas, dan jika aktivitas tersebut disertakan dalam linimasa pelanggan. Anda bisa mengurutkan daftar aktivitas menurut kolom mana pun atau menggunakan kotak pencarian untuk menemukan aktivitas yang ingin Anda kelola.
+**Buka Aktivitas** > **Data** untuk melihat aktivitas yang Anda simpan, entitas sumbernya, jenis aktivitas, dan apakah aktivitas tersebut disertakan dalam linimasa pelanggan. Anda dapat mengurutkan daftar aktivitas berdasarkan kolom mana pun atau menggunakan kotak pencarian untuk menemukan aktivitas yang ingin Anda kelola.
 
 Pilih aktivitas untuk melihat tindakan yang tersedia.
 
@@ -102,17 +105,17 @@ Pilih aktivitas untuk melihat tindakan yang tersedia.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Melihat timeline aktivitas di profil pelanggan
 
-1. Jika Anda memilih **Tampilkan di linimasa** aktivitas dalam konfigurasi aktivitas, buka **Pelanggan** dan pilih profil pelanggan untuk melihat aktivitas pelanggan di **bagian Linimasa** aktivitas.
+1. Jika Anda memilih **Tampilkan di linimasa aktivitas dalam konfigurasi aktivitas, buka** Pelanggan **dan pilih profil pelanggan untuk melihat aktivitas pelanggan di** bagian Linimasa **aktivitas**.
 
    :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Melihat aktivitas terkonfigurasi di Profil Pelanggan.":::
 
 1. Untuk memfilter aktivitas di linimasa aktivitas:
 
-   - Pilih satu atau beberapa ikon aktivitas untuk mempersempit hasil Anda untuk menyertakan jenis yang dipilih saja.
+   - Pilih satu atau beberapa ikon aktivitas untuk memperbaiki hasil Anda agar hanya menyertakan jenis yang dipilih.
 
      :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Memfilter aktivitas berdasarkan jenis menggunakan ikon.":::
 
-   - Pilih **Filter** untuk membuka panel filter untuk mengonfigurasi filter garis waktu Anda. Filter menurut *ActivityType* dan/atau *Date*. Pilih **Terapkan**.
+   - Pilih **Filter** untuk membuka panel filter guna mengonfigurasi filter garis waktu Anda. Filter menurut *ActivityType* dan/atau *Tanggal*. Pilih **Terapkan**.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Gunakan panel filter untuk mengkonfigurasi kondisi filter.":::
 
@@ -121,27 +124,35 @@ Pilih aktivitas untuk melihat tindakan yang tersedia.
 
 ## <a name="define-a-contact-activity"></a>Menentukan aktivitas kontak
 
-Untuk akun bisnis (B-to-B), gunakan *entitas ContactProfile* untuk menangkap aktivitas kontak. Anda dapat melihat di linimasa aktivitas untuk akun mana yang bertanggung jawab atas setiap aktivitas. Sebagian besar langkah mengikuti konfigurasi pemetaan aktivitas pelanggan.
+Untuk akun bisnis (B-to-B), gunakan *entitas ContactProfile* untuk menangkap aktivitas kontak. Anda dapat melihat di linimasa aktivitas untuk akun kontak mana yang bertanggung jawab atas setiap aktivitas. Sebagian besar langkah mengikuti konfigurasi pemetaan aktivitas pelanggan.
 
    > [!NOTE]
-   > Untuk menentukan aktivitas tingkat kontak, *entitas ContactProfile* harus dibuat, baik sebagai [profil](data-unification-contacts.md) kontak terpadu atau melalui [pemetaan](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) semantik.
+   > Untuk menentukan aktivitas tingkat kontak, entitas ContactProfile *harus dibuat,* baik sebagai [profil](data-unification-contacts.md) kontak terpadu atau melalui [pemetaan](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) semantik.
    >
-   > Anda harus memiliki atribut **AccountID** dan **ContactID** untuk setiap rekaman dalam data aktivitas Anda.
+   > Anda harus memiliki **atribut AccountID dan** ContactID **untuk** setiap rekaman dalam data aktivitas Anda.
   
 1. **Buka Aktivitas Data** > **·**.
 
 1. Pilih **Tambahkan Aktivitas**.
 
-1. Beri nama aktivitas, pilih entitas aktivitas sumber, dan pilih kunci utama entitas aktivitas.
+1. **Di langkah Data** aktivitas, masukkan informasi berikut:
 
-1. **Pada langkah Relasi**, buat hubungan tidak langsung antara data sumber aktivitas Anda ke akun, menggunakan data kontak Anda sebagai entitas perantara. Untuk informasi selengkapnya, lihat [jalur hubungan langsung dan tidak langsung](relationships.md#relationship-paths).
+   - **Nama aktivitas**: Pilih nama untuk aktivitas Anda.
+   - **Entitas** aktivitas: Pilih entitas yang menyertakan data transaksional atau aktivitas.
+   - **Kunci utama**: Pilih bidang yang secara unik mengidentifikasi rekaman. Ini tidak boleh berisi nilai duplikat, nilai kosong, atau nilai yang tidak ada.
+
+     > [!NOTE]
+     > Kunci Utama untuk setiap baris harus tetap konsisten di seluruh refresh sumber data. Jika kunci Utama untuk baris diperbarui dalam refresh sumber data, kunci tersebut akan membuat duplikat di entitas Aktivitas output. 
+
+
+1. Pada langkah **Relasi**, buat hubungan tidak langsung antara data sumber aktivitas Anda ke akun, menggunakan data kontak Anda sebagai entitas perantara. Untuk informasi selengkapnya, lihat [jalur hubungan langsung dan tidak langsung](relationships.md#relationship-paths).
    - Contoh hubungan untuk aktivitas yang disebut *Pembelian*:
-      - **Membeli Data** > **Kontak Data** Aktivitas Sumber pada atribut **ContactID**
-      - **Data** > **Akun Data** Kontak pada atribut **AccountID**
+      - **Membeli Data Kontak Data** > **Aktivitas** Sumber pada atribut **ContactID**
+      - **Data Akun Data** > **Kontak** pada atribut **AccountID**
 
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh pengaturan hubungan.":::
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh penyiapan hubungan.":::
 
-1. Setelah menyiapkan Relasi, pilih **Berikutnya** dan selesaikan konfigurasi pemetaan aktivitas Anda. Untuk langkah-langkah terperinci tentang pembuatan aktivitas, lihat [menentukan aktivitas](#define-a-customer-activity) pelanggan.
+1. Setelah menyiapkan Relasi, pilih **Berikutnya** dan selesaikan konfigurasi pemetaan aktivitas Anda. Untuk langkah-langkah mendetail tentang pembuatan aktivitas, lihat [menentukan aktivitas](#define-a-customer-activity) pelanggan.
 
 1. Jalankan pemetaan aktivitas Anda.
 
@@ -149,9 +160,9 @@ Untuk akun bisnis (B-to-B), gunakan *entitas ContactProfile* untuk menangkap akt
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Hasil akhir setelah mengonfigurasi aktivitas kontak":::
 
-## <a name="contact-level-activity-timeline-filtering"></a>Pemfilteran garis waktu aktivitas tingkat kontak
+## <a name="contact-level-activity-timeline-filtering"></a>Pemfilteran linimasa aktivitas tingkat kontak
 
-Setelah mengonfigurasi pemetaan aktivitas tingkat kontak dan menjalankannya, linimasa aktivitas untuk pelanggan Anda akan diperbarui. Ini termasuk ID atau nama mereka, tergantung pada konfigurasi ContactProfile *Anda*, untuk aktivitas yang mereka tindak lanjuti. Anda dapat memfilter aktivitas berdasarkan kontak di garis waktu untuk melihat kontak tertentu yang Anda minati. Selain itu, Anda dapat melihat semua aktivitas yang tidak ditetapkan ke kontak tertentu dengan **memilih Aktivitas yang tidak dipetakan ke Kontak**.
+Setelah mengonfigurasi pemetaan aktivitas tingkat kontak dan menjalankannya, linimasa aktivitas untuk pelanggan Anda akan diperbarui. Ini termasuk ID atau nama mereka, tergantung pada konfigurasi ContactProfile *Anda*, untuk aktivitas yang mereka lakukan. Anda dapat memfilter aktivitas berdasarkan kontak di garis waktu untuk melihat kontak tertentu yang Anda minati. Selain itu, Anda dapat melihat semua aktivitas yang tidak ditetapkan ke kontak tertentu dengan memilih **Aktivitas yang tidak dipetakan ke Kontak**.
 
    :::image type="content" source="media/Contact_Activities3.png" alt-text="Opsi pemfilteran tersedia untuk aktivitas tingkat Kontak.":::
 

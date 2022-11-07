@@ -1,5 +1,5 @@
 ---
-title: Ekspor data Customer Insights ke HubSpot
+title: Mengekspor data Customer Insights ke HubSpot
 description: Pelajari cara mengonfigurasi koneksi dan mengekspor ke HubSpot.
 ms.date: 09/23/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588930"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725358"
 ---
-# <a name="export-segments-to-hubspot-preview"></a>Mengekspor segmen ke HubSpot (pratinjau)
+# <a name="export-segments-to-hubspot-preview"></a>Ekspor segmen ke HubSpot (pratinjau)
 
 Ekspor segmen profil pelanggan terpadu ke HubSpot dan gunakan untuk pemasaran email.
 
@@ -27,6 +27,7 @@ Ekspor segmen profil pelanggan terpadu ke HubSpot dan gunakan untuk pemasaran em
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 100.000 profil pelanggan per ekspor ke HubSpot, yang dapat memakan waktu hingga 15 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke HubSpot tergantung dan terbatas pada kontrak Anda dengan HubSpot.
 - Segmen saja.
 
@@ -36,7 +37,7 @@ Ekspor segmen profil pelanggan terpadu ke HubSpot dan gunakan untuk pemasaran em
 
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **HubSpot** untuk mengonfigurasi koneksi.
+1. Pilih **Tambahkan koneksi dan pilih** HubSpot **untuk mengonfigurasi koneksi**.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 

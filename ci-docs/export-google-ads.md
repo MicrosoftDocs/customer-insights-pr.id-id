@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196582"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725082"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Mengekspor segmen ke Google Ads (pratinjau)
 
@@ -21,16 +21,17 @@ Ekspor segmen profil pelanggan terpadu ke daftar audiens Google Ads dan gunakan 
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akun [Google Ads](https://ads.google.com/) dan kredensial administrator yang sesuai.
-- [ID pelanggan Google Ads](https://support.google.com/google-ads/answer/1704344).
+- Akun [Google](https://ads.google.com/) Ads dan kredensial administrator yang sesuai.
+- ID [pelanggan Google Ads](https://support.google.com/google-ads/answer/1704344).
 - Persyaratan [Kebijakan](https://support.google.com/adspolicy/answer/6299717) Customer Match terpenuhi.
 - Persyaratan [ukuran](https://support.google.com/google-ads/answer/7558048) daftar pemasaran ulang terpenuhi.
 - [Segmen yang](segments.md) dikonfigurasi.
-- Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email, telepon, ID pengiklan seluler, ID pengguna pihak ketiga, atau alamat.
+- Profil pelanggan terpadu dalam segmen yang diekspor berisi bidang yang mewakili alamat email, telepon, ID pengiklan seluler, ID pengguna pihak ketiga, atau alamat.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Ekspor hingga 1 juta profil pelanggan per ekspor ke Google Ads, yang dapat memakan waktu hingga 30 menit untuk diselesaikan karena pembatasan di sisi penyedia.
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
+- Ekspor hingga 1 juta profil pelanggan per ekspor ke Google Ads, yang dapat memakan waktu hingga 30 menit untuk diselesaikan karena keterbatasan di sisi penyedia.
 - Segmen saja.
 - Pencocokan di Google Ads dapat memakan waktu hingga 48 jam.
 
@@ -69,10 +70,10 @@ Ekspor segmen profil pelanggan terpadu ke daftar audiens Google Ads dan gunakan 
 1. Masukkan nama untuk ekspor.
 
 1. Pilih apakah akan menggunakan audiens yang sudah ada atau membuat yang baru:
-   - Untuk mengupdate audiens Google Ads yang sudah ada, masukkan ID [audiens Google Ads Anda](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns).
-   - Untuk membuat audiens baru, kosongkan kolom Id Google audiens. Customer Insights akan secara otomatis membuat audiens baru di akun Google Ads Anda dan menggunakan nama segmen yang diekspor.
+   - Untuk memperbarui audiens Google Ads yang ada, masukkan ID [audiens Google Ads Anda](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns).
+   - Untuk membuat audiens baru, biarkan bidang ID audiens Google kosong. Customer Insights akan secara otomatis membuat audiens baru di akun Google Ads Anda dan menggunakan nama segmen yang diekspor.
 
-1. Di bagian **Pencocokan** data, pilih satu atau beberapa bidang data untuk diekspor, dan pilih bidang yang mewakili bidang data terkait di Customer Insights.
+1. **Di bagian Pencocokan** data, pilih satu atau beberapa bidang data untuk diekspor, dan pilih bidang yang mewakili bidang data terkait di Customer Insights.
 
 1. Pilih segmen yang ingin diekspor.
 

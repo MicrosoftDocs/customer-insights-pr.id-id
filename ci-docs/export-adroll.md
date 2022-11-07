@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195754"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724682"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Mengekspor segmen ke AdRoll (pratinjau)
 
@@ -21,13 +21,14 @@ Mengekspor segmen profil pelanggan terpadu ke AdRoll dan menggunakannya untuk ik
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akun [AdRoll](https://www.adroll.com/) dan kredensial administrator yang sesuai.
-- [ID Pengiklan AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+- Akun [AdRoll](https://www.adroll.com/) dan kredensial administrator terkait.
+- ID [Pengiklan AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 - Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 250.000 profil pelanggan per ekspor ke AdRoll, yang dapat memakan waktu hingga 10 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke AdRoll bergantung pada kontrak Anda dengan AdRoll.
 - Segmen saja. Segmen harus berisi setidaknya 100 profil pelanggan.
 

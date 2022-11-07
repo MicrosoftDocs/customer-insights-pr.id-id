@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196168"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725174"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Mengekspor segmen ke Omnisend (pratinjau)
 
@@ -28,6 +28,7 @@ Ekspor segmen profil pelanggan terpadu ke Omnisend dan gunakan untuk aktivitas p
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan per ekspor ke Omnisend, yang dapat memakan waktu hingga empat jam untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Omnisend tergantung pada kontrak Anda dengan Omnisend.
 - Segmen saja.
 
@@ -37,7 +38,7 @@ Ekspor segmen profil pelanggan terpadu ke Omnisend dan gunakan untuk aktivitas p
 
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **Akhirat**.
+1. Pilih **Tambahkan koneksi** dan pilih **Multisend**.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 
@@ -67,7 +68,7 @@ Ekspor segmen profil pelanggan terpadu ke Omnisend dan gunakan untuk aktivitas p
 
 1. Di bagian **Pencocokan data**, di bidang **Email**, pilih bidang yang mewakili alamat email pelanggan.
 
-1. Secara opsional, ekspor **nama depan**, **nama belakang**, **Alamat**, **Negara/Wilayah**, **Negara Bagian**, **Kota**, dan **Kode** Pos untuk membuat email yang lebih dipersonalisasi. Pilih **Tambah atribut** untuk memetakan bidang ini.
+1. Secara opsional, ekspor **nama depan, nama belakang**, Alamat **, Negara/Wilayah**, Negara Bagian **, Kota**, **·** **·** **dan** Kode **Pos untuk membuat email yang lebih dipersonalisasi.** Pilih **Tambah atribut** untuk memetakan bidang ini.
 
 1. Pilih segmen yang ingin diekspor.
 

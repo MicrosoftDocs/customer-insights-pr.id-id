@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196306"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724688"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Mengekspor segmen ke Campaign Monitor (pratinjau)
 
@@ -22,14 +22,15 @@ Ekspor segmen profil pelanggan terpadu ke Campaign Monitor dan gunakan untuk akt
 ## <a name="prerequisites"></a>Prasyarat
 
 - Akun [Monitor](https://www.campaignmonitor.com/) Kampanye dan kredensial administrator yang sesuai.
-- [ID Daftar Pemantau Kampanye](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
-- Kunci API [yang](https://www.campaignmonitor.com/api/getting-started/) Dihasilkan dari **Pengaturan** Akun di Monitor Kampanye untuk mendapatkan ID daftar API.
+- [ID Daftar Monitor Kampanye](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
+- Kunci [API](https://www.campaignmonitor.com/api/getting-started/) yang Dihasilkan dari **Pengaturan** Akun di Monitor Kampanye untuk mendapatkan ID daftar API.
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 - Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Hingga 1 juta profil pelanggan per ekspor ke Campaign Monitor, yang dapat memakan waktu hingga 20 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Monitor Kampanye bergantung pada kontrak Anda dengan Campaign Monitor.
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
+- Hingga 1 juta profil pelanggan per ekspor ke Campaign Monitor, yang dapat memakan waktu hingga 20 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Campaign Monitor bergantung pada kontrak Anda dengan Campaign Monitor.
 - Segmen saja.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Konfigurasikan koneksi ke Campaign Monitor
@@ -38,7 +39,7 @@ Ekspor segmen profil pelanggan terpadu ke Campaign Monitor dan gunakan untuk akt
 
 1. Buka **Admin** > **Koneksi**.
 
-1. Pilih **Tambahkan koneksi** dan pilih **Pemantau** Kampanye.
+1. Pilih **Tambahkan koneksi** dan pilih **Pemantau Kampanye**.
 
 1. Beri koneksi Anda nama yang dikenali di bidang **nama tampilan**. Nama dan tipe koneksi menjelaskan koneksi ini. Sebaiknya pilih nama yang menjelaskan tujuan dan target koneksi.
 

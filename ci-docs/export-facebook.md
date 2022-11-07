@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195018"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724603"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Mengekspor segmen ke Facebook Pengelola Iklan (pratinjau)
 
@@ -23,16 +23,18 @@ Ekspor segmen profil pelanggan terpadu ke pengelola iklan Facebook untuk membuat
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- [Facebook Akun](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) Iklan yang [Facebook menyertakan Akun Bisnis](https://business.facebook.com/).
+- [Facebook Akun Iklan yang](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) menyertakan Akun [Facebook Bisnis](https://business.facebook.com/).
 - Hak istimewa administrator di [Facebook Akun Iklan](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Persyaratan audiens kustom harus diterima oleh pengguna yang menyiapkan koneksi di Customer Insights.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
 - Hingga 10 juta profil pelanggan per ekspor ke Facebook Pengelola Iklan, yang dapat memakan waktu hingga 90 menit.
 - Segmen saja.
-- Facebook *jenis daftar* pelanggan hanya di [audiens](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) khusus.
+- Facebook Integrasi iklan tidak mendukung pengguna dengan lebih dari 25 akun iklan.
+- Facebook *Tipe daftar* pelanggan hanya di [Audiens](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) Kustom.
   > [!NOTE]
-  > Dalam beberapa kasus, Anda mungkin melihat pemirsa khusus dari berbagai jenis di daftar dropdown. Jika Anda memilih jenis yang berbeda selain *daftar* pelanggan, ekspor gagal.
+  > Dalam beberapa kasus, Anda mungkin melihat audiens khusus dari berbagai jenis di daftar dropdown. Jika Anda memilih jenis lain selain *daftar* pelanggan, ekspor gagal.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Menyiapkan koneksi ke Facebook Ads Manager
 
@@ -68,11 +70,11 @@ Ekspor segmen profil pelanggan terpadu ke pengelola iklan Facebook untuk membuat
 
 1. Pilih **Tambahkan ekspor**.
 
-1. **Di bidang Koneksi untuk ekspor**, pilih koneksi dari bagian Facebook Pengelola Iklan. Hubungi administrator jika tidak ada koneksi yang tersedia.
+1. **Di bidang Koneksi untuk ekspor**, pilih koneksi dari Facebook bagian Pengelola Iklan. Hubungi administrator jika tidak ada koneksi yang tersedia.
 
 1. Masukkan nama untuk ekspor.
 
-1. **Di bidang Hubungkan data**, pilih **Email**, **Nama dan alamat**, atau **Telepon** untuk dikirim ke Facebook Pengelola Iklan.
+1. **Di bidang Hubungkan data**, pilih **Email**, Nama dan alamat **,** atau **Telepon** untuk dikirim ke Facebook Pengelola Iklan.
 
 1. Petakan atribut yang terkait dari entitas pelanggan terpadu Anda untuk pengidentifikasi kunci yang dipilih.
    > [!TIP]

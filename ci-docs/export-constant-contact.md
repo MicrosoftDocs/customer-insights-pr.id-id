@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196490"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724505"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Mengekspor segmen ke Constant Contact (pratinjau)
 
@@ -22,12 +22,13 @@ Ekspor segmen profil pelanggan terpadu ke Constant Contact dan gunakan untuk akt
 ## <a name="prerequisites"></a>Prasyarat
 
 - Akun [Kontak](https://www.constantcontact.com/account-home) Konstan dan kredensial administrator yang sesuai.
-- ID Daftar Kontak [Konstan](https://app.constantcontact.com/pages/contacts/ui#lists). Buka daftar di Constant Contact untuk menemukan ID daftar di URL.
+- [ID Daftar Kontak Konstan](https://app.constantcontact.com/pages/contacts/ui#lists). Buka daftar di Constant Contact untuk menemukan ID daftar di URL.
 - [Segmen yang](segments.md) dikonfigurasi di Customer Insights.
 - Profil pelanggan terpadu di segmen yang diekspor berisi bidang yang mewakili alamat email.
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
+- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan per ekspor ke Kontak Konstan, yang dapat memakan waktu hingga satu jam untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Kontak Konstan tergantung pada kontrak Anda dengan Kontak Konstan.
 - Segmen saja.
 
