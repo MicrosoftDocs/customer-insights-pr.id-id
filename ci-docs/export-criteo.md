@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: MT
 ms.contentlocale: id-ID
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724793"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760030"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Mengekspor segmen ke Criteo (pratinjau)
 
@@ -27,7 +27,6 @@ Ekspor segmen profil pelanggan terpadu untuk menghasilkan kampanye, menyediakan 
 
 ## <a name="known-limitations"></a>Pembatasan yang diketahui
 
-- Tautan pribadi yang dikombinasikan dengan Bring your own storage (BYOS) tidak didukung.
 - Hingga 1 juta profil pelanggan per ekspor ke Criteo, yang dapat memakan waktu hingga 30 menit untuk diselesaikan. Jumlah profil pelanggan yang dapat Anda ekspor ke Criteo bergantung pada kontrak Anda dengan Criteo.
 - Segmen saja.
 
@@ -47,7 +46,7 @@ Ekspor segmen profil pelanggan terpadu untuk menghasilkan kampanye, menyediakan 
 
 1. Pilih **Sambungkan** untuk menginisialisasi koneksi.
 
-1. Pilih **Autentikasi dengan Criteo dan berikan nama pengguna dan kredensial Admin Anda untuk Criteo**.
+1. Pilih **Autentikasi dengan Criteo dan berikan nama pengguna dan kredensial Admin Anda untuk Criteo** .
 
 1. Pilih **Tambah diri Anda sebagai pengguna ekspor** dan berikan kredensial Customer Insights Anda.
 
